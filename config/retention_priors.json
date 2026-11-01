@@ -1,0 +1,160 @@
+{
+  "updatedAt": "2026-11-01T09:24:20.201Z",
+  "sampleSizeReels": 5,
+  "totalScenesAnalyzed": 95,
+  "archetypeRetentionPriors": {
+    "SPLIT_CONFRONTATION": {
+      "sampleScenes": 14,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": true,
+      "optimalDurationFrames": [
+        128,
+        144
+      ]
+    },
+    "QUOTE_CARD": {
+      "avgHoldRate": 0.89,
+      "recommendedForHook": true,
+      "optimalDurationFrames": [
+        128,
+        156
+      ]
+    },
+    "STRUCTURAL_FRACTURE": {
+      "sampleScenes": 10,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": true,
+      "optimalDurationFrames": [
+        128,
+        144
+      ]
+    },
+    "VECTOR_MAP": {
+      "sampleScenes": 8,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        128,
+        144
+      ]
+    },
+    "VEHICLE_IN_TRANSIT": {
+      "sampleScenes": 11,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": true,
+      "optimalDurationFrames": [
+        136,
+        152
+      ]
+    },
+    "CROWD_TALLY": {
+      "sampleScenes": 11,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        136,
+        152
+      ]
+    },
+    "LONE_LEADER": {
+      "sampleScenes": 16,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        126,
+        168
+      ]
+    },
+    "SILHOUETTE_ACTION": {
+      "sampleScenes": 8,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        150,
+        166
+      ]
+    },
+    "BLUEPRINT_DIAGRAM": {
+      "sampleScenes": 2,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        150,
+        168
+      ]
+    },
+    "TELEMETRY_COUNTER": {
+      "sampleScenes": 3,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        150,
+        168
+      ]
+    },
+    "DOCUMENT_CARD": {
+      "sampleScenes": 6,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        120,
+        165
+      ]
+    },
+    "FLAG_BANNER": {
+      "sampleScenes": 4,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        150,
+        166
+      ]
+    },
+    "TACTICAL_MAP": {
+      "sampleScenes": 1,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        242,
+        258
+      ]
+    },
+    "SPOTLIGHT_EMBLEM": {
+      "sampleScenes": 1,
+      "avgHoldRate": 0.88,
+      "recommendedForHook": false,
+      "optimalDurationFrames": [
+        242,
+        258
+      ]
+    }
+  },
+  "recentHookArchetypeHistory": [
+    {
+      "projectSlug": "aleutian-campaign-1942",
+      "openingArchetype": "SPLIT_CONFRONTATION"
+    },
+    {
+      "projectSlug": "operation-cowboy-1945",
+      "openingArchetype": "SPLIT_CONFRONTATION"
+    },
+    {
+      "projectSlug": "u2-incident-1960",
+      "openingArchetype": "SILHOUETTE_ACTION"
+    },
+    {
+      "projectSlug": "taiping-rebellion-1850",
+      "openingArchetype": "SPLIT_CONFRONTATION"
+    },
+    {
+      "projectSlug": "peshawar-2009",
+      "openingArchetype": "SILHOUETTE_ACTION"
+    }
+  ],
+  "pacingPriors": {
+    "targetHookDurationFrames": 128,
+    "optimalPayoffBeatIndex": 1,
+    "sfxPerceptualLeadFrames": 2,
+    "maxConsecutiveSameArchetype": 2
+  }
+}

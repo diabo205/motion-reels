@@ -1,0 +1,159 @@
+{
+  "reelTitle": "OP. SEARCHLIGHT",
+  "aspectRatio": "9:16",
+  "resolution": "1080x1920",
+  "verticalFoldCreaseX": 621,
+  "supportedStageStyles": [
+    "PAPER_EXTERIOR",
+    "GRAPH_GRID",
+    "SUNBURST_HERO",
+    "NIGHT_FELT",
+    "WOOD_PANEL"
+  ],
+  "plates": [
+    {
+      "sceneId": "01_hook_blue_pad",
+      "stageStyle": "PAPER_EXTERIOR",
+      "skyGradient": ["#B86B4B", "#6D5438"],
+      "svgForegroundAsset": "SEARCHLIGHT_HOOK_CONVOY",
+      "outputFile": "assets/plates/01_hook_blue_pad.png",
+      "atmosphericPlatePrompt": "Military staff officers hunched over a five-page light blue office pad beside an armored convoy in stark black silhouette in lower third, 1971 Dhaka Cantonment command bunker and staging ground at dusk, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "02_hook_zero_hour",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#283038", "#181E24"],
+      "svgForegroundAsset": "SEARCHLIGHT_GATE_BREACH",
+      "outputFile": "assets/plates/02_hook_zero_hour.png",
+      "atmosphericPlatePrompt": "M24 Chaffee tank column breaching heavy iron cantonment gates at 11:30 PM in stark black silhouette in lower third, 1971 Dhaka Cantonment perimeter checkpoint under harsh searchlights, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "03_title_identity",
+      "stageStyle": "SUNBURST_HERO",
+      "skyGradient": ["#7B1818", "#420B0B"],
+      "svgForegroundAsset": "EAST_WEST_FLAGS_RADAR_BANNER",
+      "outputFile": "assets/plates/03_title_identity.png",
+      "atmosphericPlatePrompt": "Crossed flags and sweeping military searchlight beams cutting across tank turrets in stark black silhouette in lower third, 1971 East Pakistan martial law garrison skyline at midnight, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "04_election_counter",
+      "stageStyle": "WOOD_PANEL",
+      "skyGradient": ["#5E3C26", "#3B2416"],
+      "svgForegroundAsset": "ELECTION_167_SEATS_COUNTER",
+      "outputFile": "assets/plates/04_election_counter.png",
+      "atmosphericPlatePrompt": "Crowds raising ballot boxes and Sheikh Mujibur Rahman addressing a massive rally in stark black silhouette in lower third, December 1970 East Pakistan general election grounds and locked National Assembly chamber, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "05_dissenting_commanders",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#29323B", "#1A2128"],
+      "svgForegroundAsset": "COMMAND_RESIGNATION_INTERCEPT",
+      "outputFile": "assets/plates/05_dissenting_commanders.png",
+      "atmosphericPlatePrompt": "Admiral Ahsan and General Yakub Khan laying down their command batons across a war-room desk in stark black silhouette in lower third, March 1971 Governor's House and Eastern Command headquarters in Dhaka, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "06_five_page_plan",
+      "stageStyle": "WOOD_PANEL",
+      "skyGradient": ["#6E472B", "#3D2516"],
+      "svgForegroundAsset": "BLUE_OFFICE_PAD_DIRECTIVE_CARD",
+      "outputFile": "assets/plates/06_five_page_plan.png",
+      "atmosphericPlatePrompt": "Generals Farman Ali and Khadim Raja drafting sixteen paragraphs with lead pencil on a desk in stark black silhouette in lower third, 18 March 1971 Dhaka Cantonment Flag Staff House command office, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "07_deception_mv_swat",
+      "stageStyle": "PAPER_EXTERIOR",
+      "skyGradient": ["#B5694D", "#6E4F3A"],
+      "svgForegroundAsset": "MV_SWAT_PORT_SILHOUETTE",
+      "outputFile": "assets/plates/07_deception_mv_swat.png",
+      "atmosphericPlatePrompt": "Freighter ship MV Swat docked beneath towering harbor cranes unloading heavy munitions crates in stark black silhouette in lower third, March 1971 Chittagong Port Jetty No. 17 under armed military cordon, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "08_dispersion_bengali_units",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#131D28", "#0B1118"],
+      "svgForegroundAsset": "EBR_DISPERSION_SCHEMATIC",
+      "outputFile": "assets/plates/08_dispersion_bengali_units.png",
+      "atmosphericPlatePrompt": "Severed military field telephone lines and isolated East Bengal Regiment outposts in stark black silhouette in lower third, 24 March 1971 rural East Pakistan garrison perimeter with cut wireless antennas, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "09_tactical_map_dhaka",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#1D2935", "#0E151C"],
+      "svgForegroundAsset": "MAP_DHAKA_OPERATION_VECTORS",
+      "outputFile": "assets/plates/09_tactical_map_dhaka.png",
+      "atmosphericPlatePrompt": "57th Brigade M24 Chaffee and PT-76 amphibious tanks advancing down barricaded streets in stark black silhouette in lower third, 25 March 1971 midnight streets of Dhaka from Airport Road toward Old Dhaka, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "10_pilkhana_rajarbagh",
+      "stageStyle": "NIGHT_FELT",
+      "skyGradient": ["#161822", "#0D0F16"],
+      "svgForegroundAsset": "PILKHANA_RAJARBAGH_ARMOR_CLASH",
+      "outputFile": "assets/plates/10_pilkhana_rajarbagh.png",
+      "atmosphericPlatePrompt": "Bengali police defenders with .303 Lee-Enfield rifles firing from sandbagged barracks against advancing tanks in stark black silhouette in lower third, 25 March 1971 Pilkhana EPR headquarters and Rajarbagh Police Lines under nocturnal siege, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "11_dhaka_university",
+      "stageStyle": "NIGHT_FELT",
+      "skyGradient": ["#242A32", "#161B20"],
+      "svgForegroundAsset": "DHAKA_UNIVERSITY_TARGET_BLUEPRINT",
+      "outputFile": "assets/plates/11_dhaka_university.png",
+      "atmosphericPlatePrompt": "Recoilless rifles and tanks aimed at classical university dormitory arches and the Shaheed Minar monument in stark black silhouette in lower third, 25 March 1971 Dhaka University Jagannath Hall and Iqbal Hall courtyard at night, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "12_arrest_of_mujib",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#2E3338", "#1C2024"],
+      "svgForegroundAsset": "DHANMONDI_SSG_DISPATCH_CARD",
+      "outputFile": "assets/plates/12_arrest_of_mujib.png",
+      "atmosphericPlatePrompt": "3rd SSG commandos storming a two-story residential house beside a crackling VHF wireless transmitter in stark black silhouette in lower third, 26 March 1971 1:10 AM Road 32 Dhanmondi residence in Dhaka, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "13_chittagong_revolt",
+      "stageStyle": "PAPER_EXTERIOR",
+      "skyGradient": ["#C27054", "#6B4E35"],
+      "svgForegroundAsset": "KALURGHAT_RADIO_REVOLT_SILHOUETTE",
+      "outputFile": "assets/plates/13_chittagong_revolt.png",
+      "atmosphericPlatePrompt": "Major Ziaur Rahman speaking into a broadcast microphone beneath a towering radio transmission mast and rebel 8th EBR soldiers in stark black silhouette in lower third, 27 March 1971 Kalurghat Radio Transmitting Station in Chittagong, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "14_great_fly_in",
+      "stageStyle": "PAPER_EXTERIOR",
+      "skyGradient": ["#BA6D4E", "#6B5037"],
+      "svgForegroundAsset": "C130_GREAT_FLY_IN_AIRLIFT",
+      "outputFile": "assets/plates/14_great_fly_in.png",
+      "atmosphericPlatePrompt": "PAF C-130 Hercules transport aircraft and Boeing 707 airliners descending over tarmac troop columns in stark black silhouette in lower third, April 1971 Tejgaon Airport military airlift corridor in Dhaka, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "15_april_10_miscalculation",
+      "stageStyle": "GRAPH_GRID",
+      "skyGradient": ["#42484D", "#282C30"],
+      "svgForegroundAsset": "MUKTI_BAHINI_RESISTANCE_COUNTER",
+      "outputFile": "assets/plates/15_april_10_miscalculation.png",
+      "atmosphericPlatePrompt": "Mukti Bahini guerrilla fighters raising rifles along a riverine delta embankment in stark black silhouette in lower third, April 1971 Bengal monsoon river delta and destroyed bridge battleground, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "16_human_cost_telemetry",
+      "stageStyle": "NIGHT_FELT",
+      "skyGradient": ["#151F24", "#0C1216"],
+      "svgForegroundAsset": "REFUGEE_EXODUS_TELEMETRY",
+      "outputFile": "assets/plates/16_human_cost_telemetry.png",
+      "atmosphericPlatePrompt": "Endless column of displaced families carrying bundles across a flooded border road in stark black silhouette in lower third, 1971 Jessore Road monsoon refugee exodus toward the Indian border, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "17_december_surrender",
+      "stageStyle": "SUNBURST_HERO",
+      "skyGradient": ["#053B1C", "#021F0E"],
+      "svgForegroundAsset": "BANGLADESH_FLAG_VICTORY_SUNBURST",
+      "outputFile": "assets/plates/17_december_surrender.png",
+      "atmosphericPlatePrompt": "Generals seated at a field table signing the Instrument of Surrender beneath a waving Bangladesh flag in stark black silhouette in lower third, 16 December 1971 Ramna Race Course in Dhaka at twilight, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    },
+    {
+      "sceneId": "18_final_climax_emblem",
+      "stageStyle": "NIGHT_FELT",
+      "skyGradient": ["#141824", "#0B0E17"],
+      "svgForegroundAsset": "SEARCHLIGHT_CLIMAX_ARCHIVAL_CARD",
+      "outputFile": "assets/plates/18_final_climax_emblem.png",
+      "atmosphericPlatePrompt": "Sovereign map of Bangladesh rising above torn military directives and liberation monuments in stark black silhouette in lower third, December 1971 liberated Dhaka skyline and Jatiya Smriti Soudho memorial horizon, volumetric battle smoke and atmospheric haze, extreme chiaroscuro lighting, warm twilight amber horizon (#B86B43) fading into pitch-black upper sky (#090D12) providing clean negative space in top 45% of frame for typography, shot on 35mm anamorphic vertical 9:16 crop, pushed Ilford HP5 film grain, high contrast --ar 9:16 --no text, watermarks, bright midtones"
+    }
+  ]
+}

@@ -1,0 +1,797 @@
+{
+  "$schema": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
+  "meta": {
+    "title": "1945 OPERATION COWBOY",
+    "flagEmoji": "🇺🇸 🐎 ⚔️",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 106,
+    "bgmFile": "audio/bgm_cowboy_hook.mp3",
+    "bgmStartFrom": 0,
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "fontFamily": "Montserrat",
+    "styleMode": "DOCUMENTARY_SANS"
+  },
+  "scenes": [
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "startFrame": 0,
+      "durationFrames": 136,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "APRIL 1945 • CZECH BORDER",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "THE REICH WAS COLLAPSING.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "A MASSACRE WAS MINUTES AWAY.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_WAR_COLLAPSE_OPENING"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "startFrame": 136,
+      "durationFrames": 136,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "HOSTAU STUD FARM",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "THE IMPERIAL WHITE HORSES.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "CENTURIES OF ROYAL BREEDING.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_LIPIZZANER_STALLION_HERO"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 15
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "startFrame": 272,
+      "durationFrames": 136,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "SOVIET ADVANCE",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "THE RED ARMY WAS STARVING.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THEY ATE EVERY HORSE.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_RED_ARMY_FAMINE_ADVANCE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "startFrame": 408,
+      "durationFrames": 136,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "HUNGARY'S ROYAL STUD.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "100% SLAUGHTERED IN DAYS.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_HUNGARIAN_STUD_MASSACRE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 10
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "startFrame": 544,
+      "durationFrames": 136,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "HOSTAU • WEHRMACHT HQ",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "TWO GERMAN OFFICERS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "REFUSED TO LET THEM DIE.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_WEHRMACHT_VETS_PACT"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_tick.wav",
+          "frameOffset": 5
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "startFrame": 680,
+      "durationFrames": 136,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "A DESPERATE CLANDESTINE PLEA.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "RADIOED ACROSS ENEMY LINES.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_RADIO_CALL_TO_PATTON"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "startFrame": 816,
+      "durationFrames": 136,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "U.S. THIRD ARMY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "PATTON KNEW THE BLOODLINE.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "GO GET THEM.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_PATTON_COMMAND_GREENLIGHT"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 28
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "startFrame": 952,
+      "durationFrames": 136,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "TWENTY MILES DEEP.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SURROUNDED BY TWO PANZERS.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_TWENTY_MILES_BEHIND_LINES"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "startFrame": 1088,
+      "durationFrames": 136,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.9
+      },
+      "textLayers": [
+        {
+          "text": "M8 CARS AND TANKS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SMASHED THE BORDER LINE.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_PATTONS_GHOSTS_CHARGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 15
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "startFrame": 1224,
+      "durationFrames": 136,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "HOSTAU • TARGET REACHED",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "THE GATES SWUNG OPEN.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "FOUR HUNDRED HORSES WAITING.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_HOSTAU_GATES_REACHED"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 10
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "startFrame": 1360,
+      "durationFrames": 140,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "HUNDREDS OF FREED POWS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "HANDED REINS OVER RIFLES.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_ALLIED_POWS_LIBERATION"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 10
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "startFrame": 1500,
+      "durationFrames": 140,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "GIS ARMED WEHRMACHT SOLDIERS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "TO FIGHT AS BROTHERS.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_ARMING_WEHRMACHT_BROTHERS"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 20
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "startFrame": 1640,
+      "durationFrames": 140,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "COSSACK HORSEMEN SWEPT IN.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SABERS DRAWN FOR FREEDOM.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_COSSACK_CAVALRY_PRINCE_AMASSOV"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "startFrame": 1780,
+      "durationFrames": 140,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE AMBUSH",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.9
+      },
+      "textLayers": [
+        {
+          "text": "FANATICAL SS ATTACKED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "MORTARS RAINED DOWN.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_WAFFEN_SS_AMBUSH"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "startFrame": 1920,
+      "durationFrames": 140,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "AMERICANS AND GERMANS FIRED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "DEFENDING THE STALLIONS.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_SIDE_BY_SIDE_DEFENSE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 10
+        },
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 45
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "startFrame": 2060,
+      "durationFrames": 140,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "THE ENEMY BROKE.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THE CORRIDOR WAS OPEN.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_SS_RETREAT_HEAVY_LOSSES"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "startFrame": 2200,
+      "durationFrames": 140,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "CAPT. THOMAS STEWART",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "EVERY HORSE MOVES NOW.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "BEFORE THE RUSSIANS ARRIVE.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_CAPT_STEWART_EVACUATION_ORDER"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 15
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "startFrame": 2340,
+      "durationFrames": 140,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 1.0
+      },
+      "textLayers": [
+        {
+          "text": "HUNDREDS OF WHITE STALLIONS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THUNDERING ACROSS BOHEMIA.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_MASS_LIPIZZANER_STAMPEDE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "startFrame": 2480,
+      "durationFrames": 140,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "SOVIET ADVANCE CORPS",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "RED ARMY TANKS CRESTED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "JUST SECONDS TOO LATE.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_SOVIET_T34_RIDGE_ARRIVAL"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "startFrame": 2620,
+      "durationFrames": 140,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "LOADED ONTO ARMY TRUCKS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SECURED ON ALLIED SOIL.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_US_ARMY_TRUCK_CONVOY"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 25
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "startFrame": 2760,
+      "durationFrames": 180,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "THE LIVING LEGACY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "OVER 1,200 HORSES SAVED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "A 450-YEAR LEGACY LIVES.",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "COWBOY_EPILOGUE_SPANISH_RIDING_SCHOOL"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 10
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        }
+      ]
+    }
+  ]
+}

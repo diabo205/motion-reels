@@ -1,0 +1,49 @@
+{
+  "defaultProfile": "CONSERVATIVE_UNION",
+  "profiles": {
+    "CONSERVATIVE_UNION": {
+      "description": "Strict union of YouTube Shorts, TikTok, and Instagram Reels 9:16 overlays plus 4:5 IG feed grid safety",
+      "canvasWidth": 1080,
+      "canvasHeight": 1920,
+      "textZone": { "top": 346, "bottom": 806, "left": 64, "right": 1016 },
+      "headroomBuffer": { "top": 806, "bottom": 864 },
+      "artworkZone": { "top": 864, "bottom": 1498, "left": 0, "right": 918 },
+      "bottomUiBuffer": { "top": 1498, "bottom": 1920 },
+      "rightActionBuffer": { "left": 918, "right": 1080 },
+      "igFeedGridCrop4x5": { "top": 285, "bottom": 1635, "left": 0, "right": 1080 }
+    },
+    "YOUTUBE_SHORTS": {
+      "description": "YouTube Shorts 9:16 mobile player overlay profile",
+      "canvasWidth": 1080,
+      "canvasHeight": 1920,
+      "textZone": { "top": 280, "bottom": 806, "left": 60, "right": 940 },
+      "headroomBuffer": { "top": 806, "bottom": 864 },
+      "artworkZone": { "top": 864, "bottom": 1520, "left": 0, "right": 930 },
+      "bottomUiBuffer": { "top": 1520, "bottom": 1920 },
+      "rightActionBuffer": { "left": 930, "right": 1080 },
+      "igFeedGridCrop4x5": { "top": 285, "bottom": 1635, "left": 0, "right": 1080 }
+    },
+    "TIKTOK": {
+      "description": "TikTok 9:16 mobile FYP overlay profile",
+      "canvasWidth": 1080,
+      "canvasHeight": 1920,
+      "textZone": { "top": 320, "bottom": 806, "left": 64, "right": 918 },
+      "headroomBuffer": { "top": 806, "bottom": 864 },
+      "artworkZone": { "top": 864, "bottom": 1480, "left": 0, "right": 918 },
+      "bottomUiBuffer": { "top": 1480, "bottom": 1920 },
+      "rightActionBuffer": { "left": 918, "right": 1080 },
+      "igFeedGridCrop4x5": { "top": 285, "bottom": 1635, "left": 0, "right": 1080 }
+    },
+    "INSTAGRAM_REELS": {
+      "description": "Instagram Reels 9:16 player + 4:5 profile grid crop awareness",
+      "canvasWidth": 1080,
+      "canvasHeight": 1920,
+      "textZone": { "top": 346, "bottom": 806, "left": 64, "right": 920 },
+      "headroomBuffer": { "top": 806, "bottom": 864 },
+      "artworkZone": { "top": 864, "bottom": 1498, "left": 0, "right": 920 },
+      "bottomUiBuffer": { "top": 1498, "bottom": 1920 },
+      "rightActionBuffer": { "left": 920, "right": 1080 },
+      "igFeedGridCrop4x5": { "top": 285, "bottom": 1635, "left": 0, "right": 1080 }
+    }
+  }
+}

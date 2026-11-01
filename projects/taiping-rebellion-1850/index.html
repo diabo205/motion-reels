@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Taiping Rebellion (1850–1864) — Master Reel</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #090D12;
+      color: #F5F5F7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 480px;
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      background: #1C1917;
+      border: 1px solid #D92B2B;
+      color: #EF4444;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .subhead {
+      color: #94A3B8;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .video-card {
+      background: #0F1012;
+      border: 1px solid #27272A;
+      border-radius: 18px;
+      padding: 12px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-top: 14px;
+    }
+    .btn {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .btn-primary {
+      background: #D92B2B;
+      color: #FFFFFF;
+    }
+    .btn-secondary {
+      background: #18181B;
+      border: 1px solid #3F3F46;
+      color: #E4E4E7;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      width: 100%;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #27272A;
+    }
+    .spec-item {
+      background: #141417;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #1F1F23;
+    }
+    .spec-label {
+      font-size: 10px;
+      color: #71717A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .spec-val {
+      font-size: 12px;
+      font-weight: 700;
+      color: #FAFAFA;
+      margin-top: 2px;
+    }
+    .audit-section {
+      max-width: 480px;
+      width: 100%;
+      margin-top: 24px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #A1A1AA;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .stills-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .still-card {
+      flex: 0 0 160px;
+      scroll-snap-align: start;
+      background: #141417;
+      border: 1px solid #27272A;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .still-card img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      display: block;
+    }
+    .still-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #D4D4D8;
+      padding: 6px 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tab-btn {
+      background: #1C1917;
+      border: 1px solid #3F3F46;
+      color: #D4D4D8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #DC2626;
+      border-color: #EF4444;
+      color: #FFFFFF;
+      box-shadow: 0 0 12px rgba(239,68,68,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="badge">Historical Motion Graphics</div>
+    <h1>1850 TAIPING REBELLION</h1>
+    <div class="subhead">Deadliest Civil War in History • 30M Casualties • 50.0s Reel</div>
+  </div>
+
+  <div class="video-card">
+    <div style="display: flex; gap: 8px; margin-bottom: 12px; width: 100%; overflow-x: auto; padding-bottom: 4px;">
+      <button onclick="playScene('scene_02.mp4', 'audit/SCENE_02_FAILED_SCHOLAR.png', this)" class="tab-btn active">🎬 Scene 2</button>
+      <button onclick="playScene('scene_03.mp4', 'audit/SCENE_03_FEVER_DREAM_VISION.png', this)" class="tab-btn">🎬 Scene 3</button>
+      <button onclick="playScene('scene_05.mp4', 'audit/SCENE_05_CUTTING_QUEUES.png', this)" class="tab-btn">🎬 Scene 5</button>
+      <button onclick="playScene('taiping_rebellion_1850_master_reel.mp4', 'audit/SCENE_01_DEADLIEST_CIVIL_WAR.png', this)" class="tab-btn">🎥 Master Reel</button>
+    </div>
+
+    <div class="video-container">
+      <video id="player" controls playsinline preload="auto" poster="audit/SCENE_02_FAILED_SCHOLAR.png?v=5">
+        <source id="videoSource" src="scene_02.mp4?v=5" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="actions">
+      <a id="downloadBtn" href="scene_02.mp4?v=5" download="scene_02.mp4" class="btn btn-primary">
+        ⬇ Save Clip to Phone
+      </a>
+      <a href="http://192.168.100.14:3000" class="btn btn-secondary" target="_blank">
+        ⚡ Remotion Studio
+      </a>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-label">Format</div>
+        <div class="spec-val">1080 × 1920 (9:16)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Framerate / Len</div>
+        <div class="spec-val">60 FPS • 50.00s</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Music & Beat Drop</div>
+        <div class="spec-val">GOTH @ 1:42 (Frame 1800)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Palette & Emitter</div>
+        <div class="spec-val">Conflict Crisis • Ash</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="audit-section">
+    <div class="section-title">
+      <span>Scene Stills Gallery</span>
+      <span style="font-size: 11px; color: #71717A;">20 Scenes</span>
+    </div>
+    <div class="stills-scroll">
+      <div class="still-card">
+        <img src="audit/SCENE_01_DEADLIEST_CIVIL_WAR.png" alt="Scene 1" loading="lazy">
+        <div class="still-title">01 • Civil War Opens</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_02_FAILED_SCHOLAR.png" alt="Scene 2" loading="lazy">
+        <div class="still-title">02 • Scholar Fails Exam</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_03_FEVER_DREAM_VISION.png" alt="Scene 3" loading="lazy">
+        <div class="still-title">03 • Fever Dream Vision</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_04_CLEANSE_THE_DEMONS.png" alt="Scene 4" loading="lazy">
+        <div class="still-title">04 • Cleanse Demons</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_05_CUTTING_QUEUES.png" alt="Scene 5" loading="lazy">
+        <div class="still-title">05 • Cutting the Queue</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_06_JINTIAN_UPRISING.png" alt="Scene 6" loading="lazy">
+        <div class="still-title">06 • Jintian Uprising</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_07_MILLION_MARCH.png" alt="Scene 7" loading="lazy">
+        <div class="still-title">07 • 1M Army Tally</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_08_PROVINCES_ROUTED.png" alt="Scene 8" loading="lazy">
+        <div class="still-title">08 • Yangtze Map</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_09_YANGTZE_WAR_JUNKS.png" alt="Scene 9" loading="lazy">
+        <div class="still-title">09 • War Junks Armada</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_10_NANJING_FALLS.png" alt="Scene 10" loading="lazy">
+        <div class="still-title">10 • Nanjing Falls</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_11_HEAVENLY_CAPITAL.png" alt="Scene 11" loading="lazy">
+        <div class="still-title">11 • Theocratic Throne</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_12_SACRED_TREASURY.png" alt="Scene 12" loading="lazy">
+        <div class="still-title">12 • Land Decree</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_13_TIANJING_INCIDENT.png" alt="Scene 13" loading="lazy">
+        <div class="still-title">13 • Purge Drop (1800f)</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_14_XIANG_ARMY_SURROUND.png" alt="Scene 14" loading="lazy">
+        <div class="still-title">14 • Siege Map</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_15_STARVATION_PALACE.png" alt="Scene 15" loading="lazy">
+        <div class="still-title">15 • Starvation</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_16_HONG_DEATH.png" alt="Scene 16" loading="lazy">
+        <div class="still-title">16 • Prophet Dies</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_17_WALL_EXPLOSION.png" alt="Scene 17" loading="lazy">
+        <div class="still-title">17 • Gunpowder Blast</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_18_BREACH_SLAUGHTER.png" alt="Scene 18" loading="lazy">
+        <div class="still-title">18 • Breach Assault</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_19_CASUALTY_TALLY.png" alt="Scene 19" loading="lazy">
+        <div class="still-title">19 • 30M Dead Tally</div>
+      </div>
+      <div class="still-card">
+        <img src="audit/SCENE_20_EMPIRE_SHATTERED.png" alt="Scene 20" loading="lazy">
+        <div class="still-title">20 • Shattered Empire</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function playScene(file, poster, btn) {
+      const player = document.getElementById('player');
+      const source = document.getElementById('videoSource');
+      const dlBtn = document.getElementById('downloadBtn');
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cacheBust = '?v=' + Date.now();
+      source.src = file + cacheBust;
+      player.poster = poster + cacheBust;
+      dlBtn.href = file + cacheBust;
+      dlBtn.download = file;
+      dlBtn.textContent = '⬇ Save ' + (file.startsWith('scene') ? file.replace('.mp4','') : 'Master Reel') + ' to Phone';
+
+      player.load();
+      player.play().catch(() => {});
+    }
+  </script>
+</body>
+</html>

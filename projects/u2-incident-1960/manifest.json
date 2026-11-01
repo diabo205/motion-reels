@@ -1,0 +1,57 @@
+{
+  "projectSlug": "u2-incident-1960",
+  "title": "1960 U-2 INCIDENT",
+  "updatedAt": "2026-11-01T09:24:19.620Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/u2_incident_1960.json",
+    "sha256": "7b9a3d9732645020a3473fea9551ae1b17fbbe671ac1e41c15d7a1d95c3fae2e",
+    "sceneCount": 19,
+    "totalFrames": 2948,
+    "durationSec": 49.13
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_u2.mp3",
+    "sha256": "493fd4774336a4be34d88ac38b738efdfb05e6b680487e60c71108a199cef1e1",
+    "bpm": 104,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "ROYALTY_FREE",
+      "clearanceId": "CLR-U2-INCIDENT-1960"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "ESPIONAGE_DOSSIER",
+    "particleEmitter": "NONE",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "STANDARD"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "projectSlug": "aleutian-campaign-1942",
+  "generatedAt": "2026-11-01T09:24:19.218Z",
+  "title": "1942 ALEUTIAN CAMPAIGN: THE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.",
+  "description": "1942 ALEUTIAN CAMPAIGN (🇺🇸 ❄️ 🇯🇵)\n\nTHE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.\n\nHistorical Sources & Fact-Check Citations:\n• ATTU AND KISKA FELL. FIRST INVASION SINCE 1812. — Source: 1942 ALEUTIAN CAMPAIGN Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Aleutian #Campaign #1942",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Aleutian",
+    "#Campaign",
+    "#1942"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "ROYALTY_FREE",
+    "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_04_ATTU_KISKA_OCCUPIED",
+      "text": "ATTU AND KISKA FELL. FIRST INVASION SINCE 1812.",
+      "source": "1942 ALEUTIAN CAMPAIGN Archival Record",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_FORGOTTEN_INVASION",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "JUNE 1942 • ALASKA TERRITORY",
+      "caption": "THE FORGOTTEN WWII INVASION. — JAPAN SEIZED AMERICAN SOIL.",
+      "visualAsset": "ALEUTIAN_FORGOTTEN_INVASION_OPENING"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_WILLIWAW_ARCHIPELAGO",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "FROZEN VOLCANIC ISLANDS. — WHIPPED BY ARCTIC GALES.",
+      "visualAsset": "ALEUTIAN_ARCHIPELAGO_VECTOR_MAP"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_DUTCH_HARBOR_RAID",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "JUNE 3, 1942 • DUTCH HARBOR",
+      "caption": "CARRIERS STRUCK DUTCH HARBOR. — BOMBS RAINED ON ALASKA.",
+      "visualAsset": "ALEUTIAN_DUTCH_HARBOR_BOMBING"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_ATTU_KISKA_OCCUPIED",
+      "archetype": "LONE_LEADER",
+      "headerContext": "ATTU & KISKA ISLANDS",
+      "caption": "ATTU AND KISKA FELL. — FIRST INVASION SINCE 1812.",
+      "visualAsset": "ALEUTIAN_ATTU_KISKA_OCCUPATION_FLAG"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_AKUTAN_ZERO_CRASH",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "AKUTAN ISLAND BOG",
+      "caption": "ONE DAMAGED ZERO FIGHTER. — CRASHED INTACT IN A BOG.",
+      "visualAsset": "ALEUTIAN_AKUTAN_ZERO_BOG_CRASH"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_AKUTAN_ZERO_BLUEPRINT",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "AMERICA SALVAGED THE WRECK. — EXPOSING EVERY FATAL FLAW.",
+      "visualAsset": "ALEUTIAN_AKUTAN_ZERO_SCHEMATIC"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_BLIND_FOG_SORTIES",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "BLINDING BERING SEA FOG. — SWALLOWED BOMBERS WHOLE.",
+      "visualAsset": "ALEUTIAN_B24_FOG_MOUNTAIN_HAZARD"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_KOMANDORSKI_NAVAL_DUEL",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "MARCH 1943 • BERING SEA",
+      "caption": "OUTGUNNED CRUISERS HELD FIRM. — CHOKED JAPAN'S SUPPLY LINE.",
+      "visualAsset": "ALEUTIAN_KOMANDORSKI_CRUISER_DUEL"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_ATTU_AMPHIBIOUS_LANDING",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "MAY 11, 1943 • ATTU ISLAND",
+      "caption": "ELEVEN THOUSAND TROOPS LANDED. — ONTO FROZEN ATTU BEACHES.",
+      "visualAsset": "ALEUTIAN_ATTU_AMPHIBIOUS_LANDING"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_SNIPERS_IN_THE_MIST",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "JAPAN HELD THE HIGH PEAKS. — FIRING DOWN THROUGH MIST.",
+      "visualAsset": "ALEUTIAN_HIGH_RIDGE_MIST_FIRE"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_FROSTBITE_TRENCH_FOOT",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "BOOTS FROZE SOLID IN MUD. — FROSTBITE CRIPPLED THOUSANDS.",
+      "visualAsset": "ALEUTIAN_TUNDRA_FROSTBITE_TOLL"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_CASTNERS_CUTTHROATS",
+      "archetype": "LONE_LEADER",
+      "headerContext": "ALASKA SCOUTS • COLD MOUNTAIN",
+      "caption": "ALASKA SCOUTS SCALED CLIFFS. — BREAKING THE MOUNTAIN LINE.",
+      "visualAsset": "ALEUTIAN_CASTNERS_CUTTHROATS_CLIMB"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_ENGINEER_HILL_BANZAI",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "MAY 29, 1943 • ENGINEER HILL",
+      "caption": "A DESPERATE DAWN CHARGE. — HAND-TO-HAND IN THE SNOW.",
+      "visualAsset": "ALEUTIAN_ENGINEER_HILL_BANZAI"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_ATTU_GARRISON_TOLL",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "TWO THOUSAND DEFENDERS DIED. — ONLY TWENTY-EIGHT SURVIVED.",
+      "visualAsset": "ALEUTIAN_ATTU_SURVIVOR_TALLY"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_FORTRESS_KISKA_TARGET",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "JULY 1943 • KISKA ISLAND",
+      "caption": "ONE STRONGHOLD REMAINED. — FIVE THOUSAND MEN ON KISKA.",
+      "visualAsset": "ALEUTIAN_KISKA_FORTRESS_MAP"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_KIMURA_FOG_ESCAPE",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "JULY 28, 1943 • SECRET EVACUATION",
+      "caption": "EIGHT WARSHIPS SLIPPED IN. — VANISHING IN FIFTY-FIVE MINUTES.",
+      "visualAsset": "ALEUTIAN_KIMURA_FOG_EVACUATION"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_BOMBING_EMPTY_ROCK",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "ALLIED GUNS POUNDED ROCK. — BOMBING AN EMPTY ISLAND.",
+      "visualAsset": "ALEUTIAN_EMPTY_ISLAND_BOMBARDMENT"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_OPERATION_COTTAGE_LANDING",
+      "archetype": "LONE_LEADER",
+      "headerContext": "AUGUST 15, 1943 • KISKA",
+      "caption": "ALLIED TROOPS STORMED ASHORE. — NOBODY WAS THERE.",
+      "visualAsset": "ALEUTIAN_OPERATION_COTTAGE_EMPTY_BEACH"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_FRIENDLY_FIRE_IN_FOG",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "SOLDIERS FIRED AT SHADOWS. — TRAPPED BY MINES AND FOG.",
+      "visualAsset": "ALEUTIAN_FRIENDLY_FIRE_FOG_PHANTOMS"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_KISKA_GHOST_CASUALTIES",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "OVER THREE HUNDRED CASUALTIES. — FIGHTING AN EMPTY ISLAND.",
+      "visualAsset": "ALEUTIAN_KISKA_GHOST_TOLL_COUNTER"
+    },
+    {
+      "sceneNumber": 21,
+      "sceneId": "SCENE_21_ALEUTIAN_EPILOGUE",
+      "archetype": "LONE_LEADER",
+      "headerContext": "THE FORGOTTEN CAMPAIGN",
+      "caption": "FOUR THOUSAND LIVES LOST. — RECLAIMING AMERICAN SOIL.",
+      "visualAsset": "ALEUTIAN_EPILOGUE_MEMORIAL_STAGE"
+    }
+  ]
+}

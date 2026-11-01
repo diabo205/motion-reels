@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Operation Cowboy (28 April 1945) — Historical Motion Reel Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #090D12;
+      color: #F5F5F7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+      max-width: 720px;
+      width: 100%;
+    }
+    .badge {
+      display: inline-block;
+      background: #1C1917;
+      border: 1px solid #D92B2B;
+      color: #EF4444;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .subhead {
+      color: #94A3B8;
+      font-size: 14px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .meta-chip {
+      background: #161B22;
+      border: 1px solid #30363D;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 24px;
+    }
+    .scene-card {
+      background: #11141A;
+      border: 1px solid #272C35;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .scene-card:hover {
+      transform: translateY(-4px);
+      border-color: #F59E0B;
+    }
+    .thumb-wrap {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .scene-id {
+      font-size: 11px;
+      font-weight: 800;
+      color: #F59E0B;
+      letter-spacing: 1px;
+    }
+    .setup-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+    .payoff-text {
+      font-size: 13px;
+      font-weight: 800;
+      color: #EF4444;
+      line-height: 1.3;
+    }
+    .scene-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px solid #1F242C;
+      font-size: 11px;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">WWII Historical Reel • 9:16 Kinetic Documentary</div>
+    <h1>OPERATION COWBOY (28 APRIL 1945)</h1>
+    <p class="subhead">
+      General George S. Patton’s U.S. 2nd Cavalry and German Wehrmacht soldiers united behind enemy lines to rescue the legendary Lipizzaner stallions of the Vienna Spanish Riding School from advancing Soviet forces and Waffen-SS counterattacks.
+    </p>
+    <div class="meta-bar">
+      <div class="meta-chip">⏱ 49.00s (2,940 frames @ 60 FPS)</div>
+      <div class="meta-chip">🎵 worry (Slowed) Hook @ 22s (106 BPM)</div>
+      <div class="meta-chip">🎨 CONFLICT_CRISIS Palette</div>
+      <div class="meta-chip">🌪 Persistent Ash Emitter</div>
+      <div class="meta-chip">🛡 Zero Snap Zooms</div>
+    </div>
+  </div>
+
+  <div class="grid" id="scenesGrid"></div>
+
+  <script>
+    const scenes = [
+      { id: "SCENE_01_WAR_COLLAPSE", time: "0.0s - 2.3s", frames: 136, arch: "SPLIT_CONFRONTATION", setup: "THE REICH WAS COLLAPSING.", payoff: "A MASSACRE WAS MINUTES AWAY." },
+      { id: "SCENE_02_LIPIZZANER_STALLIONS", time: "2.3s - 4.5s", frames: 136, arch: "LONE_LEADER", setup: "THE IMPERIAL WHITE HORSES.", payoff: "CENTURIES OF ROYAL BREEDING." },
+      { id: "SCENE_03_RED_ARMY_ADVANCE", time: "4.5s - 6.8s", frames: 136, arch: "STRUCTURAL_FRACTURE", setup: "THE RED ARMY WAS STARVING.", payoff: "THEY ATE EVERY HORSE." },
+      { id: "SCENE_04_HUNGARIAN_MASSACRE", time: "6.8s - 9.1s", frames: 136, arch: "CROWD_TALLY", setup: "HUNGARY'S ROYAL STUD.", payoff: "100% SLAUGHTERED IN DAYS." },
+      { id: "SCENE_05_GERMAN_VETS_PACT", time: "9.1s - 11.3s", frames: 136, arch: "LONE_LEADER", setup: "TWO GERMAN OFFICERS.", payoff: "REFUSED TO LET THEM DIE." },
+      { id: "SCENE_06_RADIO_CALL_TO_PATTON", time: "11.3s - 13.6s", frames: 136, arch: "VECTOR_MAP", setup: "A DESPERATE CLANDESTINE PLEA.", payoff: "RADIOED ACROSS ENEMY LINES." },
+      { id: "SCENE_07_PATTON_GREENLIGHT", time: "13.6s - 15.9s", frames: 136, arch: "LONE_LEADER", setup: "PATTON KNEW THE BLOODLINE.", payoff: "GO GET THEM." },
+      { id: "SCENE_08_TWENTY_MILES_BEHIND", time: "15.9s - 18.1s", frames: 136, arch: "VECTOR_MAP", setup: "TWENTY MILES DEEP.", payoff: "SURROUNDED BY TWO PANZERS." },
+      { id: "SCENE_09_PATTONS_GHOSTS_CHARGE", time: "18.1s - 20.4s", frames: 136, arch: "VEHICLE_IN_TRANSIT", setup: "M8 CARS AND TANKS.", payoff: "SMASHED THE BORDER LINE." },
+      { id: "SCENE_10_HOSTAU_GATES_REACHED", time: "20.4s - 22.7s", frames: 136, arch: "STRUCTURAL_FRACTURE", setup: "THE GATES SWUNG OPEN.", payoff: "FOUR HUNDRED HORSES WAITING." },
+      { id: "SCENE_11_FREED_ALLIED_POWS", time: "22.7s - 25.0s", frames: 140, arch: "CROWD_TALLY", setup: "HUNDREDS OF FREED POWS.", payoff: "HANDED REINS OVER RIFLES." },
+      { id: "SCENE_12_ARMING_WEHRMACHT", time: "25.0s - 27.3s", frames: 140, arch: "SPLIT_CONFRONTATION", setup: "GIS ARMED WEHRMACHT SOLDIERS.", payoff: "TO FIGHT AS BROTHERS." },
+      { id: "SCENE_13_COSSACK_CAVALRY", time: "27.3s - 29.7s", frames: 140, arch: "VEHICLE_IN_TRANSIT", setup: "COSSACK HORSEMEN SWEPT IN.", payoff: "SABERS DRAWN FOR FREEDOM." },
+      { id: "SCENE_14_WAFFEN_SS_AMBUSH", time: "29.7s - 32.0s", frames: 140, arch: "STRUCTURAL_FRACTURE", setup: "FANATICAL SS ATTACKED.", payoff: "MORTARS RAINED DOWN." },
+      { id: "SCENE_15_SIDE_BY_SIDE_DEFENSE", time: "32.0s - 34.3s", frames: 140, arch: "SPLIT_CONFRONTATION", setup: "AMERICANS AND GERMANS FIRED.", payoff: "DEFENDING THE STALLIONS." },
+      { id: "SCENE_16_SS_RETREATS", time: "34.3s - 36.7s", frames: 140, arch: "STRUCTURAL_FRACTURE", setup: "THE ENEMY BROKE.", payoff: "THE CORRIDOR WAS OPEN." },
+      { id: "SCENE_17_EVACUATION_ORDER", time: "36.7s - 39.0s", frames: 140, arch: "LONE_LEADER", setup: "EVERY HORSE MOVES NOW.", payoff: "BEFORE THE RUSSIANS ARRIVE." },
+      { id: "SCENE_18_MASS_STAMPEDE", time: "39.0s - 41.3s", frames: 140, arch: "VEHICLE_IN_TRANSIT", setup: "HUNDREDS OF WHITE STALLIONS.", payoff: "THUNDERING ACROSS BOHEMIA." },
+      { id: "SCENE_19_SOVIET_T34_ARRIVAL", time: "41.3s - 43.7s", frames: 140, arch: "SPLIT_CONFRONTATION", setup: "RED ARMY TANKS CRESTED.", payoff: "JUST SECONDS TOO LATE." },
+      { id: "SCENE_20_SAFE_BEHIND_LINES", time: "43.7s - 46.0s", frames: 140, arch: "VEHICLE_IN_TRANSIT", setup: "LOADED ONTO ARMY TRUCKS.", payoff: "SECURED ON ALLIED SOIL." },
+      { id: "SCENE_21_LEGACY_PRESERVED", time: "46.0s - 49.0s", frames: 180, arch: "CROWD_TALLY", setup: "OVER 1,200 HORSES SAVED.", payoff: "A 450-YEAR LEGACY LIVES." }
+    ];
+
+    const grid = document.getElementById("scenesGrid");
+    scenes.forEach(s => {
+      const card = document.createElement("div");
+      card.className = "scene-card";
+      card.innerHTML = `
+        <div class="thumb-wrap">
+          <img src="audit/${s.id}.png" alt="${s.id}" onerror="this.src='../../out/audit/${s.id}.png'">
+        </div>
+        <div class="card-body">
+          <div class="scene-id">${s.id}</div>
+          <div class="setup-text">${s.setup}</div>
+          <div class="payoff-text">${s.payoff}</div>
+          <div class="scene-footer">
+            <span>${s.time}</span>
+            <span>${s.arch}</span>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>

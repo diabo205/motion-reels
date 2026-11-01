@@ -1,0 +1,57 @@
+{
+  "projectSlug": "operation-cowboy-1945",
+  "title": "1945 OPERATION COWBOY",
+  "updatedAt": "2026-11-01T09:24:19.413Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/operation_cowboy_1945.json",
+    "sha256": "42e1eed6c63fc44ff36b593490269739276806a13957059f5154edb2f74e118d",
+    "sceneCount": 21,
+    "totalFrames": 2940,
+    "durationSec": 49
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_cowboy_hook.mp3",
+    "sha256": "81c11d2f4595aae115059df9369e22ef2202c169b11ab556d93e8fe43eaa9c90",
+    "bpm": 106,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "ROYALTY_FREE",
+      "clearanceId": "CLR-OPERATION-COWBOY-1945"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "STANDARD"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "FPS": 60,
+  "WIDTH": 1080,
+  "HEIGHT": 1920,
+  "MIN_FRAMES": 2700,
+  "MAX_FRAMES": 3500,
+  "MIN_DURATION_SEC": 45.0,
+  "MAX_DURATION_SEC": 58.33,
+  "MIN_SCENE_FRAMES": 120,
+  "TARGET_MAX_SCENE_FRAMES": 168,
+  "MAX_SCENE_FRAMES": 180,
+  "MIN_CUTS": 16,
+  "MAX_CUTS": 29,
+  "WORD_BUDGET_MIN": 6,
+  "WORD_BUDGET_MAX": 10,
+  "MAX_LINE_CHARS": 40,
+  "MAX_LINES_PER_LAYER": 2,
+  "MIN_SETUP_FONT_PX": 56,
+  "MIN_PAYOFF_FONT_PX": 64,
+  "ALL_CAPS_TRACKING_EM": 0.04,
+  "SFX_PERCEPTUAL_LEAD_FRAMES": 2,
+  "PAYOFF_BEAT_WINDOW_FRAMES": [18, 45],
+  "LOUDNESS_TARGET_LUFS": -14.0,
+  "LOUDNESS_TRUE_PEAK_DBTP": -1.0,
+  "BGM_DUCK_DB": -7.5,
+  "FIVE_ACT_PROPORTIONS": {
+    "ACT_I_HOOK": [0.0, 0.07],
+    "ACT_II_INCITING_CRISIS": [0.07, 0.30],
+    "ACT_III_CRUCIBLE": [0.30, 0.65],
+    "ACT_IV_TURNING_POINT": [0.65, 0.85],
+    "ACT_V_RESOLUTION": [0.85, 1.0]
+  },
+  "CORE_ARCHETYPES": [
+    "LONE_LEADER",
+    "CROWD_TALLY",
+    "VEHICLE_IN_TRANSIT",
+    "STRUCTURAL_FRACTURE",
+    "VECTOR_MAP",
+    "SPLIT_CONFRONTATION",
+    "QUOTE_CARD"
+  ],
+  "ALLOWED_CAMERA_MOVEMENTS": [
+    "STATIC",
+    "SLOW_PUSH_IN",
+    "PARALLAX_PAN_RIGHT",
+    "CRANE_SWEEP_UP",
+    "DUTCH_TILT",
+    "IMPACT_SHAKE"
+  ],
+  "BANNED_CAMERA_MOVEMENTS": [
+    "SNAP_ZOOM",
+    "CRASH_ZOOM"
+  ],
+  "ALLOWED_FONTS": [
+    "Montserrat",
+    "Inter"
+  ],
+  "BANNED_FONTS": [
+    "Caveat",
+    "Courier Prime",
+    "CourierPrime",
+    "Comic Sans"
+  ],
+  "PALETTES": {
+    "POLAR_MARITIME": {
+      "bgTop": "#0A1118",
+      "bgBottom": "#162636",
+      "setupText": "#F4F7FA",
+      "payoffText": "#E63228",
+      "accent": "#A5F3FC",
+      "somberPayoff": "#93C5FD",
+      "silhouetteFills": ["#090D12", "#12151B", "#0A1118", "#162636", "#1E293B", "#0F172A"]
+    },
+    "CONFLICT_CRISIS": {
+      "bgTop": "#0F1012",
+      "bgBottom": "#1C1917",
+      "setupText": "#F5F5F7",
+      "payoffText": "#D92B2B",
+      "accent": "#F59E0B",
+      "somberPayoff": "#D8B4A0",
+      "silhouetteFills": ["#090D12", "#12151B", "#0F1012", "#1C1917", "#18181B", "#27272A"]
+    },
+    "ESPIONAGE_DOSSIER": {
+      "bgTop": "#0B1310",
+      "bgBottom": "#16221E",
+      "setupText": "#ECFDF5",
+      "payoffText": "#EF4444",
+      "accent": "#38BDF8",
+      "somberPayoff": "#67E8F9",
+      "silhouetteFills": ["#090D12", "#12151B", "#0B1310", "#16221E", "#0F172A", "#1E293B"]
+    }
+  }
+}

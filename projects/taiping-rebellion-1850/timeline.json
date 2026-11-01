@@ -1,0 +1,973 @@
+{
+  "$schema": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
+  "meta": {
+    "title": "1850 TAIPING REBELLION",
+    "flagEmoji": "🇨🇳 ⚔️ ✝️",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 96,
+    "bgmFile": "audio/bgm_taiping.mp3",
+    "bgmStartFrom": 0,
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "fontFamily": "Montserrat",
+    "styleMode": "DOCUMENTARY_SANS"
+  },
+  "scenes": [
+    {
+      "sceneId": "SCENE_01_DEADLIEST_CIVIL_WAR",
+      "startFrame": 0,
+      "durationFrames": 150,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "CHINA • 1850–1864",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "HISTORY'S DEADLIEST WAR UNFOLDS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THIRTY MILLION LOST IN FLAMES",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "TAIPING_CONFRONTATION_OPENING"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "war_drum.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_02_FAILED_SCHOLAR",
+      "startFrame": 150,
+      "durationFrames": 180,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "GUANGZHOU • 1837",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.4
+      },
+      "textLayers": [
+        {
+          "text": "ONE SCHOLAR FAILS HIS EXAM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "A DELUSIONAL PROPHET RISES",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "HONG_FAILED_SCHOLAR_DESK"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 48
+        },
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 110
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 142
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_03_FEVER_DREAM_VISION",
+      "startFrame": 330,
+      "durationFrames": 150,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "headerContext": "DELIRIUM VISION",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.4
+      },
+      "textLayers": [
+        {
+          "text": "HEAVENLY BLADE DESTROYS THE BANNER",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "YANGTZE VALLEY IGNITES IN WAR",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "HONG_FEVER_DREAM_VISION"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "blade_slash.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 45
+        },
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 70
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 114
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_04_CLEANSE_THE_DEMONS",
+      "startFrame": 480,
+      "durationFrames": 150,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "headerContext": "HOLY MISSION",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "HE ORDERS CLEANSING OF CHINA",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "MANCHU DYNASTY BRANDED DEMONS",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "CLEANSE_THE_DEMONS_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "blade_slash.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_05_CUTTING_QUEUES",
+      "startFrame": 630,
+      "durationFrames": 150,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": true,
+      "headerContext": "GUANGXI • 1850",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.4
+      },
+      "textLayers": [
+        {
+          "text": "THOUSANDS CUT THE IMPERIAL QUEUE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THE LONGHAIR REBELS MARCH",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "CUTTING_IMPERIAL_QUEUE_SILHOUETTE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "blade_slash.wav",
+          "frameOffset": 48
+        },
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 68
+        },
+        {
+          "sfxFile": "war_drum.wav",
+          "frameOffset": 102
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_06_JINTIAN_UPRISING",
+      "startFrame": 780,
+      "durationFrames": 150,
+      "archetype": "FLAG_BANNER",
+      "hudVisible": true,
+      "headerContext": "JANUARY 11, 1851",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.85
+      },
+      "textLayers": [
+        {
+          "text": "JANUARY 1851 AT JINTIAN",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THE HEAVENLY UPRISING IGNITES",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "JINTIAN_UPRISING_FLAG_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "war_drum.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_07_MILLION_MARCH",
+      "startFrame": 930,
+      "durationFrames": 150,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "headerContext": "NORTHWARD ADVANCE",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "PEASANT RANKS SWELL TO MILLIONS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "RELENTLESS MARCH UP THE YANGTZE",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "MILLION_MAN_MARCH_TALLY_STAGE",
+        "counterConfig": {
+          "label": "ACTIVE TAIPING ARMY STRENGTH",
+          "startValue": 10000,
+          "endValue": 1000000
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "war_drum.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_08_PROVINCES_ROUTED",
+      "startFrame": 1080,
+      "durationFrames": 150,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "CAMPAIGN ADVANCE • 1852",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "IMPERIAL FORCES ROUTED IN PANIC",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "PROVINCES FALL LIKE DOMINOES",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "TAIPING_CAMPAIGN_TACTICAL_MAP"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_09_YANGTZE_WAR_JUNKS",
+      "startFrame": 1230,
+      "durationFrames": 150,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "headerContext": "YANGTZE RIVER BASTIONS",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.75
+      },
+      "textLayers": [
+        {
+          "text": "MARCH 1853 NANJING ENCIRCLED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THE SOUTHERN BASTION SURRENDERS",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "YANGTZE_WAR_JUNKS_FLEET"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_10_NANJING_FALLS",
+      "startFrame": 1380,
+      "durationFrames": 150,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "NANJING CAPTURED",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.9
+      },
+      "textLayers": [
+        {
+          "text": "RENAMED THE HEAVENLY CAPITAL",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "RADICAL THEOCRATIC RULE BEGINS",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "NANJING_GATE_BREACHED_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_11_HEAVENLY_CAPITAL",
+      "startFrame": 1530,
+      "durationFrames": 150,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "headerContext": "TIANJING PALACE",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "PRIVATE WEALTH TOTALLY ABOLISHED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "STRICT GENDER SEPARATION DECREED",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "HEAVENLY_CAPITAL_THRONE_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_12_SACRED_TREASURY",
+      "startFrame": 1680,
+      "durationFrames": 120,
+      "archetype": "DOCUMENT_CARD",
+      "hudVisible": true,
+      "headerContext": "THEOCRATIC DECREE",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "GOD WORSHIPPERS BAN ALL OPIUM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "ABSOLUTE SUBMISSION DEMANDED",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "SACRED_TREASURY_PROCLAMATION_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_13_TIANJING_INCIDENT",
+      "startFrame": 1800,
+      "durationFrames": 150,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "SEPTEMBER 1856 • PURGE",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1.1
+      },
+      "textLayers": [
+        {
+          "text": "PARANOIA DESTROYS THE REBEL LEADERS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "TWENTY THOUSAND PURGED INSIDE",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "TIANJING_INCIDENT_PURGE_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "blade_slash.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_14_XIANG_ARMY_SURROUND",
+      "startFrame": 1950,
+      "durationFrames": 150,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "IMPERIAL COUNTEROFFENSIVE",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "IMPERIAL XIANG ARMY ADVANCES",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "ZENG GUOFAN ENCIRCLES NANJING",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "XIANG_ARMY_SIEGE_ENCIRCLEMENT_MAP"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_15_STARVATION_PALACE",
+      "startFrame": 2100,
+      "durationFrames": 150,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "headerContext": "BESIEGED CITADEL",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "textLayers": [
+        {
+          "text": "BRUTAL SIEGE CUTS FOOD SUPPLIES",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "STARVING REBELS EAT WEEDS",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "STARVATION_IN_CAPITAL_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_16_HONG_DEATH",
+      "startFrame": 2250,
+      "durationFrames": 150,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "JUNE 1, 1864",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "JUNE 1864 THE PROPHET DIES",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "HEAVENLY CAPITAL STANDS ALONE",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "HONG_XIUQUAN_DEATH_BIER_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_17_WALL_EXPLOSION",
+      "startFrame": 2400,
+      "durationFrames": 150,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "JULY 19, 1864 • BREACH",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1.2
+      },
+      "textLayers": [
+        {
+          "text": "MASSIVE EXPLOSION CRUMBLES WALLS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "IMPERIAL TROOPS STORM BREACH",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "GUNPOWDER_TUNNEL_MINE_EXPLOSION"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_18_BREACH_SLAUGHTER",
+      "startFrame": 2550,
+      "durationFrames": 150,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": false,
+      "headerContext": "FINAL RAMPART ASSAULT",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.85
+      },
+      "textLayers": [
+        {
+          "text": "BLOODY THREE DAY SLAUGHTER",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "EVERY DEFENDER CUT DOWN",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "BREACH_MELEE_SLAUGHTER_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "blade_slash.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_19_CASUALTY_TALLY",
+      "startFrame": 2700,
+      "durationFrames": 150,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "headerContext": "DEATH TOLL SUMMARY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "THIRTY MILLION LIVES PERISHED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "THE QING DYNASTY CRIPPLED",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "THIRTY_MILLION_CASUALTY_TALLY_STAGE",
+        "counterConfig": {
+          "label": "TOTAL ESTIMATED CASUALTIES",
+          "startValue": 5000000,
+          "endValue": 30000000
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "war_drum.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_20_EMPIRE_SHATTERED",
+      "startFrame": 2850,
+      "durationFrames": 150,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "EPILOGUE • LEGACY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "THE DEADLIEST CIVIL WAR ENDS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "AN EMPIRE FOREVER SCARRED",
+          "triggerFrameOffset": 30,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#160D12",
+          "#3D151E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "SHATTERED_EMPIRE_EPILOGUE_STAGE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ]
+    }
+  ]
+}

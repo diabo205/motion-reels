@@ -1,0 +1,14 @@
+{
+  "projectSlug": "u2-incident-1960",
+  "title": "1960 U-2 INCIDENT",
+  "timestamp": "2026-11-01T09:24:19.810Z",
+  "passed": true,
+  "totalFrames": 2948,
+  "durationSec": 49.13,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 19,
+  "errorCount": 0,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": []
+}

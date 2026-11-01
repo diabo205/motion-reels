@@ -1,0 +1,14 @@
+{
+  "projectSlug": "operation-cowboy-1945",
+  "title": "1945 OPERATION COWBOY",
+  "timestamp": "2026-11-01T09:24:19.613Z",
+  "passed": true,
+  "totalFrames": 2940,
+  "durationSec": 49,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 21,
+  "errorCount": 0,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": []
+}

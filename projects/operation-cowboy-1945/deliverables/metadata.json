@@ -1,0 +1,208 @@
+{
+  "projectSlug": "operation-cowboy-1945",
+  "generatedAt": "2026-11-01T09:24:19.419Z",
+  "title": "1945 OPERATION COWBOY: THE REICH WAS COLLAPSING. A MASSACRE WAS MINUTES AWAY.",
+  "description": "1945 OPERATION COWBOY (🇺🇸 🐎 ⚔️)\n\nTHE REICH WAS COLLAPSING. A MASSACRE WAS MINUTES AWAY.\n\nHistorical Sources & Fact-Check Citations:\n• HUNGARY'S ROYAL STUD. 100% SLAUGHTERED IN DAYS. — Source: 1945 OPERATION COWBOY Archival Record\n• OVER 1,200 HORSES SAVED. A 450-YEAR LEGACY LIVES. — Source: 1945 OPERATION COWBOY Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Operation #Cowboy #1945",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Operation",
+    "#Cowboy",
+    "#1945"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "ROYALTY_FREE",
+    "clearanceId": "CLR-OPERATION-COWBOY-1945"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "text": "HUNGARY'S ROYAL STUD. 100% SLAUGHTERED IN DAYS.",
+      "source": "1945 OPERATION COWBOY Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "text": "OVER 1,200 HORSES SAVED. A 450-YEAR LEGACY LIVES.",
+      "source": "1945 OPERATION COWBOY Archival Record",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "APRIL 1945 • CZECH BORDER",
+      "caption": "THE REICH WAS COLLAPSING. — A MASSACRE WAS MINUTES AWAY.",
+      "visualAsset": "COWBOY_WAR_COLLAPSE_OPENING"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "archetype": "LONE_LEADER",
+      "headerContext": "HOSTAU STUD FARM",
+      "caption": "THE IMPERIAL WHITE HORSES. — CENTURIES OF ROYAL BREEDING.",
+      "visualAsset": "COWBOY_LIPIZZANER_STALLION_HERO"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "SOVIET ADVANCE",
+      "caption": "THE RED ARMY WAS STARVING. — THEY ATE EVERY HORSE.",
+      "visualAsset": "COWBOY_RED_ARMY_FAMINE_ADVANCE"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "HUNGARY'S ROYAL STUD. — 100% SLAUGHTERED IN DAYS.",
+      "visualAsset": "COWBOY_HUNGARIAN_STUD_MASSACRE"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "archetype": "LONE_LEADER",
+      "headerContext": "HOSTAU • WEHRMACHT HQ",
+      "caption": "TWO GERMAN OFFICERS. — REFUSED TO LET THEM DIE.",
+      "visualAsset": "COWBOY_WEHRMACHT_VETS_PACT"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "A DESPERATE CLANDESTINE PLEA. — RADIOED ACROSS ENEMY LINES.",
+      "visualAsset": "COWBOY_RADIO_CALL_TO_PATTON"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "archetype": "LONE_LEADER",
+      "headerContext": "U.S. THIRD ARMY",
+      "caption": "PATTON KNEW THE BLOODLINE. — GO GET THEM.",
+      "visualAsset": "COWBOY_PATTON_COMMAND_GREENLIGHT"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "TWENTY MILES DEEP. — SURROUNDED BY TWO PANZERS.",
+      "visualAsset": "COWBOY_TWENTY_MILES_BEHIND_LINES"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "M8 CARS AND TANKS. — SMASHED THE BORDER LINE.",
+      "visualAsset": "COWBOY_PATTONS_GHOSTS_CHARGE"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "HOSTAU • TARGET REACHED",
+      "caption": "THE GATES SWUNG OPEN. — FOUR HUNDRED HORSES WAITING.",
+      "visualAsset": "COWBOY_HOSTAU_GATES_REACHED"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "HUNDREDS OF FREED POWS. — HANDED REINS OVER RIFLES.",
+      "visualAsset": "COWBOY_ALLIED_POWS_LIBERATION"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "GIS ARMED WEHRMACHT SOLDIERS. — TO FIGHT AS BROTHERS.",
+      "visualAsset": "COWBOY_ARMING_WEHRMACHT_BROTHERS"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "COSSACK HORSEMEN SWEPT IN. — SABERS DRAWN FOR FREEDOM.",
+      "visualAsset": "COWBOY_COSSACK_CAVALRY_PRINCE_AMASSOV"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "THE AMBUSH",
+      "caption": "FANATICAL SS ATTACKED. — MORTARS RAINED DOWN.",
+      "visualAsset": "COWBOY_WAFFEN_SS_AMBUSH"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "AMERICANS AND GERMANS FIRED. — DEFENDING THE STALLIONS.",
+      "visualAsset": "COWBOY_SIDE_BY_SIDE_DEFENSE"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "THE ENEMY BROKE. — THE CORRIDOR WAS OPEN.",
+      "visualAsset": "COWBOY_SS_RETREAT_HEAVY_LOSSES"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "CAPT. THOMAS STEWART",
+      "caption": "EVERY HORSE MOVES NOW. — BEFORE THE RUSSIANS ARRIVE.",
+      "visualAsset": "COWBOY_CAPT_STEWART_EVACUATION_ORDER"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "HUNDREDS OF WHITE STALLIONS. — THUNDERING ACROSS BOHEMIA.",
+      "visualAsset": "COWBOY_MASS_LIPIZZANER_STAMPEDE"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "SOVIET ADVANCE CORPS",
+      "caption": "RED ARMY TANKS CRESTED. — JUST SECONDS TOO LATE.",
+      "visualAsset": "COWBOY_SOVIET_T34_RIDGE_ARRIVAL"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "LOADED ONTO ARMY TRUCKS. — SECURED ON ALLIED SOIL.",
+      "visualAsset": "COWBOY_US_ARMY_TRUCK_CONVOY"
+    },
+    {
+      "sceneNumber": 21,
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "THE LIVING LEGACY",
+      "caption": "OVER 1,200 HORSES SAVED. — A 450-YEAR LEGACY LIVES.",
+      "visualAsset": "COWBOY_EPILOGUE_SPANISH_RIDING_SCHOOL"
+    }
+  ]
+}

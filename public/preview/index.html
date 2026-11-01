@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peshawar 2009 | Master Production Reel</title>
+  <style>
+    :root {
+      --bg: #090D13;
+      --card-bg: #121A26;
+      --border: #25374C;
+      --cyan: #5BC0BE;
+      --red: #E63946;
+      --amber: #F4B942;
+      --cream: #EAE3D2;
+      --text: #F4EFE6;
+      --muted: #8899A6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(91, 192, 190, 0.15);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    p.subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .btn-group {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--cyan);
+      color: #090D13;
+    }
+    .btn-primary:hover {
+      background: #78d2d0;
+    }
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--cream);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--cyan);
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      width: 100%;
+      max-width: 960px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: none;
+      border: 1px solid transparent;
+      padding: 10px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 1px;
+    }
+    .tab-btn.active {
+      color: var(--cyan);
+      background: rgba(91, 192, 190, 0.12);
+      border-color: var(--cyan);
+    }
+    .tab-content {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tab-content.active {
+      display: flex;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+    .panel-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .panel-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+    .video-wrapper, .still-wrapper {
+      position: relative;
+      width: 360px;
+      height: 640px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #1A2634;
+      background: #000;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    }
+    video, img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .telemetry-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+      font-size: 12px;
+    }
+    .telemetry-item {
+      background: rgba(255,255,255,0.03);
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .telemetry-label {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .telemetry-value {
+      color: var(--cream);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .feature-list {
+      max-width: 820px;
+      margin-top: 36px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      width: 100%;
+    }
+    .feature-list h3 {
+      font-size: 16px;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .feature-list ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .feature-list li {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      padding-left: 18px;
+      position: relative;
+    }
+    .feature-list li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Master Reel Export Complete</div>
+    <h1>Peshawar 2009 • Final Master Cut</h1>
+    <p class="subtitle">
+      1080 × 1920 (9:16) • 60 FPS • High Fidelity CRF 18 • Sample-Accurate Audio Beat Drop
+    </p>
+    <div class="btn-group">
+      <a href="master_reel.mp4" download="peshawar_2009_master_reel.mp4" class="btn btn-primary">
+        ⬇ Download Master MP4 (35.5 MB)
+      </a>
+      <a href="http://localhost:3000" target="_blank" class="btn btn-secondary">
+        ▶ Remotion Studio Live
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('master')">
+      🎬 Complete Master Reel (70.6s)
+    </button>
+    <button class="tab-btn" onclick="switchTab('scene10')">
+      Scene 10: Disavowal Dossier (Vertical Stack)
+    </button>
+    <button class="tab-btn" onclick="switchTab('scene09')">
+      Scene 09: Waziristan Tactical Map
+    </button>
+  </div>
+
+  <!-- TAB 1: COMPLETE MASTER REEL -->
+  <div id="tab-master" class="tab-content active">
+    <div class="container">
+      <div class="panel" style="max-width: 440px;">
+        <div class="panel-header">
+          <span class="panel-title">Master Video Player (60 FPS)</span>
+          <span style="font-size: 11px; color: var(--cyan);">1080 × 1920</span>
+        </div>
+        <div class="video-wrapper">
+          <video src="master_reel.mp4" controls autoplay playsinline></video>
+        </div>
+        <div class="telemetry-grid">
+          <div class="telemetry-item">
+            <div class="telemetry-label">Duration</div>
+            <div class="telemetry-value">70.58s (4,235 Frames)</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">Resolution & FPS</div>
+            <div class="telemetry-value">1080×1920 @ 60 FPS</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">Encoding</div>
+            <div class="telemetry-value">H.264 • CRF 18 (Master)</div>
+          </div>
+          <div class="telemetry-item">
+            <div class="telemetry-label">File Size</div>
+            <div class="telemetry-value">35.5 MB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-list">
+      <h3>Key Master Reel Innovations</h3>
+      <ul>
+        <li><strong style="color:var(--text);">Sample-Accurate Detonation Drop:</strong> Musical beat drop aligned with zero-frame latency to the visual detonation cut (Frame 242).</li>
+        <li><strong style="color:var(--text);">Tactile Paper-Craft Stages:</strong> Multi-layer torn-paper backgrounds, center fold crease (x=621), and zero template pollution.</li>
+        <li><strong style="color:var(--text);">Upgraded Geopolitical Map (Scene 09):</strong> Full-viewport Vox-style cartography with Durand line, 3-prong army spearheads, and retaliatory trajectory.</li>
+        <li><strong style="color:var(--text);">Vertical Disavowal Stack (Scene 10):</strong> Tall 9:16 layout with animated Taliban & Al-Qaeda cutout puppets and rubber stamp slams.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TAB 2: SCENE 10 -->
+  <div id="tab-scene10" class="tab-content">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Scene 10 Clip (60 FPS)</span>
+          <span style="font-size: 11px; color: var(--amber);">MP4 H.264</span>
+        </div>
+        <div class="video-wrapper">
+          <video src="scene_10.mp4" controls loop muted playsinline></video>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Scene 10 Audit Still</span>
+          <span style="font-size: 11px; color: var(--cyan);">Frame 2248</span>
+        </div>
+        <div class="still-wrapper">
+          <a href="scene_10.png" target="_blank">
+            <img src="scene_10.png" alt="Scene 10 Audit Still" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: SCENE 09 -->
+  <div id="tab-scene09" class="tab-content">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Scene 09 Clip (60 FPS)</span>
+          <span style="font-size: 11px; color: var(--amber);">MP4 H.264</span>
+        </div>
+        <div class="video-wrapper">
+          <video src="scene_09.mp4" controls loop muted playsinline></video>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Scene 09 Audit Still</span>
+          <span style="font-size: 11px; color: var(--cyan);">Frame 2056</span>
+        </div>
+        <div class="still-wrapper">
+          <a href="scene_09.png" target="_blank">
+            <img src="scene_09.png" alt="Scene 09 Audit Still" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

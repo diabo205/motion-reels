@@ -1,0 +1,645 @@
+{
+  "$schema": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
+  "meta": {
+    "title": "PESHAWAR 2009",
+    "flagEmoji": "🇵🇰",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 119
+  },
+  "scenes": [
+    {
+      "sceneId": "01_hook_bazaar_morning",
+      "startFrame": 0,
+      "durationFrames": 242,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": false,
+      "headerContext": "28 OCT 2009 • 11:30 AM",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "28 OCTOBER 2009. PESHAWAR.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "A PACKED BAZAAR OF WOMEN & CHILDREN.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Peepal Mandi, Meena Bazaar — morning winter shopping"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#D48955",
+          "#4A3222"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "PESHAWAR_BAZAAR_STREET_SILHOUETTE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "02_the_detonation_blast",
+      "startFrame": 242,
+      "durationFrames": 242,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": true,
+      "headerContext": "ZERO HOUR • 11:35 AM",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1
+      },
+      "textLayers": [
+        {
+          "text": "A DEAFENING SHOCKWAVE TORE THE SKY.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "A MOSQUE & 4 BUILDINGS COLLAPSED.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "A four-story commercial plaza crushed to powder"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B8292F",
+          "#1A090B"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "MEENA_BAZAAR_BLAST_IMPACT"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "03_the_weapon_car_bomb",
+      "startFrame": 484,
+      "durationFrames": 242,
+      "archetype": "TELEMETRY_COUNTER",
+      "hudVisible": true,
+      "headerContext": "FORENSIC SCHEMATIC",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "CONCEALED INSIDE A PARKED CAR.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "150 KILOGRAMS OF HIGH EXPLOSIVES.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "330 lbs of military-grade ordnance"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "VEHICLE_BOMB_150KG_COUNTER",
+        "counterConfig": {
+          "label": "EXPLOSIVES PAYLOAD",
+          "startValue": 0,
+          "endValue": 150
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "04_firestorm_fabric_shops",
+      "startFrame": 726,
+      "durationFrames": 242,
+      "archetype": "DOCUMENT_CARD",
+      "hudVisible": true,
+      "headerContext": "AFTERMATH",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "FABRIC STORES IGNITED IN SECONDS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "TRAPPING HUNDREDS BENEATH BURNING ASH.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Narrow alleys choked with smoke and burning nylon"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "svgForegroundAsset": "FIRE_AND_RUBBLE_PHOTO_CARD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "05_rickshaw_evacuation",
+      "startFrame": 968,
+      "durationFrames": 242,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": true,
+      "headerContext": "ALLEYWAY EVACUATION",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "textLayers": [
+        {
+          "text": "NO AMBULANCES COULD REACH THE ALLEY.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "CIVILIANS CARRIED THE DYING ON RICKSHAWS.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "'I heard children crying in the pitch darkness' — Responder"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#C47247",
+          "#2A1D2E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "RICKSHAW_CIVILIAN_RESCUE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "06_hospital_code_red",
+      "startFrame": 1210,
+      "durationFrames": 242,
+      "archetype": "DOCUMENT_CARD",
+      "hudVisible": true,
+      "headerContext": "LADY READING HOSPITAL",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "LADY READING HOSPITAL ENTERED CODE RED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "DOCTORS PLEADED FOR BLOOD ON MEGAPHONES.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Wards overflowed onto corridors within 20 minutes"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "LADY_READING_HOSPITAL_CARD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "07_death_toll_counter",
+      "startFrame": 1452,
+      "durationFrames": 242,
+      "archetype": "TELEMETRY_COUNTER",
+      "hudVisible": true,
+      "headerContext": "CASUALTY TOLL",
+      "camera": {
+        "movement": "SNAP_ZOOM",
+        "intensity": 0.8
+      },
+      "textLayers": [
+        {
+          "text": "THE DEADLIEST STRIKE IN CITY HISTORY.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "137 KILLED. OVER 200 WOUNDED.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Overwhelmingly mothers and young school children"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "PESHAWAR_137_CASUALTY_COUNTER",
+        "counterConfig": {
+          "label": "CONFIRMED CASUALTIES",
+          "startValue": 0,
+          "endValue": 137
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "08_clinton_touchdown",
+      "startFrame": 1694,
+      "durationFrames": 242,
+      "archetype": "FLAG_BANNER",
+      "hudVisible": true,
+      "headerContext": "ISLAMABAD • 28 OCT 2009",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "AT THAT EXACT MOMENT IN ISLAMABAD...",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "HILLARY CLINTON HAD JUST TOUCHED DOWN.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Her historic 3-day strategic diplomacy mission"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1C2636",
+          "#111520"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "CLINTON_ISLAMABAD_ARRIVAL"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "09_waziristan_offensive",
+      "startFrame": 1936,
+      "durationFrames": 242,
+      "archetype": "TACTICAL_MAP",
+      "hudVisible": true,
+      "headerContext": "OPERATION RAH-E-NIJAT",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "textLayers": [
+        {
+          "text": "THE ARMY HAD MOUNTED A MASSIVE OFFENSIVE.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "30,000 TROOPS INTO SOUTH WAZIRISTAN.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Officials identified the blast as direct retaliatory blowback"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "WAZIRISTAN_TACTICAL_MAP"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "10_unprecedented_disavowal",
+      "startFrame": 2178,
+      "durationFrames": 242,
+      "archetype": "BLUEPRINT_DIAGRAM",
+      "hudVisible": true,
+      "headerContext": "INTELLIGENCE DESK",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "AUTHORITIES POINTED AT TALIBAN CELLS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "YET BOTH TALIBAN & AL-QAEDA DENIED IT.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Unprecedented press dispatches sent disclaiming responsibility"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "INTELLIGENCE_DISAVOWAL_SCHEMATIC"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "11_bilateral_press_conference",
+      "startFrame": 2420,
+      "durationFrames": 242,
+      "archetype": "DOCUMENT_CARD",
+      "hudVisible": true,
+      "headerContext": "BILATERAL RESOLVE",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "QURESHI & CLINTON FACED CAMERAS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "'WE WILL NOT BUCKLE. THIS FIGHT IS OUR FIGHT.'",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Islamabad press briefing: bilateral determination against terror"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "svgForegroundAsset": "CLINTON_QURESHI_PRESS_CARD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "12_peshawar_unbroken_resilience",
+      "startFrame": 2662,
+      "durationFrames": 242,
+      "archetype": "SILHOUETTE_ACTION",
+      "hudVisible": true,
+      "headerContext": "THE DEFIANT CITY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "PESHAWAR REFUSED TO BE SILENCED.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "MEENA BAZAAR REOPENED WITHIN DAYS.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Shopkeepers rebuilt their stalls amid the scorched ruins"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#D48955",
+          "#4A3222"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "PESHAWAR_RESILIENCE_REBUILD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "13_memorial_137_martyrs",
+      "startFrame": 2904,
+      "durationFrames": 242,
+      "archetype": "SPOTLIGHT_EMBLEM",
+      "hudVisible": true,
+      "headerContext": "IN MEMORIAM",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "HONORING THE 137 INNOCENT MARTYRS.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "THEIR RESILIENCE ECHOES FOREVER.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "MEDAL_GOLD",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "Never forgotten — the mothers and daughters of Meena Bazaar"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "PESHAWAR_VICTIMS_MEMORIAL_CARD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    },
+    {
+      "sceneId": "14_pakistan_flag_resolve",
+      "startFrame": 3146,
+      "durationFrames": 242,
+      "archetype": "FLAG_BANNER",
+      "hudVisible": true,
+      "headerContext": "UNBROKEN SOVEREIGNTY",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "textLayers": [
+        {
+          "text": "A NATION TESTED BY FIRE.",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "TYPEWRITER"
+        },
+        {
+          "text": "NEVER BROKEN. NEVER SHAKEN.",
+          "triggerFrameOffset": 60,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "MEDAL_GOLD",
+          "animation": "SCALE_SLAM",
+          "handwrittenNote": "28 October 2009 — Peshawar • Lest We Forget"
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "PAKISTAN_FLAG_MEMORIAL_BANNER"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 0
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 60
+        }
+      ]
+    }
+  ]
+}

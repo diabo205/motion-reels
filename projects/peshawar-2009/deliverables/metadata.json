@@ -1,0 +1,169 @@
+{
+  "projectSlug": "peshawar-2009",
+  "generatedAt": "2026-11-01T09:24:20.039Z",
+  "title": "PESHAWAR 2009: 28 OCTOBER 2009. PESHAWAR. A PACKED BAZAAR OF WOMEN & CHILDREN.",
+  "description": "PESHAWAR 2009 (🇵🇰)\n\n28 OCTOBER 2009. PESHAWAR. A PACKED BAZAAR OF WOMEN & CHILDREN.\n\nHistorical Sources & Fact-Check Citations:\n• 28 OCTOBER 2009. PESHAWAR. A PACKED BAZAAR OF WOMEN & CHILDREN. — Source: PESHAWAR 2009 Archival Record\n• CONCEALED INSIDE A PARKED CAR. 150 KILOGRAMS OF HIGH EXPLOSIVES. — Source: PESHAWAR 2009 Archival Record\n• THE DEADLIEST STRIKE IN CITY HISTORY. 137 KILLED. OVER 200 WOUNDED. — Source: PESHAWAR 2009 Archival Record\n• THE ARMY HAD MOUNTED A MASSIVE OFFENSIVE. 30,000 TROOPS INTO SOUTH WAZIRISTAN. — Source: PESHAWAR 2009 Archival Record\n• HONORING THE 137 INNOCENT MARTYRS. THEIR RESILIENCE ECHOES FOREVER. — Source: PESHAWAR 2009 Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Peshawar #2009",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Peshawar",
+    "#2009"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "ROYALTY_FREE",
+    "clearanceId": "CLR-PESHAWAR-2009"
+  },
+  "claims": [
+    {
+      "sceneId": "01_hook_bazaar_morning",
+      "text": "28 OCTOBER 2009. PESHAWAR. A PACKED BAZAAR OF WOMEN & CHILDREN.",
+      "source": "PESHAWAR 2009 Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "03_the_weapon_car_bomb",
+      "text": "CONCEALED INSIDE A PARKED CAR. 150 KILOGRAMS OF HIGH EXPLOSIVES.",
+      "source": "PESHAWAR 2009 Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "07_death_toll_counter",
+      "text": "THE DEADLIEST STRIKE IN CITY HISTORY. 137 KILLED. OVER 200 WOUNDED.",
+      "source": "PESHAWAR 2009 Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "09_waziristan_offensive",
+      "text": "THE ARMY HAD MOUNTED A MASSIVE OFFENSIVE. 30,000 TROOPS INTO SOUTH WAZIRISTAN.",
+      "source": "PESHAWAR 2009 Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "13_memorial_137_martyrs",
+      "text": "HONORING THE 137 INNOCENT MARTYRS. THEIR RESILIENCE ECHOES FOREVER.",
+      "source": "PESHAWAR 2009 Archival Record",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "01_hook_bazaar_morning",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "28 OCT 2009 • 11:30 AM",
+      "caption": "28 OCTOBER 2009. PESHAWAR. — A PACKED BAZAAR OF WOMEN & CHILDREN.",
+      "visualAsset": "PESHAWAR_BAZAAR_STREET_SILHOUETTE"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "02_the_detonation_blast",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "ZERO HOUR • 11:35 AM",
+      "caption": "A DEAFENING SHOCKWAVE TORE THE SKY. — A MOSQUE & 4 BUILDINGS COLLAPSED.",
+      "visualAsset": "MEENA_BAZAAR_BLAST_IMPACT"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "03_the_weapon_car_bomb",
+      "archetype": "TELEMETRY_COUNTER",
+      "headerContext": "FORENSIC SCHEMATIC",
+      "caption": "CONCEALED INSIDE A PARKED CAR. — 150 KILOGRAMS OF HIGH EXPLOSIVES.",
+      "visualAsset": "VEHICLE_BOMB_150KG_COUNTER"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "04_firestorm_fabric_shops",
+      "archetype": "DOCUMENT_CARD",
+      "headerContext": "AFTERMATH",
+      "caption": "FABRIC STORES IGNITED IN SECONDS. — TRAPPING HUNDREDS BENEATH BURNING ASH.",
+      "visualAsset": "FIRE_AND_RUBBLE_PHOTO_CARD"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "05_rickshaw_evacuation",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "ALLEYWAY EVACUATION",
+      "caption": "NO AMBULANCES COULD REACH THE ALLEY. — CIVILIANS CARRIED THE DYING ON RICKSHAWS.",
+      "visualAsset": "RICKSHAW_CIVILIAN_RESCUE"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "06_hospital_code_red",
+      "archetype": "DOCUMENT_CARD",
+      "headerContext": "LADY READING HOSPITAL",
+      "caption": "LADY READING HOSPITAL ENTERED CODE RED. — DOCTORS PLEADED FOR BLOOD ON MEGAPHONES.",
+      "visualAsset": "LADY_READING_HOSPITAL_CARD"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "07_death_toll_counter",
+      "archetype": "TELEMETRY_COUNTER",
+      "headerContext": "CASUALTY TOLL",
+      "caption": "THE DEADLIEST STRIKE IN CITY HISTORY. — 137 KILLED. OVER 200 WOUNDED.",
+      "visualAsset": "PESHAWAR_137_CASUALTY_COUNTER"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "08_clinton_touchdown",
+      "archetype": "FLAG_BANNER",
+      "headerContext": "ISLAMABAD • 28 OCT 2009",
+      "caption": "AT THAT EXACT MOMENT IN ISLAMABAD... — HILLARY CLINTON HAD JUST TOUCHED DOWN.",
+      "visualAsset": "CLINTON_ISLAMABAD_ARRIVAL"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "09_waziristan_offensive",
+      "archetype": "TACTICAL_MAP",
+      "headerContext": "OPERATION RAH-E-NIJAT",
+      "caption": "THE ARMY HAD MOUNTED A MASSIVE OFFENSIVE. — 30,000 TROOPS INTO SOUTH WAZIRISTAN.",
+      "visualAsset": "WAZIRISTAN_TACTICAL_MAP"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "10_unprecedented_disavowal",
+      "archetype": "BLUEPRINT_DIAGRAM",
+      "headerContext": "INTELLIGENCE DESK",
+      "caption": "AUTHORITIES POINTED AT TALIBAN CELLS. — YET BOTH TALIBAN & AL-QAEDA DENIED IT.",
+      "visualAsset": "INTELLIGENCE_DISAVOWAL_SCHEMATIC"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "11_bilateral_press_conference",
+      "archetype": "DOCUMENT_CARD",
+      "headerContext": "BILATERAL RESOLVE",
+      "caption": "QURESHI & CLINTON FACED CAMERAS. — 'WE WILL NOT BUCKLE. THIS FIGHT IS OUR FIGHT.'",
+      "visualAsset": "CLINTON_QURESHI_PRESS_CARD"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "12_peshawar_unbroken_resilience",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "THE DEFIANT CITY",
+      "caption": "PESHAWAR REFUSED TO BE SILENCED. — MEENA BAZAAR REOPENED WITHIN DAYS.",
+      "visualAsset": "PESHAWAR_RESILIENCE_REBUILD"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "13_memorial_137_martyrs",
+      "archetype": "SPOTLIGHT_EMBLEM",
+      "headerContext": "IN MEMORIAM",
+      "caption": "HONORING THE 137 INNOCENT MARTYRS. — THEIR RESILIENCE ECHOES FOREVER.",
+      "visualAsset": "PESHAWAR_VICTIMS_MEMORIAL_CARD"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "14_pakistan_flag_resolve",
+      "archetype": "FLAG_BANNER",
+      "headerContext": "UNBROKEN SOVEREIGNTY",
+      "caption": "A NATION TESTED BY FIRE. — NEVER BROKEN. NEVER SHAKEN.",
+      "visualAsset": "PAKISTAN_FLAG_MEMORIAL_BANNER"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "projectSlug": "taiping-rebellion-1850",
+  "generatedAt": "2026-11-01T09:24:19.820Z",
+  "title": "1850 TAIPING REBELLION: HISTORY'S DEADLIEST WAR UNFOLDS THIRTY MILLION LOST IN FLAMES",
+  "description": "1850 TAIPING REBELLION (🇨🇳 ⚔️ ✝️)\n\nHISTORY'S DEADLIEST WAR UNFOLDS THIRTY MILLION LOST IN FLAMES\n\nHistorical Sources & Fact-Check Citations:\n• JANUARY 1851 AT JINTIAN THE HEAVENLY UPRISING IGNITES — Source: 1850 TAIPING REBELLION Archival Record\n• MARCH 1853 NANJING ENCIRCLED THE SOUTHERN BASTION SURRENDERS — Source: 1850 TAIPING REBELLION Archival Record\n• JUNE 1864 THE PROPHET DIES HEAVENLY CAPITAL STANDS ALONE — Source: 1850 TAIPING REBELLION Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Taiping #Rebellion #1850",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Taiping",
+    "#Rebellion",
+    "#1850"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "ROYALTY_FREE",
+    "clearanceId": "CLR-TAIPING-REBELLION-1850"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_06_JINTIAN_UPRISING",
+      "text": "JANUARY 1851 AT JINTIAN THE HEAVENLY UPRISING IGNITES",
+      "source": "1850 TAIPING REBELLION Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_09_YANGTZE_WAR_JUNKS",
+      "text": "MARCH 1853 NANJING ENCIRCLED THE SOUTHERN BASTION SURRENDERS",
+      "source": "1850 TAIPING REBELLION Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_16_HONG_DEATH",
+      "text": "JUNE 1864 THE PROPHET DIES HEAVENLY CAPITAL STANDS ALONE",
+      "source": "1850 TAIPING REBELLION Archival Record",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_DEADLIEST_CIVIL_WAR",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "CHINA • 1850–1864",
+      "caption": "HISTORY'S DEADLIEST WAR UNFOLDS — THIRTY MILLION LOST IN FLAMES",
+      "visualAsset": "TAIPING_CONFRONTATION_OPENING"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_FAILED_SCHOLAR",
+      "archetype": "LONE_LEADER",
+      "headerContext": "GUANGZHOU • 1837",
+      "caption": "ONE SCHOLAR FAILS HIS EXAM — A DELUSIONAL PROPHET RISES",
+      "visualAsset": "HONG_FAILED_SCHOLAR_DESK"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_FEVER_DREAM_VISION",
+      "archetype": "LONE_LEADER",
+      "headerContext": "DELIRIUM VISION",
+      "caption": "HEAVENLY BLADE DESTROYS THE BANNER — YANGTZE VALLEY IGNITES IN WAR",
+      "visualAsset": "HONG_FEVER_DREAM_VISION"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_CLEANSE_THE_DEMONS",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "HOLY MISSION",
+      "caption": "HE ORDERS CLEANSING OF CHINA — MANCHU DYNASTY BRANDED DEMONS",
+      "visualAsset": "CLEANSE_THE_DEMONS_STAGE"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_CUTTING_QUEUES",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "GUANGXI • 1850",
+      "caption": "THOUSANDS CUT THE IMPERIAL QUEUE — THE LONGHAIR REBELS MARCH",
+      "visualAsset": "CUTTING_IMPERIAL_QUEUE_SILHOUETTE"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_JINTIAN_UPRISING",
+      "archetype": "FLAG_BANNER",
+      "headerContext": "JANUARY 11, 1851",
+      "caption": "JANUARY 1851 AT JINTIAN — THE HEAVENLY UPRISING IGNITES",
+      "visualAsset": "JINTIAN_UPRISING_FLAG_STAGE"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_MILLION_MARCH",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "NORTHWARD ADVANCE",
+      "caption": "PEASANT RANKS SWELL TO MILLIONS — RELENTLESS MARCH UP THE YANGTZE",
+      "visualAsset": "MILLION_MAN_MARCH_TALLY_STAGE"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_PROVINCES_ROUTED",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "CAMPAIGN ADVANCE • 1852",
+      "caption": "IMPERIAL FORCES ROUTED IN PANIC — PROVINCES FALL LIKE DOMINOES",
+      "visualAsset": "TAIPING_CAMPAIGN_TACTICAL_MAP"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_YANGTZE_WAR_JUNKS",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "YANGTZE RIVER BASTIONS",
+      "caption": "MARCH 1853 NANJING ENCIRCLED — THE SOUTHERN BASTION SURRENDERS",
+      "visualAsset": "YANGTZE_WAR_JUNKS_FLEET"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_NANJING_FALLS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "NANJING CAPTURED",
+      "caption": "RENAMED THE HEAVENLY CAPITAL — RADICAL THEOCRATIC RULE BEGINS",
+      "visualAsset": "NANJING_GATE_BREACHED_STAGE"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_HEAVENLY_CAPITAL",
+      "archetype": "LONE_LEADER",
+      "headerContext": "TIANJING PALACE",
+      "caption": "PRIVATE WEALTH TOTALLY ABOLISHED — STRICT GENDER SEPARATION DECREED",
+      "visualAsset": "HEAVENLY_CAPITAL_THRONE_STAGE"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_SACRED_TREASURY",
+      "archetype": "DOCUMENT_CARD",
+      "headerContext": "THEOCRATIC DECREE",
+      "caption": "GOD WORSHIPPERS BAN ALL OPIUM — ABSOLUTE SUBMISSION DEMANDED",
+      "visualAsset": "SACRED_TREASURY_PROCLAMATION_STAGE"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_TIANJING_INCIDENT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "SEPTEMBER 1856 • PURGE",
+      "caption": "PARANOIA DESTROYS THE REBEL LEADERS — TWENTY THOUSAND PURGED INSIDE",
+      "visualAsset": "TIANJING_INCIDENT_PURGE_STAGE"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_XIANG_ARMY_SURROUND",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "IMPERIAL COUNTEROFFENSIVE",
+      "caption": "IMPERIAL XIANG ARMY ADVANCES — ZENG GUOFAN ENCIRCLES NANJING",
+      "visualAsset": "XIANG_ARMY_SIEGE_ENCIRCLEMENT_MAP"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_STARVATION_PALACE",
+      "archetype": "LONE_LEADER",
+      "headerContext": "BESIEGED CITADEL",
+      "caption": "BRUTAL SIEGE CUTS FOOD SUPPLIES — STARVING REBELS EAT WEEDS",
+      "visualAsset": "STARVATION_IN_CAPITAL_STAGE"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_HONG_DEATH",
+      "archetype": "LONE_LEADER",
+      "headerContext": "JUNE 1, 1864",
+      "caption": "JUNE 1864 THE PROPHET DIES — HEAVENLY CAPITAL STANDS ALONE",
+      "visualAsset": "HONG_XIUQUAN_DEATH_BIER_STAGE"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_WALL_EXPLOSION",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "JULY 19, 1864 • BREACH",
+      "caption": "MASSIVE EXPLOSION CRUMBLES WALLS — IMPERIAL TROOPS STORM BREACH",
+      "visualAsset": "GUNPOWDER_TUNNEL_MINE_EXPLOSION"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_BREACH_SLAUGHTER",
+      "archetype": "SILHOUETTE_ACTION",
+      "headerContext": "FINAL RAMPART ASSAULT",
+      "caption": "BLOODY THREE DAY SLAUGHTER — EVERY DEFENDER CUT DOWN",
+      "visualAsset": "BREACH_MELEE_SLAUGHTER_STAGE"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_CASUALTY_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "DEATH TOLL SUMMARY",
+      "caption": "THIRTY MILLION LIVES PERISHED — THE QING DYNASTY CRIPPLED",
+      "visualAsset": "THIRTY_MILLION_CASUALTY_TALLY_STAGE"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_EMPIRE_SHATTERED",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "EPILOGUE • LEGACY",
+      "caption": "THE DEADLIEST CIVIL WAR ENDS — AN EMPIRE FOREVER SCARRED",
+      "visualAsset": "SHATTERED_EMPIRE_EPILOGUE_STAGE"
+    }
+  ]
+}

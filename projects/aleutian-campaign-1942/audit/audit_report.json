@@ -1,0 +1,14 @@
+{
+  "projectSlug": "aleutian-campaign-1942",
+  "title": "1942 ALEUTIAN CAMPAIGN",
+  "timestamp": "2026-11-01T09:24:19.406Z",
+  "passed": true,
+  "totalFrames": 2880,
+  "durationSec": 48,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 21,
+  "errorCount": 0,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": []
+}

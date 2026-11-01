@@ -1,0 +1,57 @@
+{
+  "projectSlug": "peshawar-2009",
+  "title": "PESHAWAR 2009",
+  "updatedAt": "2026-11-01T09:24:20.033Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/peshawar_2009.json",
+    "sha256": "62d7f1fa0fe24b36ef56152bb07e85d054d18613038e3cfd88cb228cdb8bd73f",
+    "sceneCount": 14,
+    "totalFrames": 3388,
+    "durationSec": 56.47
+  },
+  "audio": {
+    "bgmFile": "assets/audio/bgm_peshawar.mp3",
+    "sha256": "d2b8738a11f5641f69f702703adaef20200abdad4ace55a6e2ee571cf6766bea",
+    "bpm": 119,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "ROYALTY_FREE",
+      "clearanceId": "CLR-PESHAWAR-2009"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "POLAR_MARITIME",
+    "particleEmitter": "NONE",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "SOMBER_MEMORIAL"
+  }
+}

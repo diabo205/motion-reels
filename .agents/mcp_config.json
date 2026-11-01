@@ -1,0 +1,9 @@
+﻿{
+  "mcpServers": {
+    "ffmpeg-media-pipeline": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./assets", "./src/timelines"],
+      "timeoutSeconds": 300
+    }
+  }
+}

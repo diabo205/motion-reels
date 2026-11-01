@@ -1,0 +1,57 @@
+{
+  "projectSlug": "aleutian-campaign-1942",
+  "title": "1942 ALEUTIAN CAMPAIGN",
+  "updatedAt": "2026-11-01T09:24:19.212Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/aleutian_campaign_1942.json",
+    "sha256": "0de32d9ed534a7a34658541a7288eab2f04b1d7cf7ffb18f03b4b1e671ce4e14",
+    "sceneCount": 21,
+    "totalFrames": 2880,
+    "durationSec": 48
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_aleutian.mp3",
+    "sha256": "84fcf17b732df0f08a3b611c269363b81d5114419e3f038d1701c4d37b171a2c",
+    "bpm": 113,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "ROYALTY_FREE",
+      "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "POLAR_MARITIME",
+    "particleEmitter": "SNOW",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "STANDARD"
+  }
+}

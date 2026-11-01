@@ -1,0 +1,107 @@
+import React from 'react';
+import { Composition } from 'remotion';
+import { HistoricalReel, ReelTimeline } from './HistoricalReel';
+import reelData from './timelines/current_reel.json';
+import peshawarData from './timelines/peshawar_2009.json';
+import u2Data from './timelines/u2_incident_1960.json';
+import taipingData from './timelines/taiping_1850.json';
+import cowboyData from './timelines/operation_cowboy_1945.json';
+import aleutianData from './timelines/aleutian_campaign_1942.json';
+
+export const RemotionRoot: React.FC = () => {
+  const currentTimeline = reelData as unknown as ReelTimeline;
+  const peshawarTimeline = peshawarData as unknown as ReelTimeline;
+  const u2Timeline = u2Data as unknown as ReelTimeline;
+  const taipingTimeline = taipingData as unknown as ReelTimeline;
+  const cowboyTimeline = cowboyData as unknown as ReelTimeline;
+  const aleutianTimeline = aleutianData as unknown as ReelTimeline;
+
+  const totalFrames = currentTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+  const peshawarFrames = peshawarTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3240;
+  const u2Frames = u2Timeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+  const taipingFrames = taipingTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3000;
+  const cowboyFrames = cowboyTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+  const aleutianFrames = aleutianTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+
+  return (
+    <>
+      {/* Default Active Historical Reel (Used by render_pipeline.ps1 and automated audits) */}
+      <Composition
+        id="HistoricalReel"
+        component={HistoricalReel as any}
+        durationInFrames={totalFrames}
+        fps={currentTimeline.meta.fps || 60}
+        width={currentTimeline.meta.width || 1080}
+        height={currentTimeline.meta.height || 1920}
+        defaultProps={{
+          timeline: currentTimeline,
+        }}
+      />
+
+      {/* 28 October 2009 Peshawar Meena Bazaar Bombing Reel */}
+      <Composition
+        id="Peshawar2009"
+        component={HistoricalReel as any}
+        durationInFrames={peshawarFrames}
+        fps={peshawarTimeline.meta.fps || 60}
+        width={peshawarTimeline.meta.width || 1080}
+        height={peshawarTimeline.meta.height || 1920}
+        defaultProps={{
+          timeline: peshawarTimeline,
+        }}
+      />
+
+      {/* 1 May 1960 U-2 Incident Espionage Reel */}
+      <Composition
+        id="U2Incident1960"
+        component={HistoricalReel as any}
+        durationInFrames={u2Frames}
+        fps={u2Timeline.meta.fps || 60}
+        width={u2Timeline.meta.width || 1080}
+        height={u2Timeline.meta.height || 1920}
+        defaultProps={{
+          timeline: u2Timeline,
+        }}
+      />
+
+      {/* 1850-1864 Taiping Rebellion Reel */}
+      <Composition
+        id="TaipingRebellion1850"
+        component={HistoricalReel as any}
+        durationInFrames={taipingFrames}
+        fps={taipingTimeline.meta.fps || 60}
+        width={taipingTimeline.meta.width || 1080}
+        height={taipingTimeline.meta.height || 1920}
+        defaultProps={{
+          timeline: taipingTimeline,
+        }}
+      />
+
+      {/* 28 April 1945 Operation Cowboy Reel */}
+      <Composition
+        id="OperationCowboy1945"
+        component={HistoricalReel as any}
+        durationInFrames={cowboyFrames}
+        fps={cowboyTimeline.meta.fps || 60}
+        width={cowboyTimeline.meta.width || 1080}
+        height={cowboyTimeline.meta.height || 1920}
+        defaultProps={{
+          timeline: cowboyTimeline,
+        }}
+      />
+
+      {/* 1942–1943 Aleutian Islands Campaign Reel */}
+      <Composition
+        id="AleutianCampaign1942"
+        component={HistoricalReel as any}
+        durationInFrames={aleutianFrames}
+        fps={aleutianTimeline.meta?.fps || 60}
+        width={aleutianTimeline.meta?.width || 1080}
+        height={aleutianTimeline.meta?.height || 1920}
+        defaultProps={{
+          timeline: aleutianTimeline,
+        }}
+      />
+    </>
+  );
+};

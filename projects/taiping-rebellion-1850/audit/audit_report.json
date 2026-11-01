@@ -1,0 +1,14 @@
+{
+  "projectSlug": "taiping-rebellion-1850",
+  "title": "1850 TAIPING REBELLION",
+  "timestamp": "2026-11-01T09:24:20.027Z",
+  "passed": true,
+  "totalFrames": 3000,
+  "durationSec": 50,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 20,
+  "errorCount": 0,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": []
+}
