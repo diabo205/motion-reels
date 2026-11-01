@@ -9,18 +9,58 @@ const { exportProjectDeliverables } = require('./export_deliverables');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
+
+  // 1. Transient-Driven Analysis: Match audio energy peaks, bass drops, cymbal crashes & onsets
+  if (beatGrid && Array.isArray(beatGrid.transients) && beatGrid.transients.length > 0) {
+    const sceneStart = scene.startFrame;
+    const windowTransients = beatGrid.transients
+      .filter((t) => t.frame >= sceneStart + minW && t.frame <= sceneStart + maxW)
+      .map((t) => ({
+        offset: t.frame - sceneStart,
+        type: t.type,
+        strength: t.strength || 0,
+      }));
+
+    if (windowTransients.length > 0) {
+      // For STRUCTURAL_FRACTURE scenes, prioritize explosive transients: BASS_DROP > CYMBAL_CRASH > ENERGY_PEAK
+      if (scene.archetype === 'STRUCTURAL_FRACTURE') {
+        const typePriority = { BASS_DROP: 4, CYMBAL_CRASH: 3, ENERGY_PEAK: 2, BEAT_ONSET: 1 };
+        windowTransients.sort((a, b) => {
+          const pA = typePriority[a.type] || 0;
+          const pB = typePriority[b.type] || 0;
+          if (pB !== pA) return pB - pA;
+          if (b.strength !== a.strength) return b.strength - a.strength;
+          return Math.abs(a.offset - 30) - Math.abs(b.offset - 30);
+        });
+        return { offset: windowTransients[0].offset, type: windowTransients[0].type };
+      }
+
+      // For standard scenes, prioritize BASS_DROP / CYMBAL_CRASH / ENERGY_PEAK or closest to 30f
+      const typePriority = { BASS_DROP: 3, CYMBAL_CRASH: 3, ENERGY_PEAK: 2, BEAT_ONSET: 1 };
+      windowTransients.sort((a, b) => {
+        const pA = typePriority[a.type] || 0;
+        const pB = typePriority[b.type] || 0;
+        if (pB !== pA) return pB - pA;
+        return Math.abs(a.offset - 30) - Math.abs(b.offset - 30);
+      });
+      return { offset: windowTransients[0].offset, type: windowTransients[0].type };
+    }
+  }
+
+  // 2. Fallback to dynamic beats
   if (beatGrid && Array.isArray(beatGrid.beats) && beatGrid.beats.length > 0) {
     const candidates = beatGrid.beats
       .map((b) => b.frame - scene.startFrame)
       .filter((offset) => offset >= minW && offset <= maxW);
     if (candidates.length > 0) {
-      // Pick the beat closest to 0.5s (30f) inside the valid window
       candidates.sort((a, b) => Math.abs(a - 30) - Math.abs(b - 30));
-      return candidates[0];
+      return { offset: candidates[0], type: 'BEAT' };
     }
   }
+
+  // 3. Fallback to uniform beat tempo interval
   const singleBeatFrames = Math.round((60 / (bpm || 120)) * 60);
-  return Math.max(minW, Math.min(maxW, singleBeatFrames));
+  return { offset: Math.max(minW, Math.min(maxW, singleBeatFrames)), type: 'TEMPO_GRID' };
 }
 
 function lintProjectCode(projectInfo, styleMode) {
@@ -275,16 +315,44 @@ async function runAudit(options = {}) {
       }
     }
 
-    // Beat-quantized payoff timing check
-    const expectedBeatOffset = computeExpectedBeatPayoffOffset(
+    // Beat-quantized & audio transient payoff timing check
+    const expectedTarget = computeExpectedBeatPayoffOffset(
       s,
       beatGrid,
       timeline.meta.bpm
     );
+    const expectedBeatOffset = typeof expectedTarget === 'object' ? expectedTarget.offset : expectedTarget;
+    const expectedTransientType = typeof expectedTarget === 'object' ? expectedTarget.type : 'BEAT';
+
     if (autoFix && s.textLayers?.[1] && styleMode === 'DOCUMENTARY_SANS') {
       if (s.textLayers[1].triggerFrameOffset !== expectedBeatOffset) {
         s.textLayers[1].triggerFrameOffset = expectedBeatOffset;
         timelineModified = true;
+      }
+    }
+
+    // For STRUCTURAL_FRACTURE scenes, enforce IMPACT_SHAKE camera and transient-synced impact SFX
+    if (s.archetype === 'STRUCTURAL_FRACTURE') {
+      if (s.camera && s.camera.movement !== 'IMPACT_SHAKE' && autoFix) {
+        s.camera.movement = 'IMPACT_SHAKE';
+        s.camera.intensity = Math.max(0.85, s.camera.intensity || 0.85);
+        timelineModified = true;
+      }
+      if (autoFix && Array.isArray(s.sfxTriggers)) {
+        for (const trig of s.sfxTriggers) {
+          if (
+            trig.sfxFile.includes('boom') ||
+            trig.sfxFile.includes('slam') ||
+            trig.sfxFile.includes('shell') ||
+            trig.sfxFile.includes('clang')
+          ) {
+            // Anchor heavy impact SFX to the transient hit frame (or with lead bias)
+            if (trig.frameOffset !== 0 && trig.frameOffset !== expectedBeatOffset) {
+              trig.frameOffset = expectedBeatOffset;
+              timelineModified = true;
+            }
+          }
+        }
       }
     }
 
@@ -345,7 +413,7 @@ async function runAudit(options = {}) {
     console.log(
       `${statusMark} Scene ${String(i + 1).padStart(2, '0')} [${s.sceneId}]: ` +
         `${s.durationFrames}f (${sSec.toFixed(2)}s) | ${words}w | ` +
-        `beatOffsets: [${setupOffset}, ${payoffOffset} (target:${expectedBeatOffset})] | cam: ${s.camera?.movement}`
+        `beatOffsets: [${setupOffset}, ${payoffOffset} (target:${expectedBeatOffset} [${expectedTransientType}])] | cam: ${s.camera?.movement}`
     );
   }
 
@@ -474,6 +542,8 @@ async function runAudit(options = {}) {
     durationSec: Number(totalSec.toFixed(2)),
     maxFramesCeiling: constants.MAX_FRAMES,
     sceneCount: timeline.scenes.length,
+    transientEngine: beatGrid?.analysisEngine || 'STATIC_BPM',
+    transientStats: beatGrid?.transientStats || null,
     errorCount: finalErrors.length,
     warningCount: violations.filter((v) => v.severity === 'WARNING').length,
     motionChecks,

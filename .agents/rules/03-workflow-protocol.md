@@ -30,9 +30,9 @@ Every script is structured into five proportional narrative blocks across the to
 
 ---
 
-## 3. Pacing, Zero-Drift Beat Grid & Audio Mastering
+## 3. Pacing, Onset & Drop Detection & Audio Mastering
 - **Single Canonical Ceiling (`MAX_FRAMES = 3500`)**: Every reel must clock between **`2,700` and `3,500` frames** (`45.00s` to `58.33s` @ 60 FPS) with **16 to 29 cuts** (`120–168f` per scene; up to `180f` on final epilogue).
-- **Zero-Drift Cumulative Beat Grid**: `extract_beat_grid.py` computes cumulative float beat times (`t = beat_idx * (60.0 / bpm)`) and rounds once to absolute frame numbers.
+- **Onset & Drop Detection (Replacing Static BPM Grids)**: `extract_beat_grid.py` utilizes Librosa/Aubio multi-band spectral flux to detect actual audio energy peaks, bass drops (sub-bass 20–220Hz), cymbal crashes (high-band 3500–11000Hz), and rhythmic onsets. Scene transitions within `[120, 168]` snap to drops and crashes, while `STRUCTURAL_FRACTURE` hits lock directly to audio impact transients.
 - **Perceptual SFX Lead (`-2f`) & Automatic BGM Ducking (`-7.5 dB`)**: Transient SFX fire 2 frames early; BGM ducks automatically under payoff slams and explosions.
 - **EBU R128 / Platform Loudness Mastering**: Final MP4 exports are mastered via FFmpeg `loudnorm=I=-14:TP=-1.0:LRA=11`.
 

@@ -93,6 +93,8 @@ const AnatomicalSoldierSilhouette: React.FC<{
   pose?: 'STANDING_RIFLE' | 'AIMING_RIFLE' | 'CROUCHING_AIM' | 'WADING' | 'SALUTING' | 'LOWERED_RIFLE';
   helmetType?: 'US_M1' | 'JP_TYPE90' | 'PARKA_HOOD';
   accentColor?: string;
+  stridePhase?: number;
+  bodyTilt?: number;
 }> = ({
   x,
   y,
@@ -101,10 +103,12 @@ const AnatomicalSoldierSilhouette: React.FC<{
   pose = 'STANDING_RIFLE',
   helmetType = 'US_M1',
   accentColor,
+  stridePhase = 0,
+  bodyTilt = 0,
 }) => {
   const sx = flipX ? -scale : scale;
   return (
-    <g transform={`translate(${x}, ${y}) scale(${sx}, ${scale})`}>
+    <g transform={`translate(${x}, ${y}) scale(${sx}, ${scale}) rotate(${bodyTilt})`}>
       {/* Head & Helmet Profile */}
       {helmetType === 'PARKA_HOOD' ? (
         <g>
@@ -147,8 +151,16 @@ const AnatomicalSoldierSilhouette: React.FC<{
         </g>
       ) : pose === 'WADING' ? (
         <g>
-          <path d="M -12 2 L 0 2 L 4 28 L -10 28 Z" fill="#070A0E" />
-          <path d="M 2 2 L 15 2 L 22 28 L 8 28 Z" fill="#070A0E" />
+          {/* Back leg swinging in cadence */}
+          <path
+            d={`M -12 2 L 0 2 L ${4 - stridePhase * 8} 28 L ${-10 - stridePhase * 8} 28 Z`}
+            fill="#070A0E"
+          />
+          {/* Front leg driving through surf */}
+          <path
+            d={`M 2 2 L 15 2 L ${22 + stridePhase * 10} 28 L ${8 + stridePhase * 10} 28 Z`}
+            fill="#070A0E"
+          />
         </g>
       ) : (
         <g>
@@ -170,7 +182,7 @@ const AnatomicalSoldierSilhouette: React.FC<{
           <path d="M 6 -46 L 28 -36 L 10 -30 Z" fill="#070A0E" />
         </g>
       ) : pose === 'WADING' ? (
-        <g>
+        <g transform={`rotate(${stridePhase * 3.5}, 14, -34)`}>
           {/* Rifle held diagonally high across chest above surf */}
           <line x1="-6" y1="-10" x2="42" y2="-56" stroke="#64748B" strokeWidth="4.5" strokeLinecap="round" />
           <line x1="2" y1="-18" x2="28" y2="-42" stroke="#1E293B" strokeWidth="7" strokeLinecap="round" />
@@ -1004,11 +1016,35 @@ export const AleutianKomandorskiCruiserDuel: React.FC = () => {
 // =========================================================================
 // 9. SCENE 09: ALEUTIAN_ATTU_AMPHIBIOUS_LANDING
 // Operation Landcrab: Higgins boat bow ramp down, 7th Infantry wading ashore & 11,000 counter
+// Soldiers bounce and advance in beat-synced cadence to the 113 BPM soundtrack
 // =========================================================================
 export const AleutianAttuAmphibiousLanding: React.FC = () => {
   const frame = useCurrentFrame();
   const surfRoll = Math.sin(frame * 0.12) * 8;
   const troopCount = Math.round(interpolate(frame, [0, 66], [0, 11000], { extrapolateRight: 'clamp' }));
+
+  // 113.0 BPM Zero-Drift Beat Sync:
+  // Beat 34 is at relative frame 29; beat interval is 31.8584 frames.
+  const beatOffset = 29;
+  const framesPerBeat = 31.8584;
+
+  // Normalized phase along the continuous beat cycle:
+  // 0.0 is the downbeat impact transient, 0.5 is the upbeat knee-lift.
+  const beatCycle = ((frame - beatOffset) % framesPerBeat + framesPerBeat) % framesPerBeat;
+  const beatNorm = beatCycle / framesPerBeat;
+
+  // Higgins craft rocking in the surging surf
+  const boatHeave = Math.sin(frame * 0.1) * 3;
+  const boatPitch = Math.sin(frame * 0.08) * 1.5;
+
+  // Assault squad wading off the Higgins craft ramp and advancing across Massacre Bay beach
+  const squad = [
+    { id: 'lead', baseX: 690, baseY: 1358, s: 1.12, cadenceOffset: 0.0 },
+    { id: 'scout', baseX: 585, baseY: 1350, s: 1.08, cadenceOffset: 0.5 },
+    { id: 'bar', baseX: 480, baseY: 1354, s: 1.10, cadenceOffset: 0.0 },
+    { id: 'rifle', baseX: 375, baseY: 1346, s: 1.06, cadenceOffset: 0.5 },
+    { id: 'ramp', baseX: 270, baseY: 1342, s: 1.02, cadenceOffset: 0.0 },
+  ];
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
@@ -1040,7 +1076,10 @@ export const AleutianAttuAmphibiousLanding: React.FC = () => {
         />
 
         {/* Higgins LCVP Landing Craft with Bow Ramp Dropped */}
-        <g transform="translate(115, 1265)" filter="drop-shadow(0 8px 16px rgba(0,0,0,0.8))">
+        <g
+          transform={`translate(115, ${1265 + boatHeave}) rotate(${boatPitch}, 100, 45)`}
+          filter="drop-shadow(0 8px 16px rgba(0,0,0,0.8))"
+        >
           <polygon points="0,15 200,15 225,75 18,75" fill="#1E293B" stroke="#38BDF8" strokeWidth="2" />
           <rect x="12" y="25" width="175" height="16" fill="#0F172A" />
           {/* Dropped Front Bow Ramp extending into surf */}
@@ -1048,31 +1087,70 @@ export const AleutianAttuAmphibiousLanding: React.FC = () => {
           <rect x="18" y="-12" width="42" height="27" rx="2" fill="#0F172A" stroke="#334155" strokeWidth="1.5" />
         </g>
 
-        {/* Anatomical U.S. 7th Infantry Division Silhouettes Wading Ashore */}
-        {[
-          { x: 430, y: 1345, s: 1.05 },
-          { x: 535, y: 1355, s: 1.1 },
-          { x: 645, y: 1348, s: 1.05 },
-          { x: 755, y: 1360, s: 1.12 },
-        ].map((trp, idx) => (
-          <g key={idx}>
-            <AnatomicalSoldierSilhouette
-              x={trp.x}
-              y={trp.y}
-              scale={trp.s}
-              helmetType="US_M1"
-              pose="WADING"
-              accentColor="#F8FAFC"
-            />
-            {/* Foam splash around knees */}
-            <path
-              d={`M ${trp.x - 24} ${trp.y + 28} Q ${trp.x} ${trp.y + 20} ${trp.x + 28} ${trp.y + 28}`}
-              stroke="#7DD3FC"
-              strokeWidth="3"
-              fill="none"
-            />
-          </g>
-        ))}
+        {/* Anatomical U.S. 7th Infantry Division Silhouettes Bouncing & Wading to the Beat */}
+        {squad.map((trp) => {
+          const soldierPhase = (beatNorm + trp.cadenceOffset) % 1.0;
+          // Steady forward wading progression (~90px across scene) + beat surge
+          const steadyForward = (frame / 136) * 90;
+          const strideSurge = Math.sin((soldierPhase - 0.25) * Math.PI * 2) * 5;
+          const posX = trp.baseX + steadyForward + strideSurge;
+
+          // Vertical bounce locked to the 113 BPM downbeat transient
+          const bounceY = Math.cos(soldierPhase * Math.PI * 2) * 6.5;
+          const posY = trp.baseY + bounceY;
+
+          // Body lean and scissoring leg stride
+          const bodyLean = Math.sin(soldierPhase * Math.PI * 2) * 3.2;
+          const stridePhase = Math.sin(soldierPhase * Math.PI * 2);
+
+          // Dynamic foam splash flaring on beat impact
+          const beatImpact = Math.max(0, 1 - Math.abs(soldierPhase - (soldierPhase > 0.5 ? 1 : 0)) * 4.5);
+          const splashWidth = 22 + beatImpact * 16;
+          const splashAlpha = 0.55 + beatImpact * 0.45;
+
+          return (
+            <g key={trp.id}>
+              {/* Bow-wave wake trail behind soldier in surf */}
+              <ellipse
+                cx={posX - 18}
+                cy={posY + 30}
+                rx={splashWidth * 0.9}
+                ry={5}
+                fill="#38BDF8"
+                opacity={splashAlpha * 0.35}
+              />
+
+              {/* Anatomical soldier silhouette */}
+              <AnatomicalSoldierSilhouette
+                x={posX}
+                y={posY}
+                scale={trp.s}
+                helmetType="US_M1"
+                pose="WADING"
+                accentColor="#F8FAFC"
+                stridePhase={stridePhase}
+                bodyTilt={bodyLean}
+              />
+
+              {/* Dynamic surf splash & frothing foam around knees */}
+              <path
+                d={`M ${posX - splashWidth} ${posY + 27} Q ${posX} ${posY + 21 - beatImpact * 7} ${posX + splashWidth} ${posY + 27}`}
+                stroke="#7DD3FC"
+                strokeWidth={2.8 + beatImpact * 1.5}
+                fill="none"
+                opacity={splashAlpha}
+              />
+
+              {/* Ejected water spray droplets on beat foot-strike */}
+              {beatImpact > 0.3 && (
+                <g opacity={splashAlpha}>
+                  <circle cx={posX + 16} cy={posY + 16 - beatImpact * 8} r={2.2} fill="#F8FAFC" />
+                  <circle cx={posX - 12} cy={posY + 18 - beatImpact * 6} r={1.8} fill="#7DD3FC" />
+                </g>
+              )}
+            </g>
+          );
+        })}
 
         {/* Rolling Integer Counter (Single-Source Metric in Montserrat) */}
         <g transform="translate(480, 965)">

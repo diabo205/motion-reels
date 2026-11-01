@@ -41,7 +41,7 @@
         },
         {
           "text": "THE CIA'S TOP-SECRET SPYPLANE",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -86,7 +86,7 @@
         },
         {
           "text": "ABOVE ALL SOVIET RADAR",
-          "triggerFrameOffset": 23,
+          "triggerFrameOffset": 42,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -142,7 +142,7 @@
         },
         {
           "text": "DEEP INTO ENEMY TERRITORY",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -183,7 +183,7 @@
         },
         {
           "text": "TARGETING PLUTONIUM REACTORS",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 20,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -225,7 +225,7 @@
         },
         {
           "text": "INTERCEPT ORDERS TRANSMITTED",
-          "triggerFrameOffset": 23,
+          "triggerFrameOffset": 41,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -275,7 +275,7 @@
         },
         {
           "text": "CLIMBING AT MACH 3.5",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 29,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -330,7 +330,7 @@
         },
         {
           "text": "TAIL SHEARED FROM DRAGON LADY",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 21,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -351,7 +351,7 @@
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 21
         }
       ]
     },
@@ -375,7 +375,7 @@
         },
         {
           "text": "DESTRUCT SWITCHES OUT OF REACH",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -421,7 +421,7 @@
         },
         {
           "text": "SURROUNDED BY KGB AGENTS",
-          "triggerFrameOffset": 18,
+          "triggerFrameOffset": 34,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -463,7 +463,7 @@
         },
         {
           "text": "NASA WEATHER PLANE COVER STORY",
-          "triggerFrameOffset": 36,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -547,7 +547,7 @@
         },
         {
           "text": "EISENHOWER WALKS INTO TRAP",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 29,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -588,7 +588,7 @@
         },
         {
           "text": "THE PILOT IS ALIVE AND WELL",
-          "triggerFrameOffset": 31,
+          "triggerFrameOffset": 30,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -630,7 +630,7 @@
         },
         {
           "text": "WRECKAGE AND CAMERAS EXPOSED",
-          "triggerFrameOffset": 44,
+          "triggerFrameOffset": 25,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -686,7 +686,7 @@
         },
         {
           "text": "COLD WAR DÉTENTE COLLAPSES",
-          "triggerFrameOffset": 28,
+          "triggerFrameOffset": 27,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -728,7 +728,7 @@
         },
         {
           "text": "SENTENCED TO 10 YEARS PRISON",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 27,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -825,7 +825,7 @@
         },
         {
           "text": "BIRTH OF SPY SATELLITE ERA",
-          "triggerFrameOffset": 42,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -866,7 +866,7 @@
         },
         {
           "text": "THE CRISIS THAT CHANGED HISTORY",
-          "triggerFrameOffset": 21,
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"

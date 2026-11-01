@@ -28,11 +28,12 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
    - **Zero Illustration Text & Single-Source Metrics**: Ban sentences, captions, and data placards inside lower-third artwork (allow only 1–2 word map labels). Never repeat a metric in both headline text and artwork.
    - **Selective Context Tags**: Display the top location/date badge only when the timeline or setting shifts, never static on every frame.
 
-5. **Pacing, Zero-Drift Beat Grid & Perceptual Audio Sync**:
+5. **Pacing, Onset & Drop Detection, & Perceptual Audio Sync**:
    - **Scene Duration Window**: Hold each scene for **2.0 to 2.8 seconds** (`120–168` frames; up to `180f` on final epilogue), yielding **16–29 cuts per reel**. Ban 4-second static holds.
-   - **Zero-Drift Cumulative Beat Grid**: Compute cumulative beat positions in floating point (`t = beat_idx * (60.0 / bpm)`) and round once to absolute integer frames (`round(t * 60)`). Snap scene cuts and payoff slams to the extracted beat grid.
-   - **Beat-Quantized Two-Beat Text Stagger**: Display the white setup line at `0.0s` (`triggerFrameOffset: 0`) and slam the red payoff line on the first detected beat transient inside `[18, 45]` frames (`0.30s–0.75s`) after `scene.startFrame`.
-   - **Perceptual SFX Lead Bias & Automatic BGM Ducking**: Bias transient impact SFX (`sub_boom.wav`, `stamp_slam.wav`) **2 frames early** (`-33ms` audio-leading-video sync) and automatically duck BGM by `-7.5 dB` under impact slams.
+   - **Onset & Drop Detection (Replacing Static BPM Grids)**: Replace static BPM beat grids with audio transient analysis (via Python's Librosa or Aubio). The engine analyzes multi-band spectral flux to detect actual audio energy peaks, bass drops (sub-bass 20–220Hz surges & drop releases), cymbal crashes (high-band 3500–11000Hz bursts with high spectral centroid), and rhythmic onsets.
+   - **Transient-Driven Scene Shifts**: Snap scene transitions inside the `[120, 168]` frame window directly to detected `BASS_DROP`, `CYMBAL_CRASH`, or `ENERGY_PEAK` events so scene shifts explode on musical impacts rather than arbitrary mathematical intervals.
+   - **STRUCTURAL_FRACTURE Hits & Payoff Slams**: For `STRUCTURAL_FRACTURE` scenes (and high-impact payoffs), align the red payoff line, camera `IMPACT_SHAKE`, and impact SFX (`artillery_shell.wav`, `sub_boom.wav`) directly with the primary bass drop or cymbal crash transient inside `[18, 45]` frames.
+   - **Perceptual SFX Lead Bias & Automatic BGM Ducking**: Bias transient impact SFX (`sub_boom.wav`, `stamp_slam.wav`, `artillery_shell.wav`) **2 frames early** (`-33ms` audio-leading-video sync) and automatically duck BGM by `-7.5 dB` under impact slams.
    - **Rolling Number Counters**: Animate high-impact integers counting up over `0.6s` (36 frames) as the payoff line lands.
    - **Continuous Micro-Motion (`MICRO_MOTION_CHECK`)**: Every scene must feature at least one secondary animation loop so frames never freeze.
 

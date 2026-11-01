@@ -1,12 +1,20 @@
 {
   "projectSlug": "u2-incident-1960",
   "title": "1960 U-2 INCIDENT",
-  "timestamp": "2026-11-01T09:55:08.744Z",
+  "timestamp": "2026-11-01T10:56:12.811Z",
   "passed": true,
   "totalFrames": 2948,
   "durationSec": 49.13,
   "maxFramesCeiling": 3500,
   "sceneCount": 19,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 576,
+    "bassDropCount": 84,
+    "cymbalCrashCount": 146,
+    "energyPeakCount": 228,
+    "onsetCount": 118
+  },
   "errorCount": 0,
   "warningCount": 0,
   "motionChecks": [],

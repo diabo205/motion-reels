@@ -1,7 +1,7 @@
 {
   "projectSlug": "operation-cowboy-1945",
   "title": "1945 OPERATION COWBOY",
-  "updatedAt": "2026-11-01T09:55:08.363Z",
+  "updatedAt": "2026-11-01T10:56:12.373Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,7 +11,7 @@
   },
   "timeline": {
     "file": "src/timelines/operation_cowboy_1945.json",
-    "sha256": "42e1eed6c63fc44ff36b593490269739276806a13957059f5154edb2f74e118d",
+    "sha256": "5a2f4af1e89cb1729cf86690e21f166b2fad20ff644354a6956b8f697fa6552a",
     "sceneCount": 21,
     "totalFrames": 2940,
     "durationSec": 49

@@ -1,534 +1,6790 @@
 {
-  "bpm": 96.0,
+  "bpm": 95.7,
   "fps": 60,
+  "maxFramesCeiling": 3500,
+  "driftPolicy": "TRANSIENT_ONSET_ANALYSIS",
+  "analysisEngine": "librosa",
+  "sfxPerceptualLeadFrames": 2,
   "durationSec": 52.0,
+  "transientStats": {
+    "totalTransients": 428,
+    "bassDropCount": 83,
+    "cymbalCrashCount": 106,
+    "energyPeakCount": 30,
+    "onsetCount": 209
+  },
   "bars": [
     {
       "bar": 0,
-      "timeSec": 0.0,
-      "frame": 0
+      "timeSec": 0.0697,
+      "frame": 4
     },
     {
       "bar": 1,
-      "timeSec": 2.5,
-      "frame": 150
+      "timeSec": 2.322,
+      "frame": 139
     },
     {
       "bar": 2,
-      "timeSec": 5.0,
-      "frame": 300
+      "timeSec": 4.853,
+      "frame": 291
     },
     {
       "bar": 3,
-      "timeSec": 7.5,
-      "frame": 450
+      "timeSec": 7.4072,
+      "frame": 444
     },
     {
       "bar": 4,
-      "timeSec": 10.0,
-      "frame": 600
+      "timeSec": 9.9614,
+      "frame": 598
     },
     {
       "bar": 5,
-      "timeSec": 12.5,
+      "timeSec": 12.4923,
       "frame": 750
     },
     {
       "bar": 6,
-      "timeSec": 15.0,
-      "frame": 900
+      "timeSec": 15.0465,
+      "frame": 903
     },
     {
       "bar": 7,
-      "timeSec": 17.5,
-      "frame": 1050
+      "timeSec": 17.5775,
+      "frame": 1055
     },
     {
       "bar": 8,
-      "timeSec": 20.0,
-      "frame": 1200
+      "timeSec": 20.1317,
+      "frame": 1208
     },
     {
       "bar": 9,
-      "timeSec": 22.5,
-      "frame": 1350
+      "timeSec": 22.6859,
+      "frame": 1361
     },
     {
       "bar": 10,
-      "timeSec": 25.0,
-      "frame": 1500
+      "timeSec": 25.2169,
+      "frame": 1513
     },
     {
       "bar": 11,
-      "timeSec": 27.5,
-      "frame": 1650
+      "timeSec": 27.7711,
+      "frame": 1666
     },
     {
       "bar": 12,
-      "timeSec": 30.0,
-      "frame": 1800
+      "timeSec": 30.302,
+      "frame": 1818
     },
     {
       "bar": 13,
-      "timeSec": 32.5,
-      "frame": 1950
+      "timeSec": 32.8562,
+      "frame": 1971
     },
     {
       "bar": 14,
-      "timeSec": 35.0,
-      "frame": 2100
+      "timeSec": 35.4104,
+      "frame": 2125
     },
     {
       "bar": 15,
-      "timeSec": 37.5,
-      "frame": 2250
+      "timeSec": 37.9414,
+      "frame": 2276
     },
     {
       "bar": 16,
-      "timeSec": 40.0,
-      "frame": 2400
+      "timeSec": 40.4956,
+      "frame": 2430
     },
     {
       "bar": 17,
-      "timeSec": 42.5,
-      "frame": 2550
+      "timeSec": 43.0266,
+      "frame": 2582
     },
     {
       "bar": 18,
-      "timeSec": 45.0,
-      "frame": 2700
+      "timeSec": 45.5808,
+      "frame": 2735
     },
     {
       "bar": 19,
-      "timeSec": 47.5,
-      "frame": 2850
+      "timeSec": 48.135,
+      "frame": 2888
     },
     {
       "bar": 20,
-      "timeSec": 50.0,
-      "frame": 3000
+      "timeSec": 50.6659,
+      "frame": 3040
     }
   ],
   "beats": [
     {
       "beat": 0,
-      "timeSec": 0.0,
-      "frame": 0
+      "timeSec": 0.0697,
+      "frame": 4
     },
     {
       "beat": 1,
-      "timeSec": 0.625,
-      "frame": 38
+      "timeSec": 0.6037,
+      "frame": 36
     },
     {
       "beat": 2,
-      "timeSec": 1.25,
-      "frame": 75
+      "timeSec": 1.1378,
+      "frame": 68
     },
     {
       "beat": 3,
-      "timeSec": 1.875,
-      "frame": 112
+      "timeSec": 1.6718,
+      "frame": 100
     },
     {
       "beat": 4,
-      "timeSec": 2.5,
-      "frame": 150
+      "timeSec": 2.322,
+      "frame": 139
     },
     {
       "beat": 5,
-      "timeSec": 3.125,
-      "frame": 188
+      "timeSec": 2.9489,
+      "frame": 177
     },
     {
       "beat": 6,
-      "timeSec": 3.75,
-      "frame": 225
+      "timeSec": 3.5991,
+      "frame": 216
     },
     {
       "beat": 7,
-      "timeSec": 4.375,
-      "frame": 262
+      "timeSec": 4.226,
+      "frame": 254
     },
     {
       "beat": 8,
-      "timeSec": 5.0,
-      "frame": 300
+      "timeSec": 4.853,
+      "frame": 291
     },
     {
       "beat": 9,
-      "timeSec": 5.625,
-      "frame": 338
+      "timeSec": 5.5031,
+      "frame": 330
     },
     {
       "beat": 10,
-      "timeSec": 6.25,
-      "frame": 375
+      "timeSec": 6.1301,
+      "frame": 368
     },
     {
       "beat": 11,
-      "timeSec": 6.875,
-      "frame": 412
+      "timeSec": 6.757,
+      "frame": 405
     },
     {
       "beat": 12,
-      "timeSec": 7.5,
-      "frame": 450
+      "timeSec": 7.4072,
+      "frame": 444
     },
     {
       "beat": 13,
-      "timeSec": 8.125,
-      "frame": 488
+      "timeSec": 8.0341,
+      "frame": 482
     },
     {
       "beat": 14,
-      "timeSec": 8.75,
-      "frame": 525
+      "timeSec": 8.6843,
+      "frame": 521
     },
     {
       "beat": 15,
-      "timeSec": 9.375,
-      "frame": 562
+      "timeSec": 9.3112,
+      "frame": 559
     },
     {
       "beat": 16,
-      "timeSec": 10.0,
-      "frame": 600
+      "timeSec": 9.9614,
+      "frame": 598
     },
     {
       "beat": 17,
-      "timeSec": 10.625,
-      "frame": 638
+      "timeSec": 10.5883,
+      "frame": 635
     },
     {
       "beat": 18,
-      "timeSec": 11.25,
-      "frame": 675
+      "timeSec": 11.2152,
+      "frame": 673
     },
     {
       "beat": 19,
-      "timeSec": 11.875,
+      "timeSec": 11.8654,
       "frame": 712
     },
     {
       "beat": 20,
-      "timeSec": 12.5,
+      "timeSec": 12.4923,
       "frame": 750
     },
     {
       "beat": 21,
-      "timeSec": 13.125,
-      "frame": 788
+      "timeSec": 13.1193,
+      "frame": 787
     },
     {
       "beat": 22,
-      "timeSec": 13.75,
-      "frame": 825
+      "timeSec": 13.7694,
+      "frame": 826
     },
     {
       "beat": 23,
-      "timeSec": 14.375,
-      "frame": 862
+      "timeSec": 14.3964,
+      "frame": 864
     },
     {
       "beat": 24,
-      "timeSec": 15.0,
-      "frame": 900
+      "timeSec": 15.0465,
+      "frame": 903
     },
     {
       "beat": 25,
-      "timeSec": 15.625,
-      "frame": 938
+      "timeSec": 15.6735,
+      "frame": 940
     },
     {
       "beat": 26,
-      "timeSec": 16.25,
-      "frame": 975
+      "timeSec": 16.3236,
+      "frame": 979
     },
     {
       "beat": 27,
-      "timeSec": 16.875,
-      "frame": 1012
+      "timeSec": 16.9506,
+      "frame": 1017
     },
     {
       "beat": 28,
-      "timeSec": 17.5,
-      "frame": 1050
+      "timeSec": 17.5775,
+      "frame": 1055
     },
     {
       "beat": 29,
-      "timeSec": 18.125,
-      "frame": 1088
+      "timeSec": 18.2277,
+      "frame": 1094
     },
     {
       "beat": 30,
-      "timeSec": 18.75,
-      "frame": 1125
+      "timeSec": 18.8546,
+      "frame": 1131
     },
     {
       "beat": 31,
-      "timeSec": 19.375,
-      "frame": 1162
+      "timeSec": 19.4815,
+      "frame": 1169
     },
     {
       "beat": 32,
-      "timeSec": 20.0,
-      "frame": 1200
+      "timeSec": 20.1317,
+      "frame": 1208
     },
     {
       "beat": 33,
-      "timeSec": 20.625,
-      "frame": 1238
+      "timeSec": 20.7586,
+      "frame": 1246
     },
     {
       "beat": 34,
-      "timeSec": 21.25,
-      "frame": 1275
+      "timeSec": 21.4088,
+      "frame": 1285
     },
     {
       "beat": 35,
-      "timeSec": 21.875,
-      "frame": 1312
+      "timeSec": 22.0357,
+      "frame": 1322
     },
     {
       "beat": 36,
-      "timeSec": 22.5,
-      "frame": 1350
+      "timeSec": 22.6859,
+      "frame": 1361
     },
     {
       "beat": 37,
-      "timeSec": 23.125,
-      "frame": 1388
+      "timeSec": 23.3128,
+      "frame": 1399
     },
     {
       "beat": 38,
-      "timeSec": 23.75,
-      "frame": 1425
+      "timeSec": 23.9398,
+      "frame": 1436
     },
     {
       "beat": 39,
-      "timeSec": 24.375,
-      "frame": 1462
+      "timeSec": 24.5899,
+      "frame": 1475
     },
     {
       "beat": 40,
-      "timeSec": 25.0,
-      "frame": 1500
+      "timeSec": 25.2169,
+      "frame": 1513
     },
     {
       "beat": 41,
-      "timeSec": 25.625,
-      "frame": 1538
+      "timeSec": 25.8438,
+      "frame": 1551
     },
     {
       "beat": 42,
-      "timeSec": 26.25,
-      "frame": 1575
+      "timeSec": 26.494,
+      "frame": 1590
     },
     {
       "beat": 43,
-      "timeSec": 26.875,
-      "frame": 1612
+      "timeSec": 27.1209,
+      "frame": 1627
     },
     {
       "beat": 44,
-      "timeSec": 27.5,
-      "frame": 1650
+      "timeSec": 27.7711,
+      "frame": 1666
     },
     {
       "beat": 45,
-      "timeSec": 28.125,
-      "frame": 1688
+      "timeSec": 28.398,
+      "frame": 1704
     },
     {
       "beat": 46,
-      "timeSec": 28.75,
-      "frame": 1725
+      "timeSec": 29.0482,
+      "frame": 1743
     },
     {
       "beat": 47,
-      "timeSec": 29.375,
-      "frame": 1762
+      "timeSec": 29.6751,
+      "frame": 1781
     },
     {
       "beat": 48,
-      "timeSec": 30.0,
-      "frame": 1800
+      "timeSec": 30.302,
+      "frame": 1818
     },
     {
       "beat": 49,
-      "timeSec": 30.625,
-      "frame": 1838
+      "timeSec": 30.9522,
+      "frame": 1857
     },
     {
       "beat": 50,
-      "timeSec": 31.25,
-      "frame": 1875
+      "timeSec": 31.5791,
+      "frame": 1895
     },
     {
       "beat": 51,
-      "timeSec": 31.875,
-      "frame": 1912
+      "timeSec": 32.2293,
+      "frame": 1934
     },
     {
       "beat": 52,
-      "timeSec": 32.5,
-      "frame": 1950
+      "timeSec": 32.8562,
+      "frame": 1971
     },
     {
       "beat": 53,
-      "timeSec": 33.125,
-      "frame": 1988
+      "timeSec": 33.4832,
+      "frame": 2009
     },
     {
       "beat": 54,
-      "timeSec": 33.75,
-      "frame": 2025
+      "timeSec": 34.1333,
+      "frame": 2048
     },
     {
       "beat": 55,
-      "timeSec": 34.375,
-      "frame": 2062
+      "timeSec": 34.7603,
+      "frame": 2086
     },
     {
       "beat": 56,
-      "timeSec": 35.0,
-      "frame": 2100
+      "timeSec": 35.4104,
+      "frame": 2125
     },
     {
       "beat": 57,
-      "timeSec": 35.625,
-      "frame": 2138
+      "timeSec": 36.0374,
+      "frame": 2162
     },
     {
       "beat": 58,
-      "timeSec": 36.25,
-      "frame": 2175
+      "timeSec": 36.6643,
+      "frame": 2200
     },
     {
       "beat": 59,
-      "timeSec": 36.875,
-      "frame": 2212
+      "timeSec": 37.3145,
+      "frame": 2239
     },
     {
       "beat": 60,
-      "timeSec": 37.5,
-      "frame": 2250
+      "timeSec": 37.9414,
+      "frame": 2276
     },
     {
       "beat": 61,
-      "timeSec": 38.125,
-      "frame": 2288
+      "timeSec": 38.5683,
+      "frame": 2314
     },
     {
       "beat": 62,
-      "timeSec": 38.75,
-      "frame": 2325
+      "timeSec": 39.2185,
+      "frame": 2353
     },
     {
       "beat": 63,
-      "timeSec": 39.375,
-      "frame": 2362
+      "timeSec": 39.8454,
+      "frame": 2391
     },
     {
       "beat": 64,
-      "timeSec": 40.0,
-      "frame": 2400
+      "timeSec": 40.4956,
+      "frame": 2430
     },
     {
       "beat": 65,
-      "timeSec": 40.625,
-      "frame": 2438
+      "timeSec": 41.1225,
+      "frame": 2467
     },
     {
       "beat": 66,
-      "timeSec": 41.25,
-      "frame": 2475
+      "timeSec": 41.7727,
+      "frame": 2506
     },
     {
       "beat": 67,
-      "timeSec": 41.875,
-      "frame": 2512
+      "timeSec": 42.3996,
+      "frame": 2544
     },
     {
       "beat": 68,
-      "timeSec": 42.5,
-      "frame": 2550
+      "timeSec": 43.0266,
+      "frame": 2582
     },
     {
       "beat": 69,
-      "timeSec": 43.125,
-      "frame": 2588
+      "timeSec": 43.6767,
+      "frame": 2621
     },
     {
       "beat": 70,
-      "timeSec": 43.75,
-      "frame": 2625
+      "timeSec": 44.3037,
+      "frame": 2658
     },
     {
       "beat": 71,
-      "timeSec": 44.375,
-      "frame": 2662
+      "timeSec": 44.9538,
+      "frame": 2697
     },
     {
       "beat": 72,
-      "timeSec": 45.0,
-      "frame": 2700
+      "timeSec": 45.5808,
+      "frame": 2735
     },
     {
       "beat": 73,
-      "timeSec": 45.625,
-      "frame": 2738
+      "timeSec": 46.2077,
+      "frame": 2772
     },
     {
       "beat": 74,
-      "timeSec": 46.25,
-      "frame": 2775
+      "timeSec": 46.8579,
+      "frame": 2811
     },
     {
       "beat": 75,
-      "timeSec": 46.875,
-      "frame": 2812
+      "timeSec": 47.4848,
+      "frame": 2849
     },
     {
       "beat": 76,
-      "timeSec": 47.5,
-      "frame": 2850
-    },
-    {
-      "beat": 77,
-      "timeSec": 48.125,
+      "timeSec": 48.135,
       "frame": 2888
     },
     {
+      "beat": 77,
+      "timeSec": 48.7619,
+      "frame": 2926
+    },
+    {
       "beat": 78,
-      "timeSec": 48.75,
-      "frame": 2925
+      "timeSec": 49.4121,
+      "frame": 2965
     },
     {
       "beat": 79,
-      "timeSec": 49.375,
-      "frame": 2962
+      "timeSec": 50.039,
+      "frame": 3002
     },
     {
       "beat": 80,
-      "timeSec": 50.0,
-      "frame": 3000
+      "timeSec": 50.6659,
+      "frame": 3040
     },
     {
       "beat": 81,
-      "timeSec": 50.625,
-      "frame": 3038
+      "timeSec": 51.2929,
+      "frame": 3078
+    }
+  ],
+  "transients": [
+    {
+      "frame": 4,
+      "timeSec": 0.0697,
+      "type": "ENERGY_PEAK",
+      "strength": 0.257,
+      "bassEnergy": 0.151,
+      "highEnergy": 0.07,
+      "rms": 0.257
     },
     {
-      "beat": 82,
-      "timeSec": 51.25,
-      "frame": 3075
+      "frame": 14,
+      "timeSec": 0.2322,
+      "type": "BEAT_ONSET",
+      "strength": 0.129,
+      "bassEnergy": 0.092,
+      "highEnergy": 0.044,
+      "rms": 0.182
     },
     {
-      "beat": 83,
-      "timeSec": 51.875,
-      "frame": 3112
+      "frame": 22,
+      "timeSec": 0.3715,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.614,
+      "bassEnergy": 0.358,
+      "highEnergy": 0.679,
+      "rms": 0.558
+    },
+    {
+      "frame": 24,
+      "timeSec": 0.3947,
+      "type": "BASS_DROP",
+      "strength": 0.425,
+      "bassEnergy": 0.612,
+      "highEnergy": 0.376,
+      "rms": 0.6
+    },
+    {
+      "frame": 43,
+      "timeSec": 0.7198,
+      "type": "BEAT_ONSET",
+      "strength": 0.247,
+      "bassEnergy": 0.122,
+      "highEnergy": 0.041,
+      "rms": 0.281
+    },
+    {
+      "frame": 53,
+      "timeSec": 0.8824,
+      "type": "BEAT_ONSET",
+      "strength": 0.144,
+      "bassEnergy": 0.066,
+      "highEnergy": 0.032,
+      "rms": 0.172
+    },
+    {
+      "frame": 60,
+      "timeSec": 0.9985,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.292,
+      "bassEnergy": 0.245,
+      "highEnergy": 0.25,
+      "rms": 0.582
+    },
+    {
+      "frame": 61,
+      "timeSec": 1.0217,
+      "type": "BASS_DROP",
+      "strength": 0.807,
+      "bassEnergy": 0.727,
+      "highEnergy": 0.164,
+      "rms": 0.689
+    },
+    {
+      "frame": 63,
+      "timeSec": 1.0449,
+      "type": "ENERGY_PEAK",
+      "strength": 0.271,
+      "bassEnergy": 0.703,
+      "highEnergy": 0.007,
+      "rms": 0.793
+    },
+    {
+      "frame": 81,
+      "timeSec": 1.3468,
+      "type": "BEAT_ONSET",
+      "strength": 0.239,
+      "bassEnergy": 0.178,
+      "highEnergy": 0.055,
+      "rms": 0.288
+    },
+    {
+      "frame": 91,
+      "timeSec": 1.5093,
+      "type": "BEAT_ONSET",
+      "strength": 0.147,
+      "bassEnergy": 0.103,
+      "highEnergy": 0.045,
+      "rms": 0.216
+    },
+    {
+      "frame": 99,
+      "timeSec": 1.6486,
+      "type": "BASS_DROP",
+      "strength": 0.543,
+      "bassEnergy": 0.439,
+      "highEnergy": 0.85,
+      "rms": 0.565
+    },
+    {
+      "frame": 100,
+      "timeSec": 1.6718,
+      "type": "ENERGY_PEAK",
+      "strength": 0.37,
+      "bassEnergy": 0.611,
+      "highEnergy": 0.304,
+      "rms": 0.619
+    },
+    {
+      "frame": 120,
+      "timeSec": 1.9969,
+      "type": "BEAT_ONSET",
+      "strength": 0.219,
+      "bassEnergy": 0.178,
+      "highEnergy": 0.034,
+      "rms": 0.309
+    },
+    {
+      "frame": 130,
+      "timeSec": 2.1595,
+      "type": "BEAT_ONSET",
+      "strength": 0.138,
+      "bassEnergy": 0.108,
+      "highEnergy": 0.025,
+      "rms": 0.209
+    },
+    {
+      "frame": 137,
+      "timeSec": 2.2756,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.41,
+      "bassEnergy": 0.402,
+      "highEnergy": 0.371,
+      "rms": 0.699
+    },
+    {
+      "frame": 138,
+      "timeSec": 2.2988,
+      "type": "BASS_DROP",
+      "strength": 1.0,
+      "bassEnergy": 1.0,
+      "highEnergy": 0.163,
+      "rms": 0.819
+    },
+    {
+      "frame": 139,
+      "timeSec": 2.322,
+      "type": "ENERGY_PEAK",
+      "strength": 0.324,
+      "bassEnergy": 0.877,
+      "highEnergy": 0.006,
+      "rms": 0.951
+    },
+    {
+      "frame": 157,
+      "timeSec": 2.6239,
+      "type": "BEAT_ONSET",
+      "strength": 0.227,
+      "bassEnergy": 0.126,
+      "highEnergy": 0.036,
+      "rms": 0.203
+    },
+    {
+      "frame": 167,
+      "timeSec": 2.7864,
+      "type": "BEAT_ONSET",
+      "strength": 0.162,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.028,
+      "rms": 0.151
+    },
+    {
+      "frame": 174,
+      "timeSec": 2.9025,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.612,
+      "bassEnergy": 0.144,
+      "highEnergy": 0.474,
+      "rms": 0.483
+    },
+    {
+      "frame": 176,
+      "timeSec": 2.9257,
+      "type": "BASS_DROP",
+      "strength": 0.579,
+      "bassEnergy": 0.491,
+      "highEnergy": 0.668,
+      "rms": 0.572
+    },
+    {
+      "frame": 177,
+      "timeSec": 2.9489,
+      "type": "ENERGY_PEAK",
+      "strength": 0.303,
+      "bassEnergy": 0.545,
+      "highEnergy": 0.182,
+      "rms": 0.602
+    },
+    {
+      "frame": 195,
+      "timeSec": 3.2508,
+      "type": "BASS_DROP",
+      "strength": 0.197,
+      "bassEnergy": 0.212,
+      "highEnergy": 0.061,
+      "rms": 0.349
+    },
+    {
+      "frame": 196,
+      "timeSec": 3.274,
+      "type": "BEAT_ONSET",
+      "strength": 0.208,
+      "bassEnergy": 0.249,
+      "highEnergy": 0.024,
+      "rms": 0.423
+    },
+    {
+      "frame": 205,
+      "timeSec": 3.4133,
+      "type": "BEAT_ONSET",
+      "strength": 0.154,
+      "bassEnergy": 0.16,
+      "highEnergy": 0.042,
+      "rms": 0.338
+    },
+    {
+      "frame": 213,
+      "timeSec": 3.5527,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.356,
+      "bassEnergy": 0.451,
+      "highEnergy": 0.375,
+      "rms": 0.653
+    },
+    {
+      "frame": 215,
+      "timeSec": 3.5759,
+      "type": "BASS_DROP",
+      "strength": 0.518,
+      "bassEnergy": 0.761,
+      "highEnergy": 0.087,
+      "rms": 0.724
+    },
+    {
+      "frame": 234,
+      "timeSec": 3.901,
+      "type": "BEAT_ONSET",
+      "strength": 0.252,
+      "bassEnergy": 0.158,
+      "highEnergy": 0.032,
+      "rms": 0.279
+    },
+    {
+      "frame": 244,
+      "timeSec": 4.0635,
+      "type": "BEAT_ONSET",
+      "strength": 0.161,
+      "bassEnergy": 0.134,
+      "highEnergy": 0.026,
+      "rms": 0.26
+    },
+    {
+      "frame": 251,
+      "timeSec": 4.1796,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.846,
+      "bassEnergy": 0.198,
+      "highEnergy": 0.689,
+      "rms": 0.555
+    },
+    {
+      "frame": 252,
+      "timeSec": 4.2028,
+      "type": "BASS_DROP",
+      "strength": 0.618,
+      "bassEnergy": 0.567,
+      "highEnergy": 0.577,
+      "rms": 0.581
+    },
+    {
+      "frame": 254,
+      "timeSec": 4.226,
+      "type": "ENERGY_PEAK",
+      "strength": 0.296,
+      "bassEnergy": 0.497,
+      "highEnergy": 0.139,
+      "rms": 0.7
+    },
+    {
+      "frame": 272,
+      "timeSec": 4.5279,
+      "type": "BEAT_ONSET",
+      "strength": 0.197,
+      "bassEnergy": 0.143,
+      "highEnergy": 0.057,
+      "rms": 0.252
+    },
+    {
+      "frame": 281,
+      "timeSec": 4.6904,
+      "type": "BEAT_ONSET",
+      "strength": 0.182,
+      "bassEnergy": 0.1,
+      "highEnergy": 0.033,
+      "rms": 0.202
+    },
+    {
+      "frame": 288,
+      "timeSec": 4.8065,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.218,
+      "bassEnergy": 0.129,
+      "highEnergy": 0.172,
+      "rms": 0.523
+    },
+    {
+      "frame": 290,
+      "timeSec": 4.8298,
+      "type": "BASS_DROP",
+      "strength": 0.751,
+      "bassEnergy": 0.578,
+      "highEnergy": 0.326,
+      "rms": 0.66
+    },
+    {
+      "frame": 291,
+      "timeSec": 4.853,
+      "type": "ENERGY_PEAK",
+      "strength": 0.263,
+      "bassEnergy": 0.814,
+      "highEnergy": 0.042,
+      "rms": 0.681
+    },
+    {
+      "frame": 311,
+      "timeSec": 5.178,
+      "type": "BEAT_ONSET",
+      "strength": 0.241,
+      "bassEnergy": 0.161,
+      "highEnergy": 0.044,
+      "rms": 0.354
+    },
+    {
+      "frame": 320,
+      "timeSec": 5.3406,
+      "type": "BEAT_ONSET",
+      "strength": 0.145,
+      "bassEnergy": 0.126,
+      "highEnergy": 0.029,
+      "rms": 0.265
+    },
+    {
+      "frame": 327,
+      "timeSec": 5.4567,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.765,
+      "bassEnergy": 0.25,
+      "highEnergy": 0.674,
+      "rms": 0.575
+    },
+    {
+      "frame": 329,
+      "timeSec": 5.4799,
+      "type": "BASS_DROP",
+      "strength": 0.674,
+      "bassEnergy": 0.654,
+      "highEnergy": 0.478,
+      "rms": 0.629
+    },
+    {
+      "frame": 330,
+      "timeSec": 5.5031,
+      "type": "ENERGY_PEAK",
+      "strength": 0.255,
+      "bassEnergy": 0.542,
+      "highEnergy": 0.185,
+      "rms": 0.724
+    },
+    {
+      "frame": 348,
+      "timeSec": 5.805,
+      "type": "BEAT_ONSET",
+      "strength": 0.196,
+      "bassEnergy": 0.115,
+      "highEnergy": 0.1,
+      "rms": 0.26
+    },
+    {
+      "frame": 358,
+      "timeSec": 5.9675,
+      "type": "BEAT_ONSET",
+      "strength": 0.156,
+      "bassEnergy": 0.072,
+      "highEnergy": 0.044,
+      "rms": 0.198
+    },
+    {
+      "frame": 365,
+      "timeSec": 6.0836,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.232,
+      "bassEnergy": 0.143,
+      "highEnergy": 0.198,
+      "rms": 0.561
+    },
+    {
+      "frame": 366,
+      "timeSec": 6.1068,
+      "type": "BASS_DROP",
+      "strength": 0.788,
+      "bassEnergy": 0.614,
+      "highEnergy": 0.23,
+      "rms": 0.654
+    },
+    {
+      "frame": 368,
+      "timeSec": 6.1301,
+      "type": "ENERGY_PEAK",
+      "strength": 0.265,
+      "bassEnergy": 0.734,
+      "highEnergy": 0.018,
+      "rms": 0.745
+    },
+    {
+      "frame": 386,
+      "timeSec": 6.4319,
+      "type": "BASS_DROP",
+      "strength": 0.218,
+      "bassEnergy": 0.302,
+      "highEnergy": 0.077,
+      "rms": 0.487
+    },
+    {
+      "frame": 396,
+      "timeSec": 6.5945,
+      "type": "BEAT_ONSET",
+      "strength": 0.133,
+      "bassEnergy": 0.198,
+      "highEnergy": 0.052,
+      "rms": 0.385
+    },
+    {
+      "frame": 404,
+      "timeSec": 6.7338,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.805,
+      "bassEnergy": 0.364,
+      "highEnergy": 0.861,
+      "rms": 0.596
+    },
+    {
+      "frame": 405,
+      "timeSec": 6.757,
+      "type": "ENERGY_PEAK",
+      "strength": 0.293,
+      "bassEnergy": 0.647,
+      "highEnergy": 0.336,
+      "rms": 0.596
+    },
+    {
+      "frame": 410,
+      "timeSec": 6.8267,
+      "type": "BASS_DROP",
+      "strength": 0.551,
+      "bassEnergy": 0.679,
+      "highEnergy": 0.108,
+      "rms": 0.844
+    },
+    {
+      "frame": 425,
+      "timeSec": 7.0821,
+      "type": "BEAT_ONSET",
+      "strength": 0.231,
+      "bassEnergy": 0.144,
+      "highEnergy": 0.044,
+      "rms": 0.316
+    },
+    {
+      "frame": 435,
+      "timeSec": 7.2446,
+      "type": "BEAT_ONSET",
+      "strength": 0.155,
+      "bassEnergy": 0.096,
+      "highEnergy": 0.035,
+      "rms": 0.256
+    },
+    {
+      "frame": 442,
+      "timeSec": 7.3607,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.264,
+      "highEnergy": 0.258,
+      "rms": 0.59
+    },
+    {
+      "frame": 443,
+      "timeSec": 7.3839,
+      "type": "BASS_DROP",
+      "strength": 0.762,
+      "bassEnergy": 0.719,
+      "highEnergy": 0.184,
+      "rms": 0.711
+    },
+    {
+      "frame": 444,
+      "timeSec": 7.4072,
+      "type": "ENERGY_PEAK",
+      "strength": 0.249,
+      "bassEnergy": 0.72,
+      "highEnergy": 0.008,
+      "rms": 0.757
+    },
+    {
+      "frame": 463,
+      "timeSec": 7.709,
+      "type": "BEAT_ONSET",
+      "strength": 0.272,
+      "bassEnergy": 0.174,
+      "highEnergy": 0.059,
+      "rms": 0.343
+    },
+    {
+      "frame": 472,
+      "timeSec": 7.8716,
+      "type": "BEAT_ONSET",
+      "strength": 0.142,
+      "bassEnergy": 0.094,
+      "highEnergy": 0.049,
+      "rms": 0.251
+    },
+    {
+      "frame": 479,
+      "timeSec": 7.9877,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.429,
+      "bassEnergy": 0.143,
+      "highEnergy": 0.343,
+      "rms": 0.508
+    },
+    {
+      "frame": 481,
+      "timeSec": 8.0109,
+      "type": "BASS_DROP",
+      "strength": 0.596,
+      "bassEnergy": 0.499,
+      "highEnergy": 0.605,
+      "rms": 0.583
+    },
+    {
+      "frame": 482,
+      "timeSec": 8.0341,
+      "type": "ENERGY_PEAK",
+      "strength": 0.271,
+      "bassEnergy": 0.625,
+      "highEnergy": 0.171,
+      "rms": 0.611
+    },
+    {
+      "frame": 502,
+      "timeSec": 8.3592,
+      "type": "BEAT_ONSET",
+      "strength": 0.199,
+      "bassEnergy": 0.241,
+      "highEnergy": 0.03,
+      "rms": 0.47
+    },
+    {
+      "frame": 511,
+      "timeSec": 8.5217,
+      "type": "BEAT_ONSET",
+      "strength": 0.15,
+      "bassEnergy": 0.211,
+      "highEnergy": 0.024,
+      "rms": 0.389
+    },
+    {
+      "frame": 518,
+      "timeSec": 8.6378,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.362,
+      "bassEnergy": 0.33,
+      "highEnergy": 0.325,
+      "rms": 0.662
+    },
+    {
+      "frame": 520,
+      "timeSec": 8.661,
+      "type": "BASS_DROP",
+      "strength": 0.751,
+      "bassEnergy": 0.779,
+      "highEnergy": 0.141,
+      "rms": 0.688
+    },
+    {
+      "frame": 521,
+      "timeSec": 8.6843,
+      "type": "BEAT_ONSET",
+      "strength": 0.256,
+      "bassEnergy": 0.629,
+      "highEnergy": 0.005,
+      "rms": 0.783
+    },
+    {
+      "frame": 539,
+      "timeSec": 8.9861,
+      "type": "BEAT_ONSET",
+      "strength": 0.245,
+      "bassEnergy": 0.136,
+      "highEnergy": 0.063,
+      "rms": 0.269
+    },
+    {
+      "frame": 549,
+      "timeSec": 9.1487,
+      "type": "BEAT_ONSET",
+      "strength": 0.151,
+      "bassEnergy": 0.085,
+      "highEnergy": 0.051,
+      "rms": 0.171
+    },
+    {
+      "frame": 556,
+      "timeSec": 9.2648,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.836,
+      "bassEnergy": 0.155,
+      "highEnergy": 0.656,
+      "rms": 0.482
+    },
+    {
+      "frame": 557,
+      "timeSec": 9.288,
+      "type": "BASS_DROP",
+      "strength": 0.584,
+      "bassEnergy": 0.503,
+      "highEnergy": 0.848,
+      "rms": 0.581
+    },
+    {
+      "frame": 559,
+      "timeSec": 9.3112,
+      "type": "ENERGY_PEAK",
+      "strength": 0.326,
+      "bassEnergy": 0.592,
+      "highEnergy": 0.192,
+      "rms": 0.607
+    },
+    {
+      "frame": 578,
+      "timeSec": 9.6363,
+      "type": "BEAT_ONSET",
+      "strength": 0.187,
+      "bassEnergy": 0.079,
+      "highEnergy": 0.037,
+      "rms": 0.143
+    },
+    {
+      "frame": 595,
+      "timeSec": 9.9149,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.346,
+      "bassEnergy": 0.397,
+      "highEnergy": 0.38,
+      "rms": 0.603
+    },
+    {
+      "frame": 596,
+      "timeSec": 9.9381,
+      "type": "BASS_DROP",
+      "strength": 0.668,
+      "bassEnergy": 0.796,
+      "highEnergy": 0.093,
+      "rms": 0.646
+    },
+    {
+      "frame": 614,
+      "timeSec": 10.24,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.181,
+      "bassEnergy": 0.044,
+      "highEnergy": 0.26,
+      "rms": 0.087
+    },
+    {
+      "frame": 616,
+      "timeSec": 10.2632,
+      "type": "BEAT_ONSET",
+      "strength": 0.286,
+      "bassEnergy": 0.038,
+      "highEnergy": 0.119,
+      "rms": 0.088
+    },
+    {
+      "frame": 626,
+      "timeSec": 10.4258,
+      "type": "BEAT_ONSET",
+      "strength": 0.171,
+      "bassEnergy": 0.032,
+      "highEnergy": 0.08,
+      "rms": 0.044
+    },
+    {
+      "frame": 633,
+      "timeSec": 10.5419,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.946,
+      "bassEnergy": 0.144,
+      "highEnergy": 0.775,
+      "rms": 0.383
+    },
+    {
+      "frame": 634,
+      "timeSec": 10.5651,
+      "type": "BASS_DROP",
+      "strength": 0.366,
+      "bassEnergy": 0.363,
+      "highEnergy": 0.785,
+      "rms": 0.422
+    },
+    {
+      "frame": 635,
+      "timeSec": 10.5883,
+      "type": "ENERGY_PEAK",
+      "strength": 0.259,
+      "bassEnergy": 0.265,
+      "highEnergy": 0.275,
+      "rms": 0.512
+    },
+    {
+      "frame": 655,
+      "timeSec": 10.9134,
+      "type": "BEAT_ONSET",
+      "strength": 0.21,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.055,
+      "rms": 0.127
+    },
+    {
+      "frame": 662,
+      "timeSec": 11.0295,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.202,
+      "bassEnergy": 0.036,
+      "highEnergy": 0.235,
+      "rms": 0.066
+    },
+    {
+      "frame": 663,
+      "timeSec": 11.0527,
+      "type": "BEAT_ONSET",
+      "strength": 0.18,
+      "bassEnergy": 0.036,
+      "highEnergy": 0.128,
+      "rms": 0.053
+    },
+    {
+      "frame": 672,
+      "timeSec": 11.192,
+      "type": "BASS_DROP",
+      "strength": 0.588,
+      "bassEnergy": 0.435,
+      "highEnergy": 0.28,
+      "rms": 0.481
+    },
+    {
+      "frame": 673,
+      "timeSec": 11.2152,
+      "type": "BEAT_ONSET",
+      "strength": 0.334,
+      "bassEnergy": 0.492,
+      "highEnergy": 0.042,
+      "rms": 0.531
+    },
+    {
+      "frame": 692,
+      "timeSec": 11.5403,
+      "type": "BEAT_ONSET",
+      "strength": 0.3,
+      "bassEnergy": 0.053,
+      "highEnergy": 0.09,
+      "rms": 0.129
+    },
+    {
+      "frame": 702,
+      "timeSec": 11.7029,
+      "type": "BEAT_ONSET",
+      "strength": 0.173,
+      "bassEnergy": 0.035,
+      "highEnergy": 0.058,
+      "rms": 0.072
+    },
+    {
+      "frame": 709,
+      "timeSec": 11.819,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.784,
+      "bassEnergy": 0.206,
+      "highEnergy": 0.698,
+      "rms": 0.447
+    },
+    {
+      "frame": 711,
+      "timeSec": 11.8422,
+      "type": "BASS_DROP",
+      "strength": 0.517,
+      "bassEnergy": 0.515,
+      "highEnergy": 0.554,
+      "rms": 0.508
+    },
+    {
+      "frame": 712,
+      "timeSec": 11.8654,
+      "type": "ENERGY_PEAK",
+      "strength": 0.238,
+      "bassEnergy": 0.36,
+      "highEnergy": 0.206,
+      "rms": 0.592
+    },
+    {
+      "frame": 730,
+      "timeSec": 12.1673,
+      "type": "BEAT_ONSET",
+      "strength": 0.208,
+      "bassEnergy": 0.059,
+      "highEnergy": 0.127,
+      "rms": 0.127
+    },
+    {
+      "frame": 740,
+      "timeSec": 12.3298,
+      "type": "BEAT_ONSET",
+      "strength": 0.165,
+      "bassEnergy": 0.035,
+      "highEnergy": 0.109,
+      "rms": 0.061
+    },
+    {
+      "frame": 747,
+      "timeSec": 12.4459,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.296,
+      "bassEnergy": 0.119,
+      "highEnergy": 0.249,
+      "rms": 0.404
+    },
+    {
+      "frame": 748,
+      "timeSec": 12.4691,
+      "type": "BASS_DROP",
+      "strength": 0.58,
+      "bassEnergy": 0.466,
+      "highEnergy": 0.267,
+      "rms": 0.485
+    },
+    {
+      "frame": 750,
+      "timeSec": 12.4923,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.428,
+      "highEnergy": 0.025,
+      "rms": 0.581
+    },
+    {
+      "frame": 769,
+      "timeSec": 12.8174,
+      "type": "BEAT_ONSET",
+      "strength": 0.263,
+      "bassEnergy": 0.134,
+      "highEnergy": 0.068,
+      "rms": 0.276
+    },
+    {
+      "frame": 779,
+      "timeSec": 12.98,
+      "type": "BEAT_ONSET",
+      "strength": 0.178,
+      "bassEnergy": 0.085,
+      "highEnergy": 0.048,
+      "rms": 0.167
+    },
+    {
+      "frame": 786,
+      "timeSec": 13.0961,
+      "type": "BASS_DROP",
+      "strength": 0.334,
+      "bassEnergy": 0.291,
+      "highEnergy": 0.754,
+      "rms": 0.443
+    },
+    {
+      "frame": 787,
+      "timeSec": 13.1193,
+      "type": "BEAT_ONSET",
+      "strength": 0.419,
+      "bassEnergy": 0.432,
+      "highEnergy": 0.406,
+      "rms": 0.5
+    },
+    {
+      "frame": 807,
+      "timeSec": 13.4444,
+      "type": "BEAT_ONSET",
+      "strength": 0.272,
+      "bassEnergy": 0.124,
+      "highEnergy": 0.112,
+      "rms": 0.229
+    },
+    {
+      "frame": 816,
+      "timeSec": 13.6069,
+      "type": "BEAT_ONSET",
+      "strength": 0.178,
+      "bassEnergy": 0.069,
+      "highEnergy": 0.084,
+      "rms": 0.134
+    },
+    {
+      "frame": 823,
+      "timeSec": 13.723,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.256,
+      "bassEnergy": 0.196,
+      "highEnergy": 0.233,
+      "rms": 0.417
+    },
+    {
+      "frame": 825,
+      "timeSec": 13.7462,
+      "type": "BASS_DROP",
+      "strength": 0.408,
+      "bassEnergy": 0.44,
+      "highEnergy": 0.158,
+      "rms": 0.461
+    },
+    {
+      "frame": 826,
+      "timeSec": 13.7694,
+      "type": "BEAT_ONSET",
+      "strength": 0.316,
+      "bassEnergy": 0.301,
+      "highEnergy": 0.013,
+      "rms": 0.573
+    },
+    {
+      "frame": 843,
+      "timeSec": 14.0481,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.182,
+      "bassEnergy": 0.131,
+      "highEnergy": 0.19,
+      "rms": 0.26
+    },
+    {
+      "frame": 844,
+      "timeSec": 14.0713,
+      "type": "BEAT_ONSET",
+      "strength": 0.221,
+      "bassEnergy": 0.157,
+      "highEnergy": 0.137,
+      "rms": 0.249
+    },
+    {
+      "frame": 854,
+      "timeSec": 14.2338,
+      "type": "BEAT_ONSET",
+      "strength": 0.158,
+      "bassEnergy": 0.085,
+      "highEnergy": 0.129,
+      "rms": 0.163
+    },
+    {
+      "frame": 862,
+      "timeSec": 14.3732,
+      "type": "BASS_DROP",
+      "strength": 0.294,
+      "bassEnergy": 0.284,
+      "highEnergy": 0.725,
+      "rms": 0.422
+    },
+    {
+      "frame": 864,
+      "timeSec": 14.3964,
+      "type": "ENERGY_PEAK",
+      "strength": 0.239,
+      "bassEnergy": 0.341,
+      "highEnergy": 0.31,
+      "rms": 0.452
+    },
+    {
+      "frame": 883,
+      "timeSec": 14.7215,
+      "type": "BEAT_ONSET",
+      "strength": 0.287,
+      "bassEnergy": 0.142,
+      "highEnergy": 0.086,
+      "rms": 0.224
+    },
+    {
+      "frame": 893,
+      "timeSec": 14.884,
+      "type": "BEAT_ONSET",
+      "strength": 0.184,
+      "bassEnergy": 0.087,
+      "highEnergy": 0.056,
+      "rms": 0.191
+    },
+    {
+      "frame": 900,
+      "timeSec": 15.0001,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.245,
+      "bassEnergy": 0.26,
+      "highEnergy": 0.23,
+      "rms": 0.46
+    },
+    {
+      "frame": 901,
+      "timeSec": 15.0233,
+      "type": "BASS_DROP",
+      "strength": 0.384,
+      "bassEnergy": 0.49,
+      "highEnergy": 0.099,
+      "rms": 0.503
+    },
+    {
+      "frame": 903,
+      "timeSec": 15.0465,
+      "type": "BEAT_ONSET",
+      "strength": 0.314,
+      "bassEnergy": 0.333,
+      "highEnergy": 0.009,
+      "rms": 0.626
+    },
+    {
+      "frame": 921,
+      "timeSec": 15.3484,
+      "type": "BEAT_ONSET",
+      "strength": 0.231,
+      "bassEnergy": 0.085,
+      "highEnergy": 0.105,
+      "rms": 0.151
+    },
+    {
+      "frame": 931,
+      "timeSec": 15.5109,
+      "type": "BEAT_ONSET",
+      "strength": 0.185,
+      "bassEnergy": 0.045,
+      "highEnergy": 0.106,
+      "rms": 0.085
+    },
+    {
+      "frame": 938,
+      "timeSec": 15.627,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.674,
+      "bassEnergy": 0.096,
+      "highEnergy": 0.534,
+      "rms": 0.437
+    },
+    {
+      "frame": 939,
+      "timeSec": 15.6502,
+      "type": "BASS_DROP",
+      "strength": 0.625,
+      "bassEnergy": 0.47,
+      "highEnergy": 0.829,
+      "rms": 0.534
+    },
+    {
+      "frame": 940,
+      "timeSec": 15.6735,
+      "type": "ENERGY_PEAK",
+      "strength": 0.328,
+      "bassEnergy": 0.516,
+      "highEnergy": 0.372,
+      "rms": 0.604
+    },
+    {
+      "frame": 957,
+      "timeSec": 15.9521,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.189,
+      "bassEnergy": 0.03,
+      "highEnergy": 0.173,
+      "rms": 0.098
+    },
+    {
+      "frame": 960,
+      "timeSec": 15.9985,
+      "type": "BEAT_ONSET",
+      "strength": 0.231,
+      "bassEnergy": 0.09,
+      "highEnergy": 0.069,
+      "rms": 0.172
+    },
+    {
+      "frame": 970,
+      "timeSec": 16.1611,
+      "type": "BEAT_ONSET",
+      "strength": 0.163,
+      "bassEnergy": 0.073,
+      "highEnergy": 0.041,
+      "rms": 0.127
+    },
+    {
+      "frame": 977,
+      "timeSec": 16.2772,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.31,
+      "bassEnergy": 0.33,
+      "highEnergy": 0.335,
+      "rms": 0.526
+    },
+    {
+      "frame": 978,
+      "timeSec": 16.3004,
+      "type": "BEAT_ONSET",
+      "strength": 0.274,
+      "bassEnergy": 0.64,
+      "highEnergy": 0.086,
+      "rms": 0.571
+    },
+    {
+      "frame": 982,
+      "timeSec": 16.3701,
+      "type": "BASS_DROP",
+      "strength": 0.529,
+      "bassEnergy": 0.729,
+      "highEnergy": 0.018,
+      "rms": 0.862
+    },
+    {
+      "frame": 998,
+      "timeSec": 16.6255,
+      "type": "BEAT_ONSET",
+      "strength": 0.278,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.093,
+      "rms": 0.103
+    },
+    {
+      "frame": 1007,
+      "timeSec": 16.788,
+      "type": "BEAT_ONSET",
+      "strength": 0.19,
+      "bassEnergy": 0.039,
+      "highEnergy": 0.074,
+      "rms": 0.063
+    },
+    {
+      "frame": 1014,
+      "timeSec": 16.9041,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.792,
+      "bassEnergy": 0.146,
+      "highEnergy": 0.646,
+      "rms": 0.444
+    },
+    {
+      "frame": 1016,
+      "timeSec": 16.9273,
+      "type": "BASS_DROP",
+      "strength": 0.567,
+      "bassEnergy": 0.485,
+      "highEnergy": 0.65,
+      "rms": 0.533
+    },
+    {
+      "frame": 1017,
+      "timeSec": 16.9506,
+      "type": "ENERGY_PEAK",
+      "strength": 0.325,
+      "bassEnergy": 0.416,
+      "highEnergy": 0.281,
+      "rms": 0.638
+    },
+    {
+      "frame": 1037,
+      "timeSec": 17.2756,
+      "type": "BEAT_ONSET",
+      "strength": 0.232,
+      "bassEnergy": 0.095,
+      "highEnergy": 0.044,
+      "rms": 0.174
+    },
+    {
+      "frame": 1044,
+      "timeSec": 17.3917,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.236,
+      "rms": 0.184
+    },
+    {
+      "frame": 1045,
+      "timeSec": 17.415,
+      "type": "BEAT_ONSET",
+      "strength": 0.196,
+      "bassEnergy": 0.093,
+      "highEnergy": 0.141,
+      "rms": 0.187
+    },
+    {
+      "frame": 1053,
+      "timeSec": 17.5543,
+      "type": "BASS_DROP",
+      "strength": 0.516,
+      "bassEnergy": 0.411,
+      "highEnergy": 0.287,
+      "rms": 0.495
+    },
+    {
+      "frame": 1055,
+      "timeSec": 17.5775,
+      "type": "BEAT_ONSET",
+      "strength": 0.374,
+      "bassEnergy": 0.515,
+      "highEnergy": 0.042,
+      "rms": 0.566
+    },
+    {
+      "frame": 1074,
+      "timeSec": 17.9026,
+      "type": "BEAT_ONSET",
+      "strength": 0.297,
+      "bassEnergy": 0.08,
+      "highEnergy": 0.081,
+      "rms": 0.135
+    },
+    {
+      "frame": 1084,
+      "timeSec": 18.0651,
+      "type": "BEAT_ONSET",
+      "strength": 0.187,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.047,
+      "rms": 0.072
+    },
+    {
+      "frame": 1091,
+      "timeSec": 18.1812,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "bassEnergy": 0.193,
+      "highEnergy": 0.625,
+      "rms": 0.417
+    },
+    {
+      "frame": 1092,
+      "timeSec": 18.2044,
+      "type": "BASS_DROP",
+      "strength": 0.387,
+      "bassEnergy": 0.424,
+      "highEnergy": 0.534,
+      "rms": 0.49
+    },
+    {
+      "frame": 1094,
+      "timeSec": 18.2277,
+      "type": "BEAT_ONSET",
+      "strength": 0.404,
+      "bassEnergy": 0.353,
+      "highEnergy": 0.26,
+      "rms": 0.542
+    },
+    {
+      "frame": 1110,
+      "timeSec": 18.5063,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.19,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.219,
+      "rms": 0.113
+    },
+    {
+      "frame": 1112,
+      "timeSec": 18.5295,
+      "type": "BEAT_ONSET",
+      "strength": 0.257,
+      "bassEnergy": 0.098,
+      "highEnergy": 0.123,
+      "rms": 0.182
+    },
+    {
+      "frame": 1122,
+      "timeSec": 18.6921,
+      "type": "BEAT_ONSET",
+      "strength": 0.212,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.101,
+      "rms": 0.136
+    },
+    {
+      "frame": 1128,
+      "timeSec": 18.8082,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.253,
+      "bassEnergy": 0.122,
+      "highEnergy": 0.204,
+      "rms": 0.412
+    },
+    {
+      "frame": 1130,
+      "timeSec": 18.8314,
+      "type": "BASS_DROP",
+      "strength": 0.583,
+      "bassEnergy": 0.471,
+      "highEnergy": 0.239,
+      "rms": 0.526
+    },
+    {
+      "frame": 1131,
+      "timeSec": 18.8546,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.504,
+      "highEnergy": 0.019,
+      "rms": 0.583
+    },
+    {
+      "frame": 1151,
+      "timeSec": 19.1797,
+      "type": "BEAT_ONSET",
+      "strength": 0.276,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.053,
+      "rms": 0.134
+    },
+    {
+      "frame": 1161,
+      "timeSec": 19.3422,
+      "type": "BEAT_ONSET",
+      "strength": 0.161,
+      "bassEnergy": 0.053,
+      "highEnergy": 0.04,
+      "rms": 0.091
+    },
+    {
+      "frame": 1167,
+      "timeSec": 19.4583,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.679,
+      "bassEnergy": 0.213,
+      "highEnergy": 0.689,
+      "rms": 0.406
+    },
+    {
+      "frame": 1169,
+      "timeSec": 19.4815,
+      "type": "ENERGY_PEAK",
+      "strength": 0.223,
+      "bassEnergy": 0.392,
+      "highEnergy": 0.403,
+      "rms": 0.443
+    },
+    {
+      "frame": 1173,
+      "timeSec": 19.5512,
+      "type": "BASS_DROP",
+      "strength": 0.436,
+      "bassEnergy": 0.54,
+      "highEnergy": 0.296,
+      "rms": 0.7
+    },
+    {
+      "frame": 1188,
+      "timeSec": 19.8066,
+      "type": "BEAT_ONSET",
+      "strength": 0.314,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.109,
+      "rms": 0.142
+    },
+    {
+      "frame": 1198,
+      "timeSec": 19.9692,
+      "type": "BEAT_ONSET",
+      "strength": 0.202,
+      "bassEnergy": 0.057,
+      "highEnergy": 0.077,
+      "rms": 0.123
+    },
+    {
+      "frame": 1205,
+      "timeSec": 20.0853,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.364,
+      "bassEnergy": 0.206,
+      "highEnergy": 0.299,
+      "rms": 0.544
+    },
+    {
+      "frame": 1207,
+      "timeSec": 20.1085,
+      "type": "BASS_DROP",
+      "strength": 0.775,
+      "bassEnergy": 0.669,
+      "highEnergy": 0.221,
+      "rms": 0.594
+    },
+    {
+      "frame": 1208,
+      "timeSec": 20.1317,
+      "type": "ENERGY_PEAK",
+      "strength": 0.281,
+      "bassEnergy": 0.524,
+      "highEnergy": 0.021,
+      "rms": 0.703
+    },
+    {
+      "frame": 1225,
+      "timeSec": 20.4103,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.216,
+      "bassEnergy": 0.087,
+      "highEnergy": 0.205,
+      "rms": 0.186
+    },
+    {
+      "frame": 1227,
+      "timeSec": 20.4568,
+      "type": "BEAT_ONSET",
+      "strength": 0.247,
+      "bassEnergy": 0.096,
+      "highEnergy": 0.052,
+      "rms": 0.208
+    },
+    {
+      "frame": 1237,
+      "timeSec": 20.6193,
+      "type": "BEAT_ONSET",
+      "strength": 0.134,
+      "bassEnergy": 0.052,
+      "highEnergy": 0.04,
+      "rms": 0.098
+    },
+    {
+      "frame": 1244,
+      "timeSec": 20.7354,
+      "type": "BASS_DROP",
+      "strength": 0.349,
+      "bassEnergy": 0.318,
+      "highEnergy": 0.729,
+      "rms": 0.517
+    },
+    {
+      "frame": 1246,
+      "timeSec": 20.7586,
+      "type": "ENERGY_PEAK",
+      "strength": 0.3,
+      "bassEnergy": 0.494,
+      "highEnergy": 0.465,
+      "rms": 0.569
+    },
+    {
+      "frame": 1265,
+      "timeSec": 21.0837,
+      "type": "BEAT_ONSET",
+      "strength": 0.238,
+      "bassEnergy": 0.097,
+      "highEnergy": 0.084,
+      "rms": 0.2
+    },
+    {
+      "frame": 1275,
+      "timeSec": 21.2463,
+      "type": "BEAT_ONSET",
+      "strength": 0.181,
+      "bassEnergy": 0.066,
+      "highEnergy": 0.058,
+      "rms": 0.127
+    },
+    {
+      "frame": 1282,
+      "timeSec": 21.3624,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.359,
+      "bassEnergy": 0.253,
+      "highEnergy": 0.33,
+      "rms": 0.468
+    },
+    {
+      "frame": 1283,
+      "timeSec": 21.3856,
+      "type": "BASS_DROP",
+      "strength": 0.509,
+      "bassEnergy": 0.557,
+      "highEnergy": 0.145,
+      "rms": 0.508
+    },
+    {
+      "frame": 1285,
+      "timeSec": 21.4088,
+      "type": "BEAT_ONSET",
+      "strength": 0.347,
+      "bassEnergy": 0.322,
+      "highEnergy": 0.014,
+      "rms": 0.565
+    },
+    {
+      "frame": 1301,
+      "timeSec": 21.6874,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.197,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.229,
+      "rms": 0.131
+    },
+    {
+      "frame": 1303,
+      "timeSec": 21.7107,
+      "type": "BEAT_ONSET",
+      "strength": 0.242,
+      "bassEnergy": 0.076,
+      "highEnergy": 0.141,
+      "rms": 0.154
+    },
+    {
+      "frame": 1312,
+      "timeSec": 21.8732,
+      "type": "BEAT_ONSET",
+      "strength": 0.188,
+      "bassEnergy": 0.045,
+      "highEnergy": 0.11,
+      "rms": 0.088
+    },
+    {
+      "frame": 1319,
+      "timeSec": 21.9893,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.538,
+      "bassEnergy": 0.093,
+      "highEnergy": 0.432,
+      "rms": 0.388
+    },
+    {
+      "frame": 1321,
+      "timeSec": 22.0125,
+      "type": "BASS_DROP",
+      "strength": 0.448,
+      "bassEnergy": 0.361,
+      "highEnergy": 0.683,
+      "rms": 0.461
+    },
+    {
+      "frame": 1322,
+      "timeSec": 22.0357,
+      "type": "ENERGY_PEAK",
+      "strength": 0.303,
+      "bassEnergy": 0.434,
+      "highEnergy": 0.285,
+      "rms": 0.53
+    },
+    {
+      "frame": 1339,
+      "timeSec": 22.3144,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.183,
+      "bassEnergy": 0.074,
+      "highEnergy": 0.176,
+      "rms": 0.179
+    },
+    {
+      "frame": 1342,
+      "timeSec": 22.3608,
+      "type": "BEAT_ONSET",
+      "strength": 0.264,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.08,
+      "rms": 0.189
+    },
+    {
+      "frame": 1351,
+      "timeSec": 22.5234,
+      "type": "BEAT_ONSET",
+      "strength": 0.17,
+      "bassEnergy": 0.03,
+      "highEnergy": 0.051,
+      "rms": 0.056
+    },
+    {
+      "frame": 1358,
+      "timeSec": 22.6395,
+      "type": "BASS_DROP",
+      "strength": 0.612,
+      "bassEnergy": 0.417,
+      "highEnergy": 0.344,
+      "rms": 0.59
+    },
+    {
+      "frame": 1361,
+      "timeSec": 22.6859,
+      "type": "BEAT_ONSET",
+      "strength": 0.282,
+      "bassEnergy": 0.436,
+      "highEnergy": 0.01,
+      "rms": 0.753
+    },
+    {
+      "frame": 1379,
+      "timeSec": 22.9878,
+      "type": "BEAT_ONSET",
+      "strength": 0.252,
+      "bassEnergy": 0.065,
+      "highEnergy": 0.091,
+      "rms": 0.113
+    },
+    {
+      "frame": 1389,
+      "timeSec": 23.1503,
+      "type": "BEAT_ONSET",
+      "strength": 0.204,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.075,
+      "rms": 0.099
+    },
+    {
+      "frame": 1396,
+      "timeSec": 23.2664,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "bassEnergy": 0.117,
+      "highEnergy": 0.596,
+      "rms": 0.42
+    },
+    {
+      "frame": 1397,
+      "timeSec": 23.2896,
+      "type": "BASS_DROP",
+      "strength": 0.52,
+      "bassEnergy": 0.428,
+      "highEnergy": 0.592,
+      "rms": 0.49
+    },
+    {
+      "frame": 1399,
+      "timeSec": 23.3128,
+      "type": "ENERGY_PEAK",
+      "strength": 0.265,
+      "bassEnergy": 0.418,
+      "highEnergy": 0.221,
+      "rms": 0.541
+    },
+    {
+      "frame": 1415,
+      "timeSec": 23.5915,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.186,
+      "bassEnergy": 0.054,
+      "highEnergy": 0.182,
+      "rms": 0.144
+    },
+    {
+      "frame": 1418,
+      "timeSec": 23.6379,
+      "type": "BEAT_ONSET",
+      "strength": 0.219,
+      "bassEnergy": 0.111,
+      "highEnergy": 0.043,
+      "rms": 0.201
+    },
+    {
+      "frame": 1427,
+      "timeSec": 23.7772,
+      "type": "BEAT_ONSET",
+      "strength": 0.199,
+      "bassEnergy": 0.065,
+      "highEnergy": 0.131,
+      "rms": 0.129
+    },
+    {
+      "frame": 1435,
+      "timeSec": 23.9166,
+      "type": "BASS_DROP",
+      "strength": 0.581,
+      "bassEnergy": 0.448,
+      "highEnergy": 0.245,
+      "rms": 0.578
+    },
+    {
+      "frame": 1436,
+      "timeSec": 23.9398,
+      "type": "ENERGY_PEAK",
+      "strength": 0.23,
+      "bassEnergy": 0.653,
+      "highEnergy": 0.04,
+      "rms": 0.622
+    },
+    {
+      "frame": 1456,
+      "timeSec": 24.2649,
+      "type": "BEAT_ONSET",
+      "strength": 0.281,
+      "bassEnergy": 0.074,
+      "highEnergy": 0.08,
+      "rms": 0.159
+    },
+    {
+      "frame": 1466,
+      "timeSec": 24.4274,
+      "type": "BEAT_ONSET",
+      "strength": 0.222,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.059,
+      "rms": 0.066
+    },
+    {
+      "frame": 1473,
+      "timeSec": 24.5435,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.69,
+      "bassEnergy": 0.191,
+      "highEnergy": 0.61,
+      "rms": 0.442
+    },
+    {
+      "frame": 1474,
+      "timeSec": 24.5667,
+      "type": "BASS_DROP",
+      "strength": 0.478,
+      "bassEnergy": 0.476,
+      "highEnergy": 0.507,
+      "rms": 0.484
+    },
+    {
+      "frame": 1475,
+      "timeSec": 24.5899,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.343,
+      "highEnergy": 0.206,
+      "rms": 0.549
+    },
+    {
+      "frame": 1494,
+      "timeSec": 24.8918,
+      "type": "BEAT_ONSET",
+      "strength": 0.259,
+      "bassEnergy": 0.075,
+      "highEnergy": 0.108,
+      "rms": 0.163
+    },
+    {
+      "frame": 1503,
+      "timeSec": 25.0543,
+      "type": "BEAT_ONSET",
+      "strength": 0.186,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.113,
+      "rms": 0.134
+    },
+    {
+      "frame": 1512,
+      "timeSec": 25.1937,
+      "type": "BASS_DROP",
+      "strength": 0.61,
+      "bassEnergy": 0.489,
+      "highEnergy": 0.163,
+      "rms": 0.537
+    },
+    {
+      "frame": 1513,
+      "timeSec": 25.2169,
+      "type": "ENERGY_PEAK",
+      "strength": 0.22,
+      "bassEnergy": 0.571,
+      "highEnergy": 0.019,
+      "rms": 0.606
+    },
+    {
+      "frame": 1530,
+      "timeSec": 25.4955,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.195,
+      "bassEnergy": 0.045,
+      "highEnergy": 0.171,
+      "rms": 0.124
+    },
+    {
+      "frame": 1533,
+      "timeSec": 25.542,
+      "type": "BEAT_ONSET",
+      "strength": 0.283,
+      "bassEnergy": 0.108,
+      "highEnergy": 0.056,
+      "rms": 0.203
+    },
+    {
+      "frame": 1542,
+      "timeSec": 25.7045,
+      "type": "BEAT_ONSET",
+      "strength": 0.187,
+      "bassEnergy": 0.09,
+      "highEnergy": 0.05,
+      "rms": 0.176
+    },
+    {
+      "frame": 1549,
+      "timeSec": 25.8206,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.695,
+      "bassEnergy": 0.267,
+      "highEnergy": 0.699,
+      "rms": 0.469
+    },
+    {
+      "frame": 1551,
+      "timeSec": 25.8438,
+      "type": "BASS_DROP",
+      "strength": 0.362,
+      "bassEnergy": 0.484,
+      "highEnergy": 0.517,
+      "rms": 0.534
+    },
+    {
+      "frame": 1570,
+      "timeSec": 26.1689,
+      "type": "BEAT_ONSET",
+      "strength": 0.269,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.108,
+      "rms": 0.13
+    },
+    {
+      "frame": 1580,
+      "timeSec": 26.3314,
+      "type": "BEAT_ONSET",
+      "strength": 0.202,
+      "bassEnergy": 0.052,
+      "highEnergy": 0.082,
+      "rms": 0.088
+    },
+    {
+      "frame": 1587,
+      "timeSec": 26.4475,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.213,
+      "bassEnergy": 0.145,
+      "highEnergy": 0.186,
+      "rms": 0.44
+    },
+    {
+      "frame": 1588,
+      "timeSec": 26.4707,
+      "type": "BASS_DROP",
+      "strength": 0.593,
+      "bassEnergy": 0.5,
+      "highEnergy": 0.141,
+      "rms": 0.566
+    },
+    {
+      "frame": 1590,
+      "timeSec": 26.494,
+      "type": "ENERGY_PEAK",
+      "strength": 0.231,
+      "bassEnergy": 0.519,
+      "highEnergy": 0.015,
+      "rms": 0.686
+    },
+    {
+      "frame": 1606,
+      "timeSec": 26.7726,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.185,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.176,
+      "rms": 0.12
+    },
+    {
+      "frame": 1609,
+      "timeSec": 26.819,
+      "type": "BEAT_ONSET",
+      "strength": 0.255,
+      "bassEnergy": 0.076,
+      "highEnergy": 0.048,
+      "rms": 0.151
+    },
+    {
+      "frame": 1618,
+      "timeSec": 26.9584,
+      "type": "BEAT_ONSET",
+      "strength": 0.156,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.125,
+      "rms": 0.12
+    },
+    {
+      "frame": 1626,
+      "timeSec": 27.0977,
+      "type": "BASS_DROP",
+      "strength": 0.432,
+      "bassEnergy": 0.332,
+      "highEnergy": 0.736,
+      "rms": 0.459
+    },
+    {
+      "frame": 1627,
+      "timeSec": 27.1209,
+      "type": "ENERGY_PEAK",
+      "strength": 0.28,
+      "bassEnergy": 0.448,
+      "highEnergy": 0.352,
+      "rms": 0.494
+    },
+    {
+      "frame": 1647,
+      "timeSec": 27.446,
+      "type": "BEAT_ONSET",
+      "strength": 0.277,
+      "bassEnergy": 0.104,
+      "highEnergy": 0.086,
+      "rms": 0.187
+    },
+    {
+      "frame": 1657,
+      "timeSec": 27.6085,
+      "type": "BEAT_ONSET",
+      "strength": 0.212,
+      "bassEnergy": 0.077,
+      "highEnergy": 0.062,
+      "rms": 0.144
+    },
+    {
+      "frame": 1663,
+      "timeSec": 27.7246,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.213,
+      "highEnergy": 0.319,
+      "rms": 0.449
+    },
+    {
+      "frame": 1665,
+      "timeSec": 27.7478,
+      "type": "BASS_DROP",
+      "strength": 0.446,
+      "bassEnergy": 0.48,
+      "highEnergy": 0.152,
+      "rms": 0.495
+    },
+    {
+      "frame": 1666,
+      "timeSec": 27.7711,
+      "type": "BEAT_ONSET",
+      "strength": 0.351,
+      "bassEnergy": 0.345,
+      "highEnergy": 0.014,
+      "rms": 0.579
+    },
+    {
+      "frame": 1684,
+      "timeSec": 28.0729,
+      "type": "BEAT_ONSET",
+      "strength": 0.204,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.13,
+      "rms": 0.142
+    },
+    {
+      "frame": 1694,
+      "timeSec": 28.2355,
+      "type": "BEAT_ONSET",
+      "strength": 0.15,
+      "bassEnergy": 0.04,
+      "highEnergy": 0.102,
+      "rms": 0.074
+    },
+    {
+      "frame": 1702,
+      "timeSec": 28.3748,
+      "type": "BASS_DROP",
+      "strength": 0.642,
+      "bassEnergy": 0.508,
+      "highEnergy": 0.193,
+      "rms": 0.529
+    },
+    {
+      "frame": 1704,
+      "timeSec": 28.398,
+      "type": "BEAT_ONSET",
+      "strength": 0.283,
+      "bassEnergy": 0.538,
+      "highEnergy": 0.022,
+      "rms": 0.576
+    },
+    {
+      "frame": 1721,
+      "timeSec": 28.6766,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.203,
+      "bassEnergy": 0.08,
+      "highEnergy": 0.18,
+      "rms": 0.159
+    },
+    {
+      "frame": 1723,
+      "timeSec": 28.7231,
+      "type": "BEAT_ONSET",
+      "strength": 0.273,
+      "bassEnergy": 0.131,
+      "highEnergy": 0.081,
+      "rms": 0.242
+    },
+    {
+      "frame": 1733,
+      "timeSec": 28.8856,
+      "type": "BEAT_ONSET",
+      "strength": 0.153,
+      "bassEnergy": 0.094,
+      "highEnergy": 0.054,
+      "rms": 0.223
+    },
+    {
+      "frame": 1740,
+      "timeSec": 29.0017,
+      "type": "BASS_DROP",
+      "strength": 0.422,
+      "bassEnergy": 0.36,
+      "highEnergy": 0.217,
+      "rms": 0.504
+    },
+    {
+      "frame": 1743,
+      "timeSec": 29.0482,
+      "type": "BEAT_ONSET",
+      "strength": 0.231,
+      "bassEnergy": 0.381,
+      "highEnergy": 0.014,
+      "rms": 0.635
+    },
+    {
+      "frame": 1761,
+      "timeSec": 29.35,
+      "type": "BEAT_ONSET",
+      "strength": 0.269,
+      "bassEnergy": 0.105,
+      "highEnergy": 0.116,
+      "rms": 0.156
+    },
+    {
+      "frame": 1771,
+      "timeSec": 29.5126,
+      "type": "BEAT_ONSET",
+      "strength": 0.179,
+      "bassEnergy": 0.051,
+      "highEnergy": 0.092,
+      "rms": 0.12
+    },
+    {
+      "frame": 1778,
+      "timeSec": 29.6287,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.894,
+      "bassEnergy": 0.086,
+      "highEnergy": 0.717,
+      "rms": 0.226
+    },
+    {
+      "frame": 1781,
+      "timeSec": 29.6751,
+      "type": "BEAT_ONSET",
+      "strength": 0.452,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.518,
+      "rms": 0.228
+    },
+    {
+      "frame": 1797,
+      "timeSec": 29.9537,
+      "type": "CYMBAL_CRASH",
+      "strength": 1.0,
+      "bassEnergy": 0.065,
+      "highEnergy": 0.879,
+      "rms": 0.227
+    },
+    {
+      "frame": 1800,
+      "timeSec": 30.0002,
+      "type": "BEAT_ONSET",
+      "strength": 0.374,
+      "bassEnergy": 0.081,
+      "highEnergy": 0.607,
+      "rms": 0.253
+    },
+    {
+      "frame": 1817,
+      "timeSec": 30.2788,
+      "type": "BASS_DROP",
+      "strength": 0.566,
+      "bassEnergy": 0.414,
+      "highEnergy": 0.389,
+      "rms": 0.53
+    },
+    {
+      "frame": 1818,
+      "timeSec": 30.302,
+      "type": "BEAT_ONSET",
+      "strength": 0.359,
+      "bassEnergy": 0.581,
+      "highEnergy": 0.121,
+      "rms": 0.604
+    },
+    {
+      "frame": 1828,
+      "timeSec": 30.4646,
+      "type": "BEAT_ONSET",
+      "strength": 0.153,
+      "bassEnergy": 0.139,
+      "highEnergy": 0.024,
+      "rms": 0.423
+    },
+    {
+      "frame": 1835,
+      "timeSec": 30.5807,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.201,
+      "bassEnergy": 0.084,
+      "highEnergy": 0.179,
+      "rms": 0.225
+    },
+    {
+      "frame": 1838,
+      "timeSec": 30.6271,
+      "type": "BEAT_ONSET",
+      "strength": 0.267,
+      "bassEnergy": 0.096,
+      "highEnergy": 0.153,
+      "rms": 0.256
+    },
+    {
+      "frame": 1847,
+      "timeSec": 30.7897,
+      "type": "BEAT_ONSET",
+      "strength": 0.138,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.103,
+      "rms": 0.163
+    },
+    {
+      "frame": 1854,
+      "timeSec": 30.9058,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.822,
+      "bassEnergy": 0.174,
+      "highEnergy": 0.754,
+      "rms": 0.426
+    },
+    {
+      "frame": 1856,
+      "timeSec": 30.929,
+      "type": "BASS_DROP",
+      "strength": 0.211,
+      "bassEnergy": 0.3,
+      "highEnergy": 0.641,
+      "rms": 0.464
+    },
+    {
+      "frame": 1857,
+      "timeSec": 30.9522,
+      "type": "BEAT_ONSET",
+      "strength": 0.298,
+      "bassEnergy": 0.246,
+      "highEnergy": 0.283,
+      "rms": 0.496
+    },
+    {
+      "frame": 1874,
+      "timeSec": 31.2308,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.234,
+      "bassEnergy": 0.061,
+      "highEnergy": 0.277,
+      "rms": 0.212
+    },
+    {
+      "frame": 1877,
+      "timeSec": 31.2773,
+      "type": "BEAT_ONSET",
+      "strength": 0.198,
+      "bassEnergy": 0.072,
+      "highEnergy": 0.126,
+      "rms": 0.254
+    },
+    {
+      "frame": 1885,
+      "timeSec": 31.4166,
+      "type": "BEAT_ONSET",
+      "strength": 0.155,
+      "bassEnergy": 0.082,
+      "highEnergy": 0.147,
+      "rms": 0.311
+    },
+    {
+      "frame": 1892,
+      "timeSec": 31.5327,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.227,
+      "bassEnergy": 0.108,
+      "highEnergy": 0.216,
+      "rms": 0.411
+    },
+    {
+      "frame": 1893,
+      "timeSec": 31.5559,
+      "type": "BASS_DROP",
+      "strength": 0.307,
+      "bassEnergy": 0.291,
+      "highEnergy": 0.295,
+      "rms": 0.417
+    },
+    {
+      "frame": 1895,
+      "timeSec": 31.5791,
+      "type": "BEAT_ONSET",
+      "strength": 0.277,
+      "bassEnergy": 0.235,
+      "highEnergy": 0.072,
+      "rms": 0.411
+    },
+    {
+      "frame": 1905,
+      "timeSec": 31.7417,
+      "type": "BEAT_ONSET",
+      "strength": 0.142,
+      "bassEnergy": 0.125,
+      "highEnergy": 0.045,
+      "rms": 0.362
+    },
+    {
+      "frame": 1914,
+      "timeSec": 31.9042,
+      "type": "BEAT_ONSET",
+      "strength": 0.184,
+      "bassEnergy": 0.076,
+      "highEnergy": 0.119,
+      "rms": 0.253
+    },
+    {
+      "frame": 1924,
+      "timeSec": 32.0668,
+      "type": "BEAT_ONSET",
+      "strength": 0.152,
+      "bassEnergy": 0.065,
+      "highEnergy": 0.107,
+      "rms": 0.235
+    },
+    {
+      "frame": 1931,
+      "timeSec": 32.1829,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.428,
+      "bassEnergy": 0.162,
+      "highEnergy": 0.466,
+      "rms": 0.403
+    },
+    {
+      "frame": 1932,
+      "timeSec": 32.2061,
+      "type": "BASS_DROP",
+      "strength": 0.262,
+      "bassEnergy": 0.319,
+      "highEnergy": 0.343,
+      "rms": 0.426
+    },
+    {
+      "frame": 1952,
+      "timeSec": 32.5312,
+      "type": "BEAT_ONSET",
+      "strength": 0.236,
+      "bassEnergy": 0.051,
+      "highEnergy": 0.153,
+      "rms": 0.233
+    },
+    {
+      "frame": 1962,
+      "timeSec": 32.6937,
+      "type": "BEAT_ONSET",
+      "strength": 0.15,
+      "bassEnergy": 0.034,
+      "highEnergy": 0.138,
+      "rms": 0.203
+    },
+    {
+      "frame": 1969,
+      "timeSec": 32.8098,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.231,
+      "bassEnergy": 0.097,
+      "highEnergy": 0.264,
+      "rms": 0.363
+    },
+    {
+      "frame": 1970,
+      "timeSec": 32.833,
+      "type": "BASS_DROP",
+      "strength": 0.289,
+      "bassEnergy": 0.27,
+      "highEnergy": 0.218,
+      "rms": 0.411
+    },
+    {
+      "frame": 1971,
+      "timeSec": 32.8562,
+      "type": "BEAT_ONSET",
+      "strength": 0.236,
+      "bassEnergy": 0.261,
+      "highEnergy": 0.082,
+      "rms": 0.423
+    },
+    {
+      "frame": 1988,
+      "timeSec": 33.1349,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.353,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.376,
+      "rms": 0.239
+    },
+    {
+      "frame": 1991,
+      "timeSec": 33.1813,
+      "type": "BEAT_ONSET",
+      "strength": 0.214,
+      "bassEnergy": 0.059,
+      "highEnergy": 0.166,
+      "rms": 0.283
+    },
+    {
+      "frame": 2008,
+      "timeSec": 33.46,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.438,
+      "bassEnergy": 0.193,
+      "highEnergy": 0.648,
+      "rms": 0.41
+    },
+    {
+      "frame": 2009,
+      "timeSec": 33.4832,
+      "type": "BEAT_ONSET",
+      "strength": 0.298,
+      "bassEnergy": 0.312,
+      "highEnergy": 0.256,
+      "rms": 0.416
+    },
+    {
+      "frame": 2015,
+      "timeSec": 33.5761,
+      "type": "BASS_DROP",
+      "strength": 0.273,
+      "bassEnergy": 0.379,
+      "highEnergy": 0.161,
+      "rms": 0.534
+    },
+    {
+      "frame": 2028,
+      "timeSec": 33.8083,
+      "type": "BEAT_ONSET",
+      "strength": 0.212,
+      "bassEnergy": 0.094,
+      "highEnergy": 0.187,
+      "rms": 0.324
+    },
+    {
+      "frame": 2048,
+      "timeSec": 34.1333,
+      "type": "BEAT_ONSET",
+      "strength": 0.202,
+      "bassEnergy": 0.187,
+      "highEnergy": 0.064,
+      "rms": 0.459
+    },
+    {
+      "frame": 2054,
+      "timeSec": 34.2262,
+      "type": "BASS_DROP",
+      "strength": 0.257,
+      "bassEnergy": 0.418,
+      "highEnergy": 0.048,
+      "rms": 0.565
+    },
+    {
+      "frame": 2056,
+      "timeSec": 34.2727,
+      "type": "BEAT_ONSET",
+      "strength": 0.153,
+      "bassEnergy": 0.13,
+      "highEnergy": 0.047,
+      "rms": 0.496
+    },
+    {
+      "frame": 2065,
+      "timeSec": 34.412,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.202,
+      "bassEnergy": 0.097,
+      "highEnergy": 0.293,
+      "rms": 0.266
+    },
+    {
+      "frame": 2066,
+      "timeSec": 34.4352,
+      "type": "BEAT_ONSET",
+      "strength": 0.186,
+      "bassEnergy": 0.084,
+      "highEnergy": 0.21,
+      "rms": 0.242
+    },
+    {
+      "frame": 2083,
+      "timeSec": 34.7138,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.394,
+      "bassEnergy": 0.1,
+      "highEnergy": 0.383,
+      "rms": 0.388
+    },
+    {
+      "frame": 2084,
+      "timeSec": 34.7371,
+      "type": "BASS_DROP",
+      "strength": 0.36,
+      "bassEnergy": 0.315,
+      "highEnergy": 0.588,
+      "rms": 0.441
+    },
+    {
+      "frame": 2086,
+      "timeSec": 34.7603,
+      "type": "BEAT_ONSET",
+      "strength": 0.359,
+      "bassEnergy": 0.334,
+      "highEnergy": 0.282,
+      "rms": 0.48
+    },
+    {
+      "frame": 2102,
+      "timeSec": 35.0389,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.214,
+      "bassEnergy": 0.079,
+      "highEnergy": 0.249,
+      "rms": 0.25
+    },
+    {
+      "frame": 2105,
+      "timeSec": 35.0854,
+      "type": "BEAT_ONSET",
+      "strength": 0.22,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.13,
+      "rms": 0.249
+    },
+    {
+      "frame": 2115,
+      "timeSec": 35.2479,
+      "type": "BEAT_ONSET",
+      "strength": 0.138,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.106,
+      "rms": 0.184
+    },
+    {
+      "frame": 2122,
+      "timeSec": 35.364,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.412,
+      "bassEnergy": 0.227,
+      "highEnergy": 0.469,
+      "rms": 0.473
+    },
+    {
+      "frame": 2123,
+      "timeSec": 35.3872,
+      "type": "BASS_DROP",
+      "strength": 0.45,
+      "bassEnergy": 0.496,
+      "highEnergy": 0.196,
+      "rms": 0.496
+    },
+    {
+      "frame": 2141,
+      "timeSec": 35.6891,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.21,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.313,
+      "rms": 0.222
+    },
+    {
+      "frame": 2143,
+      "timeSec": 35.7123,
+      "type": "BEAT_ONSET",
+      "strength": 0.245,
+      "bassEnergy": 0.086,
+      "highEnergy": 0.203,
+      "rms": 0.247
+    },
+    {
+      "frame": 2152,
+      "timeSec": 35.8748,
+      "type": "BEAT_ONSET",
+      "strength": 0.182,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.119,
+      "rms": 0.238
+    },
+    {
+      "frame": 2159,
+      "timeSec": 35.9909,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.662,
+      "bassEnergy": 0.118,
+      "highEnergy": 0.564,
+      "rms": 0.459
+    },
+    {
+      "frame": 2161,
+      "timeSec": 36.0141,
+      "type": "BASS_DROP",
+      "strength": 0.396,
+      "bassEnergy": 0.355,
+      "highEnergy": 0.605,
+      "rms": 0.47
+    },
+    {
+      "frame": 2162,
+      "timeSec": 36.0374,
+      "type": "BEAT_ONSET",
+      "strength": 0.342,
+      "bassEnergy": 0.323,
+      "highEnergy": 0.242,
+      "rms": 0.487
+    },
+    {
+      "frame": 2179,
+      "timeSec": 36.316,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.048,
+      "highEnergy": 0.425,
+      "rms": 0.225
+    },
+    {
+      "frame": 2182,
+      "timeSec": 36.3624,
+      "type": "BEAT_ONSET",
+      "strength": 0.203,
+      "bassEnergy": 0.038,
+      "highEnergy": 0.205,
+      "rms": 0.297
+    },
+    {
+      "frame": 2191,
+      "timeSec": 36.525,
+      "type": "BEAT_ONSET",
+      "strength": 0.129,
+      "bassEnergy": 0.043,
+      "highEnergy": 0.071,
+      "rms": 0.29
+    },
+    {
+      "frame": 2198,
+      "timeSec": 36.6411,
+      "type": "BASS_DROP",
+      "strength": 0.323,
+      "bassEnergy": 0.26,
+      "highEnergy": 0.398,
+      "rms": 0.443
+    },
+    {
+      "frame": 2200,
+      "timeSec": 36.6643,
+      "type": "BEAT_ONSET",
+      "strength": 0.307,
+      "bassEnergy": 0.371,
+      "highEnergy": 0.128,
+      "rms": 0.478
+    },
+    {
+      "frame": 2210,
+      "timeSec": 36.8268,
+      "type": "BEAT_ONSET",
+      "strength": 0.166,
+      "bassEnergy": 0.181,
+      "highEnergy": 0.078,
+      "rms": 0.45
+    },
+    {
+      "frame": 2217,
+      "timeSec": 36.9429,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.186,
+      "bassEnergy": 0.042,
+      "highEnergy": 0.183,
+      "rms": 0.21
+    },
+    {
+      "frame": 2219,
+      "timeSec": 36.9894,
+      "type": "BEAT_ONSET",
+      "strength": 0.192,
+      "bassEnergy": 0.041,
+      "highEnergy": 0.182,
+      "rms": 0.189
+    },
+    {
+      "frame": 2229,
+      "timeSec": 37.1519,
+      "type": "BEAT_ONSET",
+      "strength": 0.127,
+      "bassEnergy": 0.027,
+      "highEnergy": 0.084,
+      "rms": 0.199
+    },
+    {
+      "frame": 2236,
+      "timeSec": 37.268,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.486,
+      "bassEnergy": 0.117,
+      "highEnergy": 0.463,
+      "rms": 0.403
+    },
+    {
+      "frame": 2237,
+      "timeSec": 37.2912,
+      "type": "BASS_DROP",
+      "strength": 0.345,
+      "bassEnergy": 0.324,
+      "highEnergy": 0.351,
+      "rms": 0.421
+    },
+    {
+      "frame": 2239,
+      "timeSec": 37.3145,
+      "type": "BEAT_ONSET",
+      "strength": 0.248,
+      "bassEnergy": 0.232,
+      "highEnergy": 0.173,
+      "rms": 0.491
+    },
+    {
+      "frame": 2256,
+      "timeSec": 37.5931,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.243,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.283,
+      "rms": 0.222
+    },
+    {
+      "frame": 2257,
+      "timeSec": 37.6163,
+      "type": "BEAT_ONSET",
+      "strength": 0.233,
+      "bassEnergy": 0.054,
+      "highEnergy": 0.185,
+      "rms": 0.24
+    },
+    {
+      "frame": 2267,
+      "timeSec": 37.7789,
+      "type": "BEAT_ONSET",
+      "strength": 0.163,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.1,
+      "rms": 0.209
+    },
+    {
+      "frame": 2274,
+      "timeSec": 37.895,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.209,
+      "bassEnergy": 0.054,
+      "highEnergy": 0.217,
+      "rms": 0.374
+    },
+    {
+      "frame": 2275,
+      "timeSec": 37.9182,
+      "type": "BASS_DROP",
+      "strength": 0.328,
+      "bassEnergy": 0.25,
+      "highEnergy": 0.276,
+      "rms": 0.39
+    },
+    {
+      "frame": 2276,
+      "timeSec": 37.9414,
+      "type": "BEAT_ONSET",
+      "strength": 0.278,
+      "bassEnergy": 0.265,
+      "highEnergy": 0.077,
+      "rms": 0.393
+    },
+    {
+      "frame": 2286,
+      "timeSec": 38.1039,
+      "type": "BEAT_ONSET",
+      "strength": 0.136,
+      "bassEnergy": 0.148,
+      "highEnergy": 0.043,
+      "rms": 0.381
+    },
+    {
+      "frame": 2296,
+      "timeSec": 38.2665,
+      "type": "BEAT_ONSET",
+      "strength": 0.187,
+      "bassEnergy": 0.048,
+      "highEnergy": 0.08,
+      "rms": 0.202
+    },
+    {
+      "frame": 2306,
+      "timeSec": 38.429,
+      "type": "BEAT_ONSET",
+      "strength": 0.14,
+      "bassEnergy": 0.028,
+      "highEnergy": 0.1,
+      "rms": 0.202
+    },
+    {
+      "frame": 2313,
+      "timeSec": 38.5451,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.552,
+      "bassEnergy": 0.138,
+      "highEnergy": 0.594,
+      "rms": 0.372
+    },
+    {
+      "frame": 2314,
+      "timeSec": 38.5683,
+      "type": "BASS_DROP",
+      "strength": 0.201,
+      "bassEnergy": 0.258,
+      "highEnergy": 0.346,
+      "rms": 0.409
+    },
+    {
+      "frame": 2334,
+      "timeSec": 38.8934,
+      "type": "BEAT_ONSET",
+      "strength": 0.159,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.116,
+      "rms": 0.204
+    },
+    {
+      "frame": 2343,
+      "timeSec": 39.056,
+      "type": "BEAT_ONSET",
+      "strength": 0.131,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.087,
+      "rms": 0.236
+    },
+    {
+      "frame": 2350,
+      "timeSec": 39.1721,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.268,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.258,
+      "rms": 0.405
+    },
+    {
+      "frame": 2352,
+      "timeSec": 39.1953,
+      "type": "BASS_DROP",
+      "strength": 0.354,
+      "bassEnergy": 0.295,
+      "highEnergy": 0.231,
+      "rms": 0.428
+    },
+    {
+      "frame": 2353,
+      "timeSec": 39.2185,
+      "type": "BEAT_ONSET",
+      "strength": 0.237,
+      "bassEnergy": 0.307,
+      "highEnergy": 0.066,
+      "rms": 0.446
+    },
+    {
+      "frame": 2363,
+      "timeSec": 39.381,
+      "type": "BEAT_ONSET",
+      "strength": 0.136,
+      "bassEnergy": 0.139,
+      "highEnergy": 0.023,
+      "rms": 0.315
+    },
+    {
+      "frame": 2370,
+      "timeSec": 39.4971,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.244,
+      "bassEnergy": 0.039,
+      "highEnergy": 0.261,
+      "rms": 0.2
+    },
+    {
+      "frame": 2373,
+      "timeSec": 39.5436,
+      "type": "BEAT_ONSET",
+      "strength": 0.183,
+      "bassEnergy": 0.025,
+      "highEnergy": 0.093,
+      "rms": 0.19
+    },
+    {
+      "frame": 2382,
+      "timeSec": 39.7061,
+      "type": "BEAT_ONSET",
+      "strength": 0.136,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.07,
+      "rms": 0.199
+    },
+    {
+      "frame": 2389,
+      "timeSec": 39.8222,
+      "type": "BASS_DROP",
+      "strength": 0.226,
+      "bassEnergy": 0.171,
+      "highEnergy": 0.539,
+      "rms": 0.374
+    },
+    {
+      "frame": 2391,
+      "timeSec": 39.8454,
+      "type": "BEAT_ONSET",
+      "strength": 0.299,
+      "bassEnergy": 0.281,
+      "highEnergy": 0.305,
+      "rms": 0.408
+    },
+    {
+      "frame": 2410,
+      "timeSec": 40.1705,
+      "type": "BEAT_ONSET",
+      "strength": 0.238,
+      "bassEnergy": 0.057,
+      "highEnergy": 0.146,
+      "rms": 0.212
+    },
+    {
+      "frame": 2420,
+      "timeSec": 40.3331,
+      "type": "BEAT_ONSET",
+      "strength": 0.175,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.105,
+      "rms": 0.146
+    },
+    {
+      "frame": 2427,
+      "timeSec": 40.4492,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.44,
+      "bassEnergy": 0.137,
+      "highEnergy": 0.403,
+      "rms": 0.382
+    },
+    {
+      "frame": 2428,
+      "timeSec": 40.4724,
+      "type": "BASS_DROP",
+      "strength": 0.377,
+      "bassEnergy": 0.362,
+      "highEnergy": 0.254,
+      "rms": 0.423
+    },
+    {
+      "frame": 2430,
+      "timeSec": 40.4956,
+      "type": "BEAT_ONSET",
+      "strength": 0.251,
+      "bassEnergy": 0.29,
+      "highEnergy": 0.069,
+      "rms": 0.485
+    },
+    {
+      "frame": 2439,
+      "timeSec": 40.6581,
+      "type": "BEAT_ONSET",
+      "strength": 0.125,
+      "bassEnergy": 0.148,
+      "highEnergy": 0.048,
+      "rms": 0.39
+    },
+    {
+      "frame": 2446,
+      "timeSec": 40.7742,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.367,
+      "rms": 0.252
+    },
+    {
+      "frame": 2448,
+      "timeSec": 40.7975,
+      "type": "BEAT_ONSET",
+      "strength": 0.19,
+      "bassEnergy": 0.094,
+      "highEnergy": 0.284,
+      "rms": 0.256
+    },
+    {
+      "frame": 2465,
+      "timeSec": 41.0761,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.46,
+      "bassEnergy": 0.125,
+      "highEnergy": 0.429,
+      "rms": 0.454
+    },
+    {
+      "frame": 2466,
+      "timeSec": 41.0993,
+      "type": "BASS_DROP",
+      "strength": 0.285,
+      "bassEnergy": 0.296,
+      "highEnergy": 0.673,
+      "rms": 0.5
+    },
+    {
+      "frame": 2467,
+      "timeSec": 41.1225,
+      "type": "BEAT_ONSET",
+      "strength": 0.31,
+      "bassEnergy": 0.354,
+      "highEnergy": 0.351,
+      "rms": 0.516
+    },
+    {
+      "frame": 2484,
+      "timeSec": 41.4012,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.218,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.238,
+      "rms": 0.232
+    },
+    {
+      "frame": 2487,
+      "timeSec": 41.4476,
+      "type": "BEAT_ONSET",
+      "strength": 0.206,
+      "bassEnergy": 0.03,
+      "highEnergy": 0.183,
+      "rms": 0.22
+    },
+    {
+      "frame": 2497,
+      "timeSec": 41.6102,
+      "type": "BEAT_ONSET",
+      "strength": 0.139,
+      "bassEnergy": 0.042,
+      "highEnergy": 0.08,
+      "rms": 0.199
+    },
+    {
+      "frame": 2504,
+      "timeSec": 41.7263,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.575,
+      "bassEnergy": 0.223,
+      "highEnergy": 0.592,
+      "rms": 0.451
+    },
+    {
+      "frame": 2505,
+      "timeSec": 41.7495,
+      "type": "BASS_DROP",
+      "strength": 0.31,
+      "bassEnergy": 0.408,
+      "highEnergy": 0.271,
+      "rms": 0.495
+    },
+    {
+      "frame": 2506,
+      "timeSec": 41.7727,
+      "type": "BEAT_ONSET",
+      "strength": 0.23,
+      "bassEnergy": 0.275,
+      "highEnergy": 0.089,
+      "rms": 0.576
+    },
+    {
+      "frame": 2523,
+      "timeSec": 42.0513,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.317,
+      "bassEnergy": 0.063,
+      "highEnergy": 0.448,
+      "rms": 0.188
+    },
+    {
+      "frame": 2524,
+      "timeSec": 42.0746,
+      "type": "BEAT_ONSET",
+      "strength": 0.225,
+      "bassEnergy": 0.045,
+      "highEnergy": 0.242,
+      "rms": 0.19
+    },
+    {
+      "frame": 2534,
+      "timeSec": 42.2371,
+      "type": "BEAT_ONSET",
+      "strength": 0.136,
+      "bassEnergy": 0.037,
+      "highEnergy": 0.144,
+      "rms": 0.193
+    },
+    {
+      "frame": 2541,
+      "timeSec": 42.3532,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.603,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.548,
+      "rms": 0.336
+    },
+    {
+      "frame": 2543,
+      "timeSec": 42.3764,
+      "type": "BASS_DROP",
+      "strength": 0.245,
+      "bassEnergy": 0.218,
+      "highEnergy": 0.589,
+      "rms": 0.354
+    },
+    {
+      "frame": 2544,
+      "timeSec": 42.3996,
+      "type": "BEAT_ONSET",
+      "strength": 0.335,
+      "bassEnergy": 0.212,
+      "highEnergy": 0.25,
+      "rms": 0.411
+    },
+    {
+      "frame": 2561,
+      "timeSec": 42.6783,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.297,
+      "bassEnergy": 0.037,
+      "highEnergy": 0.293,
+      "rms": 0.267
+    },
+    {
+      "frame": 2563,
+      "timeSec": 42.7247,
+      "type": "BEAT_ONSET",
+      "strength": 0.21,
+      "bassEnergy": 0.072,
+      "highEnergy": 0.155,
+      "rms": 0.225
+    },
+    {
+      "frame": 2573,
+      "timeSec": 42.8873,
+      "type": "BEAT_ONSET",
+      "strength": 0.134,
+      "bassEnergy": 0.073,
+      "highEnergy": 0.08,
+      "rms": 0.246
+    },
+    {
+      "frame": 2579,
+      "timeSec": 42.9801,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.24,
+      "rms": 0.373
+    },
+    {
+      "frame": 2580,
+      "timeSec": 43.0034,
+      "type": "BASS_DROP",
+      "strength": 0.297,
+      "bassEnergy": 0.255,
+      "highEnergy": 0.391,
+      "rms": 0.45
+    },
+    {
+      "frame": 2582,
+      "timeSec": 43.0266,
+      "type": "BEAT_ONSET",
+      "strength": 0.237,
+      "bassEnergy": 0.372,
+      "highEnergy": 0.123,
+      "rms": 0.462
+    },
+    {
+      "frame": 2591,
+      "timeSec": 43.1891,
+      "type": "BEAT_ONSET",
+      "strength": 0.129,
+      "bassEnergy": 0.139,
+      "highEnergy": 0.033,
+      "rms": 0.441
+    },
+    {
+      "frame": 2598,
+      "timeSec": 43.3052,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.231,
+      "bassEnergy": 0.036,
+      "highEnergy": 0.217,
+      "rms": 0.219
+    },
+    {
+      "frame": 2601,
+      "timeSec": 43.3517,
+      "type": "BEAT_ONSET",
+      "strength": 0.219,
+      "bassEnergy": 0.061,
+      "highEnergy": 0.172,
+      "rms": 0.282
+    },
+    {
+      "frame": 2611,
+      "timeSec": 43.5142,
+      "type": "BEAT_ONSET",
+      "strength": 0.126,
+      "bassEnergy": 0.035,
+      "highEnergy": 0.12,
+      "rms": 0.193
+    },
+    {
+      "frame": 2618,
+      "timeSec": 43.6303,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.628,
+      "bassEnergy": 0.14,
+      "highEnergy": 0.585,
+      "rms": 0.403
+    },
+    {
+      "frame": 2619,
+      "timeSec": 43.6535,
+      "type": "BASS_DROP",
+      "strength": 0.256,
+      "bassEnergy": 0.293,
+      "highEnergy": 0.498,
+      "rms": 0.392
+    },
+    {
+      "frame": 2621,
+      "timeSec": 43.6767,
+      "type": "BEAT_ONSET",
+      "strength": 0.281,
+      "bassEnergy": 0.155,
+      "highEnergy": 0.217,
+      "rms": 0.429
+    },
+    {
+      "frame": 2637,
+      "timeSec": 43.9554,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.189,
+      "bassEnergy": 0.04,
+      "highEnergy": 0.251,
+      "rms": 0.223
+    },
+    {
+      "frame": 2640,
+      "timeSec": 44.0018,
+      "type": "BEAT_ONSET",
+      "strength": 0.15,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.089,
+      "rms": 0.227
+    },
+    {
+      "frame": 2648,
+      "timeSec": 44.1411,
+      "type": "BEAT_ONSET",
+      "strength": 0.171,
+      "bassEnergy": 0.032,
+      "highEnergy": 0.097,
+      "rms": 0.275
+    },
+    {
+      "frame": 2655,
+      "timeSec": 44.2572,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.279,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.261,
+      "rms": 0.406
+    },
+    {
+      "frame": 2657,
+      "timeSec": 44.2805,
+      "type": "BASS_DROP",
+      "strength": 0.43,
+      "bassEnergy": 0.325,
+      "highEnergy": 0.368,
+      "rms": 0.461
+    },
+    {
+      "frame": 2658,
+      "timeSec": 44.3037,
+      "type": "BEAT_ONSET",
+      "strength": 0.264,
+      "bassEnergy": 0.382,
+      "highEnergy": 0.091,
+      "rms": 0.512
+    },
+    {
+      "frame": 2668,
+      "timeSec": 44.4662,
+      "type": "BEAT_ONSET",
+      "strength": 0.129,
+      "bassEnergy": 0.164,
+      "highEnergy": 0.073,
+      "rms": 0.353
+    },
+    {
+      "frame": 2675,
+      "timeSec": 44.5823,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.249,
+      "bassEnergy": 0.027,
+      "highEnergy": 0.269,
+      "rms": 0.194
+    },
+    {
+      "frame": 2678,
+      "timeSec": 44.6288,
+      "type": "BEAT_ONSET",
+      "strength": 0.201,
+      "bassEnergy": 0.032,
+      "highEnergy": 0.124,
+      "rms": 0.204
+    },
+    {
+      "frame": 2687,
+      "timeSec": 44.7913,
+      "type": "BEAT_ONSET",
+      "strength": 0.16,
+      "bassEnergy": 0.044,
+      "highEnergy": 0.09,
+      "rms": 0.21
+    },
+    {
+      "frame": 2694,
+      "timeSec": 44.9074,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.586,
+      "bassEnergy": 0.156,
+      "highEnergy": 0.585,
+      "rms": 0.361
+    },
+    {
+      "frame": 2696,
+      "timeSec": 44.9306,
+      "type": "BASS_DROP",
+      "strength": 0.253,
+      "bassEnergy": 0.307,
+      "highEnergy": 0.434,
+      "rms": 0.387
+    },
+    {
+      "frame": 2714,
+      "timeSec": 45.2325,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.251,
+      "bassEnergy": 0.041,
+      "highEnergy": 0.324,
+      "rms": 0.182
+    },
+    {
+      "frame": 2715,
+      "timeSec": 45.2557,
+      "type": "BEAT_ONSET",
+      "strength": 0.196,
+      "bassEnergy": 0.056,
+      "highEnergy": 0.198,
+      "rms": 0.17
+    },
+    {
+      "frame": 2725,
+      "timeSec": 45.4182,
+      "type": "BEAT_ONSET",
+      "strength": 0.161,
+      "bassEnergy": 0.032,
+      "highEnergy": 0.121,
+      "rms": 0.186
+    },
+    {
+      "frame": 2732,
+      "timeSec": 45.5343,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.489,
+      "bassEnergy": 0.103,
+      "highEnergy": 0.412,
+      "rms": 0.396
+    },
+    {
+      "frame": 2733,
+      "timeSec": 45.5576,
+      "type": "BASS_DROP",
+      "strength": 0.447,
+      "bassEnergy": 0.37,
+      "highEnergy": 0.383,
+      "rms": 0.453
+    },
+    {
+      "frame": 2735,
+      "timeSec": 45.5808,
+      "type": "BEAT_ONSET",
+      "strength": 0.287,
+      "bassEnergy": 0.381,
+      "highEnergy": 0.121,
+      "rms": 0.51
+    },
+    {
+      "frame": 2745,
+      "timeSec": 45.7433,
+      "type": "BEAT_ONSET",
+      "strength": 0.125,
+      "bassEnergy": 0.111,
+      "highEnergy": 0.045,
+      "rms": 0.296
+    },
+    {
+      "frame": 2752,
+      "timeSec": 45.8594,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.378,
+      "bassEnergy": 0.057,
+      "highEnergy": 0.374,
+      "rms": 0.237
+    },
+    {
+      "frame": 2754,
+      "timeSec": 45.9059,
+      "type": "BEAT_ONSET",
+      "strength": 0.235,
+      "bassEnergy": 0.1,
+      "highEnergy": 0.174,
+      "rms": 0.27
+    },
+    {
+      "frame": 2764,
+      "timeSec": 46.0684,
+      "type": "BEAT_ONSET",
+      "strength": 0.12,
+      "bassEnergy": 0.074,
+      "highEnergy": 0.072,
+      "rms": 0.229
+    },
+    {
+      "frame": 2771,
+      "timeSec": 46.1845,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.446,
+      "bassEnergy": 0.171,
+      "highEnergy": 0.66,
+      "rms": 0.393
+    },
+    {
+      "frame": 2772,
+      "timeSec": 46.2077,
+      "type": "BEAT_ONSET",
+      "strength": 0.373,
+      "bassEnergy": 0.273,
+      "highEnergy": 0.318,
+      "rms": 0.395
+    },
+    {
+      "frame": 2777,
+      "timeSec": 46.2774,
+      "type": "BASS_DROP",
+      "strength": 0.234,
+      "bassEnergy": 0.347,
+      "highEnergy": 0.291,
+      "rms": 0.567
+    },
+    {
+      "frame": 2789,
+      "timeSec": 46.4863,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.35,
+      "bassEnergy": 0.034,
+      "highEnergy": 0.304,
+      "rms": 0.218
+    },
+    {
+      "frame": 2792,
+      "timeSec": 46.5328,
+      "type": "BEAT_ONSET",
+      "strength": 0.29,
+      "bassEnergy": 0.051,
+      "highEnergy": 0.255,
+      "rms": 0.245
+    },
+    {
+      "frame": 2802,
+      "timeSec": 46.6953,
+      "type": "BEAT_ONSET",
+      "strength": 0.149,
+      "bassEnergy": 0.04,
+      "highEnergy": 0.08,
+      "rms": 0.242
+    },
+    {
+      "frame": 2809,
+      "timeSec": 46.8114,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.156,
+      "highEnergy": 0.322,
+      "rms": 0.45
+    },
+    {
+      "frame": 2810,
+      "timeSec": 46.8346,
+      "type": "BASS_DROP",
+      "strength": 0.357,
+      "bassEnergy": 0.37,
+      "highEnergy": 0.211,
+      "rms": 0.456
+    },
+    {
+      "frame": 2811,
+      "timeSec": 46.8579,
+      "type": "BEAT_ONSET",
+      "strength": 0.213,
+      "bassEnergy": 0.258,
+      "highEnergy": 0.095,
+      "rms": 0.504
+    },
+    {
+      "frame": 2821,
+      "timeSec": 47.0204,
+      "type": "BEAT_ONSET",
+      "strength": 0.13,
+      "bassEnergy": 0.129,
+      "highEnergy": 0.044,
+      "rms": 0.362
+    },
+    {
+      "frame": 2828,
+      "timeSec": 47.1365,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.3,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.319,
+      "rms": 0.209
+    },
+    {
+      "frame": 2830,
+      "timeSec": 47.1597,
+      "type": "BEAT_ONSET",
+      "strength": 0.243,
+      "bassEnergy": 0.037,
+      "highEnergy": 0.237,
+      "rms": 0.229
+    },
+    {
+      "frame": 2839,
+      "timeSec": 47.3223,
+      "type": "BEAT_ONSET",
+      "strength": 0.193,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.134,
+      "rms": 0.188
+    },
+    {
+      "frame": 2846,
+      "timeSec": 47.4384,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.466,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.415,
+      "rms": 0.374
+    },
+    {
+      "frame": 2848,
+      "timeSec": 47.4616,
+      "type": "BASS_DROP",
+      "strength": 0.335,
+      "bassEnergy": 0.258,
+      "highEnergy": 0.676,
+      "rms": 0.41
+    },
+    {
+      "frame": 2849,
+      "timeSec": 47.4848,
+      "type": "BEAT_ONSET",
+      "strength": 0.348,
+      "bassEnergy": 0.314,
+      "highEnergy": 0.316,
+      "rms": 0.442
+    },
+    {
+      "frame": 2866,
+      "timeSec": 47.7634,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.28,
+      "bassEnergy": 0.024,
+      "highEnergy": 0.276,
+      "rms": 0.176
+    },
+    {
+      "frame": 2869,
+      "timeSec": 47.8099,
+      "type": "BEAT_ONSET",
+      "strength": 0.23,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.271,
+      "rms": 0.185
+    },
+    {
+      "frame": 2878,
+      "timeSec": 47.9724,
+      "type": "BEAT_ONSET",
+      "strength": 0.123,
+      "bassEnergy": 0.049,
+      "highEnergy": 0.081,
+      "rms": 0.173
+    },
+    {
+      "frame": 2885,
+      "timeSec": 48.0885,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.26,
+      "bassEnergy": 0.163,
+      "highEnergy": 0.326,
+      "rms": 0.435
+    },
+    {
+      "frame": 2887,
+      "timeSec": 48.1117,
+      "type": "BASS_DROP",
+      "strength": 0.384,
+      "bassEnergy": 0.393,
+      "highEnergy": 0.207,
+      "rms": 0.5
+    },
+    {
+      "frame": 2888,
+      "timeSec": 48.135,
+      "type": "BEAT_ONSET",
+      "strength": 0.218,
+      "bassEnergy": 0.317,
+      "highEnergy": 0.122,
+      "rms": 0.545
+    },
+    {
+      "frame": 2905,
+      "timeSec": 48.4136,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.226,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.327,
+      "rms": 0.245
+    },
+    {
+      "frame": 2906,
+      "timeSec": 48.4368,
+      "type": "BEAT_ONSET",
+      "strength": 0.21,
+      "bassEnergy": 0.043,
+      "highEnergy": 0.186,
+      "rms": 0.247
+    },
+    {
+      "frame": 2923,
+      "timeSec": 48.7155,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.47,
+      "bassEnergy": 0.077,
+      "highEnergy": 0.405,
+      "rms": 0.404
+    },
+    {
+      "frame": 2924,
+      "timeSec": 48.7387,
+      "type": "BASS_DROP",
+      "strength": 0.25,
+      "bassEnergy": 0.226,
+      "highEnergy": 0.501,
+      "rms": 0.392
+    },
+    {
+      "frame": 2926,
+      "timeSec": 48.7619,
+      "type": "BEAT_ONSET",
+      "strength": 0.325,
+      "bassEnergy": 0.231,
+      "highEnergy": 0.213,
+      "rms": 0.41
+    },
+    {
+      "frame": 2942,
+      "timeSec": 49.0405,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.364,
+      "bassEnergy": 0.041,
+      "highEnergy": 0.341,
+      "rms": 0.244
+    },
+    {
+      "frame": 2945,
+      "timeSec": 49.087,
+      "type": "BEAT_ONSET",
+      "strength": 0.215,
+      "bassEnergy": 0.053,
+      "highEnergy": 0.125,
+      "rms": 0.246
+    },
+    {
+      "frame": 2955,
+      "timeSec": 49.2495,
+      "type": "BEAT_ONSET",
+      "strength": 0.156,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.092,
+      "rms": 0.284
+    },
+    {
+      "frame": 2962,
+      "timeSec": 49.3656,
+      "type": "BASS_DROP",
+      "strength": 0.317,
+      "bassEnergy": 0.272,
+      "highEnergy": 0.351,
+      "rms": 0.468
+    },
+    {
+      "frame": 2963,
+      "timeSec": 49.3888,
+      "type": "BEAT_ONSET",
+      "strength": 0.194,
+      "bassEnergy": 0.397,
+      "highEnergy": 0.146,
+      "rms": 0.46
+    },
+    {
+      "frame": 2980,
+      "timeSec": 49.6675,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.245,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.261,
+      "rms": 0.24
+    },
+    {
+      "frame": 2983,
+      "timeSec": 49.7139,
+      "type": "BEAT_ONSET",
+      "strength": 0.217,
+      "bassEnergy": 0.064,
+      "highEnergy": 0.256,
+      "rms": 0.257
+    },
+    {
+      "frame": 3000,
+      "timeSec": 49.9926,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.749,
+      "bassEnergy": 0.114,
+      "highEnergy": 0.686,
+      "rms": 0.412
+    },
+    {
+      "frame": 3001,
+      "timeSec": 50.0158,
+      "type": "BASS_DROP",
+      "strength": 0.32,
+      "bassEnergy": 0.305,
+      "highEnergy": 0.542,
+      "rms": 0.432
+    },
+    {
+      "frame": 3002,
+      "timeSec": 50.039,
+      "type": "BEAT_ONSET",
+      "strength": 0.307,
+      "bassEnergy": 0.254,
+      "highEnergy": 0.185,
+      "rms": 0.458
+    },
+    {
+      "frame": 3019,
+      "timeSec": 50.3176,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.693,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.68,
+      "rms": 0.215
+    },
+    {
+      "frame": 3020,
+      "timeSec": 50.3409,
+      "type": "BEAT_ONSET",
+      "strength": 0.266,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.598,
+      "rms": 0.201
+    },
+    {
+      "frame": 3037,
+      "timeSec": 50.6195,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.327,
+      "bassEnergy": 0.069,
+      "highEnergy": 0.299,
+      "rms": 0.386
+    },
+    {
+      "frame": 3039,
+      "timeSec": 50.6427,
+      "type": "BASS_DROP",
+      "strength": 0.385,
+      "bassEnergy": 0.299,
+      "highEnergy": 0.424,
+      "rms": 0.478
+    },
+    {
+      "frame": 3040,
+      "timeSec": 50.6659,
+      "type": "BEAT_ONSET",
+      "strength": 0.288,
+      "bassEnergy": 0.405,
+      "highEnergy": 0.117,
+      "rms": 0.526
+    },
+    {
+      "frame": 3050,
+      "timeSec": 50.8285,
+      "type": "BEAT_ONSET",
+      "strength": 0.151,
+      "bassEnergy": 0.23,
+      "highEnergy": 0.038,
+      "rms": 0.495
+    },
+    {
+      "frame": 3057,
+      "timeSec": 50.9446,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.206,
+      "rms": 0.222
+    },
+    {
+      "frame": 3059,
+      "timeSec": 50.991,
+      "type": "BEAT_ONSET",
+      "strength": 0.222,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.136,
+      "rms": 0.22
+    },
+    {
+      "frame": 3069,
+      "timeSec": 51.1536,
+      "type": "BEAT_ONSET",
+      "strength": 0.154,
+      "bassEnergy": 0.042,
+      "highEnergy": 0.075,
+      "rms": 0.152
+    },
+    {
+      "frame": 3076,
+      "timeSec": 51.2697,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.58,
+      "bassEnergy": 0.173,
+      "highEnergy": 0.659,
+      "rms": 0.451
+    },
+    {
+      "frame": 3078,
+      "timeSec": 51.2929,
+      "type": "BASS_DROP",
+      "strength": 0.275,
+      "bassEnergy": 0.337,
+      "highEnergy": 0.426,
+      "rms": 0.464
+    },
+    {
+      "frame": 3097,
+      "timeSec": 51.618,
+      "type": "BEAT_ONSET",
+      "strength": 0.211,
+      "bassEnergy": 0.077,
+      "highEnergy": 0.146,
+      "rms": 0.238
+    },
+    {
+      "frame": 3107,
+      "timeSec": 51.7805,
+      "type": "BEAT_ONSET",
+      "strength": 0.168,
+      "bassEnergy": 0.042,
+      "highEnergy": 0.103,
+      "rms": 0.217
+    },
+    {
+      "frame": 3114,
+      "timeSec": 51.8966,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.323,
+      "rms": 0.358
+    },
+    {
+      "frame": 3115,
+      "timeSec": 51.9198,
+      "type": "BASS_DROP",
+      "strength": 0.265,
+      "bassEnergy": 0.236,
+      "highEnergy": 0.288,
+      "rms": 0.374
+    },
+    {
+      "frame": 3117,
+      "timeSec": 51.943,
+      "type": "BEAT_ONSET",
+      "strength": 0.258,
+      "bassEnergy": 0.198,
+      "highEnergy": 0.072,
+      "rms": 0.414
+    }
+  ],
+  "bassDrops": [
+    {
+      "frame": 24,
+      "timeSec": 0.3947,
+      "type": "BASS_DROP",
+      "strength": 0.425,
+      "bassEnergy": 0.612,
+      "highEnergy": 0.376,
+      "rms": 0.6
+    },
+    {
+      "frame": 61,
+      "timeSec": 1.0217,
+      "type": "BASS_DROP",
+      "strength": 0.807,
+      "bassEnergy": 0.727,
+      "highEnergy": 0.164,
+      "rms": 0.689
+    },
+    {
+      "frame": 99,
+      "timeSec": 1.6486,
+      "type": "BASS_DROP",
+      "strength": 0.543,
+      "bassEnergy": 0.439,
+      "highEnergy": 0.85,
+      "rms": 0.565
+    },
+    {
+      "frame": 138,
+      "timeSec": 2.2988,
+      "type": "BASS_DROP",
+      "strength": 1.0,
+      "bassEnergy": 1.0,
+      "highEnergy": 0.163,
+      "rms": 0.819
+    },
+    {
+      "frame": 176,
+      "timeSec": 2.9257,
+      "type": "BASS_DROP",
+      "strength": 0.579,
+      "bassEnergy": 0.491,
+      "highEnergy": 0.668,
+      "rms": 0.572
+    },
+    {
+      "frame": 195,
+      "timeSec": 3.2508,
+      "type": "BASS_DROP",
+      "strength": 0.197,
+      "bassEnergy": 0.212,
+      "highEnergy": 0.061,
+      "rms": 0.349
+    },
+    {
+      "frame": 215,
+      "timeSec": 3.5759,
+      "type": "BASS_DROP",
+      "strength": 0.518,
+      "bassEnergy": 0.761,
+      "highEnergy": 0.087,
+      "rms": 0.724
+    },
+    {
+      "frame": 252,
+      "timeSec": 4.2028,
+      "type": "BASS_DROP",
+      "strength": 0.618,
+      "bassEnergy": 0.567,
+      "highEnergy": 0.577,
+      "rms": 0.581
+    },
+    {
+      "frame": 290,
+      "timeSec": 4.8298,
+      "type": "BASS_DROP",
+      "strength": 0.751,
+      "bassEnergy": 0.578,
+      "highEnergy": 0.326,
+      "rms": 0.66
+    },
+    {
+      "frame": 329,
+      "timeSec": 5.4799,
+      "type": "BASS_DROP",
+      "strength": 0.674,
+      "bassEnergy": 0.654,
+      "highEnergy": 0.478,
+      "rms": 0.629
+    },
+    {
+      "frame": 366,
+      "timeSec": 6.1068,
+      "type": "BASS_DROP",
+      "strength": 0.788,
+      "bassEnergy": 0.614,
+      "highEnergy": 0.23,
+      "rms": 0.654
+    },
+    {
+      "frame": 386,
+      "timeSec": 6.4319,
+      "type": "BASS_DROP",
+      "strength": 0.218,
+      "bassEnergy": 0.302,
+      "highEnergy": 0.077,
+      "rms": 0.487
+    },
+    {
+      "frame": 410,
+      "timeSec": 6.8267,
+      "type": "BASS_DROP",
+      "strength": 0.551,
+      "bassEnergy": 0.679,
+      "highEnergy": 0.108,
+      "rms": 0.844
+    },
+    {
+      "frame": 443,
+      "timeSec": 7.3839,
+      "type": "BASS_DROP",
+      "strength": 0.762,
+      "bassEnergy": 0.719,
+      "highEnergy": 0.184,
+      "rms": 0.711
+    },
+    {
+      "frame": 481,
+      "timeSec": 8.0109,
+      "type": "BASS_DROP",
+      "strength": 0.596,
+      "bassEnergy": 0.499,
+      "highEnergy": 0.605,
+      "rms": 0.583
+    },
+    {
+      "frame": 520,
+      "timeSec": 8.661,
+      "type": "BASS_DROP",
+      "strength": 0.751,
+      "bassEnergy": 0.779,
+      "highEnergy": 0.141,
+      "rms": 0.688
+    },
+    {
+      "frame": 557,
+      "timeSec": 9.288,
+      "type": "BASS_DROP",
+      "strength": 0.584,
+      "bassEnergy": 0.503,
+      "highEnergy": 0.848,
+      "rms": 0.581
+    },
+    {
+      "frame": 596,
+      "timeSec": 9.9381,
+      "type": "BASS_DROP",
+      "strength": 0.668,
+      "bassEnergy": 0.796,
+      "highEnergy": 0.093,
+      "rms": 0.646
+    },
+    {
+      "frame": 634,
+      "timeSec": 10.5651,
+      "type": "BASS_DROP",
+      "strength": 0.366,
+      "bassEnergy": 0.363,
+      "highEnergy": 0.785,
+      "rms": 0.422
+    },
+    {
+      "frame": 672,
+      "timeSec": 11.192,
+      "type": "BASS_DROP",
+      "strength": 0.588,
+      "bassEnergy": 0.435,
+      "highEnergy": 0.28,
+      "rms": 0.481
+    },
+    {
+      "frame": 711,
+      "timeSec": 11.8422,
+      "type": "BASS_DROP",
+      "strength": 0.517,
+      "bassEnergy": 0.515,
+      "highEnergy": 0.554,
+      "rms": 0.508
+    },
+    {
+      "frame": 748,
+      "timeSec": 12.4691,
+      "type": "BASS_DROP",
+      "strength": 0.58,
+      "bassEnergy": 0.466,
+      "highEnergy": 0.267,
+      "rms": 0.485
+    },
+    {
+      "frame": 786,
+      "timeSec": 13.0961,
+      "type": "BASS_DROP",
+      "strength": 0.334,
+      "bassEnergy": 0.291,
+      "highEnergy": 0.754,
+      "rms": 0.443
+    },
+    {
+      "frame": 825,
+      "timeSec": 13.7462,
+      "type": "BASS_DROP",
+      "strength": 0.408,
+      "bassEnergy": 0.44,
+      "highEnergy": 0.158,
+      "rms": 0.461
+    },
+    {
+      "frame": 862,
+      "timeSec": 14.3732,
+      "type": "BASS_DROP",
+      "strength": 0.294,
+      "bassEnergy": 0.284,
+      "highEnergy": 0.725,
+      "rms": 0.422
+    },
+    {
+      "frame": 901,
+      "timeSec": 15.0233,
+      "type": "BASS_DROP",
+      "strength": 0.384,
+      "bassEnergy": 0.49,
+      "highEnergy": 0.099,
+      "rms": 0.503
+    },
+    {
+      "frame": 939,
+      "timeSec": 15.6502,
+      "type": "BASS_DROP",
+      "strength": 0.625,
+      "bassEnergy": 0.47,
+      "highEnergy": 0.829,
+      "rms": 0.534
+    },
+    {
+      "frame": 982,
+      "timeSec": 16.3701,
+      "type": "BASS_DROP",
+      "strength": 0.529,
+      "bassEnergy": 0.729,
+      "highEnergy": 0.018,
+      "rms": 0.862
+    },
+    {
+      "frame": 1016,
+      "timeSec": 16.9273,
+      "type": "BASS_DROP",
+      "strength": 0.567,
+      "bassEnergy": 0.485,
+      "highEnergy": 0.65,
+      "rms": 0.533
+    },
+    {
+      "frame": 1053,
+      "timeSec": 17.5543,
+      "type": "BASS_DROP",
+      "strength": 0.516,
+      "bassEnergy": 0.411,
+      "highEnergy": 0.287,
+      "rms": 0.495
+    },
+    {
+      "frame": 1092,
+      "timeSec": 18.2044,
+      "type": "BASS_DROP",
+      "strength": 0.387,
+      "bassEnergy": 0.424,
+      "highEnergy": 0.534,
+      "rms": 0.49
+    },
+    {
+      "frame": 1130,
+      "timeSec": 18.8314,
+      "type": "BASS_DROP",
+      "strength": 0.583,
+      "bassEnergy": 0.471,
+      "highEnergy": 0.239,
+      "rms": 0.526
+    },
+    {
+      "frame": 1173,
+      "timeSec": 19.5512,
+      "type": "BASS_DROP",
+      "strength": 0.436,
+      "bassEnergy": 0.54,
+      "highEnergy": 0.296,
+      "rms": 0.7
+    },
+    {
+      "frame": 1207,
+      "timeSec": 20.1085,
+      "type": "BASS_DROP",
+      "strength": 0.775,
+      "bassEnergy": 0.669,
+      "highEnergy": 0.221,
+      "rms": 0.594
+    },
+    {
+      "frame": 1244,
+      "timeSec": 20.7354,
+      "type": "BASS_DROP",
+      "strength": 0.349,
+      "bassEnergy": 0.318,
+      "highEnergy": 0.729,
+      "rms": 0.517
+    },
+    {
+      "frame": 1283,
+      "timeSec": 21.3856,
+      "type": "BASS_DROP",
+      "strength": 0.509,
+      "bassEnergy": 0.557,
+      "highEnergy": 0.145,
+      "rms": 0.508
+    },
+    {
+      "frame": 1321,
+      "timeSec": 22.0125,
+      "type": "BASS_DROP",
+      "strength": 0.448,
+      "bassEnergy": 0.361,
+      "highEnergy": 0.683,
+      "rms": 0.461
+    },
+    {
+      "frame": 1358,
+      "timeSec": 22.6395,
+      "type": "BASS_DROP",
+      "strength": 0.612,
+      "bassEnergy": 0.417,
+      "highEnergy": 0.344,
+      "rms": 0.59
+    },
+    {
+      "frame": 1397,
+      "timeSec": 23.2896,
+      "type": "BASS_DROP",
+      "strength": 0.52,
+      "bassEnergy": 0.428,
+      "highEnergy": 0.592,
+      "rms": 0.49
+    },
+    {
+      "frame": 1435,
+      "timeSec": 23.9166,
+      "type": "BASS_DROP",
+      "strength": 0.581,
+      "bassEnergy": 0.448,
+      "highEnergy": 0.245,
+      "rms": 0.578
+    },
+    {
+      "frame": 1474,
+      "timeSec": 24.5667,
+      "type": "BASS_DROP",
+      "strength": 0.478,
+      "bassEnergy": 0.476,
+      "highEnergy": 0.507,
+      "rms": 0.484
+    },
+    {
+      "frame": 1512,
+      "timeSec": 25.1937,
+      "type": "BASS_DROP",
+      "strength": 0.61,
+      "bassEnergy": 0.489,
+      "highEnergy": 0.163,
+      "rms": 0.537
+    },
+    {
+      "frame": 1551,
+      "timeSec": 25.8438,
+      "type": "BASS_DROP",
+      "strength": 0.362,
+      "bassEnergy": 0.484,
+      "highEnergy": 0.517,
+      "rms": 0.534
+    },
+    {
+      "frame": 1588,
+      "timeSec": 26.4707,
+      "type": "BASS_DROP",
+      "strength": 0.593,
+      "bassEnergy": 0.5,
+      "highEnergy": 0.141,
+      "rms": 0.566
+    },
+    {
+      "frame": 1626,
+      "timeSec": 27.0977,
+      "type": "BASS_DROP",
+      "strength": 0.432,
+      "bassEnergy": 0.332,
+      "highEnergy": 0.736,
+      "rms": 0.459
+    },
+    {
+      "frame": 1665,
+      "timeSec": 27.7478,
+      "type": "BASS_DROP",
+      "strength": 0.446,
+      "bassEnergy": 0.48,
+      "highEnergy": 0.152,
+      "rms": 0.495
+    },
+    {
+      "frame": 1702,
+      "timeSec": 28.3748,
+      "type": "BASS_DROP",
+      "strength": 0.642,
+      "bassEnergy": 0.508,
+      "highEnergy": 0.193,
+      "rms": 0.529
+    },
+    {
+      "frame": 1740,
+      "timeSec": 29.0017,
+      "type": "BASS_DROP",
+      "strength": 0.422,
+      "bassEnergy": 0.36,
+      "highEnergy": 0.217,
+      "rms": 0.504
+    },
+    {
+      "frame": 1817,
+      "timeSec": 30.2788,
+      "type": "BASS_DROP",
+      "strength": 0.566,
+      "bassEnergy": 0.414,
+      "highEnergy": 0.389,
+      "rms": 0.53
+    },
+    {
+      "frame": 1856,
+      "timeSec": 30.929,
+      "type": "BASS_DROP",
+      "strength": 0.211,
+      "bassEnergy": 0.3,
+      "highEnergy": 0.641,
+      "rms": 0.464
+    },
+    {
+      "frame": 1893,
+      "timeSec": 31.5559,
+      "type": "BASS_DROP",
+      "strength": 0.307,
+      "bassEnergy": 0.291,
+      "highEnergy": 0.295,
+      "rms": 0.417
+    },
+    {
+      "frame": 1932,
+      "timeSec": 32.2061,
+      "type": "BASS_DROP",
+      "strength": 0.262,
+      "bassEnergy": 0.319,
+      "highEnergy": 0.343,
+      "rms": 0.426
+    },
+    {
+      "frame": 1970,
+      "timeSec": 32.833,
+      "type": "BASS_DROP",
+      "strength": 0.289,
+      "bassEnergy": 0.27,
+      "highEnergy": 0.218,
+      "rms": 0.411
+    },
+    {
+      "frame": 2015,
+      "timeSec": 33.5761,
+      "type": "BASS_DROP",
+      "strength": 0.273,
+      "bassEnergy": 0.379,
+      "highEnergy": 0.161,
+      "rms": 0.534
+    },
+    {
+      "frame": 2054,
+      "timeSec": 34.2262,
+      "type": "BASS_DROP",
+      "strength": 0.257,
+      "bassEnergy": 0.418,
+      "highEnergy": 0.048,
+      "rms": 0.565
+    },
+    {
+      "frame": 2084,
+      "timeSec": 34.7371,
+      "type": "BASS_DROP",
+      "strength": 0.36,
+      "bassEnergy": 0.315,
+      "highEnergy": 0.588,
+      "rms": 0.441
+    },
+    {
+      "frame": 2123,
+      "timeSec": 35.3872,
+      "type": "BASS_DROP",
+      "strength": 0.45,
+      "bassEnergy": 0.496,
+      "highEnergy": 0.196,
+      "rms": 0.496
+    },
+    {
+      "frame": 2161,
+      "timeSec": 36.0141,
+      "type": "BASS_DROP",
+      "strength": 0.396,
+      "bassEnergy": 0.355,
+      "highEnergy": 0.605,
+      "rms": 0.47
+    },
+    {
+      "frame": 2198,
+      "timeSec": 36.6411,
+      "type": "BASS_DROP",
+      "strength": 0.323,
+      "bassEnergy": 0.26,
+      "highEnergy": 0.398,
+      "rms": 0.443
+    },
+    {
+      "frame": 2237,
+      "timeSec": 37.2912,
+      "type": "BASS_DROP",
+      "strength": 0.345,
+      "bassEnergy": 0.324,
+      "highEnergy": 0.351,
+      "rms": 0.421
+    },
+    {
+      "frame": 2275,
+      "timeSec": 37.9182,
+      "type": "BASS_DROP",
+      "strength": 0.328,
+      "bassEnergy": 0.25,
+      "highEnergy": 0.276,
+      "rms": 0.39
+    },
+    {
+      "frame": 2314,
+      "timeSec": 38.5683,
+      "type": "BASS_DROP",
+      "strength": 0.201,
+      "bassEnergy": 0.258,
+      "highEnergy": 0.346,
+      "rms": 0.409
+    },
+    {
+      "frame": 2352,
+      "timeSec": 39.1953,
+      "type": "BASS_DROP",
+      "strength": 0.354,
+      "bassEnergy": 0.295,
+      "highEnergy": 0.231,
+      "rms": 0.428
+    },
+    {
+      "frame": 2389,
+      "timeSec": 39.8222,
+      "type": "BASS_DROP",
+      "strength": 0.226,
+      "bassEnergy": 0.171,
+      "highEnergy": 0.539,
+      "rms": 0.374
+    },
+    {
+      "frame": 2428,
+      "timeSec": 40.4724,
+      "type": "BASS_DROP",
+      "strength": 0.377,
+      "bassEnergy": 0.362,
+      "highEnergy": 0.254,
+      "rms": 0.423
+    },
+    {
+      "frame": 2466,
+      "timeSec": 41.0993,
+      "type": "BASS_DROP",
+      "strength": 0.285,
+      "bassEnergy": 0.296,
+      "highEnergy": 0.673,
+      "rms": 0.5
+    },
+    {
+      "frame": 2505,
+      "timeSec": 41.7495,
+      "type": "BASS_DROP",
+      "strength": 0.31,
+      "bassEnergy": 0.408,
+      "highEnergy": 0.271,
+      "rms": 0.495
+    },
+    {
+      "frame": 2543,
+      "timeSec": 42.3764,
+      "type": "BASS_DROP",
+      "strength": 0.245,
+      "bassEnergy": 0.218,
+      "highEnergy": 0.589,
+      "rms": 0.354
+    },
+    {
+      "frame": 2580,
+      "timeSec": 43.0034,
+      "type": "BASS_DROP",
+      "strength": 0.297,
+      "bassEnergy": 0.255,
+      "highEnergy": 0.391,
+      "rms": 0.45
+    },
+    {
+      "frame": 2619,
+      "timeSec": 43.6535,
+      "type": "BASS_DROP",
+      "strength": 0.256,
+      "bassEnergy": 0.293,
+      "highEnergy": 0.498,
+      "rms": 0.392
+    },
+    {
+      "frame": 2657,
+      "timeSec": 44.2805,
+      "type": "BASS_DROP",
+      "strength": 0.43,
+      "bassEnergy": 0.325,
+      "highEnergy": 0.368,
+      "rms": 0.461
+    },
+    {
+      "frame": 2696,
+      "timeSec": 44.9306,
+      "type": "BASS_DROP",
+      "strength": 0.253,
+      "bassEnergy": 0.307,
+      "highEnergy": 0.434,
+      "rms": 0.387
+    },
+    {
+      "frame": 2733,
+      "timeSec": 45.5576,
+      "type": "BASS_DROP",
+      "strength": 0.447,
+      "bassEnergy": 0.37,
+      "highEnergy": 0.383,
+      "rms": 0.453
+    },
+    {
+      "frame": 2777,
+      "timeSec": 46.2774,
+      "type": "BASS_DROP",
+      "strength": 0.234,
+      "bassEnergy": 0.347,
+      "highEnergy": 0.291,
+      "rms": 0.567
+    },
+    {
+      "frame": 2810,
+      "timeSec": 46.8346,
+      "type": "BASS_DROP",
+      "strength": 0.357,
+      "bassEnergy": 0.37,
+      "highEnergy": 0.211,
+      "rms": 0.456
+    },
+    {
+      "frame": 2848,
+      "timeSec": 47.4616,
+      "type": "BASS_DROP",
+      "strength": 0.335,
+      "bassEnergy": 0.258,
+      "highEnergy": 0.676,
+      "rms": 0.41
+    },
+    {
+      "frame": 2887,
+      "timeSec": 48.1117,
+      "type": "BASS_DROP",
+      "strength": 0.384,
+      "bassEnergy": 0.393,
+      "highEnergy": 0.207,
+      "rms": 0.5
+    },
+    {
+      "frame": 2924,
+      "timeSec": 48.7387,
+      "type": "BASS_DROP",
+      "strength": 0.25,
+      "bassEnergy": 0.226,
+      "highEnergy": 0.501,
+      "rms": 0.392
+    },
+    {
+      "frame": 2962,
+      "timeSec": 49.3656,
+      "type": "BASS_DROP",
+      "strength": 0.317,
+      "bassEnergy": 0.272,
+      "highEnergy": 0.351,
+      "rms": 0.468
+    },
+    {
+      "frame": 3001,
+      "timeSec": 50.0158,
+      "type": "BASS_DROP",
+      "strength": 0.32,
+      "bassEnergy": 0.305,
+      "highEnergy": 0.542,
+      "rms": 0.432
+    },
+    {
+      "frame": 3039,
+      "timeSec": 50.6427,
+      "type": "BASS_DROP",
+      "strength": 0.385,
+      "bassEnergy": 0.299,
+      "highEnergy": 0.424,
+      "rms": 0.478
+    },
+    {
+      "frame": 3078,
+      "timeSec": 51.2929,
+      "type": "BASS_DROP",
+      "strength": 0.275,
+      "bassEnergy": 0.337,
+      "highEnergy": 0.426,
+      "rms": 0.464
+    },
+    {
+      "frame": 3115,
+      "timeSec": 51.9198,
+      "type": "BASS_DROP",
+      "strength": 0.265,
+      "bassEnergy": 0.236,
+      "highEnergy": 0.288,
+      "rms": 0.374
+    }
+  ],
+  "cymbalCrashes": [
+    {
+      "frame": 22,
+      "timeSec": 0.3715,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.614,
+      "bassEnergy": 0.358,
+      "highEnergy": 0.679,
+      "rms": 0.558
+    },
+    {
+      "frame": 60,
+      "timeSec": 0.9985,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.292,
+      "bassEnergy": 0.245,
+      "highEnergy": 0.25,
+      "rms": 0.582
+    },
+    {
+      "frame": 137,
+      "timeSec": 2.2756,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.41,
+      "bassEnergy": 0.402,
+      "highEnergy": 0.371,
+      "rms": 0.699
+    },
+    {
+      "frame": 174,
+      "timeSec": 2.9025,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.612,
+      "bassEnergy": 0.144,
+      "highEnergy": 0.474,
+      "rms": 0.483
+    },
+    {
+      "frame": 213,
+      "timeSec": 3.5527,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.356,
+      "bassEnergy": 0.451,
+      "highEnergy": 0.375,
+      "rms": 0.653
+    },
+    {
+      "frame": 251,
+      "timeSec": 4.1796,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.846,
+      "bassEnergy": 0.198,
+      "highEnergy": 0.689,
+      "rms": 0.555
+    },
+    {
+      "frame": 288,
+      "timeSec": 4.8065,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.218,
+      "bassEnergy": 0.129,
+      "highEnergy": 0.172,
+      "rms": 0.523
+    },
+    {
+      "frame": 327,
+      "timeSec": 5.4567,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.765,
+      "bassEnergy": 0.25,
+      "highEnergy": 0.674,
+      "rms": 0.575
+    },
+    {
+      "frame": 365,
+      "timeSec": 6.0836,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.232,
+      "bassEnergy": 0.143,
+      "highEnergy": 0.198,
+      "rms": 0.561
+    },
+    {
+      "frame": 404,
+      "timeSec": 6.7338,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.805,
+      "bassEnergy": 0.364,
+      "highEnergy": 0.861,
+      "rms": 0.596
+    },
+    {
+      "frame": 442,
+      "timeSec": 7.3607,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.264,
+      "highEnergy": 0.258,
+      "rms": 0.59
+    },
+    {
+      "frame": 479,
+      "timeSec": 7.9877,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.429,
+      "bassEnergy": 0.143,
+      "highEnergy": 0.343,
+      "rms": 0.508
+    },
+    {
+      "frame": 518,
+      "timeSec": 8.6378,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.362,
+      "bassEnergy": 0.33,
+      "highEnergy": 0.325,
+      "rms": 0.662
+    },
+    {
+      "frame": 556,
+      "timeSec": 9.2648,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.836,
+      "bassEnergy": 0.155,
+      "highEnergy": 0.656,
+      "rms": 0.482
+    },
+    {
+      "frame": 595,
+      "timeSec": 9.9149,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.346,
+      "bassEnergy": 0.397,
+      "highEnergy": 0.38,
+      "rms": 0.603
+    },
+    {
+      "frame": 614,
+      "timeSec": 10.24,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.181,
+      "bassEnergy": 0.044,
+      "highEnergy": 0.26,
+      "rms": 0.087
+    },
+    {
+      "frame": 633,
+      "timeSec": 10.5419,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.946,
+      "bassEnergy": 0.144,
+      "highEnergy": 0.775,
+      "rms": 0.383
+    },
+    {
+      "frame": 662,
+      "timeSec": 11.0295,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.202,
+      "bassEnergy": 0.036,
+      "highEnergy": 0.235,
+      "rms": 0.066
+    },
+    {
+      "frame": 709,
+      "timeSec": 11.819,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.784,
+      "bassEnergy": 0.206,
+      "highEnergy": 0.698,
+      "rms": 0.447
+    },
+    {
+      "frame": 747,
+      "timeSec": 12.4459,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.296,
+      "bassEnergy": 0.119,
+      "highEnergy": 0.249,
+      "rms": 0.404
+    },
+    {
+      "frame": 823,
+      "timeSec": 13.723,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.256,
+      "bassEnergy": 0.196,
+      "highEnergy": 0.233,
+      "rms": 0.417
+    },
+    {
+      "frame": 843,
+      "timeSec": 14.0481,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.182,
+      "bassEnergy": 0.131,
+      "highEnergy": 0.19,
+      "rms": 0.26
+    },
+    {
+      "frame": 900,
+      "timeSec": 15.0001,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.245,
+      "bassEnergy": 0.26,
+      "highEnergy": 0.23,
+      "rms": 0.46
+    },
+    {
+      "frame": 938,
+      "timeSec": 15.627,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.674,
+      "bassEnergy": 0.096,
+      "highEnergy": 0.534,
+      "rms": 0.437
+    },
+    {
+      "frame": 957,
+      "timeSec": 15.9521,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.189,
+      "bassEnergy": 0.03,
+      "highEnergy": 0.173,
+      "rms": 0.098
+    },
+    {
+      "frame": 977,
+      "timeSec": 16.2772,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.31,
+      "bassEnergy": 0.33,
+      "highEnergy": 0.335,
+      "rms": 0.526
+    },
+    {
+      "frame": 1014,
+      "timeSec": 16.9041,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.792,
+      "bassEnergy": 0.146,
+      "highEnergy": 0.646,
+      "rms": 0.444
+    },
+    {
+      "frame": 1044,
+      "timeSec": 17.3917,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.236,
+      "rms": 0.184
+    },
+    {
+      "frame": 1091,
+      "timeSec": 18.1812,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "bassEnergy": 0.193,
+      "highEnergy": 0.625,
+      "rms": 0.417
+    },
+    {
+      "frame": 1110,
+      "timeSec": 18.5063,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.19,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.219,
+      "rms": 0.113
+    },
+    {
+      "frame": 1128,
+      "timeSec": 18.8082,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.253,
+      "bassEnergy": 0.122,
+      "highEnergy": 0.204,
+      "rms": 0.412
+    },
+    {
+      "frame": 1167,
+      "timeSec": 19.4583,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.679,
+      "bassEnergy": 0.213,
+      "highEnergy": 0.689,
+      "rms": 0.406
+    },
+    {
+      "frame": 1205,
+      "timeSec": 20.0853,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.364,
+      "bassEnergy": 0.206,
+      "highEnergy": 0.299,
+      "rms": 0.544
+    },
+    {
+      "frame": 1225,
+      "timeSec": 20.4103,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.216,
+      "bassEnergy": 0.087,
+      "highEnergy": 0.205,
+      "rms": 0.186
+    },
+    {
+      "frame": 1282,
+      "timeSec": 21.3624,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.359,
+      "bassEnergy": 0.253,
+      "highEnergy": 0.33,
+      "rms": 0.468
+    },
+    {
+      "frame": 1301,
+      "timeSec": 21.6874,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.197,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.229,
+      "rms": 0.131
+    },
+    {
+      "frame": 1319,
+      "timeSec": 21.9893,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.538,
+      "bassEnergy": 0.093,
+      "highEnergy": 0.432,
+      "rms": 0.388
+    },
+    {
+      "frame": 1339,
+      "timeSec": 22.3144,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.183,
+      "bassEnergy": 0.074,
+      "highEnergy": 0.176,
+      "rms": 0.179
+    },
+    {
+      "frame": 1396,
+      "timeSec": 23.2664,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "bassEnergy": 0.117,
+      "highEnergy": 0.596,
+      "rms": 0.42
+    },
+    {
+      "frame": 1415,
+      "timeSec": 23.5915,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.186,
+      "bassEnergy": 0.054,
+      "highEnergy": 0.182,
+      "rms": 0.144
+    },
+    {
+      "frame": 1473,
+      "timeSec": 24.5435,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.69,
+      "bassEnergy": 0.191,
+      "highEnergy": 0.61,
+      "rms": 0.442
+    },
+    {
+      "frame": 1530,
+      "timeSec": 25.4955,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.195,
+      "bassEnergy": 0.045,
+      "highEnergy": 0.171,
+      "rms": 0.124
+    },
+    {
+      "frame": 1549,
+      "timeSec": 25.8206,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.695,
+      "bassEnergy": 0.267,
+      "highEnergy": 0.699,
+      "rms": 0.469
+    },
+    {
+      "frame": 1587,
+      "timeSec": 26.4475,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.213,
+      "bassEnergy": 0.145,
+      "highEnergy": 0.186,
+      "rms": 0.44
+    },
+    {
+      "frame": 1606,
+      "timeSec": 26.7726,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.185,
+      "bassEnergy": 0.05,
+      "highEnergy": 0.176,
+      "rms": 0.12
+    },
+    {
+      "frame": 1663,
+      "timeSec": 27.7246,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.213,
+      "highEnergy": 0.319,
+      "rms": 0.449
+    },
+    {
+      "frame": 1721,
+      "timeSec": 28.6766,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.203,
+      "bassEnergy": 0.08,
+      "highEnergy": 0.18,
+      "rms": 0.159
+    },
+    {
+      "frame": 1778,
+      "timeSec": 29.6287,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.894,
+      "bassEnergy": 0.086,
+      "highEnergy": 0.717,
+      "rms": 0.226
+    },
+    {
+      "frame": 1797,
+      "timeSec": 29.9537,
+      "type": "CYMBAL_CRASH",
+      "strength": 1.0,
+      "bassEnergy": 0.065,
+      "highEnergy": 0.879,
+      "rms": 0.227
+    },
+    {
+      "frame": 1835,
+      "timeSec": 30.5807,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.201,
+      "bassEnergy": 0.084,
+      "highEnergy": 0.179,
+      "rms": 0.225
+    },
+    {
+      "frame": 1854,
+      "timeSec": 30.9058,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.822,
+      "bassEnergy": 0.174,
+      "highEnergy": 0.754,
+      "rms": 0.426
+    },
+    {
+      "frame": 1874,
+      "timeSec": 31.2308,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.234,
+      "bassEnergy": 0.061,
+      "highEnergy": 0.277,
+      "rms": 0.212
+    },
+    {
+      "frame": 1892,
+      "timeSec": 31.5327,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.227,
+      "bassEnergy": 0.108,
+      "highEnergy": 0.216,
+      "rms": 0.411
+    },
+    {
+      "frame": 1931,
+      "timeSec": 32.1829,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.428,
+      "bassEnergy": 0.162,
+      "highEnergy": 0.466,
+      "rms": 0.403
+    },
+    {
+      "frame": 1969,
+      "timeSec": 32.8098,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.231,
+      "bassEnergy": 0.097,
+      "highEnergy": 0.264,
+      "rms": 0.363
+    },
+    {
+      "frame": 1988,
+      "timeSec": 33.1349,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.353,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.376,
+      "rms": 0.239
+    },
+    {
+      "frame": 2008,
+      "timeSec": 33.46,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.438,
+      "bassEnergy": 0.193,
+      "highEnergy": 0.648,
+      "rms": 0.41
+    },
+    {
+      "frame": 2065,
+      "timeSec": 34.412,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.202,
+      "bassEnergy": 0.097,
+      "highEnergy": 0.293,
+      "rms": 0.266
+    },
+    {
+      "frame": 2083,
+      "timeSec": 34.7138,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.394,
+      "bassEnergy": 0.1,
+      "highEnergy": 0.383,
+      "rms": 0.388
+    },
+    {
+      "frame": 2102,
+      "timeSec": 35.0389,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.214,
+      "bassEnergy": 0.079,
+      "highEnergy": 0.249,
+      "rms": 0.25
+    },
+    {
+      "frame": 2122,
+      "timeSec": 35.364,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.412,
+      "bassEnergy": 0.227,
+      "highEnergy": 0.469,
+      "rms": 0.473
+    },
+    {
+      "frame": 2141,
+      "timeSec": 35.6891,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.21,
+      "bassEnergy": 0.07,
+      "highEnergy": 0.313,
+      "rms": 0.222
+    },
+    {
+      "frame": 2159,
+      "timeSec": 35.9909,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.662,
+      "bassEnergy": 0.118,
+      "highEnergy": 0.564,
+      "rms": 0.459
+    },
+    {
+      "frame": 2179,
+      "timeSec": 36.316,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.048,
+      "highEnergy": 0.425,
+      "rms": 0.225
+    },
+    {
+      "frame": 2217,
+      "timeSec": 36.9429,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.186,
+      "bassEnergy": 0.042,
+      "highEnergy": 0.183,
+      "rms": 0.21
+    },
+    {
+      "frame": 2236,
+      "timeSec": 37.268,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.486,
+      "bassEnergy": 0.117,
+      "highEnergy": 0.463,
+      "rms": 0.403
+    },
+    {
+      "frame": 2256,
+      "timeSec": 37.5931,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.243,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.283,
+      "rms": 0.222
+    },
+    {
+      "frame": 2274,
+      "timeSec": 37.895,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.209,
+      "bassEnergy": 0.054,
+      "highEnergy": 0.217,
+      "rms": 0.374
+    },
+    {
+      "frame": 2313,
+      "timeSec": 38.5451,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.552,
+      "bassEnergy": 0.138,
+      "highEnergy": 0.594,
+      "rms": 0.372
+    },
+    {
+      "frame": 2350,
+      "timeSec": 39.1721,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.268,
+      "bassEnergy": 0.083,
+      "highEnergy": 0.258,
+      "rms": 0.405
+    },
+    {
+      "frame": 2370,
+      "timeSec": 39.4971,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.244,
+      "bassEnergy": 0.039,
+      "highEnergy": 0.261,
+      "rms": 0.2
+    },
+    {
+      "frame": 2427,
+      "timeSec": 40.4492,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.44,
+      "bassEnergy": 0.137,
+      "highEnergy": 0.403,
+      "rms": 0.382
+    },
+    {
+      "frame": 2446,
+      "timeSec": 40.7742,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.352,
+      "bassEnergy": 0.06,
+      "highEnergy": 0.367,
+      "rms": 0.252
+    },
+    {
+      "frame": 2465,
+      "timeSec": 41.0761,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.46,
+      "bassEnergy": 0.125,
+      "highEnergy": 0.429,
+      "rms": 0.454
+    },
+    {
+      "frame": 2484,
+      "timeSec": 41.4012,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.218,
+      "bassEnergy": 0.029,
+      "highEnergy": 0.238,
+      "rms": 0.232
+    },
+    {
+      "frame": 2504,
+      "timeSec": 41.7263,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.575,
+      "bassEnergy": 0.223,
+      "highEnergy": 0.592,
+      "rms": 0.451
+    },
+    {
+      "frame": 2523,
+      "timeSec": 42.0513,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.317,
+      "bassEnergy": 0.063,
+      "highEnergy": 0.448,
+      "rms": 0.188
+    },
+    {
+      "frame": 2541,
+      "timeSec": 42.3532,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.603,
+      "bassEnergy": 0.071,
+      "highEnergy": 0.548,
+      "rms": 0.336
+    },
+    {
+      "frame": 2561,
+      "timeSec": 42.6783,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.297,
+      "bassEnergy": 0.037,
+      "highEnergy": 0.293,
+      "rms": 0.267
+    },
+    {
+      "frame": 2579,
+      "timeSec": 42.9801,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.24,
+      "rms": 0.373
+    },
+    {
+      "frame": 2598,
+      "timeSec": 43.3052,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.231,
+      "bassEnergy": 0.036,
+      "highEnergy": 0.217,
+      "rms": 0.219
+    },
+    {
+      "frame": 2618,
+      "timeSec": 43.6303,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.628,
+      "bassEnergy": 0.14,
+      "highEnergy": 0.585,
+      "rms": 0.403
+    },
+    {
+      "frame": 2637,
+      "timeSec": 43.9554,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.189,
+      "bassEnergy": 0.04,
+      "highEnergy": 0.251,
+      "rms": 0.223
+    },
+    {
+      "frame": 2655,
+      "timeSec": 44.2572,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.279,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.261,
+      "rms": 0.406
+    },
+    {
+      "frame": 2675,
+      "timeSec": 44.5823,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.249,
+      "bassEnergy": 0.027,
+      "highEnergy": 0.269,
+      "rms": 0.194
+    },
+    {
+      "frame": 2694,
+      "timeSec": 44.9074,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.586,
+      "bassEnergy": 0.156,
+      "highEnergy": 0.585,
+      "rms": 0.361
+    },
+    {
+      "frame": 2714,
+      "timeSec": 45.2325,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.251,
+      "bassEnergy": 0.041,
+      "highEnergy": 0.324,
+      "rms": 0.182
+    },
+    {
+      "frame": 2732,
+      "timeSec": 45.5343,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.489,
+      "bassEnergy": 0.103,
+      "highEnergy": 0.412,
+      "rms": 0.396
+    },
+    {
+      "frame": 2752,
+      "timeSec": 45.8594,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.378,
+      "bassEnergy": 0.057,
+      "highEnergy": 0.374,
+      "rms": 0.237
+    },
+    {
+      "frame": 2771,
+      "timeSec": 46.1845,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.446,
+      "bassEnergy": 0.171,
+      "highEnergy": 0.66,
+      "rms": 0.393
+    },
+    {
+      "frame": 2789,
+      "timeSec": 46.4863,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.35,
+      "bassEnergy": 0.034,
+      "highEnergy": 0.304,
+      "rms": 0.218
+    },
+    {
+      "frame": 2809,
+      "timeSec": 46.8114,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.156,
+      "highEnergy": 0.322,
+      "rms": 0.45
+    },
+    {
+      "frame": 2828,
+      "timeSec": 47.1365,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.3,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.319,
+      "rms": 0.209
+    },
+    {
+      "frame": 2846,
+      "timeSec": 47.4384,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.466,
+      "bassEnergy": 0.058,
+      "highEnergy": 0.415,
+      "rms": 0.374
+    },
+    {
+      "frame": 2866,
+      "timeSec": 47.7634,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.28,
+      "bassEnergy": 0.024,
+      "highEnergy": 0.276,
+      "rms": 0.176
+    },
+    {
+      "frame": 2885,
+      "timeSec": 48.0885,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.26,
+      "bassEnergy": 0.163,
+      "highEnergy": 0.326,
+      "rms": 0.435
+    },
+    {
+      "frame": 2905,
+      "timeSec": 48.4136,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.226,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.327,
+      "rms": 0.245
+    },
+    {
+      "frame": 2923,
+      "timeSec": 48.7155,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.47,
+      "bassEnergy": 0.077,
+      "highEnergy": 0.405,
+      "rms": 0.404
+    },
+    {
+      "frame": 2942,
+      "timeSec": 49.0405,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.364,
+      "bassEnergy": 0.041,
+      "highEnergy": 0.341,
+      "rms": 0.244
+    },
+    {
+      "frame": 2980,
+      "timeSec": 49.6675,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.245,
+      "bassEnergy": 0.033,
+      "highEnergy": 0.261,
+      "rms": 0.24
+    },
+    {
+      "frame": 3000,
+      "timeSec": 49.9926,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.749,
+      "bassEnergy": 0.114,
+      "highEnergy": 0.686,
+      "rms": 0.412
+    },
+    {
+      "frame": 3019,
+      "timeSec": 50.3176,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.693,
+      "bassEnergy": 0.046,
+      "highEnergy": 0.68,
+      "rms": 0.215
+    },
+    {
+      "frame": 3037,
+      "timeSec": 50.6195,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.327,
+      "bassEnergy": 0.069,
+      "highEnergy": 0.299,
+      "rms": 0.386
+    },
+    {
+      "frame": 3057,
+      "timeSec": 50.9446,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.208,
+      "bassEnergy": 0.068,
+      "highEnergy": 0.206,
+      "rms": 0.222
+    },
+    {
+      "frame": 3076,
+      "timeSec": 51.2697,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.58,
+      "bassEnergy": 0.173,
+      "highEnergy": 0.659,
+      "rms": 0.451
+    },
+    {
+      "frame": 3114,
+      "timeSec": 51.8966,
+      "type": "CYMBAL_CRASH",
+      "strength": 0.305,
+      "bassEnergy": 0.078,
+      "highEnergy": 0.323,
+      "rms": 0.358
+    }
+  ],
+  "energyPeaks": [
+    {
+      "frame": 4,
+      "timeSec": 0.0697,
+      "type": "ENERGY_PEAK",
+      "strength": 0.257,
+      "bassEnergy": 0.151,
+      "highEnergy": 0.07,
+      "rms": 0.257
+    },
+    {
+      "frame": 63,
+      "timeSec": 1.0449,
+      "type": "ENERGY_PEAK",
+      "strength": 0.271,
+      "bassEnergy": 0.703,
+      "highEnergy": 0.007,
+      "rms": 0.793
+    },
+    {
+      "frame": 100,
+      "timeSec": 1.6718,
+      "type": "ENERGY_PEAK",
+      "strength": 0.37,
+      "bassEnergy": 0.611,
+      "highEnergy": 0.304,
+      "rms": 0.619
+    },
+    {
+      "frame": 139,
+      "timeSec": 2.322,
+      "type": "ENERGY_PEAK",
+      "strength": 0.324,
+      "bassEnergy": 0.877,
+      "highEnergy": 0.006,
+      "rms": 0.951
+    },
+    {
+      "frame": 177,
+      "timeSec": 2.9489,
+      "type": "ENERGY_PEAK",
+      "strength": 0.303,
+      "bassEnergy": 0.545,
+      "highEnergy": 0.182,
+      "rms": 0.602
+    },
+    {
+      "frame": 254,
+      "timeSec": 4.226,
+      "type": "ENERGY_PEAK",
+      "strength": 0.296,
+      "bassEnergy": 0.497,
+      "highEnergy": 0.139,
+      "rms": 0.7
+    },
+    {
+      "frame": 291,
+      "timeSec": 4.853,
+      "type": "ENERGY_PEAK",
+      "strength": 0.263,
+      "bassEnergy": 0.814,
+      "highEnergy": 0.042,
+      "rms": 0.681
+    },
+    {
+      "frame": 330,
+      "timeSec": 5.5031,
+      "type": "ENERGY_PEAK",
+      "strength": 0.255,
+      "bassEnergy": 0.542,
+      "highEnergy": 0.185,
+      "rms": 0.724
+    },
+    {
+      "frame": 368,
+      "timeSec": 6.1301,
+      "type": "ENERGY_PEAK",
+      "strength": 0.265,
+      "bassEnergy": 0.734,
+      "highEnergy": 0.018,
+      "rms": 0.745
+    },
+    {
+      "frame": 405,
+      "timeSec": 6.757,
+      "type": "ENERGY_PEAK",
+      "strength": 0.293,
+      "bassEnergy": 0.647,
+      "highEnergy": 0.336,
+      "rms": 0.596
+    },
+    {
+      "frame": 444,
+      "timeSec": 7.4072,
+      "type": "ENERGY_PEAK",
+      "strength": 0.249,
+      "bassEnergy": 0.72,
+      "highEnergy": 0.008,
+      "rms": 0.757
+    },
+    {
+      "frame": 482,
+      "timeSec": 8.0341,
+      "type": "ENERGY_PEAK",
+      "strength": 0.271,
+      "bassEnergy": 0.625,
+      "highEnergy": 0.171,
+      "rms": 0.611
+    },
+    {
+      "frame": 559,
+      "timeSec": 9.3112,
+      "type": "ENERGY_PEAK",
+      "strength": 0.326,
+      "bassEnergy": 0.592,
+      "highEnergy": 0.192,
+      "rms": 0.607
+    },
+    {
+      "frame": 635,
+      "timeSec": 10.5883,
+      "type": "ENERGY_PEAK",
+      "strength": 0.259,
+      "bassEnergy": 0.265,
+      "highEnergy": 0.275,
+      "rms": 0.512
+    },
+    {
+      "frame": 712,
+      "timeSec": 11.8654,
+      "type": "ENERGY_PEAK",
+      "strength": 0.238,
+      "bassEnergy": 0.36,
+      "highEnergy": 0.206,
+      "rms": 0.592
+    },
+    {
+      "frame": 750,
+      "timeSec": 12.4923,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.428,
+      "highEnergy": 0.025,
+      "rms": 0.581
+    },
+    {
+      "frame": 864,
+      "timeSec": 14.3964,
+      "type": "ENERGY_PEAK",
+      "strength": 0.239,
+      "bassEnergy": 0.341,
+      "highEnergy": 0.31,
+      "rms": 0.452
+    },
+    {
+      "frame": 940,
+      "timeSec": 15.6735,
+      "type": "ENERGY_PEAK",
+      "strength": 0.328,
+      "bassEnergy": 0.516,
+      "highEnergy": 0.372,
+      "rms": 0.604
+    },
+    {
+      "frame": 1017,
+      "timeSec": 16.9506,
+      "type": "ENERGY_PEAK",
+      "strength": 0.325,
+      "bassEnergy": 0.416,
+      "highEnergy": 0.281,
+      "rms": 0.638
+    },
+    {
+      "frame": 1131,
+      "timeSec": 18.8546,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.504,
+      "highEnergy": 0.019,
+      "rms": 0.583
+    },
+    {
+      "frame": 1169,
+      "timeSec": 19.4815,
+      "type": "ENERGY_PEAK",
+      "strength": 0.223,
+      "bassEnergy": 0.392,
+      "highEnergy": 0.403,
+      "rms": 0.443
+    },
+    {
+      "frame": 1208,
+      "timeSec": 20.1317,
+      "type": "ENERGY_PEAK",
+      "strength": 0.281,
+      "bassEnergy": 0.524,
+      "highEnergy": 0.021,
+      "rms": 0.703
+    },
+    {
+      "frame": 1246,
+      "timeSec": 20.7586,
+      "type": "ENERGY_PEAK",
+      "strength": 0.3,
+      "bassEnergy": 0.494,
+      "highEnergy": 0.465,
+      "rms": 0.569
+    },
+    {
+      "frame": 1322,
+      "timeSec": 22.0357,
+      "type": "ENERGY_PEAK",
+      "strength": 0.303,
+      "bassEnergy": 0.434,
+      "highEnergy": 0.285,
+      "rms": 0.53
+    },
+    {
+      "frame": 1399,
+      "timeSec": 23.3128,
+      "type": "ENERGY_PEAK",
+      "strength": 0.265,
+      "bassEnergy": 0.418,
+      "highEnergy": 0.221,
+      "rms": 0.541
+    },
+    {
+      "frame": 1436,
+      "timeSec": 23.9398,
+      "type": "ENERGY_PEAK",
+      "strength": 0.23,
+      "bassEnergy": 0.653,
+      "highEnergy": 0.04,
+      "rms": 0.622
+    },
+    {
+      "frame": 1475,
+      "timeSec": 24.5899,
+      "type": "ENERGY_PEAK",
+      "strength": 0.232,
+      "bassEnergy": 0.343,
+      "highEnergy": 0.206,
+      "rms": 0.549
+    },
+    {
+      "frame": 1513,
+      "timeSec": 25.2169,
+      "type": "ENERGY_PEAK",
+      "strength": 0.22,
+      "bassEnergy": 0.571,
+      "highEnergy": 0.019,
+      "rms": 0.606
+    },
+    {
+      "frame": 1590,
+      "timeSec": 26.494,
+      "type": "ENERGY_PEAK",
+      "strength": 0.231,
+      "bassEnergy": 0.519,
+      "highEnergy": 0.015,
+      "rms": 0.686
+    },
+    {
+      "frame": 1627,
+      "timeSec": 27.1209,
+      "type": "ENERGY_PEAK",
+      "strength": 0.28,
+      "bassEnergy": 0.448,
+      "highEnergy": 0.352,
+      "rms": 0.494
+    }
+  ],
+  "recommendedSceneCuts": [
+    {
+      "sceneIndex": 1,
+      "startFrame": 0,
+      "durationFrames": 138,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 24,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 22,
+      "structuralFractureRecommended": false
+    },
+    {
+      "sceneIndex": 2,
+      "startFrame": 138,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 3,
+      "startFrame": 290,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 4,
+      "startFrame": 443,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 5,
+      "startFrame": 596,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 6,
+      "startFrame": 748,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 7,
+      "startFrame": 901,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 8,
+      "startFrame": 1053,
+      "durationFrames": 154,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 9,
+      "startFrame": 1207,
+      "durationFrames": 151,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 37,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 35,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 10,
+      "startFrame": 1358,
+      "durationFrames": 154,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 11,
+      "startFrame": 1512,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 12,
+      "startFrame": 1665,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 37,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 35,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 13,
+      "startFrame": 1817,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 14,
+      "startFrame": 1970,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 45,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 43,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 15,
+      "startFrame": 2123,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 16,
+      "startFrame": 2275,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 17,
+      "startFrame": 2428,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 38,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 36,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 18,
+      "startFrame": 2580,
+      "durationFrames": 153,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 39,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 37,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 19,
+      "startFrame": 2733,
+      "durationFrames": 154,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 44,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 42,
+      "structuralFractureRecommended": true
+    },
+    {
+      "sceneIndex": 20,
+      "startFrame": 2887,
+      "durationFrames": 152,
+      "cutTriggerType": "BASS_DROP",
+      "payoffBeatOffset": 37,
+      "payoffTransientType": "BASS_DROP",
+      "sfxLeadOffset": 35,
+      "structuralFractureRecommended": true
+    }
+  ],
+  "structuralFractureRecommendations": [
+    {
+      "sceneIndex": 1,
+      "startFrame": 0,
+      "hitFrame": 22,
+      "hitOffset": 22,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.614,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 20,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 2,
+      "startFrame": 138,
+      "hitFrame": 174,
+      "hitOffset": 36,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.612,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 34,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 3,
+      "startFrame": 290,
+      "hitFrame": 327,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.765,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 4,
+      "startFrame": 443,
+      "hitFrame": 481,
+      "hitOffset": 38,
+      "transientType": "BASS_DROP",
+      "strength": 0.596,
+      "suggestedSfx": "artillery_shell.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 5,
+      "startFrame": 596,
+      "hitFrame": 633,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.946,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 6,
+      "startFrame": 748,
+      "hitFrame": 786,
+      "hitOffset": 38,
+      "transientType": "BASS_DROP",
+      "strength": 0.334,
+      "suggestedSfx": "artillery_shell.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 7,
+      "startFrame": 901,
+      "hitFrame": 938,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.674,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 8,
+      "startFrame": 1053,
+      "hitFrame": 1091,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 9,
+      "startFrame": 1207,
+      "hitFrame": 1244,
+      "hitOffset": 37,
+      "transientType": "BASS_DROP",
+      "strength": 0.349,
+      "suggestedSfx": "artillery_shell.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 10,
+      "startFrame": 1358,
+      "hitFrame": 1396,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.725,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 11,
+      "startFrame": 1512,
+      "hitFrame": 1549,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.695,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 12,
+      "startFrame": 1665,
+      "hitFrame": 1702,
+      "hitOffset": 37,
+      "transientType": "BASS_DROP",
+      "strength": 0.642,
+      "suggestedSfx": "artillery_shell.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 13,
+      "startFrame": 1817,
+      "hitFrame": 1854,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.822,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 14,
+      "startFrame": 1970,
+      "hitFrame": 2008,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.438,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 15,
+      "startFrame": 2123,
+      "hitFrame": 2159,
+      "hitOffset": 36,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.662,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 34,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 16,
+      "startFrame": 2275,
+      "hitFrame": 2313,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.552,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 17,
+      "startFrame": 2428,
+      "hitFrame": 2465,
+      "hitOffset": 37,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.46,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 35,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 18,
+      "startFrame": 2580,
+      "hitFrame": 2618,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.628,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 19,
+      "startFrame": 2733,
+      "hitFrame": 2771,
+      "hitOffset": 38,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.446,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 36,
+      "suggestedCamera": "IMPACT_SHAKE"
+    },
+    {
+      "sceneIndex": 20,
+      "startFrame": 2887,
+      "hitFrame": 2923,
+      "hitOffset": 36,
+      "transientType": "CYMBAL_CRASH",
+      "strength": 0.47,
+      "suggestedSfx": "sub_boom.wav",
+      "sfxOffset": 34,
+      "suggestedCamera": "IMPACT_SHAKE"
     }
   ]
 }

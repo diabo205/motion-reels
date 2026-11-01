@@ -1,12 +1,20 @@
 {
   "projectSlug": "taiping-rebellion-1850",
   "title": "1850 TAIPING REBELLION",
-  "timestamp": "2026-11-01T09:55:08.938Z",
+  "timestamp": "2026-11-01T10:56:13.017Z",
   "passed": true,
   "totalFrames": 3000,
   "durationSec": 50,
   "maxFramesCeiling": 3500,
   "sceneCount": 20,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 428,
+    "bassDropCount": 83,
+    "cymbalCrashCount": 106,
+    "energyPeakCount": 30,
+    "onsetCount": 209
+  },
   "errorCount": 0,
   "warningCount": 0,
   "motionChecks": [],

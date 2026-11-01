@@ -137,6 +137,12 @@
               "intensity": { "type": "number", "minimum": 0, "maximum": 1.5 }
             }
           },
+          "transientType": {
+            "type": "string",
+            "enum": ["BASS_DROP", "CYMBAL_CRASH", "ENERGY_PEAK", "BEAT_ONSET", "BAR_BOUNDARY", "TEMPO_GRID"]
+          },
+          "transientHitFrame": { "type": "integer" },
+          "structuralFractureHitFrame": { "type": "integer" },
           "textLayers": {
             "type": "array",
             "minItems": 1,

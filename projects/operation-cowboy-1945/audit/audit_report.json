@@ -1,12 +1,20 @@
 {
   "projectSlug": "operation-cowboy-1945",
   "title": "1945 OPERATION COWBOY",
-  "timestamp": "2026-11-01T09:55:08.558Z",
+  "timestamp": "2026-11-01T10:56:12.597Z",
   "passed": true,
   "totalFrames": 2940,
   "durationSec": 49,
   "maxFramesCeiling": 3500,
   "sceneCount": 21,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 949,
+    "bassDropCount": 203,
+    "cymbalCrashCount": 86,
+    "energyPeakCount": 105,
+    "onsetCount": 555
+  },
   "errorCount": 0,
   "warningCount": 0,
   "motionChecks": [],

@@ -41,7 +41,7 @@
         },
         {
           "text": "THIRTY MILLION LOST IN FLAMES",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 24,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -87,7 +87,7 @@
         },
         {
           "text": "A DELUSIONAL PROPHET RISES",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 26,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -141,7 +141,7 @@
         },
         {
           "text": "YANGTZE VALLEY IGNITES IN WAR",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -195,7 +195,7 @@
         },
         {
           "text": "MANCHU DYNASTY BRANDED DEMONS",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -241,7 +241,7 @@
         },
         {
           "text": "THE LONGHAIR REBELS MARCH",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -295,7 +295,7 @@
         },
         {
           "text": "THE HEAVENLY UPRISING IGNITES",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 43,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -346,7 +346,7 @@
         },
         {
           "text": "RELENTLESS MARCH UP THE YANGTZE",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 27,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -397,7 +397,7 @@
         },
         {
           "text": "PROVINCES FALL LIKE DOMINOES",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 30,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -443,7 +443,7 @@
         },
         {
           "text": "THE SOUTHERN BASTION SURRENDERS",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -494,7 +494,7 @@
         },
         {
           "text": "RADICAL THEOCRATIC RULE BEGINS",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -515,7 +515,7 @@
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 35
         }
       ]
     },
@@ -540,7 +540,7 @@
         },
         {
           "text": "STRICT GENDER SEPARATION DECREED",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 21,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -586,7 +586,7 @@
         },
         {
           "text": "ABSOLUTE SUBMISSION DEMANDED",
-          "triggerFrameOffset": 45,
+          "triggerFrameOffset": 22,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -632,7 +632,7 @@
         },
         {
           "text": "TWENTY THOUSAND PURGED INSIDE",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -724,7 +724,7 @@
         },
         {
           "text": "STARVING REBELS EAT WEEDS",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 23,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -770,7 +770,7 @@
         },
         {
           "text": "HEAVENLY CAPITAL STANDS ALONE",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 25,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -821,7 +821,7 @@
         },
         {
           "text": "IMPERIAL TROOPS STORM BREACH",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 28,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -842,7 +842,7 @@
         },
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 30
+          "frameOffset": 28
         }
       ]
     },
@@ -867,7 +867,7 @@
         },
         {
           "text": "EVERY DEFENDER CUT DOWN",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 30,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -913,7 +913,7 @@
         },
         {
           "text": "THE QING DYNASTY CRIPPLED",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -964,7 +964,7 @@
         },
         {
           "text": "AN EMPIRE FOREVER SCARRED",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"

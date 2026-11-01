@@ -1,7 +1,7 @@
 {
   "projectSlug": "u2-incident-1960",
   "title": "1960 U-2 INCIDENT",
-  "updatedAt": "2026-11-01T09:55:08.564Z",
+  "updatedAt": "2026-11-01T10:56:12.606Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,7 +11,7 @@
   },
   "timeline": {
     "file": "src/timelines/u2_incident_1960.json",
-    "sha256": "7b9a3d9732645020a3473fea9551ae1b17fbbe671ac1e41c15d7a1d95c3fae2e",
+    "sha256": "63d9cadf732a125e0a521d07382a17754bde3c8915f6b77b45490530dfe59b6a",
     "sceneCount": 19,
     "totalFrames": 2948,
     "durationSec": 49.13

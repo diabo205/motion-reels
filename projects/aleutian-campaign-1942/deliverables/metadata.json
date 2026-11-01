@@ -1,8 +1,8 @@
 {
   "projectSlug": "aleutian-campaign-1942",
-  "generatedAt": "2026-11-01T09:55:08.165Z",
+  "generatedAt": "2026-11-01T10:56:12.162Z",
   "title": "1942 ALEUTIAN CAMPAIGN: THE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.",
-  "description": "1942 ALEUTIAN CAMPAIGN (🇺🇸 ❄️ 🇯🇵)\n\nTHE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Aleutian #Campaign #1942",
+  "description": "1942 ALEUTIAN CAMPAIGN (🇺🇸 ❄️ 🇯🇵)\n\nTHE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.\n\nHistorical Sources & Fact-Check Citations:\n• ATTU AND KISKA FELL. FIRST INVASION SINCE 1812. — Source: 1942 ALEUTIAN CAMPAIGN Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Aleutian #Campaign #1942",
   "hashtags": [
     "#History",
     "#Documentary",
@@ -16,8 +16,19 @@
   "srtFile": "captions.srt",
   "poster9x16": "poster.png",
   "poster4x5": "poster_4x5.png",
-  "bgmLicense": null,
-  "claims": [],
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "ROYALTY_FREE",
+    "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_04_ATTU_KISKA_OCCUPIED",
+      "text": "ATTU AND KISKA FELL. FIRST INVASION SINCE 1812.",
+      "source": "1942 ALEUTIAN CAMPAIGN Archival Record",
+      "verified": true
+    }
+  ],
   "accessibilityAltText": [
     {
       "sceneNumber": 1,

@@ -1,24 +1,22 @@
 {
   "projectSlug": "aleutian-campaign-1942",
   "title": "1942 ALEUTIAN CAMPAIGN",
-  "timestamp": "2026-11-01T09:55:08.358Z",
+  "timestamp": "2026-11-01T10:56:12.364Z",
   "passed": true,
   "totalFrames": 2868,
   "durationSec": 47.8,
   "maxFramesCeiling": 3500,
   "sceneCount": 21,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 344,
+    "bassDropCount": 65,
+    "cymbalCrashCount": 63,
+    "energyPeakCount": 62,
+    "onsetCount": 154
+  },
   "errorCount": 0,
-  "warningCount": 1,
+  "warningCount": 0,
   "motionChecks": [],
-  "violations": [
-    {
-      "sceneId": "META",
-      "rule": "BGM_LICENSE_MANIFEST",
-      "severity": "WARNING",
-      "expected": "meta.bgmLicense { source, licenseType, clearanceId }",
-      "actual": "missing",
-      "frame": 0,
-      "autoFixed": false
-    }
-  ]
+  "violations": []
 }

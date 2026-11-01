@@ -197,7 +197,26 @@ const SceneItem: React.FC<{
       : 1;
 
   if (movement === 'IMPACT_SHAKE' && effectiveSensitivity === 'STANDARD') {
-    const decay = interpolate(frame, [0, 36], [1, 0], { extrapolateRight: 'clamp' });
+    // Motivated Transient Impact Shake:
+    // If the scene has a payoff slam or fracture hit offset > 0 (e.g. STRUCTURAL_FRACTURE hits),
+    // build pre-rumble tension leading up to the hit, then peak with explosive decay on the transient frame
+    const hitOffset = scene.textLayers?.[1]?.triggerFrameOffset ?? 0;
+    let decay = 0;
+    if (hitOffset > 0) {
+      const distFromHit = frame - hitOffset;
+      if (distFromHit < 0) {
+        decay = interpolate(frame, [0, hitOffset], [0.12, 0.35], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        });
+      } else {
+        decay = interpolate(distFromHit, [0, 36], [1.0, 0], {
+          extrapolateRight: 'clamp',
+        });
+      }
+    } else {
+      decay = interpolate(frame, [0, 36], [1, 0], { extrapolateRight: 'clamp' });
+    }
     const shakeX = Math.sin(frame * 2.1) * 18 * intensity * decay * loopEase;
     const shakeY = Math.cos(frame * 2.7) * 14 * intensity * decay * loopEase;
     transform = `translate(${shakeX}px, ${shakeY}px)`;

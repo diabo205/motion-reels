@@ -41,7 +41,7 @@
         },
         {
           "text": "A MASSACRE WAS MINUTES AWAY.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 42,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -78,7 +78,7 @@
         },
         {
           "text": "CENTURIES OF ROYAL BREEDING.",
-          "triggerFrameOffset": 43,
+          "triggerFrameOffset": 28,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -115,7 +115,7 @@
         },
         {
           "text": "THEY ATE EVERY HORSE.",
-          "triggerFrameOffset": 26,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -151,7 +151,7 @@
         },
         {
           "text": "100% SLAUGHTERED IN DAYS.",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 43,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -197,7 +197,7 @@
         },
         {
           "text": "REFUSED TO LET THEM DIE.",
-          "triggerFrameOffset": 21,
+          "triggerFrameOffset": 30,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -233,7 +233,7 @@
         },
         {
           "text": "RADIOED ACROSS ENEMY LINES.",
-          "triggerFrameOffset": 34,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -270,7 +270,7 @@
         },
         {
           "text": "GO GET THEM.",
-          "triggerFrameOffset": 34,
+          "triggerFrameOffset": 44,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -306,7 +306,7 @@
         },
         {
           "text": "SURROUNDED BY TWO PANZERS.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -342,7 +342,7 @@
         },
         {
           "text": "SMASHED THE BORDER LINE.",
-          "triggerFrameOffset": 43,
+          "triggerFrameOffset": 18,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -366,8 +366,8 @@
       "hudVisible": true,
       "headerContext": "HOSTAU • TARGET REACHED",
       "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
       },
       "textLayers": [
         {
@@ -379,7 +379,7 @@
         },
         {
           "text": "FOUR HUNDRED HORSES WAITING.",
-          "triggerFrameOffset": 26,
+          "triggerFrameOffset": 27,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -391,7 +391,7 @@
       "sfxTriggers": [
         {
           "sfxFile": "metal_clang.wav",
-          "frameOffset": 10
+          "frameOffset": 27
         }
       ]
     },
@@ -415,7 +415,7 @@
         },
         {
           "text": "HANDED REINS OVER RIFLES.",
-          "triggerFrameOffset": 38,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -451,7 +451,7 @@
         },
         {
           "text": "TO FIGHT AS BROTHERS.",
-          "triggerFrameOffset": 34,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -487,7 +487,7 @@
         },
         {
           "text": "SABERS DRAWN FOR FREEDOM.",
-          "triggerFrameOffset": 26,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -524,7 +524,7 @@
         },
         {
           "text": "MORTARS RAINED DOWN.",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 21,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -560,7 +560,7 @@
         },
         {
           "text": "DEFENDING THE STALLIONS.",
-          "triggerFrameOffset": 44,
+          "triggerFrameOffset": 30,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -587,8 +587,8 @@
       "archetype": "STRUCTURAL_FRACTURE",
       "hudVisible": false,
       "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.6
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
       },
       "textLayers": [
         {
@@ -600,7 +600,7 @@
         },
         {
           "text": "THE CORRIDOR WAS OPEN.",
-          "triggerFrameOffset": 23,
+          "triggerFrameOffset": 28,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -637,7 +637,7 @@
         },
         {
           "text": "BEFORE THE RUSSIANS ARRIVE.",
-          "triggerFrameOffset": 31,
+          "triggerFrameOffset": 33,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -673,7 +673,7 @@
         },
         {
           "text": "THUNDERING ACROSS BOHEMIA.",
-          "triggerFrameOffset": 40,
+          "triggerFrameOffset": 34,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -746,7 +746,7 @@
         },
         {
           "text": "SECURED ON ALLIED SOIL.",
-          "triggerFrameOffset": 28,
+          "triggerFrameOffset": 41,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -783,7 +783,7 @@
         },
         {
           "text": "A 450-YEAR LEGACY LIVES.",
-          "triggerFrameOffset": 37,
+          "triggerFrameOffset": 24,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"

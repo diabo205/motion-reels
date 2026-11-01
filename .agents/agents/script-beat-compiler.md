@@ -30,7 +30,7 @@ Your sole responsibility is translating a raw historical narrative + `assets/aud
    Every scene's `textLayers` array is capped at 2–3 items maximum:
    - **Optional Context Tag**: Displayed **only** when setting or time shifts (e.g. `BERLIN • 1961`). Do NOT duplicate on consecutive scenes.
    - **White Setup Line**: Starts at `triggerFrameOffset: 0` (renders completely sharp on Global Frame `0` for poster legibility).
-   - **Beat-Quantized Red Payoff Line**: Sync `triggerFrameOffset` to the first detected beat in `beat_grid.json` falling within **`[18, 45]` frames** (`0.30s–0.75s`) after `scene.startFrame` — never hardcode `30` across every scene when the musical grid differs.
+   - **Beat-Quantized Red Payoff Line**: Sync `triggerFrameOffset` to the prominent audio transient (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK`, or `BEAT_ONSET`) in `beat_grid.json` falling within **`[18, 45]` frames** (`0.30s–0.75s`) after `scene.startFrame` — never hardcode `30` across every scene when the musical grid differs.
    - **Strict Word & Line Budget**: Combined setup and payoff must be **6–10 words total** ($< 40$ characters per line, **max 2 wrapped lines per layer** when measured with `scripts/font_metrics.js` at `>= 56px` setup / `>= 64px` payoff and `+0.04em` tracking).
    - **Banned**: Handwritten notes (`handwrittenNote`), cursive scripts (`Caveat`), or typewriter strips (`Courier Prime`).
 
@@ -39,7 +39,7 @@ Your sole responsibility is translating a raw historical narrative + `assets/aud
    - `LONE_LEADER`
    - `CROWD_TALLY`
    - `VEHICLE_IN_TRANSIT`
-   - `STRUCTURAL_FRACTURE`
+   - `STRUCTURAL_FRACTURE` (Architectural facade, fortress, bunker detonation; impact hit, camera `IMPACT_SHAKE`, and SFX must lock to the primary `BASS_DROP` or `CYMBAL_CRASH` from `structuralFractureRecommendations`)
    - `VECTOR_MAP`
    - `SPLIT_CONFRONTATION`
    - `QUOTE_CARD` (Primary-source intercept, telegram, or diary reveal with `visualPayload.quoteAttribution`)
@@ -47,9 +47,9 @@ Your sole responsibility is translating a raw historical narrative + `assets/aud
 5. **Editorial Citations, Sensitivity Mode & Camera Discipline**:
    - Attach `claim: { text, source, url, verified }` to every scene containing a quantitative metric or casualty figure.
    - Set `sensitivity: "SOMBER_MEMORIAL"` on solemn casualty or memorial scenes so `KineticTextStack` and `HistoricalReel` use dignified `SLOW_REVEAL` fades instead of triumphant slams.
-   - **Camera Discipline (`CAMERA_DISCIPLINE_LINT`)**: Only use `STATIC`, `SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, or `IMPACT_SHAKE`. `SNAP_ZOOM` and `CRASH_ZOOM` are strictly banned.
+   - **Camera Discipline (`CAMERA_DISCIPLINE_LINT`)**: Only use `STATIC`, `SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, or `IMPACT_SHAKE`. `SNAP_ZOOM` and `CRASH_ZOOM` are strictly banned. `STRUCTURAL_FRACTURE` scenes require motivated `IMPACT_SHAKE`.
 
-6. **Perceptual Audio Lead & Validation**:
-   - Snap `startFrame` to bar/beat boundaries from `assets/audio/beat_grid.json`.
-   - Transient SFX (`sub_boom.wav`, `stamp_slam.wav`) are automatically biased 2 frames early (`leadFrames: 2`) for perceptual sync.
+6. **Audio Transient Synchronization & Validation**:
+   - Snap `startFrame` and scene transitions to transient cut recommendations (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK`) from `assets/audio/beat_grid.json`.
+   - Transient SFX (`sub_boom.wav`, `stamp_slam.wav`, `artillery_shell.wav`) are automatically biased 2 frames early (`leadFrames: 2`) for perceptual sync.
    - Validate output via `node scripts/pipeline.js --project <slug> --audit-stills --skip-stills --auto-fix`.

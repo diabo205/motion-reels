@@ -22,12 +22,15 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
      4. *Macro consequence*: Pulling out to an expansive geographic or strategic overview.
    - **Camera Movement Discipline (`CAMERA_DISCIPLINE_LINT`)**: Strictly prohibit crash zooms and snap zooms (`SNAP_ZOOM` / `CRASH_ZOOM`). Use motivated movements (`SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, `IMPACT_SHAKE`).
 
-1. **Extract Zero-Drift Audio Beat Grid**:
+1. **Extract Audio Transient Beat Grid (Onset & Drop Detection)**:
    Execute:
    ```powershell
    python .agents/skills/build-historical-reel/scripts/extract_beat_grid.py assets/audio/bgm.mp3 assets/audio/beat_grid.json
    ```
-   Computes cumulative float timestamps rounded once to 60fps frames, plus `recommendedSceneCuts` (`120–168f`) and beat-synced payoff offsets.
+   Replaces static BPM grids with deep audio transient analysis (via Librosa or Aubio):
+   - Multi-band spectral flux extraction for bass drops (20–220Hz), cymbal crashes (3.5k–11kHz), broadband energy peaks, and rhythmic onsets.
+   - Computes `recommendedSceneCuts` (`120–168f`) snapped to drops and crashes.
+   - Computes `structuralFractureRecommendations` syncing destructive impact hits and SFX directly to heavy audio transients.
 
 2. **Generate Procedural Foley & Cinematic SFX Assets**:
    Run:

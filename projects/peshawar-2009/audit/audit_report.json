@@ -1,12 +1,20 @@
 {
   "projectSlug": "peshawar-2009",
   "title": "PESHAWAR 2009",
-  "timestamp": "2026-11-01T09:55:09.089Z",
+  "timestamp": "2026-11-01T10:56:13.170Z",
   "passed": true,
   "totalFrames": 3388,
   "durationSec": 56.47,
   "maxFramesCeiling": 3500,
   "sceneCount": 14,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 344,
+    "bassDropCount": 65,
+    "cymbalCrashCount": 63,
+    "energyPeakCount": 62,
+    "onsetCount": 154
+  },
   "errorCount": 0,
   "warningCount": 0,
   "motionChecks": [],

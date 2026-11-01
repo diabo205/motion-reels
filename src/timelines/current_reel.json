@@ -12,7 +12,12 @@
     "palette": "POLAR_MARITIME",
     "particleEmitter": "SNOW",
     "fontFamily": "Montserrat",
-    "styleMode": "DOCUMENTARY_SANS"
+    "styleMode": "DOCUMENTARY_SANS",
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "ROYALTY_FREE",
+      "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
+    }
   },
   "scenes": [
     {
@@ -36,7 +41,7 @@
         },
         {
           "text": "JAPAN SEIZED AMERICAN SOIL.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 26,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -72,7 +77,7 @@
         },
         {
           "text": "WHIPPED BY ARCTIC GALES.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 25,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -109,7 +114,7 @@
         },
         {
           "text": "BOMBS RAINED ON ALASKA.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 25,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -125,7 +130,7 @@
         },
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 30
+          "frameOffset": 25
         }
       ]
     },
@@ -150,7 +155,7 @@
         },
         {
           "text": "FIRST INVASION SINCE 1812.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 24,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -164,7 +169,12 @@
           "sfxFile": "stamp_slam.wav",
           "frameOffset": 30
         }
-      ]
+      ],
+      "claim": {
+        "text": "ATTU AND KISKA FELL. FIRST INVASION SINCE 1812.",
+        "source": "1942 ALEUTIAN CAMPAIGN Archival Record",
+        "verified": true
+      }
     },
     {
       "sceneId": "SCENE_05_AKUTAN_ZERO_CRASH",
@@ -187,7 +197,7 @@
         },
         {
           "text": "CRASHED INTACT IN A BOG.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -227,7 +237,7 @@
         },
         {
           "text": "EXPOSING EVERY FATAL FLAW.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 24,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -267,7 +277,7 @@
         },
         {
           "text": "SWALLOWED BOMBERS WHOLE.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -304,7 +314,7 @@
         },
         {
           "text": "CHOKED JAPAN'S SUPPLY LINE.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 22,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -386,7 +396,7 @@
         },
         {
           "text": "FIRING DOWN THROUGH MIST.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -426,7 +436,7 @@
         },
         {
           "text": "THE ARCTIC CRIPPLED TROOPS.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 28,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -468,7 +478,7 @@
         },
         {
           "text": "BREAKING THE MOUNTAIN LINE.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 37,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -505,7 +515,7 @@
         },
         {
           "text": "HAND-TO-HAND IN THE SNOW.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 28,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -545,7 +555,7 @@
         },
         {
           "text": "ALMOST NONE SURVIVED.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -591,7 +601,7 @@
         },
         {
           "text": "FIVE THOUSAND MEN ON KISKA.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 26,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -628,7 +638,7 @@
         },
         {
           "text": "VANISHING IN FIFTY-FIVE MINUTES.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 35,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -664,7 +674,7 @@
         },
         {
           "text": "BOMBING AN EMPTY ISLAND.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 26,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -701,7 +711,7 @@
         },
         {
           "text": "NOBODY WAS THERE.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 32,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -737,7 +747,7 @@
         },
         {
           "text": "TRAPPED BY MINES AND FOG.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 24,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -777,7 +787,7 @@
         },
         {
           "text": "FIGHTING AN EMPTY ISLAND.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 25,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
@@ -823,7 +833,7 @@
         },
         {
           "text": "RECLAIMING AMERICAN SOIL.",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 26,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "HARD_POP"
