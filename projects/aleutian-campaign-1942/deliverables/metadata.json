@@ -1,8 +1,8 @@
 {
   "projectSlug": "aleutian-campaign-1942",
-  "generatedAt": "2026-11-01T09:24:19.218Z",
+  "generatedAt": "2026-11-01T09:55:08.165Z",
   "title": "1942 ALEUTIAN CAMPAIGN: THE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.",
-  "description": "1942 ALEUTIAN CAMPAIGN (🇺🇸 ❄️ 🇯🇵)\n\nTHE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.\n\nHistorical Sources & Fact-Check Citations:\n• ATTU AND KISKA FELL. FIRST INVASION SINCE 1812. — Source: 1942 ALEUTIAN CAMPAIGN Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Aleutian #Campaign #1942",
+  "description": "1942 ALEUTIAN CAMPAIGN (🇺🇸 ❄️ 🇯🇵)\n\nTHE FORGOTTEN WWII INVASION. JAPAN SEIZED AMERICAN SOIL.\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Aleutian #Campaign #1942",
   "hashtags": [
     "#History",
     "#Documentary",
@@ -16,19 +16,8 @@
   "srtFile": "captions.srt",
   "poster9x16": "poster.png",
   "poster4x5": "poster_4x5.png",
-  "bgmLicense": {
-    "source": "Project Audio Library",
-    "licenseType": "ROYALTY_FREE",
-    "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
-  },
-  "claims": [
-    {
-      "sceneId": "SCENE_04_ATTU_KISKA_OCCUPIED",
-      "text": "ATTU AND KISKA FELL. FIRST INVASION SINCE 1812.",
-      "source": "1942 ALEUTIAN CAMPAIGN Archival Record",
-      "verified": true
-    }
-  ],
+  "bgmLicense": null,
+  "claims": [],
   "accessibilityAltText": [
     {
       "sceneNumber": 1,
@@ -99,7 +88,7 @@
       "sceneId": "SCENE_09_ATTU_AMPHIBIOUS_LANDING",
       "archetype": "CROWD_TALLY",
       "headerContext": "MAY 11, 1943 • ATTU ISLAND",
-      "caption": "ELEVEN THOUSAND TROOPS LANDED. — ONTO FROZEN ATTU BEACHES.",
+      "caption": "ALLIED ARMADA STORMED ASHORE. — ONTO FROZEN ATTU BEACHES.",
       "visualAsset": "ALEUTIAN_ATTU_AMPHIBIOUS_LANDING"
     },
     {
@@ -115,7 +104,7 @@
       "sceneId": "SCENE_11_FROSTBITE_TRENCH_FOOT",
       "archetype": "CROWD_TALLY",
       "headerContext": null,
-      "caption": "BOOTS FROZE SOLID IN MUD. — FROSTBITE CRIPPLED THOUSANDS.",
+      "caption": "BOOTS FROZE SOLID IN MUD. — THE ARCTIC CRIPPLED TROOPS.",
       "visualAsset": "ALEUTIAN_TUNDRA_FROSTBITE_TOLL"
     },
     {
@@ -139,7 +128,7 @@
       "sceneId": "SCENE_14_ATTU_GARRISON_TOLL",
       "archetype": "CROWD_TALLY",
       "headerContext": null,
-      "caption": "TWO THOUSAND DEFENDERS DIED. — ONLY TWENTY-EIGHT SURVIVED.",
+      "caption": "GARRISON FOUGHT TO DEATH. — ALMOST NONE SURVIVED.",
       "visualAsset": "ALEUTIAN_ATTU_SURVIVOR_TALLY"
     },
     {
@@ -156,7 +145,7 @@
       "archetype": "VEHICLE_IN_TRANSIT",
       "headerContext": "JULY 28, 1943 • SECRET EVACUATION",
       "caption": "EIGHT WARSHIPS SLIPPED IN. — VANISHING IN FIFTY-FIVE MINUTES.",
-      "visualAsset": "ALEUTIAN_KIMURA_FOG_EVACUATION"
+      "visualAsset": "ALEUTIAN_KIMURA_FOG_ESCAPE"
     },
     {
       "sceneNumber": 17,
@@ -187,7 +176,7 @@
       "sceneId": "SCENE_20_KISKA_GHOST_CASUALTIES",
       "archetype": "CROWD_TALLY",
       "headerContext": null,
-      "caption": "OVER THREE HUNDRED CASUALTIES. — FIGHTING AN EMPTY ISLAND.",
+      "caption": "DEADLY FRIENDLY FIRE TOLL. — FIGHTING AN EMPTY ISLAND.",
       "visualAsset": "ALEUTIAN_KISKA_GHOST_TOLL_COUNTER"
     },
     {

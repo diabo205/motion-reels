@@ -1,7 +1,7 @@
 {
   "projectSlug": "aleutian-campaign-1942",
   "title": "1942 ALEUTIAN CAMPAIGN",
-  "updatedAt": "2026-11-01T09:24:19.212Z",
+  "updatedAt": "2026-11-01T09:55:08.160Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,10 +11,10 @@
   },
   "timeline": {
     "file": "src/timelines/aleutian_campaign_1942.json",
-    "sha256": "0de32d9ed534a7a34658541a7288eab2f04b1d7cf7ffb18f03b4b1e671ce4e14",
+    "sha256": "80064b3c0f1cdf8677d130c4e42378a311a2ae34587a4a2c75db9fbf9d2844c1",
     "sceneCount": 21,
-    "totalFrames": 2880,
-    "durationSec": 48
+    "totalFrames": 2868,
+    "durationSec": 47.8
   },
   "audio": {
     "bgmFile": "audio/bgm_aleutian.mp3",
