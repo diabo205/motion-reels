@@ -432,7 +432,7 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     // 1. SEARCHLIGHT_HOOK_CONVOY
     // ========================================================
     case 'SEARCHLIGHT_HOOK_CONVOY': {
-      const tankProgress = interpolate(frame, [0, durationFrames], [-120, 260]);
+      const tankProgress = interpolate(frame, [0, durationFrames], [-120, 260], { extrapolateRight: 'clamp' });
       return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 10 }}>
           <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0 }}>
@@ -888,7 +888,7 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     // 14. C130_GREAT_FLY_IN_AIRLIFT
     // ========================================================
     case 'C130_GREAT_FLY_IN_AIRLIFT': {
-      const c130X = interpolate(frame, [0, durationFrames], [-240, 960]);
+      const c130X = interpolate(frame, [0, durationFrames], [-240, 960], { extrapolateRight: 'clamp' });
       return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 10 }}>
           <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0 }}>
@@ -1191,7 +1191,7 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
 
     case 'T33_LOW_PASS_SILHOUETTE': {
       // Dynamic banking flyby across middle-lower sky + Die-Cut Hero Puppet in lower right
-      const jetX = interpolate(frame, [0, durationFrames], [-280, 980]);
+      const jetX = interpolate(frame, [0, durationFrames], [-280, 980], { extrapolateRight: 'clamp' });
       const jetY = 980 + Math.sin(frame / 8) * 18;
       return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 10 }}>
@@ -1434,7 +1434,7 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     }
 
     case 'T33_LOW_ALTITUDE_AFTERBURNER': {
-      const offsetX = interpolate(frame, [0, durationFrames], [-160, 860]);
+      const offsetX = interpolate(frame, [0, durationFrames], [-160, 860], { extrapolateRight: 'clamp' });
       return (
         <div style={{ position: 'absolute', inset: 0, zIndex: 10 }}>
           <PaperSignCounter
@@ -1644,10 +1644,10 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     }
 
     case 'T33_CANOPY_EJECTION_RETICLE': {
-      const canopyY = interpolate(frame, [0, durationFrames], [1150, 720]);
-      const canopyX = interpolate(frame, [0, durationFrames], [520, 340]);
-      const hijackerX = interpolate(frame, [0, durationFrames], [480, 820]);
-      const hijackerY = interpolate(frame, [0, durationFrames], [1160, 740]);
+      const canopyY = interpolate(frame, [0, durationFrames], [1150, 720], { extrapolateRight: 'clamp' });
+      const canopyX = interpolate(frame, [0, durationFrames], [520, 340], { extrapolateRight: 'clamp' });
+      const hijackerX = interpolate(frame, [0, durationFrames], [480, 820], { extrapolateRight: 'clamp' });
+      const hijackerY = interpolate(frame, [0, durationFrames], [1160, 740], { extrapolateRight: 'clamp' });
       const hijackerRot = frame * 6;
 
       return (

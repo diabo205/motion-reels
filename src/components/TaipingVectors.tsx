@@ -810,8 +810,8 @@ export const HongFeverDreamVision: React.FC = () => {
     extrapolateRight: 'clamp',
     easing: (t) => t * t,
   });
-  const bladeX = interpolate(bladeProgress, [0, 1], [-140, 1220]);
-  const bladeY = interpolate(bladeProgress, [0, 1], [640, 1560]);
+  const bladeX = interpolate(bladeProgress, [0, 1], [-140, 1220], { extrapolateRight: 'clamp' });
+  const bladeY = interpolate(bladeProgress, [0, 1], [640, 1560], { extrapolateRight: 'clamp' });
 
   // Flash at slash impact (frame 16-17)
   const isSlashFlash = frame === 16 || frame === 17;

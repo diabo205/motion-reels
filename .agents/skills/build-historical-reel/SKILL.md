@@ -15,6 +15,10 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
 
 0.5. **Pre-Production Storyboard & Direction Planning (`motion-graphics-director`)**:
    - Execute pre-production direction and storyboarding using `.agents/skills/motion-graphics-director/SKILL.md` **FIRST before compiling timelines or drafting assets**.
+   - **Ingest Empirical Retention Priors (`config/retention_priors.json`)**:
+     - Check `recentHookArchetypeHistory` to rotate the Scene 1 hook archetype across consecutive reels.
+     - Bias Scene 1 duration to `pacingPriors.targetHookDurationFrames: 128` (2.13s).
+     - Cross-reference `scene_type → optimal_duration_range → observed_retention_delta` in `config/retention_priors.json` to bias scene durations toward high-retention windows and space `STRUCTURAL_FRACTURE` / `SPLIT_CONFRONTATION` beats every 4–6 cuts.
    - Deconstruct every scene into the 4 core narrative beats:
      1. *Inciting trigger*: The initial action, command, environmental shift, or failure point.
      2. *Mechanical/physical reaction*: The chain of physical, structural, or tactical consequences.

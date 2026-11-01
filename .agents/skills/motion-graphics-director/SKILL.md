@@ -13,6 +13,33 @@ A structured workflow for directing, storyboarding, and animating any complex do
 - Adapting scene composition, camera movement, VFX, and typography to specific creator aesthetics
 - Directing dramatic historical moments, tactical decisions, forensic reconstructions, or systemic breakdowns
 
+## Phase 0.5: Ingest Empirical Retention Priors (`config/retention_priors.json`)
+
+Before scripting, storyboarding, or compiling the timeline, consult `config/retention_priors.json` (validated by `config/retention_priors.schema.json`) to close the feedback loop between published video performance and animation parameters:
+
+1. **Scene 1 Hook Selection & Duration Lock**:
+   - **Archetype Rotation**: Inspect `recentHookArchetypeHistory` to ensure Scene 1 does not reuse the opening archetype of the previous 2 reels (`ARCHETYPE_ROTATION_LINT`).
+   - **High-Retention Hook Archetypes**: Select from archetypes with `recommendedForHook: true` and the highest positive `observed_retention_delta` (e.g. `SPLIT_CONFRONTATION` [+2.0% to +3.7%], `STRUCTURAL_FRACTURE` [+2.5% to +3.4%], `QUOTE_CARD` [+2.0%]).
+   - **Target Hook Duration**: Bias Scene 1 strictly to `pacingPriors.targetHookDurationFrames: 128` (2.13s @ 60 FPS) to stop feed scrolling within 1.2 seconds.
+   - **Sharp Frame 0**: Keep Global Frame 0 sharp (`blur(0px)`, `opacity: 1`) for feed thumbnails and poster generation (`projects/<slug>/deliverables/poster.png`).
+
+2. **Archetype Duration Biasing (`scene_type → optimal_duration_range → observed_retention_delta`)**:
+   - For every scene in Acts II–V, cross-reference its assigned archetype against `archetypeRetentionPriors[scene_type].optimal_duration_range` and `duration_delta_matrix`.
+   - Bias scene cut durations toward the duration bucket with the highest positive `observed_retention_delta` (e.g., `[120, 136]f` for intense confrontations, `[128, 144]f` for kinetic transit/fracture, `[136, 152]f` for crowd tallies).
+   - Hold all scenes strictly within **`120` to `168` frames** (2.0s–2.8s; up to `180f` on final epilogue), keeping total reel duration between **`2,700` and `3,500` frames** (`45.00s` to `58.33s`).
+
+3. **Combating Retention Drop-Off Valleys**:
+   - **Strategic Pacing Spikes**: Space high-impact, positive-delta archetypes (`STRUCTURAL_FRACTURE`, `SPLIT_CONFRONTATION`, `QUOTE_CARD`) every 4–6 scenes to create retention bumps and avoid mid-video drop-off valleys.
+   - **No Consecutive Repetition**: Never place more than 2 consecutive scenes of the identical archetype.
+   - **High Drop-off Risk Archetypes**: For archetypes flagged `drop_off_risk: "HIGH"` (e.g., static maps or complex documents), constrain them strictly to the bottom of their duration window (`120–136f`) with continuous micro-motion.
+
+4. **Payoff Alignment & Audio Sync**:
+   - Align the red payoff line and camera `IMPACT_SHAKE` with the prominent musical transient (`optimalPayoffBeatIndex: 1`) in `[18, 45]` frames.
+   - Trigger transient impact SFX (`sub_boom.wav`, `stamp_slam.wav`) `sfxPerceptualLeadFrames: 2` frames early (-33ms lead) with `-7.5 dB` BGM ducking.
+
+5. **Closing the Loop via Ingestion CLI**:
+   - When real performance curves become available from YouTube Studio (CSV) or TikTok Analytics (JSON), run `node scripts/pipeline.js --telemetry --ingest <path> --project <slug>` to update the priors automatically.
+
 ## Step 1: Deconstruct the Scene into Core Narrative Beats
 
 Break down the event or topic into chronological, cause-and-effect visual beats:

@@ -62,7 +62,7 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
 
 9. **Automated Linting, JSON Audit & Cross-Platform Node Pipeline (`scripts/pipeline.js`)**:
    - Pass `--project <slug>` explicitly to all CLI commands (`node scripts/pipeline.js --project <slug> --audit-stills`).
-   - Verify all linters (`FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `GLYPH_WIDTH_AND_LINE_CAP`) and inspect `projects/<slug>/audit/audit_report.json`.
+   - Verify all linters (`FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `GLYPH_WIDTH_AND_LINE_CAP`, and framework-level hooks via `scripts/lint_framework.js`: `NO_MATH_RANDOM`, `INTERPOLATE_CLAMP`, `NO_CSS_ANIMATIONS`, `NO_WALL_CLOCK_TIME`) and inspect `projects/<slug>/audit/audit_report.json`.
    - Auto-export `captions.srt`, `metadata.json`, `poster.png` (9:16), and `poster_4x5.png` (4:5 IG grid) to `projects/<slug>/deliverables/`.
 
 10. **Pre-Production Planning with Motion Graphics Director Skill**:

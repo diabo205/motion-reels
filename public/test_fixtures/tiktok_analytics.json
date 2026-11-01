@@ -1,0 +1,30 @@
+{
+  "item_id": "7198273645123984",
+  "platform": "tiktok",
+  "watched_full_video_rate": 0.625,
+  "average_play_time_pct": 76.2,
+  "second_by_second": [
+    { "second": 0, "retention_rate": 100.0 },
+    { "second": 1, "retention_rate": 95.8 },
+    { "second": 2, "retention_rate": 93.4 },
+    { "second": 3, "retention_rate": 91.2 },
+    { "second": 4, "retention_rate": 89.9 },
+    { "second": 5, "retention_rate": 88.5 },
+    { "second": 6, "retention_rate": 87.3 },
+    { "second": 7, "retention_rate": 86.4 },
+    { "second": 8, "retention_rate": 85.6 },
+    { "second": 9, "retention_rate": 84.8 },
+    { "second": 10, "retention_rate": 84.0 },
+    { "second": 12, "retention_rate": 82.5 },
+    { "second": 15, "retention_rate": 80.8 },
+    { "second": 18, "retention_rate": 79.2 },
+    { "second": 22, "retention_rate": 77.4 },
+    { "second": 26, "retention_rate": 75.8 },
+    { "second": 30, "retention_rate": 74.1 },
+    { "second": 35, "retention_rate": 72.0 },
+    { "second": 40, "retention_rate": 69.8 },
+    { "second": 45, "retention_rate": 67.5 },
+    { "second": 50, "retention_rate": 65.2 },
+    { "second": 54, "retention_rate": 63.8 }
+  ]
+}

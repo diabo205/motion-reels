@@ -295,11 +295,24 @@ const WavingJapaneseEnsign: React.FC<{
 // =========================================================================
 // 1. SCENE 01: ALEUTIAN_FORGOTTEN_INVASION_OPENING
 // Split confrontation: U.S. coastal lookout vs Imperial Japanese Navy fleet
+// Hydrodynamically seated vessels floating directly IN Arctic ocean swells
 // =========================================================================
 export const AleutianForgottenInvasionOpening: React.FC = () => {
   const frame = useCurrentFrame();
-  const seaRoll = Math.sin(frame * 0.07) * 12;
-  const shipPitch = Math.sin(frame * 0.09) * 2.5;
+  const waveCycle = frame * 0.07;
+  const seaRoll = Math.sin(waveCycle) * 10;
+  
+  // Hydrodynamic motion: vessels heave and pitch naturally with ocean wave cycles
+  const shipHeave = Math.sin(waveCycle + 0.6) * 5.5;
+  const shipPitchDeg = Math.sin(waveCycle - 0.2) * 1.6;
+  
+  // Distant carrier motion
+  const carrierHeave = Math.sin(waveCycle + 1.2) * 2.5;
+  const carrierPitchDeg = Math.sin(waveCycle + 0.5) * 0.8;
+  
+  // Dynamic bow spray bursts as waves strike the cruiser's raked stem
+  const bowSprayBurst = Math.max(0, Math.sin(waveCycle + 0.6)) * 5;
+  
   const lookoutBreath = Math.sin(frame * 0.12) * 2;
   const mistDrift = (frame * 1.5) % 360;
 
@@ -310,54 +323,99 @@ export const AleutianForgottenInvasionOpening: React.FC = () => {
           <clipPath id="cruiserEnsignClip">
             <rect x="0" y="0" width="46" height="28" rx="1" />
           </clipPath>
+          <linearGradient id="s1DistantSeaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#101C2B" />
+            <stop offset="50%" stopColor="#0B131E" />
+            <stop offset="100%" stopColor="#070B11" />
+          </linearGradient>
+          <linearGradient id="s1HullOcclusion" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#03060A" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#03060A" stopOpacity="0.0" />
+          </linearGradient>
         </defs>
 
-        <PolarHorizonGlow cx={640} cy={1240} rx={480} ry={260} color="CYAN" intensity={0.85} />
+        <PolarHorizonGlow cx={640} cy={1220} rx={480} ry={240} color="CYAN" intensity={0.85} />
 
-        {/* Distant Jagged Volcanic Peaks */}
-        <polygon points="80,1320 260,1150 450,1320" fill="#0E1622" opacity="0.7" />
-        <polygon points="340,1320 540,1110 760,1320" fill="#111B2A" opacity="0.85" />
-        <polygon points="235,1175 260,1150 285,1175 260,1168" fill="#E2E8F0" opacity="0.85" />
-        <polygon points="505,1145 540,1110 575,1145 540,1135" fill="#F8FAFC" opacity="0.9" />
+        {/* Distant Jagged Volcanic Peaks behind Ocean Horizon */}
+        <polygon points="60,1240 240,1110 430,1240" fill="#0E1622" opacity="0.75" />
+        <polygon points="320,1240 520,1075 740,1240" fill="#111B2A" opacity="0.88" />
+        <polygon points="215,1135 240,1110 265,1135 240,1128" fill="#CBD5E1" opacity="0.85" />
+        <polygon points="485,1110 520,1075 555,1110 520,1100" fill="#F1F5F9" opacity="0.9" />
 
-        {/* Bering Sea Swells */}
+        {/* Continuous Distant Ocean Plane (No sky gap under fleet) */}
         <path
-          d={`M 0 ${1310 + seaRoll * 0.5} Q 280 ${1290 - seaRoll} 540 ${1310 + seaRoll * 0.5} T 1080 ${1310 + seaRoll * 0.5} L 1080 1495 L 0 1495 Z`}
-          fill="#0D1520"
+          d="M 220 1225 Q 600 1220 1080 1225 L 1080 1495 L 220 1495 Z"
+          fill="url(#s1DistantSeaGrad)"
         />
 
-        {/* RIGHT SIDE: Looming Imperial Japanese Navy Cruiser & Carrier Silhouettes */}
-        <g transform={`translate(480, ${1185 + shipPitch})`} filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.35))">
-          {/* Distant Carrier Silhouette (Ryūjō) */}
-          <g transform="translate(170, -32)" opacity="0.7">
-            <path d="M 20 50 L 230 50 L 215 68 L 35 68 Z" fill="#070B10" />
-            <rect x="55" y="42" width="145" height="8" fill="#070B10" />
-            <rect x="135" y="32" width="24" height="10" fill="#070B10" />
-          </g>
+        {/* Distant Carrier Silhouette (Ryūjō) Firmly Seated on Ocean Horizon */}
+        <g
+          transform={`translate(670, ${1222 + carrierHeave}) rotate(${carrierPitchDeg}, 100, 22)`}
+          opacity="0.72"
+          filter="drop-shadow(0 0 10px rgba(56, 189, 248, 0.25))"
+        >
+          {/* Submerged Hull Cavitation Shadow in Water */}
+          <polygon points="12,24 182,24 175,30 18,30" fill="url(#s1HullOcclusion)" />
+          {/* Flight Deck & Hull */}
+          <path d="M 10 16 L 195 16 L 182 26 L 18 26 Z" fill="#070B10" />
+          <rect x="45" y="10" width="135" height="6" fill="#070B10" />
+          <rect x="120" y="2" width="20" height="9" fill="#070B10" />
+          {/* Waterline Contact Streak */}
+          <line x1="8" y1="24" x2="198" y2="24" stroke="#7DD3FC" strokeWidth="1.5" opacity="0.65" />
+          {/* Subtle Stern Wake and Bow Wash */}
+          <ellipse cx="192" cy="24" rx="14" ry="2" fill="#BAE6FD" opacity="0.5" />
+          <ellipse cx="12" cy="24" rx="8" ry="1.8" fill="#E0F2FE" opacity="0.6" />
+        </g>
 
-          {/* Heavy Cruiser Silhouette (Takao / Maya class) */}
+        {/* Mid-Distance Swell Layer with Foam Crest */}
+        <path
+          d={`M 150 ${1272 + seaRoll * 0.4} Q 560 ${1262 - seaRoll * 0.4} 840 ${1270 + seaRoll * 0.3} T 1080 ${1268 + seaRoll * 0.3} L 1080 1495 L 150 1495 Z`}
+          fill="#0A121C"
+        />
+        <path
+          d={`M 150 ${1270 + seaRoll * 0.4} Q 560 ${1260 - seaRoll * 0.4} 840 ${1268 + seaRoll * 0.3} T 1080 ${1266 + seaRoll * 0.3}`}
+          stroke="#38BDF8"
+          strokeWidth="1.8"
+          fill="none"
+          opacity="0.45"
+        />
+
+        {/* RIGHT SIDE: Imperial Japanese Navy Heavy Cruiser (Takao / Maya class) Seated in Sea */}
+        <g
+          transform={`translate(470, ${1242 + shipHeave}) rotate(${shipPitchDeg}, 210, 68)`}
+          filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.35))"
+        >
+          {/* Submerged Hull Cavitation Shadow in Water */}
+          <polygon points="12,66 422,66 414,88 14,88" fill="url(#s1HullOcclusion)" />
+
+          {/* Heavy Cruiser Main Hull with Submerged Keel (Waterline at y = 66, Keel down to y = 82) */}
           <path
-            d="M 40 72 L 105 54 L 220 54 L 240 38 L 268 38 L 280 54 L 365 54 L 400 72 L 420 92 L 25 92 Z"
+            d="M 38 48 L 105 38 L 220 38 L 240 24 L 268 24 L 280 38 L 365 38 L 405 48 L 425 56 L 415 82 L 14 82 L 20 66 Z"
             fill="#070B10"
             stroke="#1E293B"
             strokeWidth="1.5"
           />
+
           {/* Pagoda Mast & Bridge Superstructure */}
-          <polygon points="168,54 176,12 212,12 222,54" fill="#070B10" />
-          <polygon points="172,22 194,-4 216,22" fill="#070B10" />
-          <polygon points="236,54 246,18 266,18 262,54" fill="#070B10" />
-          <line x1="194" y1="-4" x2="194" y2="-36" stroke="#070B10" strokeWidth="4" />
+          <polygon points="168,38 176,2 212,2 222,38" fill="#070B10" />
+          <polygon points="172,12 194,-10 216,12" fill="#070B10" />
+          <polygon points="236,38 246,8 266,8 262,38" fill="#070B10" />
+          <line x1="194" y1="-10" x2="194" y2="-42" stroke="#070B10" strokeWidth="4" />
 
-          {/* Twin 8-inch Forward & Aft Gun Turrets */}
-          <rect x="85" y="44" width="34" height="12" rx="2" fill="#070B10" />
-          <line x1="52" y1="47" x2="85" y2="49" stroke="#334155" strokeWidth="3.5" />
-          <rect x="128" y="36" width="34" height="12" rx="2" fill="#070B10" />
-          <line x1="96" y1="39" x2="128" y2="41" stroke="#334155" strokeWidth="3.5" />
-          <rect x="315" y="44" width="32" height="12" rx="2" fill="#070B10" />
-          <line x1="347" y1="49" x2="378" y2="46" stroke="#334155" strokeWidth="3.5" />
+          {/* Twin Raked Cruiser Funnels */}
+          <polygon points="186,38 192,16 206,16 202,38" fill="#070B10" />
+          <polygon points="214,38 220,18 232,18 228,38" fill="#070B10" />
 
-          {/* Clipped Battle Ensign Flying from Cruiser Mast */}
-          <g transform="translate(198, -32)" clipPath="url(#cruiserEnsignClip)">
+          {/* Forward & Aft 8-inch Main Gun Turrets */}
+          <rect x="75" y="32" width="36" height="12" rx="2" fill="#070B10" />
+          <line x1="38" y1="36" x2="75" y2="38" stroke="#475569" strokeWidth="3.5" />
+          <rect x="120" y="24" width="36" height="12" rx="2" fill="#070B10" />
+          <line x1="82" y1="28" x2="120" y2="30" stroke="#475569" strokeWidth="3.5" />
+          <rect x="320" y="32" width="34" height="12" rx="2" fill="#070B10" />
+          <line x1="354" y1="38" x2="390" y2="35" stroke="#475569" strokeWidth="3.5" />
+
+          {/* Clipped Imperial Japanese Navy Battle Ensign from Mast */}
+          <g transform="translate(198, -38)" clipPath="url(#cruiserEnsignClip)">
             <rect x="0" y="0" width="46" height="28" fill="#F8FAFC" />
             {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((ang) => (
               <line
@@ -372,19 +430,55 @@ export const AleutianForgottenInvasionOpening: React.FC = () => {
             ))}
             <circle cx="16" cy="14" r="7" fill="#DC2626" />
           </g>
+
+          {/* Waterline Displacement Foam Crest along the Cruiser Hull */}
+          <path
+            d="M 16 66 Q 60 64 120 67 T 240 65 T 340 67 T 422 66"
+            stroke="#BAE6FD"
+            strokeWidth="2.8"
+            fill="none"
+            opacity="0.95"
+          />
+          <circle cx="50" cy="66" r="2.2" fill="#F8FAFC" opacity="0.9" />
+          <circle cx="140" cy="67" r="1.8" fill="#BAE6FD" opacity="0.8" />
+          <circle cx="270" cy="65" r="2" fill="#F8FAFC" opacity="0.9" />
+          <circle cx="370" cy="66" r="1.8" fill="#BAE6FD" opacity="0.8" />
+
+          {/* Dynamic Curling Bow Spray (V-Wake) */}
+          <path d="M 24 65 Q 4 62 -22 69 Q -10 75 18 72 Z" fill="#E0F2FE" opacity="0.9" />
+          <path d={`M 22 64 Q 0 ${56 - bowSprayBurst} -18 64`} stroke="#F8FAFC" strokeWidth="2.5" fill="none" />
+          <circle cx="-12" cy={57 - bowSprayBurst * 0.7} r="2" fill="#BAE6FD" />
+          <circle cx="-5" cy={54 - bowSprayBurst * 0.9} r="1.5" fill="#F8FAFC" />
+
+          {/* Churning Propeller Wash at Stern */}
+          <ellipse cx="430" cy="68" rx="24" ry="5.5" fill="#BAE6FD" opacity="0.8" />
+          <ellipse cx="446" cy="69" rx="15" ry="3.8" fill="#F8FAFC" opacity="0.7" />
         </g>
 
-        {/* Foreground Bering Sea Crest with Foam */}
+        {/* Near-Foreground Sea Swell Lapping Against Cruiser Lower Hull (Physically Embeds Hull in Sea) */}
         <path
-          d={`M 0 ${1360 - seaRoll} Q 260 ${1380 + seaRoll} 540 ${1350 - seaRoll} T 1080 ${1370} L 1080 1495 L 0 1495 Z`}
-          fill="#070B10"
+          d={`M 360 ${1310 + seaRoll * 0.5} Q 620 ${1300 - seaRoll * 0.3} 840 ${1308 + seaRoll * 0.4} T 1080 ${1306 + seaRoll * 0.3} L 1080 1495 L 360 1495 Z`}
+          fill="#080F18"
         />
         <path
-          d={`M 0 ${1358 - seaRoll} Q 260 ${1378 + seaRoll} 540 ${1348 - seaRoll} T 1080 ${1368}`}
+          d={`M 360 ${1308 + seaRoll * 0.5} Q 620 ${1298 - seaRoll * 0.3} 840 ${1306 + seaRoll * 0.4} T 1080 ${1304 + seaRoll * 0.3}`}
           stroke="#7DD3FC"
-          strokeWidth="3.5"
+          strokeWidth="2.8"
           fill="none"
           opacity="0.75"
+        />
+
+        {/* Foreground Bering Sea Swell with Ice-Cyan Whitecap */}
+        <path
+          d={`M 0 ${1362 - seaRoll} Q 260 ${1382 + seaRoll} 540 ${1352 - seaRoll} T 1080 ${1368} L 1080 1495 L 0 1495 Z`}
+          fill="#05080E"
+        />
+        <path
+          d={`M 0 ${1360 - seaRoll} Q 260 ${1380 + seaRoll} 540 ${1350 - seaRoll} T 1080 ${1366}`}
+          stroke="#38BDF8"
+          strokeWidth="3.5"
+          fill="none"
+          opacity="0.8"
         />
 
         {/* LEFT SIDE: Rocky Alaskan Promontory with Coastal Survey Beacon & Lookout Silhouette */}
@@ -655,14 +749,90 @@ export const AleutianArchipelagoVectorMap: React.FC = () => {
 
 // =========================================================================
 // 3. SCENE 03: ALEUTIAN_DUTCH_HARBOR_BOMBING
-// June 3, 1942: Fuel tanks fracturing in fiery explosions, billowing oil smoke & diving Zeros
+// June 3, 1942: Fuel tanks fracturing in fiery explosions, billowing oil smoke,
+// lead Val dive bomber dropping payload, and follow-up Zero strafing run
 // =========================================================================
 export const AleutianDutchHarborBombing: React.FC = () => {
   const frame = useCurrentFrame();
   const flamePulse = 1 + Math.sin(frame * 0.3) * 0.12;
   const smokeRise = (frame * 2.2) % 180;
-  const diveProgress = interpolate(frame % 90, [0, 90], [0, 1]);
   const tracerOffset = (frame * 18) % 300;
+
+  // 1. Lead Japanese Aichi D3A "Val" Dive Bomber: single non-looping dive & pull-up (frames 0..65)
+  const valDiveX = interpolate(frame, [0, 35, 65], [840, 520, 160], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const valDiveY = interpolate(frame, [0, 35, 65], [890, 1140, 1020], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const valAngle = interpolate(frame, [0, 32, 45, 65], [42, 38, -6, -14], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const valOpacity = interpolate(frame, [50, 65], [1, 0], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+
+  // 2. 250kg Aerial Bomb Release: drops from Val at frame 16, strikes tank at frame 25
+  const bombProgress = interpolate(frame, [16, 25], [0, 1], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const bombX = interpolate(bombProgress, [0, 1], [640, 375], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const bombY = interpolate(bombProgress, [0, 1], [1020, 1315], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const bombAngle = interpolate(bombProgress, [0, 1], [38, 70], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+
+  // 3. Detonation Shockwave & Fireball Expansion (detonates on bomb impact at frame 25)
+  const blastScale =
+    frame < 25
+      ? 0.35
+      : interpolate(frame, [25, 32, 128], [0.4, 1.35, 1.1], {
+          extrapolateRight: 'clamp',
+          extrapolateLeft: 'clamp',
+        });
+  const shockwaveR = interpolate(frame, [25, 48], [15, 190], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const shockwaveOpacity = interpolate(frame, [25, 48], [0.85, 0], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+
+  // 4. Follow-up Mitsubishi A6M2 Zero Escort: distinct high-speed strafing run (frames 48..118)
+  const zeroProgress = interpolate(frame, [48, 115], [0, 1], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const zeroX = interpolate(zeroProgress, [0, 1], [940, 60], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const zeroY = interpolate(zeroProgress, [0, 1], [950, 1160], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const zeroAngle = interpolate(zeroProgress, [0, 0.7, 1], [20, 14, -8], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const zeroOpacity = interpolate(frame, [46, 50, 105, 118], [0, 1, 1, 0], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+  });
+  const zeroGunsFiring = frame >= 65 && frame <= 88 && frame % 4 < 2;
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
@@ -692,11 +862,24 @@ export const AleutianDutchHarborBombing: React.FC = () => {
           <rect x="498" y="65" width="84" height="35" fill="#18181B" />
         </g>
 
+        {/* Bomb Detonation Shockwave Ring */}
+        {frame >= 25 && frame <= 48 && (
+          <circle
+            cx="375"
+            cy="1310"
+            r={shockwaveR}
+            fill="none"
+            stroke="#FEF08A"
+            strokeWidth="3.5"
+            opacity={shockwaveOpacity}
+          />
+        )}
+
         {/* Fiery Explosions & Molten Blast Cones */}
         <g transform="translate(375, 1310)">
-          <circle cx="0" cy="0" r={88 * flamePulse} fill="#DC2626" opacity="0.85" />
-          <circle cx="0" cy="0" r={60 * flamePulse} fill="#F59E0B" opacity="0.9" />
-          <circle cx="0" cy="0" r={34 * flamePulse} fill="#FEF08A" />
+          <circle cx="0" cy="0" r={88 * blastScale * flamePulse} fill="#DC2626" opacity={frame >= 25 ? 0.9 : 0.4} />
+          <circle cx="0" cy="0" r={60 * blastScale * flamePulse} fill="#F59E0B" opacity={frame >= 25 ? 0.95 : 0.45} />
+          <circle cx="0" cy="0" r={34 * blastScale * flamePulse} fill="#FEF08A" opacity={frame >= 25 ? 1 : 0.5} />
         </g>
 
         {/* Billowing Black Oil Smoke Plumes */}
@@ -715,6 +898,18 @@ export const AleutianDutchHarborBombing: React.FC = () => {
             opacity={0.88}
           />
         ))}
+
+        {/* Falling 250kg Aerial Bomb (Frames 16..25) */}
+        {frame >= 16 && frame <= 25 && (
+          <g transform={`translate(${bombX}, ${bombY}) rotate(${bombAngle})`}>
+            {/* Bomb Body */}
+            <path d="M 0 -14 C 4 -14 6 -6 6 6 L 6 12 L -6 12 L -6 6 C -6 -6 -4 -14 0 -14 Z" fill="#0A0F16" />
+            {/* Stabilizer Fins */}
+            <polygon points="-8,10 -4,16 -6,16" fill="#0A0F16" />
+            <polygon points="8,10 4,16 6,16" fill="#0A0F16" />
+            <line x1="0" y1="12" x2="0" y2="16" stroke="#0A0F16" strokeWidth="2" />
+          </g>
+        )}
 
         {/* U.S. Navy Anti-Aircraft Tracer Streaks */}
         <g strokeLinecap="round">
@@ -736,18 +931,53 @@ export const AleutianDutchHarborBombing: React.FC = () => {
           />
         </g>
 
-        {/* Japanese Aichi D3A Val Dive Bomber Silhouette */}
-        <g
-          transform={`translate(${interpolate(diveProgress, [0, 1], [760, 420])}, ${interpolate(diveProgress, [0, 1], [930, 1250])}) rotate(38)`}
-          filter="drop-shadow(0 0 10px rgba(0,0,0,0.8))"
-        >
-          <polygon points="0,-38 9,16 0,42 -9,16" fill="#090D12" />
-          <path d="M -80 5 Q 0 -12 80 5 Q 0 22 -80 5 Z" fill="#090D12" />
-          <polygon points="-24,12 -20,32 -28,32" fill="#090D12" />
-          <polygon points="24,12 28,32 20,32" fill="#090D12" />
-          <circle cx="-50" cy="6" r="6.5" fill="#DC2626" />
-          <circle cx="50" cy="6" r="6.5" fill="#DC2626" />
-        </g>
+        {/* 1. Lead Japanese Aichi D3A Val Dive Bomber (Single motivated run, frames 0..65) */}
+        {valOpacity > 0 && (
+          <g
+            transform={`translate(${valDiveX}, ${valDiveY}) rotate(${valAngle})`}
+            opacity={valOpacity}
+            filter="drop-shadow(0 0 10px rgba(0,0,0,0.85))"
+          >
+            {/* Fuselage & Spatted Fixed Landing Gear */}
+            <polygon points="0,-38 9,16 0,42 -9,16" fill="#090D12" />
+            <path d="M -80 5 Q 0 -12 80 5 Q 0 22 -80 5 Z" fill="#090D12" />
+            {/* Spatted Gear Pods */}
+            <polygon points="-24,12 -20,32 -28,32" fill="#090D12" />
+            <polygon points="24,12 28,32 20,32" fill="#090D12" />
+            {/* Hinomaru Roundels */}
+            <circle cx="-50" cy="6" r="6.5" fill="#DC2626" />
+            <circle cx="50" cy="6" r="6.5" fill="#DC2626" />
+          </g>
+        )}
+
+        {/* 2. Follow-up Mitsubishi A6M2 Zero Escort (Strafing pass, frames 48..118) */}
+        {zeroOpacity > 0 && (
+          <g
+            transform={`translate(${zeroX}, ${zeroY}) rotate(${zeroAngle})`}
+            opacity={zeroOpacity}
+            filter="drop-shadow(0 0 10px rgba(0,0,0,0.85))"
+          >
+            {/* Zero Fuselage */}
+            <polygon points="0,-32 7,10 0,36 -7,10" fill="#080C11" />
+            {/* Sleek Tapered Zero Wings */}
+            <path d="M -72 2 Q 0 -10 72 2 Q 0 15 -72 2 Z" fill="#080C11" />
+            {/* Horizontal Stabilizer */}
+            <polygon points="-22,26 0,22 22,26 0,32" fill="#080C11" />
+            {/* Red Hinomaru Insignia */}
+            <circle cx="-46" cy="3" r="6" fill="#DC2626" />
+            <circle cx="46" cy="3" r="6" fill="#DC2626" />
+
+            {/* Twin 20mm Wing Cannon Muzzle Tracers when Strafing */}
+            {zeroGunsFiring && (
+              <g strokeLinecap="round">
+                <line x1="-30" y1="4" x2="-80" y2="95" stroke="#FEF08A" strokeWidth="2.5" />
+                <line x1="30" y1="4" x2="-20" y2="95" stroke="#FEF08A" strokeWidth="2.5" />
+                <circle cx="-30" cy="4" r="3" fill="#F59E0B" />
+                <circle cx="30" cy="4" r="3" fill="#F59E0B" />
+              </g>
+            )}
+          </g>
+        )}
       </svg>
     </div>
   );
@@ -832,58 +1062,184 @@ export const AleutianAkutanZeroBogCrash: React.FC = () => {
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <PolarHorizonGlow cx={480} cy={1290} rx={480} ry={260} color="CYAN" intensity={0.8} />
+        <defs>
+          <radialGradient id="akutanPoolLuminescence" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.55" />
+            <stop offset="45%" stopColor="#0284C7" stopOpacity="0.3" />
+            <stop offset="85%" stopColor="#0E1D2D" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#0A1118" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="akutanTundraGround" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#1C2D42" />
+            <stop offset="25%" stopColor="#152435" />
+            <stop offset="65%" stopColor="#101B27" />
+            <stop offset="100%" stopColor="#0B131D" />
+          </linearGradient>
+          <linearGradient id="akutanFuselageGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stopColor="#1E2B3A" />
+            <stop offset="50%" stopColor="#2D3F54" />
+            <stop offset="100%" stopColor="#3B526D" />
+          </linearGradient>
+          <linearGradient id="akutanWingGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stopColor="#223347" />
+            <stop offset="100%" stopColor="#344A62" />
+          </linearGradient>
+        </defs>
 
-        {/* Gloomy Akutan Tundra Marsh Landscape */}
-        <polygon points="50,1460 280,1310 580,1340 860,1290 920,1460" fill="#0C141C" stroke="#1E293B" strokeWidth="2" />
-        <rect x="50" y="1370" width="870" height="125" fill="#070D14" />
+        <PolarHorizonGlow cx={480} cy={1270} rx={520} ry={300} color="CYAN" intensity={1.0} />
 
-        {/* Waterlogged Tundra Pool with Water Reflections */}
-        <ellipse cx="490" cy="1395" rx="350" ry="58" fill="#04090F" stroke="#1E293B" strokeWidth="2.5" />
+        {/* Distant Cold Tundra Ridges with Snow Cornices */}
+        <polygon
+          points="50,1370 230,1250 510,1280 810,1235 920,1370"
+          fill="#13202E"
+          stroke="#334155"
+          strokeWidth="1.5"
+        />
+        <polygon points="230,1250 350,1268 320,1276 210,1262" fill="#CBD5E1" opacity="0.85" />
+        <polygon points="510,1280 620,1292 590,1300 490,1288" fill="#CBD5E1" opacity="0.85" />
+
+        {/* Midground Gloomy Akutan Tundra Marsh Hummocks */}
+        <polygon
+          points="50,1460 260,1320 540,1345 840,1305 920,1460"
+          fill="url(#akutanTundraGround)"
+          stroke="#38BDF8"
+          strokeWidth="2"
+        />
+        {/* Frost / Snow Crust Ledges on Tundra Hummocks */}
+        <path
+          d="M 230 1324 Q 260 1318 310 1326 Q 340 1332 370 1338"
+          stroke="#E2E8F0"
+          strokeWidth="3.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M 790 1312 Q 840 1304 880 1322"
+          stroke="#E2E8F0"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+        />
+
+        {/* Foreground Peat Bog & Permafrost Layer Cross-Section */}
+        <rect x="50" y="1375" width="870" height="115" fill="#111B27" stroke="#1E293B" strokeWidth="1.5" />
+        {/* Glowing Permafrost Ice Vein Band */}
+        <line x1="50" y1="1378" x2="920" y2="1378" stroke="#38BDF8" strokeWidth="2.5" opacity="0.75" />
+        <line x1="60" y1="1405" x2="910" y2="1405" stroke="#1E3A5F" strokeWidth="2" strokeDasharray="30 15" opacity="0.6" />
+
+        {/* Waterlogged Tundra Pool with Vivid Sky Luminescence */}
+        <ellipse cx="490" cy="1395" rx="360" ry="62" fill="#12202E" stroke="#38BDF8" strokeWidth="2" />
+        <ellipse cx="490" cy="1395" rx="330" ry="52" fill="#0C1A29" />
+        <ellipse cx="490" cy="1395" rx="280" ry="40" fill="url(#akutanPoolLuminescence)" />
+
+        {/* Dynamic Expanding Ripples in Peat Water */}
         <ellipse
           cx="490"
           cy="1395"
-          rx={80 + waterRipple * 2.8}
-          ry={14 + waterRipple * 0.5}
+          rx={60 + waterRipple * 3.2}
+          ry={10 + waterRipple * 0.55}
           fill="none"
           stroke="#38BDF8"
+          strokeWidth="2.2"
+          opacity={Math.max(0, 0.85 - waterRipple / 80)}
+        />
+        <ellipse
+          cx="490"
+          cy="1395"
+          rx={20 + ((waterRipple + 40) % 80) * 3.2}
+          ry={4 + ((waterRipple + 40) % 80) * 0.55}
+          fill="none"
+          stroke="#7DD3FC"
           strokeWidth="1.8"
-          opacity={Math.max(0, 0.8 - waterRipple / 80)}
+          opacity={Math.max(0, 0.7 - ((waterRipple + 40) % 80) / 80)}
         />
 
-        {/* Parametric Inverted Mitsubishi A6M2 Zero Fighter */}
-        <g transform="translate(480, 1340) rotate(-14)" filter="drop-shadow(0 0 14px rgba(0,0,0,0.85))">
+        {/* Parametric Inverted Mitsubishi A6M2 Zero Fighter (Crisp Contrast & Cyan Rim Back-Glow) */}
+        <g
+          transform="translate(480, 1340) rotate(-14)"
+          filter="drop-shadow(0 0 18px rgba(56, 189, 248, 0.6)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.4))"
+        >
+          {/* Bent 3-Blade Propeller Stuck Inverted in Bog Peat */}
           <g transform="translate(-160, 45)">
-            <ellipse cx="0" cy="0" rx="14" ry="12" fill="#1C1917" />
-            <path d="M 0 0 Q -25 25 -40 45" stroke="#64748B" strokeWidth="7" fill="none" strokeLinecap="round" />
-            <line x1="0" y1="0" x2="-20" y2="-45" stroke="#64748B" strokeWidth="6" strokeLinecap="round" />
-            <line x1="0" y1="0" x2="30" y2="-35" stroke="#64748B" strokeWidth="6" strokeLinecap="round" />
+            <ellipse cx="0" cy="0" rx="14" ry="12" fill="#243343" stroke="#94A3B8" strokeWidth="2" />
+            {/* Bent Blade 1 into Mud */}
+            <path d="M 0 0 Q -25 25 -42 46" stroke="#94A3B8" strokeWidth="7" fill="none" strokeLinecap="round" />
+            <path d="M -34 38 Q -38 42 -42 46" stroke="#F59E0B" strokeWidth="7" fill="none" strokeLinecap="round" />
+            {/* Bent Blade 2 */}
+            <line x1="0" y1="0" x2="-22" y2="-45" stroke="#94A3B8" strokeWidth="6.5" strokeLinecap="round" />
+            <line x1="-16" y1="-34" x2="-22" y2="-45" stroke="#F59E0B" strokeWidth="6.5" strokeLinecap="round" />
+            {/* Bent Blade 3 */}
+            <line x1="0" y1="0" x2="32" y2="-36" stroke="#94A3B8" strokeWidth="6.5" strokeLinecap="round" />
+            <line x1="22" y1="-26" x2="32" y2="-36" stroke="#F59E0B" strokeWidth="6.5" strokeLinecap="round" />
           </g>
 
-          <rect x="-155" y="10" width="60" height="40" rx="4" fill="#0A0F16" stroke="#334155" strokeWidth="2" />
-          <polygon points="-75,40 -20,40 -35,58 -80,52" fill="#0A1118" stroke="#38BDF8" strokeWidth="1.5" />
-          <polygon points="-155,10 165,-5 175,-24 -155,-5" fill="#090E14" stroke="#334155" strokeWidth="2.5" />
-          <path d="M -90 5 L -10 -42 L 95 -42 L 40 5 Z" fill="#0D1520" stroke="#38BDF8" strokeWidth="2" />
-          <circle cx="12" cy="-21" r="18" fill="#DC2626" stroke="#F8FAFC" strokeWidth="1.5" />
+          {/* Engine Cowling (Sakae 12 Radial) */}
+          <rect x="-155" y="8" width="62" height="42" rx="4" fill="#1A2533" stroke="#475569" strokeWidth="2.5" />
+          <line x1="-125" y1="8" x2="-125" y2="50" stroke="#334155" strokeWidth="1.5" />
+          <line x1="-105" y1="8" x2="-105" y2="50" stroke="#334155" strokeWidth="1.5" />
 
-          <line x1="150" y1="-14" x2="165" y2="-38" stroke="#64748B" strokeWidth="4" />
-          <circle cx="168" cy="-42" r="5" fill="#18181B" stroke="#64748B" strokeWidth="2" />
-          <polygon points="120,-8 155,-28 170,-12" fill="#0A0F16" stroke="#334155" strokeWidth="1.5" />
+          {/* Inverted Greenhouse Cockpit Canopy with Glowing Cyan Translucent Glass */}
+          <polygon
+            points="-75,40 -15,40 -32,60 -80,54"
+            fill="rgba(56, 189, 248, 0.4)"
+            stroke="#38BDF8"
+            strokeWidth="2"
+          />
+          <line x1="-55" y1="40" x2="-58" y2="56" stroke="#CBD5E1" strokeWidth="1.8" />
+          <line x1="-35" y1="40" x2="-44" y2="58" stroke="#CBD5E1" strokeWidth="1.8" />
+          <line x1="-70" y1="44" x2="-25" y2="44" stroke="#F8FAFC" strokeWidth="1.5" opacity="0.8" />
+
+          {/* Main Fuselage Profile */}
+          <polygon
+            points="-155,8 165,-6 175,-25 -155,-6"
+            fill="url(#akutanFuselageGrad)"
+            stroke="#64748B"
+            strokeWidth="2.5"
+          />
+          {/* Fuselage Panel Seams */}
+          <line x1="-80" y1="8" x2="-80" y2="-6" stroke="#475569" strokeWidth="1.5" />
+          <line x1="-10" y1="5" x2="-10" y2="-10" stroke="#475569" strokeWidth="1.5" />
+          <line x1="60" y1="1" x2="60" y2="-15" stroke="#475569" strokeWidth="1.5" />
+          <line x1="120" y1="-3" x2="120" y2="-20" stroke="#475569" strokeWidth="1.5" />
+
+          {/* Main Monoplane Wing */}
+          <path
+            d="M -92 6 L -10 -44 L 98 -44 L 42 6 Z"
+            fill="url(#akutanWingGrad)"
+            stroke="#38BDF8"
+            strokeWidth="2.2"
+          />
+          <line x1="-10" y1="-44" x2="25" y2="-44" stroke="#94A3B8" strokeWidth="3" />
+
+          {/* Imperial Japanese Naval Hinomaru (Red Sun with Stark White Rim) */}
+          <circle cx="12" cy="-21" r="19" fill="#DC2626" stroke="#F8FAFC" strokeWidth="2.5" />
+
+          {/* Inverted Tail Assembly (Vertical Stabilizer & Tail Wheel) */}
+          <line x1="150" y1="-14" x2="168" y2="-40" stroke="#94A3B8" strokeWidth="4.5" />
+          <circle cx="170" cy="-44" r="5.5" fill="#1E293B" stroke="#94A3B8" strokeWidth="2" />
+          <polygon
+            points="120,-8 158,-30 172,-13"
+            fill="#2D3F54"
+            stroke="#64748B"
+            strokeWidth="2"
+          />
+          <line x1="135" y1="-12" x2="155" y2="-22" stroke="#38BDF8" strokeWidth="1.5" />
         </g>
 
-        {/* Leaking Oil Smoke Wisp */}
-        <g opacity="0.6">
-          <circle cx={320 - smokeDrift * 0.3} cy={1330 - smokeDrift * 0.6} r={12 + smokeDrift * 0.15} fill="#18181B" />
-          <circle cx={300 - smokeDrift * 0.5} cy={1300 - smokeDrift * 0.8} r={18 + smokeDrift * 0.2} fill="#090D12" />
+        {/* Leaking Oil Steam & Radiator Vapor Wisps */}
+        <g opacity="0.65">
+          <circle cx={320 - smokeDrift * 0.3} cy={1330 - smokeDrift * 0.6} r={12 + smokeDrift * 0.15} fill="#CBD5E1" />
+          <circle cx={300 - smokeDrift * 0.5} cy={1300 - smokeDrift * 0.8} r={18 + smokeDrift * 0.2} fill="#94A3B8" />
+          <circle cx={340 - smokeDrift * 0.2} cy={1340 - smokeDrift * 0.4} r={8 + smokeDrift * 0.1} fill="#F8FAFC" opacity="0.5" />
         </g>
 
-        {/* Tundra Grass Tufts */}
-        <g stroke="#38BDF8" strokeWidth="2.5" strokeLinecap="round" opacity="0.55">
-          {[120, 210, 680, 760, 830].map((tx) => (
+        {/* Tundra Reeds & Frost Grass Tufts Framing the Bog Pool */}
+        <g stroke="#38BDF8" strokeWidth="2.8" strokeLinecap="round" opacity="0.75">
+          {[110, 200, 680, 770, 840].map((tx) => (
             <g key={tx} transform={`translate(${tx}, 1415)`}>
-              <line x1="0" y1="0" x2="-8" y2="-22" />
-              <line x1="4" y1="0" x2="2" y2="-26" />
-              <line x1="8" y1="0" x2="14" y2="-20" />
+              <line x1="0" y1="0" x2="-8" y2="-24" />
+              <line x1="4" y1="0" x2="2" y2="-28" stroke="#E2E8F0" />
+              <line x1="8" y1="0" x2="14" y2="-22" />
             </g>
           ))}
         </g>
@@ -1308,72 +1664,202 @@ export const AleutianHighRidgeMistFire: React.FC = () => {
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <PolarHorizonGlow cx={520} cy={1200} rx={480} ry={280} color="FLARE_RED" intensity={0.85} />
+        <defs>
+          <linearGradient id="ridgeMountainGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#1E2E42" />
+            <stop offset="35%" stopColor="#162434" />
+            <stop offset="70%" stopColor="#121B27" />
+            <stop offset="100%" stopColor="#0B131C" />
+          </linearGradient>
+          <linearGradient id="snowCouloirGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#F8FAFC" />
+            <stop offset="50%" stopColor="#CBD5E1" />
+            <stop offset="100%" stopColor="#94A3B8" />
+          </linearGradient>
+          <radialGradient id="highCrestFlare" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#EF4444" stopOpacity="0.85" />
+            <stop offset="35%" stopColor="#DC2626" stopOpacity="0.5" />
+            <stop offset="75%" stopColor="#1E293B" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#0A1118" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="mistRibbonGrad1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#94A3B8" stopOpacity="0" />
+            <stop offset="25%" stopColor="#CBD5E1" stopOpacity="0.35" />
+            <stop offset="50%" stopColor="#F1F5F9" stopOpacity="0.45" />
+            <stop offset="75%" stopColor="#CBD5E1" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#94A3B8" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient id="boulderFaceGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#253548" />
+            <stop offset="60%" stopColor="#1A2736" />
+            <stop offset="100%" stopColor="#121C26" />
+          </linearGradient>
+        </defs>
 
-        {/* Full-Width Craggy Mountain Slope & High Ridge */}
-        <polygon points="50,1490 380,930 890,980 915,1490" fill="#080D14" stroke="#1E293B" strokeWidth="2.5" />
-        <polygon points="380,930 890,980 860,1020 420,970" fill="#E2E8F0" />
+        {/* Dynamic Flare & Polar Backlighting behind Mountain Ridge */}
+        <PolarHorizonGlow cx={520} cy={1180} rx={500} ry={290} color="FLARE_RED" intensity={0.9} />
+        <ellipse cx="600" cy="980" rx="360" ry="160" fill="url(#highCrestFlare)" />
+
+        {/* Distant Craggy Volcanic Peaks with Snow Flurries */}
+        <polygon
+          points="50,1260 220,1030 450,1110 720,970 920,1160"
+          fill="#131E2A"
+          stroke="#334155"
+          strokeWidth="1.5"
+          opacity="0.8"
+        />
+        <polygon points="220,1030 260,1065 190,1060" fill="#CBD5E1" opacity="0.8" />
+        <polygon points="720,970 760,1005 690,1000" fill="#F8FAFC" opacity="0.85" />
+
+        {/* Full-Width Craggy Mountain Slope & High Ridge with Stratified Rock Facets */}
+        <polygon
+          points="50,1490 360,930 890,970 915,1490"
+          fill="url(#ridgeMountainGrad)"
+          stroke="#38BDF8"
+          strokeWidth="2.2"
+        />
+
+        {/* Snow Cornices & Ice Caps Clinging to High Ridge Crest */}
+        <polygon points="360,930 890,970 850,1015 410,965" fill="url(#snowCouloirGrad)" />
+        <path
+          d="M 360 930 L 410 965 L 530 960 L 680 972 L 850 1015"
+          stroke="#F8FAFC"
+          strokeWidth="3.5"
+          fill="none"
+        />
+
+        {/* Diagonal Snow Couloirs / Chutes Breaking up the Mountain Rock Face */}
+        <polygon points="450,965 425,1160 442,1165 470,967" fill="#CBD5E1" opacity="0.75" />
+        <polygon points="710,970 660,1230 682,1235 735,972" fill="#E2E8F0" opacity="0.75" />
+        <polygon points="570,962 535,1085 550,1087 585,963" fill="#94A3B8" opacity="0.65" />
+        <line x1="425" y1="1160" x2="400" y2="1350" stroke="#CBD5E1" strokeWidth="2.5" opacity="0.6" strokeDasharray="16 8" />
 
         {/* UPPER SECTOR: Japanese Type 92 Heavy Machine Gun Emplacement on High Ridge */}
         <g transform="translate(560, 995)">
-          {/* Sandbags & Rock Revetment */}
-          <path d="M -45 28 L -25 4 L 95 8 L 115 32 Z" fill="#1C1917" stroke="#334155" strokeWidth="2" />
-          {/* Tripod & Finned Heavy Barrel */}
-          <line x1="20" y1="6" x2="-30" y2="36" stroke="#64748B" strokeWidth="4.5" />
-          <line x1="20" y1="6" x2="65" y2="36" stroke="#64748B" strokeWidth="4.5" />
-          <line x1="25" y1="2" x2="-65" y2="28" stroke="#070A0E" strokeWidth="7" strokeLinecap="round" />
-
-          {/* Anatomical Japanese Gunner & Spotter */}
-          <AnatomicalSoldierSilhouette
-            x={55}
-            y={5}
-            scale={0.95}
-            flipX={true}
-            helmetType="JP_TYPE90"
-            pose="CROUCHING_AIM"
+          {/* Weathered Sandbags & Basalt Revetment Wall */}
+          <path
+            d="M -50 32 L -28 6 L 105 10 L 125 36 Z"
+            fill="#2A384A"
+            stroke="#475569"
+            strokeWidth="2"
           />
+          {/* Snow Dusting on Sandbag Tops */}
+          <polygon points="-28,6 105,10 95,16 -20,12" fill="#F8FAFC" opacity="0.9" />
 
-          {/* Crimson Tracers Firing Steeply Downward Through Mist */}
+          {/* Tripod Mount & Finned Steel Heavy Barrel */}
+          <line x1="20" y1="8" x2="-32" y2="40" stroke="#94A3B8" strokeWidth="4.5" />
+          <line x1="20" y1="8" x2="68" y2="40" stroke="#94A3B8" strokeWidth="4.5" />
+          <line x1="26" y1="4" x2="-72" y2="30" stroke="#475569" strokeWidth="8" strokeLinecap="round" />
+          <line x1="-30" y1="20" x2="-72" y2="30" stroke="#94A3B8" strokeWidth="4" strokeLinecap="round" />
+
+          {/* Anatomical Japanese Gunner & Spotter with Crimson Rim Backlighting */}
+          <g filter="drop-shadow(0 0 16px rgba(239, 68, 68, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.4))">
+            <AnatomicalSoldierSilhouette
+              x={55}
+              y={5}
+              scale={0.95}
+              flipX={true}
+              helmetType="JP_TYPE90"
+              pose="CROUCHING_AIM"
+              accentColor="#EF4444"
+            />
+          </g>
+
+          {/* Crimson & Amber Muzzle Flash + Heavy Tracers Firing Steeply Downward */}
           {mgFlash && (
             <g>
-              <polygon points="-65,28 -110,20 -95,52" fill="#F59E0B" />
-              <circle cx="-68" cy="29" r="12" fill="#FEF08A" />
-              <line x1="-70" y1="30" x2="-360" y2="290" stroke="#EF4444" strokeWidth="5.5" strokeLinecap="round" />
-              <line x1="-70" y1="34" x2="-310" y2="320" stroke="#FEF08A" strokeWidth="3.5" strokeLinecap="round" />
+              <polygon points="-72,30 -125,20 -105,56" fill="#F59E0B" />
+              <circle cx="-75" cy="31" r="14" fill="#FEF08A" />
+              <line x1="-76" y1="31" x2="-390" y2="300" stroke="#EF4444" strokeWidth="6" strokeLinecap="round" />
+              <line x1="-76" y1="35" x2="-330" y2="335" stroke="#FEF08A" strokeWidth="4" strokeLinecap="round" />
             </g>
           )}
         </g>
 
-        {/* MID SECTOR: Drifting Mountain Fog Layer Concealing Slopes */}
-        <g opacity="0.72">
-          <ellipse cx={340 + fogDrift * 0.5} cy="1160" rx="340" ry="48" fill="#334155" />
-          <ellipse cx={760 - fogDrift * 0.5} cy="1205" rx="310" ry="52" fill="#1E293B" />
+        {/* MID SECTOR: Luminous Drifting Aleutian Williwaw Mist Ribbons */}
+        <g opacity="0.85">
+          <rect
+            x={100 - (fogDrift * 0.8) % 200}
+            y="1140"
+            width="680"
+            height="55"
+            rx="25"
+            fill="url(#mistRibbonGrad1)"
+          />
+          <rect
+            x={480 - (fogDrift * 1.1) % 260}
+            y="1185"
+            width="550"
+            height="48"
+            rx="22"
+            fill="url(#mistRibbonGrad1)"
+          />
+          <ellipse
+            cx={360 + fogDrift * 0.6}
+            cy="1165"
+            rx="300"
+            ry="40"
+            fill="#CBD5E1"
+            opacity="0.32"
+          />
+          <ellipse
+            cx={750 - fogDrift * 0.5}
+            cy="1205"
+            rx="280"
+            ry="36"
+            fill="#E2E8F0"
+            opacity="0.28"
+          />
         </g>
 
         {/* LOWER SECTOR: Pinned U.S. Infantry Taking Cover Behind Volcanic Boulders */}
         <g transform="translate(110, 1290)">
-          {/* Jagged Basalt Tundra Boulders */}
-          <polygon points="0,165 45,75 180,60 280,105 320,165" fill="#0B121C" stroke="#334155" strokeWidth="3" />
-          <polygon points="45,75 180,60 225,88 75,95" fill="#E2E8F0" opacity="0.85" />
-
-          {/* Pinned Riflemen Crouching & Returning Fire Upward */}
-          <AnatomicalSoldierSilhouette
-            x={95}
-            y={115}
-            scale={1.15}
-            helmetType="US_M1"
-            pose="CROUCHING_AIM"
-            accentColor="#F8FAFC"
+          {/* Multi-Faceted Basalt Tundra Boulders */}
+          <polygon
+            points="0,165 45,72 180,58 285,102 325,165"
+            fill="url(#boulderFaceGrad)"
+            stroke="#475569"
+            strokeWidth="3"
           />
-          <g transform="translate(215, 110) rotate(-25)">
+          {/* Thick Snow Cap on Boulder Crest */}
+          <polygon points="45,72 180,58 230,86 75,94" fill="#F8FAFC" opacity="0.95" />
+          <line x1="45" y1="72" x2="180" y2="58" stroke="#38BDF8" strokeWidth="2.5" />
+
+          {/* Pinned Riflemen with Vivid Cyan Rim Backlighting & Snow on Shoulders */}
+          <g filter="drop-shadow(0 0 18px rgba(56, 189, 248, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))">
+            <AnatomicalSoldierSilhouette
+              x={95}
+              y={115}
+              scale={1.15}
+              helmetType="US_M1"
+              pose="CROUCHING_AIM"
+              accentColor="#F8FAFC"
+            />
+          </g>
+
+          <g
+            transform="translate(215, 110) rotate(-25)"
+            filter="drop-shadow(0 0 18px rgba(56, 189, 248, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))"
+          >
             <AnatomicalSoldierSilhouette
               x={0}
               y={0}
               scale={1.15}
               helmetType="US_M1"
               pose="AIMING_RIFLE"
+              accentColor="#F8FAFC"
             />
-            <line x1="70" y1="-42" x2="240" y2="-130" stroke="#F59E0B" strokeWidth="3.5" strokeDasharray="24 16" />
+            {/* Returning Fire Tracers Aimed High toward the Ridge */}
+            <line
+              x1="70"
+              y1="-42"
+              x2="250"
+              y2="-138"
+              stroke="#F59E0B"
+              strokeWidth="4"
+              strokeDasharray="24 16"
+              strokeLinecap="round"
+            />
           </g>
         </g>
       </svg>
@@ -1394,11 +1880,53 @@ export const AleutianTundraFrostbiteToll: React.FC = () => {
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <PolarHorizonGlow cx={500} cy={1220} rx={480} ry={280} color="CYAN" intensity={0.85} />
+        <defs>
+          <radialGradient id="trenchInteriorGlow" cx="50%" cy="35%" r="60%">
+            <stop offset="0%" stopColor="#1E3A5F" stopOpacity="0.95" />
+            <stop offset="45%" stopColor="#13273D" stopOpacity="0.9" />
+            <stop offset="85%" stopColor="#0E1B2B" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#08101A" stopOpacity="0.8" />
+          </radialGradient>
+          <linearGradient id="trenchPeatStrata" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#253548" />
+            <stop offset="30%" stopColor="#1C2938" />
+            <stop offset="70%" stopColor="#141E2A" />
+            <stop offset="100%" stopColor="#0D151F" />
+          </linearGradient>
+          <linearGradient id="freezingWaterGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.75" />
+            <stop offset="25%" stopColor="#0284C7" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#07273E" stopOpacity="0.95" />
+          </linearGradient>
+          <linearGradient id="gaugeHousingGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#1E2E40" />
+            <stop offset="50%" stopColor="#142130" />
+            <stop offset="100%" stopColor="#0D1622" />
+          </linearGradient>
+        </defs>
+
+        <PolarHorizonGlow cx={500} cy={1220} rx={500} ry={300} color="CYAN" intensity={0.95} />
 
         {/* LEFT: Technical Arctic Freezing Thermometer Gauge (Zero Illustration Text) */}
         <g transform="translate(115, 980)">
-          <rect x="0" y="0" width="76" height="430" rx="12" fill="#090E16" stroke="#0284C7" strokeWidth="3" />
+          {/* Beveled Instrument Backplate */}
+          <rect
+            x="0"
+            y="0"
+            width="78"
+            height="430"
+            rx="12"
+            fill="url(#gaugeHousingGrad)"
+            stroke="#38BDF8"
+            strokeWidth="2.5"
+            filter="drop-shadow(0 0 16px rgba(2, 132, 199, 0.45))"
+          />
+          {/* Hex Mounting Screws */}
+          <circle cx="12" cy="14" r="3.5" fill="#64748B" stroke="#334155" strokeWidth="1" />
+          <circle cx="66" cy="14" r="3.5" fill="#64748B" stroke="#334155" strokeWidth="1" />
+          <circle cx="12" cy="416" r="3.5" fill="#64748B" stroke="#334155" strokeWidth="1" />
+          <circle cx="66" cy="416" r="3.5" fill="#64748B" stroke="#334155" strokeWidth="1" />
+
           {/* Scale Graduation Ticks */}
           {[50, 90, 130, 170, 210, 250, 290, 330].map((ty, idx) => (
             <line
@@ -1407,63 +1935,114 @@ export const AleutianTundraFrostbiteToll: React.FC = () => {
               y1={ty}
               x2="24"
               y2={ty}
-              stroke="#38BDF8"
-              strokeWidth={idx % 2 === 0 ? 2.5 : 1.5}
+              stroke="#7DD3FC"
+              strokeWidth={idx % 2 === 0 ? 3 : 1.8}
             />
           ))}
-          <rect x="28" y="30" width="20" height="335" rx="8" fill="#04080D" stroke="#38BDF8" strokeWidth="1.8" />
-          <circle cx="38" cy="375" r="24" fill="#38BDF8" />
+
+          {/* Glass Thermometer Tube Core */}
+          <rect x="28" y="30" width="22" height="335" rx="8" fill="#06101B" stroke="#38BDF8" strokeWidth="2" />
+          <circle cx="39" cy="375" r="25" fill="#0284C7" stroke="#38BDF8" strokeWidth="2.5" />
+          <circle cx="39" cy="375" r="18" fill="#38BDF8" />
+          {/* Liquid Mercury Column */}
           <rect
-            x="31"
-            y={interpolate(tempDrop, [-10, 32], [315, 110])}
+            x="32"
+            y={interpolate(tempDrop, [-10, 32], [315, 110], { extrapolateRight: 'clamp' })}
             width="14"
-            height={375 - interpolate(tempDrop, [-10, 32], [315, 110])}
+            height={375 - interpolate(tempDrop, [-10, 32], [315, 110], { extrapolateRight: 'clamp' })}
             fill="#38BDF8"
             rx="4"
           />
+          {/* Sub-Zero Warning Indicator Tick */}
+          <line x1="28" y1="210" x2="50" y2="210" stroke="#EF4444" strokeWidth="2.5" />
         </g>
 
         {/* Flooded Tundra Foxhole Cutaway (Center-Right) */}
         <g transform={`translate(250, ${1165 + shiver})`}>
-          {/* Frozen Peat & Ice-rimmed Trench Cutaway */}
+          {/* Frozen Peat & Permafrost Earthen Trench Bank */}
           <path
             d="M 0 110 L 65 30 L 520 30 L 590 110 L 590 295 L 0 295 Z"
-            fill="#0B1118"
-            stroke="#1E293B"
+            fill="url(#trenchPeatStrata)"
+            stroke="#38BDF8"
+            strokeWidth="3"
+          />
+          {/* Visible Permafrost Ice Vein Running Through Soil */}
+          <path
+            d="M 5 180 Q 40 160 65 190 T 520 185 Q 560 170 585 195"
+            stroke="#7DD3FC"
             strokeWidth="3.5"
-          />
-          {/* Snow & Icicles Hanging Over Trench Lip */}
-          <polygon points="55,30 180,30 155,48 135,36 110,54 85,36" fill="#E2E8F0" />
-          <polygon points="380,30 525,30 495,52 465,36 435,55 410,36" fill="#E2E8F0" />
-
-          {/* Interior Trench Recess */}
-          <rect x="65" y="45" width="460" height="225" rx="6" fill="#05090F" stroke="#1E293B" strokeWidth="2" />
-
-          {/* Anatomical Shivering Soldiers Huddled in Freezing Water */}
-          <AnatomicalSoldierSilhouette
-            x={185}
-            y={205}
-            scale={1.35}
-            helmetType="US_M1"
-            pose="CROUCHING_AIM"
-            accentColor="#38BDF8"
-          />
-          <AnatomicalSoldierSilhouette
-            x={395}
-            y={205}
-            scale={1.35}
-            flipX={true}
-            helmetType="PARKA_HOOD"
-            pose="CROUCHING_AIM"
+            strokeDasharray="16 8"
+            fill="none"
+            opacity="0.8"
           />
 
-          {/* Frozen Breath Puffs */}
-          <circle cx="235" cy={118 + Math.sin(frame * 0.2) * 5} r="12" fill="#F8FAFC" opacity="0.4" />
-          <circle cx="345" cy={122 + Math.sin(frame * 0.2 + 1) * 5} r="10" fill="#F8FAFC" opacity="0.35" />
+          {/* Heavy Snow Cornice & Hanging Icicles Over Trench Lip */}
+          <polygon points="50,30 185,30 160,52 140,38 115,58 90,38" fill="#F8FAFC" />
+          <polygon points="375,30 530,30 500,56 470,38 440,60 415,38" fill="#F8FAFC" />
+          {/* Hanging Glacial Icicles */}
+          <polygon points="110,58 115,82 120,58" fill="#BAE6FD" />
+          <polygon points="160,52 164,74 168,52" fill="#BAE6FD" />
+          <polygon points="440,60 445,86 450,60" fill="#BAE6FD" />
+          <polygon points="500,56 504,78 508,56" fill="#BAE6FD" />
 
-          {/* Pooling Freezing Water Submerging Boots at Foxhole Floor */}
-          <rect x="65" y="215" width="460" height="55" fill="#0369A1" opacity="0.65" />
-          <line x1="65" y1="215" x2="525" y2="215" stroke="#7DD3FC" strokeWidth="3" />
+          {/* Shoring Timber Bracing Logs on Trench Walls */}
+          <rect x="58" y="45" width="14" height="225" rx="3" fill="#2E231C" stroke="#45352A" strokeWidth="1.5" />
+          <rect x="514" y="45" width="14" height="225" rx="3" fill="#2E231C" stroke="#45352A" strokeWidth="1.5" />
+
+          {/* Interior Trench Recess (Cold Blue-Slate Luminescence) */}
+          <rect
+            x="65"
+            y="45"
+            width="460"
+            height="225"
+            rx="6"
+            fill="url(#trenchInteriorGlow)"
+            stroke="#38BDF8"
+            strokeWidth="2"
+            strokeOpacity="0.5"
+          />
+
+          {/* Anatomical Shivering Soldiers Huddled in Freezing Water (High-Contrast Silhouettes) */}
+          <g filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.7)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.4))">
+            <AnatomicalSoldierSilhouette
+              x={185}
+              y={205}
+              scale={1.35}
+              helmetType="US_M1"
+              pose="CROUCHING_AIM"
+              accentColor="#38BDF8"
+            />
+          </g>
+
+          <g filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.7)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.4))">
+            <AnatomicalSoldierSilhouette
+              x={395}
+              y={205}
+              scale={1.35}
+              flipX={true}
+              helmetType="PARKA_HOOD"
+              pose="CROUCHING_AIM"
+              accentColor="#CBD5E1"
+            />
+          </g>
+
+          {/* Frost & Snow Accumulation on Shoulders and Helmets */}
+          <path d="M 175 142 Q 185 138 200 144" stroke="#F8FAFC" strokeWidth="4" strokeLinecap="round" fill="none" />
+          <path d="M 380 142 Q 395 138 405 144" stroke="#F8FAFC" strokeWidth="4" strokeLinecap="round" fill="none" />
+
+          {/* Dynamic Cold Frozen Breath Vapor Puffs Expanding in Sub-Zero Air */}
+          <circle cx="235" cy={118 + Math.sin(frame * 0.2) * 5} r="14" fill="#F8FAFC" opacity="0.5" />
+          <circle cx="250" cy={106 + Math.sin(frame * 0.2) * 6} r="20" fill="#E2E8F0" opacity="0.35" />
+          <circle cx="345" cy={122 + Math.sin(frame * 0.2 + 1) * 5} r="12" fill="#F8FAFC" opacity="0.45" />
+          <circle cx="330" cy={110 + Math.sin(frame * 0.2 + 1) * 6} r="18" fill="#E2E8F0" opacity="0.32" />
+
+          {/* Freezing Muddy Water Submerging Boots at Foxhole Floor with Floating Ice */}
+          <rect x="65" y="215" width="460" height="55" fill="url(#freezingWaterGrad)" />
+          <line x1="65" y1="215" x2="525" y2="215" stroke="#E0F2FE" strokeWidth="3" />
+          {/* Floating Ice Shards in Foxhole Pool */}
+          <polygon points="120,222 150,220 160,228 135,230" fill="#F8FAFC" opacity="0.85" />
+          <polygon points="270,224 310,221 325,227 285,231" fill="#F8FAFC" opacity="0.85" />
+          <polygon points="420,222 455,220 465,228 435,230" fill="#F8FAFC" opacity="0.85" />
         </g>
 
         {/* Rolling Integer Counter (Montserrat 900, Single-Source Metric) */}
@@ -1474,10 +2053,10 @@ export const AleutianTundraFrostbiteToll: React.FC = () => {
             width="290"
             height="84"
             rx="8"
-            fill="#090E16"
+            fill="#0F1724"
             stroke="#EF4444"
             strokeWidth="3"
-            filter="drop-shadow(0 0 18px rgba(239, 68, 68, 0.45))"
+            filter="drop-shadow(0 0 18px rgba(239, 68, 68, 0.55))"
           />
           <text
             x="0"
@@ -1509,62 +2088,151 @@ export const AleutianCastnersCutthroatsClimb: React.FC = () => {
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <PolarHorizonGlow cx={480} cy={1180} rx={480} ry={280} color="AURORA" intensity={0.95} />
+        <defs>
+          <linearGradient id="auroraSkyGlowGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#2DD4BF" stopOpacity="0.5" />
+            <stop offset="45%" stopColor="#0284C7" stopOpacity="0.35" />
+            <stop offset="80%" stopColor="#0F172A" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#0A1118" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient id="basaltCliffFaceGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#0E1620" />
+            <stop offset="65%" stopColor="#182738" />
+            <stop offset="100%" stopColor="#253950" />
+          </linearGradient>
+          <linearGradient id="glacierCascadeGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#F0FDFA" />
+            <stop offset="35%" stopColor="#5EEAD4" />
+            <stop offset="70%" stopColor="#38BDF8" />
+            <stop offset="100%" stopColor="#0284C7" />
+          </linearGradient>
+        </defs>
 
-        {/* Ethereal Aurora Borealis Ribbons across the Polar Sky */}
-        <g opacity="0.7" filter="drop-shadow(0 0 20px #2DD4BF)">
+        <PolarHorizonGlow cx={480} cy={1180} rx={500} ry={300} color="AURORA" intensity={1.0} />
+
+        {/* Ethereal Aurora Borealis Ribbons Pulsating Across the Polar Night */}
+        <g opacity="0.85" filter="drop-shadow(0 0 24px #2DD4BF)">
           <path
-            d={`M 60 920 Q 320 ${880 + auroraWaver} 560 920 T 910 ${890 - auroraWaver}`}
+            d={`M 50 910 Q 320 ${870 + auroraWaver} 560 910 T 930 ${880 - auroraWaver}`}
             stroke="#2DD4BF"
-            strokeWidth="26"
+            strokeWidth="32"
             fill="none"
-            opacity="0.85"
+            opacity="0.9"
           />
           <path
-            d={`M 60 955 Q 340 ${920 - auroraWaver} 580 960 T 910 ${930 + auroraWaver}`}
+            d={`M 50 945 Q 340 ${910 - auroraWaver} 580 950 T 930 ${920 + auroraWaver}`}
             stroke="#38BDF8"
-            strokeWidth="16"
+            strokeWidth="20"
             fill="none"
-            opacity="0.75"
+            opacity="0.8"
+          />
+          <path
+            d={`M 50 975 Q 330 ${940 + auroraWaver * 0.7} 570 980 T 930 ${950 - auroraWaver * 0.7}`}
+            stroke="#818CF8"
+            strokeWidth="12"
+            fill="none"
+            opacity="0.6"
           />
         </g>
 
-        {/* Sheer Near-Vertical Jagged Basalt & Ice Cliff */}
+        {/* Ambient Aurora Glow Behind Cliff Rim */}
+        <ellipse cx="460" cy="1180" rx="360" ry="240" fill="url(#auroraSkyGlowGrad)" />
+
+        {/* Sheer Near-Vertical Jagged Basalt & Ice Cliff with Stratified Rock Facets */}
         <polygon
-          points="50,1490 420,1490 540,1150 495,1030 310,1010 50,1010"
-          fill="#080E14"
-          stroke="#1E293B"
-          strokeWidth="3.5"
+          points="50,1490 440,1490 535,1160 490,1025 280,1005 50,1005"
+          fill="url(#basaltCliffFaceGrad)"
+          stroke="#38BDF8"
+          strokeWidth="2.5"
         />
-        <polygon points="310,1010 495,1030 470,1055 290,1035" fill="#E2E8F0" />
-        <path d="M 495 1030 L 455 1180 L 490 1340" stroke="#38BDF8" strokeWidth="4" fill="none" opacity="0.75" />
 
-        {/* Knotted Fixed Climbing Rope Dropping Down Cliff Face */}
-        <line x1="505" y1="1030" x2="435" y2="1485" stroke="#E2E8F0" strokeWidth="3.5" strokeDasharray="18 6" />
+        {/* Lit Rock Buttresses & Vertical Crags on Cliff Face */}
+        <polygon points="120,1005 280,1005 260,1180 90,1220" fill="#142130" opacity="0.85" />
+        <polygon points="260,1180 440,1170 410,1380 220,1390" fill="#1B2B3E" opacity="0.9" />
+        <line x1="280" y1="1005" x2="260" y2="1180" stroke="#475569" strokeWidth="2" />
+        <line x1="440" y1="1170" x2="410" y2="1380" stroke="#475569" strokeWidth="2" />
 
-        {/* Scout 2 (Mid-Climb on Rope with Trapper Nelson Packboard) */}
-        <g transform="translate(465, 1300) rotate(-14)">
+        {/* Deep Snow Cornices Clinging to Cliff Summit */}
+        <polygon points="280,1005 490,1025 460,1055 260,1030" fill="#F8FAFC" />
+        <line x1="280" y1="1005" x2="490" y2="1025" stroke="#E2E8F0" strokeWidth="3" />
+
+        {/* Hanging Glacier & Frozen Waterfall Cascading Down Cliff Couloir */}
+        <polygon
+          points="490,1025 450,1180 484,1360 498,1356 468,1182 494,1025"
+          fill="url(#glacierCascadeGrad)"
+          opacity="0.9"
+        />
+        <path
+          d="M 490 1025 L 450 1180 L 484 1360"
+          stroke="#BAE6FD"
+          strokeWidth="3.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+
+        {/* Knotted Fixed Mountain Climbing Rope Dropping Down Cliff Face */}
+        <line
+          x1="500"
+          y1="1025"
+          x2="430"
+          y2="1485"
+          stroke="#F8FAFC"
+          strokeWidth="4"
+          filter="drop-shadow(0 0 8px rgba(56, 189, 248, 0.7))"
+        />
+        {/* Climbing Knots Along Rope */}
+        {[1070, 1120, 1170, 1220, 1270, 1320, 1370, 1420].map((ky) => (
+          <circle
+            key={ky}
+            cx={interpolate(ky, [1025, 1485], [500, 430], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })}
+            cy={ky}
+            r="4.5"
+            fill="#F8FAFC"
+            stroke="#0284C7"
+            strokeWidth="1.5"
+          />
+        ))}
+
+        {/* Scout 2 (Mid-Climb on Rope with Trapper Nelson Packboard - High-Contrast Silhouette) */}
+        <g
+          transform="translate(435, 1260) rotate(-16)"
+          filter="drop-shadow(0 0 16px rgba(45, 212, 191, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))"
+        >
           <AnatomicalSoldierSilhouette
             x={0}
             y={0}
-            scale={1.15}
+            scale={1.2}
             flipX={true}
             helmetType="PARKA_HOOD"
             pose="WADING"
+            accentColor="#CBD5E1"
           />
+          {/* Wooden Trapper Nelson Packboard with Strapped Arctic Gear */}
+          <rect x="-18" y="-48" width="12" height="38" rx="2" fill="#78350F" stroke="#F59E0B" strokeWidth="1.5" />
+          <line x1="-16" y1="-38" x2="-6" y2="-38" stroke="#F59E0B" strokeWidth="1.5" />
+          <line x1="-16" y1="-24" x2="-6" y2="-24" stroke="#F59E0B" strokeWidth="1.5" />
+          {/* Hands Grasping Rope */}
+          <circle cx="14" cy="-30" r="5" fill="#E2E8F0" />
+          <circle cx="20" cy="-42" r="5" fill="#E2E8F0" />
         </g>
 
-        {/* Lead Alaska Scout Cresting the Ice Ridge */}
-        <g transform={`translate(500, ${1025 + leadPull})`} filter="drop-shadow(0 0 14px rgba(45, 212, 191, 0.45))">
+        {/* Lead Alaska Scout Cresting the Ice Ridge Against Aurora */}
+        <g
+          transform={`translate(495, ${1020 + leadPull})`}
+          filter="drop-shadow(0 0 18px rgba(45, 212, 191, 0.8)) drop-shadow(0 0 4px rgba(255, 255, 255, 0.45))"
+        >
           <AnatomicalSoldierSilhouette
             x={0}
             y={0}
-            scale={1.25}
+            scale={1.28}
             helmetType="PARKA_HOOD"
             pose="STANDING_RIFLE"
+            accentColor="#F8FAFC"
           />
-          {/* Raised Ice Axe / Combat Knife Glint */}
-          <line x1="22" y1="-55" x2="62" y2="-75" stroke="#F8FAFC" strokeWidth="4" strokeLinecap="round" />
+          {/* Raised Ice Axe Glinting Stark White in Northern Lights */}
+          <line x1="22" y1="-55" x2="65" y2="-78" stroke="#F8FAFC" strokeWidth="5" strokeLinecap="round" />
+          <polygon points="62,-84 72,-75 64,-72" fill="#F8FAFC" />
+          <circle cx="65" cy="-78" r="5" fill="#2DD4BF" opacity="0.8" />
         </g>
       </svg>
     </div>
@@ -2007,63 +2675,187 @@ export const AleutianOperationCottageEmptyBeach: React.FC = () => {
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <PolarHorizonGlow cx={480} cy={1240} rx={480} ry={280} color="CYAN" intensity={0.85} />
+        <defs>
+          <linearGradient id="kiskaHeadlandGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#1E2E42" />
+            <stop offset="45%" stopColor="#152435" />
+            <stop offset="100%" stopColor="#0E1722" />
+          </linearGradient>
+          <linearGradient id="kiskaWetBeachGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#172738" />
+            <stop offset="30%" stopColor="#1C3550" />
+            <stop offset="65%" stopColor="#132335" />
+            <stop offset="100%" stopColor="#0D1620" />
+          </linearGradient>
+          <linearGradient id="kiskaBunkerConcreteGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#334155" />
+            <stop offset="55%" stopColor="#1E293B" />
+            <stop offset="100%" stopColor="#0F172A" />
+          </linearGradient>
+          <radialGradient id="wetSandSheen" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="#0284C7" stopOpacity="0.15" />
+            <stop offset="100%" stopColor="#0E1824" stopOpacity="0" />
+          </radialGradient>
+        </defs>
 
-        {/* Distant Kiska Headlands */}
-        <polygon points="50,1380 280,1180 560,1260 840,1160 915,1380" fill="#09111B" stroke="#1E293B" strokeWidth="2" />
+        <PolarHorizonGlow cx={480} cy={1220} rx={520} ry={300} color="CYAN" intensity={1.0} />
 
-        {/* Cold Surf Lapping Empty Kiska Beach */}
-        <rect x="50" y="1365" width="865" height="130" fill="#080E14" />
+        {/* Distant Volcanic Peaks of Kiska Island */}
+        <polygon
+          points="50,1320 220,1130 520,1210 780,1110 920,1320"
+          fill="#132030"
+          stroke="#334155"
+          strokeWidth="1.5"
+          opacity="0.8"
+        />
+        <polygon points="220,1130 270,1168 180,1165" fill="#CBD5E1" opacity="0.8" />
+        <polygon points="780,1110 820,1145 740,1142" fill="#E2E8F0" opacity="0.85" />
+
+        {/* Midground Coastal Headlands with Snow Couloirs */}
+        <polygon
+          points="50,1380 280,1180 560,1260 840,1160 920,1380"
+          fill="url(#kiskaHeadlandGrad)"
+          stroke="#38BDF8"
+          strokeWidth="2.2"
+        />
+        <polygon points="280,1180 340,1205 310,1215 250,1195" fill="#F8FAFC" opacity="0.9" />
+        <polygon points="840,1160 890,1185 860,1195 810,1175" fill="#F8FAFC" opacity="0.9" />
+
+        {/* Volcanic Black-Sand Beach with Specular Surf Reflection */}
+        <polygon
+          points="50,1360 920,1360 920,1490 50,1490"
+          fill="url(#kiskaWetBeachGrad)"
+          stroke="#38BDF8"
+          strokeWidth="1.8"
+        />
+        <ellipse cx="480" cy="1380" rx="420" ry="24" fill="url(#wetSandSheen)" />
+
+        {/* Foaming Cold Arctic Ocean Waves Lapping Empty Kiska Shoreline */}
         <path
-          d={`M 50 ${1365 + seaLap} Q 320 ${1390 - seaLap} 540 ${1360 + seaLap} T 915 ${1370}`}
-          stroke="#7DD3FC"
+          d={`M 50 ${1362 + seaLap} Q 320 ${1385 - seaLap} 540 ${1358 + seaLap} T 920 ${1366}`}
+          stroke="#E0F2FE"
           strokeWidth="3.5"
           fill="none"
-          opacity="0.8"
+          opacity="0.95"
+          strokeLinecap="round"
+        />
+        <path
+          d={`M 50 ${1372 - seaLap * 0.7} Q 310 ${1395 + seaLap * 0.7} 530 ${1368 - seaLap * 0.7} T 920 ${1376}`}
+          stroke="#7DD3FC"
+          strokeWidth="2"
+          fill="none"
+          opacity="0.75"
         />
 
         {/* Abandoned Snow-Drifted Japanese Coastal Gun Emplacement */}
-        <g transform="translate(540, 1255)">
-          <polygon points="-20,95 10,35 205,35 235,95" fill="#18181B" stroke="#334155" strokeWidth="2.5" />
-          <polygon points="10,35 205,35 185,22 25,22" fill="#E2E8F0" />
-          {/* Heavy Coastal Defense Cannon Barrel & Breech */}
-          <polygon points="45,26 190,-35 198,-22 52,36" fill="#070A0E" stroke="#475569" strokeWidth="1.5" />
-          <rect x="30" y="14" width="38" height="26" rx="3" fill="#0F172A" stroke="#334155" strokeWidth="1.5" />
-          <circle cx="50" cy="28" r="10" fill="#1E293B" />
-          {/* Empty Cave Tunnel Portal */}
-          <path d="M 255 95 C 255 40 325 40 325 95 Z" fill="#030508" stroke="#334155" strokeWidth="2.5" />
+        <g transform="translate(540, 1250)">
+          {/* Concrete Casemate / Earth-Reinforced Bunker */}
+          <polygon
+            points="-25,95 8,32 210,32 242,95"
+            fill="url(#kiskaBunkerConcreteGrad)"
+            stroke="#475569"
+            strokeWidth="2.5"
+          />
+          {/* Snow Drift on Casemate Roof */}
+          <polygon points="8,32 210,32 190,18 25,18" fill="#F8FAFC" />
+          <line x1="8" y1="32" x2="210" y2="32" stroke="#CBD5E1" strokeWidth="2" />
+
+          {/* Heavy Coastal Defense Cannon Barrel Aimed Up at Empty Sky */}
+          <polygon points="45,26 195,-40 204,-26 54,38" fill="#334155" stroke="#64748B" strokeWidth="2" />
+          <line x1="48" y1="28" x2="198" y2="-36" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="200" cy="-33" r="6" fill="#0A0F16" stroke="#F59E0B" strokeWidth="1.5" />
+
+          {/* Armored Gun Shield & Recoil Breech Housing */}
+          <rect x="30" y="14" width="40" height="28" rx="3" fill="#1E293B" stroke="#475569" strokeWidth="2" />
+          <circle cx="50" cy="28" r="11" fill="#243345" stroke="#38BDF8" strokeWidth="1.5" />
+
+          {/* Reinforced Cave / Tunnel Portal Shored with Timber */}
+          <path
+            d="M 255 95 C 255 36 330 36 330 95 Z"
+            fill="#081018"
+            stroke="#38BDF8"
+            strokeWidth="2"
+          />
+          {/* Wooden Shoring Lintel */}
+          <rect x="250" y="38" width="85" height="10" rx="2" fill="#3D2E24" stroke="#5C4537" strokeWidth="1.5" />
+          <line x1="262" y1="48" x2="262" y2="95" stroke="#3D2E24" strokeWidth="5" />
+          <line x1="323" y1="48" x2="323" y2="95" stroke="#3D2E24" strokeWidth="5" />
         </g>
 
-        {/* Anatomical Allied Soldier Silhouette (Rifle Lowered in Disbelief) */}
-        <AnatomicalSoldierSilhouette
-          x={290}
-          y={1310}
-          scale={1.38}
-          helmetType="US_M1"
-          pose="LOWERED_RIFLE"
-          accentColor="#F8FAFC"
-        />
+        {/* Anatomical Allied Soldier Silhouette (Disbelief: Lowered Garand Rifle) */}
+        <g filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.7)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))">
+          <AnatomicalSoldierSilhouette
+            x={280}
+            y={1305}
+            scale={1.38}
+            helmetType="US_M1"
+            pose="LOWERED_RIFLE"
+            accentColor="#F8FAFC"
+          />
+        </g>
 
-        {/* Friendly Stray Dog Left Behind on Kiska Beach (Sitting & Wagging Tail) */}
-        <g transform="translate(415, 1320)">
-          {/* Hindquarters & Torso */}
-          <path d="M 0 38 C -4 18 18 10 34 14 L 40 42 L 4 42 Z" fill="#070A0E" />
-          {/* Front Legs */}
-          <line x1="32" y1="28" x2="36" y2="45" stroke="#070A0E" strokeWidth="5" strokeLinecap="round" />
-          <line x1="24" y1="30" x2="26" y2="45" stroke="#070A0E" strokeWidth="5" strokeLinecap="round" />
-          {/* Dog Head, Snout & Pointed Ears */}
-          <circle cx="38" cy="8" r="11" fill="#070A0E" />
-          <polygon points="44,4 56,8 46,14" fill="#070A0E" />
-          <polygon points="34,-2 38,-12 43,0" fill="#070A0E" />
-          <polygon points="28,0 31,-10 35,0" fill="#070A0E" />
-          {/* Wagging Tail */}
+        {/* Wet Sand Footprints Trailing Behind Soldier from Surf */}
+        {[200, 225, 250].map((fx, idx) => (
+          <ellipse
+            key={fx}
+            cx={fx}
+            cy={1368 + idx * 2}
+            rx={9}
+            ry={4}
+            fill="#09111A"
+            stroke="#38BDF8"
+            strokeWidth="1"
+            opacity={0.65}
+          />
+        ))}
+
+        {/* Friendly Stray Dog Left Behind on Kiska Beach (High-Contrast Silhouette + Accent Collar) */}
+        <g
+          transform="translate(420, 1315)"
+          filter="drop-shadow(0 0 16px rgba(56, 189, 248, 0.75)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))"
+        >
+          {/* Hindquarters & Seated Torso in Solid Dark Silhouette with Crisp Highlight */}
           <path
-            d={`M 2 32 Q -14 ${20 + dogTailWag} -20 ${8 + dogTailWag}`}
-            stroke="#070A0E"
-            strokeWidth="5"
+            d="M 0 38 C -4 16 18 8 36 12 L 42 42 L 4 42 Z"
+            fill="#080C12"
+            stroke="#38BDF8"
+            strokeWidth="1.5"
+          />
+
+          {/* Front Legs Firmly Planted on Beach */}
+          <line x1="34" y1="26" x2="38" y2="44" stroke="#080C12" strokeWidth="5.5" strokeLinecap="round" />
+          <line x1="34" y1="26" x2="38" y2="44" stroke="#64748B" strokeWidth="2" strokeLinecap="round" />
+          <line x1="26" y1="28" x2="28" y2="44" stroke="#080C12" strokeWidth="5.5" strokeLinecap="round" />
+          <line x1="26" y1="28" x2="28" y2="44" stroke="#64748B" strokeWidth="2" strokeLinecap="round" />
+
+          {/* Stray Dog Head, Alert Pointed Ears & Snout */}
+          <circle cx="40" cy="8" r="12" fill="#080C12" stroke="#38BDF8" strokeWidth="1.2" />
+          <polygon points="46,4 58,8 48,14" fill="#080C12" />
+          <polygon points="36,-2 40,-14 45,0" fill="#080C12" />
+          <polygon points="30,0 33,-12 37,0" fill="#080C12" />
+          {/* Inner Ear Highlights */}
+          <polygon points="38,-1 40,-10 43,0" fill="#EF4444" opacity="0.75" />
+
+          {/* Colored Accent Collar / Mascot Band (Signal Red) */}
+          <rect x="33" y="14" width="14" height="4.5" rx="1.5" fill="#EF4444" stroke="#F8FAFC" strokeWidth="1" />
+
+          {/* Animated Wagging Tail in Active Micro-Motion */}
+          <path
+            d={`M 2 32 Q -16 ${18 + dogTailWag} -22 ${6 + dogTailWag}`}
+            stroke="#080C12"
+            strokeWidth="6"
             fill="none"
             strokeLinecap="round"
           />
+          <path
+            d={`M 2 32 Q -16 ${18 + dogTailWag} -22 ${6 + dogTailWag}`}
+            stroke="#7DD3FC"
+            strokeWidth="2.5"
+            fill="none"
+            strokeLinecap="round"
+          />
+          <circle cx={-22} cy={6 + dogTailWag} r="3.5" fill="#F8FAFC" />
         </g>
       </svg>
     </div>

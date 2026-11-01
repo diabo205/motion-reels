@@ -37,7 +37,7 @@ export const PulsatingBattleMarker: React.FC<PulsatingBattleMarkerProps> = ({
   const rings = Array.from({ length: ringCount }).map((_, idx) => {
     const phaseOffset = (idx / ringCount) * 40;
     const ringCycle = ((frame * pulseSpeed + phaseOffset) % 40) / 40;
-    const ringRadius = interpolate(ringCycle, [0, 1], [radius, radius * 3.2]);
+    const ringRadius = interpolate(ringCycle, [0, 1], [radius, radius * 3.2], { extrapolateRight: 'clamp' });
     const ringAlpha = interpolate(ringCycle, [0, 0.7, 1], [0.85, 0.35, 0], {
       extrapolateLeft: 'clamp',
       extrapolateRight: 'clamp',

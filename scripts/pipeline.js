@@ -13,6 +13,7 @@ const fs = require('fs');
 const path = require('path');
 const { resolveProject, writeProjectManifest, PROJECT_MAP } = require('./project_resolver');
 const { runAudit } = require('./audit_and_validate');
+const { lintFramework } = require('./lint_framework');
 const { exportProjectDeliverables } = require('./export_deliverables');
 const { updateRetentionPriors } = require('./telemetry_priors');
 
@@ -59,12 +60,16 @@ async function main() {
   let mode = '--preview';
   if (args.some((a) => ['--audit-stills', '-audit-stills', 'audit-stills', 'audit'].includes(a))) {
     mode = '--audit-stills';
+  } else if (args.some((a) => ['--lint-framework', 'lint-framework', '--lint'].includes(a))) {
+    mode = '--lint-framework';
   } else if (args.some((a) => ['--render', '-render', 'render'].includes(a))) {
     mode = '--render';
   } else if (args.some((a) => ['--smoke', 'smoke'].includes(a))) {
     mode = '--smoke';
   } else if (args.some((a) => ['--deliverables', 'deliverables'].includes(a))) {
     mode = '--deliverables';
+  } else if (args.some((a) => ['--telemetry', 'telemetry'].includes(a))) {
+    mode = '--telemetry';
   }
 
   const autoFix = args.includes('--auto-fix');
@@ -76,7 +81,7 @@ async function main() {
   const py = resolvePythonBin();
 
   // 1. Run Beat Grid Extraction & Procedural Foley Synthesis
-  if (py && mode !== '--deliverables') {
+  if (py && mode !== '--deliverables' && mode !== '--lint-framework' && mode !== '--telemetry') {
     try {
       const bgmInput = fs.existsSync(path.resolve(proj.bgmFile))
         ? proj.bgmFile
@@ -120,6 +125,28 @@ async function main() {
     const deliv = exportProjectDeliverables(proj.slug);
     updateRetentionPriors();
     console.log(`✅ [DELIVERABLES] Completed for ${proj.slug} -> ${deliv.delivDir}`);
+    return;
+  }
+
+  if (mode === '--telemetry') {
+    const ingestIdx = args.indexOf('--ingest');
+    const ingestFile = ingestIdx !== -1 ? args[ingestIdx + 1] : null;
+    const platIdx = args.indexOf('--platform');
+    const platform = platIdx !== -1 ? args[platIdx + 1] : null;
+
+    const { printTelemetryReport } = require('./telemetry_priors');
+    const updated = updateRetentionPriors({
+      ingestFile,
+      projectSlug: explicitSlug,
+      platform,
+    });
+    printTelemetryReport(updated);
+    return;
+  }
+
+  if (mode === '--lint-framework') {
+    const { runFrameworkLint } = require('./lint_framework');
+    runFrameworkLint();
     return;
   }
 

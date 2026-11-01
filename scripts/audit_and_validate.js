@@ -6,6 +6,7 @@ const constants = require('../config/pipeline_constants.json');
 const { resolveProject, writeProjectManifest } = require('./project_resolver');
 const { resolveResponsiveFontSize } = require('./font_metrics');
 const { exportProjectDeliverables } = require('./export_deliverables');
+const { lintFramework } = require('./lint_framework');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
@@ -63,7 +64,7 @@ function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   return { offset: Math.max(minW, Math.min(maxW, singleBeatFrames)), type: 'TEMPO_GRID' };
 }
 
-function lintProjectCode(projectInfo, styleMode) {
+function lintProjectCode(projectInfo, styleMode, autoFix = false) {
   const violations = [];
 
   // 1. FONT_LINT across core typography components & project vector file
@@ -127,6 +128,14 @@ function lintProjectCode(projectInfo, styleMode) {
       });
     }
   }
+
+  // 4. FRAMEWORK_LINT: Enforce Remotion runtime determinism and frame safety across .tsx files
+  // Blocks Math.random(), unclamped interpolate(), CSS animations/transitions, Date.now()/performance.now()
+  const frameworkViolations = lintFramework({
+    projectInfo,
+    autoFix,
+  });
+  violations.push(...frameworkViolations);
 
   return violations;
 }
@@ -216,9 +225,19 @@ async function runAudit(options = {}) {
     );
   }
 
-  // 2. Code-level linters (FONT_LINT, PHOTO_PASTE_LINT, PALETTE_LINT)
-  const codeViolations = lintProjectCode(projectInfo, styleMode);
+  // 2. Code-level & Framework linters (FONT_LINT, PHOTO_PASTE_LINT, PALETTE_LINT, FRAMEWORK_LINT)
+  const codeViolations = lintProjectCode(projectInfo, styleMode, autoFix);
   violations.push(...codeViolations);
+  const fwErrors = codeViolations.filter((v) => v.rule.startsWith('FRAMEWORK_') && v.severity === 'ERROR');
+  if (fwErrors.length === 0) {
+    console.log(
+      '✅ PASS: Framework hooks verified (0 Math.random, 0 unclamped interpolate, 0 CSS transitions, 0 wall-clock timers).'
+    );
+  } else {
+    console.error(
+      `❌ VIOLATIONS: ${fwErrors.length} framework violation(s) detected in .tsx code!`
+    );
+  }
 
   // 3. Per-Scene Pacing, Beat-Sync, Glyph Width, Camera & Archetype Audit
   console.log('\n--- Per-Scene Pacing, Beat-Sync, Glyph Width & Camera Audit ---');

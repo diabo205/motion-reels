@@ -7,7 +7,7 @@ import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 import { CutoutPuppet } from './CutoutPuppet';
 import { PaperSignCounter } from './TactilePropCards';
 import { WavingFlagSvg } from './WavingFlagSvg';
-import { WeatheredMilitaryStamp } from './RashidMinhasVectors';
+import { WeatheredMilitaryStamp } from '../kit';
 import {
   createGeoProjector,
   U2_INCIDENT_GEOJSON,
@@ -676,7 +676,6 @@ export const SovietP30RadarAlertVector: React.FC = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          transition: 'all 0.1s ease',
         }}
       >
         <span style={{ fontFamily: blackOps.fontFamily, fontSize: 32, color: '#FFFFFF', letterSpacing: 2 }}>
@@ -1029,8 +1028,8 @@ export const U2ExplosionDestructionVector: React.FC = () => {
   const radialBlurStdDev = interpolate(frame, [0, 2, 5], [7, 3, 0], { extrapolateRight: 'clamp' });
 
   // 2. Parallax Background Offsets
-  const zenithParallaxY = interpolate(frame, [0, 276], [-25, 25]);
-  const earthParallaxY = interpolate(frame, [0, 276], [25, -25]);
+  const zenithParallaxY = interpolate(frame, [0, 276], [-25, 25], { extrapolateRight: 'clamp' });
+  const earthParallaxY = interpolate(frame, [0, 276], [25, -25], { extrapolateRight: 'clamp' });
 
   // 3. Concentric Hard-Edged Geometric Blast Rings (White, Yellow, Orange)
   const ringScale1 = interpolate(frame, [0, 26], [0.05, 3.6], { extrapolateRight: 'clamp' }); // White shock front
@@ -1044,9 +1043,9 @@ export const U2ExplosionDestructionVector: React.FC = () => {
 
   // 5. Breakup Choreography
   // Main aircraft fuselage & left wing (Tumbling in inverted spin)
-  const planeTumbleX = interpolate(frame, [0, 276], [0, -160]);
-  const planeTumbleY = interpolate(frame, [0, 276], [0, 380]);
-  const planeSpinDeg = interpolate(frame, [0, 276], [0, 360 * 2.8]);
+  const planeTumbleX = interpolate(frame, [0, 276], [0, -160], { extrapolateRight: 'clamp' });
+  const planeTumbleY = interpolate(frame, [0, 276], [0, 380], { extrapolateRight: 'clamp' });
+  const planeSpinDeg = interpolate(frame, [0, 276], [0, 360 * 2.8], { extrapolateRight: 'clamp' });
 
   // Sliced Horizontal Stabilizer (Empennage severed, drifting back-upward)
   const tailSeverProg = interpolate(frame, [0, 220], [0, 1], { extrapolateRight: 'clamp' });
@@ -1348,7 +1347,6 @@ export const U2ExplosionDestructionVector: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: 12,
-          transition: 'box-shadow 0.08s ease',
         }}
       >
         {/* Primary Flashing Failure Bar */}

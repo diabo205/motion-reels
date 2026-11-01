@@ -12,10 +12,10 @@ import {
 import { KineticTextStack, TextLayerSpec } from './components/KineticTextStack';
 import { PersistentHudBadge } from './components/PersistentHudBadge';
 import { SceneVectorAsset } from './components/GeneratedSilhouettes';
-import { AtmosphericBackground, PaperStageStyle } from './components/AtmosphericBackground';
+import { AtmosphericBackground, PaperStageStyle, SFX_PERCEPTUAL_LEAD_FRAMES, SafeZoneContainer } from './kit';
+import { ArchetypeScene } from './scenes';
 import { loadFont as loadMontserrat } from '@remotion/google-fonts/Montserrat';
 import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
-import { SFX_PERCEPTUAL_LEAD_FRAMES } from './config/constants';
 
 // Preload approved heavy geometric sans-serif fonts (pinned to 800/900 weights & latin subset)
 const montserrat = loadMontserrat('normal', { weights: ['800', '900'], subsets: ['latin'] });
@@ -221,19 +221,19 @@ const SceneItem: React.FC<{
     const shakeY = Math.cos(frame * 2.7) * 14 * intensity * decay * loopEase;
     transform = `translate(${shakeX}px, ${shakeY}px)`;
   } else if (movement === 'PARALLAX_PAN_RIGHT') {
-    const panX = interpolate(frame, [0, scene.durationFrames], [-28, 28]) * intensity * loopEase;
+    const panX = interpolate(frame, [0, scene.durationFrames], [-28, 28], { extrapolateRight: 'clamp' }) * intensity * loopEase;
     transform = `translateX(${panX}px)`;
   } else if (movement === 'CRANE_SWEEP_UP') {
-    const panY = interpolate(frame, [0, scene.durationFrames], [24, -24]) * intensity * loopEase;
+    const panY = interpolate(frame, [0, scene.durationFrames], [24, -24], { extrapolateRight: 'clamp' }) * intensity * loopEase;
     transform = `translateY(${panY}px)`;
   } else if (movement === 'DUTCH_TILT') {
-    const deg = interpolate(frame, [0, scene.durationFrames], [-1.2, 1.2]) * intensity * loopEase;
+    const deg = interpolate(frame, [0, scene.durationFrames], [-1.2, 1.2], { extrapolateRight: 'clamp' }) * intensity * loopEase;
     const scale = 1 + 0.03 * intensity * loopEase;
     transform = `scale(${scale}) rotate(${deg}deg)`;
   } else if (movement === 'SLOW_PUSH_IN') {
     const scale =
       1 +
-      interpolate(frame, [0, scene.durationFrames], [0, 0.06 * intensity]) * loopEase;
+      interpolate(frame, [0, scene.durationFrames], [0, 0.06 * intensity], { extrapolateRight: 'clamp' }) * loopEase;
     transform = `scale(${scale})`;
   }
 

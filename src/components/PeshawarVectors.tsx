@@ -7,7 +7,7 @@ import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 import { CutoutPuppet } from './CutoutPuppet';
 import { PaperSignCounter } from './TactilePropCards';
 import { WavingFlagSvg } from './WavingFlagSvg';
-import { WeatheredMilitaryStamp } from './RashidMinhasVectors';
+import { WeatheredMilitaryStamp } from '../kit';
 
 const blackOps = loadBlackOpsOne();
 const barlow = loadBarlowCondensed();
@@ -1527,16 +1527,16 @@ export const WaziristanOperationMapVector: React.FC = () => {
 
   // 3-Prong Spearhead positions (Operation Rah-e-Nijat)
   // Axis 1: Eastern Spearhead (14 Div from Jandola towards Sararogha)
-  const ax1X = interpolate(advance, [0, 1], [630, 520]);
-  const ax1Y = interpolate(advance, [0, 1], [1490, 1410]);
+  const ax1X = interpolate(advance, [0, 1], [630, 520], { extrapolateRight: 'clamp' });
+  const ax1Y = interpolate(advance, [0, 1], [1490, 1410], { extrapolateRight: 'clamp' });
 
   // Axis 2: Southern Spearhead (9 Div from Shakai towards Ladha)
-  const ax2X = interpolate(advance, [0, 1], [340, 405]);
-  const ax2Y = interpolate(advance, [0, 1], [1530, 1405]);
+  const ax2X = interpolate(advance, [0, 1], [340, 405], { extrapolateRight: 'clamp' });
+  const ax2Y = interpolate(advance, [0, 1], [1530, 1405], { extrapolateRight: 'clamp' });
 
   // Axis 3: Northern Spearhead (SSG Commandos from Razmak towards Makin)
-  const ax3X = interpolate(advance, [0, 1], [440, 432]);
-  const ax3Y = interpolate(advance, [0, 1], [1220, 1305]);
+  const ax3X = interpolate(advance, [0, 1], [440, 432], { extrapolateRight: 'clamp' });
+  const ax3Y = interpolate(advance, [0, 1], [1220, 1305], { extrapolateRight: 'clamp' });
 
   return (
     <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
@@ -2769,8 +2769,8 @@ export const ItalyOlbiaContinentalMapVector: React.FC = () => {
 
           {/* Moving wire pulse dot */}
           <circle
-            cx={interpolate(travel, [0, 800], [-280, 280])}
-            cy={interpolate(travel, [0, 400, 800], [-80, -180, -80])}
+            cx={interpolate(travel, [0, 800], [-280, 280], { extrapolateRight: 'clamp' })}
+            cy={interpolate(travel, [0, 400, 800], [-80, -180, -80], { extrapolateRight: 'clamp' })}
             r="9"
             fill="#E63946"
             stroke="#FFFFFF"

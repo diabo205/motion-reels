@@ -64,7 +64,7 @@ export const PaperSignCounter: React.FC<PaperSignCounterProps> = ({
     }
   );
 
-  const currentVal = Math.round(interpolate(progress, [0, 1], [startValue, endValue]));
+  const currentVal = Math.round(interpolate(progress, [0, 1], [startValue, endValue], { extrapolateRight: 'clamp' }));
   const isFinished = progress >= 0.98;
   const valueColor = highlightRedOnEnd && isFinished ? '#C1272D' : '#141619';
   const valueFontSize = width < 680 ? 80 : 104;

@@ -386,7 +386,7 @@ export const CowboyWehrmachtVetsPact: React.FC = () => {
 export const CowboyRadioCallToPatton: React.FC = () => {
   const frame = useCurrentFrame();
   const waveRadius = (frame * 5) % 320;
-  const pulseOpacity = interpolate(waveRadius, [0, 320], [1, 0]);
+  const pulseOpacity = interpolate(waveRadius, [0, 320], [1, 0], { extrapolateRight: 'clamp' });
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
@@ -874,7 +874,7 @@ export const CowboyCossackCavalryPrinceAmassov: React.FC = () => {
 export const CowboyWaffenSsAmbush: React.FC = () => {
   const frame = useCurrentFrame();
   const blastScale = interpolate(frame % 45, [0, 8, 35], [0.2, 1.4, 0], { extrapolateRight: 'clamp' });
-  const flashOpacity = interpolate(frame % 45, [0, 6, 25], [1, 0.8, 0]);
+  const flashOpacity = interpolate(frame % 45, [0, 6, 25], [1, 0.8, 0], { extrapolateRight: 'clamp' });
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>

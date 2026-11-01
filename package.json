@@ -8,6 +8,7 @@
     "audit": "node scripts/pipeline.js --audit-stills",
     "audit:fast": "node scripts/pipeline.js --audit-stills --skip-stills",
     "audit:fix": "node scripts/pipeline.js --audit-stills --skip-stills --auto-fix",
+    "lint:framework": "node scripts/lint_framework.js",
     "deliverables": "node scripts/pipeline.js --deliverables",
     "telemetry": "node scripts/telemetry_priors.js",
     "test:smoke": "node scripts/pipeline.js --smoke"

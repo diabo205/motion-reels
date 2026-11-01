@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RetentionPriorsSchema",
+  "description": "Empirical platform retention priors schema mapping scene archetypes to optimal duration ranges and observed retention deltas.",
+  "type": "object",
+  "required": [
+    "updatedAt",
+    "sampleSizeReels",
+    "totalScenesAnalyzed",
+    "baselineAverageHoldRate",
+    "archetypeRetentionPriors",
+    "recentHookArchetypeHistory",
+    "pacingPriors"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "sampleSizeReels": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalScenesAnalyzed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "baselineAverageHoldRate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "archetypeRetentionPriors": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "sampleScenes",
+          "avgHoldRate",
+          "observed_retention_delta",
+          "drop_off_risk",
+          "recommendedForHook",
+          "optimal_duration_range"
+        ],
+        "properties": {
+          "sampleScenes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "avgHoldRate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "observed_retention_delta": {
+            "type": "number"
+          },
+          "drop_off_risk": {
+            "type": "string",
+            "enum": ["LOW", "MEDIUM", "HIGH"]
+          },
+          "recommendedForHook": {
+            "type": "boolean"
+          },
+          "recommended_hook_priority": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "optimal_duration_range": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "optimalDurationFrames": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "duration_delta_matrix": {
+            "type": "object",
+            "properties": {
+              "<=128f": { "$ref": "#/definitions/DurationBucket" },
+              "129-144f": { "$ref": "#/definitions/DurationBucket" },
+              "145-168f": { "$ref": "#/definitions/DurationBucket" },
+              ">168f": { "$ref": "#/definitions/DurationBucket" }
+            },
+            "additionalProperties": { "$ref": "#/definitions/DurationBucket" }
+          },
+          "recommended_act_placement": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "HOOK",
+                "INCITING_CRISIS",
+                "ESCALATING_CRUCIBLE",
+                "TURNING_POINT",
+                "RESOLUTION_CTA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "recentHookArchetypeHistory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["projectSlug", "openingArchetype"],
+        "properties": {
+          "projectSlug": { "type": "string" },
+          "openingArchetype": { "type": "string" },
+          "hookDurationFrames": { "type": "integer" },
+          "hookHoldRate": { "type": "number" }
+        }
+      }
+    },
+    "pacingPriors": {
+      "type": "object",
+      "required": [
+        "targetHookDurationFrames",
+        "optimalPayoffBeatIndex",
+        "sfxPerceptualLeadFrames",
+        "maxConsecutiveSameArchetype"
+      ],
+      "properties": {
+        "targetHookDurationFrames": { "type": "integer" },
+        "optimalPayoffBeatIndex": { "type": "integer" },
+        "sfxPerceptualLeadFrames": { "type": "integer" },
+        "maxConsecutiveSameArchetype": { "type": "integer" },
+        "retentionDropSpikeThreshold": { "type": "number" },
+        "optimalCtaPlacement": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "DurationBucket": {
+      "type": "object",
+      "properties": {
+        "samples": { "type": "integer", "minimum": 0 },
+        "holdRate": { "type": ["number", "null"] },
+        "observed_retention_delta": { "type": ["number", "null"] }
+      }
+    }
+  }
+}

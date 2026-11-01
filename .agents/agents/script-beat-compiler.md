@@ -13,8 +13,9 @@ Your sole responsibility is translating a raw historical narrative + `assets/aud
 
 ## Core Compilation Constraints
 
-1. **Single Canonical Duration Ceiling (`MAX_FRAMES = 3500`, `MIN_FRAMES = 2700`)**:
+1. **Single Canonical Duration Ceiling (`MAX_FRAMES = 3500`, `MIN_FRAMES = 2700`) & Empirical Retention Biasing**:
    - Segment the script into **16 to 29 scenes**, holding each scene for **2.0 to 2.8 seconds** (`120` to `168` frames @ 60 FPS; up to `180f` on the final epilogue scene).
+   - **Empirical Duration Windows**: Consult `config/retention_priors.json` (`scene_type → optimal_duration_range → observed_retention_delta`). Bias each archetype toward its top-performing duration bucket (`duration_delta_matrix`) to maximize viewer retention.
    - **Total Duration Ceiling**: The sum of all `durationFrames` must strictly clock between **`2,700` and `3,500` frames** (`45.00s` to `58.33s` @ 60 FPS) as a high-retention short-form pacing constraint.
    - Include `meta.bgmLicense` (`{ source, licenseType, clearanceId }`) to document music clearance.
 

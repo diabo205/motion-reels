@@ -261,8 +261,8 @@ export const SindhBorderTelemetry: React.FC<{ durationFrames: number }> = ({ dur
   });
 
   // Curved Bezier Flight path from Karachi (240, 780) to Sujawal (720, 960)
-  const jetX = interpolate(progress, [0, 1], [240, 720]);
-  const jetY = interpolate(progress, [0, 1], [780, 960]) + Math.sin(progress * Math.PI) * -50;
+  const jetX = interpolate(progress, [0, 1], [240, 720], { extrapolateRight: 'clamp' });
+  const jetY = interpolate(progress, [0, 1], [780, 960], { extrapolateRight: 'clamp' }) + Math.sin(progress * Math.PI) * -50;
   const radarSweep = (frame * 3.5) % 360;
 
   return (
@@ -363,65 +363,10 @@ export const SindhBorderTelemetry: React.FC<{ durationFrames: number }> = ({ dur
 };
 
 // ==========================================
-// 4. WEATHERED RUBBER STAMP COMPONENT
+// 4. WEATHERED RUBBER STAMP COMPONENT (L1 KIT)
 // ==========================================
-export const WeatheredMilitaryStamp: React.FC<{
-  text: string;
-  subText?: string;
-  color?: string;
-  slamProgress?: number;
-}> = ({ text, subText, color = '#C1272D', slamProgress = 1.0 }) => {
-  return (
-    <g transform={`rotate(-11) scale(${slamProgress})`}>
-      {/* Outer Double-Bordered Distressed Rubber Ink Frame (Translucent Interior like Reference Video) */}
-      <rect
-        x="-340"
-        y="-92"
-        width="680"
-        height="184"
-        fill="rgba(193, 39, 45, 0.14)"
-        stroke={color}
-        strokeWidth="10"
-        rx="14"
-        strokeDasharray="210 6 80 5 140 6"
-      />
-      <rect
-        x="-324"
-        y="-76"
-        width="648"
-        height="152"
-        fill="none"
-        stroke={color}
-        strokeWidth="3.5"
-        rx="8"
-      />
-      {/* Heavy Stamp Text */}
-      <text
-        y={subText ? 12 : 28}
-        textAnchor="middle"
-        fill={color}
-        fontFamily="'Black Ops One', sans-serif"
-        fontSize="82"
-        letterSpacing="6"
-      >
-        {text}
-      </text>
-      {subText && (
-        <text
-          y="54"
-          textAnchor="middle"
-          fill="#EAE3D2"
-          fontFamily={courier.fontFamily}
-          fontSize="23"
-          letterSpacing="2.5"
-          fontWeight="700"
-        >
-          {subText}
-        </text>
-      )}
-    </g>
-  );
-};
+import { WeatheredMilitaryStamp } from '../kit';
+export { WeatheredMilitaryStamp };
 
 // ========================================================
 // 5. M24 CHAFFEE / LIGHT TANK HIGH-CONTRAST SILHOUETTE
@@ -949,17 +894,17 @@ export const DhakaTacticalMapVector: React.FC<{ durationFrames?: number }> = ({ 
   });
 
   // Spearhead coordinates from Dhaka Cantonment (360, 815)
-  const p1X = interpolate(progress, [0, 1], [360, 240]);
-  const p1Y = interpolate(progress, [0, 1], [815, 1085]);
+  const p1X = interpolate(progress, [0, 1], [360, 240], { extrapolateRight: 'clamp' });
+  const p1Y = interpolate(progress, [0, 1], [815, 1085], { extrapolateRight: 'clamp' });
 
-  const p2X = interpolate(progress, [0, 1], [360, 720]);
-  const p2Y = interpolate(progress, [0, 1], [815, 1055]);
+  const p2X = interpolate(progress, [0, 1], [360, 720], { extrapolateRight: 'clamp' });
+  const p2Y = interpolate(progress, [0, 1], [815, 1055], { extrapolateRight: 'clamp' });
 
-  const p3X = interpolate(progress, [0, 1], [360, 490]);
-  const p3Y = interpolate(progress, [0, 1], [815, 1215]);
+  const p3X = interpolate(progress, [0, 1], [360, 490], { extrapolateRight: 'clamp' });
+  const p3Y = interpolate(progress, [0, 1], [815, 1215], { extrapolateRight: 'clamp' });
 
-  const p4X = interpolate(progress, [0, 1], [360, 225]);
-  const p4Y = interpolate(progress, [0, 1], [815, 1250]);
+  const p4X = interpolate(progress, [0, 1], [360, 225], { extrapolateRight: 'clamp' });
+  const p4Y = interpolate(progress, [0, 1], [815, 1250], { extrapolateRight: 'clamp' });
 
   const radarSweep = (frame * 3) % 360;
 
