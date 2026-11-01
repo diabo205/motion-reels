@@ -23,3 +23,6 @@ export * from './SFXTrigger';
 
 // 7. Shared Tactile Stamp & Paper Primitives
 export * from './WeatheredMilitaryStamp';
+
+// 8. Shared High-Fidelity Organic Vector Explosions
+export * from './OrganicExplosion';

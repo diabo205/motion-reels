@@ -40,6 +40,7 @@ import {
   PeshawarEpilogueCard,
 } from './PeshawarVectors';
 import {
+  U2ShatteredSpinStratosphereVector,
   PeshawarAirbaseU2DawnSilhouette,
   U2StratosphereTelemetryVector,
   GrandSlamContinentalMapVector,
@@ -2073,6 +2074,10 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     // ========================================================
     // 1960 U-2 INCIDENT COLD WAR ESPIONAGE SUITE
     // ========================================================
+    case 'U2_SHATTERED_SPIN_STRATOSPHERE':
+    case 'SHATTERED_U2_SPINNING_70000FT':
+      return <U2ShatteredSpinStratosphereVector />;
+
     case 'PESHAWAR_AIRBASE_U2_DAWN':
       return <PeshawarAirbaseU2DawnSilhouette />;
 

@@ -14,10 +14,17 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
      - *Espionage & Dossier*: Bunker Black (`#0B1310`) and Dark Slate (`#16221E`) + Phosphor White (`#ECFDF5`) setup + Muted Cyan (`#38BDF8`) + Alert Red (`#EF4444`) payoff.
    - **Global-Frame Seeded Persistent Particle Layer**: When applicable to the setting (e.g. Arctic gale, burning blitz, monsoon, desert storm), run one continuous particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST`) seeded deterministically by `(emitterId, globalFrame)` so particles remain unbroken across both isolated scene clips and full renders. Leave `NONE` for sterile indoor or diplomatic stories.
 
-3. **Character Standard: Silhouettes vs. Cutout Puppets**:
+3. **Character Standard, Reference Blueprinting & 6-Layer Vector Anatomy**:
    - **Grim, Military, Crisis & Tragedy Scenarios (Default)**: Depict all people as stark, flat dark silhouettes with at most one colored accent prop (e.g., red scarf, yellow armband, white helmet emblem). Separate dark silhouettes from dark backgrounds using atmospheric backlighting (soft radial horizon glow, aurora bands, or firelight gradient). Cartoon dolls and photo-cutout heads are strictly banned in grim history.
    - **Non-Grim, Satirical & Investigative Scenarios (Selective)**: For lighthearted, bureaucratic, or non-grim historical vignettes, articulated die-cut `<CutoutPuppet />` rigs (archival portrait head on a tactile body with `#F4EFE6` border) may be deployed.
-   - **Zero Direct Raw Image Pasting (`PHOTO_PASTE_LINT`)**: Never display raw photos or photo cards of environments, landscapes, vehicles, ruins, or objects. Use archival photos strictly as visual reference to draft parametric 2D SVG vector art.
+   - **Zero Direct Raw Image Pasting (`PHOTO_PASTE_LINT`)**: Never display raw photos or photo cards of environments, landscapes, vehicles, ruins, or objects. Use archival photos strictly as visual reference blueprints to draft parametric 2D SVG vector art.
+   - **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**: Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone. Ingest reference plates (`assets/plates/` or `projects/<slug>/plates/`) and deconstruct them into the 6-layer vector hierarchy:
+     1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
+     2. *Layer 2: Dynamic Shockwave / Ionization Rims* (Mach rings, supersonic ozone glows, speed lines).
+     3. *Layer 3: Acute Energy Spikes / Directional Vectors* (sharp multi-color flame tongues, structural stress lines).
+     4. *Layer 4: Multi-Tiered Organic Body Geometry* (multi-nested arc-scalloped lobes via `src/kit/OrganicExplosion.tsx` or cross-sectional mechanical foils; ban flat raw polygons/blobs).
+     5. *Layer 5: High-Contrast Core Accent* (white-hot 8-pointed core flash star, glowing cockpit dials, or fractured structural spars).
+     6. *Layer 6: Detached Orbiting Micro-Elements* (flying cloudlets, trailing propellant, shrapnel shards, embers).
 
 4. **Typography, Glyph Metrics & Copywriting (Zero-Clutter Rules)**:
    - **Three-Element Text Cap**: Limit every screen to at most three text elements: an optional top context tag, a white setup line, and a red payoff line.

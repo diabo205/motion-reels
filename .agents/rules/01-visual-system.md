@@ -49,6 +49,14 @@
 - **Non-Grim & Satirical Scenarios (Selective)**:
   - For lighthearted, bureaucratic, or non-grim historical vignettes, articulated `<CutoutPuppet />` rigs may be selectively used.
 - **Zero Raw Photographs on Screen (`PHOTO_PASTE_LINT`)**: Archival photos are used strictly as reference blueprints to craft custom SVG artwork; raw `<img>`, `<Image>`, and `<image>` tags inside vector scene components are automatically flagged by `audit_and_validate.js`.
+- **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**:
+  Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone. Before coding, reference plates MUST be ingested into `assets/plates/` or `projects/<slug>/plates/` and translated into the 6-layer vector hierarchy:
+  1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
+  2. *Layer 2: Supersonic / Dynamic Atmospheric Disturbances* (Mach shockwave rings, ionization rims, speed lines).
+  3. *Layer 3: Acute Energy Spikes / Directional Vectors* (sharp multi-color flame tongues, structural stress lines).
+  4. *Layer 4: Multi-Tiered Organic Body Geometry* (multi-nested arc-scalloped lobes via `src/kit/OrganicExplosion.tsx` or cross-sectional mechanical foils; ban flat raw polygons/blobs).
+  5. *Layer 5: High-Contrast Core Accent* (white-hot 8-pointed core flash star, glowing cockpit dials, or fractured structural spars).
+  6. *Layer 6: Detached Orbiting Micro-Elements* (flying cloudlets, trailing propellant, shrapnel shards, embers).
 
 ---
 

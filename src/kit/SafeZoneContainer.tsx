@@ -65,16 +65,16 @@ export const SafeZoneContainer: React.FC<SafeZoneContainerProps> & {
           {/* Bottom UI Buffer (Bottom 22%) */}
           <rect
             x="0"
-            y={safeZone.buffers.bottomBufferY}
+            y={safeZone.bottomUiBuffer.top}
             width="1080"
-            height={1920 - safeZone.buffers.bottomBufferY}
+            height={1920 - safeZone.bottomUiBuffer.top}
             fill="rgba(239, 68, 68, 0.12)"
           />
           {/* Right Action Stack Buffer (Right 15%) */}
           <rect
-            x={safeZone.buffers.rightActionStackX}
+            x={safeZone.rightActionBuffer.left}
             y="0"
-            width={1080 - safeZone.buffers.rightActionStackX}
+            width={1080 - safeZone.rightActionBuffer.left}
             height="1920"
             fill="rgba(239, 68, 68, 0.08)"
           />

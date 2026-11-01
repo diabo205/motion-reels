@@ -7,7 +7,12 @@ import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 import { CutoutPuppet } from './CutoutPuppet';
 import { PaperSignCounter } from './TactilePropCards';
 import { WavingFlagSvg } from './WavingFlagSvg';
-import { WeatheredMilitaryStamp } from '../kit';
+import {
+  WeatheredMilitaryStamp,
+  StylizedFireball,
+  createArcScallopedCloud,
+  create8PointedStarPath,
+} from '../kit';
 import {
   createGeoProjector,
   U2_INCIDENT_GEOJSON,
@@ -22,8 +27,641 @@ const barlow = loadBarlowCondensed();
 const montserrat = loadMontserrat();
 const inter = loadInter();
 
+/**
+ * Helper to generate authentic outward-bulging rounded cloud lobes using circular SVG arcs
+ * tailored for high-altitude stratospheric detonations (adapted from tactile multi-tiered geometry).
+ */
+const createStratosphereBlastLobe = (
+  baseRadius: number,
+  lobeCount: number,
+  radiiScale: number[],
+  wobble: number = 0
+): string => {
+  const points: { x: number; y: number }[] = [];
+  for (let i = 0; i < lobeCount; i++) {
+    const angle = (i / lobeCount) * Math.PI * 2 - Math.PI / 2;
+    const r =
+      baseRadius * (radiiScale[i % radiiScale.length] || 1.0) +
+      Math.sin(angle * 2.5 + wobble) * 7;
+    points.push({
+      x: Math.cos(angle) * r,
+      y: Math.sin(angle) * r,
+    });
+  }
+
+  let d = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)} `;
+  for (let i = 0; i < lobeCount; i++) {
+    const next = points[(i + 1) % lobeCount];
+    const curr = points[i];
+    const dx = next.x - curr.x;
+    const dy = next.y - curr.y;
+    const dist = Math.hypot(dx, dy);
+    // Arc radius proportional to chord length produces juicy, bulging circular lobes
+    const arcR = (dist * 0.62).toFixed(1);
+    d += `A ${arcR} ${arcR} 0 0 1 ${next.x.toFixed(1)} ${next.y.toFixed(1)} `;
+  }
+  d += 'Z';
+  return d;
+};
+
 // =========================================================================
-// 1. SCENE 01: PESHAWAR AIRBASE DAWN TAKEOFF
+// 1. SCENE 01: INCITING CRISIS - SHATTERED U-2 & STRATOSPHERIC EXPLOSION
+// May 1, 1960 • Upper Stratosphere over Sverdlovsk (70,500 FT).
+// The catastrophic detonation of the Soviet S-75 Dvina SAM proximity warhead:
+// Multi-tiered scalloped fireball (deep crimson outer, blazing amber mid,
+// radiant yellow inner, white-hot 8-pointed core flash), acute radiating
+// supersonic flame spikes, detached flying cloudlets, expanding Mach shockwave
+// rings, and the severed Dragon Lady caught in an inverted death-spin.
+// Sharp Frame 0 (zero blur) for poster perfection & feed retention.
+// =========================================================================
+export const U2ShatteredSpinStratosphereVector: React.FC = () => {
+  const frame = useCurrentFrame();
+
+  // 1. Decaying Impact Tremor (motivated shockwave shudder on frame 0, fully settled by frame 28)
+  const shakeDecay = interpolate(frame, [0, 28], [1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shakeX = Math.sin(frame * 4.2) * 16 * shakeDecay;
+  const shakeY = Math.cos(frame * 4.8) * 12 * shakeDecay;
+
+  // 2. Dynamic Explosive Bloom (frame 0 already blooms at 0.38, peaks at 1.34 by frame 8, then settles into boiling fireball)
+  const blastScale =
+    frame < 22
+      ? interpolate(frame, [0, 8, 22], [0.38, 1.34, 1.05], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1.05 + 0.03 * Math.sin(frame * 0.18);
+
+  const coreFlash =
+    frame < 16
+      ? interpolate(frame, [0, 4, 16], [1.0, 1.0, 0.45], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 0.3 + 0.1 * Math.sin(frame * 0.25);
+
+  const wobble = Math.sin(Math.floor(frame / 3) * 0.25) * 6;
+  const cloudletDrift = interpolate(frame, [0, 128], [0, 65], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // Multi-tiered scalloped cloud lobe scale profiles
+  const outerScales = [1.08, 0.93, 1.12, 0.91, 1.07, 0.95, 1.14, 0.92, 1.06, 0.94, 1.1, 0.96];
+  const midScales = [1.07, 0.92, 1.06, 0.94, 1.11, 0.93, 1.05, 0.91, 1.09, 0.95];
+  const innerScales = [1.09, 0.94, 1.07, 0.93, 1.12, 0.95, 1.05, 0.96];
+
+  const outerPath = createStratosphereBlastLobe(245, 12, outerScales, wobble);
+  const midPath = createStratosphereBlastLobe(175, 10, midScales, -wobble);
+  const innerPath = createStratosphereBlastLobe(115, 8, innerScales, wobble * 0.5);
+
+  // Sharp radiating supersonic fire spikes (angles around the fireball)
+  const spikeAngles = [0, 26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 338];
+  const spikeLengths = [370, 400, 360, 420, 375, 395, 365, 410, 370, 405, 355, 415, 375, 390];
+
+  // Detached flying cloudlet positions drifting into the stratospheric void
+  const cloudlets = [
+    { x: 250, y: -210, r: 24 },
+    { x: -230, y: -200, r: 26 },
+    { x: 310, y: 35, r: 28 },
+    { x: -300, y: 25, r: 25 },
+    { x: 250, y: 210, r: 24 },
+    { x: -240, y: 200, r: 27 },
+    { x: 30, y: -270, r: 22 },
+    { x: 40, y: 265, r: 25 },
+  ];
+
+  // Concentric Mach shockwave rings expanding through the thin stratosphere
+  const shockR1 = interpolate(frame, [0, 52], [90, 620], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shockAlpha1 = interpolate(frame, [0, 12, 52], [0.95, 0.65, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const shockR2 = interpolate(frame, [0, 44], [60, 500], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shockAlpha2 = interpolate(frame, [0, 10, 44], [0.95, 0.55, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 3. Main Aircraft Airframe Tumbling Inverted Spin (Aspect Ratio 10.6 Glider in Death Spin)
+  const planeSpinDeg = interpolate(frame, [0, 128], [0, 360 * 1.6], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const planeTumbleX = interpolate(frame, [0, 128], [0, -85], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const planeTumbleY = interpolate(frame, [0, 128], [0, 210], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 4. Sliced Horizontal Stabilizer (Empennage severed, drifting back-upward along ballistic arc)
+  const tailX = interpolate(frame, [0, 128], [-25, -280], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const tailY = interpolate(frame, [0, 128], [15, -170], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const tailRot = interpolate(frame, [0, 128], [0, -420], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 5. Sliced Outer Wingtip (Fluttering outward-downward to the right)
+  const wingtipX = interpolate(frame, [0, 128], [40, 310], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const wingtipY = interpolate(frame, [0, 128], [10, 230], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const wingtipRot = interpolate(frame, [0, 128], [0, 460], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 6. Parallax Vertical Speed Lines (Simulating violent supersonic terminal freefall)
+  const speedLineOffset = (frame * 36) % 360;
+
+  // 7. Shrapnel Fragments (Deterministic radial expansion)
+  const shrapnelProg = interpolate(frame, [0, 128], [0, 480], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 8. Tactical HUD Warning Flash Cadence
+  const alertBlink = frame % 10 < 6;
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        transform: `translate(${shakeX}px, ${shakeY}px)`,
+        transformOrigin: 'center center',
+      }}
+    >
+      <svg
+        viewBox="0 0 1080 1920"
+        style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}
+      >
+        <defs>
+          {/* Deep Stratospheric Night Sky Gradient */}
+          <linearGradient id="stratosphereSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#050814" />
+            <stop offset="45%" stopColor="#0B1310" />
+            <stop offset="85%" stopColor="#16221E" />
+            <stop offset="100%" stopColor="#0A1118" />
+          </linearGradient>
+
+          {/* Curved Earth Horizon Gradient */}
+          <linearGradient id="earthLimbGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#0E1A29" />
+            <stop offset="100%" stopColor="#040910" />
+          </linearGradient>
+
+          {/* Volumetric Blast Core Aura */}
+          <radialGradient id="u2BlastCoreAura" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+            <stop offset="25%" stopColor="#FDE047" stopOpacity="0.85" />
+            <stop offset="55%" stopColor="#F97316" stopOpacity="0.5" />
+            <stop offset="80%" stopColor="#EF4444" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#0B1310" stopOpacity="0" />
+          </radialGradient>
+
+          {/* Red Structural Shear Spar Pattern */}
+          <linearGradient id="fractureRedGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="#EF4444" />
+            <stop offset="100%" stopColor="#B91C1C" />
+          </linearGradient>
+        </defs>
+
+        {/* PARALLAX LAYER 1: Near-Space Void & Stratospheric Stars */}
+        <rect x="0" y="0" width="1080" height="1920" fill="url(#stratosphereSky)" />
+
+        {/* Stratospheric Star Points (Crisp, sharp Frame 0 protection) */}
+        {[
+          { cx: 140, cy: 920, r: 2.2, phase: 0 },
+          { cx: 310, cy: 870, r: 1.8, phase: 1 },
+          { cx: 490, cy: 950, r: 1.6, phase: 2 },
+          { cx: 680, cy: 890, r: 2.0, phase: 3 },
+          { cx: 860, cy: 940, r: 1.9, phase: 4 },
+          { cx: 960, cy: 880, r: 1.5, phase: 5 },
+          { cx: 220, cy: 1040, r: 1.4, phase: 6 },
+          { cx: 780, cy: 1060, r: 1.7, phase: 7 },
+        ].map((pt, i) => {
+          const starAlpha = 0.5 + Math.sin(frame * 0.08 + pt.phase) * 0.35;
+          return (
+            <circle
+              key={i}
+              cx={pt.cx}
+              cy={pt.cy}
+              r={pt.r}
+              fill="#ECFDF5"
+              opacity={starAlpha}
+            />
+          );
+        })}
+
+        {/* PARALLAX LAYER 2: Curved Earth Horizon with Glowing Cyan Ozone Rim */}
+        <g>
+          {/* Earth Curvature Silhouette */}
+          <path
+            d="M -120 1740 Q 540 1510 1200 1740 L 1200 1920 L -120 1920 Z"
+            fill="url(#earthLimbGrad)"
+          />
+          {/* Cyan Atmospheric Ozone Rim */}
+          <path
+            d="M -120 1740 Q 540 1510 1200 1740"
+            stroke="#38BDF8"
+            strokeWidth={5}
+            fill="none"
+            opacity={0.9}
+          />
+          <path
+            d="M -120 1740 Q 540 1510 1200 1740"
+            stroke="#0284C7"
+            strokeWidth={16}
+            fill="none"
+            opacity={0.3}
+          />
+
+          {/* Continental Silhouette of Ural Mountains & Siberian Steppe below */}
+          <path
+            d="M 180 1710 Q 280 1660 380 1695 Q 480 1650 590 1715 Q 710 1670 820 1725 L 820 1920 L 180 1920 Z"
+            fill="#09131C"
+            opacity={0.75}
+          />
+        </g>
+
+        {/* CONTINUOUS MICRO-MOTION: Supersonic Terminal Velocity Speed Lines */}
+        <g opacity={0.65}>
+          {[160, 320, 510, 720, 890].map((x, i) => {
+            const yStart = ((i * 140 + speedLineOffset * 2.8) % 700) + 840;
+            return (
+              <line
+                key={i}
+                x1={x}
+                y1={yStart}
+                x2={x}
+                y2={yStart + 110}
+                stroke="#ECFDF5"
+                strokeWidth={2}
+                strokeDasharray="16 12"
+                opacity={0.4}
+              />
+            );
+          })}
+        </g>
+
+        {/* EXPLOSION LAYER 0: Ambient Volumetric Blast Core Glow */}
+        <circle cx="540" cy="1160" r="480" fill="url(#u2BlastCoreAura)" opacity={0.7} />
+
+        {/* EXPLOSION LAYER 1: Expanding Stratospheric Mach Shockwave Rings */}
+        <g transform="translate(540, 1160)">
+          {/* Cyan Atmospheric Ionization Ring */}
+          <circle
+            r={shockR1}
+            fill="none"
+            stroke="#38BDF8"
+            strokeWidth={6}
+            opacity={shockAlpha1}
+          />
+          {/* White-Hot Primary Mach Detonation Front */}
+          <circle
+            r={shockR2}
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth={4}
+            opacity={shockAlpha2}
+          />
+          {/* Concentric Geometric Octagon Shockwave */}
+          <polygon
+            points={`
+              0,${-shockR2 * 0.75}
+              ${shockR2 * 0.53},${-shockR2 * 0.53}
+              ${shockR2 * 0.75},0
+              ${shockR2 * 0.53},${shockR2 * 0.53}
+              0,${shockR2 * 0.75}
+              ${-shockR2 * 0.53},${shockR2 * 0.53}
+              ${-shockR2 * 0.75},0
+              ${-shockR2 * 0.53},${-shockR2 * 0.53}
+            `}
+            fill="none"
+            stroke="#F59E0B"
+            strokeWidth={3}
+            opacity={shockAlpha2 * 0.8}
+          />
+        </g>
+
+        {/* EXPLOSION LAYER 2: Scaled Multi-Tiered Scalloped Fireball Vector at (540, 1160) */}
+        <g transform={`translate(540, 1160) scale(${blastScale})`}>
+          {/* Flame Sublayer A: Sharp Radiating Supersonic Fire Spikes Behind Cloud Lobes */}
+          <g>
+            {spikeAngles.map((deg, idx) => {
+              const len = spikeLengths[idx];
+              return (
+                <g key={deg} transform={`rotate(${deg})`}>
+                  {/* Outer Fiery Orange Spike */}
+                  <polygon
+                    points={`0,-${len} -20,-170 20,-170`}
+                    fill="#F97316"
+                    stroke="#C2410C"
+                    strokeWidth={2}
+                  />
+                  {/* Inner Yellow Accent Spike */}
+                  <polygon
+                    points={`0,-${len - 38} -9,-190 9,-190`}
+                    fill="#FDE047"
+                  />
+                </g>
+              );
+            })}
+          </g>
+
+          {/* Flame Sublayer B: Outer Billowing Crimson Cloud Lobes (#DC2626 / #7F1D1D) */}
+          <path
+            d={outerPath}
+            fill="#DC2626"
+            stroke="#7F1D1D"
+            strokeWidth={4}
+          />
+
+          {/* Flame Sublayer C: Mid-Tier Blazing Amber-Orange Cloud Lobes (#F97316 / #C2410C) */}
+          <path
+            d={midPath}
+            fill="#F97316"
+            stroke="#C2410C"
+            strokeWidth={3.5}
+          />
+
+          {/* Flame Sublayer D: Inner Radiant Canary Yellow Cloud Lobes (#FDE047 / #D97706) */}
+          <path
+            d={innerPath}
+            fill="#FDE047"
+            stroke="#D97706"
+            strokeWidth={2.5}
+          />
+
+          {/* Flame Sublayer E: Epicenter 8-Pointed White-Hot Core Flash Star */}
+          <g transform={`scale(${1 + Math.sin(frame * 0.4) * 0.08})`}>
+            <path
+              d="M 0 -115 Q 16 -38 82 -82 Q 38 -16 115 0 Q 38 16 82 82 Q 16 38 0 115 Q -16 38 -82 82 Q -38 16 -115 0 Q -38 -16 -82 -82 Q -16 -38 0 -115 Z"
+              fill="#FFFFFF"
+              stroke="#FEF08A"
+              strokeWidth={4}
+            />
+            {/* Center Core Flash Spheres */}
+            <circle cx="0" cy="0" r="28" fill="#FFFFFF" />
+            <circle cx="0" cy="0" r="18" fill="#FEF08A" opacity={coreFlash} />
+          </g>
+
+          {/* Flame Sublayer F: Detached Flying Cloudlets Drifting Into the Stratosphere */}
+          {cloudlets.map((cl, idx) => {
+            const rad = Math.atan2(cl.y, cl.x);
+            const dx = cl.x + Math.cos(rad) * cloudletDrift;
+            const dy = cl.y + Math.sin(rad) * cloudletDrift;
+            return (
+              <g key={idx} transform={`translate(${dx}, ${dy})`}>
+                {/* Outer amber cloudlet */}
+                <ellipse
+                  cx="0"
+                  cy="0"
+                  rx={cl.r}
+                  ry={cl.r * 0.85}
+                  fill="#F97316"
+                  stroke="#C2410C"
+                  strokeWidth={2}
+                />
+                <circle cx={-cl.r * 0.35} cy={-cl.r * 0.15} r={cl.r * 0.55} fill="#F97316" />
+                <circle cx={cl.r * 0.35} cy={-cl.r * 0.15} r={cl.r * 0.55} fill="#F97316" />
+                {/* Inner yellow highlight */}
+                <ellipse cx="0" cy="-2" rx={cl.r * 0.55} ry={cl.r * 0.4} fill="#FEF08A" />
+              </g>
+            );
+          })}
+
+          {/* Flame Sublayer G: Radiating High-Velocity Speed Sparks */}
+          {[15, 45, 75, 105, 135, 165, 195, 225, 255, 285, 315, 345].map((ang) => (
+            <line
+              key={ang}
+              x1={Math.cos((ang * Math.PI) / 180) * 290}
+              y1={Math.sin((ang * Math.PI) / 180) * 290}
+              x2={Math.cos((ang * Math.PI) / 180) * 350}
+              y2={Math.sin((ang * Math.PI) / 180) * 350}
+              stroke="#FEF08A"
+              strokeWidth={3}
+              strokeLinecap="round"
+            />
+          ))}
+        </g>
+
+        {/* TACTICAL HUD CONTEXT: Safe-zone status bar at y = 875px */}
+        <g transform="translate(60, 875)">
+          <rect
+            x="0"
+            y="0"
+            width="960"
+            height="48"
+            fill="#0B1310"
+            stroke={alertBlink ? '#EF4444' : '#16221E'}
+            strokeWidth={2}
+            rx={4}
+            opacity={0.95}
+          />
+          <circle
+            cx="28"
+            cy="24"
+            r="8"
+            fill={alertBlink ? '#EF4444' : '#38BDF8'}
+          />
+          <text
+            x="52"
+            y="31"
+            fill="#ECFDF5"
+            fontFamily="Montserrat, sans-serif"
+            fontWeight={900}
+            fontSize={20}
+            letterSpacing="0.08em"
+          >
+            SVERDLOVSK SECTOR • 70,500 FT • PROXIMITY DETONATION
+          </text>
+        </g>
+
+        {/* BREAKUP DYNAMICS: Ballistic Trajectories & Debris Vectors at (540, 1220) */}
+        <g transform="translate(540, 1220)">
+          {/* Ballistic Arc: Severed Horizontal Stabilizer to Upper Left */}
+          <path
+            d={`M 0 35 Q -100 -30 ${tailX} ${35 + tailY}`}
+            stroke="#EF4444"
+            strokeWidth={3.5}
+            strokeDasharray="8 6"
+            fill="none"
+            opacity={0.95}
+          />
+
+          {/* Ballistic Arc: Severed Right Wingtip to Lower Right */}
+          <path
+            d={`M 240 -5 Q 340 100 ${240 + wingtipX} ${-5 + wingtipY}`}
+            stroke="#38BDF8"
+            strokeWidth={3.5}
+            strokeDasharray="8 6"
+            fill="none"
+            opacity={0.95}
+          />
+
+          {/* Radiating Titanium/Tungsten Shrapnel Shards */}
+          {[
+            { angle: 22, len: 44, w: 10 },
+            { angle: 68, len: 56, w: 12 },
+            { angle: 115, len: 50, w: 11 },
+            { angle: 158, len: 60, w: 14 },
+            { angle: 205, len: 46, w: 10 },
+            { angle: 252, len: 54, w: 12 },
+            { angle: 300, len: 48, w: 11 },
+            { angle: 342, len: 58, w: 13 },
+          ].map((shard, idx) => {
+            const rad = (shard.angle * Math.PI) / 180;
+            const sx = Math.cos(rad) * shrapnelProg;
+            const sy = Math.sin(rad) * shrapnelProg;
+            return (
+              <g
+                key={idx}
+                transform={`translate(${sx}, ${sy}) rotate(${shard.angle})`}
+                opacity={0.95}
+              >
+                <polygon
+                  points={`0,${-shard.len} ${shard.w},0 0,${shard.len * 0.4} ${-shard.w},0`}
+                  fill="#0B1310"
+                  stroke="#EF4444"
+                  strokeWidth={2.2}
+                />
+              </g>
+            );
+          })}
+
+          {/* COMPONENT 1: Sliced Horizontal Stabilizer (Empennage Tumble) */}
+          <g transform={`translate(${tailX}, ${35 + tailY}) rotate(${tailRot})`}>
+            {/* Flat 2D Sliced Stabilizer Vector */}
+            <path
+              d="M -90 0 L 0 -12 L 90 0 L 82 18 L 0 8 L -82 18 Z"
+              fill="#0F1012"
+              stroke="#EF4444"
+              strokeWidth={2.5}
+            />
+            {/* Sheared Mounting Spar & Red Fractured Ribs */}
+            <rect x="-8" y="-14" width="16" height="8" fill="url(#fractureRedGrad)" />
+            <line x1="-6" y1="-10" x2="6" y2="-10" stroke="#ECFDF5" strokeWidth={2} />
+            {/* Vertical Tail Fin Shard */}
+            <polygon
+              points="0,-12 18,-55 0,-50"
+              fill="#16221E"
+              stroke="#EF4444"
+              strokeWidth={1.5}
+            />
+          </g>
+
+          {/* COMPONENT 2: Sliced Right Wingtip (Cleanly Separated Outer Foil) */}
+          <g transform={`translate(${240 + wingtipX}, ${-5 + wingtipY}) rotate(${wingtipRot})`}>
+            <path
+              d="M 0 0 L 160 18 L 156 30 L 0 16 Z"
+              fill="#0F1012"
+              stroke="#38BDF8"
+              strokeWidth={2.5}
+            />
+            {/* Fractured Internal Wing Rib / Spar Cut */}
+            <polygon
+              points="0,0 12,8 0,16 -4,8"
+              fill="#EF4444"
+              stroke="#ECFDF5"
+              strokeWidth={1.5}
+            />
+            <line x1="0" y1="0" x2="0" y2="16" stroke="#EF4444" strokeWidth={3} />
+            <circle cx="150" cy="24" r="3.5" fill="#F59E0B" />
+          </g>
+
+          {/* COMPONENT 3: Main Aircraft Airframe (Inverted Flat Death-Spin) */}
+          <g transform={`translate(${planeTumbleX}, ${planeTumbleY}) rotate(${planeSpinDeg})`}>
+            {/* Slender Pencil Fuselage */}
+            <path
+              d="M 0 -140 C 12 -140 18 -70 18 35 L 14 80 L -14 80 L -18 35 C -18 -70 -12 -140 0 -140 Z"
+              fill="#0F1012"
+              stroke="#38BDF8"
+              strokeWidth={2.5}
+            />
+
+            {/* Jagged Tail Sever Fracture Glowing in Blast Heat */}
+            <polygon
+              points="-14,80 14,80 10,96 -2,88 -12,98"
+              fill="#EF4444"
+              stroke="#B91C1C"
+              strokeWidth={2.5}
+            />
+
+            {/* Fully Intact Left Glider Wing (High-Aspect Ratio Silhouette) */}
+            <path
+              d="M -420 5 L -50 -25 L 0 -20 L -50 0 L -416 18 Z"
+              fill="#16221E"
+              stroke="#38BDF8"
+              strokeWidth={2.5}
+            />
+
+            {/* Incomplete Right Wing (Clean Shear Cut at 65% Span) */}
+            <path
+              d="M 0 -20 L 50 -25 L 240 0 L 240 14 L 50 0 Z"
+              fill="#16221E"
+              stroke="#38BDF8"
+              strokeWidth={2.5}
+            />
+            {/* Bright Red Internal Spar Shear Cut & Fuel Mist */}
+            <line
+              x1="240"
+              y1="0"
+              x2="240"
+              y2="14"
+              stroke="#EF4444"
+              strokeWidth={4.5}
+              strokeLinecap="round"
+            />
+            <polygon points="240,0 252,7 240,14" fill="#EF4444" />
+
+            {/* Cheek Jet Air Intakes */}
+            <path d="M -18 -35 L -30 -30 L -28 -5 L -16 -10 Z" fill="#050814" />
+            <path d="M 18 -35 L 30 -30 L 28 -5 L 16 -10 Z" fill="#050814" />
+
+            {/* Cockpit Canopy Opening with Flashing Red Cockpit Warning Glow */}
+            <ellipse
+              cx="0"
+              cy="-70"
+              rx="8"
+              ry="24"
+              fill={alertBlink ? '#EF4444' : '#7F1D1D'}
+              stroke="#ECFDF5"
+              strokeWidth={2}
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+  );
+};
+
+// =========================================================================
+// 1b. SCENE 01 ARCHIVAL RECORD: PESHAWAR AIRBASE DAWN TAKEOFF
 // Runway 17/35 at Peshawar Air Station (Badaber), Pakistan.
 // Pre-dawn tarmac, runway edge lamps glowing, windsock, control tower radar,
 // matte-black U-2 "Dragon Lady" (tail 56-6693) on taxiway, Pilot Gary Powers.
@@ -1019,47 +1657,146 @@ export const U2ExplosionDestructionVector: React.FC = () => {
   const frame = useCurrentFrame();
 
   // 1. Rapid 2-3 Frame Camera Shake (Violent initial shockwave, rapid decay)
-  const shakeDecay = interpolate(frame, [0, 3, 10, 24], [1.8, 1.2, 0.4, 0.0], { extrapolateRight: 'clamp' });
+  const shakeDecay = interpolate(frame, [0, 3, 10, 24], [1.8, 1.2, 0.4, 0.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
   const blastShakeX = Math.sin(frame * 4.6) * 36 * shakeDecay;
   const blastShakeY = Math.cos(frame * 5.2) * 28 * shakeDecay;
 
   // Initial 2-3 frame radial flash and radial blur decay
-  const radialFlashAlpha = interpolate(frame, [0, 2, 5], [0.95, 0.6, 0.0], { extrapolateRight: 'clamp' });
-  const radialBlurStdDev = interpolate(frame, [0, 2, 5], [7, 3, 0], { extrapolateRight: 'clamp' });
+  const radialFlashAlpha = interpolate(frame, [0, 2, 5], [0.95, 0.6, 0.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const radialBlurStdDev = interpolate(frame, [0, 2, 5], [7, 3, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   // 2. Parallax Background Offsets
-  const zenithParallaxY = interpolate(frame, [0, 276], [-25, 25], { extrapolateRight: 'clamp' });
-  const earthParallaxY = interpolate(frame, [0, 276], [25, -25], { extrapolateRight: 'clamp' });
+  const zenithParallaxY = interpolate(frame, [0, 160], [-25, 25], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const earthParallaxY = interpolate(frame, [0, 160], [25, -25], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
-  // 3. Concentric Hard-Edged Geometric Blast Rings (White, Yellow, Orange)
-  const ringScale1 = interpolate(frame, [0, 26], [0.05, 3.6], { extrapolateRight: 'clamp' }); // White shock front
-  const ringScale2 = interpolate(frame, [1, 32], [0.05, 3.1], { extrapolateRight: 'clamp' }); // Yellow ring
-  const ringScale3 = interpolate(frame, [2, 38], [0.05, 2.5], { extrapolateRight: 'clamp' }); // Orange ring
-  const ringAlpha = interpolate(frame, [0, 5, 28, 42], [0.95, 1.0, 0.6, 0.0], { extrapolateRight: 'clamp' });
+  // 3. Multi-Tiered Organic Fireball Bloom & Wobble
+  const blastScale =
+    frame < 22
+      ? interpolate(frame, [0, 8, 22], [0.42, 1.32, 1.05], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1.05 + 0.03 * Math.sin(frame * 0.18);
 
-  // 4. Stylized Black Fragmentation Shrapnel (Slicing outward radially)
-  const shrapnelProg = interpolate(frame, [0, 50], [0, 720], { extrapolateRight: 'clamp' });
-  const shrapnelAlpha = interpolate(frame, [0, 8, 38, 55], [0.95, 1.0, 0.7, 0.0], { extrapolateRight: 'clamp' });
+  const coreFlash =
+    frame < 16
+      ? interpolate(frame, [0, 4, 16], [1.0, 1.0, 0.45], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 0.3 + 0.1 * Math.sin(frame * 0.25);
 
-  // 5. Breakup Choreography
+  const fireballAlpha = interpolate(frame, [0, 90, 160], [1, 0.95, 0.4], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const wobble = Math.sin(Math.floor(frame / 3) * 0.25) * 6;
+  const cloudletDrift = interpolate(frame, [0, 160], [0, 75], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const outerScales = [1.1, 0.92, 1.14, 0.9, 1.08, 0.94, 1.15, 0.91, 1.05, 0.95, 1.12, 0.96];
+  const midScales = [1.08, 0.91, 1.07, 0.93, 1.12, 0.92, 1.06, 0.9, 1.1, 0.94];
+  const innerScales = [1.1, 0.93, 1.08, 0.92, 1.14, 0.94, 1.06, 0.95];
+
+  const outerPath = createStratosphereBlastLobe(235, 12, outerScales, wobble);
+  const midPath = createStratosphereBlastLobe(170, 10, midScales, -wobble);
+  const innerPath = createStratosphereBlastLobe(110, 8, innerScales, wobble * 0.5);
+
+  const spikeAngles = [0, 26, 52, 78, 104, 130, 156, 182, 208, 234, 260, 286, 312, 338];
+  const spikeLengths = [360, 395, 350, 410, 365, 390, 355, 400, 360, 395, 350, 405, 365, 385];
+
+  const cloudlets = [
+    { x: 240, y: -200, r: 24 },
+    { x: -220, y: -190, r: 26 },
+    { x: 300, y: 35, r: 28 },
+    { x: -290, y: 25, r: 25 },
+    { x: 240, y: 200, r: 24 },
+    { x: -230, y: 190, r: 27 },
+    { x: 30, y: -260, r: 22 },
+    { x: 40, y: 255, r: 25 },
+  ];
+
+  // 4. Concentric Mach Shockwave Rings
+  const shockR1 = interpolate(frame, [0, 50], [70, 580], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shockAlpha1 = interpolate(frame, [0, 12, 50], [0.95, 0.65, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const shockR2 = interpolate(frame, [0, 42], [50, 460], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shockAlpha2 = interpolate(frame, [0, 10, 42], [0.95, 0.55, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 5. Stylized Black Fragmentation Shrapnel (Slicing outward radially)
+  const shrapnelProg = interpolate(frame, [0, 50], [0, 720], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shrapnelAlpha = interpolate(frame, [0, 8, 38, 55], [0.95, 1.0, 0.7, 0.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // 6. Breakup Choreography
   // Main aircraft fuselage & left wing (Tumbling in inverted spin)
-  const planeTumbleX = interpolate(frame, [0, 276], [0, -160], { extrapolateRight: 'clamp' });
-  const planeTumbleY = interpolate(frame, [0, 276], [0, 380], { extrapolateRight: 'clamp' });
-  const planeSpinDeg = interpolate(frame, [0, 276], [0, 360 * 2.8], { extrapolateRight: 'clamp' });
+  const planeTumbleX = interpolate(frame, [0, 160], [0, -140], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const planeTumbleY = interpolate(frame, [0, 160], [0, 320], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const planeSpinDeg = interpolate(frame, [0, 160], [0, 360 * 2.2], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   // Sliced Horizontal Stabilizer (Empennage severed, drifting back-upward)
-  const tailSeverProg = interpolate(frame, [0, 220], [0, 1], { extrapolateRight: 'clamp' });
-  const tailX = -Math.pow(tailSeverProg, 0.85) * 320;
-  const tailY = -Math.pow(tailSeverProg, 0.85) * 220;
-  const tailRot = tailSeverProg * -420;
+  const tailSeverProg = interpolate(frame, [0, 160], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const tailX = -Math.pow(tailSeverProg, 0.85) * 310;
+  const tailY = -Math.pow(tailSeverProg, 0.85) * 200;
+  const tailRot = tailSeverProg * -380;
 
   // Sliced Right Wingtip (Cleanly separated, fluttering down-right)
-  const wingtipSeverProg = interpolate(frame, [0, 220], [0, 1], { extrapolateRight: 'clamp' });
-  const wingtipX = Math.pow(wingtipSeverProg, 0.85) * 440;
-  const wingtipY = Math.pow(wingtipSeverProg, 0.85) * 360;
-  const wingtipRot = wingtipSeverProg * 580;
+  const wingtipSeverProg = interpolate(frame, [0, 160], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const wingtipX = Math.pow(wingtipSeverProg, 0.85) * 380;
+  const wingtipY = Math.pow(wingtipSeverProg, 0.85) * 310;
+  const wingtipRot = wingtipSeverProg * 500;
 
-  // 6. HUD Emergency Flashing Cadence
+  // 7. HUD Emergency Flashing Cadence
   const alertBlink = frame % 8 < 5;
 
   return (
@@ -1090,6 +1827,15 @@ export const U2ExplosionDestructionVector: React.FC = () => {
           <filter id="radialBlastBlur">
             <feGaussianBlur stdDeviation={radialBlurStdDev} />
           </filter>
+
+          {/* Volumetric Blast Core Aura */}
+          <radialGradient id="u2BlastCoreAuraScene7" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+            <stop offset="25%" stopColor="#FDE047" stopOpacity="0.85" />
+            <stop offset="55%" stopColor="#F97316" stopOpacity="0.5" />
+            <stop offset="80%" stopColor="#EF4444" stopOpacity="0.25" />
+            <stop offset="100%" stopColor="#0B1310" stopOpacity="0" />
+          </radialGradient>
         </defs>
 
         {/* PARALLAX LAYER 1: Deep Indigo Zenith Sky Sheet */}
@@ -1124,63 +1870,133 @@ export const U2ExplosionDestructionVector: React.FC = () => {
           />
         </g>
 
-        {/* DETONATION TREATMENT: Concentric Hard-Edged Geometric Blast Rings & Shrapnel */}
+        {/* DETONATION TREATMENT: Multi-Tiered Scalloped Fireball, Mach Shockwaves & Shrapnel */}
         <g transform="translate(540, 1260)">
+          {/* Ambient Volumetric Blast Glow */}
+          <circle cx="0" cy="0" r="420" fill="url(#u2BlastCoreAuraScene7)" opacity={fireballAlpha * 0.75} />
+
           {/* Rapid 2-3 Frame Radial Blast Flash */}
           {radialFlashAlpha > 0.01 && (
             <circle cx="0" cy="0" r="340" fill="#FFFFFF" opacity={radialFlashAlpha} />
           )}
 
-          {ringAlpha > 0.01 && (
-            <g opacity={ringAlpha} filter={radialBlurStdDev > 0.1 ? 'url(#radialBlastBlur)' : undefined}>
-              {/* Ring 3: Hard-Edged Orange Blast Shock Front */}
-              <circle
-                cx="0"
-                cy="0"
-                r={115 * ringScale3}
-                fill="none"
-                stroke="#FF5400"
-                strokeWidth={22}
-              />
+          {/* Mach Shockwave Rings */}
+          <g>
+            {/* Cyan Atmospheric Shockwave */}
+            <circle
+              r={shockR1}
+              fill="none"
+              stroke="#38BDF8"
+              strokeWidth={6}
+              opacity={shockAlpha1}
+            />
+            {/* Primary Mach Detonation Front */}
+            <circle
+              r={shockR2}
+              fill="none"
+              stroke="#FFFFFF"
+              strokeWidth={4.5}
+              opacity={shockAlpha2}
+            />
+            {/* Concentric Geometric Octagon Shockwave */}
+            <polygon
+              points={`
+                0,${-shockR2 * 0.78}
+                ${shockR2 * 0.55},${-shockR2 * 0.55}
+                ${shockR2 * 0.78},0
+                ${shockR2 * 0.55},${shockR2 * 0.55}
+                0,${shockR2 * 0.78}
+                ${-shockR2 * 0.55},${shockR2 * 0.55}
+                ${-shockR2 * 0.78},0
+                ${-shockR2 * 0.55},${-shockR2 * 0.55}
+              `}
+              fill="none"
+              stroke="#F59E0B"
+              strokeWidth={3}
+              opacity={shockAlpha2 * 0.85}
+            />
+          </g>
 
-              {/* Concentric Geometric Octagon Shockwave */}
-              <polygon
-                points={`
-                  0,${-125 * ringScale2}
-                  ${88 * ringScale2},${-88 * ringScale2}
-                  ${125 * ringScale2},0
-                  ${88 * ringScale2},${88 * ringScale2}
-                  0,${125 * ringScale2}
-                  ${-88 * ringScale2},${88 * ringScale2}
-                  ${-125 * ringScale2},0
-                  ${-88 * ringScale2},${-88 * ringScale2}
-                `}
-                fill="none"
-                stroke="#FF6B35"
-                strokeWidth={14}
-              />
-
-              {/* Ring 2: Hard-Edged Yellow Shock Front */}
-              <circle
-                cx="0"
-                cy="0"
-                r={95 * ringScale2}
-                fill="none"
-                stroke="#FFE600"
-                strokeWidth={18}
-              />
-
-              {/* Ring 1: Blinding White Primary Mach Shock Front */}
-              <circle
-                cx="0"
-                cy="0"
-                r={80 * ringScale1}
-                fill="none"
-                stroke="#FFFFFF"
-                strokeWidth={14}
-              />
+          {/* Scaled Multi-Tiered Scalloped Fireball Vector */}
+          <g transform={`scale(${blastScale})`} opacity={fireballAlpha}>
+            {/* Sharp Radiating Supersonic Fire Spikes */}
+            <g>
+              {spikeAngles.map((deg, idx) => {
+                const len = spikeLengths[idx];
+                return (
+                  <g key={deg} transform={`rotate(${deg})`}>
+                    <polygon
+                      points={`0,-${len} -18,-160 18,-160`}
+                      fill="#F97316"
+                      stroke="#C2410C"
+                      strokeWidth={2}
+                    />
+                    <polygon
+                      points={`0,-${len - 35} -8,-180 8,-180`}
+                      fill="#FDE047"
+                    />
+                  </g>
+                );
+              })}
             </g>
-          )}
+
+            {/* Outer Billowing Crimson Cloud Lobes (#DC2626 / #7F1D1D) */}
+            <path
+              d={outerPath}
+              fill="#DC2626"
+              stroke="#7F1D1D"
+              strokeWidth={4}
+            />
+
+            {/* Mid-Tier Blazing Amber-Orange Cloud Lobes (#F97316 / #C2410C) */}
+            <path
+              d={midPath}
+              fill="#F97316"
+              stroke="#C2410C"
+              strokeWidth={3.5}
+            />
+
+            {/* Inner Radiant Canary Yellow Cloud Lobes (#FDE047 / #D97706) */}
+            <path
+              d={innerPath}
+              fill="#FDE047"
+              stroke="#D97706"
+              strokeWidth={2.5}
+            />
+
+            {/* Epicenter 8-Pointed White-Hot Core Flash Star */}
+            <g transform={`scale(${1 + Math.sin(frame * 0.4) * 0.08})`}>
+              <path
+                d="M 0 -115 Q 16 -38 82 -82 Q 38 -16 115 0 Q 38 16 82 82 Q 16 38 0 115 Q -16 38 -82 82 Q -38 16 -115 0 Q -38 -16 -82 -82 Q -16 -38 0 -115 Z"
+                fill="#FFFFFF"
+                stroke="#FEF08A"
+                strokeWidth={4}
+              />
+              <circle cx="0" cy="0" r="28" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="18" fill="#FEF08A" opacity={coreFlash} />
+            </g>
+
+            {/* Detached Flying Cloudlets Drifting Into Stratosphere */}
+            {cloudlets.map((cl, idx) => {
+              const rad = Math.atan2(cl.y, cl.x);
+              const dx = cl.x + Math.cos(rad) * cloudletDrift;
+              const dy = cl.y + Math.sin(rad) * cloudletDrift;
+              return (
+                <g key={idx} transform={`translate(${dx}, ${dy})`}>
+                  <ellipse
+                    cx="0"
+                    cy="0"
+                    rx={cl.r}
+                    ry={cl.r * 0.85}
+                    fill="#F97316"
+                    stroke="#C2410C"
+                    strokeWidth={2}
+                  />
+                  <circle cx={-cl.r * 0.35} cy={-cl.r * 0.15} r={cl.r * 0.55} fill="#F97316" />
+                </g>
+              );
+            })}
+          </g>
 
           {/* Stylized Black Fragmentation Shrapnel Slicing Outward Across Frame */}
           {shrapnelAlpha > 0.01 && (

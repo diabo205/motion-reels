@@ -24,6 +24,15 @@ You generate crisp, high-contrast 2D SVG illustrations, stark back-lit silhouett
 - **Zero Direct Raw Image Pasting (`PHOTO_PASTE_LINT`)**:
   - Never place raw `<img>`, `<Image>`, or `<image>` tags inside `*Vectors.tsx` components.
   - Treat archival photographs strictly as visual blueprints to construct parametric 2D SVG vector art.
+- **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**:
+  - Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone.
+  - Before coding, reference plates MUST be ingested into `assets/plates/` or `projects/<slug>/plates/` and translated into the 6-layer vector hierarchy:
+    1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
+    2. *Layer 2: Supersonic / Dynamic Atmospheric Disturbances* (Mach shockwave rings, ionization rims, speed lines).
+    3. *Layer 3: Acute Energy Spikes / Directional Vectors* (sharp multi-color flame tongues, structural stress lines).
+    4. *Layer 4: Multi-Tiered Organic Body Geometry* (multi-nested arc-scalloped lobes via `src/kit/OrganicExplosion.tsx` or cross-sectional mechanical foils; ban flat raw polygons/blobs).
+    5. *Layer 5: High-Contrast Core Accent* (white-hot 8-pointed core flash star, glowing cockpit dials, or fractured structural spars).
+    6. *Layer 6: Detached Orbiting Micro-Elements* (flying cloudlets, trailing propellant, shrapnel shards, embers).
 
 ### 2. Zero Illustration Text, Font Discipline (`FONT_LINT`) & Single-Source Metrics
 - **Ban Artwork Text**: Never draw sentences, explanations, or data placards inside the lower-third visual artwork.

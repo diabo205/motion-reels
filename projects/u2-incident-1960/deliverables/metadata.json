@@ -1,8 +1,8 @@
 {
   "projectSlug": "u2-incident-1960",
-  "generatedAt": "2026-11-01T12:50:03.005Z",
-  "title": "1960 U-2 INCIDENT: OPERATION GRAND SLAM TAKES OFF THE CIA'S TOP-SECRET SPYPLANE",
-  "description": "1960 U-2 INCIDENT (🇺🇸 ✈️ ☭)\n\nOPERATION GRAND SLAM TAKES OFF THE CIA'S TOP-SECRET SPYPLANE\n\nHistorical Sources & Fact-Check Citations:\n• CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR — Source: 1960 U-2 INCIDENT Archival Record\n• SOVIET P-30 RADAR LOCKS ON INTERCEPT ORDERS TRANSMITTED — Source: 1960 U-2 INCIDENT Archival Record\n• 14 GUIDED MISSILES LAUNCHED CLIMBING AT MACH 3.5 — Source: 1960 U-2 INCIDENT Archival Record\n• 300,000 CITIZENS VIEW EVIDENCE WRECKAGE AND CAMERAS EXPOSED — Source: 1960 U-2 INCIDENT Archival Record\n• SUPREME MILITARY TRIBUNAL TRIAL SENTENCED TO 10 YEARS PRISON — Source: 1960 U-2 INCIDENT Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Incident #1960",
+  "generatedAt": "2026-11-01T13:25:21.877Z",
+  "title": "1960 U-2 INCIDENT: THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
+  "description": "1960 U-2 INCIDENT (🇺🇸 ✈️ ☭)\n\nTHE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.\n\nHistorical Sources & Fact-Check Citations:\n• THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED. — Source: 1960 U-2 INCIDENT Archival Record\n• CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR — Source: 1960 U-2 INCIDENT Archival Record\n• SOVIET P-30 RADAR LOCKS ON INTERCEPT ORDERS TRANSMITTED — Source: 1960 U-2 INCIDENT Archival Record\n• 14 GUIDED MISSILES LAUNCHED CLIMBING AT MACH 3.5 — Source: 1960 U-2 INCIDENT Archival Record\n• 300,000 CITIZENS VIEW EVIDENCE WRECKAGE AND CAMERAS EXPOSED — Source: 1960 U-2 INCIDENT Archival Record\n• SUPREME MILITARY TRIBUNAL TRIAL SENTENCED TO 10 YEARS PRISON — Source: 1960 U-2 INCIDENT Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Incident #1960",
   "hashtags": [
     "#History",
     "#Documentary",
@@ -21,6 +21,12 @@
     "clearanceId": "CLR-U2-INCIDENT-1960"
   },
   "claims": [
+    {
+      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
+      "text": "THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
+      "source": "1960 U-2 INCIDENT Archival Record",
+      "verified": true
+    },
     {
       "sceneId": "SCENE_02_70000FT_STRATOSPHERE",
       "text": "CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR",
@@ -55,11 +61,11 @@
   "accessibilityAltText": [
     {
       "sceneNumber": 1,
-      "sceneId": "SCENE_01_PESHAWAR_DAWN",
-      "archetype": "SILHOUETTE_ACTION",
-      "headerContext": "MAY 1, 1960 • PESHAWAR",
-      "caption": "OPERATION GRAND SLAM TAKES OFF — THE CIA'S TOP-SECRET SPYPLANE",
-      "visualAsset": "PESHAWAR_AIRBASE_U2_DAWN"
+      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "MAY 1, 1960 • 70,000 FEET",
+      "caption": "THE CIA TOLD THE PRESIDENT — THE PILOT WAS DEAD. THEY LIED.",
+      "visualAsset": "U2_SHATTERED_SPIN_STRATOSPHERE"
     },
     {
       "sceneNumber": 2,

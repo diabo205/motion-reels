@@ -55,6 +55,7 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
 4. **Parallel High-Fidelity Visual Generation**:
    Concurrently invoke:
    - `vector-scene-architect`:
+     - **Mandatory Reference Ingestion & 6-Layer Vector Anatomy**: Ingest archival reference plates into `assets/plates/` or `projects/<slug>/plates/` before drafting any mechanical asset, structural fracture, or explosion. Deconstruct references into (1) Ambient Volumetric Aura, (2) Dynamic Shockwaves/Ozone, (3) Acute Fire Spikes, (4) Multi-Tiered Organic Body via `src/kit/OrganicExplosion.tsx`, (5) Core Accent Flash, (6) Detached Orbiting Cloudlets/Shrapnel.
      - **Grim & Serious Scenarios (Default)**: Flat dark silhouettes (`#090D12` / `#12151B`) with atmospheric backlighting and at most one accent prop.
      - **Zero Direct Image Pasting (`PHOTO_PASTE_LINT`)**: Archival photos serve strictly as visual reference to draw parametric 2D SVG vector art. Never place raw `<img>` or `<image>` tags in vector components.
      - **Zero Illustration Text & Single-Source Metrics**: No captions or data placards inside lower artwork. No duplicated metrics.

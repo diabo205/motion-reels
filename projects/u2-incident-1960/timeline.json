@@ -16,52 +16,65 @@
   },
   "scenes": [
     {
-      "sceneId": "SCENE_01_PESHAWAR_DAWN",
+      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
       "startFrame": 0,
-      "durationFrames": 150,
-      "archetype": "SILHOUETTE_ACTION",
+      "durationFrames": 128,
+      "archetype": "STRUCTURAL_FRACTURE",
       "hudVisible": true,
-      "headerContext": "MAY 1, 1960 \u2022 PESHAWAR",
+      "headerContext": "MAY 1, 1960 • 70,000 FEET",
       "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.85
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
       },
       "textLayers": [
         {
-          "text": "OPERATION GRAND SLAM TAKES OFF",
+          "text": "THE CIA TOLD THE PRESIDENT",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "THE CIA'S TOP-SECRET SPYPLANE",
-          "triggerFrameOffset": 30,
+          "text": "THE PILOT WAS DEAD. THEY LIED.",
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "skyGradient": ["#0B1310", "#16221E"],
+        "skyGradient": [
+          "#0B1310",
+          "#16221E"
+        ],
         "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "PESHAWAR_AIRBASE_U2_DAWN"
+        "svgForegroundAsset": "U2_SHATTERED_SPIN_STRATOSPHERE",
+        "counterConfig": {
+          "label": "ALTITUDE (FT)",
+          "startValue": 70500,
+          "endValue": 61200
+        }
       },
       "sfxTriggers": [
         {
-          "sfxFile": "radar_ping.wav",
+          "sfxFile": "sub_boom.wav",
           "frameOffset": 0
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 36
         }
-      ]
+      ],
+      "claim": {
+        "text": "THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
+        "source": "1960 U-2 INCIDENT Archival Record",
+        "verified": true
+      }
     },
     {
       "sceneId": "SCENE_02_70000FT_STRATOSPHERE",
-      "startFrame": 150,
-      "durationFrames": 150,
+      "startFrame": 128,
+      "durationFrames": 172,
       "archetype": "VEHICLE_IN_TRANSIT",
       "hudVisible": false,
       "camera": {
@@ -78,7 +91,7 @@
         },
         {
           "text": "ABOVE ALL SOVIET RADAR",
-          "triggerFrameOffset": 30,
+          "triggerFrameOffset": 31,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM"
@@ -101,9 +114,14 @@
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 29
         }
-      ]
+      ],
+      "claim": {
+        "text": "CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR",
+        "source": "1960 U-2 INCIDENT Archival Record",
+        "verified": true
+      }
     },
     {
       "sceneId": "SCENE_03_GRAND_SLAM_MAP",

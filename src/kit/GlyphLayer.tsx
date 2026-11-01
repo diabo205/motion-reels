@@ -172,7 +172,7 @@ export const GlyphLayer: React.FC<GlyphLayerProps> = ({
             key={`layer_${idx}`}
             style={{
               fontFamily: activeFontFamily,
-              fontSize: `${fit.fontSizePx}px`,
+              fontSize: `${fit.fontSize}px`,
               fontWeight: 900,
               lineHeight: 1.08,
               letterSpacing: `${ALL_CAPS_TRACKING_EM}em`,
