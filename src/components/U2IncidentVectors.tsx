@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useCurrentFrame, interpolate, staticFile, Img } from 'remotion';
 import { loadFont as loadBlackOpsOne } from '@remotion/google-fonts/BlackOpsOne';
 import { loadFont as loadBarlowCondensed } from '@remotion/google-fonts/BarlowCondensed';
@@ -8,6 +8,14 @@ import { CutoutPuppet } from './CutoutPuppet';
 import { PaperSignCounter } from './TactilePropCards';
 import { WavingFlagSvg } from './WavingFlagSvg';
 import { WeatheredMilitaryStamp } from './RashidMinhasVectors';
+import {
+  createGeoProjector,
+  U2_INCIDENT_GEOJSON,
+  ContestedTerritoryShading,
+  TacticalMovementArrow,
+  PulsatingBattleMarker,
+  AnimatedFrontline,
+} from '../library/tactical';
 
 const blackOps = loadBlackOpsOne();
 const barlow = loadBarlowCondensed();
@@ -322,106 +330,162 @@ export const U2StratosphereTelemetryVector: React.FC = () => {
 
 // =========================================================================
 // 3. SCENE 03: OPERATION GRAND SLAM CONTINENTAL FLIGHT MAP
-// Tactical chart spanning Peshawar -> Aral Sea -> Sverdlovsk -> Bodø Norway.
-// Red dashed flight corridor, target pins, Soviet border intercept boundary.
+// Dynamic d3-geo Projected Tactical Chart spanning Peshawar -> Aral -> Sverdlovsk -> Bodø
+// Features real GeoJSON Air Defense Zone, Contested Shading, and Tactical Movement Arrows
 // =========================================================================
 export const GrandSlamContinentalMapVector: React.FC = () => {
   const frame = useCurrentFrame();
-  const routeDash = interpolate(frame, [0, 180], [1200, 0], { extrapolateRight: 'clamp' });
-  const beaconPing = (frame * 2.0) % 360;
+
+  const viewport = { x: 50, y: 870, width: 980, height: 780 };
+  const projector = useMemo(() => {
+    return createGeoProjector({
+      projectionType: 'equalEarth',
+      viewport,
+      center: [55.0, 52.0],
+      scale: 780,
+    });
+  }, []);
+
+  // Real projected coordinates for strategic mission waypoints
+  const peshawarPos = useMemo(() => projector.project([71.5, 34.0]), [projector]);
+  const aralPos = useMemo(() => projector.project([60.0, 45.0]), [projector]);
+  const chelyabinskPos = useMemo(() => projector.project([61.4, 55.1]), [projector]);
+  const sverdlovskPos = useMemo(() => projector.project([60.6, 56.8]), [projector]);
+  const bodoPos = useMemo(() => projector.project([14.4, 67.3]), [projector]);
+
+  // Projected Soviet Air Defense Zone Polygon
+  const airDefenseZonePath = useMemo(() => {
+    const p1 = projector.project([52.0, 50.0]);
+    const p2 = projector.project([72.0, 50.0]);
+    const p3 = projector.project([75.0, 64.0]);
+    const p4 = projector.project([50.0, 64.0]);
+    return `M ${p1[0]} ${p1[1]} L ${p2[0]} ${p2[1]} L ${p3[0]} ${p3[1]} L ${p4[0]} ${p4[1]} Z`;
+  }, [projector]);
+
+  // Projected 2,900-Mile Operational Flight Corridor Path
+  const flightPathD = useMemo(() => {
+    return `M ${peshawarPos[0]} ${peshawarPos[1]} Q ${aralPos[0]} ${aralPos[1]} ${sverdlovskPos[0]} ${sverdlovskPos[1]} T ${bodoPos[0]} ${bodoPos[1]}`;
+  }, [peshawarPos, aralPos, sverdlovskPos, bodoPos]);
+
+  // Projected Iron Curtain / Soviet Radar Intercept Border
+  const ironCurtainPath = useMemo(() => {
+    const b1 = projector.project([42.0, 42.0]);
+    const b2 = projector.project([54.0, 46.0]);
+    const b3 = projector.project([75.0, 44.0]);
+    return `M ${b1[0]} ${b1[1]} Q ${b2[0]} ${b2[1]} ${b3[0]} ${b3[1]}`;
+  }, [projector]);
+
+  const graticulePath = useMemo(() => {
+    return projector.getGraticulePath([15, 10]);
+  }, [projector]);
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
-        <defs>
-          <pattern id="tacticalGridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="60" y2="0" stroke="#334658" strokeWidth="1" strokeDasharray="3 3" opacity="0.4" />
-            <line x1="0" y1="0" x2="0" y2="60" stroke="#334658" strokeWidth="1" strokeDasharray="3 3" opacity="0.4" />
-          </pattern>
-        </defs>
-
         {/* Map Background Grid Sheet */}
-        <rect x="50" y="870" width="980" height="780" rx="8" fill="#131B24" stroke="#2EC4B6" strokeWidth="2.5" />
-        <rect x="50" y="870" width="980" height="780" fill="url(#tacticalGridPattern)" />
+        <rect x="50" y="870" width="980" height="780" rx="8" fill="#0B1310" stroke="#1E293B" strokeWidth="2.5" />
 
-        {/* Stylized Continental Landmass Outlines (Central Asia to Scandinavia) */}
-        {/* Caspian & Aral Sea Contours */}
-        <path d="M 240 1420 Q 280 1320 270 1250 Q 230 1280 240 1420 Z" fill="#1A2836" stroke="#3A506B" strokeWidth="1.5" />
-        <ellipse cx="370" cy="1330" rx="35" ry="50" fill="#1A2836" stroke="#3A506B" strokeWidth="1.5" />
+        {/* Real d3-geo Projected Graticule */}
+        <path
+          d={graticulePath}
+          fill="none"
+          stroke="rgba(56, 189, 248, 0.12)"
+          strokeWidth="1.2"
+          strokeDasharray="4 6"
+        />
 
         {/* Ural Mountains Ridge Line */}
-        <path
-          d="M 520 1480 L 530 1350 L 515 1200 L 525 1060 L 510 930"
-          stroke="#415A77"
-          strokeWidth="3.5"
-          strokeDasharray="6 4"
-          fill="none"
+        <g stroke="#334155" strokeWidth="3" strokeDasharray="6 4" fill="none" opacity="0.65">
+          <line x1={sverdlovskPos[0]} y1={sverdlovskPos[1] + 160} x2={sverdlovskPos[0]} y2={sverdlovskPos[1] - 160} />
+        </g>
+
+        {/* Soviet Air Defense Zone Shading */}
+        <ContestedTerritoryShading
+          id="soviet_air_defense_zone"
+          path={airDefenseZonePath}
+          faction="SOVIET"
+          patternStyle="DIAGONAL_STRIPES"
+          stripeSpacing={20}
+          stripeWidth={2.2}
+          opacity={0.65}
+          label="SOVIET AIR DEFENSE SECTOR"
+          labelCenter={[sverdlovskPos[0] + 40, sverdlovskPos[1] - 80]}
+          fontFamily={montserrat.fontFamily}
         />
 
-        {/* Soviet Borderline (Iron Curtain Intercept Line) */}
-        <path
-          d="M 120 1360 Q 320 1420 540 1390 Q 760 1360 980 1320"
-          stroke="#E63946"
-          strokeWidth="3"
-          strokeDasharray="8 6"
-          fill="none"
-          opacity="0.85"
+        {/* Animated Soviet Radar Intercept Border Frontline */}
+        <AnimatedFrontline
+          id="iron_curtain_border"
+          path={ironCurtainPath}
+          alliedColor="#38BDF8"
+          hostileColor="#EF4444"
+          lineWidth={3.2}
+          style="DUAL_RIBBON"
+          fontFamily={montserrat.fontFamily}
         />
 
-        {/* 2,900-Mile Operational Flight Corridor (Peshawar -> Sverdlovsk -> Bodø) */}
-        <path
-          id="u2FlightPath"
-          d="M 380 1560 L 410 1440 L 480 1310 L 525 1200 L 560 1060 L 640 930"
-          fill="none"
-          stroke="#FFD166"
-          strokeWidth="6"
-          strokeDasharray="12 8"
-          strokeDashoffset={routeDash}
+        {/* Operation Grand Slam Tactical Flight Arrow (with flowing dashes & chevron head) */}
+        <TacticalMovementArrow
+          id="u2_grand_slam_arrow"
+          path={flightPathD}
+          strokeColor="#FFD166"
+          strokeWidth={5}
+          arrowHead="SPEARHEAD"
+          animationMode="FLOWING_DASHES"
+          flowSpeed={4.5}
+          dashArray="28 14"
+          label="U-2 DRAGON LADY"
+          fontFamily={montserrat.fontFamily}
         />
 
         {/* Waypoint 1: Peshawar Airbase (Origin) */}
-        <g transform="translate(380, 1560)">
-          <circle cx="0" cy="0" r="14" fill="#2EC4B6" />
-          <circle cx="0" cy="0" r="6" fill="#0B131B" />
-          <text x="22" y="6" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="18" fontWeight="bold">
+        <g transform={`translate(${peshawarPos[0]}, ${peshawarPos[1]})`}>
+          <circle cx="0" cy="0" r="10" fill="#2EC4B6" />
+          <circle cx="0" cy="0" r="4" fill="#0B131B" />
+          <text x="16" y="5" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="14" fontWeight="bold">
             TAKEOFF: PESHAWAR
           </text>
         </g>
 
-        {/* Waypoint 2: Tyuratam / Baikonur Cosmodrome */}
-        <g transform="translate(480, 1310)">
-          <circle cx="0" cy="0" r="8" fill="#F4B942" />
-          <text x="16" y="5" fill="#EAE3D2" fontFamily={montserrat.fontFamily} fontSize="16" fontWeight="bold">
+        {/* Waypoint 2: Tyuratam / Baikonur */}
+        <g transform={`translate(${aralPos[0]}, ${aralPos[1]})`}>
+          <circle cx="0" cy="0" r="7" fill="#F4B942" />
+          <text x="14" y="4" fill="#EAE3D2" fontFamily={montserrat.fontFamily} fontSize="13" fontWeight="bold">
             TYURATAM
           </text>
         </g>
 
-        {/* Waypoint 3: Mayak / Chelyabinsk-65 Nuclear Facility */}
-        <g transform="translate(510, 1240)">
-          <circle cx="0" cy="0" r="9" fill="#E63946" />
-          <text x="-120" y="5" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="16" fontWeight="bold">
+        {/* Waypoint 3: Mayak Nuclear Facility */}
+        <g transform={`translate(${chelyabinskPos[0]}, ${chelyabinskPos[1]})`}>
+          <circle cx="0" cy="0" r="8" fill="#EF4444" />
+          <text x="-90" y="4" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="13" fontWeight="bold">
             MAYAK ➔
           </text>
         </g>
 
-        {/* Waypoint 4: Sverdlovsk (Shootdown Site / SAM Site) */}
-        <g transform="translate(525, 1200)">
-          {/* Pulsing Intercept Rings */}
-          <circle cx="0" cy="0" r={20 + (beaconPing % 30)} stroke="#E63946" strokeWidth="2" fill="none" opacity={0.8} />
-          <circle cx="0" cy="0" r="14" fill="#E63946" />
-          <polygon points="0,-18 16,14 -16,14" fill="#FFD166" />
-          <text x="24" y="6" fill="#FF4D4D" fontFamily={montserrat.fontFamily} fontSize="20" fontWeight="900">
-            SVERDLOVSK
+        {/* Waypoint 4: Sverdlovsk (Shootdown Detonation Site) */}
+        <PulsatingBattleMarker
+          x={sverdlovskPos[0]}
+          y={sverdlovskPos[1]}
+          color="#EF4444"
+          size={32}
+          label="SVERDLOVSK"
+          sublabel="SAM DETONATION"
+          pulseSpeed={1.4}
+          showCrosshairs={true}
+          impactFlash={true}
+          impactFrame={30}
+          fontFamily={montserrat.fontFamily}
+        />
+
+        {/* Waypoint 5: Bodø, Norway (Planned Destination) */}
+        <g transform={`translate(${bodoPos[0]}, ${bodoPos[1]})`}>
+          <rect x="-8" y="-8" width="16" height="16" fill="#2EC4B6" />
+          <text x="16" y="5" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="14" fontWeight="bold">
+            DEST: BODØ
           </text>
         </g>
 
-        {/* Waypoint 5: Bodø, Norway (Planned Destination) */}
-        <g transform="translate(640, 930)">
-          <rect x="-10" y="-10" width="20" height="20" fill="#2EC4B6" />
-          <text x="20" y="6" fill="#F4EFE6" fontFamily={montserrat.fontFamily} fontSize="18" fontWeight="bold">
-            BODØ, NORWAY
-          </text>
-        </g>
         {/* Classified Mission Dossier Stamp */}
         <g transform="translate(680, 890)">
           <WeatheredMilitaryStamp

@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import { loadFont as loadMontserrat } from '@remotion/google-fonts/Montserrat';
+import {
+  createGeoProjector,
+  ALEUTIAN_THEATER_GEOJSON,
+  ContestedTerritoryShading,
+  TacticalMovementArrow,
+  PulsatingBattleMarker,
+  AnimatedFrontline,
+} from '../library/tactical';
 
 const montserrat = loadMontserrat();
 
@@ -424,12 +432,62 @@ export const AleutianForgottenInvasionOpening: React.FC = () => {
 
 // =========================================================================
 // 2. SCENE 02: ALEUTIAN_ARCHIPELAGO_VECTOR_MAP
-// Stylized tactical map with bathymetry, williwaw wind vectors & fog front rings
+// Dynamic d3-geo Projected Tactical Map with Real GPS Coordinates,
+// Contested Territory Hatching, Animated Frontlines & Troop Vectors
 // =========================================================================
 export const AleutianArchipelagoVectorMap: React.FC = () => {
   const frame = useCurrentFrame();
   const galeOffset = (frame * 6) % 120;
   const radarSweep = (frame * 1.2) % 360;
+
+  // Initialize d3-geo projection engine for the Aleutian North Pacific theater
+  const viewport = { x: 60, y: 880, width: 850, height: 590 };
+  const projector = useMemo(() => {
+    return createGeoProjector({
+      projectionType: 'mercator',
+      viewport,
+      fitFeatures: ALEUTIAN_THEATER_GEOJSON,
+    });
+  }, []);
+
+  // Project real GeoJSON landmass & graticule
+  const projectedLandmass = useMemo(() => {
+    return projector.projectPath(ALEUTIAN_THEATER_GEOJSON);
+  }, [projector]);
+
+  const graticulePath = useMemo(() => {
+    return projector.getGraticulePath([10, 5]);
+  }, [projector]);
+
+  // Project strategic battle coordinates via d3-geo
+  const attuPos = useMemo(() => projector.project([173.0, 52.9]), [projector]);
+  const kiskaPos = useMemo(() => projector.project([177.5, 52.0]), [projector]);
+  const dutchHarborPos = useMemo(() => projector.project([-166.5, 53.88]), [projector]);
+
+  // Contested Japanese Occupation Zone (Western Aleutians)
+  const contestedZonePath = useMemo(() => {
+    const p1 = projector.project([171.5, 54.0]);
+    const p2 = projector.project([179.5, 53.5]);
+    const p3 = projector.project([179.0, 51.0]);
+    const p4 = projector.project([171.0, 51.5]);
+    return `M ${p1[0]} ${p1[1]} L ${p2[0]} ${p2[1]} L ${p3[0]} ${p3[1]} L ${p4[0]} ${p4[1]} Z`;
+  }, [projector]);
+
+  // IJN Carrier Strike Force Raid Vector (Approach towards Dutch Harbor)
+  const carrierRaidPath = useMemo(() => {
+    const start = projector.project([-175.0, 48.5]);
+    const mid = projector.project([-170.0, 51.0]);
+    const end = dutchHarborPos;
+    return `M ${start[0]} ${start[1]} Q ${mid[0]} ${mid[1]} ${end[0]} ${end[1]}`;
+  }, [projector, dutchHarborPos]);
+
+  // US Naval Patrol Frontline Dividing Pacific Theaters
+  const patrolFrontlinePath = useMemo(() => {
+    const pA = projector.project([-179.0, 55.5]);
+    const pB = projector.project([-176.0, 53.0]);
+    const pC = projector.project([-174.0, 50.0]);
+    return `M ${pA[0]} ${pA[1]} Q ${pB[0]} ${pB[1]} ${pC[0]} ${pC[1]}`;
+  }, [projector]);
 
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
@@ -438,60 +496,104 @@ export const AleutianArchipelagoVectorMap: React.FC = () => {
 
         {/* Map Tactical Border Box (Safe Zone: 864 - 1498) */}
         <rect
-          x="60"
-          y="880"
-          width="850"
-          height="590"
+          x={viewport.x}
+          y={viewport.y}
+          width={viewport.width}
+          height={viewport.height}
           rx="8"
           fill="#070D14"
           stroke="#1E293B"
           strokeWidth="3"
         />
 
-        {/* Cyan Grid Lines */}
-        <g stroke="#0E2338" strokeWidth="1.5" opacity="0.7">
-          {[960, 1060, 1160, 1260, 1360].map((gy) => (
-            <line key={gy} x1="60" y1={gy} x2="910" y2={gy} strokeDasharray="6 6" />
-          ))}
-          {[160, 280, 400, 520, 640, 760, 880].map((gx) => (
-            <line key={gx} x1={gx} y1="880" x2={gx} y2="1470" strokeDasharray="6 6" />
-          ))}
-        </g>
+        {/* Real d3-geo Projected Lat/Long Graticule Grid */}
+        <path
+          d={graticulePath}
+          fill="none"
+          stroke="#0E2338"
+          strokeWidth="1.2"
+          strokeDasharray="4 6"
+          opacity="0.8"
+        />
 
-        {/* Bathymetric Trench Contour Lines (Aleutian Trench) */}
-        <g fill="none" stroke="#0284C7" opacity="0.45" strokeWidth="2">
+        {/* Bathymetric Ocean Depth Contours */}
+        <g fill="none" stroke="#0284C7" opacity="0.35" strokeWidth="1.8">
           <path d="M 80 1340 Q 300 1380 520 1310 T 890 1200" strokeDasharray="8 6" />
           <path d="M 80 1390 Q 320 1430 540 1350 T 890 1240" strokeWidth="1.5" />
           <path d="M 80 1440 Q 340 1480 560 1390 T 890 1280" strokeWidth="1" />
         </g>
 
-        {/* 1,200-Mile Aleutian Volcanic Arc (Islands Chain) */}
-        <g fill="#1E293B" stroke="#38BDF8" strokeWidth="2">
-          <path d="M 120 1260 Q 145 1250 165 1265 Q 160 1285 135 1285 Z" fill="#0F172A" />
-          <ellipse cx="140" cy="1310" rx="14" ry="9" fill="#0F172A" />
-          <path d="M 230 1270 Q 248 1260 252 1280 Q 242 1295 225 1290 Z" fill="#0F172A" />
-          <path d="M 290 1285 L 340 1280 L 335 1292 Z" fill="#0F172A" />
-          <ellipse cx="440" cy="1265" rx="28" ry="14" fill="#0F172A" />
-          <ellipse cx="485" cy="1260" rx="18" ry="11" fill="#0F172A" />
-          <path d="M 660 1210 Q 695 1195 725 1220 Q 710 1245 675 1235 Z" fill="#0F172A" />
-          <path d="M 780 1160 Q 840 1080 890 1020 L 910 1020 L 910 1140 Q 840 1180 780 1160 Z" fill="#0F172A" />
-        </g>
+        {/* Contested Japanese Occupation Zone Shading */}
+        <ContestedTerritoryShading
+          id="aleutian_contested_zone"
+          path={contestedZonePath}
+          faction="AXIS"
+          patternStyle="DIAGONAL_STRIPES"
+          stripeSpacing={18}
+          stripeWidth={2.2}
+          opacity={0.7}
+          label="OCCUPIED ZONE"
+          labelCenter={[(attuPos[0] + kiskaPos[0]) / 2, attuPos[1] - 40]}
+          fontFamily={montserrat.fontFamily}
+        />
+
+        {/* Real Projected GeoJSON Landmasses (Attu, Kiska, Adak, Dutch Harbor, Alaska) */}
+        <path
+          d={projectedLandmass}
+          fill="#0F172A"
+          stroke="#38BDF8"
+          strokeWidth="2.4"
+          strokeLinejoin="round"
+        />
+
+        {/* Animated Frontline Dividing Forces */}
+        <AnimatedFrontline
+          id="aleutian_patrol_line"
+          path={patrolFrontlinePath}
+          alliedColor="#38BDF8"
+          hostileColor="#EF4444"
+          lineWidth={3.5}
+          style="DUAL_RIBBON"
+          clashPoints={[
+            {
+              x: (attuPos[0] + kiskaPos[0]) / 2 + 10,
+              y: (attuPos[1] + kiskaPos[1]) / 2,
+              label: 'SKIRMISH',
+              color: '#F59E0B',
+            },
+          ]}
+          fontFamily={montserrat.fontFamily}
+        />
+
+        {/* Animated IJN Carrier Strike Raid Arrow */}
+        <TacticalMovementArrow
+          id="ijn_carrier_strike"
+          path={carrierRaidPath}
+          strokeColor="#EF4444"
+          strokeWidth={4.5}
+          arrowHead="CHEVRON"
+          animationMode="FLOWING_DASHES"
+          dashArray="26 14"
+          flowSpeed={4.2}
+          label="CARRIER RAID"
+          fontFamily={montserrat.fontFamily}
+        />
 
         {/* Animated Sweeping Williwaw Arctic Gale Vectors */}
-        <g fill="none" stroke="#38BDF8" strokeWidth="3" strokeLinecap="round">
+        <g fill="none" stroke="#7DD3FC" strokeWidth="2.8" strokeLinecap="round">
           {[1060, 1140, 1220].map((wy, idx) => (
             <path
               key={wy}
               d={`M 100 ${wy} Q 360 ${wy - 60} 600 ${wy} T 880 ${wy - 40}`}
               strokeDasharray="40 80"
               strokeDashoffset={-galeOffset * (1.2 + idx * 0.4)}
-              opacity={0.75 - idx * 0.15}
+              opacity={0.65 - idx * 0.15}
             />
           ))}
         </g>
 
         {/* Swirling Fog Front / Low Pressure System */}
-        <g transform="translate(320, 1080)" opacity="0.6">
+        <g transform="translate(320, 1080)" opacity="0.55">
           <circle
             cx="0"
             cy="0"
@@ -514,27 +616,38 @@ export const AleutianArchipelagoVectorMap: React.FC = () => {
           />
         </g>
 
-        {/* 1-2 Word Map Labels (Satisfying width >= len * size * 0.72 + 80) */}
-        <g transform="translate(110, 1210)">
-          <line x1="35" y1="28" x2="35" y2="48" stroke="#EF4444" strokeWidth="2.5" />
-          <circle cx="35" cy="48" r="4" fill="#EF4444" />
-          <rect x="0" y="0" width="130" height="28" rx="4" fill="#1C1917" stroke="#EF4444" strokeWidth="2" />
-          <text x="65" y="19" fill="#FCA5A5" fontSize="13" fontFamily={montserrat.fontFamily} fontWeight="900" textAnchor="middle" letterSpacing="1">ATTU</text>
-        </g>
+        {/* Pulsating Battle Clash Markers at Real Projected Geo-Positions */}
+        <PulsatingBattleMarker
+          x={attuPos[0]}
+          y={attuPos[1]}
+          color="#EF4444"
+          size={26}
+          label="ATTU"
+          sublabel="SEIZED"
+          fontFamily={montserrat.fontFamily}
+        />
 
-        <g transform="translate(205, 1315)">
-          <line x1="40" y1="0" x2="40" y2="-20" stroke="#EF4444" strokeWidth="2.5" />
-          <circle cx="40" cy="-20" r="4" fill="#EF4444" />
-          <rect x="0" y="0" width="130" height="28" rx="4" fill="#1C1917" stroke="#EF4444" strokeWidth="2" />
-          <text x="65" y="19" fill="#FCA5A5" fontSize="13" fontFamily={montserrat.fontFamily} fontWeight="900" textAnchor="middle" letterSpacing="1">KISKA</text>
-        </g>
+        <PulsatingBattleMarker
+          x={kiskaPos[0]}
+          y={kiskaPos[1]}
+          color="#EF4444"
+          size={26}
+          label="KISKA"
+          sublabel="OCCUPIED"
+          fontFamily={montserrat.fontFamily}
+        />
 
-        <g transform="translate(620, 1140)">
-          <line x1="80" y1="28" x2="80" y2="55" stroke="#38BDF8" strokeWidth="2.5" />
-          <circle cx="80" cy="55" r="4" fill="#38BDF8" />
-          <rect x="0" y="0" width="200" height="28" rx="4" fill="#0B131E" stroke="#38BDF8" strokeWidth="2" />
-          <text x="100" y="19" fill="#7DD3FC" fontSize="13" fontFamily={montserrat.fontFamily} fontWeight="900" textAnchor="middle" letterSpacing="1">DUTCH HARBOR</text>
-        </g>
+        <PulsatingBattleMarker
+          x={dutchHarborPos[0]}
+          y={dutchHarborPos[1]}
+          color="#38BDF8"
+          size={28}
+          label="DUTCH HARBOR"
+          sublabel="STRUCK"
+          impactFlash={true}
+          impactFrame={30}
+          fontFamily={montserrat.fontFamily}
+        />
       </svg>
     </div>
   );

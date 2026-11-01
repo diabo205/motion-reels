@@ -15,13 +15,17 @@
   "dependencies": {
     "@remotion/cli": "^4.0.218",
     "@remotion/google-fonts": "^4.0.539",
+    "d3-geo": "^3.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remotion": "^4.0.218"
+    "remotion": "^4.0.218",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
+    "@types/topojson-client": "^3.1.5",
     "potrace": "^2.1.8",
     "typescript": "^5.4.5"
   }
