@@ -1412,7 +1412,7 @@ export const AmputationSeveredHandFracture: React.FC<{ durationFrames?: number }
         x={310}
         y={1185}
         scale={0.96 * pushIn}
-        paperTagLabel="R.A.M.C. SURGEON // REFUSED AMPUTATION"
+        paperTagLabel="R.A.M.C. SURGEON"
       />
 
       {/* Adrian Carton de Wiart Puppet on Right: Clamping teeth onto fingers, biting them off! */}
@@ -1429,7 +1429,7 @@ export const AmputationSeveredHandFracture: React.FC<{ durationFrames?: number }
           biteHitFrame: 32,
           showSparks: true,
         }}
-        paperTagLabel="SURGEON REFUSED // ADRIAN BIT THEM OFF"
+        paperTagLabel="ADRIAN BIT HIS OWN FINGERS OFF"
       />
     </div>
   );

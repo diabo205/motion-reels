@@ -225,38 +225,46 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
       case 'BITE_FINGERS':
         return (
           <g>
-            {/* Left arm: forearm angled up directly to mouth level */}
+            {/* Left arm: forearm angled up directly towards mouth */}
             <polyline
-              points="-58,28 -52,-2 -4,-28"
+              points="-58,28 -42,6 -20,-18"
               fill="none"
               stroke={strokeCol}
               strokeWidth={strokeW}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-            <circle cx="-4" cy="-28" r={handR} fill={handCol} />
+            <circle cx="-20" cy="-18" r={handR} fill={handCol} />
 
             {/* Non-outline inner details */}
             {!isOutline && (
               <g>
-                {/* Field dressing wrap on left wrist */}
-                <rect x="-16" y="-36" width="18" height="12" rx="2" fill="#E2E8F0" stroke="#CBD5E1" strokeWidth="1" />
-                <ellipse cx="-7" cy="-30" rx="4" ry="2.5" fill="#DC2626" />
-                {/* Shattered fingers hooked into jaws/teeth at mouth */}
-                <path d="M -4 -28 L 2 -32 L 6 -30 L 0 -24 Z" fill="#D9B391" stroke="#991B1B" strokeWidth="1.5" />
+                {/* Field dressing wrap on left wrist entering photo head */}
+                <rect
+                  x="-30"
+                  y="-26"
+                  width="22"
+                  height="16"
+                  rx="3"
+                  fill="#E2E8F0"
+                  stroke="#CBD5E1"
+                  strokeWidth="1.2"
+                  transform="rotate(-25 -19 -18)"
+                />
+                <ellipse cx="-19" cy="-18" rx="5" ry="3" fill="#DC2626" />
               </g>
             )}
 
-            {/* Right arm: reaches across chest to tightly steady/brace left wrist at mouth */}
+            {/* Right arm: reaches across chest to tightly steady/brace left wrist from below */}
             <polyline
-              points="58,28 22,2 -6,-20"
+              points="58,28 18,14 -10,2"
               fill="none"
               stroke={strokeCol}
               strokeWidth={strokeW}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-            <circle cx="-6" cy="-20" r={handR} fill={handCol} />
+            <circle cx="-10" cy="2" r={handR} fill={handCol} />
           </g>
         );
       case 'SEVERED_FINGERS':
@@ -1057,8 +1065,8 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
             }}
           />
 
-          {/* Eye, Ear & Bite Trauma Overlay */}
-          {(eyeHit || earHit || biteHit) && (
+          {/* Eye, Ear, Mouth & Bite Trauma Overlay */}
+          {(eyeHit || earHit || biteHit || activePose === 'BITE_FINGERS') && (
             <svg
               viewBox="0 0 152 184"
               style={{
@@ -1070,47 +1078,94 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
                 pointerEvents: 'none',
               }}
             >
-              {/* BITE BLOOD AT MOUTH & CHIN */}
+              {/* BITE_FINGERS: Wounded hand & fingers clamped directly between jaws in mouth */}
+              {activePose === 'BITE_FINGERS' && (
+                <g id="bite-hand-overlay">
+                  {/* Thick white paper die-cut sticker outline */}
+                  <path
+                    d="M 38 152 L 48 116 L 76 100 L 86 114 L 64 158 Z"
+                    fill="#F4EFE6"
+                    stroke="#F4EFE6"
+                    strokeWidth="10"
+                    strokeLinejoin="round"
+                  />
+
+                  {/* Field bandage wrapped around wrist */}
+                  <rect
+                    x="40"
+                    y="126"
+                    width="24"
+                    height="24"
+                    rx="4"
+                    fill="#F1F5F9"
+                    stroke="#CBD5E1"
+                    strokeWidth="1.5"
+                    transform="rotate(-28 52 138)"
+                  />
+                  <ellipse cx="50" cy="136" rx="6" ry="3.5" fill="#DC2626" />
+
+                  {/* Left hand palm & thumb */}
+                  <ellipse cx="64" cy="114" rx="10" ry="8" fill="#D9B391" />
+                  <path d="M 58 118 Q 60 108 66 110" stroke="#B88A68" strokeWidth="1.2" fill="none" />
+
+                  {/* Shattered bloody fingers clamped directly between teeth at (73, 110) */}
+                  <g transform="translate(71, 107)">
+                    {/* Index finger hooked into mouth */}
+                    <path d="M -3 3 L 8 -2 L 10 3 L 0 7 Z" fill="#D9B391" stroke="#7F1D1D" strokeWidth="1.2" />
+                    {/* Middle finger hooked under upper teeth */}
+                    <path d="M -1 7 L 10 3 L 11 9 L 2 10 Z" fill="#D9B391" stroke="#991B1B" strokeWidth="1.2" />
+                    {/* Arterial blood pool welled where teeth bite down */}
+                    <ellipse cx="4" cy="3" rx="6" ry="3.5" fill="#DC2626" opacity="0.92" />
+                    <circle cx="3" cy="7" r="2" fill="#7F1D1D" />
+                  </g>
+
+                  {/* Right hand bracing & clamping left wrist from below */}
+                  <ellipse cx="48" cy="142" rx="9" ry="7" fill="#D9B391" transform="rotate(22 48 142)" />
+                  <circle cx="50" cy="144" r="3.5" fill="#B88A68" opacity="0.5" />
+                </g>
+              )}
+
+              {/* BITE BLOOD AT MOUTH & CHIN (Triggers at frame >= biteHitFrame) */}
               {biteHit && (
                 <g id="bite-mouth-trauma">
-                  {/* Blood smeared across lips & mustache */}
-                  <ellipse cx="76" cy="140" rx={10 * biteGrowth} ry={5 * biteGrowth} fill="#450A0A" opacity="0.95" />
-                  <ellipse cx="76" cy="140" rx={7 * biteGrowth} ry={3.5 * biteGrowth} fill="#7F1D1D" />
-                  <ellipse cx="75" cy="139" rx={4 * biteGrowth} ry={2 * biteGrowth} fill="#DC2626" opacity="0.9" />
+                  {/* Blood smeared across lips & mustache at (73, 110) */}
+                  <ellipse cx="73" cy="110" rx={10 * biteGrowth} ry={5 * biteGrowth} fill="#450A0A" opacity="0.95" />
+                  <ellipse cx="73" cy="110" rx={7 * biteGrowth} ry={3.5 * biteGrowth} fill="#7F1D1D" />
+                  <ellipse cx="72" cy="109" rx={4 * biteGrowth} ry={2 * biteGrowth} fill="#DC2626" opacity="0.9" />
 
-                  {/* Blood stream cascading down chin */}
+                  {/* Blood stream cascading down chin from mouth */}
                   {biteAge > 2 && (
                     <path
-                      d={`M 74 143 L 78 143 L 77 ${143 + Math.min(32, (biteAge - 2) * 2.0)} L 73 ${143 + Math.min(32, (biteAge - 2) * 2.0)} Z`}
+                      d={`M 71 112 L 75 112 L 74 ${112 + Math.min(38, (biteAge - 2) * 2.2)} L 70 ${112 + Math.min(38, (biteAge - 2) * 2.2)} Z`}
                       fill="#7F1D1D"
                     />
                   )}
                   {biteAge > 2 && (
-                    <circle cx="75" cy={143 + Math.min(32, (biteAge - 2) * 2.0)} r="2.8" fill="#991B1B" />
+                    <circle cx="72" cy={112 + Math.min(38, (biteAge - 2) * 2.2)} r="2.8" fill="#991B1B" />
                   )}
 
                   {/* Secondary blood trickle from corner of mouth */}
                   {biteAge > 5 && (
                     <path
-                      d={`M 83 141 L 86 141 L 85 ${141 + Math.min(24, (biteAge - 5) * 1.6)} L 82 ${141 + Math.min(24, (biteAge - 5) * 1.6)} Z`}
+                      d={`M 79 110 L 82 110 L 81 ${110 + Math.min(26, (biteAge - 5) * 1.6)} L 78 ${110 + Math.min(26, (biteAge - 5) * 1.6)} Z`}
                       fill="#991B1B"
                     />
                   )}
 
-                  {/* Bite spark flash at lips */}
+                  {/* Bite spark flash at lips at frame 32 */}
                   {woundsConfig.showSparks !== false && biteAge >= 0 && biteAge < 6 && (
                     <g>
                       <circle
-                        cx="76"
-                        cy="140"
+                        cx="73"
+                        cy="110"
                         r={4 + biteAge * 6}
                         stroke="#EF4444"
                         strokeWidth={2.5 * (1 - biteAge / 6)}
                         fill="none"
                         opacity={1 - biteAge / 6}
                       />
-                      <circle cx="76" cy="140" r={8 * (1 - biteAge / 6)} fill="#FEF08A" />
-                      <circle cx="76" cy="140" r={4 * (1 - biteAge / 6)} fill="#FFFFFF" />
+                      <circle cx="73" cy="110" r={8 * (1 - biteAge / 6)} fill="#FEF08A" />
+                      <circle cx="73" cy="110" r={4 * (1 - biteAge / 6)} fill="#FFFFFF" />
                     </g>
                   )}
                 </g>
