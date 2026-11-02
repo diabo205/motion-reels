@@ -3,8 +3,8 @@ import { useCurrentFrame, interpolate, Img, staticFile } from 'remotion';
 import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 import { loadFont as loadCourierPrime } from '@remotion/google-fonts/CourierPrime';
 
-const caveat = loadCaveat();
-const courier = loadCourierPrime();
+const caveat = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] });
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
 
 export interface PaperCutoutCardProps {
   imagePath: string;

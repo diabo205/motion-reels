@@ -17,7 +17,7 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
    - Execute pre-production direction and storyboarding using `.agents/skills/motion-graphics-director/SKILL.md` **FIRST before compiling timelines or drafting assets**.
    - **Ingest Empirical Retention Priors (`config/retention_priors.json`)**:
      - Check `recentHookArchetypeHistory` to rotate the Scene 1 hook archetype across consecutive reels.
-     - Bias Scene 1 duration to `pacingPriors.targetHookDurationFrames: 128` (2.13s).
+     - Bias Scene 1 duration to `pacingPriors.targetHookDurationFrames: 108` (1.80s).
      - Cross-reference `scene_type → optimal_duration_range → observed_retention_delta` in `config/retention_priors.json` to bias scene durations toward high-retention windows and space `STRUCTURAL_FRACTURE` / `SPLIT_CONFRONTATION` beats every 4–6 cuts.
    - Deconstruct every scene into the 4 core narrative beats:
      1. *Inciting trigger*: The initial action, command, environmental shift, or failure point.
@@ -33,7 +33,7 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
    ```
    Replaces static BPM grids with deep audio transient analysis (via Librosa or Aubio):
    - Multi-band spectral flux extraction for bass drops (20–220Hz), cymbal crashes (3.5k–11kHz), broadband energy peaks, and rhythmic onsets.
-   - Computes `recommendedSceneCuts` (`120–168f`) snapped to drops and crashes.
+   - Computes `recommendedSceneCuts` (`84–132f`) snapped to drops and crashes.
    - Computes `structuralFractureRecommendations` syncing destructive impact hits and SFX directly to heavy audio transients.
 
 2. **Generate Procedural Foley & Cinematic SFX Assets**:
@@ -45,10 +45,12 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
 
 3. **Compile Beat-Synced Timeline**:
    Invoke subagent `script-beat-compiler` with the raw script, `assets/audio/beat_grid.json`, `config/pipeline_constants.json`, and `config/retention_priors.json` to generate `src/timelines/<project>.json` adhering to `.agents/skills/build-historical-reel/schemas/timeline.schema.json`.
-   - **Pacing & Cut Frequency**: Hold each scene for **2.0 to 2.8 seconds** (`120–168` frames; up to `180f` on final epilogue), yielding **16–29 cuts per reel**.
+   - **High-Density Pacing & Cut Frequency**: Hold each scene for **1.4 to 2.2 seconds** (`84–132` frames; up to `168f` on final epilogue), yielding **22–32 cuts per reel**. Ban slow 4-second holds.
    - **Single Canonical Duration Ceiling (`MAX_FRAMES = 3500`)**: Total duration must clock between **`2,700` and `3,500` frames** (`45.00s` to `58.33s` @ 60 FPS) for optimal short-form retention pacing.
    - **Proportional Five-Act Micro-Arc**: Hook (`0–7%`), Inciting Crisis (`7–30%`), Escalating Crucible (`30–65%`), Turning Point (`65–85%`), Symmetric Resolution & Loop/CTA (`85–100%`).
-   - **Beat-Quantized Typography & Word Budget**: Optional top context tag (only on setting shift) + white setup line (`triggerFrameOffset: 0`, sharp on global Frame `0`) + red payoff line synced to the first detected beat in `[18, 45]` frames (`0.30s–0.75s`). Cap combined setup and payoff at **6–10 words total** ($< 40$ chars/line, **max 2 lines per layer**).
+   - **Hook Discipline & Sharp Frame 0 (`HOOK_TYPEWRITER_LINT`)**: Scene 1 opening frame renders 100% sharp (`blur(0px)`, `opacity: 1`) with immediate high-stakes conflict text. `TYPEWRITER` animations are strictly banned on Scene 1 hooks.
+   - **2-Phase Reactive Mid-Scene Visuals**: Every scene choreographs Phase 1 (setup) -> Phase 2 (payoff hit impulse + secondary vector state change). Post-payoff hold is capped at $\le 100\text{f}$ (`DEAD_HOLD_LINT`).
+   - **Beat-Quantized Typography & Word Budget**: Optional top context tag (only on setting shift) + white setup line (`triggerFrameOffset: 0`, sharp on global Frame `0`) + red payoff line synced to the first detected beat in `[18, 45]` frames (`0.30s–0.75s`). Cap combined setup and payoff at **3–7 words total** ($< 40$ chars/line, **max 2 lines per layer**). Mobile font floors: $\ge 64\text{px}$ setup / $\ge 76\text{px}$ payoff.
    - **Assign Seven Modular Archetypes**: `LONE_LEADER`, `CROWD_TALLY`, `VEHICLE_IN_TRANSIT`, `STRUCTURAL_FRACTURE`, `VECTOR_MAP`, `SPLIT_CONFRONTATION`, `QUOTE_CARD`.
    - **Editorial Citations & Sensitivity Mode**: Include `claim: { text, source, url, verified }` on metric scenes and `sensitivity: "SOMBER_MEMORIAL"` on solemn casualty scenes.
 
@@ -77,7 +79,7 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
      - Configure global-frame seeded persistent particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST`, or `NONE`).
 
 5. **Kinetic Typography & Exact Glyph Width Validation**:
-   - Standardize on vendored `Montserrat Black` (v31) or `Inter ExtraBold` (v20) in **ALL-CAPS** with `+0.04em` tracking and mobile size floors (`>= 56px` setup / `>= 64px` payoff).
+   - Standardize on vendored `Montserrat Black` (v31) or `Inter ExtraBold` (v20) in **ALL-CAPS** with `+0.04em` tracking and mobile size floors (`>= 64px` setup / `>= 76px` payoff).
    - Validate exact glyph advance widths and 2-line wrapping via `scripts/font_metrics.js`.
 
 6. **Automated Linting, Visual Audit & Deliverables (`--audit-stills`)**:
@@ -85,7 +87,7 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
    ```powershell
    node scripts/pipeline.js --project <project-slug> --audit-stills --auto-fix
    ```
-   Verifies `MAX_FRAMES = 3500`, beat-synced payoff offsets, glyph advance widths, `FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, and writes `projects/<project-slug>/audit/audit_report.json` plus `projects/<project-slug>/deliverables/` (`captions.srt`, `metadata.json`, `poster.png`, `poster_4x5.png`).
+   Verifies `MAX_FRAMES = 3500`, beat-synced payoff offsets, glyph advance widths, `FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `HOOK_TYPEWRITER_LINT`, and writes `projects/<project-slug>/audit/audit_report.json` plus `projects/<project-slug>/deliverables/` (`captions.srt`, `metadata.json`, `poster.png`, `poster_4x5.png`).
 
 7. **Single-Scene Iteration & Final `-14 LUFS` Master Render**:
    - Single-Scene Iteration: `node scripts/render_scene_clip.js <sceneNum> --project <project-slug>`

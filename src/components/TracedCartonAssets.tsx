@@ -1,5 +1,6 @@
 import React from 'react';
 import tracedData from './traced_carton_assets.json';
+import { VictoriaCrossMedal } from './VictoriaCrossMedal';
 
 export const TRACED_PATHS = {
   sunderland: (tracedData as any).sunderland_flying_boat.path as string,
@@ -130,9 +131,6 @@ export const VictoriaCrossMedalGroup: React.FC<TracedElementProps> = ({
   x = 0,
   y = 0,
   scale = 1,
-  fill = '#B45309',
-  stroke = '#78350F',
-  strokeWidth = 1.5,
   opacity = 1,
   flipX = false,
 }) => (
@@ -140,13 +138,7 @@ export const VictoriaCrossMedalGroup: React.FC<TracedElementProps> = ({
     transform={`translate(${x}, ${y}) scale(${flipX ? -scale : scale}, ${scale})`}
     opacity={opacity}
   >
-    <path
-      d={TRACED_PATHS.victoriaCross}
-      fill={fill}
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      transform="translate(-480, -726)"
-    />
+    <VictoriaCrossMedal x={0} y={0} scale={1} opacity={1} />
   </g>
 );
 

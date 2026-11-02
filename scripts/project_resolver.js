@@ -59,6 +59,14 @@ const PROJECT_MAP = {
     bgmFile: 'assets/audio/bgm_carton.mp3',
     beatGridFile: 'assets/audio/beat_grid_carton.json',
   },
+  'florida-plane-crash-2026': {
+    slug: 'florida-plane-crash-2026',
+    timelineFile: 'src/timelines/florida_plane_crash_2026.json',
+    compositionId: 'FloridaPlaneCrash2026',
+    vectorFile: 'src/components/FloridaCrashVectors.tsx',
+    bgmFile: 'assets/audio/bgm_florida_crash.mp3',
+    beatGridFile: 'assets/audio/beat_grid_florida_crash.json',
+  },
 };
 
 function sha256File(filePath) {
@@ -81,6 +89,7 @@ function inferSlugFromTitle(title = '') {
   if (upper.includes('TAIPING')) return 'taiping-rebellion-1850';
   if (upper.includes('PESHAWAR')) return 'peshawar-2009';
   if (upper.includes('CARTON') || upper.includes('WIART') || upper.includes('UNKILLABLE')) return 'carton-de-wiart-1916';
+  if (upper.includes('FLORIDA') || upper.includes('LEARJET') || upper.includes('N722BD')) return 'florida-plane-crash-2026';
   return (
     upper
       .toLowerCase()

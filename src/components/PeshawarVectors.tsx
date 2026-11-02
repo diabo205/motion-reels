@@ -9,10 +9,10 @@ import { PaperSignCounter } from './TactilePropCards';
 import { WavingFlagSvg } from './WavingFlagSvg';
 import { WeatheredMilitaryStamp } from '../kit';
 
-const blackOps = loadBlackOpsOne();
-const barlow = loadBarlowCondensed();
-const courier = loadCourierPrime();
-const caveat = loadCaveat();
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
+const caveat = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] });
 
 /**
  * 1. PESHAWAR BAZAAR STREET SILHOUETTE

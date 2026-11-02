@@ -17,21 +17,23 @@ A structured workflow for directing, storyboarding, and animating any complex do
 
 Before scripting, storyboarding, or compiling the timeline, consult `config/retention_priors.json` (validated by `config/retention_priors.schema.json`) to close the feedback loop between published video performance and animation parameters:
 
-1. **Scene 1 Hook Selection & Duration Lock**:
+1. **Scene 1 Hook Selection & Duration Lock (`HOOK_TYPEWRITER_LINT`)**:
    - **Archetype Rotation**: Inspect `recentHookArchetypeHistory` to ensure Scene 1 does not reuse the opening archetype of the previous 2 reels (`ARCHETYPE_ROTATION_LINT`).
-   - **High-Retention Hook Archetypes**: Select from archetypes with `recommendedForHook: true` and the highest positive `observed_retention_delta` (e.g. `SPLIT_CONFRONTATION` [+2.0% to +3.7%], `STRUCTURAL_FRACTURE` [+2.5% to +3.4%], `QUOTE_CARD` [+2.0%]).
-   - **Target Hook Duration**: Bias Scene 1 strictly to `pacingPriors.targetHookDurationFrames: 128` (2.13s @ 60 FPS) to stop feed scrolling within 1.2 seconds.
-   - **Sharp Frame 0**: Keep Global Frame 0 sharp (`blur(0px)`, `opacity: 1`) for feed thumbnails and poster generation (`projects/<slug>/deliverables/poster.png`).
+   - **High-Retention Hook Archetypes**: Select from archetypes with `recommendedForHook: true` and the highest positive `observed_retention_delta` (e.g. `SPLIT_CONFRONTATION` [+2.4%], `VEHICLE_IN_TRANSIT` [+2.1%], `STRUCTURAL_FRACTURE` [+1.4%]).
+   - **Target Hook Duration**: Bias Scene 1 strictly to `pacingPriors.targetHookDurationFrames: 108` (1.80s @ 60 FPS) to stop feed scrolling within 1.2 seconds.
+   - **Sharp Frame 0 (Poster Protection)**: Keep Global Frame 0 sharp (`blur(0px)`, `opacity: 1`) for feed thumbnails and poster generation (`projects/<slug>/deliverables/poster.png`). `TYPEWRITER` animations on Scene 1 are strictly prohibited (`HOOK_TYPEWRITER_LINT`).
+   - **Immediate Frame 0 Audio Transient**: Trigger a heavy impact SFX (`sub_boom.wav`, `war_drum.wav`) on frame 0 to immediately anchor audience attention.
 
-2. **Archetype Duration Biasing (`scene_type → optimal_duration_range → observed_retention_delta`)**:
+2. **High-Density Archetype Duration Biasing (`scene_type → optimal_duration_range → observed_retention_delta`)**:
    - For every scene in Acts II–V, cross-reference its assigned archetype against `archetypeRetentionPriors[scene_type].optimal_duration_range` and `duration_delta_matrix`.
-   - Bias scene cut durations toward the duration bucket with the highest positive `observed_retention_delta` (e.g., `[120, 136]f` for intense confrontations, `[128, 144]f` for kinetic transit/fracture, `[136, 152]f` for crowd tallies).
-   - Hold all scenes strictly within **`120` to `168` frames** (2.0s–2.8s; up to `180f` on final epilogue), keeping total reel duration between **`2,700` and `3,500` frames** (`45.00s` to `58.33s`).
+   - Bias scene cut durations toward high-retention windows (**`84–132 frames` / 1.4s–2.2s**; up to `168f` on final epilogue), yielding **22–32 cuts per reel**.
+   - Total reel duration remains strictly between **`2,700` and `3,500` frames** (`45.00s` to `58.33s`).
 
-3. **Combating Retention Drop-Off Valleys**:
-   - **Strategic Pacing Spikes**: Space high-impact, positive-delta archetypes (`STRUCTURAL_FRACTURE`, `SPLIT_CONFRONTATION`, `QUOTE_CARD`) every 4–6 scenes to create retention bumps and avoid mid-video drop-off valleys.
+3. **Combating Retention Drop-Off Valleys & Dead Holds (`DEAD_HOLD_LINT`)**:
+   - **2-Phase Reactive Mid-Scene Visuals**: Every scene executes a 2-phase narrative flow: Phase 1 (setup motion) -> Phase 2 (payoff hit impulse + secondary vector state transformation on the transient hit frame).
+   - **Dead-Hold Prevention**: Cap post-payoff holds at $\le 100\text{f}$ (`< 1.6s`) without secondary micro-action or visual transition.
+   - **Strategic Pacing Spikes**: Space high-impact, positive-delta archetypes (`STRUCTURAL_FRACTURE`, `SPLIT_CONFRONTATION`) every 4–6 scenes to create retention bumps and avoid mid-video drop-off valleys.
    - **No Consecutive Repetition**: Never place more than 2 consecutive scenes of the identical archetype.
-   - **High Drop-off Risk Archetypes**: For archetypes flagged `drop_off_risk: "HIGH"` (e.g., static maps or complex documents), constrain them strictly to the bottom of their duration window (`120–136f`) with continuous micro-motion.
 
 4. **Payoff Alignment & Audio Sync**:
    - Align the red payoff line and camera `IMPACT_SHAKE` with the prominent musical transient (`optimalPayoffBeatIndex: 1`) in `[18, 45]` frames.
@@ -92,11 +94,14 @@ Adapt visual composition, camera choreography, and asset treatment to the reques
 
 - **Beat-synced typography**: Sync payoff reveals to the first musical downbeat/beat in `[18, 45]` frames (`0.30s–0.75s`) after each scene cut rather than a static metronome offset. Keep Global Frame `0` sharp for thumbnail/poster legibility.
 - **Perceptual audio-lead bias**: Trigger transient impact foley (`sub_boom.wav`, `stamp_slam.wav`) **2 frames early** (`~33ms` audio lead) and automatically duck BGM by `-7.5 dB` under impacts, mastering the final mix to `-14 LUFS` integrated / `-1.0 dBTP`.
+- **Zero-clutter, anti-fatigue word budget**: Cap combined setup and payoff text at **3–7 words total** ($< 40$ chars/line, **max 2 lines per layer**). Mobile font floors: $\ge 64\text{px}$ setup / $\ge 76\text{px}$ payoff.
 - **Silence & solemnity as impact**: In `SOMBER_MEMORIAL` scenes, suppress percussive slam SFX and allow ambient wind or solemn strings to carry the emotional weight.
 
 ## Gotchas
 
 - Strictly prohibit crash zooms and snap zooms; enforced automatically by `CAMERA_DISCIPLINE_LINT`.
+- `TYPEWRITER` animation is strictly prohibited on Scene 1 hook (`HOOK_TYPEWRITER_LINT`).
 - Never paste raw `<img>` or `<image>` photographs into parametric vector scenes (`PHOTO_PASTE_LINT`).
-- Do not clutter the frame with wall-of-text explanations (`6–10` words total, max `2` lines per layer, measured with true glyph advance widths).
+- Avoid dead visual holds (`DEAD_HOLD_LINT`); cap post-payoff holds at $\le 100\text{f}$.
+- Do not clutter the frame with wall-of-text explanations (`3–7` words total, max `2` lines per layer, measured with true glyph advance widths).
 - Maintain visual hierarchy and platform safe zones (`config/safe_zones.json`).

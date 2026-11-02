@@ -5,10 +5,10 @@ import { loadFont as loadCourierPrime } from '@remotion/google-fonts/CourierPrim
 import { loadFont as loadBarlowCondensed } from '@remotion/google-fonts/BarlowCondensed';
 import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 
-const blackOps = loadBlackOpsOne();
-const courier = loadCourierPrime();
-const barlow = loadBarlowCondensed();
-const caveat = loadCaveat();
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
+const caveat = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] });
 
 const TORN_CARD_CLIP =
   'polygon(0.8% 2%, 32% 0%, 68% 2%, 99.2% 0%, 100% 35%, 99.3% 72%, 100% 98%, 98.8% 100%, 62% 98%, 28% 100%, 0.5% 98%, 0% 62%, 0.7% 24%)';

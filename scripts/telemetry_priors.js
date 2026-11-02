@@ -457,20 +457,20 @@ function updateRetentionPriors(options = {}) {
       }
     }
 
-    let minOpt = 128;
-    let maxOpt = 144;
+    let minOpt = 96;
+    let maxOpt = 132;
     if (bestBucket === '<=128f') {
-      minOpt = 120;
-      maxOpt = 136;
+      minOpt = 84;
+      maxOpt = 120;
     } else if (bestBucket === '129-144f') {
-      minOpt = 128;
-      maxOpt = 144;
+      minOpt = 108;
+      maxOpt = 132;
     } else if (bestBucket === '145-168f') {
-      minOpt = 144;
-      maxOpt = 168;
+      minOpt = 120;
+      maxOpt = 144;
     } else if (bestBucket === '>168f') {
-      minOpt = 150;
-      maxOpt = 168; // Bound strictly to MAX 168
+      minOpt = 132;
+      maxOpt = 150; // Bound strictly to MAX 150 (penalizing slow holds)
     }
 
     // Drop-off risk categorization
@@ -510,7 +510,7 @@ function updateRetentionPriors(options = {}) {
     archetypeRetentionPriors: archetypePriors,
     recentHookArchetypeHistory: hookHistory,
     pacingPriors: {
-      targetHookDurationFrames: 128,
+      targetHookDurationFrames: 108,
       optimalPayoffBeatIndex: 1,
       sfxPerceptualLeadFrames: 2,
       maxConsecutiveSameArchetype: 2,

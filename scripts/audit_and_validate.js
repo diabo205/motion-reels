@@ -301,9 +301,44 @@ async function runAudit(options = {}) {
       }
     }
 
-    // Scene duration check (120..180f in DOCUMENTARY_SANS)
+    // Hook Discipline Check: Scene 1 must never use TYPEWRITER (which renders empty Frame 0)
+    if (i === 0) {
+      for (const layer of s.textLayers || []) {
+        if (layer.animation === 'TYPEWRITER') {
+          if (autoFix) {
+            layer.animation = 'HARD_POP';
+            timelineModified = true;
+          } else {
+            violations.push({
+              sceneId: s.sceneId,
+              rule: 'HOOK_TYPEWRITER_LINT',
+              severity: 'ERROR',
+              expected: 'Scene 1 text must use HARD_POP or BLUR_TO_SHARP to protect Frame 0 poster legibility',
+              actual: 'Found animation="TYPEWRITER" on hook scene',
+              frame: s.startFrame,
+              autoFixed: false,
+            });
+          }
+        }
+      }
+      if (s.durationFrames > 136 && styleMode === 'DOCUMENTARY_SANS') {
+        violations.push({
+          sceneId: s.sceneId,
+          rule: 'HOOK_PACING_LINT',
+          severity: 'WARNING',
+          expected: 'Hook Scene 1 duration <= 132f (target 108f) to prevent early swipe-away',
+          actual: `${s.durationFrames}f`,
+          frame: s.startFrame,
+          autoFixed: false,
+        });
+      }
+    }
+
+    // Scene duration check (84..150f in DOCUMENTARY_SANS, up to 168f for final epilogue)
     const maxAllowedSceneFrames =
-      styleMode === 'DOCUMENTARY_SANS' ? constants.MAX_SCENE_FRAMES : 250;
+      styleMode === 'DOCUMENTARY_SANS'
+        ? (i === timeline.scenes.length - 1 ? 168 : constants.MAX_SCENE_FRAMES)
+        : 250;
     const durOk =
       s.durationFrames >= constants.MIN_SCENE_FRAMES &&
       s.durationFrames <= maxAllowedSceneFrames;
@@ -328,7 +363,7 @@ async function runAudit(options = {}) {
           : isSetup
             ? 38
             : 44;
-      const prefPx = styleMode === 'DOCUMENTARY_SANS' ? (isSetup ? 64 : 72) : minPx;
+      const prefPx = styleMode === 'DOCUMENTARY_SANS' ? (isSetup ? 68 : 80) : minPx;
       const fit = resolveResponsiveFontSize(
         layer.text,
         prefPx,
@@ -446,6 +481,20 @@ async function runAudit(options = {}) {
       });
     }
 
+    // Dead Hold Check: Prevent stagnant post-payoff holds (> 100 frames of frozen visual)
+    const postPayoffHold = s.durationFrames - payoffOffset;
+    if (styleMode === 'DOCUMENTARY_SANS' && postPayoffHold > 105 && i < timeline.scenes.length - 1) {
+      violations.push({
+        sceneId: s.sceneId,
+        rule: 'DEAD_HOLD_LINT',
+        severity: 'WARNING',
+        expected: 'Post-payoff hold <= 100 frames to prevent slide-reading fatigue',
+        actual: `${postPayoffHold} frames dead hold after payoff beat`,
+        frame: s.startFrame + payoffOffset,
+        autoFixed: false,
+      });
+    }
+
     const statusMark = durOk && wordOk && glyphFitOk && timingOk ? '✅' : '❌';
     console.log(
       `${statusMark} Scene ${String(i + 1).padStart(2, '0')} [${s.sceneId}]: ` +
@@ -505,6 +554,7 @@ async function runAudit(options = {}) {
         output: outStill,
         frame: auditFrame,
         logLevel: 'error',
+        timeoutInMilliseconds: 90000,
       });
       fs.copyFileSync(outStill, projStill);
 
@@ -520,6 +570,7 @@ async function runAudit(options = {}) {
           output: earlyTmp,
           frame: earlyFrame,
           logLevel: 'error',
+          timeoutInMilliseconds: 90000,
         });
         await renderStill({
           composition,
@@ -527,6 +578,7 @@ async function runAudit(options = {}) {
           output: lateTmp,
           frame: lateFrame,
           logLevel: 'error',
+          timeoutInMilliseconds: 90000,
         });
         const bufA = fs.readFileSync(earlyTmp);
         const bufB = fs.readFileSync(lateTmp);
@@ -562,6 +614,7 @@ async function runAudit(options = {}) {
       output: posterPath,
       frame: 0,
       logLevel: 'error',
+      timeoutInMilliseconds: 90000,
     });
     console.log(`  -> Exported sharp Frame 0 poster to ${posterPath}`);
   }

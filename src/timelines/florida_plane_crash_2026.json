@@ -1,0 +1,980 @@
+{
+  "": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
+  "meta": {
+    "title": "SOUTH FLORIDA JET CRASH",
+    "flagEmoji": "✈️ 💥 🚨 🇺🇸",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 88.8,
+    "bgmFile": "audio/bgm_florida_crash.mp3",
+    "bgmStartFrom": 0,
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "RAIN",
+    "fontFamily": "Montserrat",
+    "styleMode": "DOCUMENTARY_SANS",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivity": "HIGH_SENSITIVITY",
+    "loopSeamless": true,
+    "ctaConfig": {
+      "text": "SOUTH FLORIDA JET CRASH",
+      "subtext": "N722BD INVESTIGATION"
+    },
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "LICENSED_COMMERCIAL",
+      "clearanceId": "CLR-FLORIDA-CRASH-2026",
+      "attribution": "Bloody Mary (Instrumental Remix)"
+    }
+  },
+  "scenes": [
+    {
+      "sceneId": "SCENE_01_LEARJET_CRUISE_HOOK",
+      "startFrame": 0,
+      "durationFrames": 101,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "SOUTH FLORIDA CRASH",
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
+      },
+      "transientType": "ENERGY_PEAK",
+      "transientHitFrame": 35,
+      "textLayers": [
+        {
+          "text": "PLUMMETING",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "20,000 FEET PER MINUTE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "ALERT_RED",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "LEARJET_VERTICAL_DIVE_HERO",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "claim": {
+        "text": "PLUMMETING 20,000 FEET PER MINUTE",
+        "source": "SOUTH FLORIDA JET CRASH Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_02_AUSTIN_TO_BAHAMAS_MAP",
+      "startFrame": 101,
+      "durationFrames": 120,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "FLIGHT N722BD",
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "transientType": "ENERGY_PEAK",
+      "transientHitFrame": 141,
+      "textLayers": [
+        {
+          "text": "AUSTIN TO BAHAMAS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "OFF COURSE",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "FLORIDA_FLIGHT_PATH_MAP",
+        "stageStyle": "GRAPH_GRID"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_03_ICING_TURBULENCE_SPLIT",
+      "startFrame": 221,
+      "durationFrames": 120,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.75
+      },
+      "transientType": "ENERGY_PEAK",
+      "transientHitFrame": 261,
+      "textLayers": [
+        {
+          "text": "SEVERE ICING ALERT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ENGINES STRAINING",
+          "triggerFrameOffset": 23,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "ICING_VS_TURBOFAN_SPLIT",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_04_MANAGING_ICE_QUOTE",
+      "startFrame": 341,
+      "durationFrames": 120,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "ENERGY_PEAK",
+      "transientHitFrame": 381,
+      "textLayers": [
+        {
+          "text": "MANAGING ICING",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "REQUESTING CLIMB",
+          "triggerFrameOffset": 23,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "PILOT_INITIAL_ATC_QUOTE",
+        "stageStyle": "WOOD_PANEL",
+        "quoteAttribution": "COCKPIT RADIO • 12:48 PM"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_05_MIAMI_CENTER_RADAR",
+      "startFrame": 461,
+      "durationFrames": 107,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 501,
+      "textLayers": [
+        {
+          "text": "MIAMI RADAR TRACKS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ALTITUDE COLLAPSING",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "MIAMI_RADAR_VECTORS",
+        "stageStyle": "GRAPH_GRID"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_06_TRIM_UPSET_FRACTURE",
+      "startFrame": 568,
+      "durationFrames": 129,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 598,
+      "textLayers": [
+        {
+          "text": "CATASTROPHIC UPSET",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "VERTICAL NOSEDIVE",
+          "triggerFrameOffset": 20,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "CRIMSON_PAYOFF",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "TRIM_RUNAWAY_DIVE_FRACTURE",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 20,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_07_TWENTY_THOUSAND_FPM_QUOTE",
+      "startFrame": 697,
+      "durationFrames": 124,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 741,
+      "textLayers": [
+        {
+          "text": "MAYDAY MAYDAY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "TWENTY THOUSAND DOWN",
+          "triggerFrameOffset": 44,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "TWENTY_THOUSAND_FPM_QUOTE_CARD",
+        "stageStyle": "WOOD_PANEL",
+        "quoteAttribution": "ATC RECORDING • DESCENT RATE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 42,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_08_OVERSPEED_SHOCKWAVE_FRACTURE",
+      "startFrame": 821,
+      "durationFrames": 122,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.9
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 861,
+      "textLayers": [
+        {
+          "text": "TRANSONIC OVERSPEED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "AIRFRAME SHUDDERS",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "CRIMSON_PAYOFF",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "OVERSPEED_SHOCKWAVE_FRACTURE",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 41,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_09_ALTIMETER_COLLAPSE_TALLY",
+      "startFrame": 943,
+      "durationFrames": 125,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Flightradar24 recorded final transponder ping at 8,750 feet descending 20,000+ FPM",
+        "source": "Flightradar24 / NTSB",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 981,
+      "textLayers": [
+        {
+          "text": "FALLING RAPIDLY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "EIGHT THOUSAND FEET",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "ALTIMETER_COLLAPSE_TALLY_BOARD",
+        "stageStyle": "NIGHT_FELT",
+        "counterConfig": {
+          "label": "RADAR ALTITUDE (FT)",
+          "startValue": 35000,
+          "endValue": 8750
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 36,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_10_FINAL_MAYDAY_QUOTE",
+      "startFrame": 1068,
+      "durationFrames": 122,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.75
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1101,
+      "textLayers": [
+        {
+          "text": "FINAL RADIO CALL",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "GROUND IMPACT IMMINENT",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "FINAL_PANICKED_MAYDAY_QUOTE",
+        "stageStyle": "WOOD_PANEL",
+        "quoteAttribution": "LIVEATC.NET INTERCEPT"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 31,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_11_PALM_BEACH_APPROACH_MAP",
+      "startFrame": 1190,
+      "durationFrames": 111,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.7
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1221,
+      "textLayers": [
+        {
+          "text": "PALM BEACH COUNTY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "HIGHWAY CORRIDOR",
+          "triggerFrameOffset": 32,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "PALM_BEACH_TACTICAL_MAP",
+        "stageStyle": "GRAPH_GRID"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 29,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_12_MASSIVE_FIREBALL_IMPACT",
+      "startFrame": 1301,
+      "durationFrames": 120,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1341,
+      "textLayers": [
+        {
+          "text": "12:50 PM BLAST",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "MASSIVE FIREBALL",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "CRIMSON_PAYOFF",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "CRASH_FIREBALL_ORGANIC_BLAST",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 41,
+          "leadFrames": 2
+        }
+      ],
+      "claim": {
+        "text": "12:50 PM BLAST MASSIVE FIREBALL",
+        "source": "SOUTH FLORIDA JET CRASH Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_13_NINE_SOULS_LOST_TALLY",
+      "startFrame": 1421,
+      "durationFrames": 121,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "All 9 passengers and crew on board N722BD died upon impact in Palm Beach County",
+        "source": "CNN / Florida Dept. of Transportation",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1461,
+      "textLayers": [
+        {
+          "text": "NINE ON BOARD",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ZERO SURVIVORS",
+          "triggerFrameOffset": 40,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "CASUALTY_MANIFEST_TALLY",
+        "stageStyle": "NIGHT_FELT",
+        "counterConfig": {
+          "label": "SOULS ON BOARD LOST",
+          "startValue": 0,
+          "endValue": 9
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_14_FIRST_RESPONDERS_TRANSIT",
+      "startFrame": 1542,
+      "durationFrames": 134,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.8
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1581,
+      "textLayers": [
+        {
+          "text": "EMERGENCY UNITS RACE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ROADS BLOCKED",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "EMERGENCY_SIRENS_CONVOY",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 37,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_15_PERIMETER_LEADER",
+      "startFrame": 1676,
+      "durationFrames": 130,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1706,
+      "textLayers": [
+        {
+          "text": "NEIGHBORHOOD SAVED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "NO GROUND DEATHS",
+          "triggerFrameOffset": 22,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "FIRE_COMMANDER_PERIMETER",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 28,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
+      "startFrame": 1806,
+      "durationFrames": 135,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Approximately 600 mobile home park residents evacuated to emergency shelter",
+        "source": "Palm Beach County Sheriff Office / CNN",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1841,
+      "textLayers": [
+        {
+          "text": "PARK EVACUATION",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SIX HUNDRED SAFE",
+          "triggerFrameOffset": 18,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "EVACUATION_TALLY_BOARD",
+        "stageStyle": "NIGHT_FELT",
+        "counterConfig": {
+          "label": "RESIDENTS EVACUATED TO SAFETY",
+          "startValue": 0,
+          "endValue": 600
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 33,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_17_NTSB_FAA_SPLIT",
+      "startFrame": 1941,
+      "durationFrames": 109,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1984,
+      "textLayers": [
+        {
+          "text": "NTSB GO-TEAM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FEDERAL INQUIRY",
+          "triggerFrameOffset": 40,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "NTSB_VS_FAA_INVESTIGATION_SPLIT",
+        "stageStyle": "GRAPH_GRID"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 41,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_18_SMOKING_CRATER_FRACTURE",
+      "startFrame": 2050,
+      "durationFrames": 123,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2088,
+      "textLayers": [
+        {
+          "text": "CRATER SURVEY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "WRECKAGE SCATTERED",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "CRIMSON_PAYOFF",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "SMOKING_CRATER_FORENSICS",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 36,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_19_SECRETARY_DUFFY_QUOTE",
+      "startFrame": 2173,
+      "durationFrames": 129,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2210,
+      "textLayers": [
+        {
+          "text": "OFFICIAL STATEMENT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "HORRIFIC TRAGEDY",
+          "triggerFrameOffset": 32,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "SECRETARY_DUFFY_STATEMENT_QUOTE",
+        "stageStyle": "WOOD_PANEL",
+        "quoteAttribution": "SEAN DUFFY • US SEC. OF TRANSPORTATION"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_burst.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_20_BLACK_BOX_RECOVERY",
+      "startFrame": 2302,
+      "durationFrames": 140,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2342,
+      "textLayers": [
+        {
+          "text": "BLACK BOX FOUND",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "DATA SECURED",
+          "triggerFrameOffset": 40,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "BLACK_BOX_RECOVERY_DOSSIER",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 38,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_21_MEMORIAL_TRIBUTE_LEADER",
+      "startFrame": 2442,
+      "durationFrames": 141,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "sensitivity": "SOMBER_MEMORIAL",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2462,
+      "textLayers": [
+        {
+          "text": "NINE LIVES LOST",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "REST IN PEACE",
+          "triggerFrameOffset": 21,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "FLORIDA_CRASH_MEMORIAL_PLINTH",
+        "stageStyle": "NIGHT_FELT"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 18,
+          "leadFrames": 2
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_22_SYMMETRIC_LOOP_REEL",
+      "startFrame": 2583,
+      "durationFrames": 140,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "sensitivity": "STANDARD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2622,
+      "textLayers": [
+        {
+          "text": "N722BD FINAL FLIGHT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "NEVER FORGOTTEN",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_PAYOFF",
+          "colorToken": "GOLD_METRIC",
+          "animation": "HARD_POP"
+        }
+      ],
+      "visualPayload": {
+        "svgForegroundAsset": "SYMMETRIC_REEL_LOOP_HERO",
+        "stageStyle": "PAPER_EXTERIOR"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 37,
+          "leadFrames": 2
+        }
+      ]
+    }
+  ]
+}

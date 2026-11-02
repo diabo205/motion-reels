@@ -1,7 +1,7 @@
 {
   "projectSlug": "carton-de-wiart-1916",
   "title": "THE UNKILLABLE SOLDIER",
-  "updatedAt": "2026-11-02T08:14:25.482Z",
+  "updatedAt": "2026-11-02T13:55:02.889Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -10,7 +10,7 @@
     "maxFramesCeiling": 3500
   },
   "timeline": {
-    "file": "src/timelines/current_reel.json",
+    "file": "src/timelines/carton_de_wiart_1916.json",
     "sha256": "5861c936abc93e187c1e0cd0028143eb7a5805cd429bab17b32718c239704a8c",
     "sceneCount": 25,
     "totalFrames": 3443,

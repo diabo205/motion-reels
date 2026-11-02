@@ -44,6 +44,6 @@ console.log(`⏱  Frames: ${start} to ${end} (${scene.durationFrames} frames, ${
 console.log(`📁 Output: ${outPath}`);
 
 const comp = compositionId || 'HistoricalReel';
-const cmd = `npx remotion render src/index.ts ${comp} "${outPath}" --frames=${start}-${end} --codec=h264 --crf=18 --concurrency=80%`;
+const cmd = `npx remotion render src/index.ts ${comp} "${outPath}" --frames=${start}-${end} --codec=h264 --crf=18 --concurrency=80% --timeout=90000`;
 execSync(cmd, { stdio: 'inherit' });
 console.log(`✅ Scene ${sceneNum} rendered successfully to ${outPath}`);

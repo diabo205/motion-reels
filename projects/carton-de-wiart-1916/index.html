@@ -430,13 +430,34 @@
 
         <!-- Deliverables Download Panel -->
         <div class="panel-card">
-          <div class="panel-title">📦 Exported Deliverables</div>
+          <div class="panel-title">📦 Scene Clips & Deliverables</div>
           <div class="download-grid">
             <a class="download-link" href="carton_de_wiart_1916_reel.mp4" download>
               📥 Master Reel MP4
             </a>
-            <a class="download-link" href="scene_01.mp4" download>
-              🎬 Scene 1 Clip
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_02.mp4', 'Scene 2: Stomach & Groin')">
+              🎬 Scene 2 (Stomach/Groin)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_05.mp4', 'Scene 5: Eye Destruction')">
+              🎬 Scene 5 (Eye Shatter)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_06.mp4', 'Scene 6: Medical Tent')">
+              🎬 Scene 6 (Medical Tent)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_07.mp4', 'Scene 7: Hand Shattered')">
+              🎬 Scene 7 (Hand Shattered)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_08.mp4', 'Scene 8: Biting Fingers')">
+              🎬 Scene 8 (Biting Fingers)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_09.mp4', 'Scene 9: 3 Battalions')">
+              🎬 Scene 9 (3 Battalions)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_10.mp4', 'Scene 10: Skull Shot & Survival')">
+              🎬 Scene 10 (Skull Survival)
+            </a>
+            <a class="download-link" href="javascript:void(0)" onclick="loadClip('scene_11.mp4', 'Scene 11: Victoria Cross Medal')">
+              🎖 Scene 11 (Victoria Cross)
             </a>
             <a class="download-link" href="deliverables/captions.srt" download>
               📝 Captions (.srt)
@@ -544,6 +565,15 @@
         isMaster = true;
         btn.innerText = "Switch to Scene 1 Clip";
       }
+      video.play();
+    }
+
+    function loadClip(src, label) {
+      video.src = src;
+      isMaster = false;
+      const btn = document.querySelector('.action-row .btn');
+      if (btn) btn.innerText = "Switch to Master Reel";
+      video.currentTime = 0;
       video.play();
     }
 

@@ -1,0 +1,58 @@
+{
+  "projectSlug": "florida-plane-crash-2026",
+  "title": "SOUTH FLORIDA JET CRASH",
+  "updatedAt": "2026-11-02T16:58:57.733Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/florida_plane_crash_2026.json",
+    "sha256": "7f58f4dc6ae5639a490432dadd8b997c24bab83794b7677f1728c331e73c7667",
+    "sceneCount": 22,
+    "totalFrames": 2723,
+    "durationSec": 45.38
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_florida_crash.mp3",
+    "sha256": "e386885c2f019e092bb85752933e1fe255fe8f84118994e34003bbb92407b1c1",
+    "bpm": 88.8,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "LICENSED_COMMERCIAL",
+      "clearanceId": "CLR-FLORIDA-CRASH-2026",
+      "attribution": "Bloody Mary (Instrumental Remix)"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "RAIN",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "HIGH_SENSITIVITY"
+  }
+}

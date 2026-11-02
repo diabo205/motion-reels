@@ -1,6 +1,31 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import {
+  LearjetCruiseHero,
+  LearjetVerticalDiveHero,
+  FloridaFlightPathMap,
+  IcingVsTurbofanSplit,
+  PilotInitialAtcQuote,
+  MiamiRadarVectors,
+  TrimRunawayDiveFracture,
+  TwentyThousandFpmQuoteCard,
+  OverspeedShockwaveFracture,
+  AltimeterCollapseTallyBoard,
+  FinalPanickedMaydayQuote,
+  PalmBeachTacticalMap,
+  CrashFireballOrganicBlast,
+  CasualtyManifestTally,
+  EmergencySirensConvoy,
+  FireCommanderPerimeter,
+  EvacuationTallyBoard,
+  NtsbVsFaaInvestigationSplit,
+  SmokingCraterForensics,
+  SecretaryDuffyStatementQuote,
+  BlackBoxRecoveryDossier,
+  FloridaCrashMemorialPlinth,
+  SymmetricReelLoopHero,
+} from './FloridaCrashVectors';
+import {
   BinanceAlertQuoteCard,
   KoreaPeninsulaNightSatellite,
   Unit121CyberBunker,
@@ -187,10 +212,10 @@ import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 import { loadFont as loadBlackOpsOne } from '@remotion/google-fonts/BlackOpsOne';
 import { loadFont as loadBarlowCondensed } from '@remotion/google-fonts/BarlowCondensed';
 
-const courier = loadCourierPrime();
-const caveat = loadCaveat();
-const blackOps = loadBlackOpsOne();
-const barlow = loadBarlowCondensed();
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
+const caveat = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] });
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
 
 interface SilhouetteProps {
   assetId: string;
@@ -2627,6 +2652,76 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
 
     case 'CARTON_FINAL_SEAMLESS_LOOP_HERO':
       return <CartonFinalSeamlessLoopHero durationFrames={durationFrames} />;
+
+    /* --- Florida Plane Crash 2026 Scene Vector Assets --- */
+    case 'LEARJET_VERTICAL_DIVE_HERO':
+      return <LearjetVerticalDiveHero durationFrames={durationFrames} />;
+
+    case 'LEARJET_CRUISE_HERO':
+      return <LearjetCruiseHero durationFrames={durationFrames} />;
+
+    case 'FLORIDA_FLIGHT_PATH_MAP':
+      return <FloridaFlightPathMap durationFrames={durationFrames} />;
+
+    case 'ICING_VS_TURBOFAN_SPLIT':
+      return <IcingVsTurbofanSplit durationFrames={durationFrames} />;
+
+    case 'PILOT_INITIAL_ATC_QUOTE':
+      return <PilotInitialAtcQuote durationFrames={durationFrames} />;
+
+    case 'MIAMI_RADAR_VECTORS':
+      return <MiamiRadarVectors durationFrames={durationFrames} />;
+
+    case 'TRIM_RUNAWAY_DIVE_FRACTURE':
+      return <TrimRunawayDiveFracture durationFrames={durationFrames} />;
+
+    case 'TWENTY_THOUSAND_FPM_QUOTE_CARD':
+      return <TwentyThousandFpmQuoteCard durationFrames={durationFrames} />;
+
+    case 'OVERSPEED_SHOCKWAVE_FRACTURE':
+      return <OverspeedShockwaveFracture durationFrames={durationFrames} />;
+
+    case 'ALTIMETER_COLLAPSE_TALLY_BOARD':
+      return <AltimeterCollapseTallyBoard durationFrames={durationFrames} />;
+
+    case 'FINAL_PANICKED_MAYDAY_QUOTE':
+      return <FinalPanickedMaydayQuote durationFrames={durationFrames} />;
+
+    case 'PALM_BEACH_TACTICAL_MAP':
+      return <PalmBeachTacticalMap durationFrames={durationFrames} />;
+
+    case 'CRASH_FIREBALL_ORGANIC_BLAST':
+      return <CrashFireballOrganicBlast durationFrames={durationFrames} />;
+
+    case 'CASUALTY_MANIFEST_TALLY':
+      return <CasualtyManifestTally durationFrames={durationFrames} />;
+
+    case 'EMERGENCY_SIRENS_CONVOY':
+      return <EmergencySirensConvoy durationFrames={durationFrames} />;
+
+    case 'FIRE_COMMANDER_PERIMETER':
+      return <FireCommanderPerimeter durationFrames={durationFrames} />;
+
+    case 'EVACUATION_TALLY_BOARD':
+      return <EvacuationTallyBoard durationFrames={durationFrames} />;
+
+    case 'NTSB_VS_FAA_INVESTIGATION_SPLIT':
+      return <NtsbVsFaaInvestigationSplit durationFrames={durationFrames} />;
+
+    case 'SMOKING_CRATER_FORENSICS':
+      return <SmokingCraterForensics durationFrames={durationFrames} />;
+
+    case 'SECRETARY_DUFFY_STATEMENT_QUOTE':
+      return <SecretaryDuffyStatementQuote durationFrames={durationFrames} />;
+
+    case 'BLACK_BOX_RECOVERY_DOSSIER':
+      return <BlackBoxRecoveryDossier durationFrames={durationFrames} />;
+
+    case 'FLORIDA_CRASH_MEMORIAL_PLINTH':
+      return <FloridaCrashMemorialPlinth durationFrames={durationFrames} />;
+
+    case 'SYMMETRIC_REEL_LOOP_HERO':
+      return <SymmetricReelLoopHero durationFrames={durationFrames} />;
 
     default:
       return null;

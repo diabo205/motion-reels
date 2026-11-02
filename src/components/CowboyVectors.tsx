@@ -5,9 +5,9 @@ import { loadFont as loadBarlowCondensed } from '@remotion/google-fonts/BarlowCo
 import { loadFont as loadMontserrat } from '@remotion/google-fonts/Montserrat';
 import { LipizzanerHorse } from './LipizzanerHorseAsset';
 
-const blackOps = loadBlackOpsOne();
-const barlow = loadBarlowCondensed();
-const montserrat = loadMontserrat();
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
+const montserrat = loadMontserrat('normal', { weights: ['800', '900'], subsets: ['latin'] });
 
 // =========================================================================
 // REUSABLE HIGH-CONTRAST ATMOSPHERIC BACKLIGHTING (Artwork Zone y: 864-1498)

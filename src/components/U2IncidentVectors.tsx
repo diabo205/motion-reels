@@ -22,10 +22,10 @@ import {
   AnimatedFrontline,
 } from '../library/tactical';
 
-const blackOps = loadBlackOpsOne();
-const barlow = loadBarlowCondensed();
-const montserrat = loadMontserrat();
-const inter = loadInter();
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
+const montserrat = loadMontserrat('normal', { weights: ['800', '900'], subsets: ['latin'] });
+const inter = loadInter('normal', { weights: ['800', '900'], subsets: ['latin'] });
 
 /**
  * Helper to generate authentic outward-bulging rounded cloud lobes using circular SVG arcs

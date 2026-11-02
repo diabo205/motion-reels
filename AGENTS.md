@@ -34,19 +34,22 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
      5. *Layer 5: High-Contrast Core Accent* (white-hot 8-pointed core flash star, glowing cockpit dials, or fractured structural spars).
      6. *Layer 6: Detached Orbiting Micro-Elements* (flying cloudlets, trailing propellant, shrapnel shards, embers).
 
-4. **Typography, Glyph Metrics & Copywriting (Zero-Clutter Rules)**:
+4. **Typography, Glyph Metrics & Copywriting (Zero-Clutter, Anti-Fatigue Rules)**:
    - **Three-Element Text Cap**: Limit every screen to at most three text elements: an optional top context tag, a white setup line, and a red payoff line.
-   - **Strict Word & Line Budget**: Cap combined setup and payoff text at **6–10 words total** ($< 40$ characters per line, **max 2 lines per layer**) so viewers finish reading in 1.2 seconds.
-   - **Single Font Family (`FONT_LINT`)**: Use one vendored heavy geometric sans-serif (`Montserrat Black` v31 or `Inter ExtraBold` v20) in ALL-CAPS with `+0.04em` (`+4%`) tracking and mobile legibility floors (`>= 56px` setup / `>= 64px` payoff). Ban cursive (`Caveat`) and typewriter (`Courier Prime`) fonts.
+   - **Strict Word & Line Budget**: Cap combined setup and payoff text at **3–7 words total** ($< 40$ characters per line, **max 2 lines per layer**) so viewers absorb statements in 0.4 seconds without reading fatigue.
+   - **Single Font Family (`FONT_LINT`)**: Use one vendored heavy geometric sans-serif (`Montserrat Black` v31 or `Inter ExtraBold` v20) in ALL-CAPS with `+0.04em` (`+4%`) tracking and mobile legibility floors (**`>= 64px` setup / `>= 76px` payoff**). Ban cursive (`Caveat`) and typewriter (`Courier Prime`) fonts.
    - **Real Glyph Advance-Width Measurement**: Measure exact glyph advance widths via `scripts/font_metrics.js` (including CJK `1.0em` wide-glyph handling) rather than monospace heuristics.
-   - **Sharp Frame 0 (Poster Protection)**: Global Frame `0` (Scene 1 opening frame) renders completely sharp (`blur(0px)`, `opacity: 1`) so feed thumbnails and cover pickers never display a smeared frame.
+   - **Hook Discipline & Sharp Frame 0 (`HOOK_TYPEWRITER_LINT`)**: Global Frame `0` (Scene 1 opening frame) renders completely sharp (`blur(0px)`, `opacity: 1`) with immediate high-stakes conflict text. `TYPEWRITER` animations are strictly banned on Scene 1 hooks.
    - **Zero Illustration Text & Single-Source Metrics**: Ban sentences, captions, and data placards inside lower-third artwork (allow only 1–2 word map labels). Never repeat a metric in both headline text and artwork.
    - **Selective Context Tags**: Display the top location/date badge only when the timeline or setting shifts, never static on every frame.
 
 5. **Pacing, Onset & Drop Detection, & Perceptual Audio Sync**:
-   - **Scene Duration Window**: Hold each scene for **2.0 to 2.8 seconds** (`120–168` frames; up to `180f` on final epilogue), yielding **16–29 cuts per reel**. Ban 4-second static holds.
+   - **High-Density Scene Duration Window**: Hold each scene for **1.4 to 2.2 seconds** (**`84–132` frames**; up to `168f` on final epilogue), yielding **22–32 cuts per reel**. Ban slow 4-second holds.
+   - **Hook Duration Cap**: Bias Scene 1 duration strictly to **`96–108 frames` (1.6s–1.8s)** to stop feed swipe-aways within 1.2 seconds.
    - **Onset & Drop Detection (Replacing Static BPM Grids)**: Replace static BPM beat grids with audio transient analysis (via Python's Librosa or Aubio). The engine analyzes multi-band spectral flux to detect actual audio energy peaks, bass drops (sub-bass 20–220Hz surges & drop releases), cymbal crashes (high-band 3500–11000Hz bursts with high spectral centroid), and rhythmic onsets.
-   - **Transient-Driven Scene Shifts**: Snap scene transitions inside the `[120, 168]` frame window directly to detected `BASS_DROP`, `CYMBAL_CRASH`, or `ENERGY_PEAK` events so scene shifts explode on musical impacts rather than arbitrary mathematical intervals.
+   - **Transient-Driven Scene Shifts**: Snap scene transitions inside the `[84, 132]` frame window directly to detected `BASS_DROP`, `CYMBAL_CRASH`, or `ENERGY_PEAK` events so scene shifts explode on musical impacts rather than arbitrary mathematical intervals.
+   - **2-Phase Reactive Mid-Scene Choreography**: Every scene executes a 2-phase narrative flow: Phase 1 (setup motion) -> Phase 2 (payoff hit impulse + secondary vector state transformation on the transient hit frame).
+   - **Dead-Hold Prevention (`DEAD_HOLD_LINT`)**: Post-payoff hold must not exceed `100 frames` (`< 1.6s`) without secondary micro-action or visual transition.
    - **STRUCTURAL_FRACTURE Hits & Payoff Slams**: For `STRUCTURAL_FRACTURE` scenes (and high-impact payoffs), align the red payoff line, camera `IMPACT_SHAKE`, and impact SFX (`artillery_shell.wav`, `sub_boom.wav`) directly with the primary bass drop or cymbal crash transient inside `[18, 45]` frames.
    - **Perceptual SFX Lead Bias & Automatic BGM Ducking**: Bias transient impact SFX (`sub_boom.wav`, `stamp_slam.wav`, `artillery_shell.wav`) **2 frames early** (`-33ms` audio-leading-video sync) and automatically duck BGM by `-7.5 dB` under impact slams.
    - **Rolling Number Counters**: Animate high-impact integers counting up over `0.6s` (36 frames) as the payoff line lands.

@@ -1,0 +1,236 @@
+{
+  "projectSlug": "florida-plane-crash-2026",
+  "generatedAt": "2026-11-02T16:45:27.159Z",
+  "title": "SOUTH FLORIDA JET CRASH: FLIGHT LEVEL 350 THE DIVE BEGAN",
+  "description": "SOUTH FLORIDA JET CRASH (✈️ 💥 🚨 🇺🇸)\n\nFLIGHT LEVEL 350 THE DIVE BEGAN\n\nHistorical Sources & Fact-Check Citations:\n• FLIGHT LEVEL 350 THE DIVE BEGAN — Source: SOUTH FLORIDA JET CRASH Archival Record\n• Flightradar24 recorded final transponder ping at 8,750 feet descending 20,000+ FPM — Source: Flightradar24 / NTSB\n• 12:50 PM BLAST MASSIVE FIREBALL — Source: SOUTH FLORIDA JET CRASH Archival Record\n• All 9 passengers and crew on board N722BD died upon impact in Palm Beach County — Source: CNN / Florida Dept. of Transportation\n• Approximately 600 mobile home park residents evacuated to emergency shelter — Source: Palm Beach County Sheriff Office / CNN\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Florida #Plane #Crash #2026",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Florida",
+    "#Plane",
+    "#Crash",
+    "#2026"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "LICENSED_COMMERCIAL",
+    "clearanceId": "CLR-FLORIDA-CRASH-2026",
+    "attribution": "Bloody Mary (Instrumental Remix)"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_01_LEARJET_CRUISE_HOOK",
+      "text": "FLIGHT LEVEL 350 THE DIVE BEGAN",
+      "source": "SOUTH FLORIDA JET CRASH Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_09_ALTIMETER_COLLAPSE_TALLY",
+      "text": "Flightradar24 recorded final transponder ping at 8,750 feet descending 20,000+ FPM",
+      "source": "Flightradar24 / NTSB",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_12_MASSIVE_FIREBALL_IMPACT",
+      "text": "12:50 PM BLAST MASSIVE FIREBALL",
+      "source": "SOUTH FLORIDA JET CRASH Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_13_NINE_SOULS_LOST_TALLY",
+      "text": "All 9 passengers and crew on board N722BD died upon impact in Palm Beach County",
+      "source": "CNN / Florida Dept. of Transportation",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
+      "text": "Approximately 600 mobile home park residents evacuated to emergency shelter",
+      "source": "Palm Beach County Sheriff Office / CNN",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_LEARJET_CRUISE_HOOK",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "SOUTH FLORIDA CRASH",
+      "caption": "FLIGHT LEVEL 350 — THE DIVE BEGAN",
+      "visualAsset": "LEARJET_CRUISE_HERO"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_AUSTIN_TO_BAHAMAS_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "FLIGHT N722BD",
+      "caption": "AUSTIN TO BAHAMAS — OFF COURSE",
+      "visualAsset": "FLORIDA_FLIGHT_PATH_MAP"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_ICING_TURBULENCE_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "SEVERE ICING ALERT — ENGINES STRAINING",
+      "visualAsset": "ICING_VS_TURBOFAN_SPLIT"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_MANAGING_ICE_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": null,
+      "caption": "MANAGING ICING — REQUESTING CLIMB",
+      "visualAsset": "PILOT_INITIAL_ATC_QUOTE"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_MIAMI_CENTER_RADAR",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "MIAMI RADAR TRACKS — ALTITUDE COLLAPSING",
+      "visualAsset": "MIAMI_RADAR_VECTORS"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_TRIM_UPSET_FRACTURE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "CATASTROPHIC UPSET — VERTICAL NOSEDIVE",
+      "visualAsset": "TRIM_RUNAWAY_DIVE_FRACTURE"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_TWENTY_THOUSAND_FPM_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": null,
+      "caption": "MAYDAY MAYDAY — TWENTY THOUSAND DOWN",
+      "visualAsset": "TWENTY_THOUSAND_FPM_QUOTE_CARD"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_OVERSPEED_SHOCKWAVE_FRACTURE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "TRANSONIC OVERSPEED — AIRFRAME SHUDDERS",
+      "visualAsset": "OVERSPEED_SHOCKWAVE_FRACTURE"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_ALTIMETER_COLLAPSE_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "FALLING RAPIDLY — EIGHT THOUSAND FEET",
+      "visualAsset": "ALTIMETER_COLLAPSE_TALLY_BOARD"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_FINAL_MAYDAY_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": null,
+      "caption": "FINAL RADIO CALL — GROUND IMPACT IMMINENT",
+      "visualAsset": "FINAL_PANICKED_MAYDAY_QUOTE"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_PALM_BEACH_APPROACH_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": null,
+      "caption": "PALM BEACH COUNTY — HIGHWAY CORRIDOR",
+      "visualAsset": "PALM_BEACH_TACTICAL_MAP"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_MASSIVE_FIREBALL_IMPACT",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "12:50 PM BLAST — MASSIVE FIREBALL",
+      "visualAsset": "CRASH_FIREBALL_ORGANIC_BLAST"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_NINE_SOULS_LOST_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "NINE ON BOARD — ZERO SURVIVORS",
+      "visualAsset": "CASUALTY_MANIFEST_TALLY"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_FIRST_RESPONDERS_TRANSIT",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "EMERGENCY UNITS RACE — ROADS BLOCKED",
+      "visualAsset": "EMERGENCY_SIRENS_CONVOY"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_PERIMETER_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": null,
+      "caption": "NEIGHBORHOOD SAVED — NO GROUND DEATHS",
+      "visualAsset": "FIRE_COMMANDER_PERIMETER"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "PARK EVACUATION — SIX HUNDRED SAFE",
+      "visualAsset": "EVACUATION_TALLY_BOARD"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_NTSB_FAA_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "NTSB GO-TEAM — FEDERAL INQUIRY",
+      "visualAsset": "NTSB_VS_FAA_INVESTIGATION_SPLIT"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_SMOKING_CRATER_FRACTURE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "CRATER SURVEY — WRECKAGE SCATTERED",
+      "visualAsset": "SMOKING_CRATER_FORENSICS"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_SECRETARY_DUFFY_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": null,
+      "caption": "OFFICIAL STATEMENT — HORRIFIC TRAGEDY",
+      "visualAsset": "SECRETARY_DUFFY_STATEMENT_QUOTE"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_BLACK_BOX_RECOVERY",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "BLACK BOX FOUND — DATA SECURED",
+      "visualAsset": "BLACK_BOX_RECOVERY_DOSSIER"
+    },
+    {
+      "sceneNumber": 21,
+      "sceneId": "SCENE_21_MEMORIAL_TRIBUTE_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": null,
+      "caption": "NINE LIVES LOST — REST IN PEACE",
+      "visualAsset": "FLORIDA_CRASH_MEMORIAL_PLINTH"
+    },
+    {
+      "sceneNumber": 22,
+      "sceneId": "SCENE_22_SYMMETRIC_LOOP_REEL",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": null,
+      "caption": "N722BD FINAL FLIGHT — NEVER FORGOTTEN",
+      "visualAsset": "SYMMETRIC_REEL_LOOP_HERO"
+    }
+  ]
+}

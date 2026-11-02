@@ -1,6 +1,6 @@
 {
   "projectSlug": "carton-de-wiart-1916",
-  "lastUpdated": "2026-11-02T06:19:04.795Z",
+  "lastUpdated": "2026-11-02T11:41:31.163Z",
   "plates": {
     "carton_portrait_hero.jpg": {
       "filename": "carton_portrait_hero.jpg",
@@ -54,8 +54,22 @@
     "victoria_cross_medal.jpg": {
       "filename": "victoria_cross_medal.jpg",
       "format": "JPEG",
-      "sizeBytes": 357444,
+      "sizeBytes": 429074,
       "description": "Bronze Victoria Cross medal with crimson ribbon and For Valour inscription",
+      "verified": true
+    },
+    "polish_soviet_map_1920.png": {
+      "filename": "polish_soviet_map_1920.png",
+      "format": "PNG",
+      "sizeBytes": 365847,
+      "description": "Geopolitical theater map of Polish-Soviet War in August 1920 with frontlines and border shifts",
+      "verified": true
+    },
+    "battle_of_warsaw_map.png": {
+      "filename": "battle_of_warsaw_map.png",
+      "format": "PNG",
+      "sizeBytes": 404309,
+      "description": "Tactical operational map of Battle of Warsaw Phase 1 August 1920 showing Vistula defense and Soviet advance",
       "verified": true
     },
     "polish_armoured_train_1.jpg": {
@@ -131,6 +145,51 @@
       "sizeBytes": 179165,
       "description": "Rural Italian landscape with rustic stone farmhouses and cypress road",
       "verified": true
+    },
+    "cossack_cavalry_1920.jpg": {
+      "format": "JPEG",
+      "size": 130525,
+      "valid": true,
+      "description": "1st Cavalry Army (Konarmia) Red Army Cossack cavalry on horseback during Polish-Soviet War 1920",
+      "scenes": [
+        "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT"
+      ]
+    },
+    "cossack_charging_sabre.jpg": {
+      "format": "JPEG",
+      "size": 172329,
+      "valid": true,
+      "description": "Cossack cavalry charge with drawn curved steel shasqua sabres and galloping warhorses",
+      "scenes": [
+        "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT"
+      ]
+    },
+    "remarkable_biplane_crash.jpg": {
+      "filename": "remarkable_biplane_crash.jpg",
+      "title": "File:A remarkable crash (13960659101) (2).jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/A_remarkable_crash_%2813960659101%29_%282%29.jpg/960px-A_remarkable_crash_%2813960659101%29_%282%29.jpg",
+      "format": "JPEG",
+      "sizeBytes": 258488,
+      "description": "WWI military biplane crash showing wings, struts, fuselage and markings",
+      "verified": true
+    },
+    "biplane_wreck_fortepan.jpg": {
+      "filename": "biplane_wreck_fortepan.jpg",
+      "title": "File:Wreck, biplane Fortepan 100148.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Wreck%2C_biplane_Fortepan_100148.jpg/960px-Wreck%2C_biplane_Fortepan_100148.jpg",
+      "format": "JPEG",
+      "sizeBytes": 143426,
+      "description": "Military biplane cockpit and wing wreckage with crew climbing out",
+      "verified": true
+    },
+    "sargent_crashed_aeroplane.jpg": {
+      "filename": "sargent_crashed_aeroplane.jpg",
+      "title": "File:- Crashed Aeroplane by John Singer Sargent 1918.jpg",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/-_Crashed_Aeroplane_by_John_Singer_Sargent_1918.jpg",
+      "format": "JPEG",
+      "sizeBytes": 69825,
+      "description": "John Singer Sargent 1918 painting of crashed military biplane in open fields",
+      "verified": true
     }
   },
   "scenePlateMap": {
@@ -148,7 +207,7 @@
     "SCENE_11_VICTORIA_CROSS_QUOTE": "victoria_cross_medal.jpg",
     "SCENE_23_ELEVEN_WOUNDS_TALLY": "victoria_cross_medal.jpg",
     "SCENE_12_POLISH_SOVIET_WAR_MAP": "polish_armoured_train_1.jpg",
-    "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT": "polish_armoured_train_1.jpg",
+    "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT": "cossack_cavalry_1920.jpg",
     "SCENE_15_SPEEDING_TRAIN_LEAP": "polish_armoured_train_2.jpg",
     "SCENE_16_WORLD_WAR_TWO_RECALL_LEADER": "carton_de_wiart_general.jpg",
     "SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT": "short_sunderland_boat.jpg",

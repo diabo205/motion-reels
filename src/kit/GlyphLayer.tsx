@@ -118,7 +118,7 @@ export const GlyphLayer: React.FC<GlyphLayerProps> = ({
 
         const localFrame = frame - triggerFrame;
         const minPx = isSetup ? MIN_SETUP_FONT_PX : MIN_PAYOFF_FONT_PX;
-        const prefPx = isSetup ? 64 : 72;
+        const prefPx = isSetup ? 68 : 80;
 
         const fit = resolveResponsiveFontSize(
           layer.text,
@@ -130,18 +130,25 @@ export const GlyphLayer: React.FC<GlyphLayerProps> = ({
           ALL_CAPS_TRACKING_EM
         );
 
+        // Frame 0 poster protection: bypass all entrance delays on the opening scene poster frame
+        const isFrameZeroPoster = frame === 0 && triggerFrame === 0;
+
         // Somber memorial mode: Replace aggressive scale slam with solemn opacity fade
         const isSomber = sensitivity === 'SOMBER_MEMORIAL';
-        const animScale = isSomber
+        const animScale = isFrameZeroPoster
           ? 1.0
-          : isSetup
+          : isSomber
             ? 1.0
-            : interpolate(localFrame, [0, 4], [1.32, 1.0], {
-                extrapolateRight: 'clamp',
-              });
-        const animOpacity = interpolate(localFrame, [0, isSomber ? 8 : 2], [0, 1], {
-          extrapolateRight: 'clamp',
-        });
+            : isSetup
+              ? 1.0
+              : interpolate(localFrame, [0, 4], [1.32, 1.0], {
+                  extrapolateRight: 'clamp',
+                });
+        const animOpacity = isFrameZeroPoster
+          ? 1.0
+          : interpolate(localFrame, [0, isSomber ? 8 : 2], [0, 1], {
+              extrapolateRight: 'clamp',
+            });
 
         // Numeric rolling counter calculation over 36 frames (0.6s)
         let displayText = layer.text;

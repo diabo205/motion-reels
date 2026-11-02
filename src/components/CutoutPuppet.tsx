@@ -3,8 +3,8 @@ import { useCurrentFrame, interpolate, Img, staticFile } from 'remotion';
 import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 import { loadFont as loadCourierPrime } from '@remotion/google-fonts/CourierPrime';
 
-const caveat = loadCaveat();
-const courier = loadCourierPrime();
+const caveat = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] });
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
 
 export type PuppetPose =
   | 'NEUTRAL'
@@ -22,7 +22,9 @@ export type PuppetPose =
   | 'BITE_FINGERS'
   | 'SEVERED_FINGERS'
   | 'SURGEON_REFUSE'
-  | 'SURGEON_SHOCKED';
+  | 'SURGEON_SHOCKED'
+  | 'SKULL_HIT'
+  | 'SURVIVED_COMMAND';
 
 export type PuppetOutfit =
   | 'FLIGHT_SUIT'
@@ -53,6 +55,8 @@ export interface BulletWoundsConfig {
   earHitFrame?: number;
   armHitFrame?: number;
   biteHitFrame?: number;
+  skullHitFrame?: number;
+  skullBandageFrame?: number;
   showSparks?: boolean;
 }
 
@@ -87,6 +91,8 @@ export interface CutoutPuppetProps {
   initialPose?: PuppetPose;
   switchedPose?: PuppetPose;
   poseSwitchFrame?: number;
+  secondSwitchedPose?: PuppetPose;
+  secondPoseSwitchFrame?: number;
   outfit?: PuppetOutfit;
   handwrittenLabel?: string;
   paperTagLabel?: string;
@@ -146,6 +152,8 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
   initialPose = 'NEUTRAL',
   switchedPose,
   poseSwitchFrame = 64,
+  secondSwitchedPose,
+  secondPoseSwitchFrame,
   outfit = 'FLIGHT_SUIT',
   handwrittenLabel,
   paperTagLabel,
@@ -156,17 +164,25 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
   const frame = useCurrentFrame();
   const isCarton = character?.startsWith('CARTON_');
 
-  // Determine active pose (switches on Beat 2 punchline frame!)
-  const hasSwitched = switchedPose && frame >= poseSwitchFrame;
-  const activePose: PuppetPose = hasSwitched ? switchedPose : initialPose;
+  // Determine active pose (supports 2 sequential transitions!)
+  let activePose: PuppetPose = initialPose;
+  let currentSwitchFrame = poseSwitchFrame;
+  if (secondSwitchedPose && secondPoseSwitchFrame !== undefined && frame >= secondPoseSwitchFrame) {
+    activePose = secondSwitchedPose;
+    currentSwitchFrame = secondPoseSwitchFrame;
+  } else if (switchedPose && frame >= poseSwitchFrame) {
+    activePose = switchedPose;
+    currentSwitchFrame = poseSwitchFrame;
+  }
+  const hasSwitched = activePose !== initialPose;
 
   // Quantized 15fps stop-motion wiggle + pop on pose switch
   const steppedFrame = Math.floor(frame / 4);
   const wiggleDeg = (steppedFrame % 2 === 0 ? 1 : -1) * 1.4;
   const totalRotation = rotation + wiggleDeg;
   const switchPop =
-    hasSwitched && frame - poseSwitchFrame < 6
-      ? interpolate(frame - poseSwitchFrame, [0, 2, 6], [1.18, 1.05, 1.0], {
+    hasSwitched && frame - currentSwitchFrame < 6
+      ? interpolate(frame - currentSwitchFrame, [0, 2, 6], [1.18, 1.05, 1.0], {
           extrapolateRight: 'clamp',
         })
       : 1.0;
@@ -214,6 +230,15 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
     extrapolateRight: 'clamp',
   });
 
+  const skullHit = woundsConfig?.skullHitFrame !== undefined && frame >= woundsConfig.skullHitFrame;
+  const skullAge = woundsConfig?.skullHitFrame !== undefined ? frame - woundsConfig.skullHitFrame : -1;
+  const skullGrowth = interpolate(Math.max(0, skullAge), [0, 20], [0.15, 1.0], {
+    extrapolateRight: 'clamp',
+  });
+
+  const skullBandaged = woundsConfig?.skullBandageFrame !== undefined && frame >= woundsConfig.skullBandageFrame;
+  const bandageAge = woundsConfig?.skullBandageFrame !== undefined ? frame - woundsConfig.skullBandageFrame : -1;
+
   // Arm coordinates based on activePose
   const renderArms = (isOutline: boolean) => {
     const strokeCol = isOutline ? '#F4EFE6' : colors.torso;
@@ -222,9 +247,145 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
     const handR = isOutline ? 26 : 15;
 
     switch (activePose) {
+      case 'SKULL_HIT':
+        return (
+          <g>
+            {/* Left arm: thrown down/back in shock and ballistic recoil */}
+            {!isOutline && (
+              <polyline
+                points="-58,28 -95,65 -110,105"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            <polyline
+              points="-58,28 -95,65 -110,105"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="-110" cy="105" r={handR} fill={handCol} />
+
+            {/* Right arm: reaches sharply around to clutch the back of the head/ear */}
+            {!isOutline && (
+              <polyline
+                points="58,28 85,-18 48,-62"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            <polyline
+              points="58,28 85,-18 48,-62"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="48" cy="-62" r={handR} fill={handCol} />
+
+            {!isOutline && (
+              <g>
+                {/* Brass sleeve cuff buttons */}
+                <circle cx="76" cy="-4" r="2.5" fill="#F59E0B" />
+                <circle cx="72" cy="0" r="2.5" fill="#F59E0B" />
+                {/* Hand clutching head fingers */}
+                <ellipse cx="48" cy="-62" rx="14" ry="10" fill="#D9B391" transform="rotate(-25 48 -62)" />
+              </g>
+            )}
+          </g>
+        );
+
+      case 'SURVIVED_COMMAND':
+        return (
+          <g>
+            {/* Left arm: resting firmly on hip with hand on Sam Browne belt */}
+            {!isOutline && (
+              <polyline
+                points="-58,28 -86,66 -56,82"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            <polyline
+              points="-58,28 -86,66 -56,82"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="-56" cy="82" r={handR} fill={handCol} />
+
+            {/* Right arm: extended upward and forward holding service Webley revolver */}
+            {!isOutline && (
+              <polyline
+                points="58,28 92,12 125,-28"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            <polyline
+              points="58,28 92,12 125,-28"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="125" cy="-28" r={handR} fill={handCol} />
+
+            {/* Webley Revolver & Hand */}
+            {!isOutline && (
+              <g transform="translate(122, -35) rotate(-18)">
+                {/* Hand grip */}
+                <ellipse cx="0" cy="8" rx="8" ry="6" fill="#D9B391" />
+                {/* Blued steel frame */}
+                <rect x="0" y="-3" width="34" height="10" rx="2" fill="#1C1917" stroke="#3F3F46" strokeWidth="1" />
+                {/* Fluted cylinder */}
+                <rect x="6" y="-6" width="13" height="16" rx="2" fill="#27272A" stroke="#52525B" strokeWidth="1" />
+                {/* Barrel */}
+                <rect x="18" y="-4" width="22" height="7" rx="1.5" fill="#18181B" />
+                {/* Front blade sight */}
+                <polygon points="36,-4 40,-4 39,-7 37,-7" fill="#52525B" />
+                {/* Walnut wood grip handle */}
+                <path d="M -2 5 L -8 18 L 4 22 L 6 8 Z" fill="#5A3E2D" stroke="#3B261A" strokeWidth="1" />
+                {/* Brass cuff buttons */}
+                <circle cx="-25" cy="40" r="2.5" fill="#F59E0B" />
+                <circle cx="-21" cy="44" r="2.5" fill="#F59E0B" />
+              </g>
+            )}
+          </g>
+        );
+
       case 'BITE_FINGERS':
         return (
           <g>
+            {/* Dark seam understroke for left arm so it separates from torso */}
+            {!isOutline && (
+              <polyline
+                points="-58,28 -42,6 -20,-18"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
             {/* Left arm: forearm angled up directly towards mouth */}
             <polyline
               points="-58,28 -42,6 -20,-18"
@@ -235,6 +396,28 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
               strokeLinejoin="round"
             />
             <circle cx="-20" cy="-18" r={handR} fill={handCol} />
+
+            {/* Dark seam understroke for right arm */}
+            {!isOutline && (
+              <polyline
+                points="58,28 18,14 -10,2"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            {/* Right arm: reaches across chest to tightly steady/brace left wrist from below */}
+            <polyline
+              points="58,28 18,14 -10,2"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="-10" cy="2" r={handR} fill={handCol} />
 
             {/* Non-outline inner details */}
             {!isOutline && (
@@ -252,24 +435,27 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
                   transform="rotate(-25 -19 -18)"
                 />
                 <ellipse cx="-19" cy="-18" rx="5" ry="3" fill="#DC2626" />
+                {/* Brass sleeve cuff buttons */}
+                <circle cx="-38" cy="14" r="2.5" fill="#F59E0B" />
+                <circle cx="-34" cy="18" r="2.5" fill="#F59E0B" />
               </g>
             )}
-
-            {/* Right arm: reaches across chest to tightly steady/brace left wrist from below */}
-            <polyline
-              points="58,28 18,14 -10,2"
-              fill="none"
-              stroke={strokeCol}
-              strokeWidth={strokeW}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="-10" cy="2" r={handR} fill={handCol} />
           </g>
         );
       case 'SEVERED_FINGERS':
         return (
           <g>
+            {/* Dark seam understroke for left arm so it separates from torso */}
+            {!isOutline && (
+              <polyline
+                points="-58,28 -48,52 -16,70"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
             {/* Left arm: recoils back down to chest level showing severed fingers */}
             <polyline
               points="-58,28 -48,52 -16,70"
@@ -281,25 +467,47 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
             />
             <circle cx="-16" cy="70" r={handR} fill={handCol} />
 
+            {/* Dark seam understroke for right arm clutching wrist */}
+            {!isOutline && (
+              <polyline
+                points="58,28 14,56 -16,68"
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.45)"
+                strokeWidth={strokeW + 6}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
+            {/* Right arm: reaches across chest to tightly clamp left wrist to staunch blood */}
+            <polyline
+              points="58,28 14,56 -16,68"
+              fill="none"
+              stroke={strokeCol}
+              strokeWidth={strokeW}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="-16" cy="68" r={handR} fill={handCol} />
+
             {/* Non-outline inner details for severed knuckle stumps */}
             {!isOutline && (
               <g>
                 {/* Blood-soaked wrist gauze wrap */}
                 <rect
-                  x="-26"
+                  x="-28"
                   y="62"
-                  width="18"
-                  height="14"
-                  rx="2"
+                  width="20"
+                  height="16"
+                  rx="3"
                   fill="#E2E8F0"
                   stroke="#7F1D1D"
                   strokeWidth="1.5"
-                  transform="rotate(-15 -17 69)"
+                  transform="rotate(-15 -18 70)"
                 />
-                <ellipse cx="-17" cy="69" rx="5" ry="3" fill="#991B1B" />
+                <ellipse cx="-18" cy="70" rx="5.5" ry="3.5" fill="#991B1B" />
 
                 {/* Severed Palm Contour */}
-                <ellipse cx="-16" cy="72" rx="12" ry="10" fill="#D9B391" />
+                <ellipse cx="-16" cy="72" rx="13" ry="11" fill="#D9B391" />
 
                 {/* Index finger stump - severed flesh and exposed bone core */}
                 <ellipse cx="-20" cy="64" rx="4.5" ry="3.5" fill="#7F1D1D" stroke="#991B1B" strokeWidth="1" />
@@ -311,19 +519,17 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
 
                 {/* Remaining ring/pinky fingers curled inward */}
                 <path d="M -9 70 Q -6 74 -10 78 Q -14 78 -12 73" fill="#C6946E" />
+
+                {/* Right hand clutching fingers clamped over left wrist */}
+                <rect x="-24" y="60" width="12" height="18" rx="3" fill="#D9B391" transform="rotate(12 -18 69)" />
+                <line x1="-24" y1="65" x2="-12" y2="65" stroke="#B88A68" strokeWidth="1.2" />
+                <line x1="-24" y1="71" x2="-12" y2="71" stroke="#B88A68" strokeWidth="1.2" />
+
+                {/* Brass uniform sleeve buttons */}
+                <circle cx="-42" cy="48" r="2.5" fill="#F59E0B" />
+                <circle cx="-38" cy="52" r="2.5" fill="#F59E0B" />
               </g>
             )}
-
-            {/* Right arm: reaches across chest to tightly clamp left wrist to staunch blood */}
-            <polyline
-              points="58,28 14,56 -16,68"
-              fill="none"
-              stroke={strokeCol}
-              strokeWidth={strokeW}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="-16" cy="68" r={handR} fill={handCol} />
           </g>
         );
       case 'SURGEON_REFUSE':
@@ -1065,8 +1271,8 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
             }}
           />
 
-          {/* Eye, Ear, Mouth & Bite Trauma Overlay */}
-          {(eyeHit || earHit || biteHit || activePose === 'BITE_FINGERS') && (
+          {/* Eye, Ear, Mouth, Skull & Bite Trauma Overlay */}
+          {(eyeHit || earHit || biteHit || skullHit || skullBandaged || activePose === 'BITE_FINGERS') && (
             <svg
               viewBox="0 0 152 184"
               style={{
@@ -1252,6 +1458,140 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
                       <circle cx="98" cy="92" r={16 * (1 - eyeAge / 6)} fill="#FFFFFF" />
                     </g>
                   )}
+                </g>
+              )}
+
+              {/* PENETRATING SKULL BULLET TRAUMA & BLOODFALL */}
+              {skullHit && (
+                <g id="skull-penetrating-wound">
+                  {/* Supersonic Bullet In-Flight Flash Vector across head during impact frames (skullAge <= 4) */}
+                  {skullAge >= 0 && skullAge <= 4 && (
+                    <g id="bullet-vector-flash">
+                      {/* Mach shockwave cone */}
+                      <polygon
+                        points="20,30 148,56 135,68 20,38"
+                        fill="rgba(239, 68, 68, 0.4)"
+                      />
+                      {/* Core supersonic tracer line */}
+                      <line
+                        x1="14"
+                        y1="28"
+                        x2="152"
+                        y2="58"
+                        stroke="#F97316"
+                        strokeWidth="8"
+                        strokeLinecap="round"
+                      />
+                      <line
+                        x1="22"
+                        y1="30"
+                        x2="148"
+                        y2="56"
+                        stroke="#FFFFFF"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
+                      {/* Entry flash star */}
+                      <circle cx="42" cy="38" r={16 * (1 - skullAge / 5)} fill="#FFFFFF" />
+                      <circle cx="42" cy="38" r={26 * (1 - skullAge / 5)} fill="rgba(251, 191, 36, 0.7)" />
+                      {/* Exit blowout flash star */}
+                      <circle cx="126" cy="52" r={20 * (1 - skullAge / 5)} fill="#FFFFFF" />
+                      <circle cx="126" cy="52" r={32 * (1 - skullAge / 5)} fill="rgba(239, 68, 68, 0.85)" />
+                    </g>
+                  )}
+
+                  {/* 1. ENTRY WOUND: Upper left temple / cranial entry hole (42, 38) */}
+                  <g id="skull-entry-puncture">
+                    {/* Dark coagulated rim */}
+                    <ellipse cx="42" cy="38" rx={8 * skullGrowth} ry={7 * skullGrowth} fill="#2A0505" />
+                    <ellipse cx="42" cy="38" rx={5.5 * skullGrowth} ry={4.5 * skullGrowth} fill="#7F1D1D" />
+                    {/* Pitch black entrance cavity */}
+                    <circle cx="42" cy="38" r={3.2 * skullGrowth} fill="#000000" />
+                    {/* Powder burn stippling dots */}
+                    <circle cx="35" cy="35" r="1.1" fill="#18181B" opacity="0.85" />
+                    <circle cx="48" cy="33" r="1.0" fill="#18181B" opacity="0.85" />
+                    <circle cx="38" cy="44" r="1.2" fill="#18181B" opacity="0.85" />
+                    <circle cx="47" cy="42" r="1.1" fill="#18181B" opacity="0.85" />
+                    {/* Entry blood runnel down temple onto cheek */}
+                    {skullAge > 2 && (
+                      <path
+                        d={`M 40 44 L 44 44 L 43 ${44 + Math.min(65, (skullAge - 2) * 2.2)} L 39 ${44 + Math.min(65, (skullAge - 2) * 2.2)} Z`}
+                        fill="#7F1D1D"
+                      />
+                    )}
+                  </g>
+
+                  {/* 2. EXIT WOUND: Devastating Exit Blowout behind Ear / Cranium (126, 52) */}
+                  <g id="skull-exit-blowout">
+                    {/* Organic Spreading Arterial Blood Pool */}
+                    <ellipse cx="126" cy="52" rx={20 * skullGrowth} ry={16 * skullGrowth} fill="#3B0707" opacity="0.95" />
+                    <ellipse cx="126" cy="52" rx={15 * skullGrowth} ry={12 * skullGrowth} fill="#7F1D1D" />
+                    <ellipse cx="126" cy="52" rx={9 * skullGrowth} ry={7 * skullGrowth} fill="#991B1B" />
+                    {/* Blown-out ragged bone/skin flap cavity */}
+                    <polygon
+                      points="118,46 130,40 138,50 134,62 122,60"
+                      fill="#0A0606"
+                      stroke="#1C0808"
+                      strokeWidth="1.5"
+                    />
+                    <circle cx="126" cy="52" r={4.8 * skullGrowth} fill="#000000" />
+
+                    {/* Exit Blood Spray Mist droplets */}
+                    {skullAge >= 1 && (
+                      <g opacity={Math.max(0, 1 - skullAge / 25)}>
+                        <circle cx="138" cy="46" r="2.5" fill="#DC2626" />
+                        <circle cx="144" cy="52" r="3.2" fill="#991B1B" />
+                        <circle cx="140" cy="60" r="2.2" fill="#7F1D1D" />
+                        <circle cx="147" cy="57" r="1.8" fill="#DC2626" />
+                        <circle cx="134" cy="68" r="2.8" fill="#991B1B" />
+                      </g>
+                    )}
+
+                    {/* Arterial Blood Cascades Streaming Down Neck & General Staff Collar */}
+                    {skullAge > 2 && (
+                      <g>
+                        <path
+                          d={`M 123 60 L 129 60 L 128 ${60 + Math.min(95, (skullAge - 2) * 2.6)} L 122 ${60 + Math.min(95, (skullAge - 2) * 2.6)} Z`}
+                          fill="#7F1D1D"
+                        />
+                        <path
+                          d={`M 130 58 L 134 58 L 133 ${58 + Math.min(85, (skullAge - 2) * 2.2)} L 129 ${58 + Math.min(85, (skullAge - 2) * 2.2)} Z`}
+                          fill="#991B1B"
+                        />
+                      </g>
+                    )}
+                  </g>
+                </g>
+              )}
+
+              {/* 3. SURVIVAL: Authentic British Army Field Dressing Head Bandage (at frame >= skullBandageFrame) */}
+              {skullBandaged && (
+                <g id="head-field-dressing" opacity={interpolate(bandageAge, [0, 8], [0, 1], { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' })}>
+                  {/* Outer White Paper-Cut Bandage Outline for Die-cut pop */}
+                  <path
+                    d="M 16 26 Q 76 34 138 42 L 140 64 Q 76 56 14 48 Z"
+                    fill="#F4EFE6"
+                    stroke="#CBD5E1"
+                    strokeWidth="2.5"
+                    strokeLinejoin="round"
+                  />
+                  {/* Gauze wrap substrate */}
+                  <path
+                    d="M 18 28 Q 76 36 136 44 L 138 62 Q 76 54 16 46 Z"
+                    fill="#F8FAFC"
+                  />
+                  {/* Bandage texture wrap folds */}
+                  <line x1="20" y1="36" x2="134" y2="50" stroke="#E2E8F0" strokeWidth="1.5" strokeDasharray="6 3" />
+                  <line x1="18" y1="44" x2="132" y2="58" stroke="#E2E8F0" strokeWidth="1.5" strokeDasharray="6 3" />
+                  {/* Brass safety pin fastening */}
+                  <rect x="74" y="44" width="14" height="4" rx="1.5" fill="#F59E0B" stroke="#B45309" strokeWidth="0.8" />
+                  <circle cx="76" cy="46" r="1.2" fill="#78350F" />
+                  {/* Dark arterial blood bleed-through soak spot over exit wound */}
+                  <ellipse cx="124" cy="54" rx="12" ry="9" fill="#7F1D1D" opacity="0.9" />
+                  <ellipse cx="124" cy="54" rx="7" ry="5.5" fill="#991B1B" />
+                  <circle cx="123" cy="54" r="3" fill="#450A0A" />
+                  {/* Blood drip escaping below bandage */}
+                  <path d="M 122 62 L 126 62 L 124 110 L 120 110 Z" fill="#7F1D1D" />
                 </g>
               )}
             </svg>

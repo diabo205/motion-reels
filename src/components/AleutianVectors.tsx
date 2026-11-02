@@ -10,7 +10,7 @@ import {
   AnimatedFrontline,
 } from '../library/tactical';
 
-const montserrat = loadMontserrat();
+const montserrat = loadMontserrat('normal', { weights: ['800', '900'], subsets: ['latin'] });
 
 // =========================================================================
 // REUSABLE POLAR MARITIME BACKLIGHTING & ATMOSPHERIC PARTICLES

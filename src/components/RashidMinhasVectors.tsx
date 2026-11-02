@@ -4,9 +4,9 @@ import { loadFont as loadBlackOpsOne } from '@remotion/google-fonts/BlackOpsOne'
 import { loadFont as loadBarlowCondensed } from '@remotion/google-fonts/BarlowCondensed';
 import { loadFont as loadCourierPrime } from '@remotion/google-fonts/CourierPrime';
 
-const blackOps = loadBlackOpsOne();
-const barlow = loadBarlowCondensed();
-const courier = loadCourierPrime();
+const blackOps = loadBlackOpsOne('normal', { weights: ['400'], subsets: ['latin'] });
+const barlow = loadBarlowCondensed('normal', { weights: ['700'], subsets: ['latin'] });
+const courier = loadCourierPrime('normal', { weights: ['400'], subsets: ['latin'] });
 
 // ==========================================
 // 1. HIGH-FIDELITY LOCKHEED T-33A JET VECTOR

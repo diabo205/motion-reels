@@ -16,9 +16,9 @@ export const CANVAS_HEIGHT = pipelineConstants.HEIGHT || 1920;
 // Duration & Pacing Windows
 export const MIN_FRAMES = pipelineConstants.MIN_FRAMES || 2700;
 export const MAX_FRAMES = pipelineConstants.MAX_FRAMES || 3500;
-export const MIN_SCENE_FRAMES = pipelineConstants.MIN_SCENE_FRAMES || 120;
-export const TARGET_MAX_SCENE_FRAMES = pipelineConstants.TARGET_MAX_SCENE_FRAMES || 168;
-export const MAX_SCENE_FRAMES = pipelineConstants.MAX_SCENE_FRAMES || 180;
+export const MIN_SCENE_FRAMES = pipelineConstants.MIN_SCENE_FRAMES || 84;
+export const TARGET_MAX_SCENE_FRAMES = pipelineConstants.TARGET_MAX_SCENE_FRAMES || 132;
+export const MAX_SCENE_FRAMES = pipelineConstants.MAX_SCENE_FRAMES || 150;
 export const PAYOFF_BEAT_WINDOW_FRAMES = pipelineConstants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
 
 // Audio & Transient Sync
@@ -29,12 +29,12 @@ export const LOUDNESS_TRUE_PEAK_DBTP = pipelineConstants.LOUDNESS_TRUE_PEAK_DBTP
 
 // Typography Constraints (Zero-Clutter)
 export const ALL_CAPS_TRACKING_EM = pipelineConstants.ALL_CAPS_TRACKING_EM || 0.04;
-export const MIN_SETUP_FONT_PX = pipelineConstants.MIN_SETUP_FONT_PX || 56;
-export const MIN_PAYOFF_FONT_PX = pipelineConstants.MIN_PAYOFF_FONT_PX || 64;
+export const MIN_SETUP_FONT_PX = pipelineConstants.MIN_SETUP_FONT_PX || 64;
+export const MIN_PAYOFF_FONT_PX = pipelineConstants.MIN_PAYOFF_FONT_PX || 76;
 export const MAX_LINES_PER_LAYER = pipelineConstants.MAX_LINES_PER_LAYER || 2;
 export const MAX_LINE_CHARS = pipelineConstants.MAX_LINE_CHARS || 40;
-export const WORD_BUDGET_MIN = pipelineConstants.WORD_BUDGET_MIN || 6;
-export const WORD_BUDGET_MAX = pipelineConstants.WORD_BUDGET_MAX || 10;
+export const WORD_BUDGET_MIN = pipelineConstants.WORD_BUDGET_MIN || 3;
+export const WORD_BUDGET_MAX = pipelineConstants.WORD_BUDGET_MAX || 7;
 
 // Canonical 7 Archetypes
 export const CORE_ARCHETYPES = [

@@ -84,8 +84,19 @@ export const ArchetypeScene: React.FC<ArchetypeSceneProps> = ({
       )
     : 1;
 
+  // Mid-scene payoff hit impulse & dead-hold prevention
+  const hitOffset = textLayers?.[1]?.triggerFrameOffset ?? 30;
+  const isPostPayoff = frame >= hitOffset;
+  const payoffImpulse =
+    hitOffset > 0 && frame >= hitOffset && frame - hitOffset <= 12
+      ? interpolate(frame - hitOffset, [0, 12], [1.035, 1.0], { extrapolateRight: 'clamp' })
+      : 1.0;
+  const latePacing =
+    isPostPayoff && frame > hitOffset + 45
+      ? interpolate(frame, [hitOffset + 45, durationFrames], [1.0, 1.25], { extrapolateRight: 'clamp' })
+      : 1.0;
+
   if (movement === 'IMPACT_SHAKE' && sensitivity === 'STANDARD') {
-    const hitOffset = textLayers?.[1]?.triggerFrameOffset ?? 0;
     let decay = 0;
     if (hitOffset > 0) {
       const distFromHit = frame - hitOffset;
@@ -104,22 +115,24 @@ export const ArchetypeScene: React.FC<ArchetypeSceneProps> = ({
     }
     const shakeX = Math.sin(frame * 2.1) * 18 * intensity * decay * loopEase;
     const shakeY = Math.cos(frame * 2.7) * 14 * intensity * decay * loopEase;
-    transform = `translate(${shakeX}px, ${shakeY}px)`;
+    transform = `translate(${shakeX}px, ${shakeY}px) scale(${payoffImpulse})`;
   } else if (movement === 'PARALLAX_PAN_RIGHT') {
-    const panX = interpolate(frame, [0, durationFrames], [-28, 28], { extrapolateRight: 'clamp' }) * intensity * loopEase;
-    transform = `translateX(${panX}px)`;
+    const panX = interpolate(frame, [0, durationFrames], [-28, 28], { extrapolateRight: 'clamp' }) * intensity * loopEase * latePacing;
+    transform = `translateX(${panX}px) scale(${payoffImpulse})`;
   } else if (movement === 'CRANE_SWEEP_UP') {
-    const panY = interpolate(frame, [0, durationFrames], [24, -24], { extrapolateRight: 'clamp' }) * intensity * loopEase;
-    transform = `translateY(${panY}px)`;
+    const panY = interpolate(frame, [0, durationFrames], [24, -24], { extrapolateRight: 'clamp' }) * intensity * loopEase * latePacing;
+    transform = `translateY(${panY}px) scale(${payoffImpulse})`;
   } else if (movement === 'DUTCH_TILT') {
     const deg = interpolate(frame, [0, durationFrames], [-1.2, 1.2], { extrapolateRight: 'clamp' }) * intensity * loopEase;
-    const scale = 1 + 0.03 * intensity * loopEase;
+    const scale = (1 + 0.03 * intensity * loopEase) * payoffImpulse;
     transform = `scale(${scale}) rotate(${deg}deg)`;
   } else if (movement === 'SLOW_PUSH_IN') {
     const scale =
-      1 +
-      interpolate(frame, [0, durationFrames], [0, 0.06 * intensity], { extrapolateRight: 'clamp' }) * loopEase;
+      (1 +
+      interpolate(frame, [0, durationFrames], [0, 0.06 * intensity], { extrapolateRight: 'clamp' }) * loopEase * latePacing) * payoffImpulse;
     transform = `scale(${scale})`;
+  } else {
+    transform = `scale(${payoffImpulse})`;
   }
 
   return (

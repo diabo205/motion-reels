@@ -2,10 +2,13 @@ import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import { CutoutPuppet } from './CutoutPuppet';
 import { LipizzanerHorse } from './LipizzanerHorseAsset';
+import { VictoriaCrossMedal } from './VictoriaCrossMedal';
+import { PolishSovietWarMap } from './PolishSovietWarMap';
+import { CossackTrainDuel } from './CossackTrainDuel';
+import { TrainLeapScene } from './TrainLeapScene';
+import { BiplaneCrashScene } from './BiplaneCrashScene';
 import {
   SunderlandFlyingBoatGroup,
-  PolishArmouredTrainGroup,
-  BiplaneCrashGroup,
   VincigliataFortressGroup,
   VictoriaCrossMedalGroup,
   TuscanyCypressesGroup,
@@ -1437,47 +1440,295 @@ export const AmputationSeveredHandFracture: React.FC<{ durationFrames?: number }
 
 // =========================================================================
 // 9. SCENE 09: SOMME_BATTALION_ADVANCE_TALLY (Crowd Tally)
-// 1916 Somme: Khaki infantry battalions with steel Brodie helmets & Lee-Enfield bayonets
+// 1916 Battle of the Somme, La Boisselle:
+// Adrian Carton de Wiart commands THREE full battalions simultaneously
+// Massed advance of 57 soldiers across 3 battalions with regimental standards & live rolling tally
 // =========================================================================
 export const SommeLaBoisselleTally: React.FC<{ durationFrames?: number }> = () => {
   const frame = useCurrentFrame();
-  const marchDrift = (frame * 0.8) % 60;
+  const pushIn = interpolate(frame, [0, 160], [1, 1.05], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  const marchDriftSmall = (frame * 0.45) % 80;
+  const marchDriftMed = (frame * 0.75) % 120;
+
+  // Rolling counter: 1 to 3 battalions
+  const battalionProgress = interpolate(frame, [26, 46], [1, 3], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const displayBattalions = Math.round(battalionProgress);
+  const commandLocked = frame >= 32;
+
+  // Parametric British Soldier Generator
+  const renderInfantryman = (
+    bx: number,
+    by: number,
+    sc: number,
+    animPhase: number,
+    bayonetGleam: boolean,
+    key: string | number
+  ) => {
+    const bob = Math.sin(frame * 0.16 + animPhase) * 3.5;
+    return (
+      <g key={key} transform={`translate(${bx}, ${by + bob}) scale(${sc * pushIn})`}>
+        {/* Paper sticker die-cut outline */}
+        <g>
+          <ellipse cx="0" cy="0" rx="18" ry="28" fill="#F4EFE6" />
+          <ellipse cx="0" cy="-32" rx="15" ry="15" fill="#F4EFE6" />
+          <ellipse cx="0" cy="-38" rx="26" ry="10" fill="#F4EFE6" />
+          <line x1="10" y1="12" x2="26" y2="-52" stroke="#F4EFE6" strokeWidth="8" strokeLinecap="round" />
+          <line x1="26" y1="-52" x2="31" y2="-76" stroke="#F4EFE6" strokeWidth="7" strokeLinecap="round" />
+        </g>
+        {/* Khaki wool serge uniform torso */}
+        <ellipse cx="0" cy="0" rx="14" ry="24" fill="#4A3F2C" />
+        {/* Webbing belt & brace straps */}
+        <line x1="-12" y1="-14" x2="12" y2="12" stroke="#6B5C47" strokeWidth="2.5" />
+        <line x1="12" y1="-14" x2="-12" y2="12" stroke="#6B5C47" strokeWidth="2.5" />
+        <rect x="-13" y="10" width="26" height="5" rx="1.5" fill="#524433" />
+        {/* Ammo pouches */}
+        <rect x="-11" y="7" width="7" height="8" rx="1" fill="#6B5C47" />
+        <rect x="4" y="7" width="7" height="8" rx="1" fill="#6B5C47" />
+
+        {/* Head oval */}
+        <ellipse cx="0" cy="-30" rx="11" ry="11" fill="#C6946E" />
+        {/* Olive-Green Steel Brodie Helmet */}
+        <path d="M -16 -34 Q 0 -48 16 -34 Z" fill="#3D4530" />
+        <ellipse cx="0" cy="-34" rx="21" ry="7" fill="#4B553D" stroke="#2E3524" strokeWidth="1.5" />
+        {/* Helmet crest highlight */}
+        <ellipse cx="-4" cy="-37" rx="8" ry="3" fill="#606C4E" opacity="0.6" />
+
+        {/* Lee-Enfield .303 Rifle with Walnut Stock */}
+        <line x1="8" y1="12" x2="25" y2="-48" stroke="#5A3825" strokeWidth="3.2" strokeLinecap="round" />
+        {/* Blued-steel bolt & receiver */}
+        <line x1="13" y1="-6" x2="19" y2="-24" stroke="#1E293B" strokeWidth="2.5" />
+        {/* Polished Steel 17-inch Sword Bayonet */}
+        <line x1="25" y1="-48" x2="30" y2="-72" stroke="#E2E8F0" strokeWidth="2.4" strokeLinecap="round" />
+        {/* Bayonet point glint */}
+        {bayonetGleam && <circle cx="30" cy="-72" r="3" fill="#FFFFFF" opacity="0.9" />}
+      </g>
+    );
+  };
+
+  // Foreground coordinates for the 3 distinct battalions:
+  // Left: 8th Gloucesters (5 troops)
+  const gloucesterTroops = [
+    { x: 120, y: 1335, phase: 0.1 },
+    { x: 180, y: 1355, phase: 0.9 },
+    { x: 240, y: 1330, phase: 1.8 },
+    { x: 300, y: 1360, phase: 2.7 },
+    { x: 360, y: 1345, phase: 3.6 },
+  ];
+  // Center: 8th Royal Warwicks (5 troops advancing behind Carton)
+  const warwickTroops = [
+    { x: 420, y: 1350, phase: 0.5 },
+    { x: 470, y: 1330, phase: 1.4 },
+    { x: 610, y: 1330, phase: 2.3 },
+    { x: 660, y: 1355, phase: 3.2 },
+    { x: 710, y: 1340, phase: 4.1 },
+  ];
+  // Right: 10th Worcesters (5 troops)
+  const worcesterTroops = [
+    { x: 765, y: 1345, phase: 0.3 },
+    { x: 815, y: 1360, phase: 1.2 },
+    { x: 865, y: 1335, phase: 2.1 },
+    { x: 915, y: 1355, phase: 3.0 },
+    { x: 965, y: 1340, phase: 3.9 },
+  ];
 
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={480} ry={260} intensity={0.8} id="sommeAura" />
+        <AmberBattlefieldAura cx={540} cy={1160} rx={480} ry={270} intensity={0.82} id="sommeAura" color="#D97706" />
 
-        {/* Somme Chalk Mud Ridges */}
-        <path d="M 0 1340 Q 280 1280 540 1330 T 1080 1310 L 1080 1920 L 0 1920 Z" fill="#4B3A2C" />
-        <path d="M 0 1410 Q 360 1370 720 1420 L 1080 1390 L 1080 1920 L 0 1920 Z" fill="#3D2E21" />
+        {/* Somme Burning Battlefield Horizon Sky */}
+        <path d="M 0 1140 Q 270 1110 540 1130 T 1080 1120 L 1080 1920 L 0 1920 Z" fill="#2E2218" />
 
-        {/* Advancing British Khaki Battalions in Background */}
-        {[180, 320, 740, 880].map((bx, idx) => (
-          <g key={idx} transform={`translate(${bx - marchDrift}, ${1280 + (idx % 2) * 20})`}>
-            {/* Khaki Wool Uniform Torso */}
-            <ellipse cx="0" cy="0" rx="14" ry="24" fill="#4D4231" />
-            <ellipse cx="0" cy="-30" rx="12" ry="12" fill="#8B6950" />
-            {/* Olive-Green Steel Brodie Helmet */}
-            <ellipse cx="0" cy="-34" rx="20" ry="7" fill="#475569" stroke="#334155" strokeWidth="1.5" />
-            {/* Lee-Enfield Rifle with Walnut Stock & Polished Steel Bayonet */}
-            <line x1="8" y1="10" x2="22" y2="-45" stroke="#78350F" strokeWidth="3" />
-            <line x1="22" y1="-45" x2="26" y2="-65" stroke="#F1F5F9" strokeWidth="2.5" />
-          </g>
+        {/* Smoke Plumes from Heavy Artillery Barrages */}
+        {[...Array(5)].map((_, i) => (
+          <ellipse
+            key={i}
+            cx={140 + i * 200 + Math.sin(frame * 0.05 + i) * 15}
+            cy={1100 + (i % 2) * 20}
+            rx={55 + i * 8}
+            ry={32 + (i % 3) * 6}
+            fill="#3F2D1F"
+            opacity="0.55"
+          />
         ))}
+
+        {/* TIER 1: Distant Horizon Skirmish Lines (24 Soldiers Bristling with Bayonets) */}
+        {Array.from({ length: 24 }).map((_, i) => {
+          const hx = 40 + i * 44 - marchDriftSmall;
+          const hy = 1205 + (i % 3) * 6;
+          return renderInfantryman(hx, hy, 0.44, i * 0.7, (frame + i * 6) % 30 < 4, `t1_${i}`);
+        })}
+
+        {/* Somme Chalk Mud Midground Ridge */}
+        <path d="M 0 1240 Q 320 1200 640 1235 T 1080 1220 L 1080 1920 L 0 1920 Z" fill="#3D3023" />
+
+        {/* TIER 2: Midground Advancing Battalion Formations (18 Soldiers) */}
+        {Array.from({ length: 18 }).map((_, i) => {
+          const mx = 60 + i * 56 - marchDriftMed;
+          const my = 1265 + (i % 2) * 12;
+          return renderInfantryman(mx, my, 0.68, i * 0.85, (frame + i * 5) % 25 < 3, `t2_${i}`);
+        })}
+
+        {/* Foreground Somme Parapet & Trench Duckboards */}
+        <path d="M 0 1315 Q 280 1285 540 1310 T 1080 1295 L 1080 1920 L 0 1920 Z" fill="#4B3B2C" />
+        <path d="M 0 1385 Q 360 1350 720 1390 L 1080 1365 L 1080 1920 L 0 1920 Z" fill="#332417" />
+
+        {/* Barbed Wire Entanglements */}
+        <line x1="80" y1="1310" x2="140" y2="1360" stroke="#78350F" strokeWidth="4" />
+        <line x1="140" y1="1315" x2="200" y2="1365" stroke="#78350F" strokeWidth="4" />
+        <path d="M 60 1340 Q 130 1320 220 1350" stroke="#94A3B8" strokeWidth="1.8" strokeDasharray="4, 6" fill="none" />
+        <line x1="880" y1="1315" x2="940" y2="1365" stroke="#78350F" strokeWidth="4" />
+        <path d="M 860 1335 Q 930 1315 1020 1345" stroke="#94A3B8" strokeWidth="1.8" strokeDasharray="4, 6" fill="none" />
+
+        {/* TIER 3: Main Foreground Battalions (15 Prominent British Infantrymen) */}
+        {/* Left Battalion: 8th Gloucestershire Regiment */}
+        {gloucesterTroops.map((t, idx) =>
+          renderInfantryman(t.x, t.y, 0.92, t.phase, (frame + idx * 4) % 20 < 4, `gloucester_${idx}`)
+        )}
+        {/* Center Battalion: 8th Royal Warwickshire Regiment */}
+        {warwickTroops.map((t, idx) =>
+          renderInfantryman(t.x, t.y, 0.92, t.phase, (frame + idx * 4 + 2) % 20 < 4, `warwick_${idx}`)
+        )}
+        {/* Right Battalion: 10th Worcestershire Regiment */}
+        {worcesterTroops.map((t, idx) =>
+          renderInfantryman(t.x, t.y, 0.92, t.phase, (frame + idx * 4 + 4) % 20 < 4, `worcester_${idx}`)
+        )}
+
+        {/* GOLD COMMAND COUPLING VECTORS (Connects Adrian to all 3 Battalions at frame >= 32) */}
+        {commandLocked && (
+          <g id="command-couplings">
+            {/* Link to 8th Gloucesters (Left) */}
+            <line x1="540" y1="1140" x2="210" y2="970" stroke="#F59E0B" strokeWidth="3.5" strokeDasharray="8, 4" />
+            <circle cx="210" cy="970" r="5" fill="#F59E0B" />
+            {/* Link to 8th Warwicks (Center) */}
+            <line x1="540" y1="1140" x2="540" y2="938" stroke="#F59E0B" strokeWidth="3.5" strokeDasharray="8, 4" />
+            <circle cx="540" cy="938" r="5" fill="#F59E0B" />
+            {/* Link to 10th Worcesters (Right) */}
+            <line x1="540" y1="1140" x2="860" y2="970" stroke="#F59E0B" strokeWidth="3.5" strokeDasharray="8, 4" />
+            <circle cx="860" cy="970" r="5" fill="#F59E0B" />
+          </g>
+        )}
+
+        {/* BATTALION 1 REGIMENTAL PLACARD (Left: 8th Gloucesters) */}
+        <g transform="translate(210, 930)">
+          <rect x="-105" y="-30" width="210" height="58" rx="4" fill="#EAE3D2" stroke="#F59E0B" strokeWidth="2.5" />
+          <rect x="-105" y="-30" width="210" height="18" fill="#1E293B" />
+          <text x="0" y="-17" textAnchor="middle" fill="#F8FAFC" fontSize="11" fontWeight="900" letterSpacing="1.2px">
+            8TH GLOUCESTERSHIRE
+          </text>
+          <text x="0" y="7" textAnchor="middle" fill="#141619" fontSize="12" fontWeight="800">
+            CO: CARTON DE WIART
+          </text>
+          <text x="0" y="21" textAnchor="middle" fill="#B45309" fontSize="9.5" fontWeight="900">
+            ● HOLDING FRONT LINE
+          </text>
+        </g>
+
+        {/* BATTALION 2 REGIMENTAL PLACARD (Center: 8th Warwicks positioned higher to clear Carton's head) */}
+        <g transform="translate(540, 880)">
+          <rect
+            x="-110"
+            y="-30"
+            width="220"
+            height="58"
+            rx="4"
+            fill="#EAE3D2"
+            stroke={commandLocked ? '#F59E0B' : '#DC2626'}
+            strokeWidth="2.5"
+          />
+          <rect x="-110" y="-30" width="220" height="18" fill={commandLocked ? '#1E293B' : '#7F1D1D'} />
+          <text x="0" y="-17" textAnchor="middle" fill="#F8FAFC" fontSize="11" fontWeight="900" letterSpacing="1.2px">
+            8TH ROYAL WARWICKSHIRE
+          </text>
+          <text x="0" y="7" textAnchor="middle" fill="#141619" fontSize="12" fontWeight="800">
+            {commandLocked ? 'COMMAND ASSUMED' : 'CO KILLED IN ACTION'}
+          </text>
+          <text
+            x="0"
+            y="21"
+            textAnchor="middle"
+            fill={commandLocked ? '#B45309' : '#DC2626'}
+            fontSize="9.5"
+            fontWeight="900"
+          >
+            {commandLocked ? '● COMBINED ASSAULT' : '⚠ COMMAND VACANT'}
+          </text>
+        </g>
+
+        {/* BATTALION 3 REGIMENTAL PLACARD (Right: 10th Worcesters) */}
+        <g transform="translate(860, 930)">
+          <rect
+            x="-105"
+            y="-30"
+            width="210"
+            height="58"
+            rx="4"
+            fill="#EAE3D2"
+            stroke={commandLocked ? '#F59E0B' : '#DC2626'}
+            strokeWidth="2.5"
+          />
+          <rect x="-105" y="-30" width="210" height="18" fill={commandLocked ? '#1E293B' : '#7F1D1D'} />
+          <text x="0" y="-17" textAnchor="middle" fill="#F8FAFC" fontSize="11" fontWeight="900" letterSpacing="1.2px">
+            10TH WORCESTERSHIRE
+          </text>
+          <text x="0" y="7" textAnchor="middle" fill="#141619" fontSize="12" fontWeight="800">
+            {commandLocked ? 'COMMAND ASSUMED' : 'CO KILLED IN ACTION'}
+          </text>
+          <text
+            x="0"
+            y="21"
+            textAnchor="middle"
+            fill={commandLocked ? '#B45309' : '#DC2626'}
+            fontSize="9.5"
+            fontWeight="900"
+          >
+            {commandLocked ? '● FLANK SECURED' : '⚠ COMMAND VACANT'}
+          </text>
+        </g>
+
+        {/* LIVE ROLLING BATTALION TALLY PLACARD */}
+        <g transform="translate(540, 1435)">
+          {/* Card backing */}
+          <rect x="-190" y="-34" width="380" height="68" rx="6" fill="#141619" stroke="#EAE3D2" strokeWidth="2.5" />
+          {/* Label */}
+          <text x="-160" y="7" textAnchor="start" fill="#F8FAFC" fontSize="14" fontWeight="900" letterSpacing="1.5px">
+            BATTALIONS:
+          </text>
+          {/* Animated Integer */}
+          <text
+            x="70"
+            y="10"
+            textAnchor="middle"
+            fill={displayBattalions === 3 ? '#EF4444' : '#F59E0B'}
+            fontSize="40"
+            fontWeight="900"
+          >
+            {displayBattalions} / 3
+          </text>
+          {/* Bottom Sub-Label */}
+          <text x="0" y="24" textAnchor="middle" fill="#CBD5E1" fontSize="11" fontWeight="800" letterSpacing="1px">
+            ~3,000 TROOPS UNITED UNDER ADRIAN CARTON DE WIART
+          </text>
+        </g>
       </svg>
 
-      {/* Carton de Wiart leading 8th Gloucesters Battalion at La Boisselle */}
+      {/* Adrian Carton de Wiart in the Lead: Pointing cane forward, then raising Webley revolver high */}
       <CutoutPuppet
         character="CARTON_WWI"
         outfit="BRITISH_OFFICER"
         initialPose="POINTING"
-        switchedPose="SALUTE"
-        poseSwitchFrame={45}
+        switchedPose="AIM_REVOLVER"
+        poseSwitchFrame={32}
         x={540}
-        y={1160}
-        scale={1.08}
-        paperTagLabel="LA BOISSELLE // 1916"
+        y={1185}
+        scale={1.12 * pushIn}
       />
     </div>
   );
@@ -1485,47 +1736,472 @@ export const SommeLaBoisselleTally: React.FC<{ durationFrames?: number }> = () =
 
 // =========================================================================
 // 10. SCENE 10: CARTON_SKULL_BULLET_SURVIVAL (Lone Leader)
-// Bullet trajectory through back of skull & ear; Carton walking through no-man's-land
+// Sniper bullet piercing through back of skull & ear; Adrian survives & commands
 // =========================================================================
 export const CartonSkullBulletSurvival: React.FC<{ durationFrames?: number }> = () => {
   const frame = useCurrentFrame();
-  const grazePulse = interpolate(frame - 31, [0, 8, 30], [0, 1, 0.3], {
+
+  // Pacing & transient triggers
+  const hitFrame = 31; // Beat 2 / Bass drop hit frame
+  const survivalFrame = 66; // Payoff survival & return frame
+  const isHit = frame >= hitFrame;
+  const isSurvived = frame >= survivalFrame;
+
+  const hitAge = isHit ? frame - hitFrame : -1;
+  const survivalAge = isSurvived ? frame - survivalFrame : -1;
+
+  // Ballistic Recoil Impulse on Puppet
+  const recoilProgress = interpolate(hitAge, [0, 2, 8, 22], [0, 1, 0.45, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const recoilY = recoilProgress * 24;
+  const recoilRot = (frame < 45 ? -1 : 1) * recoilProgress * 4.5;
+
+  // Camera impact shake
+  const shakeAmp = interpolate(hitAge, [0, 2, 12], [14, 8, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shakeX = Math.sin(Math.max(0, hitAge) * 3.8) * shakeAmp;
+  const shakeY = Math.cos(Math.max(0, hitAge) * 4.2) * (shakeAmp * 0.7);
+
+  // Supersonic sniper bullet vector (from enemy sniper nest to skull and through)
+  // Cranial Entry: (497, 1057), Exit behind ear: (602, 1075)
+  const sniperStartX = 140;
+  const sniperStartY = 960;
+  const skullEntryX = 497;
+  const skullEntryY = 1057;
+  const skullExitX = 602;
+  const skullExitY = 1075;
+  const bulletEndX = 980;
+  const bulletEndY = 1140;
+
+  // Tracer flight progress (frames 28-31)
+  const tracerProgress = interpolate(frame, [28, 31], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const bulletCurrentX = interpolate(tracerProgress, [0, 1], [sniperStartX, skullEntryX], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const bulletCurrentY = interpolate(tracerProgress, [0, 1], [sniperStartY, skullEntryY], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // Exit tracer flight (frames 31-34)
+  const exitTracerProgress = interpolate(frame, [31, 34], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const exitBulletCurrentX = interpolate(exitTracerProgress, [0, 1], [skullExitX, bulletEndX], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const exitBulletCurrentY = interpolate(exitTracerProgress, [0, 1], [skullExitY, bulletEndY], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // Shockwave expansion at exit
+  const shockwaveR = interpolate(hitAge, [0, 12], [12, 140], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const shockwaveOpacity = interpolate(hitAge, [0, 12], [0.95, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // Paper tag text
+  const tagLabel =
+    frame < 31
+      ? "DEVIL'S WOOD · SOMME 1916"
+      : frame < 66
+      ? 'PENETRATING SKULL WOUND'
+      : 'RETURNED TO FRONT IN 3 WEEKS';
+
+  // Golden victory aura rotation on survival
+  const auraRot = interpolate(Math.max(0, survivalAge), [0, 60], [0, 45], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const auraOpacity = interpolate(Math.max(0, survivalAge), [0, 12], [0, 0.9], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
+  // Casualty report card pop on survival
+  const cardScale = interpolate(Math.max(0, survivalAge), [0, 6, 12], [0.5, 1.08, 1.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const cardOpacity = interpolate(Math.max(0, survivalAge), [0, 4], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
 
   return (
-    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={440} ry={260} intensity={0.85} id="skullAura" />
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        overflow: 'hidden',
+        transform: `translate(${shakeX}px, ${shakeY}px)`,
+      }}
+    >
+      <svg
+        viewBox="0 0 1080 1920"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+      >
+        <defs>
+          {/* Somme sky & trench gradient */}
+          <linearGradient id="sommeSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#2E333D" />
+            <stop offset="45%" stopColor="#1C1E24" />
+            <stop offset="100%" stopColor="#101216" />
+          </linearGradient>
 
-        {/* Bullet Graze Trajectory Line in Vivid Crimson */}
-        <line
-          x1="820"
-          y1="1080"
-          x2="260"
-          y2="1140"
-          stroke="#EF4444"
-          strokeWidth="5"
-          strokeDasharray="40, 15"
+          {/* Golden Victory Aura Gradient on Survival */}
+          <radialGradient id="victorySunburst" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.85" />
+            <stop offset="45%" stopColor="#D97706" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#B45309" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* 1. LAYER 1: Somme Battlefield Sky & Distant Dead Trees */}
+        <rect x="0" y="0" width="1080" height="1920" fill="url(#sommeSkyGrad)" />
+
+        {/* Devil's Wood Blasted Tree Stumps Silhouettes */}
+        <g id="devils-wood-stumps" opacity="0.65">
+          {/* Trunk 1 */}
+          <path d="M 120 1200 L 132 820 L 146 760 L 138 820 L 148 1200 Z" fill="#18181B" />
+          <path d="M 132 850 L 95 810 L 98 805 L 134 840 Z" fill="#18181B" />
+          {/* Trunk 2 */}
+          <path d="M 280 1200 L 292 880 L 285 830 L 302 880 L 310 1200 Z" fill="#18181B" />
+          {/* Trunk 3 */}
+          <path d="M 820 1200 L 834 810 L 848 750 L 842 810 L 852 1200 Z" fill="#18181B" />
+          <path d="M 840 860 L 880 825 L 884 830 L 844 870 Z" fill="#18181B" />
+          {/* Trunk 4 */}
+          <path d="M 940 1200 L 955 860 L 948 810 L 968 860 L 975 1200 Z" fill="#18181B" />
+        </g>
+
+        {/* Distant Somme Parapet Mounds with White Chalk Clay */}
+        <path
+          d="M 0 1240 Q 240 1210 520 1235 T 1080 1220 L 1080 1920 L 0 1920 Z"
+          fill="#27231E"
         />
-        {/* Graze Impact Star */}
-        {grazePulse > 0.05 && (
-          <circle cx="580" cy="1110" r={24 * grazePulse} fill="#EF4444" opacity="0.95" />
+        {/* Chalk clods on parapet */}
+        <ellipse cx="220" cy="1235" rx="42" ry="14" fill="#A1A1AA" opacity="0.55" />
+        <ellipse cx="780" cy="1230" rx="55" ry="16" fill="#A1A1AA" opacity="0.5" />
+        <ellipse cx="440" cy="1245" rx="35" ry="12" fill="#D4D4D8" opacity="0.4" />
+
+        {/* Midground Trench Burlap Sandbag Layers */}
+        <g id="trench-sandbags">
+          {[
+            { x: 40, y: 1280, w: 90, h: 36, col: '#5C4A35' },
+            { x: 135, y: 1276, w: 95, h: 36, col: '#6E5A44' },
+            { x: 235, y: 1282, w: 88, h: 36, col: '#5C4A35' },
+            { x: 740, y: 1275, w: 94, h: 36, col: '#6E5A44' },
+            { x: 840, y: 1278, w: 92, h: 36, col: '#5C4A35' },
+            { x: 938, y: 1272, w: 96, h: 36, col: '#6E5A44' },
+            // Tier 2
+            { x: 85, y: 1314, w: 96, h: 38, col: '#6E5A44' },
+            { x: 185, y: 1312, w: 92, h: 38, col: '#5C4A35' },
+            { x: 790, y: 1308, w: 96, h: 38, col: '#5C4A35' },
+            { x: 890, y: 1312, w: 94, h: 38, col: '#6E5A44' },
+          ].map((sb, i) => (
+            <rect
+              key={`sb-${i}`}
+              x={sb.x}
+              y={sb.y}
+              width={sb.w}
+              height={sb.h}
+              rx={12}
+              fill={sb.col}
+              stroke="#2E2319"
+              strokeWidth="2"
+            />
+          ))}
+        </g>
+
+        {/* Foreground Trench Timber Duckboards & Corrugated Iron */}
+        <rect x="0" y="1420" width="1080" height="500" fill="#1C1713" />
+        {/* Timber duckboard planks */}
+        {[1440, 1485, 1530, 1575, 1620, 1665, 1710].map((py, idx) => (
+          <g key={`plank-${idx}`}>
+            <rect x="120" y={py} width="840" height="32" rx="4" fill="#3D2B1D" stroke="#251810" strokeWidth="2" />
+            <circle cx="160" cy={py + 16} r="3" fill="#17100B" />
+            <circle cx="920" cy={py + 16} r="3" fill="#17100B" />
+          </g>
+        ))}
+
+        {/* Rusted Trench Barbed Wire Entanglement */}
+        <g id="trench-barbed-wire" opacity="0.85">
+          <line x1="80" y1="1230" x2="1000" y2="1245" stroke="#78350F" strokeWidth="2.5" />
+          <line x1="60" y1="1255" x2="1020" y2="1265" stroke="#9A3412" strokeWidth="2.5" />
+          {[120, 260, 400, 680, 820, 960].map((wx, wi) => (
+            <g key={`wire-knot-${wi}`}>
+              <line x1={wx - 10} y1={1225} x2={wx + 10} y2={1245} stroke="#B45309" strokeWidth="2" />
+              <line x1={wx - 10} y1={1245} x2={wx + 10} y2={1225} stroke="#B45309" strokeWidth="2" />
+              <line x1={wx} y1={1215} x2={wx} y2={1270} stroke="#451A03" strokeWidth="3.5" />
+            </g>
+          ))}
+        </g>
+
+        {/* Ambient Battlefield Backlighting Aura */}
+        <AmberBattlefieldAura
+          cx={540}
+          cy={1180}
+          rx={480}
+          ry={280}
+          intensity={0.88}
+          id="sommeBattlefieldAura"
+          color="#D97706"
+        />
+
+        {/* SURVIVAL VICTORY SUNBURST RAYS (on frame >= survivalFrame) */}
+        {isSurvived && (
+          <g
+            id="victory-rays"
+            transform={`translate(540, 1120) rotate(${auraRot})`}
+            opacity={auraOpacity * 0.45}
+          >
+            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((deg) => (
+              <polygon
+                key={`v-ray-${deg}`}
+                points="0,0 -24,-520 24,-520"
+                fill="url(#victorySunburst)"
+                transform={`rotate(${deg})`}
+              />
+            ))}
+          </g>
+        )}
+
+        {/* 2. LAYER 2: BALLISTIC SNIPER ROUND TRAJECTORY & SHOCKWAVES */}
+        {/* Enemy Sniper Muzzle Flash at Distance (frames 28-31) */}
+        {frame >= 28 && frame <= 32 && (
+          <g transform={`translate(${sniperStartX}, ${sniperStartY})`}>
+            <circle cx="0" cy="0" r={22 * (1 - (frame - 28) / 5)} fill="#FFFFFF" />
+            <circle cx="0" cy="0" r={45 * (1 - (frame - 28) / 5)} fill="rgba(245, 158, 11, 0.7)" />
+            <line x1="-30" y1="0" x2="45" y2="0" stroke="#FEF08A" strokeWidth="3" />
+          </g>
+        )}
+
+        {/* Inbound Supersonic Tracer (frames 28-31) */}
+        {frame >= 28 && frame <= 31 && (
+          <g id="inbound-tracer">
+            {/* Mach Conical Shockwave */}
+            <line
+              x1={sniperStartX}
+              y1={sniperStartY}
+              x2={bulletCurrentX}
+              y2={bulletCurrentY}
+              stroke="rgba(239, 68, 68, 0.4)"
+              strokeWidth="14"
+              strokeLinecap="round"
+            />
+            {/* Fiery Orange Outer Beam */}
+            <line
+              x1={sniperStartX}
+              y1={sniperStartY}
+              x2={bulletCurrentX}
+              y2={bulletCurrentY}
+              stroke="#EA580C"
+              strokeWidth="7"
+              strokeLinecap="round"
+            />
+            {/* Supersonic White-Hot Core */}
+            <line
+              x1={Math.max(sniperStartX, bulletCurrentX - 90)}
+              y1={Math.max(sniperStartY, bulletCurrentY - 14)}
+              x2={bulletCurrentX}
+              y2={bulletCurrentY}
+              stroke="#FFFFFF"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+            />
+            {/* Bullet Tip Star */}
+            <circle cx={bulletCurrentX} cy={bulletCurrentY} r="7" fill="#FFFFFF" />
+          </g>
+        )}
+
+        {/* Outbound Exit Tracer Through & Past Skull (frames 31-35) */}
+        {frame >= 31 && frame <= 35 && (
+          <g id="outbound-tracer">
+            <line
+              x1={skullExitX}
+              y1={skullExitY}
+              x2={exitBulletCurrentX}
+              y2={exitBulletCurrentY}
+              stroke="#EA580C"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+            <line
+              x1={skullExitX}
+              y1={skullExitY}
+              x2={exitBulletCurrentX}
+              y2={exitBulletCurrentY}
+              stroke="#FFFFFF"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <circle cx={exitBulletCurrentX} cy={exitBulletCurrentY} r="6" fill="#FFFFFF" />
+          </g>
+        )}
+
+        {/* Head Impact Detonation Flash & Expanding Shockwave Ring (frames 31-44) */}
+        {isHit && hitAge <= 14 && (
+          <g id="head-impact-detonation">
+            {/* Expanding Shockwave Ring */}
+            <circle
+              cx={skullExitX}
+              cy={skullExitY}
+              r={shockwaveR}
+              fill="none"
+              stroke="#EF4444"
+              strokeWidth={4 * (1 - hitAge / 14)}
+              opacity={shockwaveOpacity}
+            />
+            {/* Blinding White Core Starburst on Impact Frame */}
+            {hitAge <= 5 && (
+              <g>
+                <circle cx={skullEntryX} cy={skullEntryY} r={28 * (1 - hitAge / 6)} fill="#FFFFFF" />
+                <circle cx={skullExitX} cy={skullExitY} r={38 * (1 - hitAge / 6)} fill="#FFFFFF" />
+                <circle cx={skullExitX} cy={skullExitY} r={55 * (1 - hitAge / 6)} fill="rgba(251, 191, 36, 0.75)" />
+                {/* 8-Pointed Flash Star */}
+                <polygon
+                  points={`${skullExitX},${skullExitY - 55} ${skullExitX + 14},${skullExitY - 14} ${skullExitX + 55},${skullExitY} ${skullExitX + 14},${skullExitY + 14} ${skullExitX},${skullExitY + 55} ${skullExitX - 14},${skullExitY + 14} ${skullExitX - 55},${skullExitY} ${skullExitX - 14},${skullExitY - 14}`}
+                  fill="#FEF08A"
+                  opacity={1 - hitAge / 6}
+                />
+              </g>
+            )}
+
+            {/* Flying Shrapnel / Bone / Cap Fabric Particles from Exit Blowout */}
+            {[0, 1, 2, 3, 4, 5, 6, 7].map((si) => {
+              const seed = 1010 + si;
+              const angle = -0.3 + pseudoRandom(seed) * 1.2; // Bursting rightward
+              const speed = 12 + pseudoRandom(seed + 1) * 22;
+              const px = skullExitX + Math.cos(angle) * (speed * hitAge);
+              const py = skullExitY + Math.sin(angle) * (speed * hitAge) + (0.5 * 1.4 * hitAge * hitAge);
+              const pSize = 3.5 + pseudoRandom(seed + 2) * 4;
+              const pCol = si % 2 === 0 ? '#DC2626' : si % 3 === 0 ? '#F8FAFC' : '#450A0A';
+              return (
+                <circle
+                  key={`shrapnel-${si}`}
+                  cx={px}
+                  cy={py}
+                  r={pSize * (1 - hitAge / 14)}
+                  fill={pCol}
+                  opacity={1 - hitAge / 14}
+                />
+              );
+            })}
+          </g>
+        )}
+
+        {/* 3. LAYER 3: R.A.M.C. CASUALTY REPORT HUD CARD (Frames 66-127) */}
+        {isSurvived && (
+          <g
+            id="casualty-report-card"
+            transform={`translate(540, 895) scale(${cardScale})`}
+            opacity={cardOpacity}
+          >
+            {/* Drop Shadow Card Outline */}
+            <rect
+              x="-260"
+              y="-48"
+              width="520"
+              height="96"
+              rx="8"
+              fill="#FBF9F5"
+              stroke="#CBD5E1"
+              strokeWidth="2.5"
+              filter="drop-shadow(0px 10px 18px rgba(0,0,0,0.65))"
+            />
+            {/* Card Inner Red Cross Box */}
+            <rect x="-245" y="-35" width="68" height="70" rx="6" fill="#FEE2E2" stroke="#FCA5A5" strokeWidth="1.5" />
+            {/* Geneva Red Cross */}
+            <rect x="-215" y="-23" width="8" height="46" rx="2" fill="#DC2626" />
+            <rect x="-234" y="-4" width="46" height="8" rx="2" fill="#DC2626" />
+
+            {/* Monospace Field Report Text */}
+            <text x="-165" y="-20" fill="#64748B" fontSize="12" fontWeight="800" letterSpacing="1.5" fontFamily="monospace">
+              ARMY FORM B. 103 // CASUALTY REPORT
+            </text>
+            <text x="-165" y="0" fill="#0F172A" fontSize="16" fontWeight="900" letterSpacing="0.8" fontFamily="monospace">
+              WOUND: PENETRATING SKULL (1916)
+            </text>
+            <text x="-165" y="20" fill="#475569" fontSize="13" fontWeight="800" letterSpacing="0.5" fontFamily="monospace">
+              STATUS: <tspan fill="#DC2626" fontWeight="900">SURVIVED</tspan> · RETURNED TO DUTY
+            </text>
+
+            {/* Crimson Field Seal / Rubber Stamp: "FIT FOR ACTION" */}
+            <g transform="translate(180, 2) rotate(-12)">
+              <rect
+                x="-58"
+                y="-20"
+                width="116"
+                height="40"
+                rx="4"
+                fill="none"
+                stroke="#DC2626"
+                strokeWidth="3"
+                strokeDasharray="4 2"
+              />
+              <text
+                x="0"
+                y="-3"
+                textAnchor="middle"
+                fill="#DC2626"
+                fontSize="12"
+                fontWeight="900"
+                letterSpacing="1"
+                fontFamily="sans-serif"
+              >
+                FIT FOR ACTION
+              </text>
+              <text
+                x="0"
+                y="11"
+                textAnchor="middle"
+                fill="#DC2626"
+                fontSize="10"
+                fontWeight="800"
+                letterSpacing="1.2"
+                fontFamily="sans-serif"
+              >
+                RETURNED 1916
+              </text>
+            </g>
+          </g>
         )}
       </svg>
 
-      {/* Carton surviving gunshot through head & walking on */}
+      {/* 4. LAYER 4: SIR ADRIAN CARTON DE WIART CUTOUT PUPPET */}
       <CutoutPuppet
         character="CARTON_WWI"
         outfit="BRITISH_OFFICER"
-        initialPose="NEUTRAL"
-        switchedPose="POINTING"
-        poseSwitchFrame={42}
+        initialPose="AIM_REVOLVER"
+        switchedPose="SKULL_HIT"
+        poseSwitchFrame={31}
+        secondSwitchedPose="SURVIVED_COMMAND"
+        secondPoseSwitchFrame={66}
+        bulletWounds={{
+          skullHitFrame: 31,
+          skullBandageFrame: 66,
+          showSparks: true,
+        }}
         x={540}
-        y={1180}
-        scale={1.1}
-        paperTagLabel="SHOT THROUGH SKULL // WALKED AWAY"
+        y={1205 + recoilY}
+        rotation={recoilRot}
+        scale={1.16}
+        paperTagLabel={frame < 66 ? tagLabel : undefined}
       />
     </div>
   );
@@ -1533,45 +2209,287 @@ export const CartonSkullBulletSurvival: React.FC<{ durationFrames?: number }> = 
 
 // =========================================================================
 // 11. SCENE 11: VICTORIA_CROSS_BRONZE_CARD (Quote Card)
-// Traced authentic Victoria Cross Medal vector from real archival photograph
+// High-Precision Parametric Victoria Cross Citation Plaque & Medal
 // =========================================================================
 export const VictoriaCrossBronzeCard: React.FC<{ durationFrames?: number }> = () => {
   const frame = useCurrentFrame();
+
+  // Entrance push-in scale
   const cardScale = interpolate(frame, [0, 40], [0.94, 1.0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const rotSunburst = (frame * 0.4) % 360;
+
+  // Transient impact shake at frame 32 (when HIGHEST BRITISH GALLANTRY lands)
+  const impactShake = interpolate(
+    frame,
+    [31, 33, 36, 40],
+    [0, 5, -2, 0],
+    { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
+  );
+
+  // Rotating tactile paper sunburst
+  const rotSunburst = (frame * 0.35) % 360;
+
+  // War Office red wax seal stamp animation (lands at frame 32 with stamp_slam)
+  const sealScale = interpolate(frame, [29, 32, 36], [1.8, 0.95, 1.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const sealOpacity = interpolate(frame, [29, 31], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={450} ry={250} intensity={0.8} id="vcAura" color="#D97706" />
+      <svg
+        viewBox="0 0 1080 1920"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          transform: `translateY(${impactShake}px)`,
+        }}
+      >
+        <defs>
+          <linearGradient id="parchmentCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#251912" />
+            <stop offset="50%" stopColor="#1E140E" />
+            <stop offset="100%" stopColor="#170F0B" />
+          </linearGradient>
 
-        {/* Rotating Sunburst Gold Paper Rays */}
-        <g transform={`translate(540, 1160) rotate(${rotSunburst})`} opacity="0.18">
-          {[...Array(16)].map((_, i) => (
+          <linearGradient id="goldBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FDE68A" />
+            <stop offset="30%" stopColor="#F59E0B" />
+            <stop offset="70%" stopColor="#B45309" />
+            <stop offset="100%" stopColor="#78350F" />
+          </linearGradient>
+
+          <radialGradient id="waxSealGrad" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stopColor="#EF4444" />
+            <stop offset="40%" stopColor="#B91C1C" />
+            <stop offset="85%" stopColor="#7F1D1D" />
+            <stop offset="100%" stopColor="#450A0A" />
+          </radialGradient>
+        </defs>
+
+        {/* 1. Volumetric Amber Battlefield Atmosphere */}
+        <AmberBattlefieldAura cx={540} cy={1180} rx={480} ry={270} intensity={0.9} id="vcAura" color="#D97706" />
+
+        {/* 2. Rotating Tactile Sunburst Gold Paper Rays */}
+        <g transform={`translate(540, 1170) rotate(${rotSunburst})`} opacity="0.14">
+          {[...Array(24)].map((_, i) => (
             <line
               key={i}
               x1="0"
               y1="0"
-              x2={Math.cos((i * Math.PI) / 8) * 360}
-              y2={Math.sin((i * Math.PI) / 8) * 360}
+              x2={Math.cos((i * Math.PI) / 12) * 440}
+              y2={Math.sin((i * Math.PI) / 12) * 440}
               stroke="#F59E0B"
-              strokeWidth="18"
+              strokeWidth="14"
             />
           ))}
         </g>
 
-        {/* Traced High-Precision Victoria Cross Medal Vector */}
-        <VictoriaCrossMedalGroup
+        {/* 3. Archival War Office Docket / London Gazette Citation Plaque */}
+        <g
+          transform={`translate(540, 1170) scale(${cardScale})`}
+          style={{ filter: 'drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75))' }}
+        >
+          {/* Card Outer Shadow & Foundation */}
+          <rect
+            x="-330"
+            y="-290"
+            width="660"
+            height="580"
+            rx="8"
+            fill="url(#parchmentCardGrad)"
+            stroke="#451A03"
+            strokeWidth="2"
+          />
+
+          {/* Double Gold Foil Border */}
+          <rect
+            x="-322"
+            y="-282"
+            width="644"
+            height="564"
+            rx="6"
+            fill="none"
+            stroke="url(#goldBorderGrad)"
+            strokeWidth="1.8"
+            opacity="0.8"
+          />
+          <rect
+            x="-316"
+            y="-276"
+            width="632"
+            height="552"
+            rx="4"
+            fill="none"
+            stroke="#B45309"
+            strokeWidth="0.8"
+            opacity="0.5"
+            strokeDasharray="6, 3"
+          />
+
+          {/* Dual Flanking Document Header Placards (Framing the crimson ribbon) */}
+          <g transform="translate(0, -252)">
+            {/* Left Header Placard */}
+            <rect x="-305" y="-12" width="190" height="24" rx="3" fill="#150C07" stroke="#92400E" strokeWidth="1" />
+            <text
+              x="-210"
+              y="4"
+              textAnchor="middle"
+              fill="#FDE68A"
+              fontSize="11"
+              fontFamily="Montserrat, sans-serif"
+              fontWeight="800"
+              letterSpacing="0.14em"
+            >
+              THE LONDON GAZETTE
+            </text>
+
+            {/* Right Header Placard */}
+            <rect x="115" y="-12" width="190" height="24" rx="3" fill="#150C07" stroke="#92400E" strokeWidth="1" />
+            <text
+              x="210"
+              y="4"
+              textAnchor="middle"
+              fill="#FDE68A"
+              fontSize="11"
+              fontFamily="Montserrat, sans-serif"
+              fontWeight="800"
+              letterSpacing="0.14em"
+            >
+              SUPPLEMENT NO. 29740
+            </text>
+          </g>
+
+          {/* Lower Citation Documentation (Balanced across left-center to clear wax seal) */}
+          <g transform="translate(-40, 202)">
+            {/* Recipient Full Name */}
+            <text
+              x="0"
+              y="0"
+              textAnchor="middle"
+              fill="#FBBF24"
+              fontSize="15.5"
+              fontFamily="Montserrat, sans-serif"
+              fontWeight="900"
+              letterSpacing="0.05em"
+            >
+              CAPT. (T./LT.-COL.) ADRIAN CARTON DE WIART, D.S.O.
+            </text>
+
+            {/* Regiment */}
+            <text
+              x="0"
+              y="22"
+              textAnchor="middle"
+              fill="#E2E8F0"
+              fontSize="12.5"
+              fontFamily="Montserrat, sans-serif"
+              fontWeight="700"
+              letterSpacing="0.1em"
+            >
+              8TH BATTALION · GLOUCESTERSHIRE REGIMENT
+            </text>
+
+            {/* Official Citation Action */}
+            <text
+              x="0"
+              y="44"
+              textAnchor="middle"
+              fill="#EF4444"
+              fontSize="11.5"
+              fontFamily="Montserrat, sans-serif"
+              fontWeight="800"
+              letterSpacing="0.06em"
+            >
+              "FOR MOST CONSPICUOUS BRAVERY AT LA BOISSELLE, SOMME"
+            </text>
+          </g>
+
+          {/* 4. War Office Red Embossed Wax Seal (Stamped at frame 32) */}
+          {frame >= 29 && (
+            <g
+              transform={`translate(255, 218) scale(${sealScale})`}
+              opacity={sealOpacity}
+              style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.8))' }}
+            >
+              {/* Wax Seal Outer Ruffled Edge */}
+              <circle cx="0" cy="0" r="30" fill="url(#waxSealGrad)" stroke="#450A0A" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="24" fill="none" stroke="#F87171" strokeWidth="1.2" opacity="0.6" />
+              <circle cx="0" cy="0" r="22" fill="none" stroke="#450A0A" strokeWidth="1" />
+
+              {/* Embossed Crown Monogram */}
+              <path
+                d="M -9 2 L 9 2 L 7 -5 L 3 -1 L 0 -7 L -3 -1 L -7 -5 Z"
+                fill="#FEF08A"
+                stroke="#7F1D1D"
+                strokeWidth="0.8"
+              />
+              <circle cx="0" cy="-7" r="1.1" fill="#FFFFFF" />
+              <circle cx="-7" cy="-5" r="0.9" fill="#FFFFFF" />
+              <circle cx="7" cy="-5" r="0.9" fill="#FFFFFF" />
+
+              {/* Seal Inscription */}
+              <text
+                x="0"
+                y="13"
+                textAnchor="middle"
+                fill="#FEE2E2"
+                fontSize="6"
+                fontFamily="Montserrat, sans-serif"
+                fontWeight="900"
+                letterSpacing="0.14em"
+              >
+                WAR OFFICE
+              </text>
+            </g>
+          )}
+
+          {/* Corner Vintage Paper Clips / Brackets */}
+          <path d="M -320 -260 L -320 -280 L -300 -280" fill="none" stroke="#D97706" strokeWidth="2" opacity="0.7" />
+          <path d="M 320 -260 L 320 -280 L 300 -280" fill="none" stroke="#D97706" strokeWidth="2" opacity="0.7" />
+          <path d="M -320 260 L -320 280 L -300 280" fill="none" stroke="#D97706" strokeWidth="2" opacity="0.7" />
+          <path d="M 320 260 L 320 280 L 300 280" fill="none" stroke="#D97706" strokeWidth="2" opacity="0.7" />
+        </g>
+
+        {/* 5. HERO VICTORIA CROSS MEDAL (Multi-tiered bronze casting & crimson ribbon) */}
+        <VictoriaCrossMedal
           x={540}
           y={1170}
-          scale={0.42 * cardScale}
-          fill="#B45309"
-          stroke="#78350F"
-          strokeWidth={1.5}
+          scale={1.08 * cardScale}
+          shimmerTriggerFrame={32}
         />
+
+        {/* 6. Floating Golden Sparkle Particles / Ambient Field Embers */}
+        {[
+          { x: 380, y: 980, r: 2.2, seed: 1 },
+          { x: 700, y: 1040, r: 1.8, seed: 2 },
+          { x: 340, y: 1260, r: 2.5, seed: 3 },
+          { x: 720, y: 1300, r: 2.0, seed: 4 },
+          { x: 420, y: 1380, r: 1.6, seed: 5 },
+          { x: 660, y: 940, r: 2.4, seed: 6 },
+        ].map((pt, i) => {
+          const dy = Math.sin((frame + pt.seed * 30) * 0.08) * 8;
+          const pAlpha = 0.3 + 0.5 * Math.sin((frame + pt.seed * 20) * 0.06);
+          return (
+            <circle
+              key={`vc-sparkle-${i}`}
+              cx={pt.x}
+              cy={pt.y + dy}
+              r={pt.r}
+              fill="#FDE68A"
+              opacity={pAlpha}
+              style={{ filter: 'drop-shadow(0px 0px 4px #F59E0B)' }}
+            />
+          );
+        })}
       </svg>
     </div>
   );
@@ -1579,230 +2497,43 @@ export const VictoriaCrossBronzeCard: React.FC<{ durationFrames?: number }> = ()
 
 // =========================================================================
 // 12. SCENE 12: POLISH_SOVIET_BORDER_MAP_VECTOR (Vector Map)
-// Eastern European cartography: Vistula river in azure, Polish defense in white/crimson, Red Army vectors
+// Reconstructed from official 1920 operational maps: Battle of Warsaw & August 1920 Frontlines
 // =========================================================================
 export const PolishSovietBorderMapVector: React.FC<{ durationFrames?: number }> = () => {
-  const frame = useCurrentFrame();
-  const mapSweep = interpolate(frame, [0, 50], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
       <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={460} ry={250} intensity={0.7} id="polandAura" />
-
-        {/* Parchment Map Background */}
-        <rect x="140" y="920" width="800" height="540" fill="#2A1F18" stroke="#5C4533" strokeWidth="3" />
-
-        {/* Vistula River Curve in Steel Blue */}
-        <path
-          d="M 280 1420 Q 380 1280 440 1180 T 560 960"
-          fill="none"
-          stroke="#2563EB"
-          strokeWidth="7"
-        />
-
-        {/* 1920 Battle of Warsaw Defense Line in White and Crimson */}
-        <path
-          d="M 400 1100 Q 480 1150 460 1260"
-          fill="none"
-          stroke="#F1F5F9"
-          strokeWidth="4.5"
-          strokeDasharray="8, 6"
-        />
-
-        {/* Red Army Advance Arrows */}
-        <path
-          d="M 820 1060 L 520 1140"
-          fill="none"
-          stroke="#DC2626"
-          strokeWidth="6"
-          strokeDasharray="320"
-          strokeDashoffset={320 * (1 - mapSweep)}
-        />
-        <path
-          d="M 800 1280 L 540 1200"
-          fill="none"
-          stroke="#DC2626"
-          strokeWidth="6"
-          strokeDasharray="300"
-          strokeDashoffset={300 * (1 - mapSweep)}
-        />
-
-        {/* Warsaw Pin with Gold Star */}
-        <g transform="translate(450, 1170)">
-          <circle cx="0" cy="0" r="16" fill="#F59E0B" stroke="#B45309" strokeWidth="2" />
-          <circle cx="0" cy="0" r="7" fill="#DC2626" />
-        </g>
+        <AmberBattlefieldAura cx={540} cy={1170} rx={480} ry={270} intensity={0.75} id="polandMapAura" color="#D97706" />
+        <PolishSovietWarMap x={540} y={1170} scale={1.0} />
       </svg>
     </div>
   );
 };
 
 // =========================================================================
-// 13. SCENE 13: BIPLANE_SMOKING_CRASH_WRECK (Structural Fracture)
-// Traced authentic biplane crash wreckage vector + volumetric smoke plume + Carton crawling out
+// 13. SCENE 13: BIPLANE_SMOKING_CRASH_WRECK (Structural Fracture / Vehicle Wreckage)
+// Authentic parametric biplane crash in Polish marshland + Adrian walking away unhurt
 // =========================================================================
-export const BiplaneSmokingCrashWreck: React.FC<{ durationFrames?: number }> = () => {
-  const frame = useCurrentFrame();
-  const smokePuff = (frame * 2.5) % 240;
-
-  return (
-    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={480} ry={260} intensity={0.85} id="planeCrashAura" />
-
-        {/* Marsh Horizon in Deep Olive Peat */}
-        <path d="M 0 1360 Q 540 1320 1080 1350 L 1080 1920 L 0 1920 Z" fill="#2E3824" />
-
-        {/* Traced Authentic Biplane Crash Wreckage Vector */}
-        <BiplaneCrashGroup
-          x={580}
-          y={1220}
-          scale={0.82}
-          fill="#3F4E34"
-          stroke="#25301F"
-          strokeWidth={1.5}
-        />
-
-        {/* Animated Thick Volumetric Smoke Plumes */}
-        {[...Array(8)].map((_, idx) => {
-          const sy = 1220 - ((smokePuff + idx * 35) % 280);
-          const sx = 580 + Math.sin(frame * 0.08 + idx) * 35;
-          const r = 24 + idx * 7;
-          return (
-            <circle
-              key={idx}
-              cx={sx}
-              cy={sy}
-              r={r}
-              fill="#27272A"
-              opacity={0.65 - idx * 0.06}
-            />
-          );
-        })}
-      </svg>
-
-      {/* Carton de Wiart climbing unhurt from cockpit */}
-      <CutoutPuppet
-        character="CARTON_WWI"
-        outfit="BRITISH_OFFICER"
-        initialPose="STRUGGLING"
-        switchedPose="NEUTRAL"
-        poseSwitchFrame={38}
-        x={360}
-        y={1240}
-        scale={0.96}
-        paperTagLabel="CRASHED IN POLAND // WALKED AWAY"
-      />
-    </div>
-  );
+export const BiplaneSmokingCrashWreck: React.FC<{ durationFrames?: number }> = ({ durationFrames = 159 }) => {
+  return <BiplaneCrashScene durationFrames={durationFrames} />;
 };
 
 // =========================================================================
-// 14. SCENE 14: COSSACK_CAVALRY_VS_TRAIN_SPLIT (Split Confrontation)
-// Left: Red Cossack in scarlet cherkesska vs. Right: Armoured train with Webley revolver
+// 14. SCENE 14: COSSACK_CAVALRY_VS_TRAIN_SPLIT (Kinetic Train-Top Duel)
+// High-speed running gunfight on speeding Polish Armoured Train "Śmiały"
+// Adrian Carton de Wiart fights one-handed with Webley revolver against Red Army Cossack cavalry
 // =========================================================================
-export const CossackCavalryVsTrainSplit: React.FC<{ durationFrames?: number }> = () => {
-  const frame = useCurrentFrame();
-
-  return (
-    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={480} ry={260} intensity={0.8} id="cossackAura" />
-
-        {/* Vertical Split Line in Brass */}
-        <line x1="540" y1="880" x2="540" y2="1480" stroke="#F59E0B" strokeWidth="3" strokeDasharray="10, 6" />
-
-        {/* LEFT: Red Cossack Cavalry in Scarlet Cherkesska */}
-        <g transform="translate(320, 1240) scale(0.9)">
-          <ellipse cx="0" cy="40" rx="75" ry="38" fill="#4A2511" />
-          <path d="M 50 30 L 100 -20 L 125 -10 L 110 10 L 70 55 Z" fill="#4A2511" />
-          {/* Scarlet Cherkesska Tunic */}
-          <path d="M -15 20 L -25 -40 L 25 -40 L 15 20 Z" fill="#991B1B" />
-          {/* Astrakhan Fur Hat */}
-          <ellipse cx="0" cy="-60" rx="22" ry="18" fill="#18181B" stroke="#3F3F46" strokeWidth="1.5" />
-          {/* Gleaming Steel Shasqua Sabre */}
-          <path d="M 10 -40 Q 40 -85 70 -115" stroke="#F1F5F9" strokeWidth="5" fill="none" />
-        </g>
-
-        {/* RIGHT: Armoured Train Running Board Plating */}
-        <g transform="translate(740, 1220)">
-          <rect x="-80" y="-80" width="160" height="200" fill="#384530" stroke="#25301F" strokeWidth="4" />
-          {[-60, -20, 20, 60].map((rx) => (
-            <circle key={rx} cx={rx} cy="-60" r="4.5" fill="#475569" stroke="#1E293B" strokeWidth="1" />
-          ))}
-        </g>
-      </svg>
-
-      {/* Carton leaning out with Webley Revolver firing back */}
-      <CutoutPuppet
-        character="CARTON_WWI"
-        outfit="BRITISH_OFFICER"
-        initialPose="AIM_REVOLVER"
-        switchedPose="AIM_REVOLVER"
-        x={720}
-        y={1170}
-        scale={1.04}
-        paperTagLabel="WEBLEY VS COSSACKS // 1920"
-      />
-    </div>
-  );
+export const CossackCavalryVsTrainSplit: React.FC<{ durationFrames?: number }> = ({ durationFrames }) => {
+  return <CossackTrainDuel durationFrames={durationFrames} />;
 };
 
 // =========================================================================
 // 15. SCENE 15: ARMOURED_TRAIN_HIGH_SPEED_LEAP (Vehicle In Transit / Structural Fracture)
-// Traced authentic Polish Armoured Train vector rushing at high speed with Carton leaping
+// Authentic parametric Polish Armoured Train P.P. "Śmiały" with Adrian Carton de Wiart
+// executing a one-handed running leap back onto the moving footplate at Frame 32
 // =========================================================================
-export const ArmouredTrainHighSpeedLeap: React.FC<{ durationFrames?: number }> = () => {
-  const frame = useCurrentFrame();
-  const tieScroll = (frame * 14) % 120;
-
-  return (
-    <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-      <svg viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
-        <AmberBattlefieldAura cx={540} cy={1180} rx={480} ry={260} intensity={0.8} id="trainLeapAura" />
-
-        {/* Railway Ties in Pine & Steel Rails */}
-        <line x1="0" y1="1380" x2="1080" y2="1380" stroke="#475569" strokeWidth="7" />
-        {[...Array(12)].map((_, i) => (
-          <line
-            key={i}
-            x1={i * 100 - tieScroll}
-            y1="1375"
-            x2={i * 100 - tieScroll - 20}
-            y2="1420"
-            stroke="#4A3423"
-            strokeWidth="9"
-          />
-        ))}
-
-        {/* Traced High-Precision Polish Armoured Train Vector */}
-        <PolishArmouredTrainGroup
-          x={580}
-          y={1180}
-          scale={0.85}
-          fill="#353F3A"
-          stroke="#1E2522"
-          strokeWidth={1.5}
-        />
-      </svg>
-
-      {/* Carton de Wiart in Mid-Air Leaping onto Moving Train Footplate */}
-      <CutoutPuppet
-        character="CARTON_WWI"
-        outfit="BRITISH_OFFICER"
-        initialPose="LEAPING"
-        switchedPose="LEAPING"
-        x={400}
-        y={1140}
-        scale={1.0}
-        paperTagLabel="LEAP TO FREEDOM // 60 MPH"
-      />
-    </div>
-  );
+export const ArmouredTrainHighSpeedLeap: React.FC<{ durationFrames?: number }> = ({ durationFrames }) => {
+  return <TrainLeapScene durationFrames={durationFrames} />;
 };
 
 // =========================================================================
