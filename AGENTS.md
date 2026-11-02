@@ -6,19 +6,27 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
 
 1. **Model Target**: Default all structured compilation and SVG code generation to `gemini-3.8-flash` (`thinking_level: "LOW"` for JSON timeline compilation; `thinking_level: "MEDIUM"` for complex SVG path choreography).
 
-2. **Locked Canvas Palette & Atmospheric Cohesion**:
-   - **One Locked Canvas per Video**: Commit to one continuous dark background gradient across all cuts rather than switching background textures or colors between scenes.
-   - **Preset Palettes** (defined in [`config/pipeline_constants.json`](file:///c:/Users/Syed%20Obaid/Documents/motion%20reels/config/pipeline_constants.json)):
-     - *Polar & Maritime*: Deep Navy (`#0A1118`) and Slate (`#162636`) + Ice White (`#F4F7FA`) setup + Signal Red (`#E63228`) payoff.
-     - *Conflict & Crisis*: Obsidian (`#0F1012`) and Warm Charcoal (`#1C1917`) + Stark White (`#F5F5F7`) setup + Crimson (`#D92B2B`) payoff + Amber (`#F59E0B`) light accents.
-     - *Espionage & Dossier*: Bunker Black (`#0B1310`) and Dark Slate (`#16221E`) + Phosphor White (`#ECFDF5`) setup + Muted Cyan (`#38BDF8`) + Alert Red (`#EF4444`) payoff.
+2. **Dynamic Atmospheric Staging & Rich Color Variety (Peshawar Standard)**:
+   - **Context-Motivated Staging per Scene**: Do NOT lock the entire reel into a monotonous dark void. Motivate each scene with rich, tactile staging styles (`SUNBURST_HERO`, `PAPER_EXTERIOR`, `GRAPH_GRID`, `WOOD_PANEL`, `NIGHT_FELT`) aligned with narrative beats.
+   - **Warm & Diverse Sky Gradients**: Contrast dark ground elements with warm, vibrant sky gradients motivated by the historical setting (e.g., terracotta & dark umber for bazaar/Middle Eastern settings as in Peshawar 2009; amber veld & mahogany for South Africa; vibrant dawn gold for Mediterranean countryside; deep azure for maritime operations; tactical slate-navy for maps & blueprints).
+   - **Tactile Paper Collage Aesthetics**: Preserve physical textures—cardstock substrates, rotating sunburst paper rays, quadrille drafting paper with wood command shelves, paper-cut horizon dunes, and organic paper grain.
    - **Global-Frame Seeded Persistent Particle Layer**: When applicable to the setting (e.g. Arctic gale, burning blitz, monsoon, desert storm), run one continuous particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST`) seeded deterministically by `(emitterId, globalFrame)` so particles remain unbroken across both isolated scene clips and full renders. Leave `NONE` for sterile indoor or diplomatic stories.
 
-3. **Character Standard, Reference Blueprinting & 6-Layer Vector Anatomy**:
-   - **Grim, Military, Crisis & Tragedy Scenarios (Default)**: Depict all people as stark, flat dark silhouettes with at most one colored accent prop (e.g., red scarf, yellow armband, white helmet emblem). Separate dark silhouettes from dark backgrounds using atmospheric backlighting (soft radial horizon glow, aurora bands, or firelight gradient). Cartoon dolls and photo-cutout heads are strictly banned in grim history.
+3. **Multi-Tier Architectural, Material & Uniform Color Hierarchy (Over Monochrome Silhouettes)**:
+   - **No Flat Monochromatic Voids**: Never reduce human figures, vehicles, and architecture to flat black blobs (`#090D12`). Deconstruct every subject into authentic historical materials and depth layers.
+   - **Multi-Tier Uniform & Material Palette**:
+     - *Military Attire*: Khaki wool serge (`#3B3426`), polished brass buttons (`#F59E0B`), scarlet general staff collar tabs (`#DC2626`), gold bullion visor chinstraps (`#FBBF24`), crimson VC ribbon (`#991B1B`), malacca cane (`#5A3E2D`), and midnight silk eyepatch (`#18181B`).
+     - *Architecture & Terrain*: Sandstone masonry blocks with mortar joints, warm terracotta stone forts, amber river currents with white foam wakes, Tuscan cypress rows, pine trench duckboards, and rusted iron barbette plating.
+     - *Vehicles & Weapons*: Two-tone camouflage flying boat hulls (slate blue & RAF dark sea grey), blued-steel revolvers with walnut grips, brass shell casings, and locomotive boiler iron.
+   - **Atmospheric Backlighting & Depth Separation**: Use soft radial backlighting, horizon glow, and rim lights to cleanly separate foreground subjects from warm background skies. Cartoon dolls and photo-cutout heads are strictly banned in serious history.
    - **Non-Grim, Satirical & Investigative Scenarios (Selective)**: For lighthearted, bureaucratic, or non-grim historical vignettes, articulated die-cut `<CutoutPuppet />` rigs (archival portrait head on a tactile body with `#F4EFE6` border) may be deployed.
    - **Zero Direct Raw Image Pasting (`PHOTO_PASTE_LINT`)**: Never display raw photos or photo cards of environments, landscapes, vehicles, ruins, or objects. Use archival photos strictly as visual reference blueprints to draft parametric 2D SVG vector art.
-   - **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**: Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone. Ingest reference plates (`assets/plates/` or `projects/<slug>/plates/`) and deconstruct them into the 6-layer vector hierarchy:
+   - **Mandatory Reference Ingestion Gate (`MANDATORY_REFERENCE_PLATE_LINT`)**:
+     - **Pre-Production Law**: Drafting SVGs from memory or abstract guesswork without on-disk reference images is strictly prohibited. Before a single SVG path or component is created, real photographic or archival reference blueprints must be ingested into `projects/<slug>/plates/` and cataloged in `manifest.json`.
+     - **Automated Binary Magic-Byte Verification**: Every plate must pass binary header inspection (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP), be $\ge 10\text{KB}$, and contain zero HTML error pages (`<!DOCTYPE html` or Wikimedia 400/429 blocks).
+     - **Wikimedia Step-Thumbnail Compliance (`w.wiki/GHai`)**: Never hotlink arbitrary pixel widths (e.g., 800px) or request full-resolution original master files that trigger Wikimedia 400/429 edge blocks. Always request standard step thumbnails (`iiurlwidth=960` or `1280`) via `scripts/ingest_reference_plates.js`.
+     - **Automated Pipeline Block**: The build pipeline (`scripts/pipeline.js` and `scripts/audit_and_validate.js`) automatically halts with a fatal exit code if any scene in `timeline.json` lacks an authentic, verified reference plate.
+   - **6-Layer Vector Anatomy Standard**: Deconstruct reference blueprints into the 6-layer vector hierarchy:
      1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
      2. *Layer 2: Dynamic Shockwave / Ionization Rims* (Mach rings, supersonic ozone glows, speed lines).
      3. *Layer 3: Acute Energy Spikes / Directional Vectors* (sharp multi-color flame tongues, structural stress lines).

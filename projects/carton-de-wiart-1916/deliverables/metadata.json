@@ -1,0 +1,289 @@
+{
+  "projectSlug": "carton-de-wiart-1916",
+  "generatedAt": "2026-11-02T08:14:25.487Z",
+  "title": "THE UNKILLABLE SOLDIER: SHOT ELEVEN TIMES HE ENJOYED THE WAR",
+  "description": "THE UNKILLABLE SOLDIER (🇬🇧 🎖️ ⚔️ 🛡️)\n\nSHOT ELEVEN TIMES HE ENJOYED THE WAR\n\nHistorical Sources & Fact-Check Citations:\n• Shot eleven times in combat across four major wars and survived four plane crashes — Source: Oxford Dictionary of National Biography & The London Gazette\n• 1899: SOUTH AFRICA STOMACH & GROIN WOUNDS — Source: THE UNKILLABLE SOLDIER Archival Record\n• 1914: SOMALILAND CHARGE ON DERVISH FORT — Source: THE UNKILLABLE SOLDIER Archival Record\n• Severed ear and destroyed left eye in assault on Shimber Berris fort in British Somaliland — Source: The London Gazette No. 29114\n• Tore off his own damaged fingers when surgeon refused to amputate, hand surgically removed later — Source: Happy Odyssey: The Memoirs of Lt-Gen Sir Adrian Carton de Wiart\n• 1916: LA BOISSELLE COMMANDED THREE BATTALIONS — Source: THE UNKILLABLE SOLDIER Archival Record\n• Awarded Victoria Cross for dauntless bravery commanding 8th Battalion Gloucestershire Regiment at La Boisselle — Source: London Gazette Supplement 29740\n• 1920: POLISH-SOVIET WAR HEADED MILITARY MISSION — Source: THE UNKILLABLE SOLDIER Archival Record\n• 1939: WORLD WAR II RETURNED TO COMMAND — Source: THE UNKILLABLE SOLDIER Archival Record\n• CASTELLO DI VINCIGLIATA AGE 61 HIGH-SECURITY POW — Source: THE UNKILLABLE SOLDIER Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Carton #Wiart #1916",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Carton",
+    "#Wiart",
+    "#1916"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "LICENSED_COMMERCIAL",
+    "clearanceId": "CLR-CARTON-DE-WIART-1916",
+    "attribution": "Meet Her At The Love Parade (Slowed)"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_01_UNKILLABLE_HOOK_LEADER",
+      "text": "Shot eleven times in combat across four major wars and survived four plane crashes",
+      "source": "Oxford Dictionary of National Biography & The London Gazette",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_02_BOER_WAR_RIVER_WOUNDS",
+      "text": "1899: SOUTH AFRICA STOMACH & GROIN WOUNDS",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_04_SOMALILAND_FORTRESS_MAP",
+      "text": "1914: SOMALILAND CHARGE ON DERVISH FORT",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_05_THREE_BULLETS_EYE_SHATTER",
+      "text": "Severed ear and destroyed left eye in assault on Shimber Berris fort in British Somaliland",
+      "source": "The London Gazette No. 29114",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_08_AMPUTATION_BITTEN_FINGERS",
+      "text": "Tore off his own damaged fingers when surgeon refused to amputate, hand surgically removed later",
+      "source": "Happy Odyssey: The Memoirs of Lt-Gen Sir Adrian Carton de Wiart",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_09_SOMME_LA_BOISSELLE_TALLY",
+      "text": "1916: LA BOISSELLE COMMANDED THREE BATTALIONS",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_11_VICTORIA_CROSS_QUOTE",
+      "text": "Awarded Victoria Cross for dauntless bravery commanding 8th Battalion Gloucestershire Regiment at La Boisselle",
+      "source": "London Gazette Supplement 29740",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_12_POLISH_SOVIET_WAR_MAP",
+      "text": "1920: POLISH-SOVIET WAR HEADED MILITARY MISSION",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_16_WORLD_WAR_TWO_RECALL_LEADER",
+      "text": "1939: WORLD WAR II RETURNED TO COMMAND",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_19_VINCIGLIATA_PRISON_FORTRESS_SPLIT",
+      "text": "CASTELLO DI VINCIGLIATA AGE 61 HIGH-SECURITY POW",
+      "source": "THE UNKILLABLE SOLDIER Archival Record",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_UNKILLABLE_HOOK_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "THE UNKILLABLE SOLDIER",
+      "caption": "SHOT ELEVEN TIMES — HE ENJOYED THE WAR",
+      "visualAsset": "CARTON_HERO_SILHOUETTE_HOOK"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_BOER_WAR_RIVER_WOUNDS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "1899 · SOUTH AFRICA",
+      "caption": "1899: SOUTH AFRICA — STOMACH & GROIN WOUNDS",
+      "visualAsset": "BOER_WAR_RIVER_CROSSING_AMBUSH"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_INDIA_HORSE_CHARGE",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "1902 · BRITISH INDIA",
+      "caption": "INDIA HORSE CHARGE — SHATTERED RIBS & ANKLE",
+      "visualAsset": "INDIA_CAVALRY_GALLOP_CHARGE"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_SOMALILAND_FORTRESS_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "1914 · SOMALILAND EXPEDITION",
+      "caption": "1914: SOMALILAND — CHARGE ON DERVISH FORT",
+      "visualAsset": "SOMALILAND_EXPEDITION_MAP_VECTOR"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_THREE_BULLETS_EYE_SHATTER",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "SHIMBER BERRIS · NOVEMBER 1914",
+      "caption": "THREE BULLETS TO FACE — LEFT EYE DESTROYED",
+      "visualAsset": "SHIMBER_BERRIS_FORT_DETONATION"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_WESTERN_FRONT_EYEPATCH_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "WESTERN FRONT · 1915",
+      "caption": "ONE EYE REMAINING — REFUSED MEDICAL DISCHARGE",
+      "visualAsset": "CARTON_BLACK_EYEPATCH_PROFILE"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_YPRES_ARTILLERY_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "SECOND BATTLE OF YPRES",
+      "caption": "YPRES ARTILLERY BARRAGE — LEFT HAND SHATTERED",
+      "visualAsset": "YPRES_TRENCH_BARRAGE_SPLIT"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_AMPUTATION_BITTEN_FINGERS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "FIELD DRESSING POST · 1915",
+      "caption": "DOCTOR REFUSED AMPUTATION — BIT OFF HIS FINGERS",
+      "visualAsset": "AMPUTATION_SEVERED_HAND_FRACTURE"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_SOMME_LA_BOISSELLE_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "BATTLE OF THE SOMME · 1916",
+      "caption": "1916: LA BOISSELLE — COMMANDED THREE BATTALIONS",
+      "visualAsset": "SOMME_BATTALION_ADVANCE_TALLY"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_BULLET_SKULL_SURVIVAL_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "SOMME FRONT LINE",
+      "caption": "BULLET THROUGH SKULL — SURVIVED AND RETURNED",
+      "visualAsset": "CARTON_SKULL_BULLET_SURVIVAL"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_VICTORIA_CROSS_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "HIGHEST BRITISH HONOUR",
+      "caption": "VICTORIA CROSS AWARDED — HIGHEST BRITISH GALLANTRY",
+      "visualAsset": "VICTORIA_CROSS_BRONZE_CARD"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_POLISH_SOVIET_WAR_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "1919-1921 · EASTERN EUROPE",
+      "caption": "1920: POLISH-SOVIET WAR — HEADED MILITARY MISSION",
+      "visualAsset": "POLISH_SOVIET_BORDER_MAP_VECTOR"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_AIRCRAFT_CRASH_WRECK",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "CRASH LANDING · POLAND",
+      "caption": "AIRCRAFT CRASH LANDING — SURVIVED PLANE WRECK",
+      "visualAsset": "BIPLANE_SMOKING_CRASH_WRECK"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "RAILWAY AMBUSH · 1920",
+      "caption": "COSSACK CAVALRY AMBUSH — ONE-HANDED REVOLVER DUEL",
+      "visualAsset": "COSSACK_CAVALRY_VS_TRAIN_SPLIT"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_SPEEDING_TRAIN_LEAP",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "SPEEDING ARMOURED TRAIN",
+      "caption": "FELL OFF MOVING TRAIN — LEAPED BACK ABOARD",
+      "visualAsset": "ARMOURED_TRAIN_HIGH_SPEED_LEAP"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_WORLD_WAR_TWO_RECALL_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "SEPTEMBER 1939 · LONDON",
+      "caption": "1939: WORLD WAR II — RETURNED TO COMMAND",
+      "visualAsset": "CARTON_MAJOR_GENERAL_WW2"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "NAMSOS · NORWAY 1940",
+      "caption": "SUNDERLAND FLYING BOAT — STRAFED BY LUFTWAFFE",
+      "visualAsset": "SUNDERLAND_FLYING_BOAT_FJORD"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_SEA_BOMBER_CRASH_SHATTER",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "MEDITERRANEAN SEA · 1941",
+      "caption": "BOMBER CRASHES AT SEA — SWAM TO ENEMY SHORE",
+      "visualAsset": "BOMBER_OCEAN_IMPACT_SPLASH"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_VINCIGLIATA_PRISON_FORTRESS_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "CASTELLO DI VINCIGLIATA",
+      "caption": "CASTELLO DI VINCIGLIATA — AGE 61 HIGH-SECURITY POW",
+      "visualAsset": "VINCIGLIATA_CASTLE_POW_SPLIT"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_ONE_HANDED_TUNNEL_ESCAPE",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "ESCAPE TUNNEL · MARCH 1943",
+      "caption": "SEVEN MONTHS TUNNELING — ESCAPED WITH ONE HAND",
+      "visualAsset": "BEDROCK_TUNNEL_BREAKOUT_FRACTURE"
+    },
+    {
+      "sceneNumber": 21,
+      "sceneId": "SCENE_21_DISGUISED_PEASANT_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "TUSCANY COUNTRYSIDE",
+      "caption": "DISGUISED AS PEASANT — EVADED FOR EIGHT DAYS",
+      "visualAsset": "CARTON_PEASANT_DISGUISE_LEADER"
+    },
+    {
+      "sceneNumber": 22,
+      "sceneId": "SCENE_22_CHURCHILL_MAO_ENVOY_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "CHONGQING · 1944-1945",
+      "caption": "CHURCHILL'S SPECIAL ENVOY — CONFRONTED MAO ZEDONG",
+      "visualAsset": "CARTON_VS_MAO_DIPLOMATIC_SPLIT"
+    },
+    {
+      "sceneNumber": 23,
+      "sceneId": "SCENE_23_ELEVEN_WOUNDS_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "CAREER SERVICE RECORD",
+      "caption": "EIGHT BATTLES SURVIVED — ELEVEN BULLET WOUNDS",
+      "visualAsset": "TOTAL_CAREER_WOUNDS_TALLY_BOARD"
+    },
+    {
+      "sceneNumber": 24,
+      "sceneId": "SCENE_24_HAPPY_ODYSSEY_MEMOIR_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "IMMORTAL MEMOIR · 1950",
+      "caption": "HAPPY ODYSSEY MEMOIR — \"FRANKLY I ENJOYED WAR\"",
+      "visualAsset": "HAPPY_ODYSSEY_MEMOIR_DOSSIER"
+    },
+    {
+      "sceneNumber": 25,
+      "sceneId": "SCENE_25_THE_UNKILLABLE_FINAL_LOOP",
+      "archetype": "LONE_LEADER",
+      "headerContext": "THE UNBROKEN LEGEND",
+      "caption": "THE UNKILLABLE SOLDIER — SIR ADRIAN CARTON DE WIART",
+      "visualAsset": "CARTON_FINAL_SEAMLESS_LOOP_HERO"
+    }
+  ]
+}

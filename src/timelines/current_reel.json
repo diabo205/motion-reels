@@ -1,168 +1,834 @@
 {
   "$schema": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
   "meta": {
-    "title": "1942 ALEUTIAN CAMPAIGN",
-    "flagEmoji": "🇺🇸 ❄️ 🇯🇵",
+    "title": "THE UNKILLABLE SOLDIER",
+    "flagEmoji": "🇬🇧 🎖️ ⚔️ 🛡️",
     "fps": 60,
     "width": 1080,
     "height": 1920,
-    "bpm": 113,
-    "bgmFile": "audio/bgm_aleutian.mp3",
+    "bpm": 112.35,
+    "bgmFile": "audio/bgm_carton.mp3",
     "bgmStartFrom": 0,
-    "palette": "POLAR_MARITIME",
-    "particleEmitter": "SNOW",
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
     "fontFamily": "Montserrat",
-    "styleMode": "DOCUMENTARY_SANS",
+    "styleMode": "TACTILE_TORN_PAPER",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivity": "STANDARD",
+    "loopSeamless": true,
+    "ctaConfig": {
+      "text": "THE UNKILLABLE SOLDIER",
+      "subtext": "SIR ADRIAN CARTON DE WIART VC"
+    },
     "bgmLicense": {
       "source": "Project Audio Library",
-      "licenseType": "ROYALTY_FREE",
-      "clearanceId": "CLR-ALEUTIAN-CAMPAIGN-1942"
+      "licenseType": "LICENSED_COMMERCIAL",
+      "clearanceId": "CLR-CARTON-DE-WIART-1916",
+      "attribution": "Meet Her At The Love Parade (Slowed)"
     }
   },
   "scenes": [
     {
-      "sceneId": "SCENE_01_FORGOTTEN_INVASION",
+      "sceneId": "SCENE_01_UNKILLABLE_HOOK_LEADER",
       "startFrame": 0,
-      "durationFrames": 128,
-      "archetype": "SPLIT_CONFRONTATION",
+      "durationFrames": 130,
+      "archetype": "LONE_LEADER",
       "hudVisible": true,
-      "headerContext": "JUNE 1942 • ALASKA TERRITORY",
+      "headerContext": "THE UNKILLABLE SOLDIER",
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.6
+        "intensity": 0.8
       },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 26,
       "textLayers": [
         {
-          "text": "THE FORGOTTEN WWII INVASION.",
+          "text": "SHOT ELEVEN TIMES",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "colorToken": "STARK_WHITE",
+          "animation": "HARD_POP"
         },
         {
-          "text": "JAPAN SEIZED AMERICAN SOIL.",
+          "text": "HE ENJOYED THE WAR",
           "triggerFrameOffset": 26,
-          "tier": "SECONDARY_ACCENT",
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_FORGOTTEN_INVASION_OPENING"
+        "skyGradient": [
+          "#78350F",
+          "#2A1408"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "CARTON_HERO_SILHOUETTE_HOOK",
+        "archetypeVariant": "HERO_EYEPATCH_PINNED_SLEEVE"
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
           "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_02_WILLIWAW_ARCHIPELAGO",
-      "startFrame": 128,
-      "durationFrames": 128,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": false,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "FROZEN VOLCANIC ISLANDS.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "WHIPPED BY ARCTIC GALES.",
-          "triggerFrameOffset": 25,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 24
         }
       ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_ARCHIPELAGO_VECTOR_MAP"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 0
-        }
-      ]
+      "claim": {
+        "text": "Shot eleven times in combat across four major wars and survived four plane crashes",
+        "source": "Oxford Dictionary of National Biography & The London Gazette",
+        "verified": true
+      }
     },
     {
-      "sceneId": "SCENE_03_DUTCH_HARBOR_RAID",
-      "startFrame": 256,
+      "sceneId": "SCENE_02_BOER_WAR_RIVER_WOUNDS",
+      "startFrame": 130,
       "durationFrames": 128,
       "archetype": "STRUCTURAL_FRACTURE",
       "hudVisible": true,
-      "headerContext": "JUNE 3, 1942 • DUTCH HARBOR",
+      "headerContext": "1899 · SOUTH AFRICA",
       "camera": {
         "movement": "IMPACT_SHAKE",
-        "intensity": 0.85
+        "intensity": 0.95
       },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 153,
+      "structuralFractureHitFrame": 153,
       "textLayers": [
         {
-          "text": "CARRIERS STRUCK DUTCH HARBOR.",
+          "text": "1899: SOUTH AFRICA",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
+          "colorToken": "STARK_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "BOMBS RAINED ON ALASKA.",
-          "triggerFrameOffset": 25,
-          "tier": "SECONDARY_ACCENT",
+          "text": "STOMACH & GROIN WOUNDS",
+          "triggerFrameOffset": 23,
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_DUTCH_HARBOR_BOMBING"
+        "skyGradient": [
+          "#B45309",
+          "#451A03"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "BOER_WAR_RIVER_CROSSING_AMBUSH",
+        "archetypeVariant": "RIVER_AMBUSH_CROSSFIRE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 21
+        },
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 23
+        }
+      ],
+      "claim": {
+        "text": "1899: SOUTH AFRICA STOMACH & GROIN WOUNDS",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_03_INDIA_HORSE_CHARGE",
+      "startFrame": 258,
+      "durationFrames": 127,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": true,
+      "headerContext": "1902 · BRITISH INDIA",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.85
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 281,
+      "textLayers": [
+        {
+          "text": "INDIA HORSE CHARGE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SHATTERED RIBS & ANKLE",
+          "triggerFrameOffset": 23,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#D97706",
+          "#451A03"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "INDIA_CAVALRY_GALLOP_CHARGE",
+        "archetypeVariant": "SPEEDING_HORSEBACK_CRASH"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 21
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_04_SOMALILAND_FORTRESS_MAP",
+      "startFrame": 385,
+      "durationFrames": 125,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "1914 · SOMALILAND EXPEDITION",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.75
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 408,
+      "textLayers": [
+        {
+          "text": "1914: SOMALILAND",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "CHARGE ON DERVISH FORT",
+          "triggerFrameOffset": 23,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E3A5F",
+          "#0F172A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "SOMALILAND_EXPEDITION_MAP_VECTOR",
+        "archetypeVariant": "DESERT_FORTRESS_APPROACH"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 21
+        }
+      ],
+      "claim": {
+        "text": "1914: SOMALILAND CHARGE ON DERVISH FORT",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_05_THREE_BULLETS_EYE_SHATTER",
+      "startFrame": 510,
+      "durationFrames": 160,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "SHIMBER BERRIS · NOVEMBER 1914",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1.1
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 542,
+      "structuralFractureHitFrame": 542,
+      "textLayers": [
+        {
+          "text": "THREE BULLETS TO FACE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "LEFT EYE DESTROYED",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B91C1C",
+          "#2A0A0A"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "SHIMBER_BERRIS_FORT_DETONATION",
+        "archetypeVariant": "EYE_SOCKET_BULLET_SHOCKWAVE"
       },
       "sfxTriggers": [
         {
           "sfxFile": "artillery_shell.wav",
-          "frameOffset": 0
+          "frameOffset": 32
         },
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 25
+          "frameOffset": 32
+        }
+      ],
+      "claim": {
+        "text": "Severed ear and destroyed left eye in assault on Shimber Berris fort in British Somaliland",
+        "source": "The London Gazette No. 29114",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_06_WESTERN_FRONT_EYEPATCH_LEADER",
+      "startFrame": 670,
+      "durationFrames": 159,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "WESTERN FRONT · 1915",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 702,
+      "textLayers": [
+        {
+          "text": "ONE EYE REMAINING",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "REFUSED MEDICAL DISCHARGE",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#334155",
+          "#0F172A"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "CARTON_BLACK_EYEPATCH_PROFILE",
+        "archetypeVariant": "BLACK_SILK_EYEPATCH_DONNED"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
         }
       ]
     },
     {
-      "sceneId": "SCENE_04_ATTU_KISKA_OCCUPIED",
-      "startFrame": 384,
-      "durationFrames": 126,
-      "archetype": "LONE_LEADER",
+      "sceneId": "SCENE_07_YPRES_ARTILLERY_SPLIT",
+      "startFrame": 829,
+      "durationFrames": 128,
+      "archetype": "SPLIT_CONFRONTATION",
       "hudVisible": true,
-      "headerContext": "ATTU & KISKA ISLANDS",
+      "headerContext": "SECOND BATTLE OF YPRES",
       "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
       },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 861,
       "textLayers": [
         {
-          "text": "ATTU AND KISKA FELL.",
+          "text": "YPRES ARTILLERY BARRAGE",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
+          "colorToken": "STARK_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "FIRST INVASION SINCE 1812.",
-          "triggerFrameOffset": 24,
-          "tier": "SECONDARY_ACCENT",
+          "text": "LEFT HAND SHATTERED",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_ATTU_KISKA_OCCUPATION_FLAG"
+        "skyGradient": [
+          "#991B1B",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "YPRES_TRENCH_BARRAGE_SPLIT",
+        "archetypeVariant": "BOMBARDMENT_VS_DEFENDER"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_08_AMPUTATION_BITTEN_FINGERS",
+      "startFrame": 957,
+      "durationFrames": 159,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "FIELD DRESSING POST · 1915",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.9
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 989,
+      "structuralFractureHitFrame": 989,
+      "textLayers": [
+        {
+          "text": "DOCTOR REFUSED AMPUTATION",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "BIT OFF HIS FINGERS",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#475569",
+          "#1E293B"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "AMPUTATION_SEVERED_HAND_FRACTURE",
+        "archetypeVariant": "TEARING_OFF_TWO_FINGERS"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 32
+        },
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 32
+        }
+      ],
+      "claim": {
+        "text": "Tore off his own damaged fingers when surgeon refused to amputate, hand surgically removed later",
+        "source": "Happy Odyssey: The Memoirs of Lt-Gen Sir Adrian Carton de Wiart",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_09_SOMME_LA_BOISSELLE_TALLY",
+      "startFrame": 1116,
+      "durationFrames": 128,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "BATTLE OF THE SOMME · 1916",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1148,
+      "textLayers": [
+        {
+          "text": "1916: LA BOISSELLE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "COMMANDED THREE BATTALIONS",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B45309",
+          "#291508"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "SOMME_BATTALION_ADVANCE_TALLY",
+        "counterConfig": {
+          "label": "BATTALIONS HELD",
+          "startValue": 1,
+          "endValue": 3
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 30
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ],
+      "claim": {
+        "text": "1916: LA BOISSELLE COMMANDED THREE BATTALIONS",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_10_BULLET_SKULL_SURVIVAL_LEADER",
+      "startFrame": 1244,
+      "durationFrames": 127,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "SOMME FRONT LINE",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.85
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1275,
+      "textLayers": [
+        {
+          "text": "BULLET THROUGH SKULL",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SURVIVED AND RETURNED",
+          "triggerFrameOffset": 31,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#57534E",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "CARTON_SKULL_BULLET_SURVIVAL",
+        "archetypeVariant": "SKULL_WOUND_BANDAGED_LEADER"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 29
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 29
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_11_VICTORIA_CROSS_QUOTE",
+      "startFrame": 1371,
+      "durationFrames": 155,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "HIGHEST BRITISH HONOUR",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.75
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1403,
+      "textLayers": [
+        {
+          "text": "VICTORIA CROSS AWARDED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "HIGHEST BRITISH GALLANTRY",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#78350F",
+          "#291508"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "VICTORIA_CROSS_BRONZE_CARD",
+        "quoteAttribution": "LONDON GAZETTE · 9 SEPTEMBER 1916"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 30
+        }
+      ],
+      "claim": {
+        "text": "Awarded Victoria Cross for dauntless bravery commanding 8th Battalion Gloucestershire Regiment at La Boisselle",
+        "source": "London Gazette Supplement 29740",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_12_POLISH_SOVIET_WAR_MAP",
+      "startFrame": 1526,
+      "durationFrames": 132,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "1919-1921 · EASTERN EUROPE",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.8
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1562,
+      "textLayers": [
+        {
+          "text": "1920: POLISH-SOVIET WAR",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "HEADED MILITARY MISSION",
+          "triggerFrameOffset": 36,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E3A5F",
+          "#0F172A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "POLISH_SOVIET_BORDER_MAP_VECTOR",
+        "archetypeVariant": "WARSAW_MARSHES_THEATRE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34
+        }
+      ],
+      "claim": {
+        "text": "1920: POLISH-SOVIET WAR HEADED MILITARY MISSION",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_13_AIRCRAFT_CRASH_WRECK",
+      "startFrame": 1658,
+      "durationFrames": 159,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": true,
+      "headerContext": "CRASH LANDING · POLAND",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1690,
+      "textLayers": [
+        {
+          "text": "AIRCRAFT CRASH LANDING",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SURVIVED PLANE WRECK",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#92400E",
+          "#2A1408"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "BIPLANE_SMOKING_CRASH_WRECK",
+        "archetypeVariant": "WRECKAGE_SMOKE_PLUME"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 30
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT",
+      "startFrame": 1817,
+      "durationFrames": 128,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "RAILWAY AMBUSH · 1920",
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.95
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1849,
+      "textLayers": [
+        {
+          "text": "COSSACK CAVALRY AMBUSH",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "ONE-HANDED REVOLVER DUEL",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#7F1D1D",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "COSSACK_CAVALRY_VS_TRAIN_SPLIT",
+        "archetypeVariant": "REVOLVER_FIRE_FROM_RUNNING_BOARD"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "rifle_crack.wav",
+          "frameOffset": 30
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 30
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_15_SPEEDING_TRAIN_LEAP",
+      "startFrame": 1945,
+      "durationFrames": 159,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "SPEEDING ARMOURED TRAIN",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1.05
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1977,
+      "structuralFractureHitFrame": 1977,
+      "textLayers": [
+        {
+          "text": "FELL OFF MOVING TRAIN",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "LEAPED BACK ABOARD",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#475569",
+          "#1E1E24"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "ARMOURED_TRAIN_HIGH_SPEED_LEAP",
+        "archetypeVariant": "REMOUNTING_MOVING_FOOTPLATE"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 32
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 32
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_16_WORLD_WAR_TWO_RECALL_LEADER",
+      "startFrame": 2104,
+      "durationFrames": 159,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "SEPTEMBER 1939 · LONDON",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2136,
+      "textLayers": [
+        {
+          "text": "1939: WORLD WAR II",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "RETURNED TO COMMAND",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E293B",
+          "#0F172A"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "svgForegroundAsset": "CARTON_MAJOR_GENERAL_WW2",
+        "archetypeVariant": "MAJOR_GENERAL_GREATCOAT"
       },
       "sfxTriggers": [
         {
@@ -171,685 +837,441 @@
         }
       ],
       "claim": {
-        "text": "ATTU AND KISKA FELL. FIRST INVASION SINCE 1812.",
-        "source": "1942 ALEUTIAN CAMPAIGN Archival Record",
+        "text": "1939: WORLD WAR II RETURNED TO COMMAND",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
         "verified": true
       }
     },
     {
-      "sceneId": "SCENE_05_AKUTAN_ZERO_CRASH",
-      "startFrame": 510,
-      "durationFrames": 136,
+      "sceneId": "SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT",
+      "startFrame": 2263,
+      "durationFrames": 128,
       "archetype": "VEHICLE_IN_TRANSIT",
       "hudVisible": true,
-      "headerContext": "AKUTAN ISLAND BOG",
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "ONE DAMAGED ZERO FIGHTER.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "CRASHED INTACT IN A BOG.",
-          "triggerFrameOffset": 32,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_AKUTAN_ZERO_BOG_CRASH"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_06_AKUTAN_ZERO_BLUEPRINT",
-      "startFrame": 646,
-      "durationFrames": 136,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "AMERICA SALVAGED THE WRECK.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "EXPOSING EVERY FATAL FLAW.",
-          "triggerFrameOffset": 24,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_AKUTAN_ZERO_SCHEMATIC"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "typewriter_burst.wav",
-          "frameOffset": 5
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_07_BLIND_FOG_SORTIES",
-      "startFrame": 782,
-      "durationFrames": 136,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": false,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.75
-      },
-      "textLayers": [
-        {
-          "text": "BLINDING BERING SEA FOG.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "SWALLOWED BOMBERS WHOLE.",
-          "triggerFrameOffset": 32,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_B24_FOG_MOUNTAIN_HAZARD"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_08_KOMANDORSKI_NAVAL_DUEL",
-      "startFrame": 918,
-      "durationFrames": 136,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": true,
-      "headerContext": "MARCH 1943 • BERING SEA",
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.75
-      },
-      "textLayers": [
-        {
-          "text": "OUTGUNNED CRUISERS HELD FIRM.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "CHOKED JAPAN'S SUPPLY LINE.",
-          "triggerFrameOffset": 22,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_KOMANDORSKI_CRUISER_DUEL"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_09_ATTU_AMPHIBIOUS_LANDING",
-      "startFrame": 1054,
-      "durationFrames": 136,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": true,
-      "headerContext": "MAY 11, 1943 • ATTU ISLAND",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.75
-      },
-      "textLayers": [
-        {
-          "text": "ALLIED ARMADA STORMED ASHORE.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "ONTO FROZEN ATTU BEACHES.",
-          "triggerFrameOffset": 30,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_ATTU_AMPHIBIOUS_LANDING",
-        "counterConfig": {
-          "label": "TROOPS LANDED",
-          "startValue": 0,
-          "endValue": 11000
-        }
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 10
-        },
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_10_SNIPERS_IN_THE_MIST",
-      "startFrame": 1190,
-      "durationFrames": 136,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "JAPAN HELD THE HIGH PEAKS.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "FIRING DOWN THROUGH MIST.",
-          "triggerFrameOffset": 37,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_HIGH_RIDGE_MIST_FIRE"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "rifle_crack.wav",
-          "frameOffset": 10
-        },
-        {
-          "sfxFile": "rifle_crack.wav",
-          "frameOffset": 35
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_11_FROSTBITE_TRENCH_FOOT",
-      "startFrame": 1326,
-      "durationFrames": 136,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "textLayers": [
-        {
-          "text": "BOOTS FROZE SOLID IN MUD.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "THE ARCTIC CRIPPLED TROOPS.",
-          "triggerFrameOffset": 28,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_TUNDRA_FROSTBITE_TOLL",
-        "counterConfig": {
-          "label": "CASUALTIES",
-          "startValue": 0,
-          "endValue": 2100
-        }
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 10
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_12_CASTNERS_CUTTHROATS",
-      "startFrame": 1462,
-      "durationFrames": 136,
-      "archetype": "LONE_LEADER",
-      "hudVisible": true,
-      "headerContext": "ALASKA SCOUTS • COLD MOUNTAIN",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "ALASKA SCOUTS SCALED CLIFFS.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "BREAKING THE MOUNTAIN LINE.",
-          "triggerFrameOffset": 37,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_CASTNERS_CUTTHROATS_CLIMB"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 15
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_13_ENGINEER_HILL_BANZAI",
-      "startFrame": 1598,
-      "durationFrames": 136,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": true,
-      "headerContext": "MAY 29, 1943 • ENGINEER HILL",
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
-      },
-      "textLayers": [
-        {
-          "text": "A DESPERATE DAWN CHARGE.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "HAND-TO-HAND IN THE SNOW.",
-          "triggerFrameOffset": 28,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_ENGINEER_HILL_BANZAI"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "rifle_crack.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_14_ATTU_GARRISON_TOLL",
-      "startFrame": 1734,
-      "durationFrames": 136,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "GARRISON FOUGHT TO DEATH.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "ALMOST NONE SURVIVED.",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_ATTU_SURVIVOR_TALLY",
-        "counterConfig": {
-          "label": "SURVIVORS",
-          "startValue": 2351,
-          "endValue": 28
-        }
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 10
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_15_FORTRESS_KISKA_TARGET",
-      "startFrame": 1870,
-      "durationFrames": 136,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": true,
-      "headerContext": "JULY 1943 • KISKA ISLAND",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "ONE STRONGHOLD REMAINED.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "FIVE THOUSAND MEN ON KISKA.",
-          "triggerFrameOffset": 26,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_KISKA_FORTRESS_MAP"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_16_KIMURA_FOG_ESCAPE",
-      "startFrame": 2006,
-      "durationFrames": 136,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": true,
-      "headerContext": "JULY 28, 1943 • SECRET EVACUATION",
+      "headerContext": "NAMSOS · NORWAY 1940",
       "camera": {
         "movement": "PARALLAX_PAN_RIGHT",
         "intensity": 0.85
       },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2295,
       "textLayers": [
         {
-          "text": "EIGHT WARSHIPS SLIPPED IN.",
+          "text": "SUNDERLAND FLYING BOAT",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
+          "colorToken": "STARK_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "VANISHING IN FIFTY-FIVE MINUTES.",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
+          "text": "STRAFED BY LUFTWAFFE",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_KIMURA_FOG_ESCAPE"
+        "skyGradient": [
+          "#0369A1",
+          "#082F49"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "SUNDERLAND_FLYING_BOAT_FJORD",
+        "archetypeVariant": "FOUR_ENGINE_FJORD_TAKEOFF"
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_17_BOMBING_EMPTY_ROCK",
-      "startFrame": 2142,
-      "durationFrames": 136,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "ALLIED GUNS POUNDED ROCK.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "BOMBING AN EMPTY ISLAND.",
-          "triggerFrameOffset": 26,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_EMPTY_ISLAND_BOMBARDMENT"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 0
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_18_OPERATION_COTTAGE_LANDING",
-      "startFrame": 2278,
-      "durationFrames": 136,
-      "archetype": "LONE_LEADER",
-      "hudVisible": true,
-      "headerContext": "AUGUST 15, 1943 • KISKA",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.75
-      },
-      "textLayers": [
-        {
-          "text": "ALLIED TROOPS STORMED ASHORE.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "NOBODY WAS THERE.",
-          "triggerFrameOffset": 32,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_OPERATION_COTTAGE_EMPTY_BEACH"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 15
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_19_FRIENDLY_FIRE_IN_FOG",
-      "startFrame": 2414,
-      "durationFrames": 136,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.85
-      },
-      "textLayers": [
-        {
-          "text": "SOLDIERS FIRED AT SHADOWS.",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "TRAPPED BY MINES AND FOG.",
-          "triggerFrameOffset": 24,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
-        }
-      ],
-      "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_FRIENDLY_FIRE_FOG_PHANTOMS"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "rifle_crack.wav",
-          "frameOffset": 10
-        },
-        {
-          "sfxFile": "artillery_shell.wav",
           "frameOffset": 30
         }
       ]
     },
     {
-      "sceneId": "SCENE_20_KISKA_GHOST_CASUALTIES",
-      "startFrame": 2550,
-      "durationFrames": 150,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
+      "sceneId": "SCENE_18_SEA_BOMBER_CRASH_SHATTER",
+      "startFrame": 2391,
+      "durationFrames": 153,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "MEDITERRANEAN SEA · 1941",
       "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
+        "movement": "IMPACT_SHAKE",
+        "intensity": 1.1
       },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2423,
+      "structuralFractureHitFrame": 2423,
       "textLayers": [
         {
-          "text": "DEADLY FRIENDLY FIRE TOLL.",
+          "text": "BOMBER CRASHES AT SEA",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
+          "colorToken": "STARK_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "FIGHTING AN EMPTY ISLAND.",
+          "text": "SWAM TO ENEMY SHORE",
+          "triggerFrameOffset": 32,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0284C7",
+          "#0C4A6E"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "svgForegroundAsset": "BOMBER_OCEAN_IMPACT_SPLASH",
+        "archetypeVariant": "SURFACE_DITCHING_BREAKUP"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 32
+        },
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 32
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_19_VINCIGLIATA_PRISON_FORTRESS_SPLIT",
+      "startFrame": 2544,
+      "durationFrames": 134,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "CASTELLO DI VINCIGLIATA",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 2575,
+      "textLayers": [
+        {
+          "text": "CASTELLO DI VINCIGLIATA",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "AGE 61 HIGH-SECURITY POW",
+          "triggerFrameOffset": 31,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#2A0E02"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "svgForegroundAsset": "VINCIGLIATA_CASTLE_POW_SPLIT",
+        "archetypeVariant": "FORTRESS_WALLS_BARRED_CELL"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 29
+        }
+      ],
+      "claim": {
+        "text": "CASTELLO DI VINCIGLIATA AGE 61 HIGH-SECURITY POW",
+        "source": "THE UNKILLABLE SOLDIER Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "SCENE_20_ONE_HANDED_TUNNEL_ESCAPE",
+      "startFrame": 2678,
+      "durationFrames": 128,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "ESCAPE TUNNEL · MARCH 1943",
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.85
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 2703,
+      "structuralFractureHitFrame": 2703,
+      "textLayers": [
+        {
+          "text": "SEVEN MONTHS TUNNELING",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "ESCAPED WITH ONE HAND",
           "triggerFrameOffset": 25,
-          "tier": "SECONDARY_ACCENT",
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_KISKA_GHOST_TOLL_COUNTER",
+        "skyGradient": [
+          "#57534E",
+          "#1C1917"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "BEDROCK_TUNNEL_BREAKOUT_FRACTURE",
+        "archetypeVariant": "SUBTERRANEAN_SOIL_BREAKTHROUGH"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 25
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_21_DISGUISED_PEASANT_LEADER",
+      "startFrame": 2806,
+      "durationFrames": 127,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "TUSCANY COUNTRYSIDE",
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.75
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 2830,
+      "textLayers": [
+        {
+          "text": "DISGUISED AS PEASANT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "EVADED FOR EIGHT DAYS",
+          "triggerFrameOffset": 24,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#D97706",
+          "#451A03"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "CARTON_PEASANT_DISGUISE_LEADER",
+        "archetypeVariant": "CYPRESS_ROAD_LONE_WANDERER"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 22
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_22_CHURCHILL_MAO_ENVOY_SPLIT",
+      "startFrame": 2933,
+      "durationFrames": 128,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "CHONGQING · 1944-1945",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 2958,
+      "textLayers": [
+        {
+          "text": "CHURCHILL'S SPECIAL ENVOY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "CONFRONTED MAO ZEDONG",
+          "triggerFrameOffset": 25,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#5C240E",
+          "#2E1106"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "svgForegroundAsset": "CARTON_VS_MAO_DIPLOMATIC_SPLIT",
+        "archetypeVariant": "BRITISH_ENVOY_VS_CHAIRMAN"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 23
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_23_ELEVEN_WOUNDS_TALLY",
+      "startFrame": 3061,
+      "durationFrames": 127,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "CAREER SERVICE RECORD",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 3085,
+      "textLayers": [
+        {
+          "text": "EIGHT BATTLES SURVIVED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "ELEVEN BULLET WOUNDS",
+          "triggerFrameOffset": 24,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#78350F",
+          "#2A1408"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "svgForegroundAsset": "TOTAL_CAREER_WOUNDS_TALLY_BOARD",
         "counterConfig": {
-          "label": "CASUALTIES",
-          "startValue": 0,
-          "endValue": 313
+          "label": "BULLET WOUNDS",
+          "startValue": 1,
+          "endValue": 11
         }
       },
       "sfxTriggers": [
         {
           "sfxFile": "counter_roll.wav",
-          "frameOffset": 10
+          "frameOffset": 22
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 22
         }
       ]
     },
     {
-      "sceneId": "SCENE_21_ALEUTIAN_EPILOGUE",
-      "startFrame": 2700,
-      "durationFrames": 168,
-      "archetype": "LONE_LEADER",
+      "sceneId": "SCENE_24_HAPPY_ODYSSEY_MEMOIR_QUOTE",
+      "startFrame": 3188,
+      "durationFrames": 128,
+      "archetype": "QUOTE_CARD",
       "hudVisible": true,
-      "headerContext": "THE FORGOTTEN CAMPAIGN",
+      "headerContext": "IMMORTAL MEMOIR · 1950",
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.6
+        "intensity": 0.75
       },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 3211,
       "textLayers": [
         {
-          "text": "FOUR THOUSAND LIVES LOST.",
+          "text": "HAPPY ODYSSEY MEMOIR",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
+          "colorToken": "STARK_WHITE",
           "animation": "BLUR_TO_SHARP"
         },
         {
-          "text": "RECLAIMING AMERICAN SOIL.",
-          "triggerFrameOffset": 26,
-          "tier": "SECONDARY_ACCENT",
+          "text": "\"FRANKLY I ENJOYED WAR\"",
+          "triggerFrameOffset": 23,
+          "tier": "DISPLAY_HERO",
           "colorToken": "ALERT_RED",
-          "animation": "HARD_POP"
+          "animation": "SCALE_SLAM"
         }
       ],
       "visualPayload": {
-        "svgForegroundAsset": "ALEUTIAN_EPILOGUE_MEMORIAL_STAGE"
+        "skyGradient": [
+          "#4C0519",
+          "#1C0309"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "svgForegroundAsset": "HAPPY_ODYSSEY_MEMOIR_DOSSIER",
+        "quoteAttribution": "SIR ADRIAN CARTON DE WIART VC · 1950"
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
+          "frameOffset": 21
         },
         {
           "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+          "frameOffset": 21
+        }
+      ]
+    },
+    {
+      "sceneId": "SCENE_25_THE_UNKILLABLE_FINAL_LOOP",
+      "startFrame": 3316,
+      "durationFrames": 127,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE UNBROKEN LEGEND",
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.8
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 3339,
+      "textLayers": [
+        {
+          "text": "THE UNKILLABLE SOLDIER",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "STARK_WHITE",
+          "animation": "BLUR_TO_SHARP"
+        },
+        {
+          "text": "SIR ADRIAN CARTON DE WIART",
+          "triggerFrameOffset": 23,
+          "tier": "DISPLAY_HERO",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM"
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B45309",
+          "#2A1408"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "svgForegroundAsset": "CARTON_FINAL_SEAMLESS_LOOP_HERO",
+        "archetypeVariant": "MASTER_SILHOUETTE_LOOP"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 21
+        },
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 21
         }
       ]
     }

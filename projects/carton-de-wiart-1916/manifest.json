@@ -1,0 +1,58 @@
+{
+  "projectSlug": "carton-de-wiart-1916",
+  "title": "THE UNKILLABLE SOLDIER",
+  "updatedAt": "2026-11-02T08:14:25.482Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/current_reel.json",
+    "sha256": "5861c936abc93e187c1e0cd0028143eb7a5805cd429bab17b32718c239704a8c",
+    "sceneCount": 25,
+    "totalFrames": 3443,
+    "durationSec": 57.38
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_carton.mp3",
+    "sha256": "24797dda083240a08a0d9a2b8accfc03711e72d029f286abf2649476da5cc9bf",
+    "bpm": 112.35,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "LICENSED_COMMERCIAL",
+      "clearanceId": "CLR-CARTON-DE-WIART-1916",
+      "attribution": "Meet Her At The Love Parade (Slowed)"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "STANDARD"
+  }
+}

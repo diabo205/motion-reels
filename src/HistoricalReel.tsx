@@ -252,15 +252,18 @@ const SceneItem: React.FC<{
 
   return (
     <AbsoluteFill style={{ overflow: 'hidden' }}>
-      {/* 1. Locked Canvas Palette & Global-Frame Seeded Persistent Particle Emitter */}
+      {/* 1. Atmospheric Staging & Global-Frame Seeded Persistent Particle Emitter */}
       <AtmosphericBackground
         skyGradient={scene.visualPayload.skyGradient}
         theme={meta.palette as any}
-        stageStyle={meta.palette ? 'LOCKED_CANVAS' : stageStyle}
+        stageStyle={scene.visualPayload.stageStyle || stageStyle}
         particleEmitter={
           renderLayer === 'BASE_ONLY' ? 'NONE' : meta.particleEmitter
         }
-        showDunes={!isMapOrBlueprint && !meta.palette}
+        showDunes={
+          scene.visualPayload.stageStyle === 'PAPER_EXTERIOR' ||
+          (!isMapOrBlueprint && stageStyle === 'PAPER_EXTERIOR')
+        }
         showSmoke={!isMapOrBlueprint && renderLayer !== 'OVERLAY_ONLY'}
         globalFrame={globalFrame}
       />

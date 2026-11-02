@@ -53,6 +53,9 @@ Break down the event or topic into chronological, cause-and-effect visual beats:
 
 Anchor the animation in authentic physical, historical, and editorial constraints:
 
+- **Mandatory Reference Blueprinting (`MANDATORY_REFERENCE_PLATE_LINT`)**:
+  - **Zero Abstract Guesswork**: Never draft mechanical assets, terrain maps, architecture, vehicles, or uniforms from memory or abstract speculation. Every scene requires real photographic or archival reference blueprints on disk in `projects/<slug>/plates/` before vector drawing starts.
+  - **Binary Integrity Gate**: Every plate must pass binary magic-byte inspection (JPEG `0xFF 0xD8 0xFF`, PNG `\x89PNG`, WebP `RIFF...WEBP`) and be $\ge 10\text{KB}$. The pipeline strictly blocks compilation and rendering if reference images are missing or corrupt.
 - **Environmental atmosphere**: Match lighting, atmospheric density, weather, and horizon curvature to the exact real-world setting. Seed persistent particle emitters (`SNOW`, `ASH`, `RAIN`, `DUST`) using global timeline frames so weather never resets on scene cuts.
 - **Mechanical fidelity**: Avoid generic tropes (such as fiery Hollywood explosions in vacuums or instant disintegration); animate realistic material stress, deformation, fluid dynamics, or structural failure.
 - **Verified citations & editorial sensitivity**: Pair every quantitative metric or casualty claim with a verified archival source citation (`claim: { text, source, url, verified }`). For solemn mass-casualty or memorial scenes, activate `sensitivity: "SOMBER_MEMORIAL"` to replace aggressive scale-slams and percussive thuds with dignified slow-fade reveals.

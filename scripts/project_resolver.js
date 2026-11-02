@@ -11,6 +11,14 @@ const PROJECT_MAP = {
     bgmFile: 'assets/audio/bgm_aleutian.mp3',
     beatGridFile: 'assets/audio/beat_grid.json',
   },
+  'binance-heist-2026': {
+    slug: 'binance-heist-2026',
+    timelineFile: 'src/timelines/binance_heist_2026.json',
+    compositionId: 'BinanceHeist2026',
+    vectorFile: 'src/components/BinanceHeistVectors.tsx',
+    bgmFile: 'assets/audio/bgm_binance.mp3',
+    beatGridFile: 'assets/audio/beat_grid_binance.json',
+  },
   'operation-cowboy-1945': {
     slug: 'operation-cowboy-1945',
     timelineFile: 'src/timelines/operation_cowboy_1945.json',
@@ -43,6 +51,14 @@ const PROJECT_MAP = {
     bgmFile: 'assets/audio/bgm_peshawar.mp3',
     beatGridFile: 'assets/audio/beat_grid.json',
   },
+  'carton-de-wiart-1916': {
+    slug: 'carton-de-wiart-1916',
+    timelineFile: 'src/timelines/carton_de_wiart_1916.json',
+    compositionId: 'CartonDeWiart1916',
+    vectorFile: 'src/components/CartonDeWiartVectors.tsx',
+    bgmFile: 'assets/audio/bgm_carton.mp3',
+    beatGridFile: 'assets/audio/beat_grid_carton.json',
+  },
 };
 
 function sha256File(filePath) {
@@ -58,11 +74,13 @@ function sha256File(filePath) {
 
 function inferSlugFromTitle(title = '') {
   const upper = String(title).toUpperCase();
+  if (upper.includes('BINANCE') || upper.includes('LAZARUS')) return 'binance-heist-2026';
   if (upper.includes('ALEUTIAN')) return 'aleutian-campaign-1942';
   if (upper.includes('COWBOY')) return 'operation-cowboy-1945';
   if (upper.includes('U-2') || upper.includes('U2')) return 'u2-incident-1960';
   if (upper.includes('TAIPING')) return 'taiping-rebellion-1850';
   if (upper.includes('PESHAWAR')) return 'peshawar-2009';
+  if (upper.includes('CARTON') || upper.includes('WIART') || upper.includes('UNKILLABLE')) return 'carton-de-wiart-1916';
   return (
     upper
       .toLowerCase()

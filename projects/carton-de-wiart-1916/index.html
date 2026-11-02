@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Unkillable Soldier (1899–1945) — Master 9:16 Reel Preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B0D11;
+      color: #E2E8F0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      padding: 24px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .top-header {
+      text-align: center;
+      margin-bottom: 24px;
+      max-width: 720px;
+    }
+    .badge-bar {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #171B22;
+      border: 1px solid #30363D;
+      color: #FBBF24;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .badge-red {
+      border-color: #DC2626;
+      color: #EF4444;
+      background: #251012;
+    }
+    .badge-blue {
+      border-color: #2563EB;
+      color: #60A5FA;
+      background: #0C1E38;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .subhead {
+      color: #94A3B8;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 430px 1fr;
+      gap: 32px;
+      width: 100%;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
+    /* Mobile Device Frame */
+    .phone-mockup {
+      background: #000000;
+      border: 4px solid #334155;
+      border-radius: 46px;
+      padding: 12px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px rgba(220, 38, 38, 0.15);
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+    }
+    .dynamic-island {
+      width: 110px;
+      height: 24px;
+      background: #000;
+      border-radius: 20px;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 40;
+    }
+    .video-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 36px;
+      overflow: hidden;
+      background: #000;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .video-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+      width: 100%;
+    }
+    .speed-pills {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+    .speed-btn {
+      background: #1E293B;
+      border: 1px solid #334155;
+      color: #CBD5E1;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .speed-btn:hover, .speed-btn.active {
+      background: #DC2626;
+      border-color: #EF4444;
+      color: #FFF;
+    }
+    .action-row {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-red {
+      background: #DC2626;
+      color: #FFF;
+    }
+    .btn-red:hover {
+      background: #B91C1C;
+    }
+    .btn-dark {
+      background: #1E293B;
+      color: #E2E8F0;
+      border: 1px solid #334155;
+    }
+    .btn-dark:hover {
+      background: #334155;
+    }
+    /* Right Side Panels */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .panel-card {
+      background: #13171F;
+      border: 1px solid #232936;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .panel-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFF;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+    }
+    .stat-box {
+      background: #0B0E14;
+      border: 1px solid #1E2433;
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .stat-val {
+      font-size: 20px;
+      font-weight: 900;
+      color: #F8FAFC;
+    }
+    .stat-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    /* Scene Navigator */
+    .scene-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .scene-list::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scene-list::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    .scene-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0E121A;
+      border: 1px solid #1E2433;
+      border-radius: 10px;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .scene-item:hover {
+      background: #1A212E;
+      border-color: #3B82F6;
+      transform: translateX(3px);
+    }
+    .scene-item.active {
+      background: #251214;
+      border-color: #DC2626;
+      box-shadow: inset 0 0 0 1px #DC2626;
+    }
+    .scene-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .scene-num {
+      font-size: 12px;
+      font-weight: 900;
+      color: #DC2626;
+      background: #1E0F12;
+      border: 1px solid #4B1D20;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .scene-meta {
+      min-width: 0;
+    }
+    .scene-header {
+      font-size: 11px;
+      color: #64748B;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .scene-text {
+      font-size: 13px;
+      font-weight: 800;
+      color: #E2E8F0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .scene-badge-pill {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #1E293B;
+      color: #94A3B8;
+      flex-shrink: 0;
+    }
+    /* Deliverable Downloads */
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .download-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: #0B0E14;
+      border: 1px solid #1E2433;
+      border-radius: 8px;
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .download-link:hover {
+      background: #1E2433;
+      color: #FFF;
+      border-color: #38BDF8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-header">
+      <div class="badge-bar">
+        <span class="badge badge-red">⚔️ Master Reel</span>
+        <span class="badge badge-blue">🎵 112.35 BPM Librosa Sync</span>
+        <span class="badge">🎨 Peshawar Standard Restored</span>
+        <span class="badge badge-red">🔊 -14 LUFS EBU R128</span>
+      </div>
+      <h1>THE UNKILLABLE SOLDIER (1899–1945)</h1>
+      <p class="subhead">Sir Adrian Carton de Wiart VC · 25 Beat-Synced Scenes · Dynamic Tactile Torn-Paper Staging · Multi-Tier Historical Attire</p>
+    </div>
+
+    <div class="layout-grid">
+      <!-- Left: Mobile Device Mockup Video Player -->
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="phone-mockup">
+          <div class="dynamic-island"></div>
+          <div class="video-viewport">
+            <video id="reelVideo" playsinline preload="auto" controls poster="deliverables/poster.png">
+              <source src="carton_de_wiart_1916_reel.mp4" type="video/mp4">
+              Your browser does not support MP4 video.
+            </video>
+          </div>
+        </div>
+
+        <div class="video-controls">
+          <div class="speed-pills">
+            <span style="font-size: 11px; font-weight: 700; color: #64748B; align-self: center; margin-right: 4px;">SPEED:</span>
+            <button class="speed-btn" onclick="setSpeed(0.5, this)">0.5x</button>
+            <button class="speed-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+            <button class="speed-btn" onclick="setSpeed(1.25, this)">1.25x</button>
+            <button class="speed-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+          </div>
+
+          <div class="action-row">
+            <button class="btn btn-red" onclick="togglePlay()">⏯ Play / Pause</button>
+            <button class="btn btn-dark" onclick="toggleSource(this)">Switch to Scene 1 Clip</button>
+            <button class="btn btn-dark" onclick="restartVideo()">↺ Replay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dashboard & Interactive Scene Navigator -->
+      <div class="sidebar">
+        <!-- Specs Panel -->
+        <div class="panel-card">
+          <div class="panel-title">📊 Production Specifications</div>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-val">57.38s</div>
+              <div class="stat-lbl">Duration (3,443f @ 60fps)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">25 Cuts</div>
+              <div class="stat-lbl">Average 2.29s per Scene</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">112.35</div>
+              <div class="stat-lbl">Audio BPM (343 Transients)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">-14 LUFS</div>
+              <div class="stat-lbl">EBU R128 Loudness Master</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">25/25</div>
+              <div class="stat-lbl">Archival Reference Plates</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">0</div>
+              <div class="stat-lbl">Lint / Safe-Zone Errors</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene Navigator Panel -->
+        <div class="panel-card">
+          <div class="panel-title" style="justify-content: space-between;">
+            <span>⏱ Scene Navigator (Click to Jump)</span>
+            <span id="currentTimeDisplay" style="font-size: 13px; font-family: monospace; color: #38BDF8;">00:00.00</span>
+          </div>
+          <div class="scene-list" id="sceneList">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Deliverables Download Panel -->
+        <div class="panel-card">
+          <div class="panel-title">📦 Exported Deliverables</div>
+          <div class="download-grid">
+            <a class="download-link" href="carton_de_wiart_1916_reel.mp4" download>
+              📥 Master Reel MP4
+            </a>
+            <a class="download-link" href="scene_01.mp4" download>
+              🎬 Scene 1 Clip
+            </a>
+            <a class="download-link" href="deliverables/captions.srt" download>
+              📝 Captions (.srt)
+            </a>
+            <a class="download-link" href="deliverables/poster.png" target="_blank">
+              🖼 9:16 Poster
+            </a>
+            <a class="download-link" href="deliverables/poster_4x5.png" target="_blank">
+              📸 4:5 Instagram Feed
+            </a>
+            <a class="download-link" href="deliverables/metadata.json" target="_blank">
+              📑 Metadata JSON
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SCENES = [
+      { num: 1, id: "SCENE_01", time: 0.00, header: "HOOK · 1899-1945", setup: "SHOT ELEVEN TIMES", payoff: "HE ENJOYED THE WAR", style: "SUNBURST_HERO" },
+      { num: 2, id: "SCENE_02", time: 2.17, header: "1899 · SOUTH AFRICA", setup: "1899: SOUTH AFRICA", payoff: "STOMACH & GROIN WOUNDS", style: "PAPER_EXTERIOR" },
+      { num: 3, id: "SCENE_03", time: 4.30, header: "1902 · BRITISH INDIA", setup: "INDIA HORSE CHARGE", payoff: "SHATTERED RIBS & ANKLE", style: "PAPER_EXTERIOR" },
+      { num: 4, id: "SCENE_04", time: 6.42, header: "1914 · SOMALILAND", setup: "1914: SOMALILAND", payoff: "CHARGE ON DERVISH FORT", style: "GRAPH_GRID" },
+      { num: 5, id: "SCENE_05", time: 8.50, header: "SHIMBER BERRIS · 1914", setup: "THREE BULLETS TO FACE", payoff: "LEFT EYE DESTROYED", style: "PAPER_EXTERIOR" },
+      { num: 6, id: "SCENE_06", time: 11.17, header: "WESTERN FRONT · 1915", setup: "ONE EYE REMAINING", payoff: "REFUSED MEDICAL DISCHARGE", style: "PAPER_EXTERIOR" },
+      { num: 7, id: "SCENE_07", time: 13.82, header: "SECOND BATTLE OF YPRES", setup: "YPRES ARTILLERY BARRAGE", payoff: "LEFT HAND SHATTERED", style: "PAPER_EXTERIOR" },
+      { num: 8, id: "SCENE_08", time: 15.95, header: "FIELD POST · 1915", setup: "DOCTOR REFUSED AMPUTATION", payoff: "BIT OFF HIS FINGERS", style: "GRAPH_GRID" },
+      { num: 9, id: "SCENE_09", time: 18.60, header: "SOMME · 1916", setup: "1916: LA BOISSELLE", payoff: "COMMANDED THREE BATTALIONS", style: "SUNBURST_HERO" },
+      { num: 10, id: "SCENE_10", time: 20.73, header: "SOMME FRONT LINE", setup: "BULLET THROUGH SKULL", payoff: "SURVIVED AND RETURNED", style: "PAPER_EXTERIOR" },
+      { num: 11, id: "SCENE_11", time: 22.85, header: "HIGHEST BRITISH HONOUR", setup: "VICTORIA CROSS AWARDED", payoff: "HIGHEST BRITISH GALLANTRY", style: "SUNBURST_HERO" },
+      { num: 12, id: "SCENE_12", time: 25.43, header: "1920 · POLISH-SOVIET WAR", setup: "1920: POLISH-SOVIET WAR", payoff: "HEADED MILITARY MISSION", style: "GRAPH_GRID" },
+      { num: 13, id: "SCENE_13", time: 27.63, header: "CRASH LANDING · POLAND", setup: "AIRCRAFT CRASH LANDING", payoff: "SURVIVED PLANE WRECK", style: "PAPER_EXTERIOR" },
+      { num: 14, id: "SCENE_14", time: 30.28, header: "RAILWAY AMBUSH · 1920", setup: "COSSACK CAVALRY AMBUSH", payoff: "ONE-HANDED REVOLVER DUEL", style: "PAPER_EXTERIOR" },
+      { num: 15, id: "SCENE_15", time: 32.42, header: "SPEEDING ARMOURED TRAIN", setup: "FELL OFF MOVING TRAIN", payoff: "LEAPED BACK ABOARD", style: "PAPER_EXTERIOR" },
+      { num: 16, id: "SCENE_16", time: 35.07, header: "LONDON · 1939", setup: "1939: WORLD WAR II", payoff: "RETURNED TO COMMAND", style: "NIGHT_FELT" },
+      { num: 17, id: "SCENE_17", time: 37.72, header: "NORWAY · 1940", setup: "SUNDERLAND FLYING BOAT", payoff: "STRAFED BY LUFTWAFFE", style: "PAPER_EXTERIOR" },
+      { num: 18, id: "SCENE_18", time: 39.85, header: "MEDITERRANEAN · 1941", setup: "BOMBER CRASHES AT SEA", payoff: "SWAM TO ENEMY SHORE", style: "PAPER_EXTERIOR" },
+      { num: 19, id: "SCENE_19", time: 42.40, header: "CASTELLO VINCIGLIATA", setup: "CASTELLO DI VINCIGLIATA", payoff: "AGE 61 HIGH-SECURITY POW", style: "WOOD_PANEL" },
+      { num: 20, id: "SCENE_20", time: 44.63, header: "ESCAPE TUNNEL · 1943", setup: "SEVEN MONTHS TUNNELING", payoff: "ESCAPED WITH ONE HAND", style: "GRAPH_GRID" },
+      { num: 21, id: "SCENE_21", time: 46.77, header: "TUSCANY COUNTRYSIDE", setup: "DISGUISED AS PEASANT", payoff: "EVADED FOR EIGHT DAYS", style: "SUNBURST_HERO" },
+      { num: 22, id: "SCENE_22", time: 48.88, header: "CHONGQING · 1944", setup: "CHURCHILL'S SPECIAL ENVOY", payoff: "CONFRONTED MAO ZEDONG", style: "WOOD_PANEL" },
+      { num: 23, id: "SCENE_23", time: 51.02, header: "SERVICE RECORD", setup: "EIGHT BATTLES SURVIVED", payoff: "ELEVEN BULLET WOUNDS", style: "GRAPH_GRID" },
+      { num: 24, id: "SCENE_24", time: 53.13, header: "IMMORTAL MEMOIRS", setup: "HAPPY ODYSSEY MEMOIR", payoff: "\"FRANKLY I ENJOYED WAR\"", style: "WOOD_PANEL" },
+      { num: 25, id: "SCENE_25", time: 55.27, header: "UNBROKEN LEGEND", setup: "THE UNKILLABLE SOLDIER", payoff: "SIR ADRIAN CARTON DE WIART", style: "SUNBURST_HERO" }
+    ];
+
+    const video = document.getElementById('reelVideo');
+    const sceneListEl = document.getElementById('sceneList');
+    const timeDisplay = document.getElementById('currentTimeDisplay');
+    let isMaster = true;
+
+    // Render Scene List
+    SCENES.forEach((s) => {
+      const item = document.createElement('div');
+      item.className = 'scene-item';
+      item.id = `scene-row-${s.num}`;
+      item.onclick = () => jumpToTime(s.time);
+      item.innerHTML = `
+        <div class="scene-left">
+          <div class="scene-num">${s.num}</div>
+          <div class="scene-meta">
+            <div class="scene-header">${s.header} · ${formatTime(s.time)}</div>
+            <div class="scene-text">${s.setup} → <span style="color:#EF4444">${s.payoff}</span></div>
+          </div>
+        </div>
+        <div class="scene-badge-pill">${s.style}</div>
+      `;
+      sceneListEl.appendChild(item);
+    });
+
+    function jumpToTime(sec) {
+      if (!isMaster) {
+        video.src = "carton_de_wiart_1916_reel.mp4";
+        isMaster = true;
+      }
+      video.currentTime = sec;
+      video.play();
+    }
+
+    function togglePlay() {
+      if (video.paused) video.play();
+      else video.pause();
+    }
+
+    function restartVideo() {
+      video.currentTime = 0;
+      video.play();
+    }
+
+    function setSpeed(rate, btn) {
+      video.playbackRate = rate;
+      document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function toggleSource(btn) {
+      if (isMaster) {
+        video.src = "scene_01.mp4";
+        isMaster = false;
+        btn.innerText = "Switch to Master Reel";
+      } else {
+        video.src = "carton_de_wiart_1916_reel.mp4";
+        isMaster = true;
+        btn.innerText = "Switch to Scene 1 Clip";
+      }
+      video.play();
+    }
+
+    function formatTime(totalSec) {
+      const m = Math.floor(totalSec / 60);
+      const s = Math.floor(totalSec % 60);
+      const ms = Math.floor((totalSec % 1) * 100);
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}.${String(ms).padStart(2, '0')}`;
+    }
+
+    // Real-time Scene Tracking
+    video.ontimeupdate = () => {
+      const cur = video.currentTime;
+      timeDisplay.innerText = formatTime(cur);
+
+      if (!isMaster) return;
+
+      let currentScene = SCENES[0];
+      for (let i = 0; i < SCENES.length; i++) {
+        if (cur >= SCENES[i].time) {
+          currentScene = SCENES[i];
+        } else {
+          break;
+        }
+      }
+
+      document.querySelectorAll('.scene-item').forEach(el => el.classList.remove('active'));
+      const activeRow = document.getElementById(`scene-row-${currentScene.num}`);
+      if (activeRow) {
+        activeRow.classList.add('active');
+        activeRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    };
+  </script>
+</body>
+</html>

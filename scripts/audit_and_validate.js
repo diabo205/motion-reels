@@ -7,6 +7,7 @@ const { resolveProject, writeProjectManifest } = require('./project_resolver');
 const { resolveResponsiveFontSize } = require('./font_metrics');
 const { exportProjectDeliverables } = require('./export_deliverables');
 const { lintFramework } = require('./lint_framework');
+const { validateProjectPlates } = require('./plate_validator');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
@@ -236,6 +237,23 @@ async function runAudit(options = {}) {
   } else {
     console.error(
       `❌ VIOLATIONS: ${fwErrors.length} framework violation(s) detected in .tsx code!`
+    );
+  }
+
+  // 2.5. MANDATORY REFERENCE INGESTION LINT (MANDATORY_REFERENCE_PLATE_LINT)
+  console.log('\n--- Mandatory Photographic & Archival Reference Plate Audit ---');
+  const plateCheck = validateProjectPlates(slug, timeline);
+  if (!plateCheck.passed) {
+    violations.push(...plateCheck.errors);
+    console.error(
+      `❌ VIOLATION: MANDATORY_REFERENCE_PLATE_LINT failed! ${plateCheck.errors.length} scene(s) lack verified reference plates on disk.`
+    );
+    for (const err of plateCheck.errors) {
+      console.error(`   - [${err.sceneId}] ${err.actual}`);
+    }
+  } else {
+    console.log(
+      `✅ PASS: MANDATORY_REFERENCE_PLATE_LINT verified (${plateCheck.verifiedCount}/${plateCheck.totalScenes} scenes backed by binary-verified authentic reference plates).`
     );
   }
 

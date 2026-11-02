@@ -1,0 +1,150 @@
+{
+  "projectSlug": "binance-heist-2026",
+  "lastUpdated": "2026-11-01T14:52:32.465Z",
+  "plates": {
+    "korea_night_satellite.jpg": {
+      "filename": "korea_night_satellite.jpg",
+      "format": "JPEG",
+      "sizeBytes": 163975,
+      "description": "NASA Earth Observatory Suomi NPP VIIRS night satellite photograph of Korean Peninsula",
+      "verified": true
+    },
+    "hwasong_15_missile.jpg": {
+      "filename": "hwasong_15_missile.jpg",
+      "format": "JPEG",
+      "sizeBytes": 400268,
+      "description": "Hwasong-15 ICBM heavy TEL transporter and staging blueprint",
+      "verified": true
+    },
+    "bank_citadel_facade.jpg": {
+      "filename": "bank_citadel_facade.jpg",
+      "format": "JPEG",
+      "sizeBytes": 163213,
+      "description": "Neoclassical banking citadel facade with monumental pediment and Corinthian columns",
+      "verified": true
+    },
+    "subsea_fiber_cable.jpg": {
+      "filename": "subsea_fiber_cable.jpg",
+      "format": "PNG",
+      "sizeBytes": 229658,
+      "description": "Armored trans-oceanic subsea fiber-optic communication cable cross-section",
+      "verified": true
+    },
+    "korean_military_cadets.jpg": {
+      "filename": "korean_military_cadets.jpg",
+      "format": "JPEG",
+      "sizeBytes": 134587,
+      "description": "North Korean military parade rank-and-file uniforms, visor caps, and insignias",
+      "verified": true
+    },
+    "vault_door_security.jpg": {
+      "filename": "vault_door_security.jpg",
+      "format": "JPEG",
+      "sizeBytes": 131842,
+      "description": "Monumental round bank vault blast door with multi-bolt locking gears",
+      "verified": true
+    },
+    "cyber_command_terminal.jpg": {
+      "filename": "cyber_command_terminal.jpg",
+      "format": "JPEG",
+      "sizeBytes": 146987,
+      "description": "Low-light command and control room with glowing terminal displays and telemetry matrices",
+      "verified": true
+    },
+    "industrial_pipeline_valve.jpg": {
+      "filename": "industrial_pipeline_valve.jpg",
+      "format": "JPEG",
+      "sizeBytes": 166407,
+      "description": "High-pressure cryogenic industrial pipeline with frosted bypass manifold",
+      "verified": true
+    },
+    "un_security_council.jpg": {
+      "filename": "un_security_council.jpg",
+      "format": "JPEG",
+      "sizeBytes": 389195,
+      "description": "United Nations Security Council chamber and panel rostrum",
+      "verified": true
+    },
+    "press_conference_podium.jpg": {
+      "filename": "press_conference_podium.jpg",
+      "format": "JPEG",
+      "sizeBytes": 78647,
+      "description": "Corporate executive briefing podium with microphone array and backdrop",
+      "verified": true
+    },
+    "gold_bullion_bars.jpg": {
+      "filename": "gold_bullion_bars.jpg",
+      "format": "JPEG",
+      "sizeBytes": 54010,
+      "description": "Refined 999.9 fine gold bullion ingots stacked in high-security reserve vault",
+      "verified": true
+    },
+    "prison_cell_window.jpg": {
+      "filename": "prison_cell_window.jpg",
+      "format": "JPEG",
+      "sizeBytes": 75316,
+      "description": "Concrete solitary containment cell with reinforced steel window bars",
+      "verified": true
+    },
+    "north_korea_emblem.jpg": {
+      "filename": "north_korea_emblem.jpg",
+      "format": "PNG",
+      "sizeBytes": 446129,
+      "description": "Official national emblem and military star insignia of North Korea",
+      "verified": true
+    },
+    "crypto_trading_terminal.jpg": {
+      "filename": "crypto_trading_terminal.jpg",
+      "title": "File:Bitcoin price chart.png",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bitcoin_price_chart.png/960px-Bitcoin_price_chart.png",
+      "format": "PNG",
+      "sizeBytes": 62389,
+      "description": "Cryptocurrency order book telemetry and draining liquidity balance chart",
+      "verified": true
+    },
+    "dmz_border_barriers.jpg": {
+      "filename": "dmz_border_barriers.jpg",
+      "title": "File:United Nations Command Security Battalion guards Joint Security Area in DMZ (9408332).jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/United_Nations_Command_Security_Battalion_guards_Joint_Security_Area_in_DMZ_%289408332%29.jpg/960px-United_Nations_Command_Security_Battalion_guards_Joint_Security_Area_in_DMZ_%289408332%29.jpg",
+      "format": "JPEG",
+      "sizeBytes": 176941,
+      "description": "Korean DMZ concrete dragon teeth anti-tank obstacles, razor wire, and guard tower",
+      "verified": true
+    },
+    "missile_silo_blast_door.jpg": {
+      "filename": "missile_silo_blast_door.jpg",
+      "title": "File:Peacekeeper missile after silo launch.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Peacekeeper_missile_after_silo_launch.jpg/960px-Peacekeeper_missile_after_silo_launch.jpg",
+      "format": "JPEG",
+      "sizeBytes": 203760,
+      "description": "Underground ballistic missile silo subterranean launch tube and blast doors",
+      "verified": true
+    }
+  },
+  "scenePlateMap": {
+    "SCENE_02_KOREA_NIGHT_SATELLITE": "korea_night_satellite.jpg",
+    "SCENE_24_FINAL_LOOP_QUOTE": "korea_night_satellite.jpg",
+    "SCENE_12_HWASONG_ICBM_TRANSIT": "hwasong_15_missile.jpg",
+    "SCENE_13_ROCKET_IGNITION_TEST": "hwasong_15_missile.jpg",
+    "SCENE_19_FORTRESS_BREACH_SHATTER": "bank_citadel_facade.jpg",
+    "SCENE_09_TEN_BLOCKCHAINS_MAP": "subsea_fiber_cable.jpg",
+    "SCENE_22_OCEANIC_CABLES_TRANSIT": "subsea_fiber_cable.jpg",
+    "SCENE_04_CONSCRIPT_CADETS_TALLY": "korean_military_cadets.jpg",
+    "SCENE_17_CHILD_SOLDIERS_MEDALS_TALLY": "korean_military_cadets.jpg",
+    "SCENE_01_ALERT_QUOTE_CARD": "vault_door_security.jpg",
+    "SCENE_06_HOT_VAULT_BREACH": "vault_door_security.jpg",
+    "SCENE_03_UNIT_121_BUNKER": "cyber_command_terminal.jpg",
+    "SCENE_08_WAR_ROOM_ENGINEER": "cyber_command_terminal.jpg",
+    "SCENE_23_TERMINAL_SHUTDOWN_LEADER": "cyber_command_terminal.jpg",
+    "SCENE_10_EMERGENCY_FREEZE_SHATTER": "industrial_pipeline_valve.jpg",
+    "SCENE_11_ROCKET_QUOTE_FINDING": "un_security_council.jpg",
+    "SCENE_14_BINANCE_BAILOUT_LEADER": "press_conference_podium.jpg",
+    "SCENE_15_VAULT_RESTORATION_SPLIT": "gold_bullion_bars.jpg",
+    "SCENE_18_ISOLATED_DARK_CELL": "prison_cell_window.jpg",
+    "SCENE_05_PARALLEL_WORLDS_SPLIT": "north_korea_emblem.jpg",
+    "SCENE_20_CYBER_DOCTRINE_QUOTE": "north_korea_emblem.jpg",
+    "SCENE_07_BALANCES_DRAINING_TALLY": "crypto_trading_terminal.jpg",
+    "SCENE_16_BORDER_WALLS_MAP": "dmz_border_barriers.jpg",
+    "SCENE_21_SMARTPHONE_VS_SILO_SPLIT": "missile_silo_blast_door.jpg"
+  }
+}

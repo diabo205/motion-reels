@@ -2,26 +2,32 @@ import React from 'react';
 import { Composition } from 'remotion';
 import { HistoricalReel, ReelTimeline } from './HistoricalReel';
 import reelData from './timelines/current_reel.json';
+import binanceData from './timelines/binance_heist_2026.json';
 import peshawarData from './timelines/peshawar_2009.json';
 import u2Data from './timelines/u2_incident_1960.json';
 import taipingData from './timelines/taiping_1850.json';
 import cowboyData from './timelines/operation_cowboy_1945.json';
 import aleutianData from './timelines/aleutian_campaign_1942.json';
+import cartonData from './timelines/carton_de_wiart_1916.json';
 
 export const RemotionRoot: React.FC = () => {
   const currentTimeline = reelData as unknown as ReelTimeline;
+  const binanceTimeline = binanceData as unknown as ReelTimeline;
   const peshawarTimeline = peshawarData as unknown as ReelTimeline;
   const u2Timeline = u2Data as unknown as ReelTimeline;
   const taipingTimeline = taipingData as unknown as ReelTimeline;
   const cowboyTimeline = cowboyData as unknown as ReelTimeline;
   const aleutianTimeline = aleutianData as unknown as ReelTimeline;
+  const cartonTimeline = cartonData as unknown as ReelTimeline;
 
   const totalFrames = currentTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+  const binanceFrames = binanceTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3500;
   const peshawarFrames = peshawarTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3240;
   const u2Frames = u2Timeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
   const taipingFrames = taipingTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3000;
   const cowboyFrames = cowboyTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
   const aleutianFrames = aleutianTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
+  const cartonFrames = cartonTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3443;
 
   return (
     <>
@@ -35,6 +41,19 @@ export const RemotionRoot: React.FC = () => {
         height={currentTimeline.meta.height || 1920}
         defaultProps={{
           timeline: currentTimeline,
+        }}
+      />
+
+      {/* 2026 Binance Heist & North Korea Cyber Offensive */}
+      <Composition
+        id="BinanceHeist2026"
+        component={HistoricalReel as any}
+        durationInFrames={binanceFrames}
+        fps={binanceTimeline.meta.fps || 60}
+        width={binanceTimeline.meta.width || 1080}
+        height={binanceTimeline.meta.height || 1920}
+        defaultProps={{
+          timeline: binanceTimeline,
         }}
       />
 
@@ -100,6 +119,19 @@ export const RemotionRoot: React.FC = () => {
         height={aleutianTimeline.meta?.height || 1920}
         defaultProps={{
           timeline: aleutianTimeline,
+        }}
+      />
+
+      {/* Sir Adrian Carton de Wiart VC - The Unkillable Soldier Reel */}
+      <Composition
+        id="CartonDeWiart1916"
+        component={HistoricalReel as any}
+        durationInFrames={cartonFrames}
+        fps={cartonTimeline.meta?.fps || 60}
+        width={cartonTimeline.meta?.width || 1080}
+        height={cartonTimeline.meta?.height || 1920}
+        defaultProps={{
+          timeline: cartonTimeline,
         }}
       />
     </>

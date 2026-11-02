@@ -52,10 +52,21 @@ Follow these steps sequentially whenever the user invokes `/build-historical-ree
    - **Assign Seven Modular Archetypes**: `LONE_LEADER`, `CROWD_TALLY`, `VEHICLE_IN_TRANSIT`, `STRUCTURAL_FRACTURE`, `VECTOR_MAP`, `SPLIT_CONFRONTATION`, `QUOTE_CARD`.
    - **Editorial Citations & Sensitivity Mode**: Include `claim: { text, source, url, verified }` on metric scenes and `sensitivity: "SOMBER_MEMORIAL"` on solemn casualty scenes.
 
+3.5. **Mandatory Photographic Reference Ingestion (`MANDATORY_REFERENCE_PLATE_LINT`)**:
+   **STRICT SYSTEM REQUIREMENT: No SVG may be drawn without on-disk reference images.**
+   Run:
+   ```powershell
+   node scripts/ingest_reference_plates.js --project <project-slug>
+   ```
+   - Ingests photographic or archival reference blueprints for every scene into `projects/<slug>/plates/`.
+   - Strictly validates binary magic bytes (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP) and minimum size ($\ge 10\text{KB}$) to guarantee zero corrupted HTML error pages.
+   - Enforces Wikimedia standard thumbnail steps (`960px` / `1280px` via `w.wiki/GHai`) to prevent 400 Bad Request and 429 rate limits.
+   - Writes `projects/<slug>/plates/manifest.json`. The pipeline (`scripts/pipeline.js` and `scripts/audit_and_validate.js`) will abort with a blocking exit code if any scene lacks a verified reference plate.
+
 4. **Parallel High-Fidelity Visual Generation**:
    Concurrently invoke:
    - `vector-scene-architect`:
-     - **Mandatory Reference Ingestion & 6-Layer Vector Anatomy**: Ingest archival reference plates into `assets/plates/` or `projects/<slug>/plates/` before drafting any mechanical asset, structural fracture, or explosion. Deconstruct references into (1) Ambient Volumetric Aura, (2) Dynamic Shockwaves/Ozone, (3) Acute Fire Spikes, (4) Multi-Tiered Organic Body via `src/kit/OrganicExplosion.tsx`, (5) Core Accent Flash, (6) Detached Orbiting Cloudlets/Shrapnel.
+     - **Mandatory Reference Blueprinting & 6-Layer Vector Anatomy**: Inspect on-disk reference plates from `projects/<slug>/plates/` before drafting any mechanical asset, structural fracture, or explosion. Deconstruct references into (1) Ambient Volumetric Aura, (2) Dynamic Shockwaves/Ozone, (3) Acute Fire Spikes, (4) Multi-Tiered Organic Body via `src/kit/OrganicExplosion.tsx`, (5) Core Accent Flash, (6) Detached Orbiting Cloudlets/Shrapnel.
      - **Grim & Serious Scenarios (Default)**: Flat dark silhouettes (`#090D12` / `#12151B`) with atmospheric backlighting and at most one accent prop.
      - **Zero Direct Image Pasting (`PHOTO_PASTE_LINT`)**: Archival photos serve strictly as visual reference to draw parametric 2D SVG vector art. Never place raw `<img>` or `<image>` tags in vector components.
      - **Zero Illustration Text & Single-Source Metrics**: No captions or data placards inside lower artwork. No duplicated metrics.

@@ -1,0 +1,163 @@
+{
+  "projectSlug": "carton-de-wiart-1916",
+  "lastUpdated": "2026-11-02T06:19:04.795Z",
+  "plates": {
+    "carton_portrait_hero.jpg": {
+      "filename": "carton_portrait_hero.jpg",
+      "format": "JPEG",
+      "sizeBytes": 136688,
+      "description": "Official portrait of Lieutenant General Sir Adrian Carton de Wiart VC with eyepatch and pinned sleeve",
+      "verified": true
+    },
+    "boer_war_combat.jpg": {
+      "filename": "boer_war_combat.jpg",
+      "format": "JPEG",
+      "sizeBytes": 244667,
+      "description": "British infantry troops in active combat during Second Boer War South Africa",
+      "verified": true
+    },
+    "carton_1904_uniform.jpg": {
+      "filename": "carton_1904_uniform.jpg",
+      "format": "JPEG",
+      "sizeBytes": 202829,
+      "description": "Adrian Carton de Wiart in 1904 British cavalry service uniform",
+      "verified": true
+    },
+    "somaliland_water_troops.jpg": {
+      "filename": "somaliland_water_troops.jpg",
+      "format": "JPEG",
+      "sizeBytes": 390818,
+      "description": "British Somaliland camel corps campaign troops in Somaliland expedition",
+      "verified": true
+    },
+    "carton_ww1_officer.jpg": {
+      "filename": "carton_ww1_officer.jpg",
+      "format": "JPEG",
+      "sizeBytes": 160706,
+      "description": "Lieutenant Colonel Adrian Carton de Wiart in World War I tunic",
+      "verified": true
+    },
+    "ypres_night_barrage.jpg": {
+      "filename": "ypres_night_barrage.jpg",
+      "format": "JPEG",
+      "sizeBytes": 134881,
+      "description": "Night artillery barrage flashes and shellbursts over the Ypres salient",
+      "verified": true
+    },
+    "somme_trench_1916.jpg": {
+      "filename": "somme_trench_1916.jpg",
+      "format": "JPEG",
+      "sizeBytes": 246940,
+      "description": "British infantry inside frontline trench during the 1916 Battle of the Somme",
+      "verified": true
+    },
+    "victoria_cross_medal.jpg": {
+      "filename": "victoria_cross_medal.jpg",
+      "format": "JPEG",
+      "sizeBytes": 357444,
+      "description": "Bronze Victoria Cross medal with crimson ribbon and For Valour inscription",
+      "verified": true
+    },
+    "polish_armoured_train_1.jpg": {
+      "filename": "polish_armoured_train_1.jpg",
+      "format": "JPEG",
+      "sizeBytes": 140927,
+      "description": "Armoured artillery train Bartosz Glowacki during the Polish-Soviet War 1920",
+      "verified": true
+    },
+    "polish_armoured_train_2.jpg": {
+      "filename": "polish_armoured_train_2.jpg",
+      "format": "JPEG",
+      "sizeBytes": 154266,
+      "description": "Armoured locomotive Smialy during 1920 Polish-Soviet operations",
+      "verified": true
+    },
+    "carton_de_wiart_general.jpg": {
+      "filename": "carton_de_wiart_general.jpg",
+      "format": "JPEG",
+      "sizeBytes": 83727,
+      "description": "Major General Adrian Carton de Wiart portrait with officer cap and medals",
+      "verified": true
+    },
+    "short_sunderland_boat.jpg": {
+      "filename": "short_sunderland_boat.jpg",
+      "format": "JPEG",
+      "sizeBytes": 167156,
+      "description": "RAF Coastal Command Short Sunderland four-engine flying boat on ocean",
+      "verified": true
+    },
+    "raf_bomber_wreckage.jpg": {
+      "filename": "raf_bomber_wreckage.jpg",
+      "format": "JPEG",
+      "sizeBytes": 219117,
+      "description": "Twin-engine British military bomber ditched off Mediterranean coastline",
+      "verified": true
+    },
+    "italian_medieval_fortress.jpg": {
+      "filename": "italian_medieval_fortress.jpg",
+      "format": "JPEG",
+      "sizeBytes": 137667,
+      "description": "Stone bastion walls, ramparts, and iron-barred casemate of Italian fortress castle",
+      "verified": true
+    },
+    "mao_and_chiang_1945.jpg": {
+      "filename": "mao_and_chiang_1945.jpg",
+      "format": "JPEG",
+      "sizeBytes": 158121,
+      "description": "Mao Zedong and Chiang Kai-shek together at Chongqing negotiations where Carton de Wiart served",
+      "verified": true
+    },
+    "carton_memorial_plaque.jpg": {
+      "filename": "carton_memorial_plaque.jpg",
+      "format": "JPEG",
+      "sizeBytes": 394281,
+      "description": "Sir Adrian Carton de Wiart VC memorial inscription in Killinardrish cemetery",
+      "verified": true
+    },
+    "biplane_crash_wreck.jpg": {
+      "filename": "biplane_crash_wreck.jpg",
+      "title": "File:Curtiss Jenny biplane crash WWI.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Curtiss_Jenny_biplane_crash_WWI.jpg/960px-Curtiss_Jenny_biplane_crash_WWI.jpg",
+      "format": "JPEG",
+      "sizeBytes": 112388,
+      "description": "Military reconnaissance biplane fuselage wreckage after crash landing",
+      "verified": true
+    },
+    "italian_countryside_peasant.jpg": {
+      "filename": "italian_countryside_peasant.jpg",
+      "title": "File:Cypress tree alley at sunset in Asciano, Tuscany.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Cypress_tree_alley_at_sunset_in_Asciano%2C_Tuscany.jpg/960px-Cypress_tree_alley_at_sunset_in_Asciano%2C_Tuscany.jpg",
+      "format": "JPEG",
+      "sizeBytes": 179165,
+      "description": "Rural Italian landscape with rustic stone farmhouses and cypress road",
+      "verified": true
+    }
+  },
+  "scenePlateMap": {
+    "SCENE_01_UNKILLABLE_HOOK_LEADER": "carton_portrait_hero.jpg",
+    "SCENE_25_THE_UNKILLABLE_FINAL_LOOP": "carton_portrait_hero.jpg",
+    "SCENE_02_BOER_WAR_RIVER_WOUNDS": "boer_war_combat.jpg",
+    "SCENE_03_INDIA_HORSE_CHARGE": "carton_1904_uniform.jpg",
+    "SCENE_04_SOMALILAND_FORTRESS_MAP": "somaliland_water_troops.jpg",
+    "SCENE_05_THREE_BULLETS_EYE_SHATTER": "somaliland_water_troops.jpg",
+    "SCENE_06_WESTERN_FRONT_EYEPATCH_LEADER": "carton_ww1_officer.jpg",
+    "SCENE_10_BULLET_SKULL_SURVIVAL_LEADER": "carton_ww1_officer.jpg",
+    "SCENE_07_YPRES_ARTILLERY_SPLIT": "ypres_night_barrage.jpg",
+    "SCENE_08_AMPUTATION_BITTEN_FINGERS": "somme_trench_1916.jpg",
+    "SCENE_09_SOMME_LA_BOISSELLE_TALLY": "somme_trench_1916.jpg",
+    "SCENE_11_VICTORIA_CROSS_QUOTE": "victoria_cross_medal.jpg",
+    "SCENE_23_ELEVEN_WOUNDS_TALLY": "victoria_cross_medal.jpg",
+    "SCENE_12_POLISH_SOVIET_WAR_MAP": "polish_armoured_train_1.jpg",
+    "SCENE_14_COSSACK_TRAIN_GUNFIGHT_SPLIT": "polish_armoured_train_1.jpg",
+    "SCENE_15_SPEEDING_TRAIN_LEAP": "polish_armoured_train_2.jpg",
+    "SCENE_16_WORLD_WAR_TWO_RECALL_LEADER": "carton_de_wiart_general.jpg",
+    "SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT": "short_sunderland_boat.jpg",
+    "SCENE_18_SEA_BOMBER_CRASH_SHATTER": "raf_bomber_wreckage.jpg",
+    "SCENE_19_VINCIGLIATA_PRISON_FORTRESS_SPLIT": "italian_medieval_fortress.jpg",
+    "SCENE_20_ONE_HANDED_TUNNEL_ESCAPE": "italian_medieval_fortress.jpg",
+    "SCENE_22_CHURCHILL_MAO_ENVOY_SPLIT": "mao_and_chiang_1945.jpg",
+    "SCENE_24_HAPPY_ODYSSEY_MEMOIR_QUOTE": "carton_memorial_plaque.jpg",
+    "SCENE_13_AIRCRAFT_CRASH_WRECK": "biplane_crash_wreck.jpg",
+    "SCENE_21_DISGUISED_PEASANT_LEADER": "italian_countryside_peasant.jpg"
+  }
+}

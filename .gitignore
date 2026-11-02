@@ -22,6 +22,9 @@ yt-dlp.exe
 scratch_*
 *.tmp
 *.log
+video_info.json
+video_sub.*
+bgm_info.json
 
 # Operating System files
 .DS_Store

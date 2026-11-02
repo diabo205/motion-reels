@@ -1,0 +1,58 @@
+{
+  "projectSlug": "binance-heist-2026",
+  "title": "2026 BINANCE HEIST",
+  "updatedAt": "2026-11-02T08:14:49.342Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/binance_heist_2026.json",
+    "sha256": "9584e2499fc9d68b97a20d6fb82be7ba2ab521e33a07ce1a91b105dc378c924f",
+    "sceneCount": 24,
+    "totalFrames": 3500,
+    "durationSec": 58.33
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_binance.mp3",
+    "sha256": "c046054ba70f82c8b4db4e0afe0dfaa5aa0672e30f3a035f896eecd3e1535fb5",
+    "bpm": 123.05,
+    "bgmLicense": {
+      "source": "Project Audio Library",
+      "licenseType": "LICENSED_COMMERCIAL",
+      "clearanceId": "CLR-BINANCE-HEIST-2026",
+      "attribution": "HELLBLADE - discipline"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "ESPIONAGE_DOSSIER",
+    "particleEmitter": "DUST",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "STANDARD"
+  }
+}

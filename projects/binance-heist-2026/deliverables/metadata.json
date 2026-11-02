@@ -1,0 +1,275 @@
+{
+  "projectSlug": "binance-heist-2026",
+  "generatedAt": "2026-11-02T08:14:49.347Z",
+  "title": "2026 BINANCE HEIST: IN TWENTY SILENT MINUTES SIX BILLION DOLLARS VANISHED",
+  "description": "2026 BINANCE HEIST (🇰🇵 💻 ⚡ 🏦)\n\nIN TWENTY SILENT MINUTES SIX BILLION DOLLARS VANISHED\n\nHistorical Sources & Fact-Check Citations:\n• SIX BILLION DOLLARS DRAINED IN TWENTY MINUTES ACROSS TEN BLOCKCHAINS — Source: FBI & TRM Labs Cyber Intelligence\n• NORTH KOREA APPEARS AS A COMPLETE BLACK HOLE OF LIGHT FROM ORBIT — Source: NASA Earth Observatory Black Marble\n• NORTH KOREA DRAFTS MATH PRODIGIES INTO CYBER UNITS AT AGE TWELVE — Source: CSIS Cybersecurity Assessment\n• UNIT 121 MAINTAINS AN ESTIMATED 6,800 TRAINED CYBER OPERATIVES — Source: South Korean Defense Intelligence\n• ATTACKERS COMPROMISED INTERNAL SIGNING KEYS THROUGH COMPROMISED DEV CREDENTIALS — Source: Chainalysis Incident Dossier\n• THE ATTACK REACHED PEAK OUTFLOW EXCEEDING THREE HUNDRED MILLION PER MINUTE — Source: Blockaid Blockchain Telemetry\n• STABLECOIN ISSUERS FROZE APPROXIMATELY 2.7 BILLION IN TRANSIT — Source: TRM Labs Asset Tracking\n• OVER HALF OF NORTH KOREA MISSILE PROGRAM IS FUNDED BY CRYPTO HEISTS — Source: United Nations Security Council Sanctions Panel\n• BINANCE PLEDGED CORPORATE TREASURY RESERVES TO PREVENT CONSUMER LOSSES — Source: Binance Official Statement\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Binance #Heist #2026",
+  "hashtags": [
+    "#History",
+    "#Documentary",
+    "#MilitaryHistory",
+    "#MotionGraphics",
+    "#Shorts",
+    "#Binance",
+    "#Heist",
+    "#2026"
+  ],
+  "srtFile": "captions.srt",
+  "poster9x16": "poster.png",
+  "poster4x5": "poster_4x5.png",
+  "bgmLicense": {
+    "source": "Project Audio Library",
+    "licenseType": "LICENSED_COMMERCIAL",
+    "clearanceId": "CLR-BINANCE-HEIST-2026",
+    "attribution": "HELLBLADE - discipline"
+  },
+  "claims": [
+    {
+      "sceneId": "SCENE_01_ALERT_QUOTE_CARD",
+      "text": "SIX BILLION DOLLARS DRAINED IN TWENTY MINUTES ACROSS TEN BLOCKCHAINS",
+      "source": "FBI & TRM Labs Cyber Intelligence",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_02_KOREA_NIGHT_SATELLITE",
+      "text": "NORTH KOREA APPEARS AS A COMPLETE BLACK HOLE OF LIGHT FROM ORBIT",
+      "source": "NASA Earth Observatory Black Marble",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_03_UNIT_121_BUNKER",
+      "text": "NORTH KOREA DRAFTS MATH PRODIGIES INTO CYBER UNITS AT AGE TWELVE",
+      "source": "CSIS Cybersecurity Assessment",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_04_CONSCRIPT_CADETS_TALLY",
+      "text": "UNIT 121 MAINTAINS AN ESTIMATED 6,800 TRAINED CYBER OPERATIVES",
+      "source": "South Korean Defense Intelligence",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_06_HOT_VAULT_BREACH",
+      "text": "ATTACKERS COMPROMISED INTERNAL SIGNING KEYS THROUGH COMPROMISED DEV CREDENTIALS",
+      "source": "Chainalysis Incident Dossier",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_07_BALANCES_DRAINING_TALLY",
+      "text": "THE ATTACK REACHED PEAK OUTFLOW EXCEEDING THREE HUNDRED MILLION PER MINUTE",
+      "source": "Blockaid Blockchain Telemetry",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_10_EMERGENCY_FREEZE_SHATTER",
+      "text": "STABLECOIN ISSUERS FROZE APPROXIMATELY 2.7 BILLION IN TRANSIT",
+      "source": "TRM Labs Asset Tracking",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_11_ROCKET_QUOTE_FINDING",
+      "text": "OVER HALF OF NORTH KOREA MISSILE PROGRAM IS FUNDED BY CRYPTO HEISTS",
+      "source": "United Nations Security Council Sanctions Panel",
+      "verified": true
+    },
+    {
+      "sceneId": "SCENE_14_BINANCE_BAILOUT_LEADER",
+      "text": "BINANCE PLEDGED CORPORATE TREASURY RESERVES TO PREVENT CONSUMER LOSSES",
+      "source": "Binance Official Statement",
+      "verified": true
+    }
+  ],
+  "accessibilityAltText": [
+    {
+      "sceneNumber": 1,
+      "sceneId": "SCENE_01_ALERT_QUOTE_CARD",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "CYBER ATTRIBUTION ALERT",
+      "caption": "IN TWENTY SILENT MINUTES — SIX BILLION DOLLARS VANISHED",
+      "visualAsset": "BINANCE_ALERT_QUOTE_CARD"
+    },
+    {
+      "sceneNumber": 2,
+      "sceneId": "SCENE_02_KOREA_NIGHT_SATELLITE",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "SATELLITE RECONNAISSANCE",
+      "caption": "SEEN FROM EARTH ORBIT — AN ENTIRE NATION SLEEPS DARK",
+      "visualAsset": "KOREA_PENINSULA_NIGHT_SATELLITE"
+    },
+    {
+      "sceneNumber": 3,
+      "sceneId": "SCENE_03_UNIT_121_BUNKER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "UNIT 121 BUNKER",
+      "caption": "DEEP UNDER PYONGYANG — CHILDREN ARE DRAFTED TO HACK",
+      "visualAsset": "UNIT_121_CYBER_BUNKER"
+    },
+    {
+      "sceneNumber": 4,
+      "sceneId": "SCENE_04_CONSCRIPT_CADETS_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": null,
+      "caption": "SIX THOUSAND CADETS — PRISONERS OF THEIR OWN GENIUS",
+      "visualAsset": "PYONGYANG_CONSCRIPT_CADETS_TALLY"
+    },
+    {
+      "sceneNumber": 5,
+      "sceneId": "SCENE_05_PARALLEL_WORLDS_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "PARALLEL REALITIES",
+      "caption": "ONE HALF OF ASIA STARVES — THE OTHER STORES BILLIONS",
+      "visualAsset": "PARALLEL_WORLDS_SPLIT"
+    },
+    {
+      "sceneNumber": 6,
+      "sceneId": "SCENE_06_HOT_VAULT_BREACH",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "BINANCE HOT VAULTS",
+      "caption": "A SINGLE MALICIOUS UPDATE — SHATTERS THE SECURITY SHIELD",
+      "visualAsset": "BINANCE_HOT_VAULT_BREACH"
+    },
+    {
+      "sceneNumber": 7,
+      "sceneId": "SCENE_07_BALANCES_DRAINING_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "GLOBAL ACCOUNTS",
+      "caption": "WHILE ORDINARY FAMILIES SLEPT — MILLIONS OF BALANCES DRAINED",
+      "visualAsset": "GLOBAL_BALANCES_DRAINING_TALLY"
+    },
+    {
+      "sceneNumber": 8,
+      "sceneId": "SCENE_08_WAR_ROOM_ENGINEER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "EMERGENCY WAR ROOM",
+      "caption": "A SOLITARY ENGINEER WATCHES — THE SCREEN RUNNING RED",
+      "visualAsset": "SINGAPORE_WAR_ROOM_ENGINEER"
+    },
+    {
+      "sceneNumber": 9,
+      "sceneId": "SCENE_09_TEN_BLOCKCHAINS_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "TEN BLOCKCHAINS",
+      "caption": "ACROSS BORDERLESS LEDGERS — FUNDS SCATTER IN SECONDS",
+      "visualAsset": "TEN_BLOCKCHAINS_LIQUIDITY_MAP"
+    },
+    {
+      "sceneNumber": 10,
+      "sceneId": "SCENE_10_EMERGENCY_FREEZE_SHATTER",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "EMERGENCY FREEZE",
+      "caption": "TWO BILLION FROZEN MID-AIR — FOUR BILLION SLIPS AWAY",
+      "visualAsset": "EMERGENCY_FREEZE_SHATTER"
+    },
+    {
+      "sceneNumber": 11,
+      "sceneId": "SCENE_11_ROCKET_QUOTE_FINDING",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "INTELLIGENCE FINDING",
+      "caption": "NOT STOLEN FOR GREED — STOLEN TO BUILD WARHEADS",
+      "visualAsset": "UN_INTELLIGENCE_ROCKET_QUOTE"
+    },
+    {
+      "sceneNumber": 12,
+      "sceneId": "SCENE_12_HWASONG_ICBM_TRANSIT",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "SUNAN LAUNCH PAD",
+      "caption": "THROUGH THE FROZEN SNOW — AN ICBM ROLLS FORWARD",
+      "visualAsset": "HWASONG_ICBM_SNOW_TRANSIT"
+    },
+    {
+      "sceneNumber": 13,
+      "sceneId": "SCENE_13_ROCKET_IGNITION_TEST",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "IGNITION TEST",
+      "caption": "YOUR RETIREMENT SAVINGS — TURNING INTO ROCKET FUEL",
+      "visualAsset": "ROCKET_ENGINE_TEST_IGNITION"
+    },
+    {
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_BINANCE_BAILOUT_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "BINANCE HEADQUARTERS",
+      "caption": "TO STOP A GLOBAL COLLAPSE — THE EXCHANGE ABSORBS RUIN",
+      "visualAsset": "BINANCE_LEADERSHIP_BAILOUT"
+    },
+    {
+      "sceneNumber": 15,
+      "sceneId": "SCENE_15_VAULT_RESTORATION_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "CORPORATE RESERVES",
+      "caption": "BILLIONS REPLACED IN VAULTS — SAVING ORDINARY DEPOSITORS",
+      "visualAsset": "VAULT_RESERVES_RESTORATION_SPLIT"
+    },
+    {
+      "sceneNumber": 16,
+      "sceneId": "SCENE_16_BORDER_WALLS_MAP",
+      "archetype": "VECTOR_MAP",
+      "headerContext": "GEOPOLITICAL REALITY",
+      "caption": "CENTURIES OF BORDER WALLS — DEFEATED BY A KEYSTROKE",
+      "visualAsset": "BORDER_WALLS_DEFEATED_MAP"
+    },
+    {
+      "sceneNumber": 17,
+      "sceneId": "SCENE_17_CHILD_SOLDIERS_MEDALS_TALLY",
+      "archetype": "CROWD_TALLY",
+      "headerContext": "PYONGYANG CITADEL",
+      "caption": "THE REGIME PINS MEDALS — ON EXHAUSTED TEENAGE SOLDIERS",
+      "visualAsset": "MEDALS_ON_CHILD_SOLDIERS_TALLY"
+    },
+    {
+      "sceneNumber": 18,
+      "sceneId": "SCENE_18_ISOLATED_DARK_CELL",
+      "archetype": "LONE_LEADER",
+      "headerContext": "COLD ISOLATION",
+      "caption": "THEY EARN NO FREEDOM — THEY NEVER LEAVE THE CELL",
+      "visualAsset": "ISOLATED_HACKER_DARK_CELL"
+    },
+    {
+      "sceneNumber": 19,
+      "sceneId": "SCENE_19_FORTRESS_BREACH_SHATTER",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": "MODERN WARFARE",
+      "caption": "NO ARTILLERY WAS FIRED — YET THE FORTRESS FELL",
+      "visualAsset": "DIGITAL_FORTRESS_COLLAPSE"
+    },
+    {
+      "sceneNumber": 20,
+      "sceneId": "SCENE_20_CYBER_DOCTRINE_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "OFFICIAL DOCTRINE",
+      "caption": "A STARVING NATION FOUND — THE WEAPON OF TOMORROW",
+      "visualAsset": "CYBER_DOCTRINE_DOSSIER_QUOTE"
+    },
+    {
+      "sceneNumber": 21,
+      "sceneId": "SCENE_21_SMARTPHONE_VS_SILO_SPLIT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": "THE INVISIBLE FRONTLINE",
+      "caption": "THE SILO IN THE MOUNTAINS — LOCKED TO YOUR SCREEN",
+      "visualAsset": "SMARTPHONE_VS_SILO_SPLIT"
+    },
+    {
+      "sceneNumber": 22,
+      "sceneId": "SCENE_22_OCEANIC_CABLES_TRANSIT",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "headerContext": "PACIFIC TELEMETRY",
+      "caption": "UNDER OCEANIC CABLES — THE GHOST WEALTH DRIFTS",
+      "visualAsset": "OCEANIC_CABLES_GHOST_WEALTH"
+    },
+    {
+      "sceneNumber": 23,
+      "sceneId": "SCENE_23_TERMINAL_SHUTDOWN_LEADER",
+      "archetype": "LONE_LEADER",
+      "headerContext": "TERMINAL SHUTDOWN",
+      "caption": "THE SCREENS TURN BLACK — THE SILENCE IS DEAFENING",
+      "visualAsset": "TERMINAL_SHUTDOWN_SILENCE"
+    },
+    {
+      "sceneNumber": 24,
+      "sceneId": "SCENE_24_FINAL_LOOP_QUOTE",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "FINAL REVELATION",
+      "caption": "NEVER AT THE BORDER — ALREADY IN YOUR POCKET",
+      "visualAsset": "IN_YOUR_POCKET_FINAL_QUOTE"
+    }
+  ]
+}

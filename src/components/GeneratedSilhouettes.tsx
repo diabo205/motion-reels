@@ -1,6 +1,32 @@
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import {
+  BinanceAlertQuoteCard,
+  KoreaPeninsulaNightSatellite,
+  Unit121CyberBunker,
+  PyongyangConscriptCadetsTally,
+  ParallelWorldsSplit,
+  BinanceHotVaultBreach,
+  GlobalBalancesDrainingTally,
+  SingaporeWarRoomEngineer,
+  TenBlockchainsLiquidityMap,
+  EmergencyFreezeShatter,
+  UnIntelligenceRocketQuote,
+  HwasongIcbmSnowTransit,
+  RocketEngineTestIgnition,
+  BinanceLeadershipBailout,
+  VaultReservesRestorationSplit,
+  BorderWallsDefeatedMap,
+  MedalsOnChildSoldiersTally,
+  IsolatedHackerDarkCell,
+  DigitalFortressCollapse,
+  CyberDoctrineDossierQuote,
+  SmartphoneVsSiloSplit,
+  OceanicCablesGhostWealth,
+  TerminalShutdownSilence,
+  InYourPocketFinalQuote,
+} from './BinanceHeistVectors';
+import {
   M24ChaffeeTankSilhouette,
   C130HerculesSilhouette,
   MvSwatCargoShipSilhouette,
@@ -129,6 +155,33 @@ import {
   AleutianKiskaGhostTollCounter,
   AleutianEpilogueMemorialStage,
 } from './AleutianVectors';
+import {
+  CartonHeroSilhouetteHook,
+  BoerWarRiverCrossingAmbush,
+  IndiaCavalryGallopCharge,
+  SomalilandExpeditionMapVector,
+  ShimberBerrisFortDetonation,
+  CartonBlackEyepatchProfile,
+  YpresTrenchBarrageSplit,
+  AmputationSeveredHandFracture,
+  SommeLaBoisselleTally,
+  CartonSkullBulletSurvival,
+  VictoriaCrossBronzeCard,
+  PolishSovietBorderMapVector,
+  BiplaneSmokingCrashWreck,
+  CossackCavalryVsTrainSplit,
+  ArmouredTrainHighSpeedLeap,
+  CartonMajorGeneralWw2,
+  SunderlandFlyingBoatFjord,
+  BomberOceanImpactSplash,
+  VincigliataCastlePowSplit,
+  BedrockTunnelBreakoutFracture,
+  CartonPeasantDisguiseLeader,
+  CartonVsMaoDiplomaticSplit,
+  TotalCareerWoundsTallyBoard,
+  HappyOdysseyMemoirDossier,
+  CartonFinalSeamlessLoopHero,
+} from './CartonDeWiartVectors';
 import { loadFont as loadCourierPrime } from '@remotion/google-fonts/CourierPrime';
 import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
 import { loadFont as loadBlackOpsOne } from '@remotion/google-fonts/BlackOpsOne';
@@ -2421,6 +2474,159 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
         </svg>
       );
     }
+
+    // ========================================================
+    // 2026 BINANCE HEIST & NORTH KOREA CYBER OFFENSIVE
+    // ========================================================
+    case 'BINANCE_ALERT_QUOTE_CARD':
+      return <BinanceAlertQuoteCard />;
+
+    case 'KOREA_PENINSULA_NIGHT_SATELLITE':
+      return <KoreaPeninsulaNightSatellite />;
+
+    case 'UNIT_121_CYBER_BUNKER':
+      return <Unit121CyberBunker />;
+
+    case 'PYONGYANG_CONSCRIPT_CADETS_TALLY':
+      return <PyongyangConscriptCadetsTally />;
+
+    case 'PARALLEL_WORLDS_SPLIT':
+      return <ParallelWorldsSplit />;
+
+    case 'BINANCE_HOT_VAULT_BREACH':
+      return <BinanceHotVaultBreach />;
+
+    case 'GLOBAL_BALANCES_DRAINING_TALLY':
+      return <GlobalBalancesDrainingTally />;
+
+    case 'SINGAPORE_WAR_ROOM_ENGINEER':
+      return <SingaporeWarRoomEngineer />;
+
+    case 'TEN_BLOCKCHAINS_LIQUIDITY_MAP':
+      return <TenBlockchainsLiquidityMap />;
+
+    case 'EMERGENCY_FREEZE_SHATTER':
+      return <EmergencyFreezeShatter />;
+
+    case 'UN_INTELLIGENCE_ROCKET_QUOTE':
+      return <UnIntelligenceRocketQuote />;
+
+    case 'HWASONG_ICBM_SNOW_TRANSIT':
+      return <HwasongIcbmSnowTransit />;
+
+    case 'ROCKET_ENGINE_TEST_IGNITION':
+      return <RocketEngineTestIgnition />;
+
+    case 'BINANCE_LEADERSHIP_BAILOUT':
+      return <BinanceLeadershipBailout />;
+
+    case 'VAULT_RESERVES_RESTORATION_SPLIT':
+      return <VaultReservesRestorationSplit />;
+
+    case 'BORDER_WALLS_DEFEATED_MAP':
+      return <BorderWallsDefeatedMap />;
+
+    case 'MEDALS_ON_CHILD_SOLDIERS_TALLY':
+      return <MedalsOnChildSoldiersTally />;
+
+    case 'ISOLATED_HACKER_DARK_CELL':
+      return <IsolatedHackerDarkCell />;
+
+    case 'DIGITAL_FORTRESS_COLLAPSE':
+      return <DigitalFortressCollapse />;
+
+    case 'CYBER_DOCTRINE_DOSSIER_QUOTE':
+      return <CyberDoctrineDossierQuote />;
+
+    case 'SMARTPHONE_VS_SILO_SPLIT':
+      return <SmartphoneVsSiloSplit />;
+
+    case 'OCEANIC_CABLES_GHOST_WEALTH':
+      return <OceanicCablesGhostWealth />;
+
+    case 'TERMINAL_SHUTDOWN_SILENCE':
+      return <TerminalShutdownSilence />;
+
+    case 'IN_YOUR_POCKET_FINAL_QUOTE':
+      return <InYourPocketFinalQuote />;
+
+    // ========================================================
+    // SIR ADRIAN CARTON DE WIART VC - THE UNKILLABLE SOLDIER
+    // ========================================================
+    case 'CARTON_HERO_SILHOUETTE_HOOK':
+      return <CartonHeroSilhouetteHook durationFrames={durationFrames} />;
+
+    case 'BOER_WAR_RIVER_CROSSING_AMBUSH':
+      return <BoerWarRiverCrossingAmbush durationFrames={durationFrames} />;
+
+    case 'INDIA_CAVALRY_GALLOP_CHARGE':
+      return <IndiaCavalryGallopCharge durationFrames={durationFrames} />;
+
+    case 'SOMALILAND_EXPEDITION_MAP_VECTOR':
+      return <SomalilandExpeditionMapVector durationFrames={durationFrames} />;
+
+    case 'SHIMBER_BERRIS_FORT_DETONATION':
+      return <ShimberBerrisFortDetonation durationFrames={durationFrames} />;
+
+    case 'CARTON_BLACK_EYEPATCH_PROFILE':
+      return <CartonBlackEyepatchProfile durationFrames={durationFrames} />;
+
+    case 'YPRES_TRENCH_BARRAGE_SPLIT':
+      return <YpresTrenchBarrageSplit durationFrames={durationFrames} />;
+
+    case 'AMPUTATION_SEVERED_HAND_FRACTURE':
+      return <AmputationSeveredHandFracture durationFrames={durationFrames} />;
+
+    case 'SOMME_BATTALION_ADVANCE_TALLY':
+      return <SommeLaBoisselleTally durationFrames={durationFrames} />;
+
+    case 'CARTON_SKULL_BULLET_SURVIVAL':
+      return <CartonSkullBulletSurvival durationFrames={durationFrames} />;
+
+    case 'VICTORIA_CROSS_BRONZE_CARD':
+      return <VictoriaCrossBronzeCard durationFrames={durationFrames} />;
+
+    case 'POLISH_SOVIET_BORDER_MAP_VECTOR':
+      return <PolishSovietBorderMapVector durationFrames={durationFrames} />;
+
+    case 'BIPLANE_SMOKING_CRASH_WRECK':
+      return <BiplaneSmokingCrashWreck durationFrames={durationFrames} />;
+
+    case 'COSSACK_CAVALRY_VS_TRAIN_SPLIT':
+      return <CossackCavalryVsTrainSplit durationFrames={durationFrames} />;
+
+    case 'ARMOURED_TRAIN_HIGH_SPEED_LEAP':
+      return <ArmouredTrainHighSpeedLeap durationFrames={durationFrames} />;
+
+    case 'CARTON_MAJOR_GENERAL_WW2':
+      return <CartonMajorGeneralWw2 durationFrames={durationFrames} />;
+
+    case 'SUNDERLAND_FLYING_BOAT_FJORD':
+      return <SunderlandFlyingBoatFjord durationFrames={durationFrames} />;
+
+    case 'BOMBER_OCEAN_IMPACT_SPLASH':
+      return <BomberOceanImpactSplash durationFrames={durationFrames} />;
+
+    case 'VINCIGLIATA_CASTLE_POW_SPLIT':
+      return <VincigliataCastlePowSplit durationFrames={durationFrames} />;
+
+    case 'BEDROCK_TUNNEL_BREAKOUT_FRACTURE':
+      return <BedrockTunnelBreakoutFracture durationFrames={durationFrames} />;
+
+    case 'CARTON_PEASANT_DISGUISE_LEADER':
+      return <CartonPeasantDisguiseLeader durationFrames={durationFrames} />;
+
+    case 'CARTON_VS_MAO_DIPLOMATIC_SPLIT':
+      return <CartonVsMaoDiplomaticSplit durationFrames={durationFrames} />;
+
+    case 'TOTAL_CAREER_WOUNDS_TALLY_BOARD':
+      return <TotalCareerWoundsTallyBoard durationFrames={durationFrames} />;
+
+    case 'HAPPY_ODYSSEY_MEMOIR_DOSSIER':
+      return <HappyOdysseyMemoirDossier durationFrames={durationFrames} />;
+
+    case 'CARTON_FINAL_SEAMLESS_LOOP_HERO':
+      return <CartonFinalSeamlessLoopHero durationFrames={durationFrames} />;
 
     default:
       return null;

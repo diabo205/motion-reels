@@ -1,0 +1,22 @@
+{
+  "projectSlug": "binance-heist-2026",
+  "title": "2026 BINANCE HEIST",
+  "timestamp": "2026-11-02T08:14:49.533Z",
+  "passed": true,
+  "totalFrames": 3500,
+  "durationSec": 58.33,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 24,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 532,
+    "bassDropCount": 147,
+    "cymbalCrashCount": 73,
+    "energyPeakCount": 123,
+    "onsetCount": 189
+  },
+  "errorCount": 0,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": []
+}
