@@ -1,95 +1,87 @@
 ---
 name: build-historical-reel
-description: End-to-end workflow to compile a historical script and audio track into a beat-synced 9:16 kinetic motion graphics reel. Invoke with /build-historical-reel.
+description: Build a beat-synced 9:16 historical motion graphics reel (Remotion, 1080x1920 @ 60 FPS) from a script and a BGM track. Invoke with /build-historical-reel.
 ---
-# Build Historical Reel Skill (Cinematic Documentary Motion Engine)
+# Build Historical Reel
 
-Follow these steps sequentially whenever the user invokes `/build-historical-reel` or provides a new historical script:
+All numbers (duration, pacing, hook, fonts, safe zones, loudness) live in `config/pipeline_constants.json` and `config/safe_zones.json`. Linters enforce them. Read the config when you need a value, and fix whatever `projects/<slug>/audit/audit_report.json` reports. This file covers the order of work and the judgment calls the linters cannot check.
 
-0. **Project Isolation, Manifest & Asset Preflight**:
-   - Create or identify `projects/<project-slug>/` (`plates/`, `audit/`, `deliverables/`, `manifest.json`, `README.md`).
-   - Pass `--project <project-slug>` explicitly to all CLI tools.
-   - Record BGM license clearance (`meta.bgmLicense`) and consult `config/retention_priors.json` so the opening Scene 1 hook archetype does not repeat the previous reel's opening archetype.
-   - Downscale raw archival reference plates to $\le 1080\text{px}$ width and $\le 350\text{KB}$, stripping Exif metadata.
-   - Register the project composition in `src/Root.tsx`.
+Pass `--project <slug>` to every CLI tool.
 
-0.5. **Pre-Production Storyboard & Direction Planning (`motion-graphics-director`)**:
-   - Execute pre-production direction and storyboarding using `.agents/skills/motion-graphics-director/SKILL.md` **FIRST before compiling timelines or drafting assets**.
-   - **Ingest Empirical Retention Priors (`config/retention_priors.json`)**:
-     - Check `recentHookArchetypeHistory` to rotate the Scene 1 hook archetype across consecutive reels.
-     - Bias Scene 1 duration to `pacingPriors.targetHookDurationFrames: 108` (1.80s).
-     - Cross-reference `scene_type → optimal_duration_range → observed_retention_delta` in `config/retention_priors.json` to bias scene durations toward high-retention windows and space `STRUCTURAL_FRACTURE` / `SPLIT_CONFRONTATION` beats every 4–6 cuts.
-   - Deconstruct every scene into the 4 core narrative beats:
-     1. *Inciting trigger*: The initial action, command, environmental shift, or failure point.
-     2. *Mechanical/physical reaction*: The chain of physical, structural, or tactical consequences.
-     3. *Human/focal perspective*: Grounding the scale through a specific operator or micro-level POV.
-     4. *Macro consequence*: Pulling out to an expansive geographic or strategic overview.
-   - **Camera Movement Discipline (`CAMERA_DISCIPLINE_LINT`)**: Strictly prohibit crash zooms and snap zooms (`SNAP_ZOOM` / `CRASH_ZOOM`). Use motivated movements (`SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, `IMPACT_SHAKE`).
+## Workflow
 
-1. **Extract Audio Transient Beat Grid (Onset & Drop Detection)**:
-   Execute:
-   ```powershell
-   python .agents/skills/build-historical-reel/scripts/extract_beat_grid.py assets/audio/bgm.mp3 assets/audio/beat_grid.json
-   ```
-   Replaces static BPM grids with deep audio transient analysis (via Librosa or Aubio):
-   - Multi-band spectral flux extraction for bass drops (20–220Hz), cymbal crashes (3.5k–11kHz), broadband energy peaks, and rhythmic onsets.
-   - Computes `recommendedSceneCuts` (`84–132f`) snapped to drops and crashes.
-   - Computes `structuralFractureRecommendations` syncing destructive impact hits and SFX directly to heavy audio transients.
+### 0. Project setup
+- Create `projects/<slug>/` with `plates/`, `audit/`, `deliverables/`, `manifest.json`, `README.md`.
+- Record the BGM license in `manifest.json` (`meta.bgmLicense`).
+- Register the composition in `src/Root.tsx`.
+- Downscale raw archival plates to 1080px wide or less and 350KB or less, and strip Exif.
 
-2. **Generate Procedural Foley & Cinematic SFX Assets**:
-   Run:
-   ```powershell
-   python .agents/skills/build-historical-reel/scripts/generate_sfx.py
-   ```
-   Synthesizes WAV sound effects (`sub_boom.wav`, `stamp_slam.wav`, `counter_roll.wav`, `rifle_crack.wav`, `metal_clang.wav`) into `assets/audio/sfx/` and `public/audio/sfx/`.
+### 1. Pre-production
+Run `.agents/skills/motion-graphics-director/SKILL.md` first. It produces `projects/<slug>/scene_specs.json`. Do not compile a timeline or draw anything before that file exists.
 
-3. **Compile Beat-Synced Timeline**:
-   Invoke subagent `script-beat-compiler` with the raw script, `assets/audio/beat_grid.json`, `config/pipeline_constants.json`, and `config/retention_priors.json` to generate `src/timelines/<project>.json` adhering to `.agents/skills/build-historical-reel/schemas/timeline.schema.json`.
-   - **High-Density Pacing & Cut Frequency**: Hold each scene for **1.4 to 2.2 seconds** (`84–132` frames; up to `168f` on final epilogue), yielding **22–32 cuts per reel**. Ban slow 4-second holds.
-   - **Single Canonical Duration Ceiling (`MAX_FRAMES = 3500`)**: Total duration must clock between **`2,700` and `3,500` frames** (`45.00s` to `58.33s` @ 60 FPS) for optimal short-form retention pacing.
-   - **Proportional Five-Act Micro-Arc**: Hook (`0–7%`), Inciting Crisis (`7–30%`), Escalating Crucible (`30–65%`), Turning Point (`65–85%`), Symmetric Resolution & Loop/CTA (`85–100%`).
-   - **Hook Discipline & Sharp Frame 0 (`HOOK_TYPEWRITER_LINT`)**: Scene 1 opening frame renders 100% sharp (`blur(0px)`, `opacity: 1`) with immediate high-stakes conflict text. `TYPEWRITER` animations are strictly banned on Scene 1 hooks.
-   - **2-Phase Reactive Mid-Scene Visuals**: Every scene choreographs Phase 1 (setup) -> Phase 2 (payoff hit impulse + secondary vector state change). Post-payoff hold is capped at $\le 100\text{f}$ (`DEAD_HOLD_LINT`).
-   - **Beat-Quantized Typography & Word Budget**: Optional top context tag (only on setting shift) + white setup line (`triggerFrameOffset: 0`, sharp on global Frame `0`) + red payoff line synced to the first detected beat in `[18, 45]` frames (`0.30s–0.75s`). Cap combined setup and payoff at **3–7 words total** ($< 40$ chars/line, **max 2 lines per layer**). Mobile font floors: $\ge 64\text{px}$ setup / $\ge 76\text{px}$ payoff.
-   - **Assign Seven Modular Archetypes**: `LONE_LEADER`, `CROWD_TALLY`, `VEHICLE_IN_TRANSIT`, `STRUCTURAL_FRACTURE`, `VECTOR_MAP`, `SPLIT_CONFRONTATION`, `QUOTE_CARD`.
-   - **Editorial Citations & Sensitivity Mode**: Include `claim: { text, source, url, verified }` on metric scenes and `sensitivity: "SOMBER_MEMORIAL"` on solemn casualty scenes.
+### 2. Audio
+```powershell
+python .agents/skills/build-historical-reel/scripts/extract_beat_grid.py assets/audio/bgm.mp3 assets/audio/beat_grid.json
+python .agents/skills/build-historical-reel/scripts/generate_sfx.py
+```
+The first command writes transient-based scene cut and impact recommendations. The second writes the SFX WAVs to `assets/audio/sfx/` and `public/audio/sfx/`.
 
-3.5. **Mandatory Photographic Reference Ingestion (`MANDATORY_REFERENCE_PLATE_LINT`)**:
-   **STRICT SYSTEM REQUIREMENT: No SVG may be drawn without on-disk reference images.**
-   Run:
-   ```powershell
-   node scripts/ingest_reference_plates.js --project <project-slug>
-   ```
-   - Ingests photographic or archival reference blueprints for every scene into `projects/<slug>/plates/`.
-   - Strictly validates binary magic bytes (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP) and minimum size ($\ge 10\text{KB}$) to guarantee zero corrupted HTML error pages.
-   - Enforces Wikimedia standard thumbnail steps (`960px` / `1280px` via `w.wiki/GHai`) to prevent 400 Bad Request and 429 rate limits.
-   - Writes `projects/<slug>/plates/manifest.json`. The pipeline (`scripts/pipeline.js` and `scripts/audit_and_validate.js`) will abort with a blocking exit code if any scene lacks a verified reference plate.
+### 3. Timeline
+Invoke subagent `script-beat-compiler` with the script, `assets/audio/beat_grid.json`, `projects/<slug>/scene_specs.json`, `config/pipeline_constants.json` and `config/retention_priors.json`. Output: `src/timelines/<project>.json`, valid against `.agents/skills/build-historical-reel/schemas/timeline.schema.json`.
 
-4. **Parallel High-Fidelity Visual Generation**:
-   Concurrently invoke:
-   - `vector-scene-architect`:
-     - **Mandatory Reference Blueprinting & 6-Layer Vector Anatomy**: Inspect on-disk reference plates from `projects/<slug>/plates/` before drafting any mechanical asset, structural fracture, or explosion. Deconstruct references into (1) Ambient Volumetric Aura, (2) Dynamic Shockwaves/Ozone, (3) Acute Fire Spikes, (4) Multi-Tiered Organic Body via `src/kit/OrganicExplosion.tsx`, (5) Core Accent Flash, (6) Detached Orbiting Cloudlets/Shrapnel.
-     - **Grim & Serious Scenarios (Default)**: Flat dark silhouettes (`#090D12` / `#12151B`) with atmospheric backlighting and at most one accent prop.
-     - **Zero Direct Image Pasting (`PHOTO_PASTE_LINT`)**: Archival photos serve strictly as visual reference to draw parametric 2D SVG vector art. Never place raw `<img>` or `<image>` tags in vector components.
-     - **Zero Illustration Text & Single-Source Metrics**: No captions or data placards inside lower artwork. No duplicated metrics.
-     - **Continuous Micro-Motion (`MICRO_MOTION_CHECK`)**: Every scene must feature at least one secondary animation loop.
-     - **Safe Zones**: Respect `config/safe_zones.json` (`CONSERVATIVE_UNION` default: Text `y = 346–806px`, Artwork `y = 864–1498px`, Bottom 22% `y > 1498px` and Right 15% `x > 918px` clear).
-   - `atmospheric-plate-prompter`:
-     - Select and lock one continuous dark canvas gradient per project: `POLAR_MARITIME`, `CONFLICT_CRISIS`, or `ESPIONAGE_DOSSIER`.
-     - Configure global-frame seeded persistent particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST`, or `NONE`).
+Then run the fast audit before any drawing:
+```powershell
+npm run audit:fast -- --project <slug>
+```
+Fix timeline errors here. They are cheap to fix now and expensive after scenes exist.
 
-5. **Kinetic Typography & Exact Glyph Width Validation**:
-   - Standardize on vendored `Montserrat Black` (v31) or `Inter ExtraBold` (v20) in **ALL-CAPS** with `+0.04em` tracking and mobile size floors (`>= 64px` setup / `>= 76px` payoff).
-   - Validate exact glyph advance widths and 2-line wrapping via `scripts/font_metrics.js`.
+### 4. Reference plates
+```powershell
+node scripts/ingest_reference_plates.js --project <slug>
+```
+The pipeline blocks if any scene lacks a valid plate. After ingestion, open each plate and look at it. Write `projects/<slug>/plates/notes.json` with one entry per plate:
+```json
+{ "file": "plate_03.jpg", "subject": "Mk IV tank, side view",
+  "observed": ["track run is longer than hull", "sponson on lower flank", "two-tone camouflage, dark upper band"] }
+```
+List proportions, material colors and silhouette landmarks you can actually see. Drawing starts after the notes exist.
 
-6. **Automated Linting, Visual Audit & Deliverables (`--audit-stills`)**:
-   Execute:
-   ```powershell
-   node scripts/pipeline.js --project <project-slug> --audit-stills --auto-fix
-   ```
-   Verifies `MAX_FRAMES = 3500`, beat-synced payoff offsets, glyph advance widths, `FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `HOOK_TYPEWRITER_LINT`, and writes `projects/<project-slug>/audit/audit_report.json` plus `projects/<project-slug>/deliverables/` (`captions.srt`, `metadata.json`, `poster.png`, `poster_4x5.png`).
+### 5. Palette and atmosphere (once per project)
+Invoke `atmospheric-plate-prompter`. It locks one palette family (`POLAR_MARITIME`, `CONFLICT_CRISIS` or `ESPIONAGE_DOSSIER`) and one global-frame seeded particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST` or `NONE`) for the whole project. Staging mode is chosen per scene in the spec and rotates through at least three modes.
 
-7. **Single-Scene Iteration & Final `-14 LUFS` Master Render**:
-   - Single-Scene Iteration: `node scripts/render_scene_clip.js <sceneNum> --project <project-slug>`
-   - Live Studio Preview: `node scripts/pipeline.js --project <project-slug> --preview`
-   - Master Production Export (with FFmpeg `-14 LUFS` loudness mastering): `node scripts/pipeline.js --project <project-slug> --render`
+### 6. Scenes, one at a time
+Invoke `vector-scene-architect` for scene N only. Do not generate all scenes at once. For each scene:
+
+1. Read: the scene's entry in `scene_specs.json`, its plate and plate notes, `src/library/INDEX.md`, and `rules/motion.md`.
+2. Compose from the library first. Draw new vector art only for what the library lacks. Anything new and reusable goes into `src/library/` with an `INDEX.md` entry.
+3. Take every motion from a named preset in `rules/motion.md`. Do not invent spring or easing numbers inline.
+4. Render stills at frame 0, the payoff frame and the last frame of the scene.
+5. Look at the stills and check:
+   - Readable at phone size.
+   - At least three value tiers (sky or backdrop, midground, rim-lit foreground subject).
+   - No subject reduced to a flat black shape.
+   - Nothing in the bottom 22% or right 15% platform buffers.
+   - Subject matches the plate notes (proportions, materials, landmarks).
+   - Text is legible and sits in the text safe zone.
+6. Fix and re-render. Maximum three rounds per scene. If problems remain, write them to `projects/<slug>/audit/scene_notes.md` and move on.
+
+### 7. Audit and deliverables
+```powershell
+node scripts/pipeline.js --project <slug> --audit-stills --auto-fix
+```
+Writes `audit_report.json` and `deliverables/` (captions, metadata, posters). Fix every error. Then run `npm run lint:framework`.
+
+### 8. Iterate and render
+- Single scene: `node scripts/render_scene_clip.js <sceneNum> --project <slug>`
+- Studio preview: `node scripts/pipeline.js --project <slug> --preview`
+- Master render with -14 LUFS mastering: `node scripts/pipeline.js --project <slug> --render`
+
+## Judgment rules the linters cannot check
+
+- **Dark scenes still have tiers.** Grim subjects use a dark palette with atmospheric backlight, a rim light, authentic material colors (see the director skill) and at most one accent prop. A subject filled with a single flat color has failed.
+- **Library first.** Compose from `src/library/` before drawing paths.
+- **Archival photos are references only.** Never place `<img>` or `<image>` inside vector scenes.
+- **No text inside artwork.** No captions or placards in the lower art zone, and no metric shown twice.
+- **Every scene has continuous secondary motion** on at least one layer, using a `DRIFT` or equivalent preset.
+- **Camera moves are motivated.** Only the camera presets in `rules/motion.md`.
+- **Editorial.** Metric and casualty scenes carry `claim: { text, source, url, verified }`. Mass-casualty scenes use `sensitivity: "SOMBER_MEMORIAL"`: no slam SFX, no aggressive shake, slow-fade reveals, subdued palette.

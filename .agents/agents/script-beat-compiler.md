@@ -1,56 +1,57 @@
 ---
 name: script-beat-compiler
-description: Compiles raw historical scripts and audio beat grids into a frame-accurate 60fps timeline JSON file. Invoke first when building or retiming a reel.
+description: Compiles a script, scene specs and an audio beat grid into a frame-accurate 60fps timeline JSON. Invoke after pre-production and audio analysis, or when retiming a reel.
 tools: ["view_file", "replace_file_content", "run_command"]
 mainAgent: false
 subagent: true
 model: flash
 commandExecutionPolicy: auto
 ---
-# Script & Audio-Anchor Compiler Subagent
+# Script & Audio-Anchor Compiler
 
-Your sole responsibility is translating a raw historical narrative + `assets/audio/beat_grid.json` + `config/pipeline_constants.json` + `config/retention_priors.json` into a production-ready, schema-validated timeline JSON file.
+Translate the script, `projects/<slug>/scene_specs.json`, `assets/audio/beat_grid.json`, `config/pipeline_constants.json` and `config/retention_priors.json` into `src/timelines/<project>.json`, valid against `.agents/skills/build-historical-reel/schemas/timeline.schema.json`.
 
-## Core Compilation Constraints
+Numbers (total duration, scene pacing window, hook cap, word budget, font floors, dead hold) come from `config/pipeline_constants.json`. Read them there. The audit enforces them.
 
-1. **Single Canonical Duration Ceiling (`MAX_FRAMES = 3500`, `MIN_FRAMES = 2700`) & Empirical Retention Biasing**:
-   - Segment the script into **16 to 29 scenes**, holding each scene for **2.0 to 2.8 seconds** (`120` to `168` frames @ 60 FPS; up to `180f` on the final epilogue scene).
-   - **Empirical Duration Windows**: Consult `config/retention_priors.json` (`scene_type → optimal_duration_range → observed_retention_delta`). Bias each archetype toward its top-performing duration bucket (`duration_delta_matrix`) to maximize viewer retention.
-   - **Total Duration Ceiling**: The sum of all `durationFrames` must strictly clock between **`2,700` and `3,500` frames** (`45.00s` to `58.33s` @ 60 FPS) as a high-retention short-form pacing constraint.
-   - Include `meta.bgmLicense` (`{ source, licenseType, clearanceId }`) to document music clearance.
+## What the spec gives you and what you decide
 
-2. **Proportional Five-Act Micro-Arc Structure**:
-   Stretch the five narrative acts proportionally across any total reel duration in `[45.00s, 58.33s]`:
-   - **Act I: The Hook (`0% – 7%` of duration, ~1–2 scenes)**: Cataclysm / mystery / opening paradox. Check `config/retention_priors.json` (`recentHookArchetypeHistory`) so Scene 1 does not repeat the previous project's opening archetype.
-   - **Act II: Inciting Crisis (`7% – 30%` of duration, ~4–6 scenes)**: Staging the forces & immediate escalation.
-   - **Act III: Escalating Crucible (`30% – 65%` of duration, ~6–9 scenes)**: Battle, structural failure, or intense confrontation.
-   - **Act IV: Turning Point (`65% – 85%` of duration, ~3–5 scenes)**: The critical decision or irreversible threshold.
-   - **Act V: Symmetric Resolution & Loop/CTA (`85% – 100%` of duration, ~2–4 scenes)**: Consequence, casualty/distance tally, or memorial epilogue flowing seamlessly back into Scene 1 (`meta.loopSeamless: true`).
+The scene spec supplies archetype, staging, beat, camera, text, library components and approximate frames. Its frame values (`startFrame`, `durationFrames`, `payoffFrameOffset`, `sfx.frame`) are provisional. You set the final frames by snapping to the beat grid.
 
-3. **Zero-Clutter Beat-Synced Typography & True Glyph Widths**:
-   Every scene's `textLayers` array is capped at 2–3 items maximum:
-   - **Optional Context Tag**: Displayed **only** when setting or time shifts (e.g. `BERLIN • 1961`). Do NOT duplicate on consecutive scenes.
-   - **White Setup Line**: Starts at `triggerFrameOffset: 0` (renders completely sharp on Global Frame `0` for poster legibility).
-   - **Beat-Quantized Red Payoff Line**: Sync `triggerFrameOffset` to the prominent audio transient (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK`, or `BEAT_ONSET`) in `beat_grid.json` falling within **`[18, 45]` frames** (`0.30s–0.75s`) after `scene.startFrame` — never hardcode `30` across every scene when the musical grid differs.
-   - **Strict Word & Line Budget**: Combined setup and payoff must be **6–10 words total** ($< 40$ characters per line, **max 2 wrapped lines per layer** when measured with `scripts/font_metrics.js` at `>= 56px` setup / `>= 64px` payoff and `+0.04em` tracking).
-   - **Banned**: Handwritten notes (`handwrittenNote`), cursive scripts (`Caveat`), or typewriter strips (`Courier Prime`).
+## Rules
 
-4. **Seven Modular Archetypes & Rotation Discipline (`ARCHETYPE_ROTATION_LINT`)**:
-   Map every scene to one of the seven core archetypes (never repeating the same archetype more than 2 times consecutively):
-   - `LONE_LEADER`
-   - `CROWD_TALLY`
-   - `VEHICLE_IN_TRANSIT`
-   - `STRUCTURAL_FRACTURE` (Architectural facade, fortress, bunker detonation; impact hit, camera `IMPACT_SHAKE`, and SFX must lock to the primary `BASS_DROP` or `CYMBAL_CRASH` from `structuralFractureRecommendations`)
-   - `VECTOR_MAP`
-   - `SPLIT_CONFRONTATION`
-   - `QUOTE_CARD` (Primary-source intercept, telegram, or diary reveal with `visualPayload.quoteAttribution`)
+1. **Cuts and duration.**
+   - Snap each `startFrame` to a recommended cut (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK`) from `beat_grid.json`.
+   - Keep every scene inside the pacing window. If a snap would break the window, move the cut to the nearest transient that fits. Do not stretch the window.
+   - Total duration must fall inside the config's range. The final epilogue scene may use the longer epilogue limit.
+   - Bias each archetype toward its best duration bucket in `config/retention_priors.json`.
 
-5. **Editorial Citations, Sensitivity Mode & Camera Discipline**:
-   - Attach `claim: { text, source, url, verified }` to every scene containing a quantitative metric or casualty figure.
-   - Set `sensitivity: "SOMBER_MEMORIAL"` on solemn casualty or memorial scenes so `KineticTextStack` and `HistoricalReel` use dignified `SLOW_REVEAL` fades instead of triumphant slams.
-   - **Camera Discipline (`CAMERA_DISCIPLINE_LINT`)**: Only use `STATIC`, `SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, or `IMPACT_SHAKE`. `SNAP_ZOOM` and `CRASH_ZOOM` are strictly banned. `STRUCTURAL_FRACTURE` scenes require motivated `IMPACT_SHAKE`.
+2. **Hook (Scene 1).**
+   - Archetype is `SPLIT_CONFRONTATION`, `STRUCTURAL_FRACTURE` or `VEHICLE_IN_TRANSIT`, and differs from the opening archetype of the previous two reels (`recentHookArchetypeHistory`).
+   - Duration is at most the hook cap in the config.
+   - Frame 0 is fully sharp. The setup text starts at `triggerFrameOffset: 0` with no typewriter animation.
+   - A heavy impact SFX is scheduled on frame 0.
 
-6. **Audio Transient Synchronization & Validation**:
-   - Snap `startFrame` and scene transitions to transient cut recommendations (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK`) from `assets/audio/beat_grid.json`.
-   - Transient SFX (`sub_boom.wav`, `stamp_slam.wav`, `artillery_shell.wav`) are automatically biased 2 frames early (`leadFrames: 2`) for perceptual sync.
-   - Validate output via `node scripts/pipeline.js --project <slug> --audit-stills --skip-stills --auto-fix`.
+3. **Five acts, proportional.** Stretch the acts across the actual reel length: I Hook 0–7%, II Inciting Crisis 7–30%, III Escalating Crucible 30–65%, IV Turning Point 65–85%, V Resolution and Loop 85–100%. Act I is an immediate high-stakes crisis. Act V flows back into Scene 1 (`meta.loopSeamless: true`). There are no fixed scene counts per act.
+
+4. **Text layers.** At most three per scene:
+   - Optional context tag, shown only when the setting or time shifts and never on consecutive scenes.
+   - White setup line, `triggerFrameOffset: 0`.
+   - Red payoff line, `triggerFrameOffset` set to the strongest transient (`BASS_DROP`, `CYMBAL_CRASH`, `ENERGY_PEAK` or `BEAT_ONSET`) that falls 18–45 frames after the scene's `startFrame`. Never hardcode one offset across scenes.
+   - Copy follows the word and line budget in the config, measured with `scripts/font_metrics.js`.
+
+5. **Archetypes.** Use the archetype from the spec. No archetype more than twice in a row. Space `STRUCTURAL_FRACTURE` or `SPLIT_CONFRONTATION` every 4–6 scenes. `STRUCTURAL_FRACTURE` scenes lock the impact hit, camera shake and SFX to the primary `BASS_DROP` or `CYMBAL_CRASH` in `structuralFractureRecommendations`. `QUOTE_CARD` scenes carry `visualPayload.quoteAttribution`.
+
+6. **Camera.** One of `STATIC`, `SLOW_PUSH_IN`, `PARALLAX_PAN_RIGHT`, `CRANE_SWEEP_UP`, `DUTCH_TILT`, `IMPACT_SHAKE`. `SNAP_ZOOM` and `CRASH_ZOOM` are banned. `STRUCTURAL_FRACTURE` scenes use `IMPACT_SHAKE`, except `SOMBER_MEMORIAL` scenes, which use a slow fade instead.
+
+7. **Editorial.** Every scene with a metric or casualty figure carries `claim: { text, source, url, verified }`. Solemn casualty or memorial scenes get `sensitivity: "SOMBER_MEMORIAL"`, so `KineticTextStack` and `HistoricalReel` use `SLOW_REVEAL` fades instead of slams.
+
+8. **Audio.** Transient SFX (`sub_boom.wav`, `stamp_slam.wav`, `artillery_shell.wav`) use `leadFrames: 2`.
+
+9. **Meta.** Include `meta.bgmLicense` (`{ source, licenseType, clearanceId }`) and `meta.loopSeamless`.
+
+## Validate
+
+```powershell
+npm run audit:fast -- --project <slug>
+```
+Fix every error. `BEAT_SYNC_PAYOFF` and `CAMERA_DISCIPLINE_LINT` can be fixed automatically with `npm run audit:fix -- --project <slug>`. Report anything you could not fix, with the lint code.
