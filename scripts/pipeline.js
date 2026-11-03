@@ -55,7 +55,22 @@ function masterAudioLoudness(inputMp4, outputMp4) {
 async function main() {
   const args = process.argv.slice(2);
   const projIdx = args.indexOf('--project');
-  const explicitSlug = projIdx !== -1 ? args[projIdx + 1] : undefined;
+  let explicitSlug = projIdx !== -1 ? args[projIdx + 1] : undefined;
+  if (!explicitSlug) {
+    const projEq = args.find((a) => a.startsWith('--project='));
+    if (projEq) explicitSlug = projEq.split('=')[1];
+  }
+  if (!explicitSlug) {
+    for (const a of args) {
+      if (!a.startsWith('-') && PROJECT_MAP[a]) {
+        explicitSlug = a;
+        break;
+      }
+    }
+  }
+
+  const sceneIdx = args.indexOf('--scene');
+  const targetScene = sceneIdx !== -1 ? parseInt(args[sceneIdx + 1], 10) : undefined;
 
   let mode = '--preview';
   if (args.some((a) => ['--audit-stills', '-audit-stills', 'audit-stills', 'audit'].includes(a))) {
@@ -157,6 +172,7 @@ async function main() {
       autoFix,
       skipStills,
       checkMotion,
+      targetScene,
     });
     updateRetentionPriors();
     return;

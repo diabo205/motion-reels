@@ -145,8 +145,26 @@ function lintProjectCode(projectInfo, styleMode, autoFix = false) {
 async function runAudit(options = {}) {
   const args = process.argv.slice(2);
   const projIdx = args.indexOf('--project');
-  const explicitSlug =
+  let explicitSlug =
     options.projectSlug || (projIdx !== -1 ? args[projIdx + 1] : undefined);
+  if (!explicitSlug) {
+    const projEq = args.find((a) => a.startsWith('--project='));
+    if (projEq) explicitSlug = projEq.split('=')[1];
+  }
+  if (!explicitSlug) {
+    for (const a of args) {
+      if (!a.startsWith('-') && PROJECT_MAP[a]) {
+        explicitSlug = a;
+        break;
+      }
+    }
+  }
+
+  const sceneIdx = args.indexOf('--scene');
+  const targetScene =
+    options.targetScene ??
+    options.scene ??
+    (sceneIdx !== -1 ? parseInt(args[sceneIdx + 1], 10) : undefined);
   const autoFix = options.autoFix ?? args.includes('--auto-fix');
   const skipStills = options.skipStills ?? args.includes('--skip-stills');
   const checkMotion = options.checkMotion ?? args.includes('--check-motion');
@@ -581,7 +599,7 @@ async function runAudit(options = {}) {
 
   // === [2] FAST VISUAL AUDIT RENDERING & MICRO-MOTION DIFF ===
   const motionChecks = [];
-  if (!skipStills && errorViolations.length === 0) {
+  if (!skipStills && (errorViolations.length === 0 || targetScene !== undefined)) {
     console.log('\n=== [2] COMMENCING REMOTION VISUAL AUDIT STILLS & MICRO-MOTION CHECK ===');
     const bundleLocation = await bundle({
       entryPoint: path.resolve('src/index.ts'),
@@ -593,6 +611,52 @@ async function runAudit(options = {}) {
       inputProps: { timeline },
     });
 
+    if (targetScene !== undefined) {
+      const sIdx = targetScene - 1;
+      if (sIdx < 0 || sIdx >= timeline.scenes.length) {
+        console.error(`Invalid --scene ${targetScene}. Must be between 1 and ${timeline.scenes.length}.`);
+        process.exit(1);
+      }
+      const scene = timeline.scenes[sIdx];
+      const stillsDir = path.join(projAuditDir, 'stills');
+      if (!fs.existsSync(stillsDir)) fs.mkdirSync(stillsDir, { recursive: true });
+
+      const firstFrame = scene.startFrame;
+      const payoffOffset = scene.textLayers?.[1]?.triggerFrameOffset ?? 30;
+      const payoffFrame = scene.startFrame + payoffOffset;
+      const lastFrame = scene.startFrame + scene.durationFrames - 1;
+
+      console.log(`\n=== RENDERING SINGLE-SCENE STILLS: Scene ${targetScene} [${scene.sceneId}] ===`);
+      console.log(`  First frame:  ${firstFrame}`);
+      console.log(`  Payoff frame: ${payoffFrame} (offset: +${payoffOffset})`);
+      console.log(`  Last frame:   ${lastFrame}`);
+
+      const framesToRender = [
+        { name: 'first', frame: firstFrame },
+        { name: 'payoff', frame: payoffFrame },
+        { name: 'last', frame: lastFrame },
+      ];
+
+      for (const item of framesToRender) {
+        const outName = `scene_${targetScene}_${item.name}.png`;
+        const outPath = path.join(stillsDir, outName);
+        process.stdout.write(`  -> Rendering ${outName} (frame ${item.frame})... `);
+        await renderStill({
+          composition,
+          serveUrl: bundleLocation,
+          output: outPath,
+          frame: item.frame,
+          logLevel: 'error',
+          timeoutInMilliseconds: 90000,
+        });
+        if (targetScene < 10) {
+          const paddedName = `scene_${String(targetScene).padStart(2, '0')}_${item.name}.png`;
+          fs.copyFileSync(outPath, path.join(stillsDir, paddedName));
+        }
+        console.log('DONE');
+      }
+      console.log(`✅ Single-scene stills saved to ${stillsDir}`);
+    } else {
     for (let idx = 0; idx < timeline.scenes.length; idx++) {
       const scene = timeline.scenes[idx];
       // For Scene 1, also verify Frame 0 sharp poster frame
@@ -669,7 +733,8 @@ async function runAudit(options = {}) {
       logLevel: 'error',
       timeoutInMilliseconds: 90000,
     });
-    console.log(`  -> Exported sharp Frame 0 poster to ${posterPath}`);
+      console.log(`  -> Exported sharp Frame 0 poster to ${posterPath}`);
+    }
   }
 
   // Export SRT captions, metadata, and 4:5 IG crop
