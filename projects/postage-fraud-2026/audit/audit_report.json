@@ -1,7 +1,7 @@
 {
   "projectSlug": "postage-fraud-2026",
   "title": "THE $126M POSTAGE FRAUD",
-  "timestamp": "2026-11-03T16:41:20.524Z",
+  "timestamp": "2026-11-03T17:41:35.862Z",
   "passed": false,
   "totalFrames": 2923,
   "durationSec": 48.72,
@@ -333,7 +333,7 @@
       }
     ]
   },
-  "errorCount": 20,
+  "errorCount": 18,
   "warningCount": 0,
   "motionChecks": [],
   "violations": [
@@ -351,8 +351,8 @@
       "rule": "PATH_COMPLEXITY_LINT",
       "severity": "ERROR",
       "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'BarcodeCryptographicFlawSplit' has 45 nodes, 4 paths, and 32 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 06_step2_barcode_flaw_split [BarcodeCryptographicFlawSplit] is overly simplified / clip-art (45 nodes, 4 paths, 32 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "actual": "Component 'BarcodeCryptographicFlawSplit' has 45 nodes, 6 paths, and 36 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 06_step2_barcode_flaw_split [BarcodeCryptographicFlawSplit] is overly simplified / clip-art (45 nodes, 6 paths, 36 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
       "autoFixed": false
     },
     {
@@ -378,8 +378,8 @@
       "rule": "PATH_COMPLEXITY_LINT",
       "severity": "ERROR",
       "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'SixteenAccountsNetworkMap' has 28 nodes, 2 paths, and 17 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 09_step4_sixteen_accounts_map [SixteenAccountsNetworkMap] is overly simplified / clip-art (28 nodes, 2 paths, 17 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "actual": "Component 'SixteenAccountsNetworkMap' has 28 nodes, 4 paths, and 21 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 09_step4_sixteen_accounts_map [SixteenAccountsNetworkMap] is overly simplified / clip-art (28 nodes, 4 paths, 21 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
       "autoFixed": false
     },
     {
@@ -414,17 +414,8 @@
       "rule": "PATH_COMPLEXITY_LINT",
       "severity": "ERROR",
       "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'AtlanticCargoJetWireTransit' has 38 nodes, 15 paths, and 76 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 14_step5_cargo_jets_millions_home [AtlanticCargoJetWireTransit] is overly simplified / clip-art (38 nodes, 15 paths, 76 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "15_step5_seven_accounts_gold",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
-      "actual": "Component 'GoldenVillaParanoiaLeader' is 83% basic primitives with only 6 path(s)",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 15_step5_seven_accounts_gold [GoldenVillaParanoiaLeader] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "actual": "Component 'AtlanticCargoJetWireTransit' has 37 nodes, 20 paths, and 106 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 14_step5_cargo_jets_millions_home [AtlanticCargoJetWireTransit] is overly simplified / clip-art (37 nodes, 20 paths, 106 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
       "autoFixed": false
     },
     {
@@ -432,17 +423,8 @@
       "rule": "PATH_COMPLEXITY_LINT",
       "severity": "ERROR",
       "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'FloridaGrandJuryBountyFracture' has 48 nodes, 7 paths, and 103 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 16_step6_grand_jury_bounty [FloridaGrandJuryBountyFracture] is overly simplified / clip-art (48 nodes, 7 paths, 103 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "17_step6_uspis_nccia_trace_map",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
-      "actual": "Component 'MiamiToLahoreRadarTraceMap' is 76% basic primitives with only 8 path(s)",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 17_step6_uspis_nccia_trace_map [MiamiToLahoreRadarTraceMap] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "actual": "Component 'FloridaGrandJuryBountyFracture' has 48 nodes, 10 paths, and 113 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 16_step6_grand_jury_bounty [FloridaGrandJuryBountyFracture] is overly simplified / clip-art (48 nodes, 10 paths, 113 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
       "autoFixed": false
     },
     {
@@ -468,8 +450,8 @@
       "rule": "PATH_COMPLEXITY_LINT",
       "severity": "ERROR",
       "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'LahoreHideoutBreachFracture' has 46 nodes, 21 paths, and 139 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 21_step7_lahore_raid_capture [LahoreHideoutBreachFracture] is overly simplified / clip-art (46 nodes, 21 paths, 139 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "actual": "Component 'LahoreHideoutBreachFracture' has 46 nodes, 21 paths, and 152 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 21_step7_lahore_raid_capture [LahoreHideoutBreachFracture] is overly simplified / clip-art (46 nodes, 21 paths, 152 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
       "autoFixed": false
     },
     {
