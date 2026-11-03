@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Ajv = require('ajv');
 const { bundle } = require('@remotion/bundler');
 const { selectComposition, renderStill } = require('@remotion/renderer');
 const constants = require('../config/pipeline_constants.json');
@@ -142,6 +143,123 @@ function lintProjectCode(projectInfo, styleMode, autoFix = false) {
   return violations;
 }
 
+function validateSceneSpecs(slug, timeline, projectDir) {
+  const specsPath = path.join(projectDir, 'scene_specs.json');
+  if (!fs.existsSync(specsPath)) {
+    return { violations: [] };
+  }
+
+  const violations = [];
+  let specs;
+  try {
+    specs = JSON.parse(fs.readFileSync(specsPath, 'utf8'));
+  } catch (err) {
+    violations.push({
+      sceneId: 'SCENE_SPECS',
+      rule: 'SCENE_SPECS_SCHEMA_LINT',
+      severity: 'ERROR',
+      expected: 'Valid JSON in scene_specs.json',
+      actual: `JSON parse error: ${err.message}`,
+      fix: 'SCENE_SPECS_SCHEMA_LINT: Invalid JSON in scene_specs.json. Fix: Correct JSON syntax in projects/' + slug + '/scene_specs.json.',
+      autoFixed: false,
+    });
+    return { violations };
+  }
+
+  // 1. Schema Validation via Ajv
+  const schemaPath = path.resolve('.agents/skills/build-historical-reel/schemas/scene_specs.schema.json');
+  if (fs.existsSync(schemaPath)) {
+    try {
+      const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
+      const ajv = new Ajv({ allErrors: true });
+      const validate = ajv.compile(schema);
+      const valid = validate(specs);
+      if (!valid && validate.errors) {
+        for (const err of validate.errors) {
+          violations.push({
+            sceneId: `scene_specs${err.instancePath || ''}`,
+            rule: 'SCENE_SPECS_SCHEMA_LINT',
+            severity: 'ERROR',
+            expected: `Schema constraint ${err.schemaPath}`,
+            actual: `${err.instancePath || 'root'}: ${err.message}`,
+            fix: `SCENE_SPECS_SCHEMA_LINT: ${err.instancePath || 'root'} ${err.message}. Fix: Update projects/${slug}/scene_specs.json to match scene_specs.schema.json.`,
+            autoFixed: false,
+          });
+        }
+      }
+    } catch (schemaErr) {
+      console.warn(`[WARN] Could not compile scene_specs.schema.json: ${schemaErr.message}`);
+    }
+  }
+
+  if (!Array.isArray(specs)) return { violations };
+
+  // Read src/library/INDEX.md for library entry validation
+  const indexPath = path.resolve('src/library/INDEX.md');
+  const indexContent = fs.existsSync(indexPath) ? fs.readFileSync(indexPath, 'utf8') : '';
+
+  // 2. Validate plates, library entries, and archetype alignment
+  for (const spec of specs) {
+    const sceneId = `scene_${spec.scene}`;
+
+    // Warn if named plate does not exist in plates/
+    if (spec.plate) {
+      const platePath = path.join(projectDir, 'plates', spec.plate);
+      if (!fs.existsSync(platePath)) {
+        violations.push({
+          sceneId,
+          rule: 'SCENE_SPECS_PLATE_LINT',
+          severity: 'WARNING',
+          expected: `Plate file '${spec.plate}' exists in projects/${slug}/plates/`,
+          actual: `Plate file '${spec.plate}' not found in plates directory`,
+          fix: `SCENE_SPECS_PLATE_LINT: Reference plate '${spec.plate}' is missing. Fix: Ingest the reference plate into projects/${slug}/plates/.`,
+          autoFixed: false,
+        });
+      }
+    }
+
+    // Warn if a library entry has no matching entry in src/library/INDEX.md
+    if (Array.isArray(spec.library)) {
+      for (const libItem of spec.library) {
+        const baseName = path.basename(libItem);
+        const matchesIndex =
+          indexContent.includes(libItem) ||
+          indexContent.includes(`### ${baseName}`) ||
+          indexContent.includes(baseName);
+        if (!matchesIndex) {
+          violations.push({
+            sceneId,
+            rule: 'SCENE_SPECS_LIBRARY_LINT',
+            severity: 'WARNING',
+            expected: `Library component '${libItem}' cataloged in src/library/INDEX.md`,
+            actual: `Library entry '${libItem}' not found in src/library/INDEX.md`,
+            fix: `SCENE_SPECS_LIBRARY_LINT: Component '${libItem}' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.`,
+            autoFixed: false,
+          });
+        }
+      }
+    }
+
+    // After the timeline is compiled, warn if a scene's archetype differs between spec and timeline
+    if (timeline && Array.isArray(timeline.scenes)) {
+      const timelineScene = timeline.scenes[spec.scene - 1];
+      if (timelineScene && timelineScene.archetype && timelineScene.archetype !== spec.archetype) {
+        violations.push({
+          sceneId: timelineScene.sceneId || sceneId,
+          rule: 'SCENE_SPECS_ARCHETYPE_MISMATCH',
+          severity: 'WARNING',
+          expected: `Archetype '${spec.archetype}' matching scene_specs.json`,
+          actual: `Timeline archetype is '${timelineScene.archetype}' while spec specifies '${spec.archetype}'`,
+          fix: `SCENE_SPECS_ARCHETYPE_MISMATCH: Scene ${spec.scene} archetype mismatch. Fix: Align timeline archetype in src/timelines/${slug}.json with scene_specs.json.`,
+          autoFixed: false,
+        });
+      }
+    }
+  }
+
+  return { violations };
+}
+
 async function runAudit(options = {}) {
   const args = process.argv.slice(2);
   const projIdx = args.indexOf('--project');
@@ -259,6 +377,23 @@ async function runAudit(options = {}) {
     console.error(
       `❌ VIOLATIONS: ${fwErrors.length} framework violation(s) detected in .tsx code!`
     );
+  }
+
+  // 2.3. PRE-PRODUCTION SCENE SPECS AUDIT (scene_specs.json)
+  if (fs.existsSync(path.join(projectDir, 'scene_specs.json'))) {
+    console.log('\n--- Pre-Production Scene Specs Audit (scene_specs.json) ---');
+    const specCheck = validateSceneSpecs(slug, timeline, projectDir);
+    violations.push(...specCheck.violations);
+    const specErrors = specCheck.violations.filter((v) => v.severity === 'ERROR');
+    const specWarnings = specCheck.violations.filter((v) => v.severity === 'WARNING');
+    if (specErrors.length === 0) {
+      console.log(`✅ PASS: scene_specs.json validated against schema (${specWarnings.length} warning(s)).`);
+    } else {
+      console.error(`❌ VIOLATIONS: ${specErrors.length} error(s) found in scene_specs.json!`);
+      for (const err of specErrors) {
+        console.error(`   - [${err.sceneId}] ${err.actual}`);
+      }
+    }
   }
 
   // 2.5. MANDATORY REFERENCE INGESTION LINT (MANDATORY_REFERENCE_PLATE_LINT)

@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SceneSpecsSchema",
+  "description": "Schema for projects/<slug>/scene_specs.json specifying pre-production narrative beats, archetypes, staging, and references.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "scene",
+      "act",
+      "beat",
+      "archetype",
+      "staging",
+      "startFrame",
+      "durationFrames",
+      "plate",
+      "library",
+      "camera",
+      "phase1",
+      "phase2",
+      "text",
+      "sfx",
+      "viewerSees"
+    ],
+    "properties": {
+      "scene": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "act": {
+        "type": "string",
+        "enum": ["I", "II", "III", "IV", "V"]
+      },
+      "beat": {
+        "type": "string",
+        "enum": ["TRIGGER", "REACTION", "FOCAL", "MACRO"]
+      },
+      "archetype": {
+        "type": "string",
+        "enum": [
+          "LONE_LEADER",
+          "CROWD_TALLY",
+          "VEHICLE_IN_TRANSIT",
+          "STRUCTURAL_FRACTURE",
+          "VECTOR_MAP",
+          "SPLIT_CONFRONTATION",
+          "QUOTE_CARD"
+        ]
+      },
+      "staging": {
+        "type": "string",
+        "enum": [
+          "SUNBURST_HERO",
+          "PAPER_EXTERIOR",
+          "GRAPH_GRID",
+          "WOOD_PANEL",
+          "NIGHT_FELT",
+          "SPLIT_HORIZON"
+        ]
+      },
+      "startFrame": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "durationFrames": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "plate": {
+        "type": "string"
+      },
+      "library": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "camera": {
+        "type": "string",
+        "enum": [
+          "STATIC",
+          "SLOW_PUSH_IN",
+          "PARALLAX_PAN_RIGHT",
+          "CRANE_SWEEP_UP",
+          "DUTCH_TILT",
+          "IMPACT_SHAKE"
+        ]
+      },
+      "phase1": {
+        "type": "object",
+        "required": ["motion"],
+        "properties": {
+          "motion": { "type": "string" },
+          "elements": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+      "phase2": {
+        "type": "object",
+        "required": ["payoffFrameOffset"],
+        "properties": {
+          "payoffFrameOffset": { "type": "integer" },
+          "hit": { "type": "string" },
+          "secondaryChange": { "type": "string" }
+        }
+      },
+      "text": {
+        "type": "object",
+        "required": ["setup", "payoff"],
+        "properties": {
+          "tag": { "type": ["string", "null"] },
+          "setup": { "type": "string" },
+          "payoff": { "type": "string" }
+        }
+      },
+      "sfx": {
+        "type": "object",
+        "required": ["file", "frame"],
+        "properties": {
+          "file": { "type": "string" },
+          "frame": { "type": "integer" }
+        }
+      },
+      "claim": {
+        "type": ["object", "null"],
+        "properties": {
+          "text": { "type": "string" },
+          "source": { "type": "string" },
+          "url": { "type": "string" },
+          "verified": { "type": "boolean" }
+        }
+      },
+      "sensitivity": {
+        "type": ["string", "null"],
+        "enum": ["SOMBER_MEMORIAL", "STANDARD", "HIGH_SENSITIVITY", null]
+      },
+      "viewerSees": {
+        "type": "string"
+      }
+    }
+  }
+}
