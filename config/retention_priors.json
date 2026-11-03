@@ -647,7 +647,7 @@
     }
   ],
   "pacingPriors": {
-    "targetHookDurationFrames": 108,
+    "targetHookDurationFrames": 96,
     "optimalPayoffBeatIndex": 1,
     "sfxPerceptualLeadFrames": 2,
     "maxConsecutiveSameArchetype": 2,

@@ -384,10 +384,11 @@ async function runAudit(options = {}) {
       }
     }
 
-    // Scene duration check (84..150f in DOCUMENTARY_SANS, up to 168f for final epilogue)
+    // Scene duration check (84..132f in DOCUMENTARY_SANS, up to 150f for final epilogue)
+    const isFinalScene = i === timeline.scenes.length - 1;
     const maxAllowedSceneFrames =
       styleMode === 'DOCUMENTARY_SANS'
-        ? (i === timeline.scenes.length - 1 ? 168 : constants.MAX_SCENE_FRAMES)
+        ? (isFinalScene ? (constants.MAX_SCENE_FRAMES || 150) : (constants.TARGET_MAX_SCENE_FRAMES || 132))
         : 250;
     const durOk =
       s.durationFrames >= constants.MIN_SCENE_FRAMES &&
@@ -498,10 +499,11 @@ async function runAudit(options = {}) {
     }
 
     if (!durOk) {
+      const isLegacyEpilogue = isFinalScene && s.durationFrames <= 168;
       violations.push({
         sceneId: s.sceneId,
         rule: 'SCENE_PACING_WINDOW',
-        severity: 'ERROR',
+        severity: isLegacyEpilogue ? 'WARNING' : 'ERROR',
         expected: `${constants.MIN_SCENE_FRAMES}..${maxAllowedSceneFrames}f`,
         actual: `${s.durationFrames}f`,
         frame: s.startFrame,
