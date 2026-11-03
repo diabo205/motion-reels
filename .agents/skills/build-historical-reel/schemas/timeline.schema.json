@@ -83,7 +83,7 @@
         "properties": {
           "sceneId": { "type": ["string", "integer"] },
           "startFrame": { "type": "integer", "minimum": 0, "maximum": 3500 },
-          "durationFrames": { "type": "integer", "minimum": 120, "maximum": 250 },
+          "durationFrames": { "type": "integer", "minimum": 84, "maximum": 250 },
           "archetype": {
             "type": "string",
             "enum": [

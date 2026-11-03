@@ -327,6 +327,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'Seeded PRNG or deterministic (emitterId, globalFrame) seed instead of Math.random()',
       actual: `Math.random() call found in ${relPath}:${item.line}`,
+      fix: `${FRAMEWORK_RULES.MATH_RANDOM}: Math.random() found in ${relPath}:${item.line}. Fix: Use deterministic PRNG seeded by global frame.`,
       frame: 0,
       autoFixed: false,
     });
@@ -341,6 +342,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'Frame-driven timeline state via useCurrentFrame() or timeline metadata instead of wall-clock time',
       actual: `Wall-clock timer ${item.target} found in ${relPath}:${item.line}`,
+      fix: `${FRAMEWORK_RULES.WALL_CLOCK_TIME}: Wall-clock timer ${item.target} found in ${relPath}:${item.line}. Fix: Replace wall-clock timer with Remotion useCurrentFrame().`,
       frame: 0,
       autoFixed: false,
     });
@@ -357,6 +359,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'interpolate(input, range, output, { clamp: true }) or { extrapolateRight: "clamp" } to prevent unbounded extrapolation',
       actual: `Unclamped interpolate call "${snippet}" in ${relPath}:${item.line}`,
+      fix: `${FRAMEWORK_RULES.INTERPOLATE_CLAMP}: Unclamped interpolate call in ${relPath}:${item.line}. Fix: Add { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } to interpolate().`,
       frame: 0,
       autoFixed: autoFix && fileModified,
     });
@@ -372,6 +375,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'Zero CSS animations/transitions; drive all motion via Remotion useCurrentFrame() / interpolate / spring',
       actual: `CSS transition property "${item.name}" found in ${relPath}:${item.line}`,
+      fix: `${FRAMEWORK_RULES.CSS_ANIMATIONS}: CSS property "${item.name}" found in ${relPath}:${item.line}. Fix: Drive motion frame-by-frame via useCurrentFrame() and spring/interpolate tokens.`,
       frame: 0,
       autoFixed: autoFix && fileModified,
     });
@@ -386,6 +390,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'Zero @keyframes in CSS; drive all motion via Remotion useCurrentFrame() / interpolate / spring',
       actual: `@keyframes CSS animation declaration found in ${relPath}:${item.line}`,
+      fix: `${FRAMEWORK_RULES.CSS_ANIMATIONS}: @keyframes CSS animation declaration found in ${relPath}:${item.line}. Fix: Replace CSS keyframes with frame-based interpolation in Remotion.`,
       frame: 0,
       autoFixed: false,
     });
@@ -401,6 +406,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: item.expected,
       actual: item.actual,
+      fix: `${item.rule}: Import boundary violation in ${relPath}:${item.line}. Fix: ${item.expected}`,
       frame: 0,
       autoFixed: false,
     });
@@ -415,6 +421,7 @@ function lintTsxFile(filePath, options = {}) {
       severity: 'ERROR',
       expected: 'src/scenes/ templates must be pure presentation shells driven by props without business logic.',
       actual: item.desc,
+      fix: `${FRAMEWORK_RULES.SCENE_NO_BUSINESS_LOGIC}: Scene template has hardcoded business logic at line ${item.line}. Fix: Refactor scene to be a pure presentation shell driven by props.`,
       frame: 0,
       autoFixed: false,
     });

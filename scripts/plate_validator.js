@@ -138,6 +138,7 @@ function validateProjectPlates(projectSlug, timeline = null) {
       severity: 'ERROR',
       expected: `Plates directory must exist at projects/${projectSlug}/plates/`,
       actual: 'Directory missing',
+      fix: `MANDATORY_REFERENCE_PLATE_LINT: Plates directory missing at projects/${projectSlug}/plates/. Fix: Create plates directory and ingest reference images.`,
     });
     return { passed: false, totalScenes: 0, verifiedCount: 0, errors };
   }
@@ -167,6 +168,7 @@ function validateProjectPlates(projectSlug, timeline = null) {
       severity: 'ERROR',
       expected: 'Timeline must contain at least one scene to validate reference plates against',
       actual: 'No scenes found',
+      fix: `MANDATORY_REFERENCE_PLATE_LINT: Timeline has 0 scenes to validate plates against. Fix: Add scene entries to timeline.json.`,
     });
     return { passed: false, totalScenes: 0, verifiedCount: 0, errors };
   }
@@ -183,6 +185,7 @@ function validateProjectPlates(projectSlug, timeline = null) {
         severity: 'ERROR',
         expected: 'Valid JSON in plates/manifest.json',
         actual: `Failed to parse manifest: ${e.message}`,
+        fix: `MANDATORY_REFERENCE_PLATE_LINT: Corrupted plates/manifest.json. Fix: Fix JSON formatting in projects/${projectSlug}/plates/manifest.json.`,
       });
     }
   } else {
@@ -192,7 +195,39 @@ function validateProjectPlates(projectSlug, timeline = null) {
       severity: 'ERROR',
       expected: `Reference manifest must exist at projects/${projectSlug}/plates/manifest.json`,
       actual: 'Missing manifest.json',
+      fix: `MANDATORY_REFERENCE_PLATE_LINT: Missing manifest.json. Fix: Ingest plates and catalog mappings in projects/${projectSlug}/plates/manifest.json.`,
     });
+  }
+
+  // Observation notes validation (Task 4a)
+  // Require projects/<slug>/plates/notes.json with >= 3 items in observed per plate
+  const notesPath = path.join(platesDir, 'notes.json');
+  const requireNotes = Boolean(manifest.meta?.requireNotes);
+  const notesSeverity = requireNotes ? 'ERROR' : 'WARNING';
+
+  let notesData = null;
+  if (!fs.existsSync(notesPath)) {
+    errors.push({
+      sceneId: 'GLOBAL_PLATES',
+      rule: 'MANDATORY_REFERENCE_PLATE_LINT',
+      severity: notesSeverity,
+      expected: `Observation notes must exist at projects/${projectSlug}/plates/notes.json with >= 3 items in 'observed' per plate`,
+      actual: `plates/notes.json missing`,
+      fix: `MANDATORY_REFERENCE_PLATE_LINT: Reference plate observation notes missing at projects/${projectSlug}/plates/notes.json. Fix: Create plates/notes.json documenting at least 3 visual observations per plate.`,
+    });
+  } else {
+    try {
+      notesData = JSON.parse(fs.readFileSync(notesPath, 'utf8'));
+    } catch (e) {
+      errors.push({
+        sceneId: 'GLOBAL_PLATES',
+        rule: 'MANDATORY_REFERENCE_PLATE_LINT',
+        severity: notesSeverity,
+        expected: 'Valid JSON in plates/notes.json',
+        actual: `Failed to parse notes.json: ${e.message}`,
+        fix: `MANDATORY_REFERENCE_PLATE_LINT: Invalid JSON in plates/notes.json. Fix: Correct JSON syntax in projects/${projectSlug}/plates/notes.json.`,
+      });
+    }
   }
 
   const scenePlateMap = manifest.scenePlateMap || {};
@@ -219,6 +254,7 @@ function validateProjectPlates(projectSlug, timeline = null) {
         severity: 'ERROR',
         expected: `Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json`,
         actual: 'No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.',
+        fix: `MANDATORY_REFERENCE_PLATE_LINT: Scene ${sceneId} has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json.`,
       });
       continue;
     }
@@ -235,13 +271,57 @@ function validateProjectPlates(projectSlug, timeline = null) {
         severity: 'ERROR',
         expected: `Valid binary image plate on disk (${path.basename(plateFilename)})`,
         actual: `Plate validation failed: ${check.error} (path: ${platePath})`,
+        fix: `MANDATORY_REFERENCE_PLATE_LINT: Plate ${path.basename(plateFilename)} failed validation. Fix: Ingest valid binary image (JPEG/PNG/WebP >= 10KB) without HTML error pages.`,
       });
     } else {
       verifiedCount++;
     }
+
+    // Check observation notes for this scene's plate
+    if (notesData) {
+      const basePlate = path.basename(plateFilename);
+      let observed = null;
+      if (Array.isArray(notesData)) {
+        const found = notesData.find(
+          (n) =>
+            n.plate === basePlate ||
+            n.plate === plateFilename ||
+            n.scene === sceneId ||
+            n.sceneId === sceneId ||
+            n.scene === sceneNum
+        );
+        observed = found?.observed || found?.observations;
+      } else if (typeof notesData === 'object') {
+        const entry =
+          notesData[basePlate] ||
+          notesData[plateFilename] ||
+          notesData[sceneId] ||
+          notesData[String(sceneNum)];
+        if (Array.isArray(entry)) {
+          observed = entry;
+        } else if (entry && Array.isArray(entry.observed)) {
+          observed = entry.observed;
+        } else if (entry && Array.isArray(entry.observations)) {
+          observed = entry.observations;
+        }
+      }
+
+      if (!observed || !Array.isArray(observed) || observed.length < 3) {
+        const count = observed ? observed.length : 0;
+        errors.push({
+          sceneId,
+          rule: 'MANDATORY_REFERENCE_PLATE_LINT',
+          severity: notesSeverity,
+          expected: `>= 3 observed visual items for ${basePlate} in plates/notes.json`,
+          actual: `Found ${count} observed items in plates/notes.json`,
+          fix: `MANDATORY_REFERENCE_PLATE_LINT: Plate ${basePlate} has ${count} items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/${projectSlug}/plates/notes.json.`,
+        });
+      }
+    }
   }
 
-  const passed = errors.length === 0 && verifiedCount === scenes.length;
+  const errorCount = errors.filter((e) => e.severity === 'ERROR').length;
+  const passed = errorCount === 0 && verifiedCount === scenes.length;
   return {
     passed,
     totalScenes: scenes.length,

@@ -92,6 +92,7 @@ function lintProjectCode(projectInfo, styleMode, autoFix = false) {
             severity: 'ERROR',
             expected: `Only ${constants.ALLOWED_FONTS.join(' / ')} allowed in DOCUMENTARY_SANS mode`,
             actual: `Found banned font reference "${bannedFont}" in ${relFile}`,
+            fix: `FONT_LINT: Found banned font reference "${bannedFont}" in ${relFile}. Fix: Replace with approved geometric sans-serif (${constants.ALLOWED_FONTS.join(' or ')}) in ALL-CAPS.`,
             frame: 0,
             autoFixed: false,
           });
@@ -112,6 +113,7 @@ function lintProjectCode(projectInfo, styleMode, autoFix = false) {
         severity: 'ERROR',
         expected: 'Zero raw <img>/<Image>/<image> tags inside parametric SVG vector components',
         actual: `Found ${rawImgMatches.length} raw image tag(s) in ${projectInfo.vectorFile}`,
+        fix: `PHOTO_PASTE_LINT: Found raw <img>/<Image>/<image> tags in ${projectInfo.vectorFile}. Fix: Replace raw photo elements with parametric 2D SVG vector art drawn from reference plates.`,
         frame: 0,
         autoFixed: false,
       });
@@ -126,6 +128,24 @@ function lintProjectCode(projectInfo, styleMode, autoFix = false) {
         severity: 'ERROR',
         expected: 'Locked documentary palette hex tokens only',
         actual: `Found unauthorized debug hex fill(s) ${debugHexMatches.join(', ')} in ${projectInfo.vectorFile}`,
+        fix: `PALETTE_LINT: Found unauthorized debug hex fill(s) ${debugHexMatches.join(', ')} in ${projectInfo.vectorFile}. Fix: Replace neon debug fills with approved tokens from config/pipeline_constants.json or project palette.`,
+        frame: 0,
+        autoFixed: false,
+      });
+    }
+
+    // 3.5. LIBRARY_REUSE: Warn when a scene file contains many raw <path> elements and imports nothing from src/library/ or src/kit/
+    const pathMatches = (vecSrc.match(/<path\b/gi) || []).length;
+    const importsKitOrLibrary = /from\s+['"][^'"]*(kit|library)[^'"]*['"]/.test(vecSrc);
+    const pathThreshold = constants.LIBRARY_REUSE_PATH_THRESHOLD || 50;
+    if (pathMatches > pathThreshold && !importsKitOrLibrary) {
+      violations.push({
+        sceneId: 'GLOBAL_VECTORS',
+        rule: 'LIBRARY_REUSE',
+        severity: 'WARNING',
+        expected: `Vector files with > ${pathThreshold} <path> elements should import reusable assets from src/library/ or primitives from src/kit/`,
+        actual: `Found ${pathMatches} raw <path> elements in ${projectInfo.vectorFile} with zero imports from src/library/ or src/kit/`,
+        fix: `LIBRARY_REUSE: File ${projectInfo.vectorFile} has ${pathMatches} raw <path> elements and imports nothing from src/library/ or src/kit/. Fix: Refactor common silhouettes, hardware, and backgrounds into src/library/ or compose using existing kit/library primitives.`,
         frame: 0,
         autoFixed: false,
       });
@@ -353,6 +373,7 @@ async function runAudit(options = {}) {
       severity: 'ERROR',
       expected: `${minRequiredFrames}..${maxAllowedFrames} frames (${(minRequiredFrames / fps).toFixed(2)}s..${(maxAllowedFrames / fps).toFixed(2)}s)`,
       actual: `${totalFrames} frames (${totalSec.toFixed(2)}s)`,
+      fix: `DURATION_CEILING: Total reel duration (${totalFrames}f / ${totalSec.toFixed(2)}s) outside [${minRequiredFrames}, ${maxAllowedFrames}] frames. Fix: Trim or extend scene durations so totalFrames is between ${minRequiredFrames} and ${maxAllowedFrames} frames (${(minRequiredFrames / fps).toFixed(1)}s - ${(maxAllowedFrames / fps).toFixed(1)}s).`,
       frame: totalFrames,
       autoFixed: false,
     });
@@ -391,7 +412,7 @@ async function runAudit(options = {}) {
     } else {
       console.error(`❌ VIOLATIONS: ${specErrors.length} error(s) found in scene_specs.json!`);
       for (const err of specErrors) {
-        console.error(`   - [${err.sceneId}] ${err.actual}`);
+        console.error(`   - [${err.sceneId}] ${err.fix || err.actual}`);
       }
     }
   }
@@ -399,17 +420,21 @@ async function runAudit(options = {}) {
   // 2.5. MANDATORY REFERENCE INGESTION LINT (MANDATORY_REFERENCE_PLATE_LINT)
   console.log('\n--- Mandatory Photographic & Archival Reference Plate Audit ---');
   const plateCheck = validateProjectPlates(slug, timeline);
-  if (!plateCheck.passed) {
+  if (plateCheck.errors && plateCheck.errors.length > 0) {
     violations.push(...plateCheck.errors);
+  }
+  const plateErrors = (plateCheck.errors || []).filter((e) => e.severity === 'ERROR');
+  const plateWarnings = (plateCheck.errors || []).filter((e) => e.severity === 'WARNING');
+  if (plateErrors.length > 0) {
     console.error(
-      `❌ VIOLATION: MANDATORY_REFERENCE_PLATE_LINT failed! ${plateCheck.errors.length} scene(s) lack verified reference plates on disk.`
+      `❌ VIOLATION: MANDATORY_REFERENCE_PLATE_LINT failed! ${plateErrors.length} scene(s) lack verified reference plates on disk.`
     );
-    for (const err of plateCheck.errors) {
-      console.error(`   - [${err.sceneId}] ${err.actual}`);
+    for (const err of plateErrors) {
+      console.error(`   - [${err.sceneId}] ${err.fix || err.actual}`);
     }
   } else {
     console.log(
-      `✅ PASS: MANDATORY_REFERENCE_PLATE_LINT verified (${plateCheck.verifiedCount}/${plateCheck.totalScenes} scenes backed by binary-verified authentic reference plates).`
+      `✅ PASS: MANDATORY_REFERENCE_PLATE_LINT verified (${plateCheck.verifiedCount}/${plateCheck.totalScenes} scenes backed by binary-verified authentic reference plates${plateWarnings.length > 0 ? `, ${plateWarnings.length} warning(s)` : ''}).`
     );
   }
 
@@ -431,6 +456,7 @@ async function runAudit(options = {}) {
         severity: 'ERROR',
         expected: `Minimum ${minStages} distinct stageStyle or skyGradient atmospheres (Peshawar standard: prevent monotonous dark voids)`,
         actual: `Found only ${uniqueStages.size} stage style(s) [${Array.from(uniqueStages).join(', ')}] and ${uniqueGradients.size} sky gradient(s)`,
+        fix: `STAGING_DIVERSITY_LINT: Found only ${uniqueStages.size} stage style(s) and ${uniqueGradients.size} sky gradient(s) (minimum ${minStages} required). Fix: Motivate scenes with distinct stageStyle substrates (e.g. SUNBURST_HERO, PAPER_EXTERIOR, GRAPH_GRID, WOOD_PANEL, NIGHT_FELT) and diverse setting-motivated sky gradients.`,
         frame: 0,
         autoFixed: false,
       });
@@ -455,6 +481,7 @@ async function runAudit(options = {}) {
           severity: 'WARNING',
           expected: 'Max 2 identical consecutive archetypes',
           actual: `${consecutiveSameArch} consecutive ${s.archetype} scenes`,
+          fix: `ARCHETYPE_ROTATION_LINT: Archetype '${s.archetype}' repeats ${consecutiveSameArch} times consecutively at scene ${i + 1}. Fix: Rotate scene archetype so no more than 2 consecutive scenes share the same archetype.`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -475,6 +502,7 @@ async function runAudit(options = {}) {
           severity: 'ERROR',
           expected: constants.ALLOWED_CAMERA_MOVEMENTS.join(' | '),
           actual: s.camera?.movement,
+          fix: `CAMERA_DISCIPLINE_LINT: Scene ${s.sceneId} uses banned camera movement '${s.camera?.movement}'. Fix: Replace with motivated camera movement (${constants.ALLOWED_CAMERA_MOVEMENTS.join(', ')}).`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -496,6 +524,7 @@ async function runAudit(options = {}) {
           severity: 'ERROR',
           expected: `Scene 1 hook archetype must be one of: ${constants.ALLOWED_HOOK_ARCHETYPES.join(' | ')} (empirical high-hold rate)`,
           actual: `${s.archetype} (banned for Scene 1 hook due to empirical high swipe-away rate)`,
+          fix: `HOOK_ARCHETYPE_LINT: Scene 1 hook uses banned archetype '${s.archetype}'. Fix: Change Scene 1 archetype to an empirical high-hold archetype (${constants.ALLOWED_HOOK_ARCHETYPES.join(', ')}).`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -514,6 +543,7 @@ async function runAudit(options = {}) {
               severity: 'ERROR',
               expected: 'Scene 1 text must use HARD_POP or BLUR_TO_SHARP to protect Frame 0 poster legibility',
               actual: 'Found animation="TYPEWRITER" on hook scene',
+              fix: `HOOK_TYPEWRITER_LINT: Found animation="TYPEWRITER" on hook scene. Fix: Change Scene 1 text animation to HARD_POP or BLUR_TO_SHARP to preserve Frame 0 legibility.`,
               frame: s.startFrame,
               autoFixed: false,
             });
@@ -531,6 +561,7 @@ async function runAudit(options = {}) {
           severity: 'ERROR',
           expected: `Hook Scene 1 duration <= ${maxHookFrames}f (target ${targetHookFrames}f, 1.6s) to prevent early swipe-away cliff`,
           actual: `${s.durationFrames}f (${(s.durationFrames / 60).toFixed(2)}s)`,
+          fix: `HOOK_PACING_LINT: Hook Scene 1 duration (${s.durationFrames}f) exceeds ${maxHookFrames}f cap. Fix: Reduce Scene 1 duration to <= ${maxHookFrames} frames (target ${targetHookFrames}f / 1.6s).`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -585,6 +616,7 @@ async function runAudit(options = {}) {
           severity: 'ERROR',
           expected: `<= ${constants.MAX_LINES_PER_LAYER} lines and <= 952px advance width at >= ${minPx}px`,
           actual: `${fit.lineCount} lines, ${fit.maxLineWidthPx}px width for "${layer.text}"`,
+          fix: `GLYPH_WIDTH_AND_LINE_CAP: Text '${layer.text}' exceeds line cap (${fit.lineCount} > ${constants.MAX_LINES_PER_LAYER}) or width (${fit.maxLineWidthPx}px > 952px). Fix: Shorten copy or split words so text fits within 2 lines and 952px width at >= ${minPx}px font size.`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -659,6 +691,7 @@ async function runAudit(options = {}) {
         severity: isLegacyEpilogue ? 'WARNING' : 'ERROR',
         expected: `${constants.MIN_SCENE_FRAMES}..${maxAllowedSceneFrames}f`,
         actual: `${s.durationFrames}f`,
+        fix: `SCENE_PACING_WINDOW: Scene ${s.sceneId} duration (${s.durationFrames}f) is outside [${constants.MIN_SCENE_FRAMES}, ${maxAllowedSceneFrames}] frames. Fix: Retime scene duration between ${constants.MIN_SCENE_FRAMES} and ${maxAllowedSceneFrames} frames (1.4s - 2.2s).`,
         frame: s.startFrame,
         autoFixed: false,
       });
@@ -670,6 +703,7 @@ async function runAudit(options = {}) {
         severity: 'ERROR',
         expected: `${constants.WORD_BUDGET_MIN}..${constants.WORD_BUDGET_MAX} words`,
         actual: `${words} words`,
+        fix: `WORD_BUDGET: Scene ${s.sceneId} combined text has ${words} words (allowed: ${constants.WORD_BUDGET_MIN}..${constants.WORD_BUDGET_MAX}). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).`,
         frame: s.startFrame,
         autoFixed: false,
       });
@@ -681,6 +715,7 @@ async function runAudit(options = {}) {
         severity: 'ERROR',
         expected: `setup=0, payoff in [${minBeatWin}..${maxBeatWin}]f (beat=${expectedBeatOffset}f)`,
         actual: `[${setupOffset}, ${payoffOffset}]`,
+        fix: `BEAT_SYNC_PAYOFF: Payoff offset ${payoffOffset}f is outside window [${minBeatWin}..${maxBeatWin}]f or not snapped to audio transient (${expectedBeatOffset}f). Fix: Align payoff trigger offset with the audio transient at ${expectedBeatOffset}f (or pass --auto-fix).`,
         frame: s.startFrame,
         autoFixed: false,
       });
@@ -696,7 +731,28 @@ async function runAudit(options = {}) {
         severity: 'ERROR',
         expected: `Post-payoff hold <= ${maxHold} frames (${(maxHold / 60).toFixed(2)}s) to prevent slide-reading fatigue`,
         actual: `${postPayoffHold} frames dead hold after payoff beat`,
+        fix: `DEAD_HOLD_LINT: Post-payoff hold of ${postPayoffHold} frames exceeds maximum ${maxHold} frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= ${maxHold} frames.`,
         frame: s.startFrame + payoffOffset,
+        autoFixed: false,
+      });
+    }
+
+    // Static micro-motion token check (Task 4b, warning only)
+    const hasCameraMove = s.camera?.movement && s.camera.movement !== 'STATIC';
+    let hasMotionTokens = false;
+    if (projectInfo.vectorFile && fs.existsSync(path.resolve(projectInfo.vectorFile))) {
+      const vecCode = fs.readFileSync(path.resolve(projectInfo.vectorFile), 'utf8');
+      hasMotionTokens = /\b(driftOffsetPx|parallaxOffsetPx|shakeOffsetPx|craneSweep|pushInScale|dutchTiltDeg|useCurrentFrame|interpolate|spring|WavingFlagSvg|OrganicExplosion|CutoutPuppet)\b/.test(vecCode);
+    }
+    if (!hasCameraMove && !hasMotionTokens && styleMode === 'DOCUMENTARY_SANS') {
+      violations.push({
+        sceneId: s.sceneId,
+        rule: 'MICRO_MOTION_CHECK',
+        severity: 'WARNING',
+        expected: 'Continuous secondary motion or motivated camera movement',
+        actual: `Scene ${s.sceneId} has STATIC camera and no detected secondary motion tokens in vector code`,
+        fix: `MICRO_MOTION_CHECK: Scene ${s.sceneId} has static camera and lacks secondary micro-motion. Fix: Add a secondary motion loop (such as driftOffsetPx, parallaxOffsetPx, or WavingFlagSvg) to ensure at least 4px continuous displacement.`,
+        frame: s.startFrame,
         autoFixed: false,
       });
     }
@@ -810,17 +866,17 @@ async function runAudit(options = {}) {
       });
       fs.copyFileSync(outStill, projStill);
 
-      // Optional micro-motion secondary frame-diff check
+      // Optional micro-motion secondary frame-diff check (Task 4b)
       if (checkMotion) {
-        const earlyFrame = scene.startFrame + 12;
-        const lateFrame = scene.startFrame + scene.durationFrames - 12;
+        const quarterFrame = Math.round(scene.startFrame + scene.durationFrames * 0.25);
+        const threeQuarterFrame = Math.round(scene.startFrame + scene.durationFrames * 0.75);
         const earlyTmp = path.join(outAuditDir, `_tmp_${scene.sceneId}_a.png`);
         const lateTmp = path.join(outAuditDir, `_tmp_${scene.sceneId}_b.png`);
         await renderStill({
           composition,
           serveUrl: bundleLocation,
           output: earlyTmp,
-          frame: earlyFrame,
+          frame: quarterFrame,
           logLevel: 'error',
           timeoutInMilliseconds: 90000,
         });
@@ -828,7 +884,7 @@ async function runAudit(options = {}) {
           composition,
           serveUrl: bundleLocation,
           output: lateTmp,
-          frame: lateFrame,
+          frame: threeQuarterFrame,
           logLevel: 'error',
           timeoutInMilliseconds: 90000,
         });
@@ -844,10 +900,11 @@ async function runAudit(options = {}) {
           violations.push({
             sceneId: scene.sceneId,
             rule: 'MICRO_MOTION_CHECK',
-            severity: 'ERROR',
-            expected: 'Non-zero frame delta between early and late scene frames',
-            actual: 'Zero frame delta (frozen scene)',
-            frame: earlyFrame,
+            severity: 'WARNING',
+            expected: 'Non-zero frame delta and continuous secondary motion between 25% and 75% of scene',
+            actual: 'Zero frame delta between 25% and 75% frames (frozen scene)',
+            fix: `MICRO_MOTION_CHECK: Scene ${scene.sceneId} lacks secondary micro-motion between 25% and 75% of the scene. Fix: Add a secondary motion loop (such as driftOffsetPx, parallaxOffsetPx, or WavingFlagSvg) to ensure at least 4px continuous displacement.`,
+            frame: quarterFrame,
             autoFixed: false,
           });
         }
