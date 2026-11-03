@@ -1,0 +1,1473 @@
+{
+  "$schema": "./timeline.schema.json",
+  "meta": {
+    "title": "THE $126M POSTAGE FRAUD",
+    "flagEmoji": "🇵🇰",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 103.36,
+    "bgmFile": "audio/bgm_postage_fraud.mp3",
+    "bgmStartFrom": 0,
+    "bgmLicense": {
+      "source": "YouTube Audio (https://youtu.be/Td9DymMNuo0)",
+      "licenseType": "CREATIVE_COMMONS",
+      "clearanceId": "CLR-POSTAGE-FRAUD-2026",
+      "attribution": "SKORN - Slowed (VUKEINE)"
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "DUST",
+    "fontFamily": "Montserrat",
+    "styleMode": "DOCUMENTARY_SANS",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivity": "STANDARD",
+    "loopSeamless": true,
+    "ctaConfig": {
+      "text": "FOLLOW FOR TRUE CYBER DOCUMENTARIES",
+      "subtext": "HOW ONE CODER STOLE $126M"
+    }
+  },
+  "scenes": [
+    {
+      "sceneId": "01_the_126m_hook",
+      "startFrame": 0,
+      "durationFrames": 102,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 35,
+      "textLayers": [
+        {
+          "text": "ONE PAKISTANI CODER",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "STOLE $126M FROM AMERICA",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "KhanewalVsUspsSplitHero",
+        "referencePlate": "plate_01.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm terracotta dusk sky gradient (#9A3412 to #1C1917) layered with subtle rotating sunburst paper rays. (2) Midground: Architectural diagonal split contrasting a modest Khanewal rooftop brick parapet on the left with a federal postal sorting facility portico on the right. (3) Foreground: Sharp rim-lit silhouette of a Pakistani coder at a glowing laptop on the left pitted against the high-contrast gold-and-navy USPS eagle seal on the right, separated by a soft radial backlighting horizon glow."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 0,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "🇵🇰 KHANEWAL TO USA • OCT 2026",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Faheem Akram allegedly defrauded USPS of $126M via LabelsBank.com",
+        "source": "BBC News / U.S. DOJ Indictment (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "02_35_billion_rupees_tally",
+      "startFrame": 102,
+      "durationFrames": 101,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 137,
+      "textLayers": [
+        {
+          "text": "FROM QUIET KHANEWAL",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "35 BILLION RUPEES GONE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "RupeesParcelTallyBoard",
+        "referencePlate": "plate_02.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep midnight blue felt canvas (#0F172A to #1E3A8A) with tactile cardstock paper grain. (2) Midground: Towering dimensional stacks of USPS priority mail cartons and wooden cargo pallets creating layered perspective depth. (3) Foreground: Prominent tactile paper-cut tally counter board illuminated by an overhead radial spotlight beam, rolling to 35 BILLION RUPEES with crisp white border separation and soft floor shadows.",
+        "counterConfig": {
+          "label": "COUNTERFEIT LOSS (PKR BILLIONS)",
+          "startValue": 0,
+          "endValue": 35
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "$126M loss equals roughly Rs 35 billion in counterfeit postage",
+        "source": "BBC News (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "03_step1_comfort_zone_khanewal",
+      "startFrame": 203,
+      "durationFrames": 102,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 238,
+      "textLayers": [
+        {
+          "text": "MEET FAHEEM AKRAM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "A QUIET VILLAGE SON",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "FaheemVillageDeskSilhouette",
+        "referencePlate": "plate_03.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm terracotta dusk twilight (#9A3412 to #1C1917) visible through an arched brick courtyard aperture. (2) Midground: Southern Punjab baked-brick room interior with a slow three-blade ceiling fan casting soft organic shadows across lime-washed masonry. (3) Foreground: 33-year-old Faheem Akram seated in silhouette at a weathered wooden desk, framed by warm radial amber lamp backlighting and soft cyan laptop screen glow."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "typewriter_tick.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 1: COMFORT ZONE • KHANEWAL",
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "04_step1_punjab_lanes_map",
+      "startFrame": 305,
+      "durationFrames": 101,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 340,
+      "textLayers": [
+        {
+          "text": "DUSTY LANES OF PUNJAB",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FATHER'S SMALL OFFICE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "KhanewalPunjabTacticalMap",
+        "referencePlate": "plate_04.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical slate-navy blueprint canvas (#0F172A to #1E3A8A) overlaid with fine quadrille drafting grid lines and coordinate indices. (2) Midground: Stylized geographical contours of southern Punjab, Indus-Chenab river branches, and railway junctions. (3) Foreground: High-contrast gold coordinate target marker and pulsating telemetry beacon locking onto Khanewal, rim-lit by a soft radial cyan radar sweep."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "05_step2_software_degree_need",
+      "startFrame": 406,
+      "durationFrames": 102,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 441,
+      "textLayers": [
+        {
+          "text": "A SOFTWARE DEGREE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "STARVING FOR A FORTUNE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "SoftwareDegreeAmbitionCard",
+        "referencePlate": "plate_05.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany command desk wood-paneling (#78350F to #1C1917) with organic timber grain and dark vignette shading. (2) Midground: Cascading tactile cardstock elements including an official software engineering degree diploma and crumpled overdue utility invoices with red demand stamps. (3) Foreground: Glowing monochrome CRT code terminal displaying green diagnostic output, rimmed by intense directional edge lighting and soft paper drop-shadows.",
+        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 2: THE NEED • AMBITION",
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "06_step2_barcode_flaw_split",
+      "startFrame": 508,
+      "durationFrames": 101,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.65
+      },
+      "transientType": "TEMPO_GRID",
+      "transientHitFrame": 543,
+      "textLayers": [
+        {
+          "text": "HE SPOTTED A FLAW",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "IN POSTAL BARCODES",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "svgForegroundAsset": "BarcodeCryptographicFlawSplit",
+        "referencePlate": "plate_06.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep cyber indigo felt expanse (#1E1B4B to #090D12) textured with subtle vertical binary code waterfalls. (2) Midground: Giant high-resolution USPS Intelligent Mail barcode matrix split along a cryptographic routing vulnerability. (3) Foreground: Coder silhouette wielding a brass-rimmed optical magnifying reticle that illuminates the flawed routing digits under a bright cyan radial beam."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "07_step3_crossed_line_labelsbank",
+      "startFrame": 609,
+      "durationFrames": 102,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 645,
+      "textLayers": [
+        {
+          "text": "HE CROSSED THE LINE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "LAUNCHED LABELSBANK",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "svgForegroundAsset": "LabelsBankDarkRoomLaunch",
+        "referencePlate": "plate_07.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Pitch-black dark-room felt substrate (#1E1B4B to #090D12) with subtle atmospheric dust motes. (2) Midground: Dual 27-inch high-resolution monitors radiating volumetric teal and white ambient light into a Spartan Pakistani bedroom. (3) Foreground: Sharp profile silhouette of Faheem typing on a mechanical keyboard, rim-lit by radial screen backlighting as the LabelsBank.com administrative portal goes live."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 36,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 3: THE THRESHOLD • AUG 2023",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "LabelsBank.com operated from August 2023 to September 2026",
+        "source": "U.S. Department of Justice (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "08_step3_two_dollar_labels_transit",
+      "startFrame": 711,
+      "durationFrames": 95,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 734,
+      "textLayers": [
+        {
+          "text": "ANY PARCEL WEIGHT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SOLD FOR JUST $2",
+          "triggerFrameOffset": 23,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "UspsTwoDollarLabelTransit",
+        "referencePlate": "plate_08.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Twilight slate-navy American sky (#0F172A to #1E3A8A) with paper-cut cloud layers and utility wires. (2) Midground: Suburban postal route perspective with road markings and postal drop boxes. (3) Foreground: Iconic white USPS Grumman LLV mail delivery truck with patriotic red/blue stripes racing across the frame, dynamically stamped by oversize $2 counterfeit barcode labels with soft radial underglow."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 23,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Counterfeit USPS labels were sold at a flat rate of roughly $2 each",
+        "source": "BBC News (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "09_step4_sixteen_accounts_map",
+      "startFrame": 806,
+      "durationFrames": 104,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 839,
+      "textLayers": [
+        {
+          "text": "TO HIDE THE MILLIONS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "16 BANK ACCOUNTS",
+          "triggerFrameOffset": 33,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "SixteenAccountsNetworkMap",
+        "referencePlate": "plate_09.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dark tactical blueprint graph (#0F172A to #1E3A8A) with coordinate rings and crosshair markers. (2) Midground: Stylized financial flow vectors and banking network topology connecting commercial banks across Lahore, Multan, and Khanewal. (3) Foreground: 16 glowing crimson bank account nodes connected by high-contrast bezier laundering routes, highlighted by a central pulsating gold treasury hub and soft radial backlighting."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 33,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 4: THE SEARCH • ADAPTATION",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "NCCIA investigators traced 16 bank accounts used to launder proceeds",
+        "source": "NCCIA Lahore / BBC News (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "10_step4_family_human_shields",
+      "startFrame": 910,
+      "durationFrames": 103,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 943,
+      "textLayers": [
+        {
+          "text": "HE USED HIS FAMILY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "AS HUMAN SHIELDS",
+          "triggerFrameOffset": 33,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "FamilySignatureShieldsCard",
+        "referencePlate": "plate_10.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Polished mahogany executive wood-panel desk (#78350F to #1C1917) with directional desk-lamp falloff. (2) Midground: Layered paper documents including commercial bank signature cards, CNIC identification records, and red ink stamping pads. (3) Foreground: Shaded silhouette of a hand with vintage fountain pen signing family member names onto account agreements, back-illuminated by a warm circular incandescent desk glow.",
+        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 33,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "11_pre_drop_family_signatures",
+      "startFrame": 1013,
+      "durationFrames": 104,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1046,
+      "textLayers": [
+        {
+          "text": "WIFE SISTER AND AUNT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SIGNED THEIR NAMES",
+          "triggerFrameOffset": 33,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "WifeSisterAuntCourtyardSilhouette",
+        "referencePlate": "plate_11.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Rich terracotta sunset Punjab sky (#9A3412 to #1C1917) framed by arched brick veranda walls. (2) Midground: Domestic courtyard with traditional wooden charpai, clay water vessels, and silhouetted foliage. (3) Foreground: Somber silhouettes of Faheem's wife, sister, and maternal aunt holding bank checkbooks, accented by warm golden-hour rim lighting that contrasts their unwitting complicity."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 33,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Accounts belonged to Akram (7), brother (5), wife (2), sister (1), and aunt (1)",
+        "source": "NCCIA Lahore Zone (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "12_step5_19s_drop_126m_drained",
+      "startFrame": 1117,
+      "durationFrames": 105,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1152,
+      "textLayers": [
+        {
+          "text": "THE CODE EXPLODED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "$126 MILLION DRAINED",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "skyGradient": [
+          "#7F1D1D",
+          "#1A090B"
+        ],
+        "svgForegroundAsset": "UspsVaultFractureExplosion",
+        "referencePlate": "plate_12.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Blinding crimson blast furnace sky (#7F1D1D to #1A090B) with explosive rotating paper rays. (2) Midground: Massive fortified steel postal vault doors fracturing along jagged mechanical stress fissures. (3) Foreground: 6-layer organic explosion core erupting with white-hot central flash star, flying currency shards, and expanding smoke rings at the 19.20s beat drop, surrounded by an intense radial shockwave aura."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 5: THE FIND • 19S BEAT DROP",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Operation caused over $126 million in losses to the U.S. Postal Service",
+        "source": "U.S. DOJ / BBC News (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      },
+      "structuralFractureHitFrame": 1152
+    },
+    {
+      "sceneId": "13_step5_five_million_labels_tally",
+      "startFrame": 1222,
+      "durationFrames": 104,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1255,
+      "textLayers": [
+        {
+          "text": "5,200 SECRET BUYERS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "5.1M FAKE LABELS",
+          "triggerFrameOffset": 33,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "FiveMillionLabelsConveyorTally",
+        "referencePlate": "plate_13.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Industrial slate-navy felt substrate (#0F172A to #1E3A8A) patterned with repeating rows of 5,200 buyer silhouette icons. (2) Midground: High-speed automated thermal label printing assembly spewing thousands of coiled counterfeit postage labels. (3) Foreground: High-contrast mechanical tally counter drum illuminated by a stark white industrial spotlight, spinning rapidly up to 5,100,000 units with crisp drop-shadow depth.",
+        "counterConfig": {
+          "label": "FAKE USPS LABELS SOLD",
+          "startValue": 0,
+          "endValue": 5100000
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "counter_roll.wav",
+          "frameOffset": 33,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "LabelsBank sold over 5.1 million counterfeit labels to more than 5,200 customers",
+        "source": "U.S. DOJ Indictment (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "14_step5_cargo_jets_millions_home",
+      "startFrame": 1326,
+      "durationFrames": 106,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": false,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1363,
+      "textLayers": [
+        {
+          "text": "CARGO JETS CROSSED AMERICA",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "MILLIONS FLOWED HOME",
+          "triggerFrameOffset": 37,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "AtlanticCargoJetWireTransit",
+        "referencePlate": "plate_14.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Transatlantic high-altitude dusk sky transitioning from deep terracotta to obsidian (#9A3412 to #1C1917). (2) Midground: Heavy commercial freight transport aircraft banking into the horizon with twin glowing condensation contrails. (3) Foreground: Luminous golden wire-transfer particle vectors arcing eastward over continental landmasses, backlit by soft radial engine exhaust glows and high-contrast cloud cardstock layers."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 37,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "15_step5_seven_accounts_gold",
+      "startFrame": 1432,
+      "durationFrames": 103,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1467,
+      "textLayers": [
+        {
+          "text": "7 PERSONAL ACCOUNTS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "OVERFLOWING WITH GOLD",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "GoldenVillaParanoiaLeader",
+        "referencePlate": "plate_15.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Opulent dark mahogany library paneling (#78350F to #1C1917) with organic wood grain and heavy cardstock borders. (2) Midground: Venetian window blinds casting stark horizontal shadow bars across a luxury compound marble floor. (3) Foreground: Tense silhouette of Faheem peering through the blinds beside a stack of 7 gold-embossed ledger folios, rim-lit by ominous red surveillance laser beams cutting through the gloom."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "16_step6_grand_jury_bounty",
+      "startFrame": 1535,
+      "durationFrames": 105,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1572,
+      "textLayers": [
+        {
+          "text": "US GRAND JURY STRUCK",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "$100,000 BOUNTY POSTED",
+          "triggerFrameOffset": 37,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#7F1D1D",
+          "#1A090B"
+        ],
+        "svgForegroundAsset": "FloridaGrandJuryBountyFracture",
+        "referencePlate": "plate_16.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Foreboding crimson-black justice felt backdrop (#7F1D1D to #1A090B) with distressed paper edges. (2) Midground: Southern District of Florida federal judicial seal and neoclassical grand jury columns. (3) Foreground: Heavy walnut gavel slamming down with kinetic impact lines, fracturing an official $100,000 USPIS WANTED reward placard stamped with bold red distress ink and rimmed by high-intensity strobe lighting."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 37,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 6: THE PRICE • FLORIDA DOJ",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "USPIS offered a $100,000 reward following a Florida federal grand jury indictment",
+        "source": "USPIS / U.S. DOJ (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      },
+      "structuralFractureHitFrame": 1572
+    },
+    {
+      "sceneId": "17_step6_uspis_nccia_trace_map",
+      "startFrame": 1640,
+      "durationFrames": 107,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1675,
+      "textLayers": [
+        {
+          "text": "USPIS AND NCCIA UNITED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "TRACED EVERY RUPEE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "MiamiToLahoreRadarTraceMap",
+        "referencePlate": "plate_17.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical cyber intelligence grid (#0F172A to #1E3A8A) with circular range rings and IP routing coordinate markers. (2) Midground: Dual-hemisphere map linking Miami USPIS headquarters with NCCIA Cyber Crime Wing in Lahore via high-speed encrypted forensic data lines. (3) Foreground: Concentric radar sweeps locking pulsing amber target crosshairs onto Lahore and Khanewal, framed by soft radial cyan backlighting."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "radar_ping.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "18_step6_sixteen_accounts_frozen",
+      "startFrame": 1747,
+      "durationFrames": 102,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 1781,
+      "textLayers": [
+        {
+          "text": "16 ACCOUNTS FROZEN",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "HIS FAMILY NAMED",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "skyGradient": [
+          "#7F1D1D",
+          "#1A090B"
+        ],
+        "svgForegroundAsset": "SixteenAccountsFrozenSplit",
+        "referencePlate": "plate_18.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Intense crisis crimson sky (#7F1D1D to #1A090B) with dramatic diagonal sunburst paper rays. (2) Midground: Heavy reinforced bank vault doors on the left shackled with heavy iron chains and massive padlocks. (3) Foreground: Silhouetted family figures on the right illuminated by pulsing emergency red beacon strobes, overlaid with bold frosted FROZEN compliance stamps and soft backlighting."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 34,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "16 ACCOUNTS FROZEN HIS FAMILY NAMED",
+        "source": "THE $126M POSTAGE FRAUD Archival Record",
+        "verified": true
+      }
+    },
+    {
+      "sceneId": "19_step6_family_fallout_dossier",
+      "startFrame": 1849,
+      "durationFrames": 104,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1884,
+      "textLayers": [
+        {
+          "text": "BROTHER WIFE AND AUNT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FACED THE FALLOUT",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "NcciaFamilyFalloutDossier",
+        "referencePlate": "plate_19.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Weathered walnut briefing table wood substrate (#78350F to #1C1917) with deep paper drop shadows. (2) Midground: Unfolded NCCIA Lahore Zone confidential dossier folder with authentic typed Urdu and English charge sheets. (3) Foreground: Family forensic accounting ledger card detailing Brother (5), Wife (2), Sister (1), and Aunt (1), stamped with a prominent red CONFIDENTIAL seal under focused warm spotlight illumination.",
+        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "20_step7_hunted_across_punjab",
+      "startFrame": 1953,
+      "durationFrames": 99,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": true,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 1988,
+      "textLayers": [
+        {
+          "text": "HUNTED ACROSS PUNJAB",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "NOWHERE LEFT TO HIDE",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "svgForegroundAsset": "LahoreNightRaidConvoyTransit",
+        "referencePlate": "plate_20.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Midnight cyber indigo felt night sky (#1E1B4B to #090D12) over the Lahore urban horizon. (2) Midground: Architectural silhouettes of Lahore flyovers and colonial facades. (3) Foreground: High-speed convoy of NCCIA tactical response pickup trucks with flashing red and blue LED light bars projecting volumetric cone beams across the wet asphalt, rim-lighting fugitive tire tracks."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 7: THE RETURN • LAHORE RAID",
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "21_step7_lahore_raid_capture",
+      "startFrame": 2052,
+      "durationFrames": 112,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2095,
+      "textLayers": [
+        {
+          "text": "NCCIA BROKE THE DOOR",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "CAPTURED IN LAHORE",
+          "triggerFrameOffset": 43,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#7F1D1D",
+          "#1A090B"
+        ],
+        "svgForegroundAsset": "LahoreHideoutBreachFracture",
+        "referencePlate": "plate_21.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Crimson raid shockwave backdrop (#7F1D1D to #1A090B) visible through a shattered entryway. (2) Midground: Lahore safehouse interior with tactical entry team silhouettes in Kevlar helmets and breaching gear. (3) Foreground: Splintered wooden door bursting inward with tactile paper shards and dust motes as rack-mounted LabelsBank server towers are violently unplugged, rimmed by high-contrast flashlight beams."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 43,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Pakistan's NCCIA tracked down and arrested Faheem Akram in Lahore",
+        "source": "BBC News / Dawn (Oct 2026)",
+        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+        "verified": true
+      },
+      "structuralFractureHitFrame": 2095
+    },
+    {
+      "sceneId": "22_step7_iron_cuffs_coder_hands",
+      "startFrame": 2164,
+      "durationFrames": 106,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2200,
+      "textLayers": [
+        {
+          "text": "IRON CUFFS LOCKED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ON THE CODER'S HANDS",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "svgForegroundAsset": "IronCuffsOnCoderHandsLeader",
+        "referencePlate": "plate_22.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Stark midnight felt detention canvas (#1E1B4B to #090D12) devoid of digital color. (2) Midground: Defeated silhouette of Faheem Akram sitting with bowed head in an austere holding cell. (3) Foreground: Extreme close-up silhouette of heavy blued-steel handcuffs snapping shut around trembling coder wrists, illuminated by a single harsh cool overhead rim spotlight."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 36,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "23_step7_khanewal_honor_shattered",
+      "startFrame": 2270,
+      "durationFrames": 103,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": false,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2304,
+      "textLayers": [
+        {
+          "text": "BACK IN KHANEWAL",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FAMILY HONOR SHATTERED",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "KhanewalVillageGriefTally",
+        "referencePlate": "plate_23.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic terracotta dusk over rustic Khanewal village rooftops (#9A3412 to #1C1917). (2) Midground: Narrow brick-walled village lane where whispering neighbors gather outside the family compound. (3) Foreground: Elderly father silhouette resting on a wooden walking stick, staring in devastated silence at the flickering blue light of a CRT television broadcast, framed by somber twilight backlighting.",
+        "counterConfig": {
+          "label": "FAMILY ACCOUNTS IMPLICATED",
+          "startValue": 0,
+          "endValue": 16
+        }
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "24_step7_us_extradition_bars",
+      "startFrame": 2373,
+      "durationFrames": 105,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2407,
+      "textLayers": [
+        {
+          "text": "FACING US EXTRADITION",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "DECADES BEHIND BARS",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "svgForegroundAsset": "ExtraditionWatchtowerSplit",
+        "referencePlate": "plate_24.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cold federal slate-navy graph grid (#0F172A to #1E3A8A) inscribed with formal treaty and penal code articles. (2) Midground: Split confrontation between Pakistani jail cell masonry on the left and an imposing U.S. federal maximum-security penitentiary wall on the right. (3) Foreground: Prisoner silhouette facing a towering watchtower searchlight beam, anchored by an official U.S. extradition request warrant with high-contrast embossed seals."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "stamp_slam.wav",
+          "frameOffset": 34,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "25_step8_two_dollar_shortcut_cost",
+      "startFrame": 2478,
+      "durationFrames": 104,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2512,
+      "textLayers": [
+        {
+          "text": "A $2 SHORTCUT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "COST EVERYTHING HE LOVED",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "StoryCircleTwoDollarShortcutCard",
+        "referencePlate": "plate_25.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany command desk wood grain (#78350F to #1C1917) with warm corner vignettes. (2) Midground: Complete 8-stage Dan Harmon Story Circle diagram etched into weathered parchment substrate with radial progress spokes. (3) Foreground: Charred and curled $2 counterfeit postal label lying at the circle's center, stamped with a bold red weathered SEIZED insignia and haloed by fading golden ember sparks.",
+        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "paper_rip.wav",
+          "frameOffset": 34,
+          "leadFrames": 2
+        }
+      ],
+      "headerContext": "STEP 8: THE CHANGE • FULL CIRCLE",
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "26_step8_labelsbank_shattered",
+      "startFrame": 2582,
+      "durationFrames": 104,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": false,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.95
+      },
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 2618,
+      "textLayers": [
+        {
+          "text": "LABELSBANK WENT DARK",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "THE EMPIRE SHATTERED",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#7F1D1D",
+          "#1A090B"
+        ],
+        "svgForegroundAsset": "LabelsBankMonitorShatterFracture",
+        "referencePlate": "plate_26.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep crimson-to-black felt void (#7F1D1D to #1A090B) with volumetric aura falloff. (2) Midground: Computer monitor housing cracking open along sharp structural stress lines under an official DOJ domain seizure seal. (3) Foreground: High-contrast white-hot detonation core erupting into flying tempered glass shards, dissolved barcode pixels, and dark floating ash motes, rimmed by intense radial backlighting."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "artillery_shell.wav",
+          "frameOffset": 36,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD",
+      "structuralFractureHitFrame": 2618
+    },
+    {
+      "sceneId": "27_step8_screen_glow_to_bars",
+      "startFrame": 2686,
+      "durationFrames": 105,
+      "archetype": "LONE_LEADER",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2721,
+      "textLayers": [
+        {
+          "text": "SCREEN GLOW FADED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ONLY BARS REMAIN",
+          "triggerFrameOffset": 35,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "svgForegroundAsset": "DarkCellIronBarsLeader",
+        "referencePlate": "plate_27.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cold indigo felt concrete cell wall (#1E1B4B to #090D12) with tactile mortar joints. (2) Midground: High barred security transom casting long diagonal moonlight stripes across an empty concrete floor where glowing monitors once sat. (3) Foreground: Solitary silhouette of Faheem seated in despair behind thick vertical blued-iron cell bars, rim-lit by a faint, cool celestial backlight."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "metal_clang.wav",
+          "frameOffset": 35,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    },
+    {
+      "sceneId": "28_epilogue_conscience_cage_loop",
+      "startFrame": 2791,
+      "durationFrames": 132,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": false,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "CYMBAL_CRASH",
+      "transientHitFrame": 2825,
+      "textLayers": [
+        {
+          "text": "GENIUS WITHOUT CONSCIENCE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BUILDS ITS OWN CAGE",
+          "triggerFrameOffset": 34,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "SUNBURST_HERO",
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "svgForegroundAsset": "KhanewalRooftopLoopSplit",
+        "referencePlate": "plate_28.jpg",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Symmetrical warm terracotta dusk sky (#9A3412 to #1C1917) with slowly rotating sunburst paper rays matching Scene 1 Frame 0 precisely for a seamless infinite loop. (2) Midground: Serene Khanewal village rooftop parapet overlooking quiet Punjab horizon trees and brick architecture. (3) Foreground: Empty wooden desk chair beside a closed, dead laptop bathed in golden twilight rim-light, framing the tragic final payoff: Genius without conscience builds its own cage."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34,
+          "leadFrames": 2
+        }
+      ],
+      "sensitivity": "STANDARD"
+    }
+  ]
+}

@@ -38,6 +38,10 @@ const PROJECT_VECTOR_MAP = {
   'RashidMinhasVectors': 'rashid-minhas-1971',
   'TaipingVectors': 'taiping-rebellion-1850',
   'U2IncidentVectors': 'u2-incident-1960',
+  'BinanceHeistVectors': 'binance-heist-2026',
+  'CartonDeWiartVectors': 'carton-de-wiart-1916',
+  'FloridaCrashVectors': 'florida-plane-crash-2026',
+  'PostageFraudVectors': 'postage-fraud-2026',
 };
 
 /**

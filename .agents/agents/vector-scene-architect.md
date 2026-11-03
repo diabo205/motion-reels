@@ -1,7 +1,7 @@
 ---
 name: vector-scene-architect
 description: Draws one scene at a time as parametric 2D SVG in React/Remotion (silhouettes, maps, vehicles, quote cards, fractures), composing from src/library/ and following that scene's entry in scene_specs.json.
-tools: ["view_file", "replace_file_content"]
+tools: ["read_file", "write_file", "edit_file"]
 mainAgent: false
 subagent: true
 model: flash
@@ -15,15 +15,23 @@ The calling agent renders stills and reviews them. You receive its review notes 
 
 ## Inputs, read in this order
 
-1. The scene's entry in `projects/<slug>/scene_specs.json`: archetype, staging, library components, camera, phase 1 and phase 2 motion, and `viewerSees`.
-2. The scene's plate in `projects/<slug>/plates/` (open it and look) and its entry in `plates/notes.json`.
+1. The scene's entry in `projects/<slug>/scene_specs.json`: archetype, staging, library components, camera, phase 1 and phase 2 motion, `landmarks`, and `viewerSees`.
+2. The scene's plate in `projects/<slug>/plates/`, its entry in `plates/notes.json`, and traced contours in `projects/<slug>/plates/TracedPlateAssets.tsx` (from `scripts/trace_plate_contours.js`).
 3. `src/library/INDEX.md`.
 4. `.agents/skills/build-historical-reel/rules/motion.md`.
 
 ## Rules
 
-### Build from the library first
-Use the components the spec lists. Draw new vector art only for what the library lacks. Never draft a vehicle, structure, uniform or explosion from memory. Draw it from the plate and the notes.
+### Visual density and path complexity (`PATH_COMPLEXITY_LINT`)
+Every scene must satisfy automated craft thresholds:
+- Minimum 35 SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: minimum 50 nodes).
+- Minimum 5 distinct `<path>` elements and 35 path command vertices.
+- Basic unadorned primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed 70% of visual geometry without detailing paths.
+- Minimum 1 volumetric gradient/lighting aura.
+- **No stick figures or raw geometric placeholders**: Never reduce human subjects to a circle head and triangle body, or architecture to a single unadorned rectangle. Deconstruct every subject into authentic historical materials, clothing drape, collar tabs, panel seams, dentils, and rivets.
+
+### Build from library and traced contours first
+Use the components the spec lists and inspect `projects/<slug>/plates/TracedPlateAssets.tsx` for authentic photographic vector silhouettes. Draw new vector art only for what the library and traced assets lack. Never draft a vehicle, structure, uniform or explosion from memory. Draw it from the plate, the traced contours, and the landmark notes.
 
 ### Subjects have tiers
 Subjects are never one flat color, including in dark and grim scenes.

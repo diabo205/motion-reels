@@ -47,5 +47,5 @@ Every script is structured into five proportional narrative blocks across the to
 ## 5. Automated Pre-Render QA & Deliverables (`scripts/pipeline.js`)
 Before any production export:
 1. Run `node scripts/pipeline.js --project <slug> --audit-stills --auto-fix`.
-2. Inspect `projects/<slug>/audit/audit_report.json` (`passed: true`, zero `FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, or `GLYPH_WIDTH_AND_LINE_CAP` errors).
+2. Inspect `projects/<slug>/audit/audit_report.json` (`passed: true`, zero `FONT_LINT`, `PHOTO_PASTE_LINT`, `PATH_COMPLEXITY_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, or `GLYPH_WIDTH_AND_LINE_CAP` errors).
 3. Verify generated deliverables in `projects/<slug>/deliverables/` (`captions.srt`, `metadata.json`, `post_copy.md`, `poster.png`, `poster_4x5.png`).

@@ -50,7 +50,8 @@ Each event in the script maps to a short run of scenes that covers four beats. E
 
 ## 4. Ground the scene in reality
 
-- **References first.** No vehicle, uniform, building or terrain is drawn from memory. Every scene needs a plate in `projects/<slug>/plates/` (ingested by the build step) and the spec names which one.
+- **References first & Landmark Deconstruction.** No vehicle, uniform, building or terrain is drawn from memory. Every scene needs a plate in `projects/<slug>/plates/` (ingested by the build step) and the spec names which one. Each scene spec must include a `landmarks` object breaking down foreground anatomy, midground props, background architecture, and lighting auras so vector drafting never collapses into clip-art.
+- **Automated Plate Tracing.** Photographic plates are automatically traced into SVG paths via `node scripts/trace_plate_contours.js --project <slug> --all` to provide genuine contour blueprints.
 - **Material hierarchy.** Subjects are built from authentic materials and depth tiers. A figure, vehicle or building is never a single flat color, including in dark scenes. Examples: khaki wool serge, polished brass, scarlet collar tabs; sandstone masonry with mortar joints, terracotta fort walls; two-tone camouflage hulls, blued steel with walnut grips, rusted iron plating.
 - **Sky and staging.** Pick a setting-motivated sky: terracotta and umber for the Middle East, amber and mahogany for South Africa, dawn gold for the Mediterranean, deep azure for maritime, slate-navy for maps and blueprints. Staging modes: `SUNBURST_HERO`, `PAPER_EXTERIOR`, `GRAPH_GRID`, `WOOD_PANEL`, `NIGHT_FELT`, `SPLIT_HORIZON`.
 - **Separation.** Radial backlight, horizon glow and rim light separate the subject from the background.
@@ -96,6 +97,12 @@ Write `projects/<slug>/scene_specs.json` as an array. One entry per scene:
   "sfx": { "file": "artillery_shell.wav", "frame": 642 },
   "claim": null,
   "sensitivity": null,
+  "landmarks": {
+    "foregroundSubject": "Commander turret silhouette, riveted armor seam, binocular contour",
+    "midgroundProps": "Charred track links, deflecting ricochet spark path",
+    "backgroundArchitecture": "Battered stone parapet with mortar joints",
+    "lightingAuras": ["amber firelight bounce (#F59E0B)", "terracotta wall backlight (#9A3412)"]
+  },
   "viewerSees": "One sentence: what the viewer should see at the payoff frame."
 }
 ```
@@ -112,6 +119,7 @@ This updates `config/retention_priors.json`, which this skill reads in section 1
 
 ## Gotchas
 
+- `PATH_COMPLEXITY_LINT`: Scene vector components with < 35 nodes, < 5 paths, or > 70% primitive rectangles/circles will fail the audit. Never generate simplified stick figures.
 - `TYPEWRITER` animation on Scene 1 fails `HOOK_TYPEWRITER_LINT`.
 - Raw `<img>` or `<image>` in vector scenes fails `PHOTO_PASTE_LINT`.
 - Text outside the safe zones in `config/safe_zones.json` fails the safe-zone audit.

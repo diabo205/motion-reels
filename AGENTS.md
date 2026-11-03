@@ -26,6 +26,14 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
      - **Automated Binary Magic-Byte Verification**: Every plate must pass binary header inspection (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP), be $\ge 10\text{KB}$, and contain zero HTML error pages (`<!DOCTYPE html` or Wikimedia 400/429 blocks).
      - **Wikimedia Step-Thumbnail Compliance (`w.wiki/GHai`)**: Never hotlink arbitrary pixel widths (e.g., 800px) or request full-resolution original master files that trigger Wikimedia 400/429 edge blocks. Always request standard step thumbnails (`iiurlwidth=960` or `1280`) via `scripts/ingest_reference_plates.js`.
      - **Automated Pipeline Block**: The build pipeline (`scripts/pipeline.js` and `scripts/audit_and_validate.js`) automatically halts with a fatal exit code if any scene in `timeline.json` lacks an authentic, verified reference plate.
+   - **Visual Density & Path Complexity Floor (`PATH_COMPLEXITY_LINT`)**:
+     - Every scene vector component must contain:
+       1. Minimum $\ge 35$ SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: $\ge 50$ nodes).
+       2. Minimum $\ge 5$ distinct `<path>` elements and $\ge 35$ path command vertices.
+       3. Basic geometric primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed $70\%$ of visual geometry without detailing paths.
+       4. Minimum 1 volumetric gradient/lighting aura.
+     - **Zero Monolithic Batch Dumps**: Never generate 20+ scenes in a single output stream. Monolithic generation causes LLM token exhaustion, collapsing geometry into childish clipart. Author scene-by-scene or in modular files (`src/scenes/<slug>/SceneNN.tsx`).
+   - **Automated Plate Tracing Pipeline (`scripts/trace_plate_contours.js`)**: Convert photographic plates into precise SVG vector contours using Potrace (`node scripts/trace_plate_contours.js --project <slug> --all`). This writes ready-to-use React SVG components to `projects/<slug>/plates/TracedPlateAssets.tsx` and raw bezier path dictionaries to `traced_plate_assets.json`.
    - **6-Layer Vector Anatomy Standard**: Deconstruct reference blueprints into the 6-layer vector hierarchy:
      1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
      2. *Layer 2: Dynamic Shockwave / Ionization Rims* (Mach rings, supersonic ozone glows, speed lines).

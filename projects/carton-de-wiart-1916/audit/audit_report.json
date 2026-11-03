@@ -1,7 +1,7 @@
 {
   "projectSlug": "carton-de-wiart-1916",
   "title": "THE UNKILLABLE SOLDIER",
-  "timestamp": "2026-11-03T06:55:51.796Z",
+  "timestamp": "2026-11-03T16:13:54.379Z",
   "passed": true,
   "totalFrames": 3443,
   "durationSec": 57.38,
@@ -301,7 +301,26 @@
     ]
   },
   "errorCount": 0,
-  "warningCount": 0,
+  "warningCount": 2,
   "motionChecks": [],
-  "violations": []
+  "violations": [
+    {
+      "sceneId": "GLOBAL_VECTORS",
+      "rule": "LIBRARY_REUSE",
+      "severity": "WARNING",
+      "expected": "Vector files with > 50 <path> elements should import reusable assets from src/library/ or primitives from src/kit/",
+      "actual": "Found 64 raw <path> elements in src/components/CartonDeWiartVectors.tsx with zero imports from src/library/ or src/kit/",
+      "fix": "LIBRARY_REUSE: File src/components/CartonDeWiartVectors.tsx has 64 raw <path> elements and imports nothing from src/library/ or src/kit/. Fix: Refactor common silhouettes, hardware, and backgrounds into src/library/ or compose using existing kit/library primitives.",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "GLOBAL_PLATES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": "Observation notes must exist at projects/carton-de-wiart-1916/plates/notes.json with >= 3 items in 'observed' per plate",
+      "actual": "plates/notes.json missing",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Reference plate observation notes missing at projects/carton-de-wiart-1916/plates/notes.json. Fix: Create plates/notes.json documenting at least 3 visual observations per plate."
+    }
+  ]
 }

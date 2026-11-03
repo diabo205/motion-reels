@@ -9,6 +9,8 @@
     "audit:fast": "node scripts/pipeline.js --audit-stills --skip-stills",
     "audit:fix": "node scripts/pipeline.js --audit-stills --skip-stills --auto-fix",
     "lint:framework": "node scripts/lint_framework.js",
+    "lint:complexity": "node scripts/lint_path_complexity.js",
+    "trace:plates": "node scripts/trace_plate_contours.js",
     "deliverables": "node scripts/pipeline.js --deliverables",
     "telemetry": "node scripts/telemetry_priors.js",
     "test:smoke": "node scripts/pipeline.js --smoke"

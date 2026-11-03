@@ -67,6 +67,14 @@ const PROJECT_MAP = {
     bgmFile: 'assets/audio/bgm_florida_crash.mp3',
     beatGridFile: 'assets/audio/beat_grid_florida_crash.json',
   },
+  'postage-fraud-2026': {
+    slug: 'postage-fraud-2026',
+    timelineFile: 'src/timelines/postage_fraud_2026.json',
+    compositionId: 'PostageFraud2026',
+    vectorFile: 'src/components/PostageFraudVectors.tsx',
+    bgmFile: 'assets/audio/bgm_postage_fraud.mp3',
+    beatGridFile: 'assets/audio/beat_grid_postage_fraud.json',
+  },
 };
 
 function sha256File(filePath) {
@@ -90,6 +98,7 @@ function inferSlugFromTitle(title = '') {
   if (upper.includes('PESHAWAR')) return 'peshawar-2009';
   if (upper.includes('CARTON') || upper.includes('WIART') || upper.includes('UNKILLABLE')) return 'carton-de-wiart-1916';
   if (upper.includes('FLORIDA') || upper.includes('LEARJET') || upper.includes('N722BD')) return 'florida-plane-crash-2026';
+  if (upper.includes('POSTAGE') || upper.includes('FAHEEM') || upper.includes('LABELSBANK') || upper.includes('126M')) return 'postage-fraud-2026';
   return (
     upper
       .toLowerCase()
@@ -103,11 +112,18 @@ function resolveProject(explicitSlug) {
     const entry = PROJECT_MAP[explicitSlug];
     const timelinePath = path.resolve(entry.timelineFile);
     const timeline = JSON.parse(fs.readFileSync(timelinePath, 'utf8'));
+    const projectDir = path.resolve(`projects/${entry.slug}`);
+    const scenesDir = fs.existsSync(path.resolve(`src/scenes/${entry.slug}`))
+      ? path.resolve(`src/scenes/${entry.slug}`)
+      : fs.existsSync(path.join(projectDir, 'scenes'))
+      ? path.join(projectDir, 'scenes')
+      : null;
     return {
       ...entry,
       timelinePath,
       timeline,
-      projectDir: path.resolve(`projects/${entry.slug}`),
+      projectDir,
+      scenesDir,
     };
   }
 
@@ -124,11 +140,19 @@ function resolveProject(explicitSlug) {
     beatGridFile: 'assets/audio/beat_grid.json',
   };
 
+  const projectDir = path.resolve(`projects/${slug}`);
+  const scenesDir = fs.existsSync(path.resolve(`src/scenes/${slug}`))
+    ? path.resolve(`src/scenes/${slug}`)
+    : fs.existsSync(path.join(projectDir, 'scenes'))
+    ? path.join(projectDir, 'scenes')
+    : null;
+
   return {
     ...mapped,
     timelinePath: currentPath,
     timeline,
-    projectDir: path.resolve(`projects/${slug}`),
+    projectDir,
+    scenesDir,
   };
 }
 

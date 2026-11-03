@@ -27,6 +27,36 @@ import {
   NtsbPrimaryFindingCard,
 } from './FloridaCrashVectors';
 import {
+  KhanewalVsUspsSplitHero,
+  RupeesParcelTallyBoard,
+  FaheemVillageDeskSilhouette,
+  KhanewalPunjabTacticalMap,
+  SoftwareDegreeAmbitionCard,
+  BarcodeCryptographicFlawSplit,
+  LabelsBankDarkRoomLaunch,
+  UspsTwoDollarLabelTransit,
+  SixteenAccountsNetworkMap,
+  FamilySignatureShieldsCard,
+  WifeSisterAuntCourtyardSilhouette,
+  UspsVaultFractureExplosion,
+  FiveMillionLabelsConveyorTally,
+  AtlanticCargoJetWireTransit,
+  GoldenVillaParanoiaLeader,
+  FloridaGrandJuryBountyFracture,
+  MiamiToLahoreRadarTraceMap,
+  SixteenAccountsFrozenSplit,
+  NcciaFamilyFalloutDossier,
+  LahoreNightRaidConvoyTransit,
+  LahoreHideoutBreachFracture,
+  IronCuffsOnCoderHandsLeader,
+  KhanewalVillageGriefTally,
+  ExtraditionWatchtowerSplit,
+  StoryCircleTwoDollarShortcutCard,
+  LabelsBankMonitorShatterFracture,
+  DarkCellIronBarsLeader,
+  KhanewalRooftopLoopSplit,
+} from './PostageFraudVectors';
+import {
   BinanceAlertQuoteCard,
   KoreaPeninsulaNightSatellite,
   Unit121CyberBunker,
@@ -2726,6 +2756,119 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
 
     case 'NTSB_PRIMARY_FINDING_CARD':
       return <NtsbPrimaryFindingCard durationFrames={durationFrames} />;
+
+    /* --- The $126M Postage Fraud 2026 Scene Vector Assets --- */
+    case 'KhanewalVsUspsSplitHero':
+    case 'KHANEWAL_VS_USPS_SPLIT_HERO':
+      return <KhanewalVsUspsSplitHero durationFrames={durationFrames} />;
+
+    case 'RupeesParcelTallyBoard':
+    case 'RUPEES_PARCEL_TALLY_BOARD':
+      return <RupeesParcelTallyBoard durationFrames={durationFrames} />;
+
+    case 'FaheemVillageDeskSilhouette':
+    case 'FAHEEM_VILLAGE_DESK_SILHOUETTE':
+      return <FaheemVillageDeskSilhouette durationFrames={durationFrames} />;
+
+    case 'KhanewalPunjabTacticalMap':
+    case 'KHANEWAL_PUNJAB_TACTICAL_MAP':
+      return <KhanewalPunjabTacticalMap durationFrames={durationFrames} />;
+
+    case 'SoftwareDegreeAmbitionCard':
+    case 'SOFTWARE_DEGREE_AMBITION_CARD':
+      return <SoftwareDegreeAmbitionCard durationFrames={durationFrames} />;
+
+    case 'BarcodeCryptographicFlawSplit':
+    case 'BARCODE_CRYPTOGRAPHIC_FLAW_SPLIT':
+      return <BarcodeCryptographicFlawSplit durationFrames={durationFrames} />;
+
+    case 'LabelsBankDarkRoomLaunch':
+    case 'LABELSBANK_DARK_ROOM_LAUNCH':
+      return <LabelsBankDarkRoomLaunch durationFrames={durationFrames} />;
+
+    case 'UspsTwoDollarLabelTransit':
+    case 'USPS_TWO_DOLLAR_LABEL_TRANSIT':
+      return <UspsTwoDollarLabelTransit durationFrames={durationFrames} />;
+
+    case 'SixteenAccountsNetworkMap':
+    case 'SIXTEEN_ACCOUNTS_NETWORK_MAP':
+      return <SixteenAccountsNetworkMap durationFrames={durationFrames} />;
+
+    case 'FamilySignatureShieldsCard':
+    case 'FAMILY_SIGNATURE_SHIELDS_CARD':
+      return <FamilySignatureShieldsCard durationFrames={durationFrames} />;
+
+    case 'WifeSisterAuntCourtyardSilhouette':
+    case 'WIFE_SISTER_AUNT_COURTYARD_SILHOUETTE':
+      return <WifeSisterAuntCourtyardSilhouette durationFrames={durationFrames} />;
+
+    case 'UspsVaultFractureExplosion':
+    case 'USPS_VAULT_FRACTURE_EXPLOSION':
+      return <UspsVaultFractureExplosion durationFrames={durationFrames} />;
+
+    case 'FiveMillionLabelsConveyorTally':
+    case 'FIVE_MILLION_LABELS_CONVEYOR_TALLY':
+      return <FiveMillionLabelsConveyorTally durationFrames={durationFrames} />;
+
+    case 'AtlanticCargoJetWireTransit':
+    case 'ATLANTIC_CARGO_JET_WIRE_TRANSIT':
+      return <AtlanticCargoJetWireTransit durationFrames={durationFrames} />;
+
+    case 'GoldenVillaParanoiaLeader':
+    case 'GOLDEN_VILLA_PARANOIA_LEADER':
+      return <GoldenVillaParanoiaLeader durationFrames={durationFrames} />;
+
+    case 'FloridaGrandJuryBountyFracture':
+    case 'FLORIDA_GRAND_JURY_BOUNTY_FRACTURE':
+      return <FloridaGrandJuryBountyFracture durationFrames={durationFrames} />;
+
+    case 'MiamiToLahoreRadarTraceMap':
+    case 'MIAMI_TO_LAHORE_RADAR_TRACE_MAP':
+      return <MiamiToLahoreRadarTraceMap durationFrames={durationFrames} />;
+
+    case 'SixteenAccountsFrozenSplit':
+    case 'SIXTEEN_ACCOUNTS_FROZEN_SPLIT':
+      return <SixteenAccountsFrozenSplit durationFrames={durationFrames} />;
+
+    case 'NcciaFamilyFalloutDossier':
+    case 'NCCIA_FAMILY_FALLOUT_DOSSIER':
+      return <NcciaFamilyFalloutDossier durationFrames={durationFrames} />;
+
+    case 'LahoreNightRaidConvoyTransit':
+    case 'LAHORE_NIGHT_RAID_CONVOY_TRANSIT':
+      return <LahoreNightRaidConvoyTransit durationFrames={durationFrames} />;
+
+    case 'LahoreHideoutBreachFracture':
+    case 'LAHORE_HIDEOUT_BREACH_FRACTURE':
+      return <LahoreHideoutBreachFracture durationFrames={durationFrames} />;
+
+    case 'IronCuffsOnCoderHandsLeader':
+    case 'IRON_CUFFS_ON_CODER_HANDS_LEADER':
+      return <IronCuffsOnCoderHandsLeader durationFrames={durationFrames} />;
+
+    case 'KhanewalVillageGriefTally':
+    case 'KHANEWAL_VILLAGE_GRIEF_TALLY':
+      return <KhanewalVillageGriefTally durationFrames={durationFrames} />;
+
+    case 'ExtraditionWatchtowerSplit':
+    case 'EXTRADITION_WATCHTOWER_SPLIT':
+      return <ExtraditionWatchtowerSplit durationFrames={durationFrames} />;
+
+    case 'StoryCircleTwoDollarShortcutCard':
+    case 'STORY_CIRCLE_TWO_DOLLAR_SHORTCUT_CARD':
+      return <StoryCircleTwoDollarShortcutCard durationFrames={durationFrames} />;
+
+    case 'LabelsBankMonitorShatterFracture':
+    case 'LABELSBANK_MONITOR_SHATTER_FRACTURE':
+      return <LabelsBankMonitorShatterFracture durationFrames={durationFrames} />;
+
+    case 'DarkCellIronBarsLeader':
+    case 'DARK_CELL_IRON_BARS_LEADER':
+      return <DarkCellIronBarsLeader durationFrames={durationFrames} />;
+
+    case 'KhanewalRooftopLoopSplit':
+    case 'KHANEWAL_ROOFTOP_LOOP_SPLIT':
+      return <KhanewalRooftopLoopSplit durationFrames={durationFrames} />;
 
     default:
       return null;

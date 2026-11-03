@@ -10,6 +10,7 @@ const { exportProjectDeliverables } = require('./export_deliverables');
 const { lintFramework } = require('./lint_framework');
 const { validateProjectPlates } = require('./plate_validator');
 const { analyzeProjectTelemetry } = require('./telemetry_priors');
+const { lintPathComplexity } = require('./lint_path_complexity');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
@@ -436,6 +437,32 @@ async function runAudit(options = {}) {
     console.log(
       `✅ PASS: MANDATORY_REFERENCE_PLATE_LINT verified (${plateCheck.verifiedCount}/${plateCheck.totalScenes} scenes backed by binary-verified authentic reference plates${plateWarnings.length > 0 ? `, ${plateWarnings.length} warning(s)` : ''}).`
     );
+  }
+
+  // 2.6. VECTOR PATH COMPLEXITY & VISUAL ENTROPY AUDIT (PATH_COMPLEXITY_LINT)
+  console.log('\n--- Vector Path Complexity & Visual Entropy Audit (PATH_COMPLEXITY_LINT) ---');
+  let complexityViolations = lintPathComplexity(projectInfo, timeline);
+  if (targetScene !== undefined) {
+    const sIdx = targetScene - 1;
+    const tgtSceneId = timeline.scenes[sIdx]?.sceneId;
+    if (tgtSceneId) {
+      complexityViolations = complexityViolations.filter((v) => v.sceneId === tgtSceneId);
+    }
+  }
+  violations.push(...complexityViolations);
+  const complexityErrors = complexityViolations.filter((v) => v.severity === 'ERROR');
+  const complexityWarnings = complexityViolations.filter((v) => v.severity === 'WARNING');
+  if (complexityErrors.length === 0) {
+    console.log(
+      `✅ PASS: PATH_COMPLEXITY_LINT verified (all scenes satisfy SVG node and path complexity thresholds).`
+    );
+  } else {
+    console.error(
+      `❌ VIOLATIONS: ${complexityErrors.length} scene(s) failed PATH_COMPLEXITY_LINT with crude/simplified geometry!`
+    );
+    for (const err of complexityErrors) {
+      console.error(`   - [${err.sceneId}] ${err.fix || err.actual}`);
+    }
   }
 
   // 2.7. STAGING DIVERSITY LINT (STAGING_DIVERSITY_LINT - Peshawar Standard)

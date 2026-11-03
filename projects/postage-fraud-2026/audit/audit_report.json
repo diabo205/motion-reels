@@ -1,0 +1,521 @@
+{
+  "projectSlug": "postage-fraud-2026",
+  "title": "THE $126M POSTAGE FRAUD",
+  "timestamp": "2026-11-03T16:41:20.524Z",
+  "passed": false,
+  "totalFrames": 2923,
+  "durationSec": 48.72,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 28,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 765,
+    "bassDropCount": 145,
+    "cymbalCrashCount": 260,
+    "energyPeakCount": 121,
+    "onsetCount": 239
+  },
+  "telemetryAnalysis": {
+    "projectSlug": "postage-fraud-2026",
+    "openingArchetype": "SPLIT_CONFRONTATION",
+    "hookDurationFrames": 102,
+    "hookHoldRate": 0.955,
+    "hasLiveTelemetry": false,
+    "telemetryPlatform": "baseline_prior",
+    "sceneStats": [
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 1,
+        "sceneId": "01_the_126m_hook",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 102,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.955,
+        "isHook": true
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 2,
+        "sceneId": "02_35_billion_rupees_tally",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 101,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 3,
+        "sceneId": "03_step1_comfort_zone_khanewal",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 102,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 4,
+        "sceneId": "04_step1_punjab_lanes_map",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 101,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.865,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 5,
+        "sceneId": "05_step2_software_degree_need",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 102,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 6,
+        "sceneId": "06_step2_barcode_flaw_split",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 101,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 7,
+        "sceneId": "07_step3_crossed_line_labelsbank",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 102,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 8,
+        "sceneId": "08_step3_two_dollar_labels_transit",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 95,
+        "durationBucket": "<=128f",
+        "payoffOffset": 23,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 9,
+        "sceneId": "09_step4_sixteen_accounts_map",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 33,
+        "holdRate": 0.865,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 10,
+        "sceneId": "10_step4_family_human_shields",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 33,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 11,
+        "sceneId": "11_pre_drop_family_signatures",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 33,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 12,
+        "sceneId": "12_step5_19s_drop_126m_drained",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 13,
+        "sceneId": "13_step5_five_million_labels_tally",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 33,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 14,
+        "sceneId": "14_step5_cargo_jets_millions_home",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 37,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 15,
+        "sceneId": "15_step5_seven_accounts_gold",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 16,
+        "sceneId": "16_step6_grand_jury_bounty",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 37,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 17,
+        "sceneId": "17_step6_uspis_nccia_trace_map",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 107,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.865,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 18,
+        "sceneId": "18_step6_sixteen_accounts_frozen",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 102,
+        "durationBucket": "<=128f",
+        "payoffOffset": 34,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 19,
+        "sceneId": "19_step6_family_fallout_dossier",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 20,
+        "sceneId": "20_step7_hunted_across_punjab",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 99,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 21,
+        "sceneId": "21_step7_lahore_raid_capture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 112,
+        "durationBucket": "<=128f",
+        "payoffOffset": 43,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 22,
+        "sceneId": "22_step7_iron_cuffs_coder_hands",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 23,
+        "sceneId": "23_step7_khanewal_honor_shattered",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 34,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 24,
+        "sceneId": "24_step7_us_extradition_bars",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 34,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 25,
+        "sceneId": "25_step8_two_dollar_shortcut_cost",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 34,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 26,
+        "sceneId": "26_step8_labelsbank_shattered",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 27,
+        "sceneId": "27_step8_screen_glow_to_bars",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 35,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "postage-fraud-2026",
+        "sceneIndex": 28,
+        "sceneId": "28_epilogue_conscience_cage_loop",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 132,
+        "durationBucket": "129-144f",
+        "payoffOffset": 34,
+        "holdRate": 0.92,
+        "isHook": false
+      }
+    ]
+  },
+  "errorCount": 20,
+  "warningCount": 0,
+  "motionChecks": [],
+  "violations": [
+    {
+      "sceneId": "02_35_billion_rupees_tally",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'RupeesParcelTallyBoard' has 28 nodes, 0 paths, and 7 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 02_35_billion_rupees_tally [RupeesParcelTallyBoard] is overly simplified / clip-art (28 nodes, 0 paths, 7 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "06_step2_barcode_flaw_split",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'BarcodeCryptographicFlawSplit' has 45 nodes, 4 paths, and 32 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 06_step2_barcode_flaw_split [BarcodeCryptographicFlawSplit] is overly simplified / clip-art (45 nodes, 4 paths, 32 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "07_step3_crossed_line_labelsbank",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'LabelsBankDarkRoomLaunch' has 23 nodes, 2 paths, and 15 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 07_step3_crossed_line_labelsbank [LabelsBankDarkRoomLaunch] is overly simplified / clip-art (23 nodes, 2 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "08_step3_two_dollar_labels_transit",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'UspsTwoDollarLabelTransit' has 28 nodes, 1 paths, and 13 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 08_step3_two_dollar_labels_transit [UspsTwoDollarLabelTransit] is overly simplified / clip-art (28 nodes, 1 paths, 13 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "09_step4_sixteen_accounts_map",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'SixteenAccountsNetworkMap' has 28 nodes, 2 paths, and 17 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 09_step4_sixteen_accounts_map [SixteenAccountsNetworkMap] is overly simplified / clip-art (28 nodes, 2 paths, 17 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "11_pre_drop_family_signatures",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'WifeSisterAuntCourtyardSilhouette' has 24 nodes, 8 paths, and 42 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 11_pre_drop_family_signatures [WifeSisterAuntCourtyardSilhouette] is overly simplified / clip-art (24 nodes, 8 paths, 42 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "12_step5_19s_drop_126m_drained",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'UspsVaultFractureExplosion' has 24 nodes, 4 paths, and 65 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 12_step5_19s_drop_126m_drained [UspsVaultFractureExplosion] is overly simplified / clip-art (24 nodes, 4 paths, 65 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "13_step5_five_million_labels_tally",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'FiveMillionLabelsConveyorTally' has 18 nodes, 0 paths, and 7 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 13_step5_five_million_labels_tally [FiveMillionLabelsConveyorTally] is overly simplified / clip-art (18 nodes, 0 paths, 7 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "14_step5_cargo_jets_millions_home",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'AtlanticCargoJetWireTransit' has 38 nodes, 15 paths, and 76 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 14_step5_cargo_jets_millions_home [AtlanticCargoJetWireTransit] is overly simplified / clip-art (38 nodes, 15 paths, 76 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "15_step5_seven_accounts_gold",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
+      "actual": "Component 'GoldenVillaParanoiaLeader' is 83% basic primitives with only 6 path(s)",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 15_step5_seven_accounts_gold [GoldenVillaParanoiaLeader] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "16_step6_grand_jury_bounty",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'FloridaGrandJuryBountyFracture' has 48 nodes, 7 paths, and 103 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 16_step6_grand_jury_bounty [FloridaGrandJuryBountyFracture] is overly simplified / clip-art (48 nodes, 7 paths, 103 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "17_step6_uspis_nccia_trace_map",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
+      "actual": "Component 'MiamiToLahoreRadarTraceMap' is 76% basic primitives with only 8 path(s)",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 17_step6_uspis_nccia_trace_map [MiamiToLahoreRadarTraceMap] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "18_step6_sixteen_accounts_frozen",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'SixteenAccountsFrozenSplit' has 46 nodes, 7 paths, and 62 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 18_step6_sixteen_accounts_frozen [SixteenAccountsFrozenSplit] is overly simplified / clip-art (46 nodes, 7 paths, 62 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "20_step7_hunted_across_punjab",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
+      "actual": "Component 'LahoreNightRaidConvoyTransit' is 88% basic primitives with only 6 path(s)",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 20_step7_hunted_across_punjab [LahoreNightRaidConvoyTransit] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "21_step7_lahore_raid_capture",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'LahoreHideoutBreachFracture' has 46 nodes, 21 paths, and 139 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 21_step7_lahore_raid_capture [LahoreHideoutBreachFracture] is overly simplified / clip-art (46 nodes, 21 paths, 139 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "22_step7_iron_cuffs_coder_hands",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'IronCuffsOnCoderHandsLeader' has 17 nodes, 2 paths, and 14 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 22_step7_iron_cuffs_coder_hands [IronCuffsOnCoderHandsLeader] is overly simplified / clip-art (17 nodes, 2 paths, 14 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "23_step7_khanewal_honor_shattered",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'KhanewalVillageGriefTally' has 25 nodes, 3 paths, and 15 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 23_step7_khanewal_honor_shattered [KhanewalVillageGriefTally] is overly simplified / clip-art (25 nodes, 3 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "26_step8_labelsbank_shattered",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'LabelsBankMonitorShatterFracture' has 20 nodes, 2 paths, and 64 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 26_step8_labelsbank_shattered [LabelsBankMonitorShatterFracture] is overly simplified / clip-art (20 nodes, 2 paths, 64 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "27_step8_screen_glow_to_bars",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
+      "actual": "Component 'DarkCellIronBarsLeader' is 75% basic primitives with only 7 path(s)",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 27_step8_screen_glow_to_bars [DarkCellIronBarsLeader] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "28_epilogue_conscience_cage_loop",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'KhanewalRooftopLoopSplit' has 57 nodes, 4 paths, and 25 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene 28_epilogue_conscience_cage_loop [KhanewalRooftopLoopSplit] is overly simplified / clip-art (57 nodes, 4 paths, 25 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    }
+  ]
+}

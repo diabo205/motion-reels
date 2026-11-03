@@ -305,3 +305,14 @@ Constructed via the 6-layer vector explosion hierarchy in `src/components/Peshaw
 - Props: `quoteText: string, attribution: string, documentArt?: React.ReactNode` (extends `ArchetypeSceneProps` omitting `archetype`)
 - Use for: Primary-source telegram, memo, or diary quote reveal with source attribution pill and live audio waveform.
 - Archetypes: `QUOTE_CARD`
+
+---
+
+## Project Vectors: The $126M Postage Fraud 2026 (`src/components/PostageFraudVectors.tsx`)
+
+### PostageFraudVectors (All 28 Scenes)
+- Path: `src/components/PostageFraudVectors.tsx`
+- Props: `durationFrames?: number` (all 28 parametric 2D SVG vector scene components)
+- Use for: Complete 28-scene cybercrime documentary reel tracing Faheem Akram from Khanewal to LabelsBank.com, 16 bank accounts, 19s beat drop vault explosion, Florida grand jury bounty, Lahore raid, handcuffs, extradition, and seamless epilogue loop.
+- Archetypes: `SPLIT_CONFRONTATION`, `CROWD_TALLY`, `LONE_LEADER`, `VECTOR_MAP`, `QUOTE_CARD`, `VEHICLE_IN_TRANSIT`, `STRUCTURAL_FRACTURE`
+

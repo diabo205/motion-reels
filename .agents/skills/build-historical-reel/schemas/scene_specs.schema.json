@@ -136,6 +136,18 @@
         "type": ["string", "null"],
         "enum": ["SOMBER_MEMORIAL", "STANDARD", "HIGH_SENSITIVITY", null]
       },
+      "landmarks": {
+        "type": "object",
+        "properties": {
+          "foregroundSubject": { "type": "string" },
+          "midgroundProps": { "type": "string" },
+          "backgroundArchitecture": { "type": "string" },
+          "lightingAuras": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
       "viewerSees": {
         "type": "string"
       }

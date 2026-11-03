@@ -1,22 +1,325 @@
 {
   "projectSlug": "peshawar-2009",
   "title": "PESHAWAR 2009",
-  "timestamp": "2026-11-01T12:50:03.890Z",
-  "passed": true,
+  "timestamp": "2026-11-03T08:58:49.758Z",
+  "passed": false,
   "totalFrames": 3388,
   "durationSec": 56.47,
   "maxFramesCeiling": 3500,
   "sceneCount": 14,
   "transientEngine": "librosa",
   "transientStats": {
-    "totalTransients": 344,
-    "bassDropCount": 65,
-    "cymbalCrashCount": 63,
-    "energyPeakCount": 62,
-    "onsetCount": 154
+    "totalTransients": 374,
+    "bassDropCount": 131,
+    "cymbalCrashCount": 62,
+    "energyPeakCount": 70,
+    "onsetCount": 111
   },
-  "errorCount": 0,
-  "warningCount": 0,
+  "telemetryAnalysis": {
+    "projectSlug": "peshawar-2009",
+    "openingArchetype": "SILHOUETTE_ACTION",
+    "hookDurationFrames": 242,
+    "hookHoldRate": 0.672,
+    "hasLiveTelemetry": true,
+    "telemetryPlatform": "youtube",
+    "sceneStats": [
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 1,
+        "sceneId": "01_hook_bazaar_morning",
+        "archetype": "SILHOUETTE_ACTION",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.672,
+        "isHook": true
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 2,
+        "sceneId": "02_the_detonation_blast",
+        "archetype": "SILHOUETTE_ACTION",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.611,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 3,
+        "sceneId": "03_the_weapon_car_bomb",
+        "archetype": "TELEMETRY_COUNTER",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.7729,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 4,
+        "sceneId": "04_firestorm_fabric_shops",
+        "archetype": "DOCUMENT_CARD",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8995,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 5,
+        "sceneId": "05_rickshaw_evacuation",
+        "archetype": "SILHOUETTE_ACTION",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.9151,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 6,
+        "sceneId": "06_hospital_code_red",
+        "archetype": "DOCUMENT_CARD",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.9118,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 7,
+        "sceneId": "07_death_toll_counter",
+        "archetype": "TELEMETRY_COUNTER",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8924,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 8,
+        "sceneId": "08_clinton_touchdown",
+        "archetype": "FLAG_BANNER",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8729,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 9,
+        "sceneId": "09_waziristan_offensive",
+        "archetype": "TACTICAL_MAP",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8846,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 10,
+        "sceneId": "10_unprecedented_disavowal",
+        "archetype": "BLUEPRINT_DIAGRAM",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8723,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 11,
+        "sceneId": "11_bilateral_press_conference",
+        "archetype": "DOCUMENT_CARD",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8531,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 12,
+        "sceneId": "12_peshawar_unbroken_resilience",
+        "archetype": "SILHOUETTE_ACTION",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.8757,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 13,
+        "sceneId": "13_memorial_137_martyrs",
+        "archetype": "SPOTLIGHT_EMBLEM",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.881,
+        "isHook": false
+      },
+      {
+        "projectSlug": "peshawar-2009",
+        "sceneIndex": 14,
+        "sceneId": "14_pakistan_flag_resolve",
+        "archetype": "FLAG_BANNER",
+        "durationFrames": 242,
+        "durationBucket": ">168f",
+        "payoffOffset": 60,
+        "holdRate": 0.92,
+        "isHook": false
+      }
+    ]
+  },
+  "errorCount": 16,
+  "warningCount": 1,
   "motionChecks": [],
-  "violations": []
+  "violations": [
+    {
+      "sceneId": "GLOBAL_PLATES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Reference manifest must exist at projects/peshawar-2009/plates/manifest.json",
+      "actual": "Missing manifest.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Missing manifest.json. Fix: Ingest plates and catalog mappings in projects/peshawar-2009/plates/manifest.json."
+    },
+    {
+      "sceneId": "GLOBAL_PLATES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": "Observation notes must exist at projects/peshawar-2009/plates/notes.json with >= 3 items in 'observed' per plate",
+      "actual": "plates/notes.json missing",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Reference plate observation notes missing at projects/peshawar-2009/plates/notes.json. Fix: Create plates/notes.json documenting at least 3 visual observations per plate."
+    },
+    {
+      "sceneId": "01_hook_bazaar_morning",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 01_hook_bazaar_morning has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "02_the_detonation_blast",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 02_the_detonation_blast has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "03_the_weapon_car_bomb",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 03_the_weapon_car_bomb has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "04_firestorm_fabric_shops",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 04_firestorm_fabric_shops has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "05_rickshaw_evacuation",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 05_rickshaw_evacuation has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "06_hospital_code_red",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 06_hospital_code_red has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "07_death_toll_counter",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 07_death_toll_counter has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "08_clinton_touchdown",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 08_clinton_touchdown has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "09_waziristan_offensive",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 09_waziristan_offensive has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "10_unprecedented_disavowal",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 10_unprecedented_disavowal has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "11_bilateral_press_conference",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 11_bilateral_press_conference has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "12_peshawar_unbroken_resilience",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 12_peshawar_unbroken_resilience has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "13_memorial_137_martyrs",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 13_memorial_137_martyrs has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "14_pakistan_flag_resolve",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene 14_pakistan_flag_resolve has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "01_hook_bazaar_morning",
+      "rule": "HOOK_TYPEWRITER_LINT",
+      "severity": "ERROR",
+      "expected": "Scene 1 text must use HARD_POP or BLUR_TO_SHARP to protect Frame 0 poster legibility",
+      "actual": "Found animation=\"TYPEWRITER\" on hook scene",
+      "fix": "HOOK_TYPEWRITER_LINT: Found animation=\"TYPEWRITER\" on hook scene. Fix: Change Scene 1 text animation to HARD_POP or BLUR_TO_SHARP to preserve Frame 0 legibility.",
+      "frame": 0,
+      "autoFixed": false
+    }
+  ]
 }

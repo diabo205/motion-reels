@@ -193,6 +193,7 @@
               "archetypeVariant": { "type": "string" },
               "quoteAttribution": { "type": "string" },
               "atmosphericPlatePrompt": { "type": "string" },
+              "referencePlate": { "type": "string" },
               "counterConfig": {
                 "type": "object",
                 "required": ["label", "startValue", "endValue"],

@@ -1,7 +1,7 @@
 ---
 name: script-beat-compiler
 description: Compiles a script, scene specs and an audio beat grid into a frame-accurate 60fps timeline JSON. Invoke after pre-production and audio analysis, or when retiming a reel.
-tools: ["view_file", "replace_file_content", "run_command"]
+tools: ["read_file", "write_file", "edit_file", "run_command"]
 mainAgent: false
 subagent: true
 model: flash

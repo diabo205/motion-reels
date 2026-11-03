@@ -83,6 +83,8 @@ async function main() {
     mode = '--smoke';
   } else if (args.some((a) => ['--deliverables', 'deliverables'].includes(a))) {
     mode = '--deliverables';
+  } else if (args.some((a) => ['--trace-plates', 'trace-plates', '--trace'].includes(a))) {
+    mode = '--trace-plates';
   } else if (args.some((a) => ['--telemetry', 'telemetry'].includes(a))) {
     mode = '--telemetry';
   }
@@ -163,6 +165,12 @@ async function main() {
   if (mode === '--lint-framework') {
     const { runFrameworkLint } = require('./lint_framework');
     runFrameworkLint();
+    return;
+  }
+
+  if (mode === '--trace-plates') {
+    const traceScript = path.resolve('scripts/trace_plate_contours.js');
+    execSync(`node "${traceScript}" --project ${proj.slug} --all`, { stdio: 'inherit' });
     return;
   }
 

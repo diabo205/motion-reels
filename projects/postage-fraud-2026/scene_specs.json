@@ -1,0 +1,976 @@
+[
+  {
+    "scene": 1,
+    "act": "I",
+    "beat": "TRIGGER",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "SUNBURST_HERO",
+    "startFrame": 0,
+    "durationFrames": 102,
+    "plate": "plate_01.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg", "kit/AtmosphericBackground"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Khanewal rooftop coder silhouette", "USPS eagle emblem split"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Diagonal voltage fracture and red barcode flash"
+    },
+    "text": {
+      "tag": "🇵🇰 KHANEWAL TO USA • OCT 2026",
+      "setup": "ONE PAKISTANI CODER",
+      "payoff": "STOLE $126M FROM AMERICA"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 0
+    },
+    "claim": {
+      "text": "Faheem Akram allegedly defrauded USPS of $126M via LabelsBank.com",
+      "source": "BBC News / U.S. DOJ Indictment (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "A diagonal split contrasting a warm terracotta Khanewal rooftop coder with a federal navy USPS sorting emblem."
+  },
+  {
+    "scene": 2,
+    "act": "I",
+    "beat": "MACRO",
+    "archetype": "CROWD_TALLY",
+    "staging": "NIGHT_FELT",
+    "startFrame": 102,
+    "durationFrames": 101,
+    "plate": "plate_02.jpg",
+    "library": ["tactile/PaperSignCounter", "kit/AtmosphericBackground"],
+    "camera": "CRANE_SWEEP_UP",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Stacks of shipping parcels", "Rolling counter board"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Counter slams to 35 BILLION PKR with red stamp"
+    },
+    "text": {
+      "tag": null,
+      "setup": "FROM QUIET KHANEWAL",
+      "payoff": "35 BILLION RUPEES GONE"
+    },
+    "sfx": {
+      "file": "counter_roll.wav",
+      "frame": 137
+    },
+    "claim": {
+      "text": "$126M loss equals roughly Rs 35 billion in counterfeit postage",
+      "source": "BBC News (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "A tactile cardstock counter rolling up to 35 Billion Rupees over towering stacks of U.S. postal parcels."
+  },
+  {
+    "scene": 3,
+    "act": "II",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 203,
+    "durationFrames": 102,
+    "plate": "plate_03.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactile/CutoutPuppet"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Faheem Akram silhouette at modest desk", "Spinning ceiling fan"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Warm amber backlight halo illuminates laptop screen"
+    },
+    "text": {
+      "tag": "STEP 1: COMFORT ZONE • KHANEWAL",
+      "setup": "MEET FAHEEM AKRAM",
+      "payoff": "A QUIET VILLAGE SON"
+    },
+    "sfx": {
+      "file": "typewriter_tick.wav",
+      "frame": 238
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 1 (You): 33-year-old Faheem Akram seated under a slow ceiling fan in a modest Punjab brick room."
+  },
+  {
+    "scene": 4,
+    "act": "II",
+    "beat": "MACRO",
+    "archetype": "VECTOR_MAP",
+    "staging": "GRAPH_GRID",
+    "startFrame": 305,
+    "durationFrames": 101,
+    "plate": "plate_04.jpg",
+    "library": ["tactical/GeoTacticalMap", "tactical/PulsatingBattleMarker"],
+    "camera": "PARALLAX_PAN_RIGHT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Punjab province contour map", "Khanewal railway junction pin"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Amber coordinate ring expands around Khanewal"
+    },
+    "text": {
+      "tag": null,
+      "setup": "DUSTY LANES OF PUNJAB",
+      "payoff": "FATHER'S SMALL OFFICE"
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 340
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A stylized tactical map of southern Punjab highlighting Khanewal and his father's small property deed office."
+  },
+  {
+    "scene": 5,
+    "act": "II",
+    "beat": "TRIGGER",
+    "archetype": "QUOTE_CARD",
+    "staging": "WOOD_PANEL",
+    "startFrame": 406,
+    "durationFrames": 102,
+    "plate": "plate_05.jpg",
+    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Software engineering diploma card", "Unpaid family bills"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Glowing code terminal eclipses the paper bills"
+    },
+    "text": {
+      "tag": "STEP 2: THE NEED • AMBITION",
+      "setup": "A SOFTWARE DEGREE",
+      "payoff": "STARVING FOR A FORTUNE"
+    },
+    "sfx": {
+      "file": "paper_rip.wav",
+      "frame": 441
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 2 (Need): A software engineering degree juxtaposed against small-town economic stagnation."
+  },
+  {
+    "scene": 6,
+    "act": "II",
+    "beat": "REACTION",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "NIGHT_FELT",
+    "startFrame": 508,
+    "durationFrames": 101,
+    "plate": "plate_06.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactile/HingedCutoutReveal"],
+    "camera": "DUTCH_TILT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Coder inspecting barcode matrix", "USPS Intelligent Mail barcode"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Barcode splits open revealing unverified routing key"
+    },
+    "text": {
+      "tag": null,
+      "setup": "HE SPOTTED A FLAW",
+      "payoff": "IN POSTAL BARCODES"
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 543
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A split confrontation between Faheem's magnifying lens and a fractured USPS Intelligent Mail barcode matrix."
+  },
+  {
+    "scene": 7,
+    "act": "II",
+    "beat": "TRIGGER",
+    "archetype": "LONE_LEADER",
+    "staging": "NIGHT_FELT",
+    "startFrame": 609,
+    "durationFrames": 102,
+    "plate": "plate_07.jpg",
+    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Backlit coder silhouette in dark room", "LabelsBank domain registration"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 36,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Dual monitors ignite with LabelsBank.com portal"
+    },
+    "text": {
+      "tag": "STEP 3: THE THRESHOLD • AUG 2023",
+      "setup": "HE CROSSED THE LINE",
+      "payoff": "LAUNCHED LABELSBANK"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 645
+    },
+    "claim": {
+      "text": "LabelsBank.com operated from August 2023 to September 2026",
+      "source": "U.S. Department of Justice (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 3 (Go): In August 2023, Faheem crosses into cybercrime as LabelsBank.com lights up his dark room."
+  },
+  {
+    "scene": 8,
+    "act": "II",
+    "beat": "REACTION",
+    "archetype": "VEHICLE_IN_TRANSIT",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 711,
+    "durationFrames": 95,
+    "plate": "plate_08.jpg",
+    "library": ["tactical/TacticalMovementArrow", "tactile/PaperSignCounter"],
+    "camera": "PARALLAX_PAN_RIGHT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["USPS delivery truck in transit", "Counterfeit $2 label stream"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 23,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "$2 flat-rate stamp slams across heavy freight boxes"
+    },
+    "text": {
+      "tag": null,
+      "setup": "ANY PARCEL WEIGHT",
+      "payoff": "SOLD FOR JUST $2"
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 734
+    },
+    "claim": {
+      "text": "Counterfeit USPS labels were sold at a flat rate of roughly $2 each",
+      "source": "BBC News (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "A white USPS mail van with blue/red stripes racing right as $2 counterfeit barcode labels stamp onto heavy parcels."
+  },
+  {
+    "scene": 9,
+    "act": "II",
+    "beat": "MACRO",
+    "archetype": "VECTOR_MAP",
+    "staging": "GRAPH_GRID",
+    "startFrame": 806,
+    "durationFrames": 104,
+    "plate": "plate_09.jpg",
+    "library": ["tactical/GeoTacticalMap", "tactical/TacticalMovementArrow"],
+    "camera": "CRANE_SWEEP_UP",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Network map of 16 Pakistani bank nodes", "Encrypted cash flow vectors"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 33,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "16 crimson account nodes pulse in a radial web"
+    },
+    "text": {
+      "tag": "STEP 4: THE SEARCH • ADAPTATION",
+      "setup": "TO HIDE THE MILLIONS",
+      "payoff": "16 BANK ACCOUNTS"
+    },
+    "sfx": {
+      "file": "counter_roll.wav",
+      "frame": 839
+    },
+    "claim": {
+      "text": "NCCIA investigators traced 16 bank accounts used to launder proceeds",
+      "source": "NCCIA Lahore / BBC News (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 4 (Search): A financial vector map linking 16 bank accounts across Punjab to launder the proceeds."
+  },
+  {
+    "scene": 10,
+    "act": "II",
+    "beat": "FOCAL",
+    "archetype": "QUOTE_CARD",
+    "staging": "WOOD_PANEL",
+    "startFrame": 910,
+    "durationFrames": 103,
+    "plate": "plate_10.jpg",
+    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Stack of bank signature cards", "Fountain pen and ink pad"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 33,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Red thumbprints and family account titles revealed"
+    },
+    "text": {
+      "tag": null,
+      "setup": "HE USED HIS FAMILY",
+      "payoff": "AS HUMAN SHIELDS"
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 943
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Bank account registration forms bearing the signatures and thumbprints of Faheem's closest relatives."
+  },
+  {
+    "scene": 11,
+    "act": "II",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 1013,
+    "durationFrames": 104,
+    "plate": "plate_11.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactile/CutoutPuppet"],
+    "camera": "DUTCH_TILT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Silhouettes of wife, sister, and maternal aunt", "Glowing wire transfer cables"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 33,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Shadowy golden chains wrap around the family silhouettes"
+    },
+    "text": {
+      "tag": null,
+      "setup": "WIFE SISTER AND AUNT",
+      "payoff": "SIGNED THEIR NAMES"
+    },
+    "sfx": {
+      "file": "metal_clang.wav",
+      "frame": 1046
+    },
+    "claim": {
+      "text": "Accounts belonged to Akram (7), brother (5), wife (2), sister (1), and aunt (1)",
+      "source": "NCCIA Lahore Zone (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "Pre-drop riser: Silhouettes of his wife, sister, and maternal aunt signing papers in warm courtyard light as tension peaks."
+  },
+  {
+    "scene": 12,
+    "act": "III",
+    "beat": "TRIGGER",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "SUNBURST_HERO",
+    "startFrame": 1117,
+    "durationFrames": 105,
+    "plate": "plate_12.jpg",
+    "library": ["kit/OrganicExplosion", "tactile/PaperSignCounter"],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["USPS treasury vault facade", "High-voltage barcode surge"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "6-layer OrganicExplosion shatters the postal treasury vault at 19.20s beat drop"
+    },
+    "text": {
+      "tag": "STEP 5: THE FIND • 19S BEAT DROP",
+      "setup": "THE CODE EXPLODED",
+      "payoff": "$126 MILLION DRAINED"
+    },
+    "sfx": {
+      "file": "artillery_shell.wav",
+      "frame": 1152
+    },
+    "claim": {
+      "text": "Operation caused over $126 million in losses to the U.S. Postal Service",
+      "source": "U.S. DOJ / BBC News (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "At the 19-second beat drop, a 6-layer shockwave explosion fractures the USPS vault as $126 MILLION slams in red."
+  },
+  {
+    "scene": 13,
+    "act": "III",
+    "beat": "REACTION",
+    "archetype": "CROWD_TALLY",
+    "staging": "NIGHT_FELT",
+    "startFrame": 1222,
+    "durationFrames": 104,
+    "plate": "plate_13.jpg",
+    "library": ["tactile/PaperSignCounter", "characters/MarchingInfantryRank"],
+    "camera": "CRANE_SWEEP_UP",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Grid of 5,200 buyer icons", "High-speed barcode printer belt"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 33,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Counter rolls to 5,100,000 counterfeit shipping labels"
+    },
+    "text": {
+      "tag": null,
+      "setup": "5,200 SECRET BUYERS",
+      "payoff": "5.1M FAKE LABELS"
+    },
+    "sfx": {
+      "file": "counter_roll.wav",
+      "frame": 1255
+    },
+    "claim": {
+      "text": "LabelsBank sold over 5.1 million counterfeit labels to more than 5,200 customers",
+      "source": "U.S. DOJ Indictment (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "A high-speed conveyor belt printing 5.1 million counterfeit labels for 5,200 buyers across the United States."
+  },
+  {
+    "scene": 14,
+    "act": "III",
+    "beat": "MACRO",
+    "archetype": "VEHICLE_IN_TRANSIT",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 1326,
+    "durationFrames": 106,
+    "plate": "plate_14.jpg",
+    "library": ["hardware/TransportAircraftSilhouette", "tactical/TacticalMovementArrow"],
+    "camera": "PARALLAX_PAN_RIGHT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Cargo transport aircraft over Atlantic", "Golden wire transfer stream"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 37,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Supersonic contrails turn into streams of dollar bills flowing east"
+    },
+    "text": {
+      "tag": null,
+      "setup": "CARGO JETS CROSSED AMERICA",
+      "payoff": "MILLIONS FLOWED HOME"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 1363
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A heavy cargo transport aircraft banking across a crimson dusk sky while golden revenue vectors stream back to Punjab."
+  },
+  {
+    "scene": 15,
+    "act": "III",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "WOOD_PANEL",
+    "startFrame": 1432,
+    "durationFrames": 103,
+    "plate": "plate_15.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactile/PaperSignCounter"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Faheem standing behind luxury villa window", "7 overflowing account ledgers"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Red surveillance laser beams cross the luxury compound"
+    },
+    "text": {
+      "tag": null,
+      "setup": "7 PERSONAL ACCOUNTS",
+      "payoff": "OVERFLOWING WITH GOLD"
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 1467
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Faheem surrounded by 7 overflowing bank ledgers inside a gated compound, peering nervously through window blinds."
+  },
+  {
+    "scene": 16,
+    "act": "III",
+    "beat": "TRIGGER",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "NIGHT_FELT",
+    "startFrame": 1535,
+    "durationFrames": 105,
+    "plate": "plate_16.jpg",
+    "library": ["kit/OrganicExplosion", "kit/WeatheredMilitaryStamp"],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Southern District of Florida Federal Seal", "Grand jury indictment pillars"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 37,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Gavel shockwave fractures the shield and slams $100,000 WANTED stamp"
+    },
+    "text": {
+      "tag": "STEP 6: THE PRICE • FLORIDA DOJ",
+      "setup": "US GRAND JURY STRUCK",
+      "payoff": "$100,000 BOUNTY POSTED"
+    },
+    "sfx": {
+      "file": "artillery_shell.wav",
+      "frame": 1572
+    },
+    "claim": {
+      "text": "USPIS offered a $100,000 reward following a Florida federal grand jury indictment",
+      "source": "USPIS / U.S. DOJ (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 6 (Take): A federal gavel shockwave slams a $100,000 USPIS bounty notice across the screen."
+  },
+  {
+    "scene": 17,
+    "act": "III",
+    "beat": "REACTION",
+    "archetype": "VECTOR_MAP",
+    "staging": "GRAPH_GRID",
+    "startFrame": 1640,
+    "durationFrames": 107,
+    "plate": "plate_17.jpg",
+    "library": ["tactical/TacticalRadarGrid", "tactical/PulsatingBattleMarker"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Transcontinental radar sweep Miami to Lahore", "IP trace vectors"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Crosshairs lock onto Lahore and Khanewal coordinates"
+    },
+    "text": {
+      "tag": null,
+      "setup": "USPIS AND NCCIA UNITED",
+      "payoff": "TRACED EVERY RUPEE"
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 1675
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A tactical cyber-intelligence radar grid connecting U.S. Postal Inspectors in Florida with Pakistan's NCCIA in Lahore."
+  },
+  {
+    "scene": 18,
+    "act": "III",
+    "beat": "FOCAL",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "SUNBURST_HERO",
+    "startFrame": 1747,
+    "durationFrames": 102,
+    "plate": "plate_18.jpg",
+    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "camera": "DUTCH_TILT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["16 bank vault doors", "Family silhouettes on opposite side"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 34,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Heavy steel chains and FROZEN stamps lock all 16 family accounts"
+    },
+    "text": {
+      "tag": null,
+      "setup": "16 ACCOUNTS FROZEN",
+      "payoff": "HIS FAMILY NAMED"
+    },
+    "sfx": {
+      "file": "metal_clang.wav",
+      "frame": 1781
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Steel chains slam across 16 bank vaults on the left while his family's silhouettes are illuminated by red sirens on the right."
+  },
+  {
+    "scene": 19,
+    "act": "III",
+    "beat": "MACRO",
+    "archetype": "QUOTE_CARD",
+    "staging": "WOOD_PANEL",
+    "startFrame": 1849,
+    "durationFrames": 104,
+    "plate": "plate_19.jpg",
+    "library": ["tactile/HingedCutoutReveal", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["NCCIA Lahore Zone investigation dossier", "Family tree diagram"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Dossier swings open exposing Brother (5), Wife (2), Sister (1), Aunt (1)"
+    },
+    "text": {
+      "tag": null,
+      "setup": "BROTHER WIFE AND AUNT",
+      "payoff": "FACED THE FALLOUT"
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 1884
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "An NCCIA investigation dossier opening to reveal the family tree of accounts: Brother 5, Wife 2, Sister 1, Aunt 1."
+  },
+  {
+    "scene": 20,
+    "act": "IV",
+    "beat": "TRIGGER",
+    "archetype": "VEHICLE_IN_TRANSIT",
+    "staging": "NIGHT_FELT",
+    "startFrame": 1953,
+    "durationFrames": 99,
+    "plate": "plate_20.jpg",
+    "library": ["tactical/TacticalMovementArrow", "tactical/PulsatingBattleMarker"],
+    "camera": "PARALLAX_PAN_RIGHT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["NCCIA cyber-raid vehicles speeding through Lahore", "Flashing red/blue light cones"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Searchlight beams converge on fugitive hideout vehicle"
+    },
+    "text": {
+      "tag": "STEP 7: THE RETURN • LAHORE RAID",
+      "setup": "HUNTED ACROSS PUNJAB",
+      "payoff": "NOWHERE LEFT TO HIDE"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 1988
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 7 (Return): NCCIA tactical vehicles with flashing red and blue beacons racing through Lahore at night."
+  },
+  {
+    "scene": 21,
+    "act": "IV",
+    "beat": "REACTION",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 2052,
+    "durationFrames": 112,
+    "plate": "plate_21.jpg",
+    "library": ["kit/OrganicExplosion", "characters/SilhouetteCharacter"],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Lahore hideout door", "Tactical entry team silhouettes"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 43,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Door splinters inward with shockwave flash as servers are seized"
+    },
+    "text": {
+      "tag": null,
+      "setup": "NCCIA BROKE THE DOOR",
+      "payoff": "CAPTURED IN LAHORE"
+    },
+    "sfx": {
+      "file": "artillery_shell.wav",
+      "frame": 2095
+    },
+    "claim": {
+      "text": "Pakistan's NCCIA tracked down and arrested Faheem Akram in Lahore",
+      "source": "BBC News / Dawn (Oct 2026)",
+      "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
+      "verified": true
+    },
+    "sensitivity": "STANDARD",
+    "viewerSees": "Tactical breach of the Lahore hideout as the wooden door splinters and glowing LabelsBank servers are unplugged."
+  },
+  {
+    "scene": 22,
+    "act": "IV",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "NIGHT_FELT",
+    "startFrame": 2164,
+    "durationFrames": 106,
+    "plate": "plate_22.jpg",
+    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Bowed silhouette of Faheem Akram", "Steel handcuffs glinting in rim light"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 36,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Handcuff ratchets lock shut over fading binary code"
+    },
+    "text": {
+      "tag": null,
+      "setup": "IRON CUFFS LOCKED",
+      "payoff": "ON THE CODER'S HANDS"
+    },
+    "sfx": {
+      "file": "metal_clang.wav",
+      "frame": 2200
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Close-up silhouette of Faheem Akram with bowed head as blued-steel handcuffs lock around his wrists."
+  },
+  {
+    "scene": 23,
+    "act": "IV",
+    "beat": "MACRO",
+    "archetype": "CROWD_TALLY",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 2270,
+    "durationFrames": 103,
+    "plate": "plate_23.jpg",
+    "library": ["characters/MarchingInfantryRank", "characters/SilhouetteCharacter"],
+    "camera": "CRANE_SWEEP_UP",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Cluster of Khanewal neighbors and bowed father", "Television broadcast glow"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 34,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Warm village lights dim into somber twilight"
+    },
+    "text": {
+      "tag": null,
+      "setup": "BACK IN KHANEWAL",
+      "payoff": "FAMILY HONOR SHATTERED"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 2304
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "In quiet Khanewal, silhouettes of neighbors and an elderly father stand before a glowing television screen in grief."
+  },
+  {
+    "scene": 24,
+    "act": "IV",
+    "beat": "FOCAL",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "GRAPH_GRID",
+    "startFrame": 2373,
+    "durationFrames": 105,
+    "plate": "plate_24.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg"],
+    "camera": "DUTCH_TILT",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Prisoner silhouette on left", "U.S. federal courthouse & prison watchtower on right"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 34,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Extradition warrant seal slams across the dividing line"
+    },
+    "text": {
+      "tag": null,
+      "setup": "FACING US EXTRADITION",
+      "payoff": "DECADES BEHIND BARS"
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 2407
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A stark confrontation between Faheem in custody and a U.S. federal prison watchtower awaiting extradition."
+  },
+  {
+    "scene": 25,
+    "act": "V",
+    "beat": "TRIGGER",
+    "archetype": "QUOTE_CARD",
+    "staging": "WOOD_PANEL",
+    "startFrame": 2478,
+    "durationFrames": 104,
+    "plate": "plate_25.jpg",
+    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Dan Harmon 8-step circle diagram", "$2 counterfeit shipping label"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 34,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "The $2 label burns at the edges revealing a federal indictment"
+    },
+    "text": {
+      "tag": "STEP 8: THE CHANGE • FULL CIRCLE",
+      "setup": "A $2 SHORTCUT",
+      "payoff": "COST EVERYTHING HE LOVED"
+    },
+    "sfx": {
+      "file": "paper_rip.wav",
+      "frame": 2512
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Story Circle Step 8 (Change): The $2 counterfeit label sits atop the completed 8-step circle, charred and stamped SEIZED."
+  },
+  {
+    "scene": 26,
+    "act": "V",
+    "beat": "REACTION",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "NIGHT_FELT",
+    "startFrame": 2582,
+    "durationFrames": 104,
+    "plate": "plate_26.jpg",
+    "library": ["kit/OrganicExplosion", "kit/WeatheredMilitaryStamp"],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["LabelsBank.com glass monitor", "Federal seizure notice"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 36,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Screen shatters into flying glass shards and dark ash"
+    },
+    "text": {
+      "tag": null,
+      "setup": "LABELSBANK WENT DARK",
+      "payoff": "THE EMPIRE SHATTERED"
+    },
+    "sfx": {
+      "file": "artillery_shell.wav",
+      "frame": 2618
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "The LabelsBank.com monitor shatters outward under a federal seizure seal as digital barcodes dissolve into ash."
+  },
+  {
+    "scene": 27,
+    "act": "V",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "NIGHT_FELT",
+    "startFrame": 2686,
+    "durationFrames": 105,
+    "plate": "plate_27.jpg",
+    "library": ["characters/SilhouetteCharacter", "kit/AtmosphericBackground"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Faheem seated alone in concrete cell", "Single shaft of moonlight"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 35,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Heavy iron prison bars slide across the foreground"
+    },
+    "text": {
+      "tag": null,
+      "setup": "SCREEN GLOW FADED",
+      "payoff": "ONLY BARS REMAIN"
+    },
+    "sfx": {
+      "file": "metal_clang.wav",
+      "frame": 2721
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "A solitary silhouette seated in a dark cell as cold iron bars cast stripes across the floor where laptop light once glowed."
+  },
+  {
+    "scene": 28,
+    "act": "V",
+    "beat": "MACRO",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "SUNBURST_HERO",
+    "startFrame": 2791,
+    "durationFrames": 132,
+    "plate": "plate_28.jpg",
+    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg"],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "STAGGER_IN + DRIFT",
+      "elements": ["Empty chair on Khanewal rooftop", "Closed laptop and completed Story Circle"]
+    },
+    "phase2": {
+      "payoffFrameOffset": 34,
+      "hit": "IMPACT_HIT",
+      "secondaryChange": "Symmetric golden-terracotta horizon matches Scene 1 frame 0 for seamless loop"
+    },
+    "text": {
+      "tag": null,
+      "setup": "GENIUS WITHOUT CONSCIENCE",
+      "payoff": "BUILDS ITS OWN CAGE"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 2825
+    },
+    "claim": null,
+    "sensitivity": "STANDARD",
+    "viewerSees": "Symmetric loop back to the Khanewal rooftop at terracotta dusk with an empty chair and closed laptop."
+  }
+]

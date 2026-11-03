@@ -10,6 +10,7 @@ import cowboyData from './timelines/operation_cowboy_1945.json';
 import aleutianData from './timelines/aleutian_campaign_1942.json';
 import cartonData from './timelines/carton_de_wiart_1916.json';
 import floridaData from './timelines/florida_plane_crash_2026.json';
+import postageData from './timelines/postage_fraud_2026.json';
 
 export const RemotionRoot: React.FC = () => {
   const currentTimeline = reelData as unknown as ReelTimeline;
@@ -21,6 +22,7 @@ export const RemotionRoot: React.FC = () => {
   const aleutianTimeline = aleutianData as unknown as ReelTimeline;
   const cartonTimeline = cartonData as unknown as ReelTimeline;
   const floridaTimeline = floridaData as unknown as ReelTimeline;
+  const postageTimeline = postageData as unknown as ReelTimeline;
 
   const totalFrames = currentTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
   const binanceFrames = binanceTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3500;
@@ -31,6 +33,7 @@ export const RemotionRoot: React.FC = () => {
   const aleutianFrames = aleutianTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
   const cartonFrames = cartonTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3443;
   const floridaFrames = floridaTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2723;
+  const postageFrames = postageTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2923;
 
   return (
     <>
@@ -148,6 +151,19 @@ export const RemotionRoot: React.FC = () => {
         height={floridaTimeline.meta?.height || 1920}
         defaultProps={{
           timeline: floridaTimeline,
+        }}
+      />
+
+      {/* 2026 USPS $126M Cyber Postage Fraud Reel */}
+      <Composition
+        id="PostageFraud2026"
+        component={HistoricalReel as any}
+        durationInFrames={postageFrames}
+        fps={postageTimeline.meta?.fps || 60}
+        width={postageTimeline.meta?.width || 1080}
+        height={postageTimeline.meta?.height || 1920}
+        defaultProps={{
+          timeline: postageTimeline,
         }}
       />
     </>

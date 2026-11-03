@@ -1,7 +1,7 @@
 ---
 name: atmospheric-plate-prompter
 description: Locks the project's palette family and persistent particle emitter, and sets backlighting and sensitivity mode in the timeline JSON. Staging and skies per scene come from scene_specs.json.
-tools: ["view_file", "replace_file_content", "run_command"]
+tools: ["read_file", "write_file", "edit_file", "run_command"]
 mainAgent: false
 subagent: true
 model: flash

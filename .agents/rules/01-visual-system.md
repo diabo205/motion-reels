@@ -49,6 +49,15 @@
 - **Non-Grim & Satirical Scenarios (Selective)**:
   - For lighthearted, bureaucratic, or non-grim historical vignettes, articulated `<CutoutPuppet />` rigs may be selectively used.
 - **Zero Raw Photographs on Screen (`PHOTO_PASTE_LINT`)**: Archival photos are used strictly as reference blueprints to craft custom SVG artwork; raw `<img>`, `<Image>`, and `<image>` tags inside vector scene components are automatically flagged by `audit_and_validate.js`.
+- **Visual Density & Complexity Floor (`PATH_COMPLEXITY_LINT`)**:
+  - Every scene vector component must satisfy:
+    1. Minimum $\ge 35$ SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: $\ge 50$ nodes).
+    2. Minimum $\ge 5$ distinct `<path>` elements and $\ge 35$ path command vertices.
+    3. Basic geometric primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed $70\%$ of visual geometry without detailing paths.
+    4. Minimum 1 volumetric gradient/lighting aura.
+  - Crude geometric simplification (a rectangle for a desk, circle for head, 3 lines for fan) triggers a fatal exit code in `audit_and_validate.js`.
+- **Automated Plate Tracing Pipeline (`scripts/trace_plate_contours.js`)**:
+  - Run `node scripts/trace_plate_contours.js --project <slug> --all` to automatically extract authentic photographic vector silhouettes directly from ingested plates into `projects/<slug>/plates/TracedPlateAssets.tsx` and `traced_plate_assets.json`.
 - **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**:
   Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone. Before coding, reference plates MUST be ingested into `assets/plates/` or `projects/<slug>/plates/` and translated into the 6-layer vector hierarchy:
   1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
