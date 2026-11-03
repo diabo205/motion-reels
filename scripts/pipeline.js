@@ -101,8 +101,9 @@ async function main() {
 
   // 2. Mode Dispatch
   if (mode === '--smoke') {
-    console.log('\n=== [CI SMOKE TEST] VALIDATING ALL PROJECT TIMELINES & LINTERS ===');
-    for (const slug of Object.keys(PROJECT_MAP)) {
+    console.log('\n=== [CI SMOKE TEST] VALIDATING TIMELINE & LINTERS ===');
+    const targetSlugs = explicitSlug ? [explicitSlug] : [proj.slug];
+    for (const slug of targetSlugs) {
       await runAudit({ projectSlug: slug, autoFix, skipStills: true, checkMotion: false });
     }
     updateRetentionPriors();
