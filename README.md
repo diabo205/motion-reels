@@ -32,12 +32,12 @@ Built on **React + Remotion (`1080 × 1920 @ 60 FPS`)**, the engine enforces str
 ```mermaid
 flowchart TD
     A["User Prompt / Historical Script Input"] --> B["Phase 0: Project Resolver & Manifest Ingestion (scripts/project_resolver.js)"]
-    B --> C["Phase 0.5: 4-Beat Narrative Pre-Production (motion-graphics-director)"]
+    B --> C["Phase 0.5: Pre-Production & Scene Specs (motion-graphics-director -> scene_specs.json)"]
     C --> D["Phase 1: Audio Transient & Drop Detection (Librosa/Aubio Multi-Band Flux)"]
-    D --> E["Phase 1.5: Mandatory Reference Blueprint Ingestion (scripts/ingest_reference_plates.js)"]
-    E --> F["Phase 2: Procedural Foley & SFX Lead Alignment (generate_sfx.py)"]
-    F --> G["Phase 3: Beat-Synced 2-Phase Timeline Compilation (script-beat-compiler)"]
-    G --> H["Phase 4: Parametric Vector Scenes & 6-Layer Anatomy (vector-scene-architect)"]
+    D --> E["Phase 2: Procedural Foley & SFX Lead Alignment (generate_sfx.py)"]
+    E --> F["Phase 3: Beat-Synced 2-Phase Timeline Compilation (script-beat-compiler -> timeline.json)"]
+    F --> G["Phase 3.5: Mandatory Reference Blueprint Ingestion & Notes (scripts/ingest_reference_plates.js -> plates/notes.json)"]
+    G --> H["Phase 4: Parametric Vector Scenes & 6-Layer Anatomy (vector-scene-architect using src/library/INDEX.md & rules/motion.md)"]
     H --> I["Phase 5: True Glyph Advance-Width & Sharp Frame 0 QA (scripts/font_metrics.js)"]
     I --> J["Phase 6: Automated Linters, Framework Checks & Visual Stills (scripts/audit_and_validate.js)"]
     J --> K["Phase 7: Mobile Device Preview & Single-Scene Iteration (serve_mobile.js & render_scene_clip.js)"]
@@ -66,6 +66,8 @@ flowchart TD
 * **Mandatory Reference Ingestion Gate (`MANDATORY_REFERENCE_PLATE_LINT`)**:
   * Drafting SVGs from memory or guesswork without on-disk reference images is strictly prohibited. Real archival reference blueprints must be ingested into `projects/<slug>/plates/` and cataloged in `manifest.json`.
   * Every plate passes binary magic-byte verification (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP), must be $\ge 10\text{KB}$, and must contain zero HTML error pages.
+  * **Observation Notes Requirement**: Every ingested plate must have an entry in `projects/<slug>/plates/notes.json` cataloging at least 3 observed physical details (lighting angles, uniform badges, structural seams, material wear).
+  * **Library Composition First**: Vector drafting must prioritize reusable parametric components cataloged in [`src/library/INDEX.md`](file:///c:/Users/Syed%20Obaid/Documents/motion%20reels/src/library/INDEX.md) and adhere to named spring and camera presets in `.agents/skills/build-historical-reel/rules/motion.md`.
   * Complies with Wikimedia step-thumbnail rules (`iiurlwidth=960` or `1280` via [`scripts/ingest_reference_plates.js`](file:///c:/Users/Syed%20Obaid/Documents/motion%20reels/scripts/ingest_reference_plates.js)).
 
 ### 3. The 6-Layer Organic Vector Anatomy Standard
@@ -181,7 +183,9 @@ The engine audits all projects automatically, outputting structured JSON reports
 | `FONT_LINT` | Enforces `Montserrat Black` or `Inter ExtraBold` (bans cursive/typewriter) | ❌ Manual |
 | `PHOTO_PASTE_LINT` | Flags raw `<img>` or photo pastes inside parametric vector scenes | ❌ Manual |
 | `PALETTE_LINT` | Enforces locked palette tokens and flags hot neon debug colors | ❌ Manual |
-| `MICRO_MOTION_CHECK` | Frame-diffs early vs late scene frames to verify continuous motion | ❌ Manual |
+| `LIBRARY_REUSE` | Flags scene files with > 50 `<path>` elements and 0 kit/library imports | ❌ Manual |
+| `SCENE_SPECS_SCHEMA_LINT` | Validates `scene_specs.json` against pre-production JSON schema | ❌ Manual |
+| `MICRO_MOTION_CHECK` | Verifies continuous secondary motion (>= 4px) between 25% and 75% frames | ❌ Manual |
 | `FRAMEWORK_LINT` | Verifies PRNG determinism, `interpolate()` clamping, and import barriers | ❌ Manual |
 
 ---
@@ -239,6 +243,9 @@ npm run lint:framework
 
 # Full visual audit: render all scene stills and verify continuous micro-motion
 node scripts/pipeline.js --project carton-de-wiart-1916 --audit-stills --check-motion
+
+# Single-scene visual stills (renders first, payoff, and last frames for scene N)
+node scripts/pipeline.js --project carton-de-wiart-1916 --audit-stills --scene 1
 
 # === 3. RAPID SINGLE-SCENE REVISION LOOPS ===
 # Render an isolated single-scene clip for fast visual iteration (e.g. Scene 3)
