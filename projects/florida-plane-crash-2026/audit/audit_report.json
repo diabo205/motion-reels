@@ -1,12 +1,12 @@
 {
   "projectSlug": "florida-plane-crash-2026",
   "title": "SOUTH FLORIDA JET CRASH",
-  "timestamp": "2026-11-02T16:45:27.768Z",
+  "timestamp": "2026-11-03T06:20:12.876Z",
   "passed": true,
-  "totalFrames": 2723,
-  "durationSec": 45.38,
+  "totalFrames": 1704,
+  "durationSec": 28.4,
   "maxFramesCeiling": 3500,
-  "sceneCount": 22,
+  "sceneCount": 14,
   "transientEngine": "librosa",
   "transientStats": {
     "totalTransients": 639,
@@ -16,7 +16,7 @@
     "onsetCount": 324
   },
   "errorCount": 0,
-  "warningCount": 4,
+  "warningCount": 1,
   "motionChecks": [],
   "violations": [
     {
@@ -26,33 +26,6 @@
       "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
       "actual": "109 frames dead hold after payoff beat",
       "frame": 588,
-      "autoFixed": false
-    },
-    {
-      "sceneId": "SCENE_15_PERIMETER_LEADER",
-      "rule": "DEAD_HOLD_LINT",
-      "severity": "WARNING",
-      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
-      "actual": "108 frames dead hold after payoff beat",
-      "frame": 1698,
-      "autoFixed": false
-    },
-    {
-      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
-      "rule": "DEAD_HOLD_LINT",
-      "severity": "WARNING",
-      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
-      "actual": "117 frames dead hold after payoff beat",
-      "frame": 1824,
-      "autoFixed": false
-    },
-    {
-      "sceneId": "SCENE_21_MEMORIAL_TRIBUTE_LEADER",
-      "rule": "DEAD_HOLD_LINT",
-      "severity": "WARNING",
-      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
-      "actual": "120 frames dead hold after payoff beat",
-      "frame": 2463,
       "autoFixed": false
     }
   ]

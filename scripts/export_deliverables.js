@@ -159,8 +159,10 @@ function exportProjectDeliverables(explicitSlug) {
   const poster9x16Path = path.join(delivDir, 'poster.png');
   const poster4x5Path = path.join(delivDir, 'poster_4x5.png');
 
-  if (existingStill) {
+  if (!fs.existsSync(poster9x16Path) && existingStill) {
     fs.copyFileSync(existingStill, poster9x16Path);
+  }
+  if (fs.existsSync(poster9x16Path)) {
     try {
       // Crop center 1080x1350 (y = 285..1635) for Instagram 4:5 profile grid
       execSync(

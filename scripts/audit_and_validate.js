@@ -8,6 +8,7 @@ const { resolveResponsiveFontSize } = require('./font_metrics');
 const { exportProjectDeliverables } = require('./export_deliverables');
 const { lintFramework } = require('./lint_framework');
 const { validateProjectPlates } = require('./plate_validator');
+const { analyzeProjectTelemetry } = require('./telemetry_priors');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
@@ -206,23 +207,25 @@ async function runAudit(options = {}) {
     `Total Frames: ${totalFrames} frames (${totalSec.toFixed(2)}s / MAX_FRAMES=${constants.MAX_FRAMES})`
   );
 
-  // 1. Duration Ceiling Check (derived strictly from MIN_FRAMES=2700 and MAX_FRAMES=3500)
-  if (totalFrames < constants.MIN_FRAMES || totalFrames > constants.MAX_FRAMES) {
+  // 1. Duration Ceiling Check (derived strictly from minFrames and MAX_FRAMES)
+  const minRequiredFrames = timeline.meta.minFrames || constants.MIN_FRAMES;
+  const maxAllowedFrames = timeline.meta.maxFramesCeiling || constants.MAX_FRAMES;
+  if (totalFrames < minRequiredFrames || totalFrames > maxAllowedFrames) {
     violations.push({
       sceneId: 'GLOBAL_TIMELINE',
       rule: 'DURATION_CEILING',
       severity: 'ERROR',
-      expected: `${constants.MIN_FRAMES}..${constants.MAX_FRAMES} frames (${constants.MIN_DURATION_SEC}s..${constants.MAX_DURATION_SEC}s)`,
+      expected: `${minRequiredFrames}..${maxAllowedFrames} frames (${(minRequiredFrames / fps).toFixed(2)}s..${(maxAllowedFrames / fps).toFixed(2)}s)`,
       actual: `${totalFrames} frames (${totalSec.toFixed(2)}s)`,
       frame: totalFrames,
       autoFixed: false,
     });
     console.error(
-      `❌ VIOLATION: Total frames ${totalFrames} (${totalSec.toFixed(2)}s) outside [${constants.MIN_FRAMES}, ${constants.MAX_FRAMES}]!`
+      `❌ VIOLATION: Total frames ${totalFrames} (${totalSec.toFixed(2)}s) outside [${minRequiredFrames}, ${maxAllowedFrames}]!`
     );
   } else {
     console.log(
-      `✅ PASS: Total duration ${totalFrames}f (${totalSec.toFixed(2)}s) satisfies [${constants.MIN_FRAMES}, ${constants.MAX_FRAMES}] frames.`
+      `✅ PASS: Total duration ${totalFrames}f (${totalSec.toFixed(2)}s) satisfies [${minRequiredFrames}, ${maxAllowedFrames}] frames.`
     );
   }
 
@@ -255,6 +258,30 @@ async function runAudit(options = {}) {
     console.log(
       `✅ PASS: MANDATORY_REFERENCE_PLATE_LINT verified (${plateCheck.verifiedCount}/${plateCheck.totalScenes} scenes backed by binary-verified authentic reference plates).`
     );
+  }
+
+  // 2.7. STAGING DIVERSITY LINT (STAGING_DIVERSITY_LINT - Peshawar Standard)
+  if (styleMode === 'DOCUMENTARY_SANS') {
+    const uniqueStages = new Set();
+    const uniqueGradients = new Set();
+    for (const sc of timeline.scenes) {
+      if (sc.visualPayload?.stageStyle) uniqueStages.add(sc.visualPayload.stageStyle);
+      if (Array.isArray(sc.visualPayload?.skyGradient)) {
+        uniqueGradients.add(sc.visualPayload.skyGradient.join('-'));
+      }
+    }
+    const minStages = constants.MIN_DISTINCT_STAGES || 3;
+    if (uniqueStages.size < minStages && uniqueGradients.size < minStages) {
+      violations.push({
+        sceneId: 'GLOBAL_STAGING',
+        rule: 'STAGING_DIVERSITY_LINT',
+        severity: 'ERROR',
+        expected: `Minimum ${minStages} distinct stageStyle or skyGradient atmospheres (Peshawar standard: prevent monotonous dark voids)`,
+        actual: `Found only ${uniqueStages.size} stage style(s) [${Array.from(uniqueStages).join(', ')}] and ${uniqueGradients.size} sky gradient(s)`,
+        frame: 0,
+        autoFixed: false,
+      });
+    }
   }
 
   // 3. Per-Scene Pacing, Beat-Sync, Glyph Width, Camera & Archetype Audit
@@ -302,7 +329,26 @@ async function runAudit(options = {}) {
     }
 
     // Hook Discipline Check: Scene 1 must never use TYPEWRITER (which renders empty Frame 0)
+    // and must use an empirical high-retention archetype under 108 frames
     if (i === 0) {
+      // 1. Hook Archetype Check
+      if (
+        constants.ALLOWED_HOOK_ARCHETYPES &&
+        !constants.ALLOWED_HOOK_ARCHETYPES.includes(s.archetype) &&
+        styleMode === 'DOCUMENTARY_SANS'
+      ) {
+        violations.push({
+          sceneId: s.sceneId,
+          rule: 'HOOK_ARCHETYPE_LINT',
+          severity: 'ERROR',
+          expected: `Scene 1 hook archetype must be one of: ${constants.ALLOWED_HOOK_ARCHETYPES.join(' | ')} (empirical high-hold rate)`,
+          actual: `${s.archetype} (banned for Scene 1 hook due to empirical high swipe-away rate)`,
+          frame: s.startFrame,
+          autoFixed: false,
+        });
+      }
+
+      // 2. Hook Animation Check
       for (const layer of s.textLayers || []) {
         if (layer.animation === 'TYPEWRITER') {
           if (autoFix) {
@@ -321,13 +367,17 @@ async function runAudit(options = {}) {
           }
         }
       }
-      if (s.durationFrames > 136 && styleMode === 'DOCUMENTARY_SANS') {
+
+      // 3. Hook Duration Check (Cap at HOOK_MAX_FRAMES)
+      const maxHookFrames = constants.HOOK_MAX_FRAMES || 108;
+      const targetHookFrames = constants.HOOK_TARGET_FRAMES || 96;
+      if (s.durationFrames > maxHookFrames && styleMode === 'DOCUMENTARY_SANS') {
         violations.push({
           sceneId: s.sceneId,
           rule: 'HOOK_PACING_LINT',
-          severity: 'WARNING',
-          expected: 'Hook Scene 1 duration <= 132f (target 108f) to prevent early swipe-away',
-          actual: `${s.durationFrames}f`,
+          severity: 'ERROR',
+          expected: `Hook Scene 1 duration <= ${maxHookFrames}f (target ${targetHookFrames}f, 1.6s) to prevent early swipe-away cliff`,
+          actual: `${s.durationFrames}f (${(s.durationFrames / 60).toFixed(2)}s)`,
           frame: s.startFrame,
           autoFixed: false,
         });
@@ -481,14 +531,15 @@ async function runAudit(options = {}) {
       });
     }
 
-    // Dead Hold Check: Prevent stagnant post-payoff holds (> 100 frames of frozen visual)
+    // Dead Hold Check: Prevent stagnant post-payoff holds (> 72 frames of frozen visual)
     const postPayoffHold = s.durationFrames - payoffOffset;
-    if (styleMode === 'DOCUMENTARY_SANS' && postPayoffHold > 105 && i < timeline.scenes.length - 1) {
+    const maxHold = constants.MAX_POST_PAYOFF_HOLD_FRAMES || 72;
+    if (styleMode === 'DOCUMENTARY_SANS' && postPayoffHold > maxHold && i < timeline.scenes.length - 1) {
       violations.push({
         sceneId: s.sceneId,
         rule: 'DEAD_HOLD_LINT',
-        severity: 'WARNING',
-        expected: 'Post-payoff hold <= 100 frames to prevent slide-reading fatigue',
+        severity: 'ERROR',
+        expected: `Post-payoff hold <= ${maxHold} frames (${(maxHold / 60).toFixed(2)}s) to prevent slide-reading fatigue`,
         actual: `${postPayoffHold} frames dead hold after payoff beat`,
         frame: s.startFrame + payoffOffset,
         autoFixed: false,
@@ -622,6 +673,13 @@ async function runAudit(options = {}) {
   // Export SRT captions, metadata, and 4:5 IG crop
   exportProjectDeliverables(slug);
 
+  let telemetryAnalysis = null;
+  try {
+    telemetryAnalysis = analyzeProjectTelemetry(slug);
+  } catch (err) {
+    // telemetry analysis is optional if timeline is incomplete
+  }
+
   const finalErrors = violations.filter((v) => v.severity === 'ERROR');
   const report = {
     projectSlug: slug,
@@ -634,6 +692,7 @@ async function runAudit(options = {}) {
     sceneCount: timeline.scenes.length,
     transientEngine: beatGrid?.analysisEngine || 'STATIC_BPM',
     transientStats: beatGrid?.transientStats || null,
+    telemetryAnalysis,
     errorCount: finalErrors.length,
     warningCount: violations.filter((v) => v.severity === 'WARNING').length,
     motionChecks,

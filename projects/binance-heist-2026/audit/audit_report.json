@@ -1,8 +1,8 @@
 {
   "projectSlug": "binance-heist-2026",
   "title": "2026 BINANCE HEIST",
-  "timestamp": "2026-11-02T08:14:49.533Z",
-  "passed": true,
+  "timestamp": "2026-11-03T06:48:10.410Z",
+  "passed": false,
   "totalFrames": 3500,
   "durationSec": 58.33,
   "maxFramesCeiling": 3500,
@@ -15,8 +15,441 @@
     "energyPeakCount": 123,
     "onsetCount": 189
   },
-  "errorCount": 0,
-  "warningCount": 0,
+  "errorCount": 27,
+  "warningCount": 21,
   "motionChecks": [],
-  "violations": []
+  "violations": [
+    {
+      "sceneId": "SCENE_01_ALERT_QUOTE_CARD",
+      "rule": "HOOK_PACING_LINT",
+      "severity": "WARNING",
+      "expected": "Hook Scene 1 duration <= 132f (target 108f) to prevent early swipe-away",
+      "actual": "146f",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_ALERT_QUOTE_CARD",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_ALERT_QUOTE_CARD",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "117 frames dead hold after payoff beat",
+      "frame": 29,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_KOREA_NIGHT_SATELLITE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "159f",
+      "frame": 146,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_KOREA_NIGHT_SATELLITE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "frame": 146,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_KOREA_NIGHT_SATELLITE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "116 frames dead hold after payoff beat",
+      "frame": 189,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_UNIT_121_BUNKER",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "160f",
+      "frame": 305,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_UNIT_121_BUNKER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 305,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_UNIT_121_BUNKER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "142 frames dead hold after payoff beat",
+      "frame": 323,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_04_CONSCRIPT_CADETS_TALLY",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 465,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_PARALLEL_WORLDS_SPLIT",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "157f",
+      "frame": 600,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_PARALLEL_WORLDS_SPLIT",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "frame": 600,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_PARALLEL_WORLDS_SPLIT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "118 frames dead hold after payoff beat",
+      "frame": 639,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_HOT_VAULT_BREACH",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 757,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_HOT_VAULT_BREACH",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "125 frames dead hold after payoff beat",
+      "frame": 776,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_07_BALANCES_DRAINING_TALLY",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 901,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_07_BALANCES_DRAINING_TALLY",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "117 frames dead hold after payoff beat",
+      "frame": 929,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_08_WAR_ROOM_ENGINEER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 1046,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_08_WAR_ROOM_ENGINEER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "115 frames dead hold after payoff beat",
+      "frame": 1076,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_TEN_BLOCKCHAINS_MAP",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "151f",
+      "frame": 1191,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_TEN_BLOCKCHAINS_MAP",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "122 frames dead hold after payoff beat",
+      "frame": 1220,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_EMERGENCY_FREEZE_SHATTER",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "168f",
+      "frame": 1342,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_EMERGENCY_FREEZE_SHATTER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 1342,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_EMERGENCY_FREEZE_SHATTER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "139 frames dead hold after payoff beat",
+      "frame": 1371,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_ROCKET_QUOTE_FINDING",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 1510,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_ROCKET_QUOTE_FINDING",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "109 frames dead hold after payoff beat",
+      "frame": 1538,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_HWASONG_ICBM_TRANSIT",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "154f",
+      "frame": 1647,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_HWASONG_ICBM_TRANSIT",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 1647,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_HWASONG_ICBM_TRANSIT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "117 frames dead hold after payoff beat",
+      "frame": 1684,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_13_ROCKET_IGNITION_TEST",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "125 frames dead hold after payoff beat",
+      "frame": 1821,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_14_BINANCE_BAILOUT_LEADER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "frame": 1946,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_14_BINANCE_BAILOUT_LEADER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "115 frames dead hold after payoff beat",
+      "frame": 1976,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_15_VAULT_RESTORATION_SPLIT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "116 frames dead hold after payoff beat",
+      "frame": 2120,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_16_BORDER_WALLS_MAP",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 2236,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_16_BORDER_WALLS_MAP",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "117 frames dead hold after payoff beat",
+      "frame": 2265,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_CHILD_SOLDIERS_MEDALS_TALLY",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 2382,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_CHILD_SOLDIERS_MEDALS_TALLY",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "116 frames dead hold after payoff beat",
+      "frame": 2413,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_18_ISOLATED_DARK_CELL",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "frame": 2529,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_FORTRESS_BREACH_SHATTER",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "159f",
+      "frame": 2658,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_FORTRESS_BREACH_SHATTER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 2658,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_FORTRESS_BREACH_SHATTER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "114 frames dead hold after payoff beat",
+      "frame": 2703,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_CYBER_DOCTRINE_QUOTE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 2817,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_CYBER_DOCTRINE_QUOTE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "116 frames dead hold after payoff beat",
+      "frame": 2846,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_21_SMARTPHONE_VS_SILO_SPLIT",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "frame": 2962,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_21_SMARTPHONE_VS_SILO_SPLIT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "116 frames dead hold after payoff beat",
+      "frame": 2991,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_22_OCEANIC_CABLES_TRANSIT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "WARNING",
+      "expected": "Post-payoff hold <= 100 frames to prevent slide-reading fatigue",
+      "actual": "109 frames dead hold after payoff beat",
+      "frame": 3136,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_23_TERMINAL_SHUTDOWN_LEADER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 3245,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_24_FINAL_LOOP_QUOTE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "frame": 3369,
+      "autoFixed": false
+    }
+  ]
 }

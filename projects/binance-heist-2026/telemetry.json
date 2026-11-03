@@ -1,0 +1,22 @@
+{
+  "projectSlug": "binance-heist-2026",
+  "platform": "youtube",
+  "sourceFile": "youtube_studio_retention_binance_heist.png",
+  "ingestedAt": "2026-11-03T11:45:00.000Z",
+  "views": 600,
+  "uniqueViewers": 280,
+  "watchTimeHours": 4.0,
+  "stayedToWatchRate": 0.498,
+  "swipedAwayRate": 0.502,
+  "averageViewDurationSec": 21,
+  "averageViewPercentage": 35.6,
+  "watchedFullVideoRate": 0.082,
+  "retentionBySecond": [
+    1.00, 1.02, 0.98, 0.89, 0.81, 0.75, 0.70, 0.66, 0.62, 0.58,
+    0.54, 0.51, 0.48, 0.45, 0.42, 0.40, 0.38, 0.36, 0.34, 0.33,
+    0.32, 0.31, 0.30, 0.29, 0.28, 0.27, 0.26, 0.25, 0.24, 0.23,
+    0.22, 0.21, 0.20, 0.20, 0.19, 0.19, 0.18, 0.18, 0.17, 0.17,
+    0.16, 0.16, 0.15, 0.15, 0.14, 0.14, 0.13, 0.13, 0.12, 0.12,
+    0.11, 0.11, 0.10, 0.10, 0.09, 0.09, 0.09, 0.08, 0.08, 0.08
+  ]
+}

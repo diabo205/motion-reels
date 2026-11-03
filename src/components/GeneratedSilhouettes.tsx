@@ -24,6 +24,7 @@ import {
   BlackBoxRecoveryDossier,
   FloridaCrashMemorialPlinth,
   SymmetricReelLoopHero,
+  NtsbPrimaryFindingCard,
 } from './FloridaCrashVectors';
 import {
   BinanceAlertQuoteCard,
@@ -2722,6 +2723,9 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
 
     case 'SYMMETRIC_REEL_LOOP_HERO':
       return <SymmetricReelLoopHero durationFrames={durationFrames} />;
+
+    case 'NTSB_PRIMARY_FINDING_CARD':
+      return <NtsbPrimaryFindingCard durationFrames={durationFrames} />;
 
     default:
       return null;

@@ -122,11 +122,10 @@
   },
   "scenePlateMap": {
     "SCENE_01_LEARJET_CRUISE_HOOK": "learjet_60_cruising_hero.jpg",
-    "SCENE_22_SYMMETRIC_LOOP_REEL": "learjet_60_cruising_hero.jpg",
     "SCENE_02_AUSTIN_TO_BAHAMAS_MAP": "florida_peninsula_route_map.png",
-    "SCENE_05_MIAMI_CENTER_RADAR": "florida_peninsula_route_map.png",
     "SCENE_03_ICING_TURBULENCE_SPLIT": "thunderstorm_supercooled_clouds.jpg",
     "SCENE_04_MANAGING_ICE_QUOTE": "thunderstorm_supercooled_clouds.jpg",
+    "SCENE_05_MIAMI_CENTER_RADAR": "florida_peninsula_route_map.png",
     "SCENE_06_TRIM_UPSET_FRACTURE": "learjet_glass_cockpit_avionics.jpg",
     "SCENE_07_TWENTY_THOUSAND_FPM_QUOTE": "learjet_glass_cockpit_avionics.jpg",
     "SCENE_08_OVERSPEED_SHOCKWAVE_FRACTURE": "altimeter_vertical_speed_dive.png",
@@ -134,14 +133,7 @@
     "SCENE_10_FINAL_MAYDAY_QUOTE": "learjet_airframe_profile.jpg",
     "SCENE_11_PALM_BEACH_APPROACH_MAP": "palm_beach_county_locator_map.png",
     "SCENE_12_MASSIVE_FIREBALL_IMPACT": "fireball_crater_fracture.jpg",
-    "SCENE_18_SMOKING_CRATER_FRACTURE": "fireball_crater_fracture.jpg",
-    "SCENE_14_FIRST_RESPONDERS_TRANSIT": "emergency_first_responders.jpg",
-    "SCENE_15_PERIMETER_LEADER": "emergency_first_responders.jpg",
-    "SCENE_13_NINE_SOULS_LOST_TALLY": "casualty_manifest_records.jpg",
-    "SCENE_20_BLACK_BOX_RECOVERY": "casualty_manifest_records.jpg",
-    "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY": "mobile_home_evacuation.jpg",
-    "SCENE_17_NTSB_FAA_SPLIT": "ntsb_faa_investigation_crests.png",
-    "SCENE_19_SECRETARY_DUFFY_QUOTE": "federal_transportation_statement.png",
-    "SCENE_21_MEMORIAL_TRIBUTE_LEADER": "federal_transportation_statement.png"
+    "SCENE_13_BLACK_BOX_RECOVERY": "casualty_manifest_records.jpg",
+    "SCENE_14_NTSB_PRIMARY_FINDING": "ntsb_faa_investigation_crests.png"
   }
 }

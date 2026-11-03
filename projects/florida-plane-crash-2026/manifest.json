@@ -1,7 +1,7 @@
 {
   "projectSlug": "florida-plane-crash-2026",
   "title": "SOUTH FLORIDA JET CRASH",
-  "updatedAt": "2026-11-02T16:58:57.733Z",
+  "updatedAt": "2026-11-03T06:20:12.670Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,10 +11,10 @@
   },
   "timeline": {
     "file": "src/timelines/florida_plane_crash_2026.json",
-    "sha256": "7f58f4dc6ae5639a490432dadd8b997c24bab83794b7677f1728c331e73c7667",
-    "sceneCount": 22,
-    "totalFrames": 2723,
-    "durationSec": 45.38
+    "sha256": "f3e83993c588fa4389904c1dc93cc0366dccf14f7ba74c9cfe5f4c05e90a0bd8",
+    "sceneCount": 14,
+    "totalFrames": 1704,
+    "durationSec": 28.4
   },
   "audio": {
     "bgmFile": "audio/bgm_florida_crash.mp3",

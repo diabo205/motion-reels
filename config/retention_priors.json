@@ -1,14 +1,14 @@
 {
   "$schema": "./retention_priors.schema.json",
-  "updatedAt": "2026-11-02T13:14:50.257Z",
+  "updatedAt": "2026-11-03T06:55:59.328Z",
   "sampleSizeReels": 8,
-  "totalScenesAnalyzed": 166,
-  "baselineAverageHoldRate": 0.9213,
+  "totalScenesAnalyzed": 158,
+  "baselineAverageHoldRate": 0.9185,
   "archetypeRetentionPriors": {
     "SPLIT_CONFRONTATION": {
-      "sampleScenes": 23,
-      "avgHoldRate": 0.9469,
-      "observed_retention_delta": 0.0256,
+      "sampleScenes": 22,
+      "avgHoldRate": 0.9393,
+      "observed_retention_delta": 0.0208,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 1,
@@ -22,19 +22,19 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 6,
-          "holdRate": 0.9322,
-          "observed_retention_delta": 0.0109
+          "samples": 5,
+          "holdRate": 0.9316,
+          "observed_retention_delta": 0.0131
         },
         "129-144f": {
           "samples": 7,
           "holdRate": 0.9664,
-          "observed_retention_delta": 0.0451
+          "observed_retention_delta": 0.0479
         },
         "145-168f": {
           "samples": 10,
-          "holdRate": 0.942,
-          "observed_retention_delta": 0.0207
+          "holdRate": 0.9242,
+          "observed_retention_delta": 0.0057
         },
         ">168f": {
           "samples": 0,
@@ -50,8 +50,8 @@
     },
     "VECTOR_MAP": {
       "sampleScenes": 16,
-      "avgHoldRate": 0.8983,
-      "observed_retention_delta": -0.023,
+      "avgHoldRate": 0.8953,
+      "observed_retention_delta": -0.0232,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -67,17 +67,17 @@
         "<=128f": {
           "samples": 5,
           "holdRate": 0.8812,
-          "observed_retention_delta": -0.0401
+          "observed_retention_delta": -0.0373
         },
         "129-144f": {
           "samples": 5,
           "holdRate": 0.9541,
-          "observed_retention_delta": 0.0328
+          "observed_retention_delta": 0.0356
         },
         "145-168f": {
           "samples": 6,
-          "holdRate": 0.8662,
-          "observed_retention_delta": -0.0551
+          "holdRate": 0.8582,
+          "observed_retention_delta": -0.0603
         },
         ">168f": {
           "samples": 0,
@@ -92,8 +92,8 @@
     },
     "STRUCTURAL_FRACTURE": {
       "sampleScenes": 25,
-      "avgHoldRate": 0.9366,
-      "observed_retention_delta": 0.0153,
+      "avgHoldRate": 0.9317,
+      "observed_retention_delta": 0.0132,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 2,
@@ -108,18 +108,18 @@
       "duration_delta_matrix": {
         "<=128f": {
           "samples": 7,
-          "holdRate": 0.9359,
-          "observed_retention_delta": 0.0146
+          "holdRate": 0.9388,
+          "observed_retention_delta": 0.0203
         },
         "129-144f": {
           "samples": 8,
-          "holdRate": 0.963,
-          "observed_retention_delta": 0.0417
+          "holdRate": 0.9469,
+          "observed_retention_delta": 0.0284
         },
         "145-168f": {
           "samples": 10,
-          "holdRate": 0.916,
-          "observed_retention_delta": -0.0053
+          "holdRate": 0.9145,
+          "observed_retention_delta": -0.004
         },
         ">168f": {
           "samples": 0,
@@ -133,9 +133,9 @@
       ]
     },
     "LONE_LEADER": {
-      "sampleScenes": 29,
-      "avgHoldRate": 0.9113,
-      "observed_retention_delta": -0.01,
+      "sampleScenes": 27,
+      "avgHoldRate": 0.9196,
+      "observed_retention_delta": 0.0011,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -150,23 +150,23 @@
       "duration_delta_matrix": {
         "<=128f": {
           "samples": 5,
-          "holdRate": 0.903,
-          "observed_retention_delta": -0.0183
+          "holdRate": 0.9038,
+          "observed_retention_delta": -0.0147
         },
         "129-144f": {
-          "samples": 10,
-          "holdRate": 0.9365,
-          "observed_retention_delta": 0.0152
+          "samples": 8,
+          "holdRate": 0.961,
+          "observed_retention_delta": 0.0425
         },
         "145-168f": {
           "samples": 13,
-          "holdRate": 0.8998,
-          "observed_retention_delta": -0.0215
+          "holdRate": 0.9056,
+          "observed_retention_delta": -0.0129
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.85,
-          "observed_retention_delta": -0.0713
+          "observed_retention_delta": -0.0685
         }
       },
       "recommended_act_placement": [
@@ -175,9 +175,9 @@
       ]
     },
     "VEHICLE_IN_TRANSIT": {
-      "sampleScenes": 20,
-      "avgHoldRate": 0.9358,
-      "observed_retention_delta": 0.0145,
+      "sampleScenes": 17,
+      "avgHoldRate": 0.9355,
+      "observed_retention_delta": 0.017,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 4,
@@ -192,23 +192,23 @@
       "duration_delta_matrix": {
         "<=128f": {
           "samples": 3,
-          "holdRate": 0.9117,
-          "observed_retention_delta": -0.0096
+          "holdRate": 0.905,
+          "observed_retention_delta": -0.0135
         },
         "129-144f": {
-          "samples": 12,
-          "holdRate": 0.9503,
-          "observed_retention_delta": 0.029
+          "samples": 9,
+          "holdRate": 0.9624,
+          "observed_retention_delta": 0.0439
         },
         "145-168f": {
           "samples": 4,
-          "holdRate": 0.9073,
-          "observed_retention_delta": -0.014
+          "holdRate": 0.8948,
+          "observed_retention_delta": -0.0237
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.9475,
-          "observed_retention_delta": 0.0262
+          "observed_retention_delta": 0.029
         }
       },
       "recommended_act_placement": [
@@ -218,8 +218,8 @@
       ]
     },
     "CROWD_TALLY": {
-      "sampleScenes": 19,
-      "avgHoldRate": 0.9337,
+      "sampleScenes": 17,
+      "avgHoldRate": 0.9309,
       "observed_retention_delta": 0.0124,
       "drop_off_risk": "LOW",
       "recommendedForHook": false,
@@ -234,24 +234,24 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 4,
+          "samples": 3,
           "holdRate": 0.905,
-          "observed_retention_delta": -0.0163
+          "observed_retention_delta": -0.0135
         },
         "129-144f": {
-          "samples": 7,
-          "holdRate": 0.9503,
-          "observed_retention_delta": 0.029
+          "samples": 6,
+          "holdRate": 0.9484,
+          "observed_retention_delta": 0.0299
         },
         "145-168f": {
           "samples": 7,
-          "holdRate": 0.9272,
-          "observed_retention_delta": 0.0059
+          "holdRate": 0.9204,
+          "observed_retention_delta": 0.0019
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.9776,
-          "observed_retention_delta": 0.0563
+          "observed_retention_delta": 0.0591
         }
       },
       "recommended_act_placement": [
@@ -261,8 +261,8 @@
     },
     "QUOTE_CARD": {
       "sampleScenes": 10,
-      "avgHoldRate": 0.928,
-      "observed_retention_delta": 0.0067,
+      "avgHoldRate": 0.9074,
+      "observed_retention_delta": -0.0111,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 3,
@@ -278,17 +278,17 @@
         "<=128f": {
           "samples": 4,
           "holdRate": 0.935,
-          "observed_retention_delta": 0.0137
+          "observed_retention_delta": 0.0165
         },
         "129-144f": {
-          "samples": 3,
-          "holdRate": 0.92,
-          "observed_retention_delta": -0.0013
+          "samples": 2,
+          "holdRate": 0.8889,
+          "observed_retention_delta": -0.0296
         },
         "145-168f": {
-          "samples": 3,
-          "holdRate": 0.9267,
-          "observed_retention_delta": 0.0054
+          "samples": 4,
+          "holdRate": 0.8891,
+          "observed_retention_delta": -0.0294
         },
         ">168f": {
           "samples": 0,
@@ -304,7 +304,7 @@
     "BLUEPRINT_DIAGRAM": {
       "sampleScenes": 2,
       "avgHoldRate": 0.9223,
-      "observed_retention_delta": 0.001,
+      "observed_retention_delta": 0.0038,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -330,12 +330,12 @@
         "145-168f": {
           "samples": 1,
           "holdRate": 0.9722,
-          "observed_retention_delta": 0.0509
+          "observed_retention_delta": 0.0537
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.8723,
-          "observed_retention_delta": -0.049
+          "observed_retention_delta": -0.0462
         }
       },
       "recommended_act_placement": [
@@ -346,7 +346,7 @@
     "TELEMETRY_COUNTER": {
       "sampleScenes": 3,
       "avgHoldRate": 0.8825,
-      "observed_retention_delta": -0.0388,
+      "observed_retention_delta": -0.036,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -372,12 +372,12 @@
         "145-168f": {
           "samples": 1,
           "holdRate": 0.9821,
-          "observed_retention_delta": 0.0608
+          "observed_retention_delta": 0.0636
         },
         ">168f": {
           "samples": 2,
           "holdRate": 0.8327,
-          "observed_retention_delta": -0.0887
+          "observed_retention_delta": -0.0858
         }
       },
       "recommended_act_placement": [
@@ -388,7 +388,7 @@
     "SILHOUETTE_ACTION": {
       "sampleScenes": 7,
       "avgHoldRate": 0.8302,
-      "observed_retention_delta": -0.0911,
+      "observed_retention_delta": -0.0883,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -414,12 +414,12 @@
         "145-168f": {
           "samples": 3,
           "holdRate": 0.9124,
-          "observed_retention_delta": -0.0089
+          "observed_retention_delta": -0.0061
         },
         ">168f": {
           "samples": 4,
           "holdRate": 0.7685,
-          "observed_retention_delta": -0.1528
+          "observed_retention_delta": -0.15
         }
       },
       "recommended_act_placement": [
@@ -430,7 +430,7 @@
     "DOCUMENT_CARD": {
       "sampleScenes": 6,
       "avgHoldRate": 0.9174,
-      "observed_retention_delta": -0.0039,
+      "observed_retention_delta": -0.0011,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -446,7 +446,7 @@
         "<=128f": {
           "samples": 1,
           "holdRate": 0.895,
-          "observed_retention_delta": -0.0263
+          "observed_retention_delta": -0.0235
         },
         "129-144f": {
           "samples": 0,
@@ -456,12 +456,12 @@
         "145-168f": {
           "samples": 2,
           "holdRate": 0.9726,
-          "observed_retention_delta": 0.0513
+          "observed_retention_delta": 0.0541
         },
         ">168f": {
           "samples": 3,
           "holdRate": 0.8881,
-          "observed_retention_delta": -0.0332
+          "observed_retention_delta": -0.0304
         }
       },
       "recommended_act_placement": [
@@ -472,7 +472,7 @@
     "FLAG_BANNER": {
       "sampleScenes": 4,
       "avgHoldRate": 0.91,
-      "observed_retention_delta": -0.0113,
+      "observed_retention_delta": -0.0085,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -498,12 +498,12 @@
         "145-168f": {
           "samples": 2,
           "holdRate": 0.9235,
-          "observed_retention_delta": 0.0022
+          "observed_retention_delta": 0.005
         },
         ">168f": {
           "samples": 2,
           "holdRate": 0.8964,
-          "observed_retention_delta": -0.0249
+          "observed_retention_delta": -0.0221
         }
       },
       "recommended_act_placement": [
@@ -514,7 +514,7 @@
     "TACTICAL_MAP": {
       "sampleScenes": 1,
       "avgHoldRate": 0.8846,
-      "observed_retention_delta": -0.0367,
+      "observed_retention_delta": -0.0339,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -545,7 +545,7 @@
         ">168f": {
           "samples": 1,
           "holdRate": 0.8846,
-          "observed_retention_delta": -0.0367
+          "observed_retention_delta": -0.0339
         }
       },
       "recommended_act_placement": [
@@ -556,7 +556,7 @@
     "SPOTLIGHT_EMBLEM": {
       "sampleScenes": 1,
       "avgHoldRate": 0.881,
-      "observed_retention_delta": -0.0403,
+      "observed_retention_delta": -0.0375,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -587,7 +587,7 @@
         ">168f": {
           "samples": 1,
           "holdRate": 0.881,
-          "observed_retention_delta": -0.0403
+          "observed_retention_delta": -0.0375
         }
       },
       "recommended_act_placement": [
@@ -607,7 +607,7 @@
       "projectSlug": "binance-heist-2026",
       "openingArchetype": "QUOTE_CARD",
       "hookDurationFrames": 146,
-      "hookHoldRate": 0.94
+      "hookHoldRate": 0.89
     },
     {
       "projectSlug": "operation-cowboy-1945",
@@ -641,9 +641,9 @@
     },
     {
       "projectSlug": "florida-plane-crash-2026",
-      "openingArchetype": "VEHICLE_IN_TRANSIT",
+      "openingArchetype": "STRUCTURAL_FRACTURE",
       "hookDurationFrames": 101,
-      "hookHoldRate": 0.925
+      "hookHoldRate": 0.955
     }
   ],
   "pacingPriors": {

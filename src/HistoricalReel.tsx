@@ -328,6 +328,7 @@ const SceneItem: React.FC<{
       {/* 5. Optional Safe-Zone End-Card / Loop CTA on Final Scene */}
       {renderLayer !== 'OVERLAY_ONLY' &&
         isFinalScene &&
+        !scene.visualPayload?.quoteAttribution &&
         meta.ctaConfig?.text &&
         frame >= Math.max(0, scene.durationFrames - 75) && (
           <div

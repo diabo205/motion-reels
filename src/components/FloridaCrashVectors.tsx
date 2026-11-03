@@ -2576,3 +2576,211 @@ export const SymmetricReelLoopHero: React.FC<{ durationFrames?: number }> = ({ d
     </svg>
   );
 };
+
+/**
+ * SCENE 14 (CONCLUDING TITLE CARD): NTSB PRIMARY FINDING CARD
+ * Official docket summary of the National Transportation Safety Board's primary finding
+ */
+export const NtsbPrimaryFindingCard: React.FC<{ durationFrames?: number }> = ({ durationFrames = 162 }) => {
+  const frame = useCurrentFrame();
+  const cardScale = interpolate(frame, [0, 20], [0.96, 1.0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const glowPulse = Math.sin(frame * 0.1) * 0.15 + 0.85;
+
+  return (
+    <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <defs>
+        <radialGradient id="ntsbFindingAura" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#0284C7" stopOpacity="0.4" />
+          <stop offset="60%" stopColor="#0F172A" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#090D12" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="docketBorderGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#38BDF8" />
+          <stop offset="50%" stopColor="#1E40AF" />
+          <stop offset="100%" stopColor="#EF4444" />
+        </linearGradient>
+      </defs>
+
+      {/* Atmospheric Background Glow */}
+      <circle cx={540} cy={1180} r={460} fill="url(#ntsbFindingAura)" opacity={glowPulse} />
+
+      {/* Main Forensic Dossier Card Container */}
+      <g transform={`translate(540, 1180) scale(${cardScale}) translate(-540, -1180)`}>
+        {/* Shadow Plate */}
+        <rect x={124} y={874} width={832} height={592} rx={20} fill="#090D12" opacity={0.8} />
+
+        {/* Card Body */}
+        <rect
+          x={120}
+          y={870}
+          width={840}
+          height={600}
+          rx={18}
+          fill="#0F172A"
+          stroke="url(#docketBorderGrad)"
+          strokeWidth={3}
+        />
+
+        {/* Top Header Bar */}
+        <rect x={120} y={870} width={840} height={70} rx={18} fill="#1E293B" />
+        <rect x={120} y={920} width={840} height={20} fill="#1E293B" />
+        <line x1={120} y1={940} x2={960} y2={940} stroke="#38BDF8" strokeWidth={2} opacity={0.6} />
+
+        {/* Official Eagle Seal Silhouette Emblem */}
+        <g transform="translate(155, 885)">
+          <circle cx={25} cy={25} r={22} fill="#0284C7" opacity={0.3} />
+          <circle cx={25} cy={25} r={20} fill="none" stroke="#38BDF8" strokeWidth={2} />
+          {/* Stylized Federal Crest */}
+          <path d="M 25 10 L 32 20 L 42 22 L 34 30 L 37 40 L 25 33 L 13 40 L 16 30 L 8 22 L 18 20 Z" fill="#F8FAFC" />
+        </g>
+
+        {/* Header Text */}
+        <text
+          x={220}
+          y={912}
+          fill="#F8FAFC"
+          fontSize={20}
+          fontWeight={900}
+          fontFamily="Montserrat"
+          letterSpacing="0.08em"
+        >
+          NATIONAL TRANSPORTATION SAFETY BOARD
+        </text>
+        <text
+          x={220}
+          y={932}
+          fill="#94A3B8"
+          fontSize={12}
+          fontWeight={800}
+          fontFamily="Montserrat"
+          letterSpacing="0.12em"
+        >
+          ACCIDENT INVESTIGATION DOCKET // FINAL PROBABLE CAUSE
+        </text>
+
+        {/* Case Reference Stamp */}
+        <g transform="translate(680, 888)">
+          <rect x={0} y={0} width={250} height={34} rx={6} fill="#7F1D1D" stroke="#EF4444" strokeWidth={1.5} />
+          <text
+            x={125}
+            y={22}
+            fill="#FEF2F2"
+            fontSize={12}
+            fontWeight={900}
+            fontFamily="Montserrat"
+            textAnchor="middle"
+            letterSpacing="0.06em"
+          >
+            REPORT: NTSB-AAR-26/02
+          </text>
+        </g>
+
+        {/* Primary Determination Title Box */}
+        <g transform="translate(160, 970)">
+          <rect x={0} y={0} width={760} height={150} rx={12} fill="#1E293B" stroke="#475569" strokeWidth={1.5} />
+          
+          <text
+            x={30}
+            y={38}
+            fill="#F59E0B"
+            fontSize={14}
+            fontWeight={900}
+            fontFamily="Montserrat"
+            letterSpacing="0.14em"
+          >
+            PRIMARY CAUSAL FACTOR DETERMINATION
+          </text>
+
+          {/* Core Finding Statement */}
+          <text
+            x={30}
+            y={82}
+            fill="#FEF2F2"
+            fontSize={30}
+            fontWeight={900}
+            fontFamily="Montserrat"
+            letterSpacing="0.04em"
+          >
+            UNCOMMANDED TRIM RUNAWAY
+          </text>
+
+          <text
+            x={30}
+            y={122}
+            fill="#EF4444"
+            fontSize={18}
+            fontWeight={800}
+            fontFamily="Montserrat"
+            letterSpacing="0.06em"
+          >
+            HORIZONTAL STABILIZER DRIVE FAILURE • CATASTROPHIC DIVE
+          </text>
+        </g>
+
+        {/* Technical Analysis Grid */}
+        <g transform="translate(160, 1145)">
+          {/* Box 1: Pitch Trim Actuator */}
+          <rect x={0} y={0} width={365} height={120} rx={10} fill="#182234" stroke="#334155" strokeWidth={1.5} />
+          <text x={20} y={32} fill="#94A3B8" fontSize={12} fontWeight={800} fontFamily="Montserrat" letterSpacing="0.08em">
+            COMPONENT ANALYSIS
+          </text>
+          <text x={20} y={62} fill="#F8FAFC" fontSize={18} fontWeight={900} fontFamily="Montserrat">
+            PITCH TRIM ACTUATOR
+          </text>
+          <text x={20} y={92} fill="#38BDF8" fontSize={13} fontWeight={800} fontFamily="Montserrat">
+            Continuous Full Nose-Down Deflection
+          </text>
+
+          {/* Box 2: Recovery Margin */}
+          <rect x={395} y={0} width={365} height={120} rx={10} fill="#182234" stroke="#334155" strokeWidth={1.5} />
+          <text x={415} y={32} fill="#94A3B8" fontSize={12} fontWeight={800} fontFamily="Montserrat" letterSpacing="0.08em">
+            CREW RECOVERY WINDOW
+          </text>
+          <text x={415} y={62} fill="#EF4444" fontSize={18} fontWeight={900} fontFamily="Montserrat">
+            AERODYNAMIC OVERRIDE IMPOSSIBLE
+          </text>
+          <text x={415} y={92} fill="#FCA5A5" fontSize={13} fontWeight={800} fontFamily="Montserrat">
+            Full Control Column Deflection Overpowered
+          </text>
+        </g>
+
+        {/* Stabilizer Position Telemetry Waveform */}
+        <g transform="translate(160, 1285)">
+          <rect x={0} y={0} width={760} height={105} rx={8} fill="#090D12" stroke="#1E293B" strokeWidth={1.5} />
+          
+          {/* Grid lines */}
+          <line x1={30} y1={25} x2={730} y2={25} stroke="#1E293B" strokeWidth={1} strokeDasharray="4 4" />
+          <line x1={30} y1={55} x2={730} y2={55} stroke="#1E293B" strokeWidth={1} strokeDasharray="4 4" />
+          <line x1={30} y1={85} x2={730} y2={85} stroke="#1E293B" strokeWidth={1} strokeDasharray="4 4" />
+
+          {/* Graph Legend */}
+          <text x={30} y={20} fill="#64748B" fontSize={11} fontWeight={800} fontFamily="Montserrat">
+            FLIGHT RECORDER TELEMETRY • STABILIZER ANGLE (DEGREES)
+          </text>
+
+          {/* Normal Flight Level Line */}
+          <path
+            d="M 30 50 L 280 50 L 320 52 L 350 90 L 730 90"
+            fill="none"
+            stroke="#EF4444"
+            strokeWidth={3}
+          />
+          <circle cx={350} cy={90} r={4} fill="#EF4444" />
+          <text x={360} y={80} fill="#EF4444" fontSize={11} fontWeight={900} fontFamily="Montserrat">
+            RUNAWAY ONSET (-8.5°)
+          </text>
+        </g>
+
+        {/* Official Board Seal Verification Footnote */}
+        <g transform="translate(160, 1410)">
+          <text x={380} y={24} fill="#94A3B8" fontSize={12} fontWeight={800} fontFamily="Montserrat" textAnchor="middle" letterSpacing="0.08em">
+            OFFICIAL ADOPTION: NATIONAL TRANSPORTATION SAFETY BOARD • ALL 9 SOULS REMEMBERED
+          </text>
+        </g>
+      </g>
+    </svg>
+  );
+};

@@ -1,8 +1,8 @@
 {
   "projectSlug": "florida-plane-crash-2026",
-  "generatedAt": "2026-11-02T16:45:27.159Z",
-  "title": "SOUTH FLORIDA JET CRASH: FLIGHT LEVEL 350 THE DIVE BEGAN",
-  "description": "SOUTH FLORIDA JET CRASH (✈️ 💥 🚨 🇺🇸)\n\nFLIGHT LEVEL 350 THE DIVE BEGAN\n\nHistorical Sources & Fact-Check Citations:\n• FLIGHT LEVEL 350 THE DIVE BEGAN — Source: SOUTH FLORIDA JET CRASH Archival Record\n• Flightradar24 recorded final transponder ping at 8,750 feet descending 20,000+ FPM — Source: Flightradar24 / NTSB\n• 12:50 PM BLAST MASSIVE FIREBALL — Source: SOUTH FLORIDA JET CRASH Archival Record\n• All 9 passengers and crew on board N722BD died upon impact in Palm Beach County — Source: CNN / Florida Dept. of Transportation\n• Approximately 600 mobile home park residents evacuated to emergency shelter — Source: Palm Beach County Sheriff Office / CNN\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Florida #Plane #Crash #2026",
+  "generatedAt": "2026-11-03T06:22:06.486Z",
+  "title": "SOUTH FLORIDA JET CRASH: PLUMMETING 20,000 FEET PER MINUTE",
+  "description": "SOUTH FLORIDA JET CRASH (✈️ 💥 🚨 🇺🇸)\n\nPLUMMETING 20,000 FEET PER MINUTE\n\nHistorical Sources & Fact-Check Citations:\n• PLUMMETING 20,000 FEET PER MINUTE — Source: SOUTH FLORIDA JET CRASH Archival Record\n• Flightradar24 recorded final transponder ping at 8,750 feet descending 20,000+ FPM — Source: Flightradar24 / NTSB\n• 12:50 PM BLAST MASSIVE FIREBALL — Source: SOUTH FLORIDA JET CRASH Archival Record\n• BLACK BOX RECOVERED FLIGHT DATA INTACT — Source: NTSB Vehicle Recorder Division Washington D.C.\n• NTSB PRIMARY FINDING UNCOMMANDED TRIM RUNAWAY — Source: NTSB Aircraft Accident Report N722BD\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Florida #Plane #Crash #2026",
   "hashtags": [
     "#History",
     "#Documentary",
@@ -26,7 +26,7 @@
   "claims": [
     {
       "sceneId": "SCENE_01_LEARJET_CRUISE_HOOK",
-      "text": "FLIGHT LEVEL 350 THE DIVE BEGAN",
+      "text": "PLUMMETING 20,000 FEET PER MINUTE",
       "source": "SOUTH FLORIDA JET CRASH Archival Record",
       "verified": true
     },
@@ -43,15 +43,15 @@
       "verified": true
     },
     {
-      "sceneId": "SCENE_13_NINE_SOULS_LOST_TALLY",
-      "text": "All 9 passengers and crew on board N722BD died upon impact in Palm Beach County",
-      "source": "CNN / Florida Dept. of Transportation",
+      "sceneId": "SCENE_13_BLACK_BOX_RECOVERY",
+      "text": "BLACK BOX RECOVERED FLIGHT DATA INTACT",
+      "source": "NTSB Vehicle Recorder Division Washington D.C.",
       "verified": true
     },
     {
-      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
-      "text": "Approximately 600 mobile home park residents evacuated to emergency shelter",
-      "source": "Palm Beach County Sheriff Office / CNN",
+      "sceneId": "SCENE_14_NTSB_PRIMARY_FINDING",
+      "text": "NTSB PRIMARY FINDING UNCOMMANDED TRIM RUNAWAY",
+      "source": "NTSB Aircraft Accident Report N722BD",
       "verified": true
     }
   ],
@@ -59,10 +59,10 @@
     {
       "sceneNumber": 1,
       "sceneId": "SCENE_01_LEARJET_CRUISE_HOOK",
-      "archetype": "VEHICLE_IN_TRANSIT",
+      "archetype": "STRUCTURAL_FRACTURE",
       "headerContext": "SOUTH FLORIDA CRASH",
-      "caption": "FLIGHT LEVEL 350 — THE DIVE BEGAN",
-      "visualAsset": "LEARJET_CRUISE_HERO"
+      "caption": "PLUMMETING — 20,000 FEET PER MINUTE",
+      "visualAsset": "LEARJET_VERTICAL_DIVE_HERO"
     },
     {
       "sceneNumber": 2,
@@ -154,83 +154,19 @@
     },
     {
       "sceneNumber": 13,
-      "sceneId": "SCENE_13_NINE_SOULS_LOST_TALLY",
-      "archetype": "CROWD_TALLY",
-      "headerContext": null,
-      "caption": "NINE ON BOARD — ZERO SURVIVORS",
-      "visualAsset": "CASUALTY_MANIFEST_TALLY"
-    },
-    {
-      "sceneNumber": 14,
-      "sceneId": "SCENE_14_FIRST_RESPONDERS_TRANSIT",
+      "sceneId": "SCENE_13_BLACK_BOX_RECOVERY",
       "archetype": "VEHICLE_IN_TRANSIT",
       "headerContext": null,
-      "caption": "EMERGENCY UNITS RACE — ROADS BLOCKED",
-      "visualAsset": "EMERGENCY_SIRENS_CONVOY"
-    },
-    {
-      "sceneNumber": 15,
-      "sceneId": "SCENE_15_PERIMETER_LEADER",
-      "archetype": "LONE_LEADER",
-      "headerContext": null,
-      "caption": "NEIGHBORHOOD SAVED — NO GROUND DEATHS",
-      "visualAsset": "FIRE_COMMANDER_PERIMETER"
-    },
-    {
-      "sceneNumber": 16,
-      "sceneId": "SCENE_16_SIX_HUNDRED_EVACUATED_TALLY",
-      "archetype": "CROWD_TALLY",
-      "headerContext": null,
-      "caption": "PARK EVACUATION — SIX HUNDRED SAFE",
-      "visualAsset": "EVACUATION_TALLY_BOARD"
-    },
-    {
-      "sceneNumber": 17,
-      "sceneId": "SCENE_17_NTSB_FAA_SPLIT",
-      "archetype": "SPLIT_CONFRONTATION",
-      "headerContext": null,
-      "caption": "NTSB GO-TEAM — FEDERAL INQUIRY",
-      "visualAsset": "NTSB_VS_FAA_INVESTIGATION_SPLIT"
-    },
-    {
-      "sceneNumber": 18,
-      "sceneId": "SCENE_18_SMOKING_CRATER_FRACTURE",
-      "archetype": "STRUCTURAL_FRACTURE",
-      "headerContext": null,
-      "caption": "CRATER SURVEY — WRECKAGE SCATTERED",
-      "visualAsset": "SMOKING_CRATER_FORENSICS"
-    },
-    {
-      "sceneNumber": 19,
-      "sceneId": "SCENE_19_SECRETARY_DUFFY_QUOTE",
-      "archetype": "QUOTE_CARD",
-      "headerContext": null,
-      "caption": "OFFICIAL STATEMENT — HORRIFIC TRAGEDY",
-      "visualAsset": "SECRETARY_DUFFY_STATEMENT_QUOTE"
-    },
-    {
-      "sceneNumber": 20,
-      "sceneId": "SCENE_20_BLACK_BOX_RECOVERY",
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "headerContext": null,
-      "caption": "BLACK BOX FOUND — DATA SECURED",
+      "caption": "BLACK BOX RECOVERED — FLIGHT DATA INTACT",
       "visualAsset": "BLACK_BOX_RECOVERY_DOSSIER"
     },
     {
-      "sceneNumber": 21,
-      "sceneId": "SCENE_21_MEMORIAL_TRIBUTE_LEADER",
-      "archetype": "LONE_LEADER",
-      "headerContext": null,
-      "caption": "NINE LIVES LOST — REST IN PEACE",
-      "visualAsset": "FLORIDA_CRASH_MEMORIAL_PLINTH"
-    },
-    {
-      "sceneNumber": 22,
-      "sceneId": "SCENE_22_SYMMETRIC_LOOP_REEL",
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "headerContext": null,
-      "caption": "N722BD FINAL FLIGHT — NEVER FORGOTTEN",
-      "visualAsset": "SYMMETRIC_REEL_LOOP_HERO"
+      "sceneNumber": 14,
+      "sceneId": "SCENE_14_NTSB_PRIMARY_FINDING",
+      "archetype": "QUOTE_CARD",
+      "headerContext": "NTSB FINAL REPORT",
+      "caption": "NTSB PRIMARY FINDING — UNCOMMANDED TRIM RUNAWAY",
+      "visualAsset": "NTSB_PRIMARY_FINDING_CARD"
     }
   ]
 }

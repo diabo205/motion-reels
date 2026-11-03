@@ -17,21 +17,24 @@ A structured workflow for directing, storyboarding, and animating any complex do
 
 Before scripting, storyboarding, or compiling the timeline, consult `config/retention_priors.json` (validated by `config/retention_priors.schema.json`) to close the feedback loop between published video performance and animation parameters:
 
-1. **Scene 1 Hook Selection & Duration Lock (`HOOK_TYPEWRITER_LINT`)**:
+1. **Scene 1 Hook Selection & Duration Lock (`HOOK_ARCHETYPE_LINT`, `HOOK_PACING_LINT`, `HOOK_TYPEWRITER_LINT`)**:
+   - **Allowed Hook Archetypes**: Scene 1 must use an empirical high-hold archetype: `SPLIT_CONFRONTATION` (+2.08% delta), `STRUCTURAL_FRACTURE` (+1.32% delta), or `VEHICLE_IN_TRANSIT` (+1.70% delta).
+   - **Banned Hook Archetypes**: `QUOTE_CARD`, `VECTOR_MAP`, `DOCUMENT_CARD`, and `LONE_LEADER` are strictly prohibited on Scene 1 due to high feed swipe-away rates.
    - **Archetype Rotation**: Inspect `recentHookArchetypeHistory` to ensure Scene 1 does not reuse the opening archetype of the previous 2 reels (`ARCHETYPE_ROTATION_LINT`).
-   - **High-Retention Hook Archetypes**: Select from archetypes with `recommendedForHook: true` and the highest positive `observed_retention_delta` (e.g. `SPLIT_CONFRONTATION` [+2.4%], `VEHICLE_IN_TRANSIT` [+2.1%], `STRUCTURAL_FRACTURE` [+1.4%]).
-   - **Target Hook Duration**: Bias Scene 1 strictly to `pacingPriors.targetHookDurationFrames: 108` (1.80s @ 60 FPS) to stop feed scrolling within 1.2 seconds.
+   - **Target Hook Duration**: Bias Scene 1 strictly to `pacingPriors.targetHookDurationFrames: 96–108f` (1.6s–1.8s @ 60 FPS) to stop feed scrolling within 1.2 seconds. Exceeding 108f is a fatal linter error.
    - **Sharp Frame 0 (Poster Protection)**: Keep Global Frame 0 sharp (`blur(0px)`, `opacity: 1`) for feed thumbnails and poster generation (`projects/<slug>/deliverables/poster.png`). `TYPEWRITER` animations on Scene 1 are strictly prohibited (`HOOK_TYPEWRITER_LINT`).
    - **Immediate Frame 0 Audio Transient**: Trigger a heavy impact SFX (`sub_boom.wav`, `war_drum.wav`) on frame 0 to immediately anchor audience attention.
+   - **Visceral High-Stakes Copy**: Frame 0 setup text must establish the primary antagonist, entity, and stakes immediately (no abstract or passive mystery copy).
 
-2. **High-Density Archetype Duration Biasing (`scene_type → optimal_duration_range → observed_retention_delta`)**:
+2. **High-Density Archetype Duration Biasing & Staging Diversity (`STAGING_DIVERSITY_LINT`)**:
    - For every scene in Acts II–V, cross-reference its assigned archetype against `archetypeRetentionPriors[scene_type].optimal_duration_range` and `duration_delta_matrix`.
    - Bias scene cut durations toward high-retention windows (**`84–132 frames` / 1.4s–2.2s**; up to `168f` on final epilogue), yielding **22–32 cuts per reel**.
    - Total reel duration remains strictly between **`2,700` and `3,500` frames** (`45.00s` to `58.33s`).
+   - **Staging Diversity (Peshawar Standard)**: Never lock an entire reel into a monotonous dark void. Rotate among at least **3 distinct stage styles** (`SUNBURST_HERO`, `PAPER_EXTERIOR`, `GRAPH_GRID`, `WOOD_PANEL`, `NIGHT_FELT`, `SPLIT_HORIZON`) and motivated sky gradients.
 
 3. **Combating Retention Drop-Off Valleys & Dead Holds (`DEAD_HOLD_LINT`)**:
    - **2-Phase Reactive Mid-Scene Visuals**: Every scene executes a 2-phase narrative flow: Phase 1 (setup motion) -> Phase 2 (payoff hit impulse + secondary vector state transformation on the transient hit frame).
-   - **Dead-Hold Prevention**: Cap post-payoff holds at $\le 100\text{f}$ (`< 1.6s`) without secondary micro-action or visual transition.
+   - **Dead-Hold Prevention**: Cap post-payoff holds at $\le 72\text{f}$ (`1.2s`) without secondary micro-action or visual transition.
    - **Strategic Pacing Spikes**: Space high-impact, positive-delta archetypes (`STRUCTURAL_FRACTURE`, `SPLIT_CONFRONTATION`) every 4–6 scenes to create retention bumps and avoid mid-video drop-off valleys.
    - **No Consecutive Repetition**: Never place more than 2 consecutive scenes of the identical archetype.
 
