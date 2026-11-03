@@ -18,7 +18,34 @@ Components available for building scenes. Compose from these before drawing new 
 
 ## Reference scene
 
-TODO: To be annotated in Task D from peshawar-2009.
+### Scene 02: `02_the_detonation_blast` (`peshawar-2009`)
+*Status: `DRAFT: needs owner approval`*
+
+This scene exemplifies the engine's Peshawar Staging Standard, multi-tier value separation, two-phase reactive motion, library composition, and safe-zone compliance.
+
+#### 1. Staging & Substrate
+- **Mode**: `PAPER_EXTERIOR` staging substrate on quadrille drafting paper with organic grain.
+- **Sky Palette**: Warm setting-motivated sky gradient (`["#B8292F", "#1A090B"]`), contrasting deep ground silhouettes with fiery crimson-to-black dusk tones.
+- **Atmospheric Separation**: Eliminates flat black voids (`#090D12`) by bathing the midground in soft radial backlighting motivated by the blast epicenter.
+
+#### 2. Multi-Tier Value Hierarchy & 6-Layer Vector Anatomy
+Constructed via the 6-layer vector explosion hierarchy in `src/components/PeshawarVectors.tsx` (`BlastShockwaveVector`), mapping to `src/kit/OrganicExplosion.tsx`:
+1. **Layer 1 (Ambient Volumetric Aura)**: `<radialGradient id="blastCoreAura">` centered at `(540, 1100)` with a 480px falloff radius and 0.65 opacity.
+2. **Layer 2 (Ionization & Shockwave Rims)**: Dual concentric shockwave rings expanding outward from radius 60px to 620px in `#FFD54F` and `#FFFFFF`.
+3. **Layer 3 (Acute Energy Spikes)**: 13 sharp radiating flame tongues (lengths 375–440px) in fiery orange (`#FF8F00`) with inner yellow highlight spikes (`#FFD54F`).
+4. **Layer 4 (Multi-Tiered Organic Body Geometry)**: Three nested arc-scalloped lobes generated via `createArcScallopedCloud()` (11 outer lobes in crimson `#D32F2F`, 10 mid-tier lobes in amber `#FF8F00`, 8 inner lobes in bright yellow `#FFEE58`).
+5. **Layer 5 (High-Contrast Core Accent)**: White-hot 8-pointed core flash star (`#FFFFFF`) with 12-frame decay settling into a pulsing core.
+6. **Layer 6 (Detached Orbiting Elements)**: 8 orbiting cloudlets drifting outward between frames 0 and 80 (`cloudletDrift = interpolate(frame, [0, 80], [0, 45], { extrapolateRight: 'clamp' })`).
+
+#### 3. Two-Phase Reactive Motion
+- **Phase 1 (Frames 0–18, Detonation Blast)**: Violent explosive bloom expanding from `scale: 0.15` to overshoot at `1.28` (frame 6) before settling to `1.0` at frame 18 (`interpolate(frame, [0, 6, 18], [0.15, 1.28, 1.0], { extrapolateRight: 'clamp' })`). Camera executes `IMPACT_SHAKE` (intensity 1.0) synchronized with `artillery_shell.wav`.
+- **Phase 2 (Frames 18+, Secondary Micro-Motion & Payoff)**: Continuous boiling oscillation (`1.0 + 0.04 * Math.sin(frame * 0.18)`), expanding shockwave rings, and drifting cloudlets. At frame 60, the red payoff line slams with `SCALE_SLAM` alongside `sub_boom.wav`.
+
+#### 4. Safe Zones & Kinetic Typography
+- **Text Zone (18% – 42% height)**: Pinned strictly between `y = 346px` and `y = 806px`.
+  - Setup line (`PRIMARY_STATEMENT`): *"A DEAFENING SHOCKWAVE TORE THE SKY."* in `PURE_WHITE`.
+  - Payoff line (`SECONDARY_ACCENT`): *"A MOSQUE & 4 BUILDINGS COLLAPSED."* in `ALERT_RED`.
+- **Artwork Zone (45% – 78% height)**: Epicenter anchored at `(x: 540px, y: 1100px)`, cleanly separated from both headline text above and platform UI buffers below (`y > 1498px`).
 
 ---
 
