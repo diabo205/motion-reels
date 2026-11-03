@@ -60,30 +60,38 @@ export interface BulletWoundsConfig {
   showSparks?: boolean;
 }
 
+export type PuppetCharacter =
+  | 'MUJIB'
+  | 'YAHYA'
+  | 'TIKKA'
+  | 'ZIA'
+  | 'MINHAS'
+  | 'INSTRUCTOR'
+  | 'OFFICER'
+  | 'CLINTON'
+  | 'ZARDARI'
+  | 'QURESHI'
+  | 'TALIBAN'
+  | 'ALQAEDA'
+  | 'POWERS'
+  | 'KHRUSHCHEV'
+  | 'EISENHOWER'
+  | 'ABEL'
+  | 'CARTON_HERO'
+  | 'CARTON_WWI'
+  | 'CARTON_WWII'
+  | 'CARTON_BOER'
+  | 'DOCTOR'
+  | 'MAO';
+
 export interface CutoutPuppetProps {
-  character?:
-    | 'MUJIB'
-    | 'YAHYA'
-    | 'TIKKA'
-    | 'ZIA'
-    | 'MINHAS'
-    | 'INSTRUCTOR'
-    | 'OFFICER'
-    | 'CLINTON'
-    | 'ZARDARI'
-    | 'QURESHI'
-    | 'TALIBAN'
-    | 'ALQAEDA'
-    | 'POWERS'
-    | 'KHRUSHCHEV'
-    | 'EISENHOWER'
-    | 'ABEL'
-    | 'CARTON_HERO'
-    | 'CARTON_WWI'
-    | 'CARTON_WWII'
-    | 'CARTON_BOER'
-    | 'DOCTOR'
-    | 'MAO';
+  character?: PuppetCharacter | (string & {});
+  headSrc?: string;
+  headBorderColor?: string;
+  headWidth?: number;
+  headHeight?: number;
+  headObjectFit?: 'cover' | 'contain';
+  headObjectPosition?: string;
   x?: number;
   y?: number;
   scale?: number;
@@ -124,7 +132,7 @@ const OUTFIT_COLORS: Record<PuppetOutfit, { torso: string; collar: string; accen
   DOCTOR_COAT: { torso: '#F5EFEB', collar: '#E2D9CE', accent: '#DC2626' },
 };
 
-const PHOTO_HEADS: Partial<Record<NonNullable<CutoutPuppetProps['character']>, string>> = {
+const PHOTO_HEADS: Partial<Record<string, string>> = {
   MINHAS: 'plates/rashid_minhas.jpg',
   MUJIB: 'plates/mujibur_rahman.jpg',
   YAHYA: 'plates/yahya_khan.png',
@@ -145,6 +153,12 @@ const PHOTO_HEADS: Partial<Record<NonNullable<CutoutPuppetProps['character']>, s
 
 export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
   character = 'MINHAS',
+  headSrc,
+  headBorderColor,
+  headWidth,
+  headHeight,
+  headObjectFit,
+  headObjectPosition,
   x = 810,
   y = 1230,
   scale = 1.0,
@@ -163,6 +177,7 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const isCarton = character?.startsWith('CARTON_');
+  const resolvedHeadPath = headSrc || (character ? PHOTO_HEADS[character] : undefined);
 
   // Determine active pose (supports 2 sequential transitions!)
   let activePose: PuppetPose = initialPose;
@@ -1104,7 +1119,7 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
         )}
 
         {/* LAYER 3: Illustrated Military Head for TIKKA, INSTRUCTOR, OFFICER */}
-        {!PHOTO_HEADS[character] && (
+        {!resolvedHeadPath && (
           <g transform="translate(0, -72)">
             {/* Face Oval */}
             <ellipse cx="0" cy="0" rx="68" ry="76" fill="#C6946E" />
@@ -1222,31 +1237,42 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
       </svg>
 
       {/* LAYER 4: Archival Cutout Photo Head for Historical Figures */}
-      {PHOTO_HEADS[character] && (
+      {resolvedHeadPath && (
         <div
           style={{
             position: 'absolute',
             top: isCarton ? 12 : 24,
             left: '50%',
-            width: isCarton ? 152 : 142,
-            height: isCarton ? 184 : 164,
+            width: headWidth ?? (isCarton ? 152 : 142),
+            height: headHeight ?? (isCarton ? 184 : 164),
             transform: 'translateX(-50%)',
             borderRadius: isCarton ? '0px' : '50% 50% 46% 46%',
             overflow: isCarton ? 'visible' : 'hidden',
-            border: isCarton ? 'none' : '2px solid rgba(20, 22, 25, 0.25)',
+            border: isCarton
+              ? 'none'
+              : headBorderColor
+              ? `3px solid ${headBorderColor}`
+              : '2px solid rgba(20, 22, 25, 0.25)',
             backgroundColor: isCarton ? 'transparent' : '#D8CFC2',
-            filter: isCarton
-              ? 'drop-shadow(0px 0px 3px #F4EFE6) drop-shadow(0px 6px 12px rgba(0,0,0,0.65))'
-              : undefined,
+            filter:
+              isCarton || headBorderColor
+                ? `drop-shadow(0px 0px 4px ${headBorderColor || '#F4EFE6'}) drop-shadow(0px 6px 12px rgba(0,0,0,0.65))`
+                : undefined,
           }}
         >
           <Img
-            src={staticFile(PHOTO_HEADS[character]!)}
+            src={
+              resolvedHeadPath.startsWith('http') ||
+              resolvedHeadPath.startsWith('data:') ||
+              resolvedHeadPath.startsWith('/')
+                ? resolvedHeadPath
+                : staticFile(resolvedHeadPath)
+            }
             style={{
               width: '100%',
-              height: isCarton ? '100%' : character === 'KHRUSHCHEV' ? '100%' : '128%',
-              objectFit: isCarton ? 'contain' : 'cover',
-              objectPosition: isCarton
+              height: headHeight ? '100%' : isCarton ? '100%' : character === 'KHRUSHCHEV' ? '100%' : '128%',
+              objectFit: headObjectFit ?? (isCarton ? 'contain' : 'cover'),
+              objectPosition: headObjectPosition ?? (isCarton
                 ? 'center bottom'
                 : character === 'MUJIB'
                 ? 'center 12%'
@@ -1266,7 +1292,7 @@ export const CutoutPuppet: React.FC<CutoutPuppetProps> = ({
                 ? 'center 16%'
                 : character === 'MAO'
                 ? 'center 12%'
-                : 'center 15%',
+                : 'center 15%'),
               filter: isCarton ? 'contrast(1.08) brightness(1.02)' : 'contrast(1.15) brightness(1.02)',
             }}
           />

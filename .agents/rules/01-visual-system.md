@@ -42,13 +42,13 @@
 ---
 
 ## 4. Character Standard & Zero Direct Photo Pasting (`PHOTO_PASTE_LINT`)
-- **Grim & Serious Scenarios (Default)**:
-  - Depict figures as **stark, flat dark silhouettes** (`#090D12` or `#12151B`).
-  - Allow at most **one colored accent prop** (e.g. red scarf, officer cap band, gold medal, white helmet).
-  - Separate dark silhouettes from dark background using **atmospheric backlighting** (soft radial horizon glow, aurora bands, or warm firelight gradients).
-- **Non-Grim & Satirical Scenarios (Selective)**:
-  - For lighthearted, bureaucratic, or non-grim historical vignettes, articulated `<CutoutPuppet />` rigs may be selectively used.
-- **Zero Raw Photographs on Screen (`PHOTO_PASTE_LINT`)**: Archival photos are used strictly as reference blueprints to craft custom SVG artwork; raw `<img>`, `<Image>`, and `<image>` tags inside vector scene components are automatically flagged by `audit_and_validate.js`.
+- **Named Historical Figures & Key Human Actors (Priority)**:
+  - For all named figures, commanders, suspects, and leaders, prioritize articulated die-cut `<CutoutPuppet headSrc="..." />` rigs.
+  - Pair an authentic archival portrait head (prepared with a tactile `#F4EFE6` die-cut cardstock border via `scripts/crop_puppet_head.py`) with a textured, period-accurate uniform/attire body from `src/components/CutoutPuppet.tsx`.
+- **Anonymous Crowds, Soldiers & Tally Units**:
+  - Depict anonymous rank-and-file figures as multi-tier silhouettes with authentic uniform accents (collar tabs, epaulets, helmets).
+  - Separate silhouettes from dark backgrounds using **atmospheric backlighting** (soft radial horizon glow, warm firelight, or dawn gradients).
+- **Zero Raw Photographs on Screen (`PHOTO_PASTE_LINT`)**: Archival photos are strictly used either as die-cut portrait heads inside `<CutoutPuppet headSrc="..." />` or as reference blueprints to craft custom SVG artwork; raw unmasked `<img>`, `<Image>`, and `<image>` tags inside vector scene components are automatically flagged by `audit_and_validate.js`.
 - **Visual Density & Complexity Floor (`PATH_COMPLEXITY_LINT`)**:
   - Every scene vector component must satisfy:
     1. Minimum $\ge 35$ SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: $\ge 50$ nodes).

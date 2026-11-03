@@ -121,472 +121,741 @@ const CyberGreenAura: React.FC<{
   );
 };
 
+// Reusable Detailed $100 Banknote Bill Component
+const BanknoteBill: React.FC<{
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  rotateDeg: number;
+  skewDeg: number;
+  scale?: number;
+  opacity?: number;
+  tier?: 'fg' | 'mg' | 'bg';
+}> = ({ x, y, width, height, rotateDeg, skewDeg, scale = 1, opacity = 1, tier = 'mg' }) => {
+  const w = width;
+  const h = height;
+  return (
+    <g
+      transform={`translate(${x}, ${y}) rotate(${rotateDeg}) skewX(${skewDeg}) scale(${scale})`}
+      opacity={opacity}
+    >
+      {/* Outer Paper Substrate */}
+      <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={4} fill="#E2FBE8" stroke="#166534" strokeWidth={tier === 'fg' ? 2.5 : 1.5} />
+      {/* Inner Engraved Guilloche Border */}
+      <rect x={-w / 2 + 3} y={-h / 2 + 3} width={w - 6} height={h - 6} rx={2} fill="none" stroke="#14532D" strokeWidth={0.9} strokeDasharray="3 1.5" />
+      <rect x={-w / 2 + 6} y={-h / 2 + 5} width={w - 12} height={h - 10} fill="#F0FDF4" stroke="#15803D" strokeWidth={0.6} />
+
+      {/* Center Oval Medallion: Benjamin Franklin Portrait */}
+      <ellipse cx={0} cy={0} rx={w * 0.18} ry={h * 0.38} fill="#DCFCE7" stroke="#14532D" strokeWidth={1.2} />
+      {/* Stylized Franklin Head & Cravat Silhouette */}
+      <path
+        d={`M ${-w * 0.05} ${-h * 0.22}
+           C ${w * 0.06} ${-h * 0.24}, ${w * 0.09} ${-h * 0.12}, ${w * 0.07} ${-h * 0.02}
+           C ${w * 0.08} ${h * 0.08}, ${w * 0.05} ${h * 0.18}, ${0} ${h * 0.22}
+           C ${-w * 0.06} ${h * 0.20}, ${-w * 0.08} ${h * 0.10}, ${-w * 0.08} ${0}
+           C ${-w * 0.09} ${-h * 0.10}, ${-w * 0.08} ${-h * 0.20}, ${-w * 0.05} ${-h * 0.22} Z`}
+        fill="#14532D"
+      />
+      {/* Franklin Shoulder / Coat */}
+      <path
+        d={`M ${-w * 0.12} ${h * 0.24}
+           Q ${0} ${h * 0.15} ${w * 0.12} ${h * 0.24}
+           L ${w * 0.14} ${h * 0.35}
+           L ${-w * 0.14} ${h * 0.35} Z`}
+        fill="#166534"
+      />
+
+      {/* Federal Reserve Black Seal (Left) */}
+      <circle cx={-w * 0.28} cy={0} r={h * 0.2} fill="none" stroke="#0F172A" strokeWidth={0.8} strokeDasharray="2 1" />
+      <text x={-w * 0.28} y={3} textAnchor="middle" fill="#0F172A" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        ★
+      </text>
+
+      {/* Treasury Green Seal (Right) */}
+      <circle cx={w * 0.28} cy={0} r={h * 0.2} fill="none" stroke="#15803D" strokeWidth={1} strokeDasharray="2 1" />
+      <text x={w * 0.28} y={3} textAnchor="middle" fill="#15803D" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        $
+      </text>
+
+      {/* 4 Corner 100 Numerals */}
+      <text x={-w / 2 + 8} y={-h / 2 + 12} fill="#14532D" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        100
+      </text>
+      <text x={w / 2 - 8} y={-h / 2 + 12} textAnchor="end" fill="#14532D" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        100
+      </text>
+      <text x={-w / 2 + 8} y={h / 2 - 5} fill="#14532D" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        100
+      </text>
+      <text x={w / 2 - 8} y={h / 2 - 5} textAnchor="end" fill="#14532D" fontSize={h * 0.22} fontWeight="900" fontFamily="Montserrat">
+        100
+      </text>
+
+      {/* Header Banner */}
+      <text x={0} y={-h * 0.28} textAnchor="middle" fill="#14532D" fontSize={h * 0.12} fontWeight="800" fontFamily="Montserrat" letterSpacing="0.08em">
+        FEDERAL RESERVE NOTE
+      </text>
+      {/* Bottom Banner */}
+      <text x={0} y={h * 0.32} textAnchor="middle" fill="#14532D" fontSize={h * 0.12} fontWeight="800" fontFamily="Montserrat" letterSpacing="0.08em">
+        THE UNITED STATES OF AMERICA
+      </text>
+    </g>
+  );
+};
+
 // ============================================================================
-// SCENE 01: KHANEWAL VS USPS SPLIT HERO (SPLIT_CONFRONTATION, Payoff: Frame 35)
+// SCENE 01: EVIL HACKER LAUGHING IN CASH RAIN & LABELSBANK FRAUD WEBSITE
+// Archetype: SPLIT_CONFRONTATION (Hacker Greed vs US Postal System Breach)
+// Payoff: Frame 35 (Transient Slam & $126M Breach Alert)
 // ============================================================================
 export const KhanewalVsUspsSplitHero: React.FC<{ durationFrames?: number }> = ({ durationFrames = 102 }) => {
   const frame = useCurrentFrame();
   const isPayoff = frame >= 35;
-  const fracturePulse = isPayoff ? interpolate(frame - 35, [0, 8, 20], [0, 1, 0.4], CLAMP) : 0;
-  const screenFlicker = Math.sin(frame * 0.25) * 4;
-  const drift = driftOffsetPx(frame, 1);
-  const steamWave = Math.sin(frame * 0.12) * 6;
+  const fracturePulse = isPayoff ? interpolate(frame - 35, [0, 8, 22], [0, 1, 0.45], CLAMP) : 0;
+
+  // Maniacal Laugh Physics (Bounce, Shoulder Chuckles, Mouth Flex)
+  const laughFrequency = isPayoff ? 1.05 : 0.85;
+  const laughBounce = Math.sin(frame * laughFrequency) * (isPayoff ? 5.5 : 3.2);
+  const shoulderJolt = Math.cos(frame * laughFrequency) * (isPayoff ? 4.5 : 2.5);
+  const mouthOpen = (isPayoff ? 17 : 11) + Math.sin(frame * laughFrequency) * (isPayoff ? 7.5 : 4.5);
+  const headTilt = Math.sin(frame * 0.35) * (isPayoff ? 2.5 : 1.5);
+
+  // Background Cyber Screen Glitch / CRT Scanline Motion
+  const crtScan = (frame * 3.5) % 32;
+
+  // Stolen Counter Number Rolling Animation
+  const displayedMillions = isPayoff
+    ? interpolate(frame - 35, [0, 30], [2.4, 126.4], CLAMP).toFixed(1)
+    : '2.4';
+
+  // Banknotes Configuration (24 distinct tumbling bills across 3 depth tiers)
+  const banknoteDefs = [
+    // Tier 1: Background Bills (Small, behind hacker, drifting)
+    { id: 0, baseX: 160, startY: 860, speed: 4.8, rotSpeed: 1.4, baseRot: 15, scale: 0.65, tier: 'bg' as const },
+    { id: 1, baseX: 320, startY: 980, speed: 5.2, rotSpeed: -1.8, baseRot: -25, scale: 0.7, tier: 'bg' as const },
+    { id: 2, baseX: 760, startY: 890, speed: 4.6, rotSpeed: 1.6, baseRot: 35, scale: 0.68, tier: 'bg' as const },
+    { id: 3, baseX: 890, startY: 1040, speed: 5.5, rotSpeed: -1.3, baseRot: -12, scale: 0.65, tier: 'bg' as const },
+    { id: 4, baseX: 450, startY: 910, speed: 4.9, rotSpeed: 2.1, baseRot: 40, scale: 0.72, tier: 'bg' as const },
+    { id: 5, baseX: 620, startY: 950, speed: 5.1, rotSpeed: -1.7, baseRot: -30, scale: 0.7, tier: 'bg' as const },
+
+    // Tier 2: Midground Bills (Medium, fluttering around head and shoulders)
+    { id: 6, baseX: 210, startY: 930, speed: 6.2, rotSpeed: 2.4, baseRot: -18, scale: 0.95, tier: 'mg' as const },
+    { id: 7, baseX: 360, startY: 870, speed: 6.8, rotSpeed: -2.8, baseRot: 22, scale: 1.0, tier: 'mg' as const },
+    { id: 8, baseX: 510, startY: 840, speed: 6.4, rotSpeed: 3.1, baseRot: -35, scale: 0.9, tier: 'mg' as const },
+    { id: 9, baseX: 680, startY: 890, speed: 7.0, rotSpeed: -2.2, baseRot: 28, scale: 1.05, tier: 'mg' as const },
+    { id: 10, baseX: 820, startY: 940, speed: 6.5, rotSpeed: 2.7, baseRot: -15, scale: 0.95, tier: 'mg' as const },
+    { id: 11, baseX: 280, startY: 1050, speed: 6.9, rotSpeed: -2.5, baseRot: 42, scale: 1.0, tier: 'mg' as const },
+    { id: 12, baseX: 740, startY: 1020, speed: 6.7, rotSpeed: 2.9, baseRot: -28, scale: 0.98, tier: 'mg' as const },
+    { id: 13, baseX: 180, startY: 1110, speed: 7.2, rotSpeed: -3.0, baseRot: 14, scale: 1.02, tier: 'mg' as const },
+    { id: 14, baseX: 870, startY: 1080, speed: 6.6, rotSpeed: 2.3, baseRot: -38, scale: 0.96, tier: 'mg' as const },
+    { id: 15, baseX: 430, startY: 1140, speed: 7.1, rotSpeed: -2.6, baseRot: 19, scale: 1.0, tier: 'mg' as const },
+
+    // Tier 3: Foreground Bills (Large, crisp, tumbling in 3D right in front of camera)
+    { id: 16, baseX: 150, startY: 880, speed: 8.5, rotSpeed: 3.8, baseRot: -24, scale: 1.45, tier: 'fg' as const },
+    { id: 17, baseX: 340, startY: 830, speed: 9.2, rotSpeed: -4.2, baseRot: 32, scale: 1.5, tier: 'fg' as const },
+    { id: 18, baseX: 540, startY: 810, speed: 8.8, rotSpeed: 4.5, baseRot: -15, scale: 1.4, tier: 'fg' as const },
+    { id: 19, baseX: 730, startY: 860, speed: 9.0, rotSpeed: -3.9, baseRot: 28, scale: 1.55, tier: 'fg' as const },
+    { id: 20, baseX: 910, startY: 820, speed: 8.7, rotSpeed: 4.1, baseRot: -36, scale: 1.48, tier: 'fg' as const },
+    { id: 21, baseX: 250, startY: 1020, speed: 9.4, rotSpeed: -4.4, baseRot: 20, scale: 1.6, tier: 'fg' as const },
+    { id: 22, baseX: 630, startY: 990, speed: 8.9, rotSpeed: 4.0, baseRot: -22, scale: 1.52, tier: 'fg' as const },
+    { id: 23, baseX: 820, startY: 1050, speed: 9.1, rotSpeed: -4.3, baseRot: 35, scale: 1.45, tier: 'fg' as const },
+  ];
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
       <defs>
-        <clipPath id="splitKhanewalLeft">
-          <polygon points="0,860 480,860 620,1490 0,1490" />
-        </clipPath>
-        <clipPath id="splitUspsRight">
-          <polygon points="480,860 1080,860 1080,1490 620,1490" />
-        </clipPath>
-        <linearGradient id="voltageSeam" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#38BDF8" />
-          <stop offset="50%" stopColor="#F8FAFC" />
-          <stop offset="100%" stopColor="#EF4444" />
+        {/* Volumetric Radial Aura from Terminal & Crime Hub */}
+        <radialGradient id="cyberScreenGlow" cx="50%" cy="50%" r="55%">
+          <stop offset="0%" stopColor={isPayoff ? '#DC2626' : '#10B981'} stopOpacity={0.65} />
+          <stop offset="45%" stopColor={isPayoff ? '#991B1B' : '#047857'} stopOpacity={0.35} />
+          <stop offset="85%" stopColor="#064E3B" stopOpacity={0.15} />
+          <stop offset="100%" stopColor="#020617" stopOpacity={0} />
+        </radialGradient>
+
+        {/* Dual Rim Lighting Gradients for Hacker Silhouette */}
+        <linearGradient id="hackerLeftEmeraldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#34D399" stopOpacity={0.9} />
+          <stop offset="40%" stopColor="#10B981" stopOpacity={0.4} />
+          <stop offset="100%" stopColor="#052E16" stopOpacity={0} />
         </linearGradient>
-        <linearGradient id="screenLightBeam" x1="0%" y1="0%" x2="100%" y2="50%">
-          <stop offset="0%" stopColor="#FDE047" stopOpacity={0.45} />
-          <stop offset="50%" stopColor="#F59E0B" stopOpacity={0.2} />
-          <stop offset="100%" stopColor="#D97706" stopOpacity={0} />
+
+        <linearGradient id="hackerRightRedRim" x1="100%" y1="0%" x2="0%" y2="0%">
+          <stop offset="0%" stopColor={isPayoff ? '#F87171' : '#F59E0B'} stopOpacity={0.95} />
+          <stop offset="45%" stopColor={isPayoff ? '#DC2626' : '#D97706'} stopOpacity={0.45} />
+          <stop offset="100%" stopColor="#450A0A" stopOpacity={0} />
         </linearGradient>
-        <pattern id="jaliPatternScene1" width="16" height="16" patternUnits="userSpaceOnUse">
-          <rect width="16" height="16" fill="#431407" />
-          <polygon points="8,1 15,8 8,15 1,8" fill="#1C1917" stroke="#7C2D12" strokeWidth="0.8" />
-        </pattern>
       </defs>
 
-      {/* LEFT HALF: KHANEWAL VILLAGE ROOFTOP */}
-      <g clipPath="url(#splitKhanewalLeft)">
-        <TerracottaAtmosphericAura cx={260} cy={1180} rx={380} ry={250} id="khanewalSplitAura" />
+      {/* BACKGROUND VOLUMETRIC AURA */}
+      <rect x="0" y="860" width="1080" height="640" fill="url(#cyberScreenGlow)" opacity={0.85} />
 
-        {/* Distant Punjab Rooftops & Minarets */}
-        <g opacity={0.35} fill="#2D120B">
-          <rect x="40" y="1180" width="80" height="100" />
-          <polygon points="80,1130 65,1180 95,1180" />
-          <rect x="150" y="1200" width="110" height="80" />
-          <rect x="290" y="1170" width="95" height="110" />
-          <polygon points="338,1120 324,1170 352,1170" />
-        </g>
+      {/* =====================================================================
+          1. BACKGROUND FRAUD WEBSITE TERMINAL: LABELSBANK.COM (y: 875..1480)
+          ===================================================================== */}
+      <g transform="translate(60, 875)">
+        {/* Terminal Screen Outer Chassis */}
+        <rect
+          x="0"
+          y="0"
+          width="960"
+          height="580"
+          rx="12"
+          fill="#030E10"
+          stroke={isPayoff ? '#EF4444' : '#10B981'}
+          strokeWidth="3.5"
+        />
 
-        {/* Traditional Multi-Course Terracotta Red Brick Parapet Wall */}
-        <g transform="translate(0, 0)">
-          {/* Main Parapet Foundation */}
-          <rect x="30" y="1260" width="480" height="230" fill="#6B21A8" stroke="#4C1D95" opacity={0} />
-          <rect x="30" y="1260" width="480" height="230" fill="#5F1E0C" stroke="#3D1408" strokeWidth="3" />
-          {/* Stepped Parapet Coping Stones */}
-          <rect x="20" y="1248" width="500" height="14" fill="#7C2D12" stroke="#431407" strokeWidth="2" />
-          <rect x="25" y="1242" width="490" height="8" fill="#9A3412" />
+        {/* Top Browser Chrome Title Bar */}
+        <rect x="0" y="0" width="960" height="42" rx="12" fill="#061A19" stroke={isPayoff ? '#B91C1C' : '#047857'} strokeWidth="1.5" />
+        {/* macOS Window Controls */}
+        <circle cx="28" cy="21" r="6" fill="#EF4444" />
+        <circle cx="48" cy="21" r="6" fill="#F59E0B" />
+        <circle cx="68" cy="21" r="6" fill="#10B981" />
 
-          {/* Hand-Molded Brick Courses with Recessed Mortar Joints */}
-          {[1275, 1295, 1315, 1335, 1355, 1375, 1395, 1415, 1435, 1455, 1475].map((y, rowIdx) => (
-            <g key={y}>
-              <line x1="30" y1={y} x2="510" y2={y} stroke="#381308" strokeWidth="2" />
-              {Array.from({ length: 9 }).map((_, colIdx) => {
-                const bx = 30 + colIdx * 54 + (rowIdx % 2 === 0 ? 0 : 27);
-                return (
-                  <line key={colIdx} x1={bx} y1={y} x2={bx} y2={y + 20} stroke="#381308" strokeWidth="1.5" />
-                );
-              })}
-            </g>
-          ))}
+        {/* URL Bar Badge */}
+        <rect x="110" y="8" width="520" height="26" rx="6" fill="#011012" stroke="#064E3B" strokeWidth="1.2" />
+        <text x="125" y="25" fill="#34D399" fontSize="13" fontWeight="800" fontFamily="Montserrat" letterSpacing="0.05em">
+          🔒 https://labelsbank.com/admin // DARK WEB COUNTERFEIT FORGE
+        </text>
 
-          {/* Decorative Pierced Brick Jali Lattice Vent (Pinjra-Kari) */}
-          <rect x="80" y="1300" width="130" height="64" rx="4" fill="url(#jaliPatternScene1)" stroke="#852D16" strokeWidth="2.5" />
-          <rect x="84" y="1304" width="122" height="56" rx="2" fill="none" stroke="#B45309" strokeWidth="1" strokeDasharray="4 2" />
-        </g>
+        {/* Live Network Ping Badge */}
+        <rect x="650" y="8" width="290" height="26" rx="6" fill="#011012" stroke="#064E3B" strokeWidth="1.2" />
+        <text x="665" y="25" fill="#F59E0B" fontSize="12" fontWeight="800" fontFamily="Montserrat">
+          TOR V3 ➔ KHANEWAL TO US-EAST-1
+        </text>
 
-        {/* Industrial Water Tank on Angle-Iron Stanchion Tower */}
-        <g transform="translate(60, 1030)">
-          {/* Welded Angle-Iron Stanchion Legs with Cross Bracing */}
-          <line x1="20" y1="120" x2="20" y2="230" stroke="#3D1408" strokeWidth="5" />
-          <line x1="100" y1="120" x2="100" y2="230" stroke="#3D1408" strokeWidth="5" />
-          <line x1="20" y1="135" x2="100" y2="215" stroke="#431407" strokeWidth="3" />
-          <line x1="20" y1="215" x2="100" y2="135" stroke="#431407" strokeWidth="3" />
-          <line x1="16" y1="175" x2="104" y2="175" stroke="#3D1408" strokeWidth="4" />
-          {/* Iron Service Access Ladder */}
-          <line x1="108" y1="10" x2="108" y2="230" stroke="#78350F" strokeWidth="2.5" />
-          {[20, 45, 70, 95, 120, 150, 180, 210].map((ly) => (
-            <line key={ly} x1="100" y1={ly} x2="116" y2={ly} stroke="#78350F" strokeWidth="2" />
-          ))}
-          {/* Cylindrical Ribbed Tank Body */}
-          <rect x="10" y="10" width="100" height="115" rx="10" fill="#3A1E14" stroke="#7C2D12" strokeWidth="3" />
-          <path d="M 10 20 Q 60 5 110 20" fill="none" stroke="#9A3412" strokeWidth="3" />
-          <line x1="10" y1="50" x2="110" y2="50" stroke="#5F1E0C" strokeWidth="2.5" />
-          <line x1="10" y1="85" x2="110" y2="85" stroke="#5F1E0C" strokeWidth="2.5" />
-          {/* Top Domed Lid and Overflow Spout */}
-          <path d="M 25 10 Q 60 -8 95 10 Z" fill="#5F1E0C" stroke="#7C2D12" strokeWidth="2" />
-          <path d="M 15 25 L 0 25 L 0 45" fill="none" stroke="#78350F" strokeWidth="3" />
-        </g>
-
-        {/* Tangled Rooftop Utility Cables with Ceramic Spool Insulators */}
-        <g stroke="#18181B" fill="none">
-          <path d="M 0 940 Q 180 970 340 920" strokeWidth="3" />
-          <path d="M 0 965 Q 220 1010 420 950" strokeWidth="2" />
-          <path d="M 60 920 Q 240 985 480 910" strokeWidth="2.5" />
-          {/* Ceramic Spool Insulator Bracket */}
-          <rect x="335" y="910" width="10" height="24" rx="2" fill="#CBD5E1" stroke="#334155" strokeWidth="1.5" />
-          <line x1="340" y1="910" x2="340" y2="945" stroke="#0F172A" strokeWidth="3" />
-        </g>
-
-        {/* Seated Coder Silhouette (Faheem Akram in Tailored Kurta) */}
-        <g transform={`translate(${270 + drift * 0.25}, 1120)`}>
-          {/* Traditional Carved Punjabi Wooden Chair */}
-          <g stroke="#1E1714" strokeWidth="4" fill="none">
-            {/* Chair Legs and Cross Stretchers */}
-            <line x1="-42" y1="160" x2="-38" y2="70" />
-            <line x1="22" y1="160" x2="18" y2="70" />
-            <line x1="-40" y1="125" x2="20" y2="125" strokeWidth="3" />
-            {/* Spindle Backrest */}
-            <line x1="-38" y1="70" x2="-44" y2="-20" strokeWidth="5" />
-            <line x1="-30" y1="65" x2="-34" y2="-15" strokeWidth="2.5" />
-            <line x1="-22" y1="65" x2="-26" y2="-15" strokeWidth="2.5" />
-            {/* Top Carved Finial Header */}
-            <path d="M -50 -20 Q -35 -30 -20 -20" stroke="#3D291F" strokeWidth="6" strokeLinecap="round" />
-            {/* Woven Seat Plinth */}
-            <rect x="-46" y="65" width="72" height="14" rx="3" fill="#2E1F17" stroke="#4D3426" strokeWidth="2" />
-          </g>
-
-          {/* Realistic Human Anatomy: Torso, Kurta, Shalwar */}
-          {/* Lower Torso and Legs draped in Shalwar */}
-          <path
-            d="M -30 75
-               C -20 70, 10 70, 30 75
-               L 45 130
-               C 35 155, 10 160, -5 160
-               L -20 145
-               L -35 130 Z"
-            fill="#1E293B"
-            stroke="#0F172A"
-            strokeWidth="2.5"
-          />
-          {/* Main Torso in Tailored Cotton Kurta with Placket Line */}
-          <path
-            d="M -35 65
-               L -28 0
-               C -24 -20, -5 -28, 12 -24
-               C 26 -20, 32 0, 28 35
-               L 32 75
-               Z"
-            fill="#1E293B"
-            stroke="#0F172A"
-            strokeWidth="2.5"
-          />
-          {/* Nehru Mandarin Collar Accent */}
-          <path d="M -8 -26 Q 5 -30 18 -24" fill="none" stroke="#F59E0B" strokeWidth="2" />
-          {/* Button Placket Line down chest */}
-          <line x1="5" y1="-26" x2="8" y2="25" stroke="#334155" strokeWidth="2" strokeDasharray="3 4" />
-
-          {/* Anatomical Head in Profile (Groomed hair, nose, lips, neat chin beard) */}
-          <path
-            d="M 2 -30
-               C -4 -42, 6 -60, 20 -60
-               C 32 -60, 38 -48, 36 -38
-               C 42 -36, 44 -30, 42 -25
-               C 44 -23, 46 -18, 43 -14
-               C 38 -8, 32 -6, 24 -6
-               C 16 -6, 12 -12, 10 -22
-               Z"
-            fill="#0F172A"
-          />
-          {/* Neat Trimmed Jawline Beard Path */}
-          <path
-            d="M 34 -25
-               C 44 -20, 42 -10, 36 -6
-               C 28 -2, 18 -6, 14 -12
-               Z"
-            fill="#090D12"
-          />
-          {/* Ear Contour */}
-          <ellipse cx="20" cy="-30" rx="4" ry="6" fill="#1E293B" />
-
-          {/* Articulated Arm & Typing Hands */}
-          {/* Upper Arm extending down */}
-          <path
-            d="M 16 -12
-               C 24 10, 32 25, 40 40
-               L 75 42
-               L 88 48
-               L 70 54
-               L 26 48
-               Z"
-            fill="#1E293B"
-            stroke="#0F172A"
-            strokeWidth="2"
-          />
-          {/* Articulated Fingers poised over keyboard */}
-          <line x1="75" y1="42" x2="86" y2="44" stroke="#F8FAFC" strokeWidth="2" strokeLinecap="round" />
-          <line x1="77" y1="46" x2="88" y2="48" stroke="#F8FAFC" strokeWidth="2" strokeLinecap="round" />
-          <line x1="75" y1="50" x2="84" y2="52" stroke="#F8FAFC" strokeWidth="2" strokeLinecap="round" />
-
-          {/* ThinkPad Wedge Laptop on Desk Surface */}
-          <g transform="translate(60, 15)">
-            {/* Wooden Side Table / Lap Support */}
-            <rect x="0" y="38" width="65" height="110" fill="#29180E" stroke="#1E1714" strokeWidth="2" />
-            <line x1="0" y1="38" x2="65" y2="38" stroke="#5A3E2D" strokeWidth="3" />
-            {/* Laptop Base Deck */}
-            <polygon points="12,38 60,38 56,32 16,32" fill="#18181B" stroke="#0F172A" strokeWidth="1.5" />
-            <line x1="28" y1="35" x2="48" y2="35" stroke="#334155" strokeWidth="2" />
-            {/* Red TrackPoint Dot */}
-            <circle cx="36" cy="34" r="1.5" fill="#EF4444" />
-            {/* Laptop Display Screen (Angled toward Coder) */}
-            <polygon points="18,32 54,32 46,-12 18,-12" fill="#090D12" stroke="#27272A" strokeWidth="2" />
-            {/* Glowing Amber Display Screen */}
-            <polygon
-              points="20,30 52,30 44,-10 20,-10"
-              fill="#F59E0B"
-              opacity={0.85 + screenFlicker * 0.03}
-            />
-            {/* Faint Cyber Green Code Lines on Screen */}
-            {[ -5, 2, 9, 16, 23 ].map((ly, i) => (
-              <line key={i} x1="23" y1={ly} x2={ly % 2 === 0 ? "46" : "38"} y2={ly} stroke="#FEF08A" strokeWidth="1.2" opacity={0.7} />
-            ))}
-            {/* Directional Volumetric Light Cone Casting on Coder's Face and Torso */}
-            <polygon
-              points="20,-8 50,-8 -5,-25 -15,10"
-              fill="url(#screenLightBeam)"
-              opacity={0.8}
-            />
-          </g>
-
-          {/* Traditional Brass Chai Glass on Wooden Stool */}
-          <g transform="translate(135, 95)">
-            <rect x="-8" y="25" width="28" height="40" fill="#29180E" stroke="#1E1714" strokeWidth="2" />
-            {/* Fluted Chai Glass */}
-            <polygon points="-4,25 20,25 18,5 0,5" fill="#D97706" stroke="#92400E" strokeWidth="1.5" />
-            <polygon points="-2,23 18,23 16,9 2,9" fill="#F59E0B" opacity={0.7} />
-            {/* Rising Curved Steam Wisps */}
-            <path
-              d={`M 6 4 Q ${8 + steamWave} -8 6 -20 Q ${4 - steamWave} -32 8 -44`}
-              fill="none"
-              stroke="#FEF3C7"
-              strokeWidth="2"
-              strokeLinecap="round"
-              opacity={0.65}
-            />
-            <path
-              d={`M 12 4 Q ${14 - steamWave} -6 12 -16 Q ${10 + steamWave} -26 14 -36`}
-              fill="none"
-              stroke="#FEF3C7"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              opacity={0.45}
-            />
-          </g>
-        </g>
-      </g>
-
-      {/* RIGHT HALF: NEOCLASSICAL USPS SORTING CENTER & LOGISTICS HUB */}
-      <g clipPath="url(#splitUspsRight)">
-        <FederalNavyAura cx={800} cy={1180} rx={420} ry={260} id="uspsSplitAura" />
-
-        {/* Industrial Federal Warehouse Interior Grid */}
-        <g stroke="#1E293B" strokeWidth="1.5" opacity={0.4}>
-          {[900, 960, 1020, 1080, 1140, 1200, 1260].map((y) => (
-            <line key={y} x1="560" y1={y} x2="1080" y2={y} />
-          ))}
-          {[640, 740, 840, 940, 1040].map((x) => (
-            <line key={x} x1={x} y1="880" x2={x} y2="1490" />
-          ))}
-        </g>
-
-        {/* Neoclassical Architecture: Fluted Pilasters & Architrave */}
-        <g transform="translate(0, 0)">
-          {/* Fluted Limestone Pilaster Column (Right Margin) */}
-          <rect x="990" y="870" width="70" height="580" fill="#0F172A" stroke="#1E3A8A" strokeWidth="3" />
-          {[1005, 1020, 1035, 1050].map((px) => (
-            <line key={px} x1={px} y1="910" x2={px} y2="1410" stroke="#334155" strokeWidth="2.5" />
-          ))}
-          <rect x="980" y="870" width="90" height="25" fill="#1E293B" stroke="#38BDF8" strokeWidth="2" />
-          <rect x="980" y="1410" width="90" height="35" fill="#1E293B" stroke="#38BDF8" strokeWidth="2" />
-
-          {/* Loading Dock Roll-Up Ribbed Steel Shutter Door */}
-          <rect x="580" y="940" width="390" height="320" fill="#0A0E17" stroke="#1E3A8A" strokeWidth="3" />
-          {[965, 990, 1015, 1040, 1065, 1090, 1115, 1140, 1165, 1190, 1215, 1240].map((sy) => (
-            <line key={sy} x1="580" y1={sy} x2="970" y2={sy} stroke="#1E3A8A" strokeWidth="2" strokeDasharray="14 6" />
-          ))}
-          {/* Bottom Kickplate with 45° Yellow & Black Hazard Safety Warning Stripes */}
-          <g transform="translate(580, 1238)">
-            <rect x="0" y="0" width="390" height="24" fill="#EAB308" stroke="#CA8A04" strokeWidth="2" />
-            {Array.from({ length: 14 }).map((_, i) => (
-              <polygon key={i} points={`${i * 30},0 ${i * 30 + 16},0 ${i * 30 - 4},24 ${i * 30 - 20},24`} fill="#090D12" />
-            ))}
-          </g>
-        </g>
-
-        {/* Industrial Conveyor System with Cylindrical Rollers */}
-        <g transform="translate(580, 1370)">
-          <rect x="0" y="0" width="480" height="30" fill="#0F172A" stroke="#334155" strokeWidth="3" />
+        {/* CRT Horizontal Scanlines Overlay across Monitor */}
+        <g opacity="0.18" stroke="#10B981" strokeWidth="1.2">
           {Array.from({ length: 18 }).map((_, i) => (
-            <circle key={i} cx={15 + i * 26} cy="15" r="9" fill="#1E293B" stroke="#64748B" strokeWidth="2" />
-          ))}
-          {/* Conveyor Support Legs */}
-          <line x1="80" y1="30" x2="80" y2="120" stroke="#334155" strokeWidth="6" />
-          <line x1="220" y1="30" x2="220" y2="120" stroke="#334155" strokeWidth="6" />
-          <line x1="360" y1="30" x2="360" y2="120" stroke="#334155" strokeWidth="6" />
-        </g>
-
-        {/* Heavy Wire-Mesh Rolling Parcel Hamper Cart (Cage Hamper) */}
-        <g transform="translate(640, 1180)">
-          {/* Cage Frame */}
-          <rect x="0" y="0" width="220" height="170" rx="4" fill="#0A0F1D" stroke="#38BDF8" strokeWidth="3" opacity={0.85} />
-          {/* Wire Mesh Grid */}
-          {[30, 60, 90, 120, 150, 180].map((gx) => (
-            <line key={gx} x1={gx} y1="0" x2={gx} y2="170" stroke="#1E3A8A" strokeWidth="1.5" />
-          ))}
-          {[30, 60, 90, 120, 150].map((gy) => (
-            <line key={gy} x1="0" y1={gy} x2="220" y2={gy} stroke="#1E3A8A" strokeWidth="1.5" />
-          ))}
-          {/* Diagonal Corner Bracing */}
-          <line x1="0" y1="0" x2="220" y2="170" stroke="#1E3A8A" strokeWidth="1.5" strokeDasharray="6 4" />
-          <line x1="0" y1="170" x2="220" y2="0" stroke="#1E3A8A" strokeWidth="1.5" strokeDasharray="6 4" />
-          {/* Heavy Caster Wheels */}
-          <rect x="18" y="170" width="22" height="24" rx="4" fill="#0F172A" stroke="#64748B" strokeWidth="2" />
-          <circle cx="29" cy="188" r="8" fill="#334155" />
-          <rect x="180" y="170" width="22" height="24" rx="4" fill="#0F172A" stroke="#64748B" strokeWidth="2" />
-          <circle cx="191" cy="188" r="8" fill="#334155" />
-
-          {/* Stacks of Priority Mail Boxes inside the Cage */}
-          {[
-            { x: 15, y: 70, w: 90, h: 55, rot: -3 },
-            { x: 105, y: 55, w: 95, h: 65, rot: 4 },
-            { x: 25, y: 15, w: 85, h: 50, rot: 2 },
-            { x: 108, y: 10, w: 88, h: 46, rot: -5 },
-          ].map((box, i) => (
-            <g key={i} transform={`translate(${box.x}, ${box.y}) rotate(${box.rot})`}>
-              <rect x="0" y="0" width={box.w} height={box.h} fill="#D97706" stroke="#92400E" strokeWidth="2" rx="2" />
-              {/* Federal Navy & Red Priority Mail Chevron Stripes */}
-              <rect x="0" y={box.h * 0.28} width={box.w} height={box.h * 0.22} fill="#0A2540" />
-              <rect x="0" y={box.h * 0.52} width={box.w} height={box.h * 0.12} fill="#DC2626" />
-              {/* White Address Label & Barcode */}
-              <rect x={box.w * 0.12} y={box.h * 0.68} width={box.w * 0.6} height={box.h * 0.24} fill="#F8FAFC" rx="1" />
-              <line x1={box.w * 0.18} y1={box.h * 0.78} x2={box.w * 0.65} y2={box.h * 0.78} stroke="#0F172A" strokeWidth="2" strokeDasharray="2 1" />
-            </g>
+            <line key={i} x1="10" y1={55 + i * 28 + crtScan * 0.4} x2="950" y2={55 + i * 28 + crtScan * 0.4} />
           ))}
         </g>
 
-        {/* Priority Mail Stacks on Loading Dock Platform */}
-        <g transform="translate(860, 1260)">
-          <rect x="0" y="0" width="110" height="75" fill="#D97706" stroke="#92400E" strokeWidth="2.5" rx="3" />
-          <rect x="0" y="20" width="110" height="18" fill="#0A2540" />
-          <rect x="0" y="40" width="110" height="9" fill="#DC2626" />
-          <rect x="15" y="52" width="75" height="18" fill="#F8FAFC" rx="2" />
-          <line x1="22" y1="61" x2="80" y2="61" stroke="#0F172A" strokeWidth="2.5" strokeDasharray="3 2" />
-        </g>
+        {/* Terminal Split: Left Pane (IMb Barcode Forgery Engine) */}
+        <g transform="translate(25, 60)">
+          <rect x="0" y="0" width="440" height="480" rx="8" fill="#041618" stroke="#0E483C" strokeWidth="2" />
+          <text x="20" y="32" fill="#38BDF8" fontSize="14" fontWeight="900" fontFamily="Montserrat" letterSpacing="0.08em">
+            [+] USPS PRIORITY FORGERY ENGINE
+          </text>
+          <text x="20" y="55" fill="#94A3B8" fontSize="11" fontWeight="700" fontFamily="Montserrat">
+            ALGORITHM: CRC-16 COLLISION / ZERO_FEE ROUTE
+          </text>
 
-        {/* Authentic Multi-Layered USPS Eagle Emblem Insignia */}
-        <g transform="translate(810, 1020)">
-          {/* Emblem Circular Bezel & Ring */}
-          <circle cx="0" cy="0" r="105" fill="#0A1E3F" stroke="#38BDF8" strokeWidth="5" />
-          <circle cx="0" cy="0" r="95" fill="#071329" stroke="#1E3A8A" strokeWidth="2.5" strokeDasharray="6 4" />
-          {/* Arc of 9 White 5-Pointed Stars */}
-          {Array.from({ length: 9 }).map((_, i) => {
-            const angle = -140 + i * 35;
-            const rad = (angle * Math.PI) / 180;
+          {/* Cascading Counterfeit Postage Barcodes */}
+          {[0, 1, 2, 3, 4].map((row) => {
+            const rowY = 80 + row * 65;
             return (
-              <circle key={i} cx={Math.cos(rad) * 82} cy={Math.sin(rad) * 82} r="4" fill="#F8FAFC" />
+              <g key={row} transform={`translate(20, ${rowY})`}>
+                <rect x="0" y="0" width="400" height="52" rx="4" fill="#020B0D" stroke="#047857" strokeWidth="1.2" />
+                {/* 25 IMb Barcode Bars */}
+                {Array.from({ length: 28 }).map((_, b) => {
+                  const barState = (row * 7 + b * 3) % 4;
+                  const y1 = barState === 0 ? 12 : barState === 1 ? 4 : barState === 2 ? 14 : 4;
+                  const y2 = barState === 0 ? 38 : barState === 1 ? 38 : barState === 2 ? 46 : 46;
+                  return (
+                    <line
+                      key={b}
+                      x1={18 + b * 13}
+                      y1={y1}
+                      x2={18 + b * 13}
+                      y2={y2}
+                      stroke="#4ADE80"
+                      strokeWidth="3.2"
+                    />
+                  );
+                })}
+              </g>
             );
           })}
-          {/* Stylized Sharp USPS Beveled Eagle Head */}
-          <path
-            d="M -55 -25
-               C -25 -75, 45 -65, 75 -15
-               L 48 8 L 72 26 L 15 48 L -25 22 L -18 2 Z"
-            fill="#F8FAFC"
-            stroke="#0284C7"
+
+          {/* Active Generation Metrics */}
+          <text x="20" y="440" fill="#4ADE80" fontSize="13" fontWeight="800" fontFamily="Montserrat">
+            TOTAL LABELS MINTED: 5,240,000+
+          </text>
+          <text x="20" y="465" fill="#38BDF8" fontSize="12" fontWeight="700" fontFamily="Montserrat">
+            PRICE CHARGED: $2.00 / LABEL (90% OFF USPS)
+          </text>
+        </g>
+
+        {/* Terminal Split: Right Pane (Massive Loot Extraction Counter) */}
+        <g transform="translate(495, 60)">
+          <rect
+            x="0"
+            y="0"
+            width="440"
+            height="480"
+            rx="8"
+            fill="#041618"
+            stroke={isPayoff ? '#DC2626' : '#0E483C'}
             strokeWidth="2"
           />
-          {/* Red Beveled Eagle Wing Accent */}
-          <path d="M 18 -12 L 62 -12 L 36 12 Z" fill="#DC2626" />
-          {/* Modern Bevel Shadow Plinth */}
-          <path d="M -20 32 L 48 32 L 36 52 L -32 52 Z" fill="#38BDF8" opacity={0.9} />
-          {/* Sharp Beak Accent */}
-          <polygon points="75,-15 90,-4 72,8" fill="#F59E0B" />
+          <text x="20" y="32" fill={isPayoff ? '#F87171' : '#FBBF24'} fontSize="14" fontWeight="900" fontFamily="Montserrat" letterSpacing="0.08em">
+            {isPayoff ? '⚠️ ALERT: $126M EXTRACTED FROM AMERICA' : '[LIVE] U.S. POSTAL REVENUE DRAIN'}
+          </text>
+
+          {/* Massive Glowing Dollar Counter Card */}
+          <g transform="translate(20, 55)">
+            <rect
+              x="0"
+              y="0"
+              width="400"
+              height="110"
+              rx="8"
+              fill={isPayoff ? '#450A0A' : '#022C22'}
+              stroke={isPayoff ? '#EF4444' : '#10B981'}
+              strokeWidth="2.5"
+            />
+            <text x="20" y="34" fill="#94A3B8" fontSize="12" fontWeight="800" fontFamily="Montserrat">
+              TOTAL POSTAL SYSTEM LOSS
+            </text>
+            <text
+              x="20"
+              y="85"
+              fill={isPayoff ? '#FCA5A5' : '#4ADE80'}
+              fontSize="44"
+              fontWeight="900"
+              fontFamily="Montserrat"
+              letterSpacing="-0.02em"
+            >
+              ${displayedMillions}M
+            </text>
+          </g>
+
+          {/* Payout Routing Rows to Pakistani Family Accounts */}
+          <g transform="translate(20, 185)">
+            <text x="0" y="15" fill="#94A3B8" fontSize="12" fontWeight="800" fontFamily="Montserrat">
+              LAUNDERED TO 16 FAMILY ACCOUNTS:
+            </text>
+            {[
+              { bank: 'HBL MULTAN (BROTHER_01)', amt: '$14.2M', cleared: true },
+              { bank: 'UBL LAHORE (WIFE_DOM_01)', amt: '$11.8M', cleared: true },
+              { bank: 'MEEZAN BANK (SISTER_01)', amt: '$9.5M', cleared: true },
+              { bank: 'DUBAI REAL ESTATE ESCROW', amt: '$38.4M', cleared: true },
+            ].map((acc, idx) => (
+              <g key={idx} transform={`translate(0, ${30 + idx * 46})`}>
+                <rect x="0" y="0" width="400" height="38" rx="4" fill="#01181B" stroke="#064E3B" strokeWidth="1.2" />
+                <text x="14" y="24" fill="#F8FAFC" fontSize="12" fontWeight="800" fontFamily="Montserrat">
+                  {acc.bank}
+                </text>
+                <text x="385" y="24" textAnchor="end" fill="#FBBF24" fontSize="13" fontWeight="900" fontFamily="Montserrat">
+                  {acc.amt}
+                </text>
+              </g>
+            ))}
+          </g>
+
+          {/* Flashing Cyber Breached Banner on Payoff */}
+          {isPayoff && (
+            <g transform="translate(20, 420)">
+              <rect x="0" y="0" width="400" height="42" rx="4" fill="#7F1D1D" stroke="#EF4444" strokeWidth="2" />
+              <text x="200" y="27" textAnchor="middle" fill="#FEF2F2" fontSize="14" fontWeight="900" fontFamily="Montserrat" letterSpacing="0.08em">
+                FEDERAL GRAND JURY CHARGES FILED
+              </text>
+            </g>
+          )}
         </g>
       </g>
 
-      {/* DIAGONAL DIVISION SEAM: HIGH-VOLTAGE CONDUIT CABLE */}
-      <line
-        x1="480"
-        y1="860"
-        x2="620"
-        y2="1490"
-        stroke={isPayoff ? 'url(#voltageSeam)' : '#334155'}
-        strokeWidth={isPayoff ? 7 : 4}
-      />
-      {/* High-Voltage Conduit Fixtures */}
-      {[920, 1050, 1180, 1310, 1440].map((fy, i) => {
-        const fx = 480 + ((fy - 860) / (1490 - 860)) * (620 - 480);
-        return (
-          <g key={i} transform={`translate(${fx}, ${fy})`}>
-            <circle cx="0" cy="0" r="7" fill="#0F172A" stroke={isPayoff ? '#38BDF8' : '#64748B'} strokeWidth="2.5" />
-            <circle cx="0" cy="0" r="3" fill={isPayoff ? '#F8FAFC' : '#94A3B8'} />
-          </g>
-        );
-      })}
+      {/* =====================================================================
+          2. BACKGROUND TIER BANKNOTE BILLS (Behind Hacker)
+          ===================================================================== */}
+      {banknoteDefs
+        .filter((b) => b.tier === 'bg')
+        .map((bill) => {
+          const y = 840 + ((bill.startY + frame * bill.speed) % 650);
+          const rot = bill.baseRot + frame * bill.rotSpeed;
+          const skew = Math.sin(frame * 0.12 + bill.id) * 16;
+          return (
+            <BanknoteBill
+              key={bill.id}
+              x={bill.baseX}
+              y={y}
+              width={90}
+              height={44}
+              rotateDeg={rot}
+              skewDeg={skew}
+              scale={bill.scale}
+              opacity={0.65}
+              tier="bg"
+            />
+          );
+        })}
 
-      {/* PHASE 2 PAYOFF: HIGH-VOLTAGE ARC EXPLOSION & RED IMB BARCODE COLLISION */}
+      {/* =====================================================================
+          3. THE EVIL HACKER (FAHEEM AKRAM) LAUGHING INTO CAMERA (x: 540)
+          ===================================================================== */}
+      <g transform={`translate(540, ${1120 + laughBounce}) rotate(${headTilt})`}>
+        {/* Backlight Halo behind Head */}
+        <circle cx="0" cy="-40" r="160" fill="url(#cyberScreenGlow)" opacity={0.6} />
+
+        {/* Broad Athletic Shoulders & Dark Tech Hoodie / Nehru Jacket */}
+        <g transform={`translate(0, ${shoulderJolt})`}>
+          {/* Main Body Silhouette */}
+          <path
+            d="M -240 370
+               C -230 250, -180 140, -110 95
+               C -80 75, -50 70, 0 70
+               C 50 70, 80 75, 110 95
+               C 180 140, 230 250, 240 370
+               L -240 370 Z"
+            fill="#090D12"
+            stroke="#1E293B"
+            strokeWidth="3.5"
+          />
+
+          {/* Left Emerald Rim Highlight on Shoulder & Lapel */}
+          <path
+            d="M -235 370
+               C -225 255, -178 145, -108 100
+               C -80 80, -50 75, 0 75
+               L -8 95
+               C -55 98, -85 105, -112 122
+               C -175 160, -215 260, -225 370 Z"
+            fill="url(#hackerLeftEmeraldRim)"
+          />
+
+          {/* Right Red/Gold Rim Highlight on Shoulder & Lapel */}
+          <path
+            d="M 235 370
+               C 225 255, 178 145, 108 100
+               C 80 80, 50 75, 0 75
+               L 8 95
+               C 55 98, 85 105, 112 122
+               C 175 160, 215 260, 225 370 Z"
+            fill="url(#hackerRightRedRim)"
+          />
+
+          {/* Center Front Zipper Line & Collar Stand */}
+          <line x1="0" y1="72" x2="0" y2="370" stroke="#334155" strokeWidth="3" />
+          <line x1="0" y1="72" x2="0" y2="370" stroke="#0F172A" strokeWidth="1.5" strokeDasharray="6 4" />
+          {/* Chrome Metal Zipper Pull */}
+          <rect x="-4" y="110" width="8" height="16" rx="2" fill="#E2E8F0" stroke="#64748B" strokeWidth="1" />
+        </g>
+
+        {/* Neck & Muscular Trapezius Tendons */}
+        <path
+          d="M -45 80 L -42 20 Q 0 15 42 20 L 45 80 Z"
+          fill="#111827"
+          stroke="#1F2937"
+          strokeWidth="2"
+        />
+        {/* Left & Right Neck Shadow Creases */}
+        <path d="M -30 25 L -20 75" stroke="#064E3B" strokeWidth="2.5" opacity={0.6} />
+        <path d="M 30 25 L 20 75" stroke="#7F1D1D" strokeWidth="2.5" opacity={0.6} />
+
+        {/* Head & Facial Anatomy (Frontal Perspective looking straight at camera) */}
+        <g transform="translate(0, -35)">
+          {/* Outer Hood Contour Framing the Head */}
+          <path
+            d="M -115 40
+               C -125 -60, -90 -150, 0 -155
+               C 90 -155, 125 -60, 115 40
+               C 105 85, 75 105, 55 105
+               L -55 105
+               C -75 105, -105 85, -115 40 Z"
+            fill="#05080E"
+            stroke="#1E293B"
+            strokeWidth="3.5"
+          />
+
+          {/* Inner Face Silhouette (Skin & Jaw Tone) */}
+          <path
+            d="M -68 -50
+               C -72 -10, -65 30, -50 68
+               C -35 100, -18 108, 0 110
+               C 18 108, 35 100, 50 68
+               C 65 30, 72 -10, 68 -50
+               C 60 -105, -60 -105, -68 -50 Z"
+            fill="#1E293B"
+            stroke="#334155"
+            strokeWidth="2"
+          />
+
+          {/* Styled Pakistani Trimmed Dark Beard & Mustache */}
+          <path
+            d="M -54 22
+               C -58 48, -45 92, -26 106
+               C -14 114, 0 116, 0 116
+               C 0 116, 14 114, 26 106
+               C 45 92, 58 48, 54 22
+               C 48 35, 36 45, 20 48
+               C 10 50, -10 50, -20 48
+               C -36 45, -48 35, -54 22 Z"
+            fill="#05080E"
+            stroke="#0B0F19"
+            strokeWidth="2.5"
+          />
+
+          {/* Pointed Goatee & Chin Cleft */}
+          <polygon points="-8,106 8,106 0,116" fill="#020408" />
+
+          {/* Styled Mustache curling over Laughing Mouth */}
+          <path
+            d="M -38 12
+               Q -18 5 0 12
+               Q 18 5 38 12
+               Q 22 22 0 18
+               Q -22 22 -38 12 Z"
+            fill="#05080E"
+            stroke="#020408"
+            strokeWidth="1.5"
+          />
+
+          {/* ==============================================================
+              SINISTER LAUGHING MOUTH (Wide Open Grin, Teeth, Tongue)
+              ============================================================== */}
+          <g transform="translate(0, 32)">
+            {/* Outer Mouth Cavity (Dark Crimson) */}
+            <path
+              d={`M -44 0
+                 Q 0 ${mouthOpen * 1.5} 44 0
+                 Q 0 ${-mouthOpen * 0.4} -44 0 Z`}
+              fill="#450A0A"
+              stroke="#7F1D1D"
+              strokeWidth="2.5"
+            />
+
+            {/* Upper Teeth Row (Crisp White/Ivory Arch with Incisors) */}
+            <path
+              d={`M -36 0
+                 Q 0 ${mouthOpen * 0.45} 36 0
+                 L 32 -3
+                 Q 0 -6 -32 -3 Z`}
+              fill="#F8FAFC"
+              stroke="#CBD5E1"
+              strokeWidth="1"
+            />
+            {/* Tooth Division Lines */}
+            {[-22, -11, 0, 11, 22].map((tx) => (
+              <line key={tx} x1={tx} y1="-3" x2={tx} y2="4" stroke="#94A3B8" strokeWidth="1" />
+            ))}
+
+            {/* Lower Teeth Arch (Visible in Wide Maniacal Laugh) */}
+            {mouthOpen > 12 && (
+              <path
+                d={`M -28 ${mouthOpen * 1.05}
+                   Q 0 ${mouthOpen * 0.65} 28 ${mouthOpen * 1.05}
+                   Q 0 ${mouthOpen * 1.3} -28 ${mouthOpen * 1.05} Z`}
+                fill="#F1F5F9"
+                stroke="#94A3B8"
+                strokeWidth="0.8"
+              />
+            )}
+
+            {/* Arched Tongue */}
+            <path
+              d={`M -22 ${mouthOpen * 0.8}
+                 Q 0 ${mouthOpen * 0.4} 22 ${mouthOpen * 0.8}
+                 Q 0 ${mouthOpen * 1.25} -22 ${mouthOpen * 0.8} Z`}
+              fill="#BE123C"
+              stroke="#9F1239"
+              strokeWidth="1"
+            />
+
+            {/* Nasolabial Laugh Creases on Cheeks */}
+            <path
+              d="M -48 -14 Q -55 5 -42 22"
+              fill="none"
+              stroke="#090D14"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 48 -14 Q 55 5 42 22"
+              fill="none"
+              stroke="#090D14"
+              strokeWidth="3.5"
+              strokeLinecap="round"
+            />
+          </g>
+
+          {/* Sculpted Nose with Bridge & Nostrils */}
+          <path
+            d="M 0 -35 L -3 10 Q 0 16 6 12 L 0 -35 Z"
+            fill="#0F172A"
+            stroke="#1E293B"
+            strokeWidth="1.5"
+          />
+          {/* Nostril Flanges */}
+          <path d="M -12 12 Q -7 6 0 12 Q 7 6 12 12" fill="none" stroke="#06090E" strokeWidth="2.5" />
+
+          {/* ==============================================================
+              PREDATORY EYES LOOKING STRAIGHT OUT AT THE CAMERA
+              ============================================================== */}
+          {/* Left Eye (Viewer's Left) */}
+          <g transform="translate(-28, -12)">
+            {/* Arched Wicked Eyebrow tilted down */}
+            <path
+              d="M -24 -14 Q -5 -22 18 -10"
+              fill="none"
+              stroke="#05080E"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+            {/* Sclera & Eyelids */}
+            <path
+              d="M -20 0 Q 0 -9 18 0 Q 0 9 -20 0 Z"
+              fill="#F8FAFC"
+              stroke="#090D14"
+              strokeWidth="2.2"
+            />
+            {/* Iris & Pupil staring dead center */}
+            <circle cx="0" cy="0" r="6" fill="#022C22" stroke="#10B981" strokeWidth="1.5" />
+            <circle cx="0" cy="0" r="3.2" fill="#04070B" />
+            {/* Terminal Reflection Glint in Pupil */}
+            <circle cx="-1.5" cy="-1.5" r="1.5" fill="#34D399" />
+          </g>
+
+          {/* Right Eye (Viewer's Right) */}
+          <g transform="translate(28, -12)">
+            {/* Arched Wicked Eyebrow tilted down */}
+            <path
+              d="M -18 -10 Q 5 -22 24 -14"
+              fill="none"
+              stroke="#05080E"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+            {/* Sclera & Eyelids */}
+            <path
+              d="M -18 0 Q 0 -9 20 0 Q 0 9 -18 0 Z"
+              fill="#F8FAFC"
+              stroke="#090D14"
+              strokeWidth="2.2"
+            />
+            {/* Iris & Pupil staring dead center */}
+            <circle cx="0" cy="0" r="6" fill="#450A0A" stroke="#EF4444" strokeWidth="1.5" />
+            <circle cx="0" cy="0" r="3.2" fill="#04070B" />
+            {/* Terminal Reflection Glint in Pupil */}
+            <circle cx="1.5" cy="-1.5" r="1.5" fill="#FCA5A5" />
+          </g>
+
+          {/* Modern Coder Glasses with Cyan/Red Specular Glint */}
+          <g>
+            {/* Left Hexagonal Lens Rim */}
+            <polygon
+              points="-46,-22 -10,-22 -6,8 -42,8"
+              fill="none"
+              stroke="#38BDF8"
+              strokeWidth="2"
+              opacity={0.85}
+            />
+            {/* Right Hexagonal Lens Rim */}
+            <polygon
+              points="10,-22 46,-22 42,8 6,8"
+              fill="none"
+              stroke="#F87171"
+              strokeWidth="2"
+              opacity={0.85}
+            />
+            {/* Nose Bridge Wire */}
+            <line x1="-10" y1="-12" x2="10" y2="-12" stroke="#94A3B8" strokeWidth="2.5" />
+            {/* Diagonal Glare Reflection Streaks across Lenses */}
+            <line x1="-40" y1="5" x2="-16" y2="-20" stroke="#FFFFFF" strokeWidth="1.8" opacity={0.65} />
+            <line x1="16" y1="5" x2="40" y2="-20" stroke="#FFFFFF" strokeWidth="1.8" opacity={0.65} />
+          </g>
+        </g>
+      </g>
+
+      {/* =====================================================================
+          4. MIDGROUND TIER BANKNOTE BILLS (Fluttering around Hacker)
+          ===================================================================== */}
+      {banknoteDefs
+        .filter((b) => b.tier === 'mg')
+        .map((bill) => {
+          const y = 840 + ((bill.startY + frame * bill.speed) % 650);
+          const rot = bill.baseRot + frame * bill.rotSpeed;
+          const skew = Math.sin(frame * 0.15 + bill.id) * 20;
+          return (
+            <BanknoteBill
+              key={bill.id}
+              x={bill.baseX}
+              y={y}
+              width={120}
+              height={58}
+              rotateDeg={rot}
+              skewDeg={skew}
+              scale={bill.scale}
+              opacity={0.92}
+              tier="mg"
+            />
+          );
+        })}
+
+      {/* =====================================================================
+          5. FOREGROUND TIER BANKNOTE BILLS (Large, Tumbling in front of camera)
+          ===================================================================== */}
+      {banknoteDefs
+        .filter((b) => b.tier === 'fg')
+        .map((bill) => {
+          const y = 830 + ((bill.startY + frame * bill.speed) % 660);
+          const rot = bill.baseRot + frame * bill.rotSpeed;
+          const skew = Math.sin(frame * 0.18 + bill.id) * 24;
+          return (
+            <BanknoteBill
+              key={bill.id}
+              x={bill.baseX}
+              y={y}
+              width={160}
+              height={78}
+              rotateDeg={rot}
+              skewDeg={skew}
+              scale={bill.scale}
+              opacity={1}
+              tier="fg"
+            />
+          );
+        })}
+
+      {/* =====================================================================
+          6. PHASE 2 PAYOFF: EXPLOSIVE SHOCKWAVE & BLIZZARD OF CASH (Hit Frame 35)
+          ===================================================================== */}
       {isPayoff && (
         <g>
-          {/* Primary High-Voltage Lightning Fractures */}
-          <path
-            d="M 480 860 L 512 950 L 488 1010 L 565 1130 L 532 1210 L 605 1370 L 620 1490"
+          {/* Expanding Shockwave Ionization Rings */}
+          <circle
+            cx="540"
+            cy="1180"
+            r={50 + fracturePulse * 280}
             fill="none"
-            stroke="#F8FAFC"
-            strokeWidth="5"
-            opacity={fracturePulse}
+            stroke="#EF4444"
+            strokeWidth={6 * (1 - fracturePulse * 0.8)}
+            opacity={1 - fracturePulse * 0.8}
           />
-          <path
-            d="M 512 950 L 450 990 M 565 1130 L 640 1090 M 532 1210 L 470 1260"
+          <circle
+            cx="540"
+            cy="1180"
+            r={30 + fracturePulse * 380}
             fill="none"
-            stroke="#38BDF8"
-            strokeWidth="3.5"
-            opacity={fracturePulse * 0.9}
+            stroke="#FDE047"
+            strokeWidth={4 * (1 - fracturePulse * 0.8)}
+            opacity={0.8 - fracturePulse * 0.6}
           />
 
-          {/* Emitted Flying Spark Particles */}
-          {Array.from({ length: 12 }).map((_, i) => {
-            const sparkX = 540 + Math.cos(i * 0.52) * (30 + pseudoRandom(i * 17) * 70);
-            const sparkY = 1180 + Math.sin(i * 0.52) * (30 + pseudoRandom(i * 17) * 70);
+          {/* Flying Golden Spark Particle Bursts */}
+          {Array.from({ length: 16 }).map((_, i) => {
+            const angle = (i / 16) * Math.PI * 2;
+            const dist = 60 + fracturePulse * 220;
+            const sx = 540 + Math.cos(angle) * dist;
+            const sy = 1180 + Math.sin(angle) * dist;
             return (
               <circle
                 key={i}
-                cx={sparkX}
-                cy={sparkY}
-                r={2 + pseudoRandom(i * 11) * 2.5}
-                fill={i % 2 === 0 ? '#FDE047' : '#38BDF8'}
-                opacity={fracturePulse}
+                cx={sx}
+                cy={sy}
+                r={3 + (i % 3) * 1.5}
+                fill={i % 2 === 0 ? '#FDE047' : '#EF4444'}
+                opacity={1 - fracturePulse * 0.7}
               />
             );
           })}
-
-          {/* Red IMb Barcode Collision Reticle Badge */}
-          <g transform="translate(540, 1180)" opacity={fracturePulse}>
-            <rect x="-140" y="-36" width="280" height="72" fill="#7F1D1D" stroke="#EF4444" strokeWidth="3.5" rx="8" />
-            {/* Authentic 4-State IMb Barcode Sequence Indicator */}
-            {[-110, -95, -80, -65, -50, -35, -20, -5, 10, 25, 40, 55, 70, 85, 100, 115].map((bx, idx) => {
-              const barType = idx % 4;
-              const y1 = barType === 0 ? -20 : barType === 1 ? -24 : barType === 2 ? -12 : -24;
-              const y2 = barType === 0 ? 20 : barType === 1 ? 12 : barType === 2 ? 24 : 24;
-              return (
-                <line
-                  key={idx}
-                  x1={bx}
-                  y1={y1}
-                  x2={bx}
-                  y2={y2}
-                  stroke="#F8FAFC"
-                  strokeWidth={idx % 3 === 0 ? 4 : 2.5}
-                />
-              );
-            })}
-          </g>
         </g>
       )}
     </svg>
   );
 };
+
 
 // ============================================================================
 // SCENE 02: RUPEES PARCEL TALLY BOARD (CROWD_TALLY, Payoff: Frame 35)

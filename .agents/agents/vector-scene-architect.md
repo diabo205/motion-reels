@@ -37,12 +37,11 @@ Use the components the spec lists and inspect `projects/<slug>/plates/TracedPlat
 Subjects are never one flat color, including in dark and grim scenes.
 - Build subjects from authentic materials and at least three value tiers (backdrop or sky, midground, rim-lit foreground subject).
 - Use atmospheric backlight (a radial horizon glow, warm firelight or a cold polar band) and a rim light to separate subject from background.
-- Grim scenes use at most one colored accent prop (a crimson sash, a gold epaulet, a cyan visor reflection).
-- Photo-cutout bobbleheads, cartoon stickers and caricature limbs are not used in serious history.
-- For lighthearted, bureaucratic or non-grim vignettes, use a die-cut `<CutoutPuppet />` rig from `src/library/tactile/CutoutPuppet.tsx` with an archival head and a thick `#F4EFE6` border.
+- For named historical figures and focal characters, use a die-cut `<CutoutPuppet headSrc="..." />` rig from `src/components/CutoutPuppet.tsx` with an archival photo head (prepared via `python scripts/crop_puppet_head.py --input <plate> --output <head.png>`) and a `#F4EFE6` tactile die-cut cardstock border.
+- For anonymous rank-and-file soldiers, crowds, and background silhouettes, use authentic multi-tiered vector contours with distinctive props and atmospheric backlighting.
 
-### Photos are references only (`PHOTO_PASTE_LINT`)
-Never place `<img>`, `<Image>` or `<image>` in vector components. Construct parametric SVG from the plate.
+### Photos are references or puppet heads only (`PHOTO_PASTE_LINT`)
+Never place raw unmasked `<img>`, `<Image>` or `<image>` cards in vector scene backgrounds or props. Archival photos are strictly used either as die-cut portrait heads inside `<CutoutPuppet headSrc="..." />` or as reference blueprints to craft parametric 2D SVG vector art.
 
 ### Six-layer anatomy for explosions, impacts and dynamic silhouettes
 Use `src/kit/OrganicExplosion.tsx` or equivalent layering:

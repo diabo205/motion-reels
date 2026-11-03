@@ -19,6 +19,7 @@ yt-dlp.exe
 *.exe
 
 # Scratch files & temporary logs
+scratch/
 scratch_*
 *.tmp
 *.log

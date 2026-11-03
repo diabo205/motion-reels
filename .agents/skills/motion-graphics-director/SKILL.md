@@ -66,7 +66,7 @@ The engine renders parametric 2D SVG in Remotion. Scenes use the seven archetype
 - Every scene follows two phases: setup motion, then a payoff hit with a secondary state change on the transient frame. Presets are in `.agents/skills/build-historical-reel/rules/motion.md`.
 - Camera is one preset per scene from the same file. Crash zooms and snap zooms are not used.
 - Prefer components in `src/library/` (see `src/library/INDEX.md`). The spec lists which components each scene uses, so the build step composes instead of redrawing.
-- Die-cut `CutoutPuppet` rigs suit bureaucratic, satirical or non-grim vignettes.
+- Die-cut `CutoutPuppet` rigs (`src/components/CutoutPuppet.tsx`) are the primary character standard for named historical figures, leaders, suspects, and focal actors. Pair an archival portrait head (prepared via `scripts/crop_puppet_head.py`) with a `#F4EFE6` cardstock border and period uniform/attire. Reserve pure silhouettes for anonymous rank-and-file soldiers and crowd tallies.
 - For other documentary styles (3D narrative, CAD explainer, archival collage) see `reference/other-styles.md`.
 
 ## 6. Sound
