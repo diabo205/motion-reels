@@ -1,0 +1,58 @@
+{
+  "projectSlug": "burari-deaths-2018",
+  "title": "THE BURARI DEATHS",
+  "updatedAt": "2026-11-04T08:40:51.848Z",
+  "engine": {
+    "remotionVersion": "^4.0.218",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "maxFramesCeiling": 3500
+  },
+  "timeline": {
+    "file": "src/timelines/burari_deaths_2018.json",
+    "sha256": "ae19e11bb9d24136c580e91fa8ef9bd9fa11da1a24e6fcaee55c1028ace433b1",
+    "sceneCount": 26,
+    "totalFrames": 2756,
+    "durationSec": 45.93
+  },
+  "audio": {
+    "bgmFile": "audio/bgm_burari.mp3",
+    "sha256": "e320ef42d27c7e2d013cb17294a9e10f74890d50ce2625d01c49b800c2e09ada",
+    "bpm": 136,
+    "bgmLicense": {
+      "source": "YouTube Audio (https://youtu.be/ffVnV3p0t4A)",
+      "licenseType": "CREATIVE_COMMONS",
+      "clearanceId": "CLR-BURARI-DEATHS-2018",
+      "attribution": "Tiny Tim - Tip Toe Thru' The Tulips With Me (Insidious Theme)"
+    },
+    "loudnessSpec": {
+      "targetIntegratedLufs": -14,
+      "targetTruePeakDbtp": -1,
+      "impactDuckingDb": -7.5
+    }
+  },
+  "typographyAndVisuals": {
+    "fontFamily": "Montserrat",
+    "vendoredFonts": {
+      "Montserrat": {
+        "weight": 900,
+        "version": "v31",
+        "localFile": "public/fonts/Montserrat-Black-v31.woff2",
+        "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+        "upstreamUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+      },
+      "Inter": {
+        "weight": 800,
+        "version": "v20",
+        "localFile": "public/fonts/Inter-ExtraBold-v20.woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+        "upstreamUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      }
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivityMode": "SOMBER_MEMORIAL"
+  }
+}

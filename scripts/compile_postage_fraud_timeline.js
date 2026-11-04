@@ -74,7 +74,7 @@ const atmosphericPrompts = {
 };
 
 const transientTypes = [
-  'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID',
+  'BASS_DROP', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID', 'TEMPO_GRID',
   'CYMBAL_CRASH', 'BASS_DROP', 'BASS_DROP', 'BASS_DROP', 'CYMBAL_CRASH', 'BASS_DROP',
   'CYMBAL_CRASH', 'BASS_DROP', 'BASS_DROP', 'BASS_DROP', 'CYMBAL_CRASH', 'BASS_DROP',
   'CYMBAL_CRASH', 'CYMBAL_CRASH', 'BASS_DROP', 'BASS_DROP', 'BASS_DROP', 'CYMBAL_CRASH',
@@ -89,14 +89,14 @@ const timeline = {
     fps: 60,
     width: 1080,
     height: 1920,
-    bpm: 103.36,
+    bpm: 99.38,
     bgmFile: 'audio/bgm_postage_fraud.mp3',
     bgmStartFrom: 0,
     bgmLicense: {
-      source: 'YouTube Audio (https://youtu.be/Td9DymMNuo0)',
+      source: 'YouTube Audio (https://youtu.be/qGlwgPb8E7I)',
       licenseType: 'CREATIVE_COMMONS',
       clearanceId: 'CLR-POSTAGE-FRAUD-2026',
-      attribution: 'SKORN - Slowed (VUKEINE)'
+      attribution: 'ACIDO III (Super Slowed) - UdieNnx & Mc Denny'
     },
     palette: 'CONFLICT_CRISIS',
     particleEmitter: 'DUST',
@@ -112,7 +112,7 @@ const timeline = {
   },
   scenes: specs.map((spec, idx) => {
     const meta = sceneAssetMap[spec.scene];
-    const sfxOffset = spec.scene === 1 ? 0 : spec.phase2.payoffFrameOffset;
+    const sfxOffset = spec.phase2.payoffFrameOffset;
     const sceneObj = {
       sceneId: meta.id,
       startFrame: spec.startFrame,

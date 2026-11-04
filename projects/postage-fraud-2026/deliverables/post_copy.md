@@ -16,7 +16,6 @@ Historical Sources & Fact-Check Citations:
 • Operation caused over $126 million in losses to the U.S. Postal Service — Source: U.S. DOJ / BBC News (Oct 2026) (https://www.bbc.com/news/articles/ckdd8m1z1z3yo)
 • LabelsBank sold over 5.1 million counterfeit labels to more than 5,200 customers — Source: U.S. DOJ Indictment (Oct 2026) (https://www.bbc.com/news/articles/ckdd8m1z1z3yo)
 • USPIS offered a $100,000 reward following a Florida federal grand jury indictment — Source: USPIS / U.S. DOJ (Oct 2026) (https://www.bbc.com/news/articles/ckdd8m1z1z3yo)
-• 16 ACCOUNTS FROZEN HIS FAMILY NAMED — Source: THE $126M POSTAGE FRAUD Archival Record
 • Pakistan's NCCIA tracked down and arrested Faheem Akram in Lahore — Source: BBC News / Dawn (Oct 2026) (https://www.bbc.com/news/articles/ckdd8m1z1z3yo)
 
 #History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Postage #Fraud #2026

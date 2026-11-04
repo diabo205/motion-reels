@@ -10,7 +10,7 @@ const { exportProjectDeliverables } = require('./export_deliverables');
 const { lintFramework } = require('./lint_framework');
 const { validateProjectPlates } = require('./plate_validator');
 const { analyzeProjectTelemetry } = require('./telemetry_priors');
-const { lintPathComplexity } = require('./lint_path_complexity');
+const { lintCelShading } = require('./lint_cel_shading');
 
 function computeExpectedBeatPayoffOffset(scene, beatGrid, bpm = 120) {
   const [minW, maxW] = constants.PAYOFF_BEAT_WINDOW_FRAMES || [18, 45];
@@ -439,9 +439,9 @@ async function runAudit(options = {}) {
     );
   }
 
-  // 2.6. VECTOR PATH COMPLEXITY & VISUAL ENTROPY AUDIT (PATH_COMPLEXITY_LINT)
-  console.log('\n--- Vector Path Complexity & Visual Entropy Audit (PATH_COMPLEXITY_LINT) ---');
-  let complexityViolations = lintPathComplexity(projectInfo, timeline);
+  // 2.6. CEL SHADING & MULTI-TONE MATERIAL AUDIT (CEL_SHADING_LINT)
+  console.log('\n--- Cel Shading & Multi-Tone Material Audit (CEL_SHADING_LINT) ---');
+  let complexityViolations = lintCelShading(projectInfo, timeline);
   if (targetScene !== undefined) {
     const sIdx = targetScene - 1;
     const tgtSceneId = timeline.scenes[sIdx]?.sceneId;
@@ -454,11 +454,11 @@ async function runAudit(options = {}) {
   const complexityWarnings = complexityViolations.filter((v) => v.severity === 'WARNING');
   if (complexityErrors.length === 0) {
     console.log(
-      `✅ PASS: PATH_COMPLEXITY_LINT verified (all scenes satisfy SVG node and path complexity thresholds).`
+      `✅ PASS: CEL_SHADING_LINT verified (all scenes satisfy multi-tone cel-shading & material depth).`
     );
   } else {
     console.error(
-      `❌ VIOLATIONS: ${complexityErrors.length} scene(s) failed PATH_COMPLEXITY_LINT with crude/simplified geometry!`
+      `❌ VIOLATIONS: ${complexityErrors.length} scene(s) failed CEL_SHADING_LINT with flat/monochrome voids!`
     );
     for (const err of complexityErrors) {
       console.error(`   - [${err.sceneId}] ${err.fix || err.actual}`);

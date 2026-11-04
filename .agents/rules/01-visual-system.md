@@ -41,25 +41,27 @@
 
 ---
 
-## 4. Character Standard & Zero Direct Photo Pasting (`PHOTO_PASTE_LINT`)
+## 4. Multi-Tone Cel Shading & Material Depth (`CEL_SHADING_LINT`)
 - **Named Historical Figures & Key Human Actors (Priority)**:
   - For all named figures, commanders, suspects, and leaders, prioritize articulated die-cut `<CutoutPuppet headSrc="..." />` rigs.
   - Pair an authentic archival portrait head (prepared with a tactile `#F4EFE6` die-cut cardstock border via `scripts/crop_puppet_head.py`) with a textured, period-accurate uniform/attire body from `src/components/CutoutPuppet.tsx`.
 - **Anonymous Crowds, Soldiers & Tally Units**:
   - Depict anonymous rank-and-file figures as multi-tier silhouettes with authentic uniform accents (collar tabs, epaulets, helmets).
   - Separate silhouettes from dark backgrounds using **atmospheric backlighting** (soft radial horizon glow, warm firelight, or dawn gradients).
-- **Zero Raw Photographs on Screen (`PHOTO_PASTE_LINT`)**: Archival photos are strictly used either as die-cut portrait heads inside `<CutoutPuppet headSrc="..." />` or as reference blueprints to craft custom SVG artwork; raw unmasked `<img>`, `<Image>`, and `<image>` tags inside vector scene components are automatically flagged by `audit_and_validate.js`.
-- **Visual Density & Complexity Floor (`PATH_COMPLEXITY_LINT`)**:
-  - Every scene vector component must satisfy:
-    1. Minimum $\ge 35$ SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: $\ge 50$ nodes).
-    2. Minimum $\ge 5$ distinct `<path>` elements and $\ge 35$ path command vertices.
-    3. Basic geometric primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed $70\%$ of visual geometry without detailing paths.
-    4. Minimum 1 volumetric gradient/lighting aura.
-  - Crude geometric simplification (a rectangle for a desk, circle for head, 3 lines for fan) triggers a fatal exit code in `audit_and_validate.js`.
-- **Automated Plate Tracing Pipeline (`scripts/trace_plate_contours.js`)**:
-  - Run `node scripts/trace_plate_contours.js --project <slug> --all` to automatically extract authentic photographic vector silhouettes directly from ingested plates into `projects/<slug>/plates/TracedPlateAssets.tsx` and `traced_plate_assets.json`.
-- **Mandatory Reference Ingestion & 6-Layer Vector Anatomy Standard**:
-  Never draft mechanical assets, structural fractures, vehicles, or explosions from training memory alone. Before coding, reference plates MUST be ingested into `assets/plates/` or `projects/<slug>/plates/` and translated into the 6-layer vector hierarchy:
+- **Multi-Tone Cel Shading Standard**:
+  - Every focal subject must be built with **at least 3 distinct tonal values**:
+    1. *Layer 1: Shadow / Base Tone* (ambient occlusion / shaded under-facet).
+    2. *Layer 2: Midtone / Material Body* (true local color of historical materials: wool, stone, steel, brass).
+    3. *Layer 3: Highlight / Core Rim Tone* (lightward-facing plane or specular rim).
+    4. *Layer 4: Accent / Details* (dials, insignia, rivets, seams).
+  - Compose using `src/kit/CelShading.tsx` (`HISTORICAL_CEL_PALETTES`, `<CelShadedBody />`, `<CelShadedFacet />`, `<CelRimFilter />`).
+  - **Rejection of Flat Monochrome Voids**: Any focal subject exceeding $85\%$ flat dark fill without midtone/highlight facets triggers a fatal `CEL_SHADING_LINT` error.
+- **Visual Reference Blueprint Protocol (Zero Direct Image Pasting / Zero Potrace Tracing)**:
+  - Potrace auto-tracing is eliminated. Archival photographs must never be auto-traced into noisy, 1-bit binary silhouette blobs.
+  - Ingested photographic plates in `projects/<slug>/plates/` serve strictly as **Visual Reference Blueprints** to inform vector drafting (studying silhouette landmarks, structural paneling, material colors, and proportions) and as sources for articulated die-cut portrait heads (`<CutoutPuppet headSrc="..." />`).
+  - Raw unmasked `<img>`, `<Image>`, and `<image>` tags inside vector scene components are strictly prohibited (`PHOTO_PASTE_LINT`).
+- **6-Layer Vector Anatomy Standard**:
+  Translate reference blueprints into the 6-layer vector hierarchy:
   1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
   2. *Layer 2: Supersonic / Dynamic Atmospheric Disturbances* (Mach shockwave rings, ionization rims, speed lines).
   3. *Layer 3: Acute Energy Spikes / Directional Vectors* (sharp multi-color flame tongues, structural stress lines).

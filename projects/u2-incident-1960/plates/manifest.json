@@ -1,0 +1,129 @@
+{
+  "projectSlug": "u2-incident-1960",
+  "lastUpdated": "2026-11-04T09:01:24.980Z",
+  "plates": {
+    "soviet_radar_p30.jpg": {
+      "filename": "soviet_radar_p30.jpg",
+      "title": "File:NYSA P-30 B Radar.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/NYSA_P-30_B_Radar.jpg/960px-NYSA_P-30_B_Radar.jpg",
+      "format": "JPEG",
+      "sizeBytes": 199310,
+      "description": "Soviet P-30 radar antenna lattice and radar acquisition grid",
+      "verified": true
+    },
+    "s75_dvina_missile.jpg": {
+      "filename": "s75_dvina_missile.jpg",
+      "title": "File:Soviet C-75 (SA-2) Surface to air missile Air Defence Museum, Near Moscow.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Soviet_C-75_%28SA-2%29_Surface_to_air_missile_Air_Defence_Museum%2C_Near_Moscow.jpg/960px-Soviet_C-75_%28SA-2%29_Surface_to_air_missile_Air_Defence_Museum%2C_Near_Moscow.jpg",
+      "format": "JPEG",
+      "sizeBytes": 283252,
+      "description": "Soviet S-75 Dvina high-altitude surface-to-air missile on launcher rail",
+      "verified": true
+    },
+    "u2_wreckage_sverdlovsk.jpg": {
+      "filename": "u2_wreckage_sverdlovsk.jpg",
+      "title": "File:Wreckage of Lockheed U-2C (56-6693) (38901816671).jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Wreckage_of_Lockheed_U-2C_%2856-6693%29_%2838901816671%29.jpg/960px-Wreckage_of_Lockheed_U-2C_%2856-6693%29_%2838901816671%29.jpg",
+      "format": "JPEG",
+      "sizeBytes": 202457,
+      "description": "Downed Lockheed U-2C wreckage recovered near Sverdlovsk",
+      "verified": true
+    },
+    "nasa_flight_map_turkey.jpg": {
+      "filename": "nasa_flight_map_turkey.jpg",
+      "title": "File:OperationGrandSlam1960.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/OperationGrandSlam1960.jpg/960px-OperationGrandSlam1960.jpg",
+      "format": "JPEG",
+      "sizeBytes": 212041,
+      "description": "Official Operation Grand Slam trans-Soviet flight corridor and Adana Turkey staging corridor",
+      "verified": true
+    },
+    "fake_nasa_u2_weather.jpg": {
+      "filename": "fake_nasa_u2_weather.jpg",
+      "title": "File:U-2 Spy Plane With Fictitious NASA Markings - GPN-2000-000112.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/U-2_Spy_Plane_With_Fictitious_NASA_Markings_-_GPN-2000-000112.jpg/960px-U-2_Spy_Plane_With_Fictitious_NASA_Markings_-_GPN-2000-000112.jpg",
+      "format": "JPEG",
+      "sizeBytes": 127268,
+      "description": "Lockheed U-2 painted with fictitious civilian NASA weather markings at Edwards AFB",
+      "verified": true
+    },
+    "eisenhower_portrait.jpg": {
+      "filename": "eisenhower_portrait.jpg",
+      "format": "JPEG",
+      "sizeBytes": 95467,
+      "description": "Official portrait of President Dwight D. Eisenhower",
+      "verified": true
+    },
+    "kremlin_moscow_red.jpg": {
+      "filename": "kremlin_moscow_red.jpg",
+      "title": "File:Moscow. Kremlin. Spasskaya Tower P5152468 2600.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Moscow._Kremlin._Spasskaya_Tower_P5152468_2600.jpg/960px-Moscow._Kremlin._Spasskaya_Tower_P5152468_2600.jpg",
+      "format": "JPEG",
+      "sizeBytes": 192223,
+      "description": "Moscow Kremlin Spasskaya Tower and red fortress wall silhouette",
+      "verified": true
+    },
+    "khrushchev_official_full.jpg": {
+      "filename": "khrushchev_official_full.jpg",
+      "format": "JPEG",
+      "sizeBytes": 1739130,
+      "description": "Nikita Khrushchev address at Supreme Soviet rostrum in Grand Kremlin Palace",
+      "verified": true
+    },
+    "khrushchev_portrait.jpg": {
+      "filename": "khrushchev_portrait.jpg",
+      "format": "JPEG",
+      "sizeBytes": 1039012,
+      "description": "Nikita Khrushchev portrait with recovered U-2 espionage dossier",
+      "verified": true
+    },
+    "powers_portrait.jpg": {
+      "filename": "powers_portrait.jpg",
+      "format": "JPEG",
+      "sizeBytes": 237082,
+      "description": "Francis Gary Powers official arrest photograph by Soviet authorities",
+      "verified": true
+    },
+    "powers_pressure_suit.jpg": {
+      "filename": "powers_pressure_suit.jpg",
+      "title": "File:RIAN archive 35172 Powers Wears Special Pressure Suit.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/RIAN_archive_35172_Powers_Wears_Special_Pressure_Suit.jpg/960px-RIAN_archive_35172_Powers_Wears_Special_Pressure_Suit.jpg",
+      "format": "JPEG",
+      "sizeBytes": 167382,
+      "description": "Gary Powers high-altitude pressurized flight suit and survival kit",
+      "verified": true
+    },
+    "powers_soviet_trial.jpg": {
+      "filename": "powers_soviet_trial.jpg",
+      "title": "File:RIAN archive 35174 American Spy Pilot Francis Gary Powers.jpg",
+      "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/RIAN_archive_35174_American_Spy_Pilot_Francis_Gary_Powers.jpg/960px-RIAN_archive_35174_American_Spy_Pilot_Francis_Gary_Powers.jpg",
+      "format": "JPEG",
+      "sizeBytes": 332137,
+      "description": "Francis Gary Powers on trial before the Military Collegium of the Supreme Court of the USSR",
+      "verified": true
+    },
+    "rudolf_abel.jpg": {
+      "filename": "rudolf_abel.jpg",
+      "format": "JPEG",
+      "sizeBytes": 137666,
+      "description": "Soviet intelligence officer Rudolf Abel exchanged for Powers on the Glienicke Bridge",
+      "verified": true
+    }
+  },
+  "scenePlateMap": {
+    "SCENE_01_SOVIET_RADAR_LOCK": "soviet_radar_p30.jpg",
+    "SCENE_02_S75_DVINA_MISSILE_STREAK": "s75_dvina_missile.jpg",
+    "SCENE_03_MISSILE_DETONATION_CABIN_LOSS": "u2_wreckage_sverdlovsk.jpg",
+    "SCENE_04_NASA_FABRICATED_FLIGHT_MAP": "nasa_flight_map_turkey.jpg",
+    "SCENE_05_OFFICIAL_STATEMENT_STAMP_SLAM": "fake_nasa_u2_weather.jpg",
+    "SCENE_06_EISENHOWER_DENIAL_CUTOUT": "eisenhower_portrait.jpg",
+    "SCENE_07_MOSCOW_FIVE_DAY_SILENCE": "kremlin_moscow_red.jpg",
+    "SCENE_08_KHRUSHCHEV_STEPS_TO_PODIUM": "khrushchev_portrait.jpg",
+    "SCENE_09_DOSSIER_SLAMS_THE_TRAP": "khrushchev_official_full.jpg",
+    "SCENE_10_CHECKMATE_PILOT_ALIVE": "powers_portrait.jpg",
+    "SCENE_11_CHECKMATE_PLANE_WRECKAGE": "u2_wreckage_sverdlovsk.jpg",
+    "SCENE_12_CHECKMATE_INTACT_HYCON_FILM": "powers_soviet_trial.jpg",
+    "SCENE_13_CHECKMATE_POISON_PIN_UNUSED": "powers_pressure_suit.jpg",
+    "SCENE_14_EPILOGUE_COLD_WAR_HUMILIATION": "rudolf_abel.jpg"
+  }
+}

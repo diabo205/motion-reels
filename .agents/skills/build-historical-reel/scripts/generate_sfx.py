@@ -202,6 +202,28 @@ def make_metal_clang():
     return samples
 
 
+def make_memorial_wind():
+    dur = 1.4
+    n = int(SAMPLE_RATE * dur)
+    samples = []
+    b0 = b1 = b2 = 0.0
+    for i in range(n):
+        t = i / SAMPLE_RATE
+        white = random.random() * 2.0 - 1.0
+        b0 = 0.99765 * b0 + white * 0.0990460
+        b1 = 0.96300 * b1 + white * 0.2965164
+        b2 = 0.57000 * b2 + white * 1.0526913
+        pink = b0 + b1 + b2 + white * 0.1848
+        if t < 0.35:
+            env = 0.5 * (1.0 - math.cos(math.pi * t / 0.35))
+        else:
+            env = math.exp(-(t - 0.35) * 2.8)
+        sub = math.sin(2 * math.pi * 55.0 * t) * 0.35
+        sig = (pink * 0.25 + sub) * env * 0.65
+        samples.append(max(-1.0, min(1.0, sig)))
+    return samples
+
+
 def main():
     sfx_map = {
         "sub_boom.wav": make_sub_boom(),
@@ -214,6 +236,7 @@ def main():
         "paper_rip.wav": make_paper_rip(),
         "counter_roll.wav": make_counter_roll(),
         "metal_clang.wav": make_metal_clang(),
+        "memorial_wind.wav": make_memorial_wind(),
     }
     for target_dir in [os.path.join("assets", "audio", "sfx"), os.path.join("public", "audio", "sfx")]:
         for fname, pcm in sfx_map.items():

@@ -1,19 +1,19 @@
 {
   "projectSlug": "carton-de-wiart-1916",
   "title": "THE UNKILLABLE SOLDIER",
-  "timestamp": "2026-11-03T16:13:54.379Z",
-  "passed": true,
+  "timestamp": "2026-11-04T07:02:26.555Z",
+  "passed": false,
   "totalFrames": 3443,
   "durationSec": 57.38,
   "maxFramesCeiling": 3500,
   "sceneCount": 25,
-  "transientEngine": "librosa",
+  "transientEngine": "ffmpeg_wave_fallback",
   "transientStats": {
-    "totalTransients": 343,
-    "bassDropCount": 65,
-    "cymbalCrashCount": 63,
-    "energyPeakCount": 63,
-    "onsetCount": 152
+    "totalTransients": 586,
+    "bassDropCount": 0,
+    "cymbalCrashCount": 0,
+    "energyPeakCount": 0,
+    "onsetCount": 586
   },
   "telemetryAnalysis": {
     "projectSlug": "carton-de-wiart-1916",
@@ -300,7 +300,7 @@
       }
     ]
   },
-  "errorCount": 0,
+  "errorCount": 3,
   "warningCount": 2,
   "motionChecks": [],
   "violations": [
@@ -321,6 +321,33 @@
       "expected": "Observation notes must exist at projects/carton-de-wiart-1916/plates/notes.json with >= 3 items in 'observed' per plate",
       "actual": "plates/notes.json missing",
       "fix": "MANDATORY_REFERENCE_PLATE_LINT: Reference plate observation notes missing at projects/carton-de-wiart-1916/plates/notes.json. Fix: Create plates/notes.json documenting at least 3 visual observations per plate."
+    },
+    {
+      "sceneId": "SCENE_04_SOMALILAND_FORTRESS_MAP",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'SOMALILAND_EXPEDITION_MAP_VECTOR' has 15 nodes, 5 paths, and 28 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_04_SOMALILAND_FORTRESS_MAP [SOMALILAND_EXPEDITION_MAP_VECTOR] is overly simplified / clip-art (15 nodes, 5 paths, 28 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_15_SPEEDING_TRAIN_LEAP",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
+      "actual": "Component 'ARMOURED_TRAIN_HIGH_SPEED_LEAP' is 92% basic primitives with only 9 path(s)",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_15_SPEEDING_TRAIN_LEAP [ARMOURED_TRAIN_HIGH_SPEED_LEAP] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'SUNDERLAND_FLYING_BOAT_FJORD' has 6 nodes, 0 paths, and 3 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_17_SUNDERLAND_FLYING_BOAT_TRANSIT [SUNDERLAND_FLYING_BOAT_FJORD] is overly simplified / clip-art (6 nodes, 0 paths, 3 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
     }
   ]
 }

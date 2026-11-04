@@ -1,0 +1,1376 @@
+{
+  "$schema": "./timeline.schema.json",
+  "meta": {
+    "title": "THE BURARI DEATHS",
+    "flagEmoji": "🇮🇳",
+    "fps": 60,
+    "width": 1080,
+    "height": 1920,
+    "bpm": 136,
+    "bgmFile": "audio/bgm_burari.mp3",
+    "bgmStartFrom": 0,
+    "bgmLicense": {
+      "source": "YouTube Audio (https://youtu.be/ffVnV3p0t4A)",
+      "licenseType": "CREATIVE_COMMONS",
+      "clearanceId": "CLR-BURARI-DEATHS-2018",
+      "attribution": "Tiny Tim - Tip Toe Thru' The Tulips With Me (Insidious Theme)"
+    },
+    "palette": "CONFLICT_CRISIS",
+    "particleEmitter": "ASH",
+    "fontFamily": "Montserrat",
+    "styleMode": "DOCUMENTARY_SANS",
+    "safeZoneProfile": "CONSERVATIVE_UNION",
+    "sensitivity": "SOMBER_MEMORIAL",
+    "loopSeamless": true,
+    "ctaConfig": {
+      "text": "FOLLOW FOR HISTORICAL DOCUMENTARIES",
+      "subtext": "THE BURARI HOUSE OF SECRETS"
+    }
+  },
+  "scenes": [
+    {
+      "sceneId": "01_burarihousefacadefracture",
+      "startFrame": 0,
+      "durationFrames": 96,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "DELHI • 1 JULY 2018",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Eleven members of the Chundawat family found dead in their Burari residence on 1 July 2018",
+        "source": "Delhi Police Charge Sheet / The Hindu",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 38,
+      "textLayers": [
+        {
+          "text": "BURARI, JULY 2018",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN BODIES FOUND",
+          "triggerFrameOffset": 38,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#881337",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "BurariHouseFacadeFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic dawn sky gradient (#881337 to #1C1917) layered with subtle cardstock grain. (2) Midground: Narrow Sant Nagar brick facade with iron balconies and dense overhead wiring clusters. (3) Foreground: High-contrast architectural fracture revealing the dark interior ceiling where 11 silhouettes hang in eerie stillness."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 36
+        }
+      ]
+    },
+    {
+      "sceneId": "02_neighbourshutteredshopsplit",
+      "startFrame": 96,
+      "durationFrames": 114,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "7:00 AM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.55
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "THE MORNING ROUTINE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "THE SHOP WAS SHUT",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E293B",
+          "#0F172A"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "NeighbourShutteredShopSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cool morning felt indigo canvas (#1E293B to #0F172A). (2) Midground: Split perspective between the silent grocery storefront and the dark open wooden stairway leading upstairs. (3) Foreground: Silhouetted neighbour gazing up in unease, rimmed by cold morning light."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "03_flashlightcorridorhero",
+      "startFrame": 210,
+      "durationFrames": 108,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE FIRST WITNESS",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "A NEIGHBOUR WALKS UP",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "UNIMAGINABLE HORROR",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "FlashlightCorridorHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany hallway wood paneling (#451A03 to #1C1917). (2) Midground: Atmospheric dust motes suspended in a stark white volumetric flashlight cone. (3) Foreground: Hand grasping the banister in shock as the flashlight illuminates the suspended bodies."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "04_santnagartacticalmap",
+      "startFrame": 318,
+      "durationFrames": 108,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "NORTH DELHI",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "POLICE CORDON STREET",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SANT NAGAR SEALED",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "delhi_burari_locator_map.png",
+        "svgForegroundAsset": "SantNagarTacticalMap",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical slate-navy blueprint canvas (#0F172A to #1E3A8A) with coordinate lines. (2) Midground: Vector contours of the Yamuna River and North Delhi highways. (3) Foreground: Concentric radar rings locking onto Burari with pulsing red emergency status rings."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "05_threegenerationstallyboard",
+      "startFrame": 426,
+      "durationFrames": 106,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "THE CHUNDAWAT FAMILY",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The dead included grandmother Narayani Devi (80), her sons, daughters, and two 15-year-old grandsons",
+        "source": "Delhi Police FSL Autopsy Report",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "THREE GENERATIONS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN FAMILY MEMBERS",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#18181B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "indian_family_portrait.jpg",
+        "svgForegroundAsset": "ThreeGenerationsTallyBoard",
+        "counterConfig": {
+          "label": "FAMILY MEMBERS LOST",
+          "startValue": 1,
+          "endValue": 11
+        },
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Pitch-black memorial felt substrate (#18181B to #090D12). (2) Midground: Row of 11 distinct family silhouettes ranging from grandmother to teenage boys. (3) Foreground: Tactile brass-rimmed tally board rolling to 11 with soft golden floor candle reflections."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "06_priyankaengagementhero",
+      "startFrame": 532,
+      "durationFrames": 105,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "17 JUNE 2018",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Priyanka's engagement was celebrated with 200 guests just 14 days before the tragedy",
+        "source": "The Hindu / Indian Express",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "JUST TWO WEEKS EARLIER",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "A JOYFUL ENGAGEMENT",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B45309",
+          "#451A03"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "referencePlate": "priyanka_marigold_engagement.jpg",
+        "svgForegroundAsset": "PriyankaEngagementHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Vibrant golden sunburst paper rays (#B45309 to #451A03) celebrating life and future. (2) Midground: Festive flower garlands and decorative paper bunting. (3) Foreground: Rim-lit silhouette of Priyanka holding ceremonial flower petals, highlighting the utter absence of prior outward despair."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "07_bindingsandcottonfracture",
+      "startFrame": 637,
+      "durationFrames": 103,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "FORENSIC FINDINGS",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
+      "textLayers": [
+        {
+          "text": "CRIME SCENE HORRORS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "EYES AND EARS SEALED",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#7F1D1D",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "BindingsAndCottonFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Crimson crisis shadow (#7F1D1D to #1C1917) textured with dark grain. (2) Midground: Structural cross-section of bound wrists with smooth unresisting ties. (3) Foreground: Graphic fracture illustrating the ritualistic blindfolding and cotton ear plugs."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "08_elevenpipeswallsplit",
+      "startFrame": 740,
+      "durationFrames": 107,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "THE EXTERIOR WALL",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 37,
+      "textLayers": [
+        {
+          "text": "ON THE REAR FACADE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN STRANGE PIPES",
+          "triggerFrameOffset": 37,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "eleven_pvc_pipes_wall.jpg",
+        "svgForegroundAsset": "ElevenPipesWallSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dusty terracotta Delhi evening sky (#9A3412 to #1C1917). (2) Midground: Texture of exposed red brick masonry with mortar seams. (3) Foreground: Exactly 11 white PVC pipes protruding into the empty lot, matching the count and ages of the victims."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 35
+        }
+      ]
+    },
+    {
+      "sceneId": "09_mediafrenzyquotecard",
+      "startFrame": 847,
+      "durationFrames": 106,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "NATIONAL HEADLINES",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "MEDIA CONSPIRACIES",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "OCCULT MASS MURDER",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#450A0A",
+          "#0F172A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "forensic_autopsy_dossier.jpg",
+        "svgForegroundAsset": "MediaFrenzyQuoteCard",
+        "quoteAttribution": "TELEVISION NEWS CHYRON, 2 JULY 2018",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: High-contrast crimson-to-navy broadcast grid (#450A0A to #0F172A). (2) Midground: Silhouetted media microphones and camera flashes outside the house. (3) Foreground: Tactile news card displaying the sensational early theories of occult cults."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "10_prayerroomshrinehero",
+      "startFrame": 953,
+      "durationFrames": 106,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE PRAYER ROOM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "IN THE PUJA ROOM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN DIARIES FOUND",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PrayerRoomShrineHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Rich sandalwood wood grain (#78350F to #1C1917) illuminated by flickering fire. (2) Midground: Traditional Hindu puja mandir with brass bell and framed ancestor photograph. (3) Foreground: Stack of 11 handwritten registers, unlocking the true psychological reality."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "11_patriarchmemorialcard",
+      "startFrame": 1059,
+      "durationFrames": 111,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE TURNING POINT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The death of patriarch Bhopal Singh in 2007 plunged his youngest son Lalit into profound grief",
+        "source": "Delhi Police Investigation Dossier",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 39,
+      "textLayers": [
+        {
+          "text": "PATRIARCH BHOPAL SINGH",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "PASSED AWAY IN 2007",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PatriarchMemorialCard",
+        "quoteAttribution": "FAMILY HISTORY, 2007",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm sepia-to-charcoal wood canvas (#451A03 to #1C1917). (2) Midground: Garlanded ancestral portrait of the patriarch. (3) Foreground: Cardstock memorial card marking the 2007 inciting tragedy that started the decade-long delusion."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 37
+        }
+      ]
+    },
+    {
+      "sceneId": "12_lalittraumasilencesplit",
+      "startFrame": 1170,
+      "durationFrames": 103,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "UNRESOLVED TRAUMA",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 39,
+      "textLayers": [
+        {
+          "text": "AFTER AN ASSAULT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "LALIT LOST HIS VOICE",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "LalitTraumaSilenceSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Muted indigo felt substrate (#1E1B4B to #090D12). (2) Midground: Silhouette of Lalit isolated in his room, unable to speak. (3) Foreground: Flatline audio waveform symbolizing his years of traumatic silence before his voice mysteriously returned."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 37
+        }
+      ]
+    },
+    {
+      "sceneId": "13_possessionbreakthroughfracture",
+      "startFrame": 1273,
+      "durationFrames": 108,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE DELUSION BEGINS",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
+      "textLayers": [
+        {
+          "text": "HIS VOICE RETURNED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FATHER SPOKE THROUGH HIM",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#7F1D1D",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PossessionBreakthroughFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Explosive terracotta-to-crimson energy sky (#7F1D1D to #1C1917). (2) Midground: Ethereal dual silhouette showing father and son merged in spiritual possession. (3) Foreground: Jagged structural shockwave representing the psychic fracture that overtook the entire household."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "14_priyankadiarieswritingcard",
+      "startFrame": 1381,
+      "durationFrames": 104,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "SECRET CHRONICLES",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Forensic handwriting analysis confirmed Priyanka and others wrote down Lalit's dictated trances",
+        "source": "Delhi Police Forensic Handwriting Division",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
+      "textLayers": [
+        {
+          "text": "LALIT DICTATED ORDERS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "PRIYANKA WROTE EVERYTHING",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "handwritten_diary_register.jpg",
+        "svgForegroundAsset": "PriyankaDiariesWritingCard",
+        "quoteAttribution": "FORENSIC HANDWRITING ANALYSIS",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical forensic blueprint grid (#0F172A to #1E3A8A). (2) Midground: Lined journal notebook pages showing 11 years of daily directives. (3) Foreground: Delicate handwriting quill pen etching the rules of conduct, diet, and spiritual obedience."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "15_prosperityexpansiontallyboard",
+      "startFrame": 1485,
+      "durationFrames": 106,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "REINFORCING THE LIE",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "OBEDIENCE BROUGHT SUCCESS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BUSINESS EXPANDED RAPIDLY",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#B45309",
+          "#1C1917"
+        ],
+        "stageStyle": "SUNBURST_HERO",
+        "referencePlate": "prosperity_bazaar_counters.jpg",
+        "svgForegroundAsset": "ProsperityExpansionTallyBoard",
+        "counterConfig": {
+          "label": "NEW FAMILY SHOPS",
+          "startValue": 1,
+          "endValue": 3
+        },
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Vibrant golden sunburst paper rays (#B45309 to #1C1917). (2) Midground: Architectural facades of multiple flourishing family shops. (3) Foreground: Rolling prosperity tally board demonstrating how real-world success cemented the fatal delusion."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "16_badhtapasyacommandhero",
+      "startFrame": 1591,
+      "durationFrames": 106,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE FINAL RITUAL",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The diaries detailed 'Badh Tapasya' (Banyan Tree worship) where members would imitate hanging aerial roots",
+        "source": "Delhi Police Investigation Records",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "A SEVEN DAY PENANCE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BADH TAPASYA ORDERED",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#581C87",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "sacred_banyan_tree_roots.jpg",
+        "svgForegroundAsset": "BadhTapasyaCommandHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Mystical deep violet felt backdrop (#581C87 to #1C1917). (2) Midground: Ritualistic copper utensils, camphor flames, and sacred red threads. (3) Foreground: Rim-lit silhouette of Lalit issuing the instructions for the fateful seven-day penance."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "17_banyantreerootsfracture",
+      "startFrame": 1697,
+      "durationFrames": 107,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE BLUEPRINT",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 43,
+      "textLayers": [
+        {
+          "text": "SACRED BANYAN TREE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "AERIAL ROOTS REACH DOWN",
+          "triggerFrameOffset": 43,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#14532D",
+          "#0F172A"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "sacred_banyan_tree_roots.jpg",
+        "svgForegroundAsset": "BanyanTreeRootsFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Twilight emerald-to-navy forest sky (#14532D to #0F172A). (2) Midground: Sprawling canopy of the sacred Indian banyan tree. (3) Foreground: Graphic structural roots cascading vertically down, illustrating the physical pattern the family was instructed to imitate."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 41
+        }
+      ]
+    },
+    {
+      "sceneId": "18_rootsvsdupattassplit",
+      "startFrame": 1804,
+      "durationFrames": 106,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "THE MACABRE MIRROR",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 43,
+      "textLayers": [
+        {
+          "text": "HANGING LIKE ROOTS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "TEN SILK SCARVES",
+          "triggerFrameOffset": 43,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "RootsVsDupattasSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Oppressive midnight felt void (#1E1B4B to #090D12). (2) Midground: Heavy iron ceiling mesh grid bolted into reinforced concrete beams. (3) Foreground: Split vector comparison juxtaposing living tree roots with ten hanging silk dupattas."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 41
+        }
+      ]
+    },
+    {
+      "sceneId": "19_finalpromisequotecard",
+      "startFrame": 1910,
+      "durationFrames": 107,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE PROMISE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The final diary entry assured: 'The earth will shake, the sky will part, and I will appear to untie everyone'",
+        "source": "Delhi Police Burari Diary Excerpt",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "FINAL DIARY WORDS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FATHER WILL SAVE US",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "handwritten_diary_register.jpg",
+        "svgForegroundAsset": "FinalPromiseQuoteCard",
+        "quoteAttribution": "FINAL DIARY ENTRY, 30 JUNE 2018",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Somber walnut wood-panel grain (#451A03 to #1C1917). (2) Midground: Lined notebook page showing the chilling final words written on June 30. (3) Foreground: Tactile cardstock quote card displaying the promised supernatural rescue."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "20_midnightstoolstransithero",
+      "startFrame": 2017,
+      "durationFrames": 103,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": true,
+      "headerContext": "MIDNIGHT • 30 JUNE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "UNDER THE IRON MESH",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN STOOLS ALIGNED",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E293B"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "prosperity_bazaar_counters.jpg",
+        "svgForegroundAsset": "MidnightStoolsTransitHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Midnight slate graph canvas (#0F172A to #1E293B) marked with millimeter drafting lines. (2) Midground: Floor plan of the Sant Nagar living room showing the circular arrangement. (3) Foreground: Eleven stools gliding into position in eerie clockwork precision."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "21_grandmotherbedleaderhero",
+      "startFrame": 2120,
+      "durationFrames": 108,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE ADJACENT ROOM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Eighty-year-old grandmother Narayani Devi was found strangled in her bed, unable to stand on a stool",
+        "source": "Delhi Police Post-Mortem Report",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "MATRIARCH NARAYANI DEVI",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BEDRIDDEN AT EIGHTY",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#18181B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "indian_family_portrait.jpg",
+        "svgForegroundAsset": "GrandmotherBedLeaderHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Gentle, quiet midnight felt canvas (#18181B to #090D12). (2) Midground: Traditional Indian wooden cot and modest bedroom furnishings. (3) Foreground: Dignified, heartbreaking silhouette of the matriarch who was unable to stand on the stools."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "22_tommyterracebarksplit",
+      "startFrame": 2228,
+      "durationFrames": 107,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "ON THE ROOFTOP",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Tommy, the family's Indian pariah dog, was found chained on the rooftop terrace barking continuously with high fever",
+        "source": "Animal Rights / Delhi Police Records",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 44,
+      "textLayers": [
+        {
+          "text": "ON THE TERRACE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "THE DOG BARKED",
+          "triggerFrameOffset": 44,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#78350F",
+          "#0F172A"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "terrace_chained_dog_tommy.jpg",
+        "svgForegroundAsset": "TommyTerraceBarkSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Hazy orange sodium vapor night sky (#78350F to #0F172A). (2) Midground: Rooftop parapet with clotheslines and concrete water storage tanks. (3) Foreground: Silhouette of Tommy the loyal dog barking frantically as the only living witness to the family's final hour."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 42
+        }
+      ]
+    },
+    {
+      "sceneId": "23_stoolstopplefracture",
+      "startFrame": 2335,
+      "durationFrames": 106,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE FATAL MOMENT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "THE STOOLS TIPPED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "NO MIRACLE CAME",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#020617",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "StoolsToppleFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Absolute midnight void (#020617 to #090D12) devoid of sensationalism. (2) Midground: The unmoved, rigid iron ceiling rebar structure. (3) Foreground: Toppled stools lying horizontal on the cold floor, marking the tragic moment the delusion met irreversible reality."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "24_psychologicalautopsycard",
+      "startFrame": 2441,
+      "durationFrames": 106,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE CLINICAL VERDICT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Medical experts concluded the deaths were caused by 'shared psychosis' (folie à plusieurs) without suicidal intent",
+        "source": "Central Bureau of Investigation (CBI) / AIIMS Delhi",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "PSYCHOLOGICAL AUTOPSY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SHARED PSYCHOSIS",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "forensic_autopsy_dossier.jpg",
+        "svgForegroundAsset": "PsychologicalAutopsyCard",
+        "quoteAttribution": "CENTRAL FORENSIC SCIENCE LABORATORY",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Official clinical graph grid (#0F172A to #1E3A8A). (2) Midground: Formal diagnostic psychiatric evaluation dossier from AIIMS and Delhi FSL. (3) Foreground: Tactile stamped report card highlighting the profound tragic diagnosis: Shared Psychosis."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "25_memorialtallyboardhero",
+      "startFrame": 2547,
+      "durationFrames": 104,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "THE TRAGIC LESSON",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 44,
+      "textLayers": [
+        {
+          "text": "UNTREATED MENTAL ILLNESS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN SOULS LOST",
+          "triggerFrameOffset": 44,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "MemorialTallyBoardHero",
+        "counterConfig": {
+          "label": "LIVES CONSUMED BY SILENCE",
+          "startValue": 1,
+          "endValue": 11
+        },
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dignified mahogany memorial wood substrate (#451A03 to #1C1917). (2) Midground: A row of eleven warm brass diyas casting soft amber reflections. (3) Foreground: Tactile memorial tally plinth honoring the eleven lives lost to silence and stigma."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 42
+        }
+      ]
+    },
+    {
+      "sceneId": "26_silenthousemonumenthero",
+      "startFrame": 2651,
+      "durationFrames": 105,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "EPILOGUE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "TALK BEFORE TRAGEDY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "REMEMBER BURARI",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#881337",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "SilentHouseMonumentHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic rose-to-umber sky gradient (#881337 to #1C1917) matching Scene 1 Frame 0 to create an infinite, seamless reel loop. (2) Midground: The quiet brick residence standing forever closed in Sant Nagar. (3) Foreground: The final haunting call to break the silence surrounding mental health before tragedy strikes."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    }
+  ]
+}

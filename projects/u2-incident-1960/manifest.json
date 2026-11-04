@@ -1,7 +1,7 @@
 {
   "projectSlug": "u2-incident-1960",
   "title": "1960 U-2 INCIDENT",
-  "updatedAt": "2026-11-01T13:52:08.565Z",
+  "updatedAt": "2026-11-04T10:39:19.770Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,15 +11,14 @@
   },
   "timeline": {
     "file": "src/timelines/u2_incident_1960.json",
-    "sha256": "72dfa86c40bdc172a560af231a16d2ba3f4afd0caf9a144e3a751455ff5d05fa",
-    "sceneCount": 19,
-    "totalFrames": 2948,
-    "durationSec": 49.13
+    "sha256": "1ce6e058f8b5b7779732e6863c10638acdab1a78cdf91a6627d012d97762df21",
+    "sceneCount": 14,
+    "totalFrames": 1560,
+    "durationSec": 26
   },
   "audio": {
-    "bgmFile": "audio/bgm_u2.mp3",
+    "bgmFile": "assets/audio/bgm_u2.mp3",
     "sha256": "493fd4774336a4be34d88ac38b738efdfb05e6b680487e60c71108a199cef1e1",
-    "bpm": 104,
     "bgmLicense": {
       "source": "Project Audio Library",
       "licenseType": "ROYALTY_FREE",

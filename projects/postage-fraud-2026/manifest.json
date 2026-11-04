@@ -1,7 +1,7 @@
 {
   "projectSlug": "postage-fraud-2026",
   "title": "THE $126M POSTAGE FRAUD",
-  "updatedAt": "2026-11-03T17:41:35.314Z",
+  "updatedAt": "2026-11-04T07:40:54.119Z",
   "engine": {
     "remotionVersion": "^4.0.218",
     "fps": 60,
@@ -11,20 +11,20 @@
   },
   "timeline": {
     "file": "src/timelines/postage_fraud_2026.json",
-    "sha256": "fe12f77be93415356ccb7186315a2aa7c276d90ac3929a99b70793d438a98bf4",
+    "sha256": "82df9195aecf029c6209e88e5b23ef9a12ca6d1e878aa1b0e3c9cce9b040dd15",
     "sceneCount": 28,
     "totalFrames": 2923,
     "durationSec": 48.72
   },
   "audio": {
     "bgmFile": "audio/bgm_postage_fraud.mp3",
-    "sha256": "9963db370364988d5a9e22a73b62713924defc4b6d7d1ea1ceac9e60b6f48c68",
-    "bpm": 103.36,
+    "sha256": "f3f3c3660f30d82d76072220a11ddade2b628b0298fcb5eb48befd8bac936984",
+    "bpm": 99.38,
     "bgmLicense": {
-      "source": "YouTube Audio (https://youtu.be/Td9DymMNuo0)",
+      "source": "YouTube Audio (https://youtu.be/qGlwgPb8E7I)",
       "licenseType": "CREATIVE_COMMONS",
       "clearanceId": "CLR-POSTAGE-FRAUD-2026",
-      "attribution": "SKORN - Slowed (VUKEINE)"
+      "attribution": "ACIDO III (Super Slowed) - UdieNnx & Mc Denny"
     },
     "loudnessSpec": {
       "targetIntegratedLufs": -14,

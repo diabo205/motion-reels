@@ -1,8 +1,8 @@
 {
   "projectSlug": "u2-incident-1960",
-  "generatedAt": "2026-11-01T13:55:56.686Z",
-  "title": "1960 U-2 INCIDENT: THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
-  "description": "1960 U-2 INCIDENT (🇺🇸 ✈️ ☭)\n\nTHE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.\n\nHistorical Sources & Fact-Check Citations:\n• THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED. — Source: 1960 U-2 INCIDENT Archival Record\n• CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR — Source: 1960 U-2 INCIDENT Archival Record\n• SOVIET P-30 RADAR LOCKS ON INTERCEPT ORDERS TRANSMITTED — Source: 1960 U-2 INCIDENT Archival Record\n• 14 GUIDED MISSILES LAUNCHED CLIMBING AT MACH 3.5 — Source: 1960 U-2 INCIDENT Archival Record\n• 300,000 CITIZENS VIEW EVIDENCE WRECKAGE AND CAMERAS EXPOSED — Source: 1960 U-2 INCIDENT Archival Record\n• SUPREME MILITARY TRIBUNAL TRIAL SENTENCED TO 10 YEARS PRISON — Source: 1960 U-2 INCIDENT Archival Record\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Incident #1960",
+  "generatedAt": "2026-11-04T10:39:19.776Z",
+  "title": "1960 U-2 INCIDENT: THE CIA SWORE THE PILOT WAS DEAD",
+  "description": "1960 U-2 INCIDENT ()\n\nTHE CIA SWORE THE PILOT WAS DEAD\n\n#History #Documentary #MilitaryHistory #MotionGraphics #Shorts #Incident #1960",
   "hashtags": [
     "#History",
     "#Documentary",
@@ -15,201 +15,120 @@
   "srtFile": "captions.srt",
   "poster9x16": "poster.png",
   "poster4x5": "poster_4x5.png",
-  "bgmLicense": {
-    "source": "Project Audio Library",
-    "licenseType": "ROYALTY_FREE",
-    "clearanceId": "CLR-U2-INCIDENT-1960"
-  },
-  "claims": [
-    {
-      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
-      "text": "THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    },
-    {
-      "sceneId": "SCENE_02_70000FT_STRATOSPHERE",
-      "text": "CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    },
-    {
-      "sceneId": "SCENE_05_SOVIET_RADAR_ALERT",
-      "text": "SOVIET P-30 RADAR LOCKS ON INTERCEPT ORDERS TRANSMITTED",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    },
-    {
-      "sceneId": "SCENE_06_SAM_MISSILE_LAUNCH",
-      "text": "14 GUIDED MISSILES LAUNCHED CLIMBING AT MACH 3.5",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    },
-    {
-      "sceneId": "SCENE_14_GORKY_PARK_EXHIBITION",
-      "text": "300,000 CITIZENS VIEW EVIDENCE WRECKAGE AND CAMERAS EXPOSED",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    },
-    {
-      "sceneId": "SCENE_16_MOSCOW_MILITARY_TRIBUNAL",
-      "text": "SUPREME MILITARY TRIBUNAL TRIAL SENTENCED TO 10 YEARS PRISON",
-      "source": "1960 U-2 INCIDENT Archival Record",
-      "verified": true
-    }
-  ],
+  "bgmLicense": null,
+  "claims": [],
   "accessibilityAltText": [
     {
       "sceneNumber": 1,
-      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
-      "archetype": "STRUCTURAL_FRACTURE",
-      "headerContext": "MAY 1, 1960 • 70,000 FEET",
-      "caption": "THE CIA TOLD THE PRESIDENT — THE PILOT WAS DEAD. THEY LIED.",
-      "visualAsset": "U2_SHATTERED_SPIN_STRATOSPHERE"
+      "sceneId": "SCENE_01_SOVIET_RADAR_LOCK",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "THE CIA SWORE — THE PILOT WAS DEAD",
+      "visualAsset": "SOVIET_RADAR_CLOSEUP_LOCK"
     },
     {
       "sceneNumber": 2,
-      "sceneId": "SCENE_02_70000FT_STRATOSPHERE",
+      "sceneId": "SCENE_02_S75_DVINA_MISSILE_STREAK",
       "archetype": "VEHICLE_IN_TRANSIT",
       "headerContext": null,
-      "caption": "CRUISING AT 70,000 FEET — ABOVE ALL SOVIET RADAR",
-      "visualAsset": "U2_STRATOSPHERE_TELEMETRY"
+      "caption": "SOVIET S-75 MISSILE — RADAR LOCKED",
+      "visualAsset": "S75_DVINA_MISSILE_STREAK"
     },
     {
       "sceneNumber": 3,
-      "sceneId": "SCENE_03_GRAND_SLAM_MAP",
-      "archetype": "VECTOR_MAP",
-      "headerContext": "SOVIET AIRSPACE • 2,900 MILES",
-      "caption": "ACROSS ENTIRE SOVIET UNION — DEEP INTO ENEMY TERRITORY",
-      "visualAsset": "GRAND_SLAM_CONTINENTAL_MAP"
+      "sceneId": "SCENE_03_MISSILE_DETONATION_CABIN_LOSS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "MISSILE DETONATION — TOTAL CABIN LOSS",
+      "visualAsset": "U2_MISSILE_DETONATION_SPIN"
     },
     {
       "sceneNumber": 4,
-      "sceneId": "SCENE_04_HYCON_CAMERA",
-      "archetype": "BLUEPRINT_DIAGRAM",
+      "sceneId": "SCENE_04_NASA_FABRICATED_FLIGHT_MAP",
+      "archetype": "VECTOR_MAP",
       "headerContext": null,
-      "caption": "HYCON OPTICAL SPY CAMERA — TARGETING PLUTONIUM REACTORS",
-      "visualAsset": "HYCON_CAMERA_SCHEMATIC"
+      "caption": "WASHINGTON'S COVER STORY — LOST WEATHER PLANE",
+      "visualAsset": "NASA_FABRICATED_FLIGHT_MAP"
     },
     {
       "sceneNumber": 5,
-      "sceneId": "SCENE_05_SOVIET_RADAR_ALERT",
-      "archetype": "TELEMETRY_COUNTER",
-      "headerContext": "SVERDLOVSK SECTOR • PVO RADAR",
-      "caption": "SOVIET P-30 RADAR LOCKS ON — INTERCEPT ORDERS TRANSMITTED",
-      "visualAsset": "SOVIET_P30_RADAR_ALERT"
+      "sceneId": "SCENE_05_OFFICIAL_STATEMENT_STAMP_SLAM",
+      "archetype": "QUOTE_CARD",
+      "headerContext": null,
+      "caption": "NASA FABRICATED FLIGHT — OFFICIAL STATEMENT",
+      "visualAsset": "OFFICIAL_STATEMENT_STAMP_CARD"
     },
     {
       "sceneNumber": 6,
-      "sceneId": "SCENE_06_SAM_MISSILE_LAUNCH",
-      "archetype": "CROWD_TALLY",
+      "sceneId": "SCENE_06_EISENHOWER_DENIAL_CUTOUT",
+      "archetype": "SPLIT_CONFRONTATION",
       "headerContext": null,
-      "caption": "14 GUIDED MISSILES LAUNCHED — CLIMBING AT MACH 3.5",
-      "visualAsset": "S75_DVINA_LAUNCH_BATTERY"
+      "caption": "EISENHOWER PUBLICLY — DENIED ESPIONAGE",
+      "visualAsset": "EISENHOWER_PRESS_DENIAL_STAGE"
     },
     {
       "sceneNumber": 7,
-      "sceneId": "SCENE_07_PROXIMITY_DETONATION",
-      "archetype": "STRUCTURAL_FRACTURE",
+      "sceneId": "SCENE_07_MOSCOW_FIVE_DAY_SILENCE",
+      "archetype": "CROWD_TALLY",
       "headerContext": null,
-      "caption": "PROXIMITY WARHEAD DETONATES — TAIL SHEARED FROM DRAGON LADY",
-      "visualAsset": "U2_EXPLOSION_DESTRUCTION"
+      "caption": "MOSCOW STAYED SILENT — FOR FIVE DAYS",
+      "visualAsset": "KREMLIN_FIVE_DAY_SILENCE_STAGE"
     },
     {
       "sceneNumber": 8,
-      "sceneId": "SCENE_08_BAILOUT_CURARE_COIN",
-      "archetype": "SPLIT_CONFRONTATION",
+      "sceneId": "SCENE_08_KHRUSHCHEV_STEPS_TO_PODIUM",
+      "archetype": "LONE_LEADER",
       "headerContext": null,
-      "caption": "CANOPY JETTISONED IN FREEFALL — DESTRUCT SWITCHES OUT OF REACH",
-      "visualAsset": "POWERS_BAILOUT_CURARE_COIN"
+      "caption": "KHRUSHCHEV STEPS UP — SUPREME SOVIET",
+      "visualAsset": "KHRUSHCHEV_SUPREME_SOVIET_STAGE"
     },
     {
       "sceneNumber": 9,
-      "sceneId": "SCENE_09_KGB_GROUND_CAPTURE",
-      "archetype": "SILHOUETTE_ACTION",
-      "headerContext": "KOSULINO COLLECTIVE FARM",
-      "caption": "PILOT TOUCHES DOWN ALIVE — SURROUNDED BY KGB AGENTS",
-      "visualAsset": "KGB_GROUND_CAPTURE"
+      "sceneId": "SCENE_09_DOSSIER_SLAMS_THE_TRAP",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "KHRUSHCHEV SPRANG — THE TRAP",
+      "visualAsset": "DOSSIER_SLAMS_SCATTERED_PHOTOS"
     },
     {
       "sceneNumber": 10,
-      "sceneId": "SCENE_10_NASA_COVER_UP_DOSSIER",
-      "archetype": "DOCUMENT_CARD",
-      "headerContext": "WASHINGTON • WHITE HOUSE",
-      "caption": "WHITE HOUSE ASSUMES PILOT DEAD — NASA WEATHER PLANE COVER STORY",
-      "visualAsset": "NASA_COVER_UP_DOSSIER"
+      "sceneId": "SCENE_10_CHECKMATE_PILOT_ALIVE",
+      "archetype": "SPLIT_CONFRONTATION",
+      "headerContext": null,
+      "caption": "CHECKMATE IN MOSCOW — THE PILOT ALIVE",
+      "visualAsset": "CHECKMATE_POWERS_CAPTURED_STAGE"
     },
     {
       "sceneNumber": 11,
-      "sceneId": "SCENE_11_FAKE_NASA_U2_SCHEMATIC",
+      "sceneId": "SCENE_11_CHECKMATE_PLANE_WRECKAGE",
       "archetype": "VEHICLE_IN_TRANSIT",
-      "headerContext": "EDWARDS AFB • CALIFORNIA",
-      "caption": "STAGING A CIVILIAN U-2 — PAINTED WITH FAKE SERIALS",
-      "visualAsset": "FAKE_NASA_U2_SCHEMATIC"
+      "headerContext": null,
+      "caption": "SOVIETS RECOVERED — THE INTACT PLANE",
+      "visualAsset": "U2_WRECKAGE_EXHIBITION_STAGE"
     },
     {
       "sceneNumber": 12,
-      "sceneId": "SCENE_12_KHRUSHCHEV_SOVIET_PODIUM",
-      "archetype": "LONE_LEADER",
-      "headerContext": "MOSCOW • GRAND KREMLIN PALACE",
-      "caption": "MOSCOW WAITS FOUR DAYS — EISENHOWER WALKS INTO TRAP",
-      "visualAsset": "KHRUSHCHEV_SOVIET_PODIUM"
+      "sceneId": "SCENE_12_CHECKMATE_INTACT_HYCON_FILM",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "headerContext": null,
+      "caption": "RECONNAISSANCE PROOF — THE FILM SPOOLS",
+      "visualAsset": "CHECKMATE_INTACT_HYCON_FILM_STAGE"
     },
     {
       "sceneNumber": 13,
-      "sceneId": "SCENE_13_KHRUSHCHEV_SPEECH_BOMBSHELL",
-      "archetype": "LONE_LEADER",
+      "sceneId": "SCENE_13_CHECKMATE_POISON_PIN_UNUSED",
+      "archetype": "SPLIT_CONFRONTATION",
       "headerContext": null,
-      "caption": "KHRUSHCHEV REVEALS THE SECRET — THE PILOT IS ALIVE AND WELL",
-      "visualAsset": "KHRUSHCHEV_SPEECH_BOMBSHELL"
+      "caption": "LETHAL SUICIDE PIN — FOUND UNUSED",
+      "visualAsset": "CHECKMATE_POISON_PIN_ALIVE_STAGE"
     },
     {
       "sceneNumber": 14,
-      "sceneId": "SCENE_14_GORKY_PARK_EXHIBITION",
-      "archetype": "CROWD_TALLY",
-      "headerContext": "GORKY PARK • MOSCOW",
-      "caption": "300,000 CITIZENS VIEW EVIDENCE — WRECKAGE AND CAMERAS EXPOSED",
-      "visualAsset": "GORKY_PARK_EXHIBITION"
-    },
-    {
-      "sceneNumber": 15,
-      "sceneId": "SCENE_15_PARIS_SUMMIT_COLLAPSE",
-      "archetype": "SPLIT_CONFRONTATION",
-      "headerContext": "PARIS PEACE SUMMIT • 1960",
-      "caption": "KHRUSHCHEV DEMANDS US APOLOGY — COLD WAR DÉTENTE COLLAPSES",
-      "visualAsset": "PARIS_SUMMIT_COLLAPSE"
-    },
-    {
-      "sceneNumber": 16,
-      "sceneId": "SCENE_16_MOSCOW_MILITARY_TRIBUNAL",
+      "sceneId": "SCENE_14_EPILOGUE_COLD_WAR_HUMILIATION",
       "archetype": "LONE_LEADER",
-      "headerContext": "HALL OF COLUMNS • MOSCOW",
-      "caption": "SUPREME MILITARY TRIBUNAL TRIAL — SENTENCED TO 10 YEARS PRISON",
-      "visualAsset": "MOSCOW_MILITARY_TRIBUNAL"
-    },
-    {
-      "sceneNumber": 17,
-      "sceneId": "SCENE_17_GLIENICKE_BRIDGE_SPIES",
-      "archetype": "SPLIT_CONFRONTATION",
-      "headerContext": "GLIENICKE BRIDGE • BERLIN",
-      "caption": "FREEZING FOG IN DIVIDED BERLIN — POWERS SWAPPED FOR SPYMASTER ABEL",
-      "visualAsset": "GLIENICKE_BRIDGE_SPIES"
-    },
-    {
-      "sceneNumber": 18,
-      "sceneId": "SCENE_18_SOVIET_AND_US_MEMORIAL",
-      "archetype": "FLAG_BANNER",
       "headerContext": null,
-      "caption": "THE END OF MANNED OVERFLIGHTS — BIRTH OF SPY SATELLITE ERA",
-      "visualAsset": "SOVIET_AND_US_MEMORIAL"
-    },
-    {
-      "sceneNumber": 19,
-      "sceneId": "SCENE_19_EPILOGUE_BRASS_PLAQUE",
-      "archetype": "DOCUMENT_CARD",
-      "headerContext": null,
-      "caption": "OPERATION GRAND SLAM — THE CRISIS THAT CHANGED HISTORY",
-      "visualAsset": "EPILOGUE_BRASS_PLAQUE"
+      "caption": "PEACE TALKS COLLAPSED — TOTAL HUMILIATION",
+      "visualAsset": "U2_EPILOGUE_BRASS_PLAQUE_STAGE"
     }
   ]
 }

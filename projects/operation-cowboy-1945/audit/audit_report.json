@@ -1,8 +1,8 @@
 {
   "projectSlug": "operation-cowboy-1945",
   "title": "1945 OPERATION COWBOY",
-  "timestamp": "2026-11-01T12:50:02.823Z",
-  "passed": true,
+  "timestamp": "2026-11-04T07:05:55.782Z",
+  "passed": false,
   "totalFrames": 2940,
   "durationSec": 49,
   "maxFramesCeiling": 3500,
@@ -15,8 +15,1203 @@
     "energyPeakCount": 105,
     "onsetCount": 555
   },
-  "errorCount": 0,
-  "warningCount": 0,
+  "telemetryAnalysis": {
+    "projectSlug": "operation-cowboy-1945",
+    "openingArchetype": "SPLIT_CONFRONTATION",
+    "hookDurationFrames": 136,
+    "hookHoldRate": 0.92,
+    "hasLiveTelemetry": true,
+    "telemetryPlatform": "youtube",
+    "sceneStats": [
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 1,
+        "sceneId": "SCENE_01_WAR_COLLAPSE",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 42,
+        "holdRate": 0.92,
+        "isHook": true
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 2,
+        "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 28,
+        "holdRate": 0.9501,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 3,
+        "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 37,
+        "holdRate": 0.9637,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 4,
+        "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 43,
+        "holdRate": 0.9638,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 5,
+        "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 30,
+        "holdRate": 0.9767,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 6,
+        "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 37,
+        "holdRate": 0.9811,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 7,
+        "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 44,
+        "holdRate": 0.9808,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 8,
+        "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 32,
+        "holdRate": 0.9757,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 9,
+        "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 18,
+        "holdRate": 0.9802,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 10,
+        "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 27,
+        "holdRate": 0.9825,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 11,
+        "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 32,
+        "holdRate": 0.9835,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 12,
+        "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 37,
+        "holdRate": 0.9806,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 13,
+        "sceneId": "SCENE_13_COSSACK_CAVALRY",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 37,
+        "holdRate": 0.9804,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 14,
+        "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 21,
+        "holdRate": 0.9801,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 15,
+        "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 30,
+        "holdRate": 0.9797,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 16,
+        "sceneId": "SCENE_16_SS_RETREATS",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 28,
+        "holdRate": 0.9795,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 17,
+        "sceneId": "SCENE_17_EVACUATION_ORDER",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 33,
+        "holdRate": 0.9792,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 18,
+        "sceneId": "SCENE_18_MASS_STAMPEDE",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 34,
+        "holdRate": 0.9787,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 19,
+        "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 19,
+        "holdRate": 0.9784,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 20,
+        "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 140,
+        "durationBucket": "129-144f",
+        "payoffOffset": 41,
+        "holdRate": 0.9781,
+        "isHook": false
+      },
+      {
+        "projectSlug": "operation-cowboy-1945",
+        "sceneIndex": 21,
+        "sceneId": "SCENE_21_LEGACY_PRESERVED",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 180,
+        "durationBucket": ">168f",
+        "payoffOffset": 24,
+        "holdRate": 0.9776,
+        "isHook": false
+      }
+    ]
+  },
+  "errorCount": 100,
+  "warningCount": 2,
   "motionChecks": [],
-  "violations": []
+  "violations": [
+    {
+      "sceneId": "GLOBAL_VECTORS",
+      "rule": "LIBRARY_REUSE",
+      "severity": "WARNING",
+      "expected": "Vector files with > 50 <path> elements should import reusable assets from src/library/ or primitives from src/kit/",
+      "actual": "Found 53 raw <path> elements in src/components/CowboyVectors.tsx with zero imports from src/library/ or src/kit/",
+      "fix": "LIBRARY_REUSE: File src/components/CowboyVectors.tsx has 53 raw <path> elements and imports nothing from src/library/ or src/kit/. Fix: Refactor common silhouettes, hardware, and backgrounds into src/library/ or compose using existing kit/library primitives.",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "GLOBAL_PLATES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Reference manifest must exist at projects/operation-cowboy-1945/plates/manifest.json",
+      "actual": "Missing manifest.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Missing manifest.json. Fix: Ingest plates and catalog mappings in projects/operation-cowboy-1945/plates/manifest.json."
+    },
+    {
+      "sceneId": "GLOBAL_PLATES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": "Observation notes must exist at projects/operation-cowboy-1945/plates/notes.json with >= 3 items in 'observed' per plate",
+      "actual": "plates/notes.json missing",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Reference plate observation notes missing at projects/operation-cowboy-1945/plates/notes.json. Fix: Create plates/notes.json documenting at least 3 visual observations per plate."
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_01_WAR_COLLAPSE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_02_LIPIZZANER_STALLIONS has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_03_RED_ARMY_ADVANCE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_04_HUNGARIAN_MASSACRE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_05_GERMAN_VETS_PACT has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_06_RADIO_CALL_TO_PATTON has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_07_PATTON_GREENLIGHT has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_08_TWENTY_MILES_BEHIND has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_09_PATTONS_GHOSTS_CHARGE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_10_HOSTAU_GATES_REACHED has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_11_FREED_ALLIED_POWS has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_12_ARMING_WEHRMACHT has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_13_COSSACK_CAVALRY has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_14_WAFFEN_SS_AMBUSH has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_15_SIDE_BY_SIDE_DEFENSE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_16_SS_RETREATS has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_17_EVACUATION_ORDER has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_18_MASS_STAMPEDE has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_19_SOVIET_T34_ARRIVAL has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_20_SAFE_BEHIND_LINES has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "ERROR",
+      "expected": "Verified reference plate specified in visualPayload.referencePlate or plates/manifest.json",
+      "actual": "No reference plate mapped to this scene. Drawing SVG without reference is strictly prohibited.",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Scene SCENE_21_LEGACY_PRESERVED has no reference plate mapped. Fix: Map an authentic reference plate in visualPayload.referencePlate or plates/manifest.json."
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_WAR_COLLAPSE_OPENING' has 22 nodes, 4 paths, and 24 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_01_WAR_COLLAPSE [COWBOY_WAR_COLLAPSE_OPENING] is overly simplified / clip-art (22 nodes, 4 paths, 24 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_LIPIZZANER_STALLION_HERO' has 9 nodes, 2 paths, and 15 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_02_LIPIZZANER_STALLIONS [COWBOY_LIPIZZANER_STALLION_HERO] is overly simplified / clip-art (9 nodes, 2 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_RED_ARMY_FAMINE_ADVANCE' has 20 nodes, 2 paths, and 18 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_03_RED_ARMY_ADVANCE [COWBOY_RED_ARMY_FAMINE_ADVANCE] is overly simplified / clip-art (20 nodes, 2 paths, 18 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_HUNGARIAN_STUD_MASSACRE' has 10 nodes, 2 paths, and 15 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_04_HUNGARIAN_MASSACRE [COWBOY_HUNGARIAN_STUD_MASSACRE] is overly simplified / clip-art (10 nodes, 2 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_WEHRMACHT_VETS_PACT' has 26 nodes, 5 paths, and 28 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_05_GERMAN_VETS_PACT [COWBOY_WEHRMACHT_VETS_PACT] is overly simplified / clip-art (26 nodes, 5 paths, 28 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_RADIO_CALL_TO_PATTON' has 21 nodes, 2 paths, and 12 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_06_RADIO_CALL_TO_PATTON [COWBOY_RADIO_CALL_TO_PATTON] is overly simplified / clip-art (21 nodes, 2 paths, 12 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_PATTON_COMMAND_GREENLIGHT' has 17 nodes, 3 paths, and 20 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_07_PATTON_GREENLIGHT [COWBOY_PATTON_COMMAND_GREENLIGHT] is overly simplified / clip-art (17 nodes, 3 paths, 20 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_TWENTY_MILES_BEHIND_LINES' has 17 nodes, 2 paths, and 10 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_08_TWENTY_MILES_BEHIND [COWBOY_TWENTY_MILES_BEHIND_LINES] is overly simplified / clip-art (17 nodes, 2 paths, 10 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_PATTONS_GHOSTS_CHARGE' has 21 nodes, 1 paths, and 9 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_09_PATTONS_GHOSTS_CHARGE [COWBOY_PATTONS_GHOSTS_CHARGE] is overly simplified / clip-art (21 nodes, 1 paths, 9 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_HOSTAU_GATES_REACHED' has 10 nodes, 1 paths, and 9 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_10_HOSTAU_GATES_REACHED [COWBOY_HOSTAU_GATES_REACHED] is overly simplified / clip-art (10 nodes, 1 paths, 9 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_ALLIED_POWS_LIBERATION' has 22 nodes, 8 paths, and 43 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_11_FREED_ALLIED_POWS [COWBOY_ALLIED_POWS_LIBERATION] is overly simplified / clip-art (22 nodes, 8 paths, 43 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_ARMING_WEHRMACHT_BROTHERS' has 18 nodes, 4 paths, and 26 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_12_ARMING_WEHRMACHT [COWBOY_ARMING_WEHRMACHT_BROTHERS] is overly simplified / clip-art (18 nodes, 4 paths, 26 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_COSSACK_CAVALRY_PRINCE_AMASSOV' has 15 nodes, 5 paths, and 32 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_13_COSSACK_CAVALRY [COWBOY_COSSACK_CAVALRY_PRINCE_AMASSOV] is overly simplified / clip-art (15 nodes, 5 paths, 32 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_WAFFEN_SS_AMBUSH' has 19 nodes, 0 paths, and 4 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_14_WAFFEN_SS_AMBUSH [COWBOY_WAFFEN_SS_AMBUSH] is overly simplified / clip-art (19 nodes, 0 paths, 4 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_SIDE_BY_SIDE_DEFENSE' has 25 nodes, 4 paths, and 24 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_15_SIDE_BY_SIDE_DEFENSE [COWBOY_SIDE_BY_SIDE_DEFENSE] is overly simplified / clip-art (25 nodes, 4 paths, 24 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_SS_RETREAT_HEAVY_LOSSES' has 11 nodes, 2 paths, and 14 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_16_SS_RETREATS [COWBOY_SS_RETREAT_HEAVY_LOSSES] is overly simplified / clip-art (11 nodes, 2 paths, 14 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_CAPT_STEWART_EVACUATION_ORDER' has 15 nodes, 2 paths, and 14 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_17_EVACUATION_ORDER [COWBOY_CAPT_STEWART_EVACUATION_ORDER] is overly simplified / clip-art (15 nodes, 2 paths, 14 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_MASS_LIPIZZANER_STAMPEDE' has 13 nodes, 0 paths, and 4 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_18_MASS_STAMPEDE [COWBOY_MASS_LIPIZZANER_STAMPEDE] is overly simplified / clip-art (13 nodes, 0 paths, 4 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_SOVIET_T34_RIDGE_ARRIVAL' has 14 nodes, 2 paths, and 14 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_19_SOVIET_T34_ARRIVAL [COWBOY_SOVIET_T34_RIDGE_ARRIVAL] is overly simplified / clip-art (14 nodes, 2 paths, 14 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_US_ARMY_TRUCK_CONVOY' has 18 nodes, 2 paths, and 13 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_20_SAFE_BEHIND_LINES [COWBOY_US_ARMY_TRUCK_CONVOY] is overly simplified / clip-art (18 nodes, 2 paths, 13 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "rule": "PATH_COMPLEXITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
+      "actual": "Component 'COWBOY_EPILOGUE_SPANISH_RIDING_SCHOOL' has 11 nodes, 0 paths, and 4 path command vertices",
+      "fix": "PATH_COMPLEXITY_LINT: Scene SCENE_21_LEGACY_PRESERVED [COWBOY_EPILOGUE_SPANISH_RIDING_SCHOOL] is overly simplified / clip-art (11 nodes, 0 paths, 4 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "GLOBAL_STAGING",
+      "rule": "STAGING_DIVERSITY_LINT",
+      "severity": "ERROR",
+      "expected": "Minimum 3 distinct stageStyle or skyGradient atmospheres (Peshawar standard: prevent monotonous dark voids)",
+      "actual": "Found only 0 stage style(s) [] and 0 sky gradient(s)",
+      "fix": "STAGING_DIVERSITY_LINT: Found only 0 stage style(s) and 0 sky gradient(s) (minimum 3 required). Fix: Motivate scenes with distinct stageStyle substrates (e.g. SUNBURST_HERO, PAPER_EXTERIOR, GRAPH_GRID, WOOD_PANEL, NIGHT_FELT) and diverse setting-motivated sky gradients.",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "HOOK_PACING_LINT",
+      "severity": "ERROR",
+      "expected": "Hook Scene 1 duration <= 108f (target 96f, 1.6s) to prevent early swipe-away cliff",
+      "actual": "136f (2.27s)",
+      "fix": "HOOK_PACING_LINT: Hook Scene 1 duration (136f) exceeds 108f cap. Fix: Reduce Scene 1 duration to <= 108 frames (target 96f / 1.6s).",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_01_WAR_COLLAPSE duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "fix": "WORD_BUDGET: Scene SCENE_01_WAR_COLLAPSE combined text has 9 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_WAR_COLLAPSE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "94 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 94 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 42,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_02_LIPIZZANER_STALLIONS duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 136,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_02_LIPIZZANER_STALLIONS combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 136,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_02_LIPIZZANER_STALLIONS",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "108 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 108 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 164,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_03_RED_ARMY_ADVANCE duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 272,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "9 words",
+      "fix": "WORD_BUDGET: Scene SCENE_03_RED_ARMY_ADVANCE combined text has 9 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 272,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_03_RED_ARMY_ADVANCE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "99 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 99 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 309,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_04_HUNGARIAN_MASSACRE duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 408,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_04_HUNGARIAN_MASSACRE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "93 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 93 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 451,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_05_GERMAN_VETS_PACT duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 544,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_05_GERMAN_VETS_PACT combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 544,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_05_GERMAN_VETS_PACT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "106 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 106 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 574,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_06_RADIO_CALL_TO_PATTON duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 680,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_06_RADIO_CALL_TO_PATTON combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 680,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_06_RADIO_CALL_TO_PATTON",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "99 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 99 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 717,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_07_PATTON_GREENLIGHT duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 816,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_07_PATTON_GREENLIGHT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "92 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 92 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 860,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_08_TWENTY_MILES_BEHIND duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 952,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_08_TWENTY_MILES_BEHIND",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "104 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 104 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 984,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_09_PATTONS_GHOSTS_CHARGE duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1088,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_09_PATTONS_GHOSTS_CHARGE combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 1088,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_09_PATTONS_GHOSTS_CHARGE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "118 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 118 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1106,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "136f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_10_HOSTAU_GATES_REACHED duration (136f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1224,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_10_HOSTAU_GATES_REACHED combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 1224,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_10_HOSTAU_GATES_REACHED",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "109 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 109 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1251,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_11_FREED_ALLIED_POWS duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1360,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_11_FREED_ALLIED_POWS combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 1360,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_11_FREED_ALLIED_POWS",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "108 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 108 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1392,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_12_ARMING_WEHRMACHT duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1500,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_12_ARMING_WEHRMACHT combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 1500,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_12_ARMING_WEHRMACHT",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "103 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 103 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1537,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_13_COSSACK_CAVALRY duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1640,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_13_COSSACK_CAVALRY combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 1640,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_13_COSSACK_CAVALRY",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "103 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 103 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1677,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_14_WAFFEN_SS_AMBUSH duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1780,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_14_WAFFEN_SS_AMBUSH",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "119 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 119 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1801,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_15_SIDE_BY_SIDE_DEFENSE duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 1920,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_15_SIDE_BY_SIDE_DEFENSE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "110 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 110 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 1950,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_16_SS_RETREATS duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 2060,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_16_SS_RETREATS",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "112 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 112 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 2088,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_17_EVACUATION_ORDER duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 2200,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_17_EVACUATION_ORDER combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 2200,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_17_EVACUATION_ORDER",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "107 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 107 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 2233,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_18_MASS_STAMPEDE duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 2340,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_18_MASS_STAMPEDE",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "106 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 106 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 2374,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_19_SOVIET_T34_ARRIVAL duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 2480,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_19_SOVIET_T34_ARRIVAL combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 2480,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_19_SOVIET_T34_ARRIVAL",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "121 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 121 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 2499,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..132f",
+      "actual": "140f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_20_SAFE_BEHIND_LINES duration (140f) is outside [84, 132] frames. Fix: Retime scene duration between 84 and 132 frames (1.4s - 2.2s).",
+      "frame": 2620,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_20_SAFE_BEHIND_LINES combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 2620,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_20_SAFE_BEHIND_LINES",
+      "rule": "DEAD_HOLD_LINT",
+      "severity": "ERROR",
+      "expected": "Post-payoff hold <= 72 frames (1.20s) to prevent slide-reading fatigue",
+      "actual": "99 frames dead hold after payoff beat",
+      "fix": "DEAD_HOLD_LINT: Post-payoff hold of 99 frames exceeds maximum 72 frames (1.2s). Fix: Shorten scene duration or delay payoff trigger so hold after payoff is <= 72 frames.",
+      "frame": 2661,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "rule": "SCENE_PACING_WINDOW",
+      "severity": "ERROR",
+      "expected": "84..150f",
+      "actual": "180f",
+      "fix": "SCENE_PACING_WINDOW: Scene SCENE_21_LEGACY_PRESERVED duration (180f) is outside [84, 150] frames. Fix: Retime scene duration between 84 and 150 frames (1.4s - 2.2s).",
+      "frame": 2760,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_21_LEGACY_PRESERVED",
+      "rule": "WORD_BUDGET",
+      "severity": "ERROR",
+      "expected": "3..7 words",
+      "actual": "8 words",
+      "fix": "WORD_BUDGET: Scene SCENE_21_LEGACY_PRESERVED combined text has 8 words (allowed: 3..7). Fix: Edit combined setup and payoff text to 3-7 words total (< 40 chars/line, max 2 lines).",
+      "frame": 2760,
+      "autoFixed": false
+    }
+  ]
 }

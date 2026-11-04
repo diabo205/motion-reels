@@ -26,3 +26,6 @@ export * from './WeatheredMilitaryStamp';
 
 // 8. Shared High-Fidelity Organic Vector Explosions
 export * from './OrganicExplosion';
+
+// 9. Historical Cel-Shading & Multi-Tone Material Hierarchy
+export * from './CelShading';

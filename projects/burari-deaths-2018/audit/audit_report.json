@@ -1,0 +1,537 @@
+{
+  "projectSlug": "burari-deaths-2018",
+  "title": "THE BURARI DEATHS",
+  "timestamp": "2026-11-04T08:40:52.051Z",
+  "passed": true,
+  "totalFrames": 2756,
+  "durationSec": 45.93,
+  "maxFramesCeiling": 3500,
+  "sceneCount": 26,
+  "transientEngine": "librosa",
+  "transientStats": {
+    "totalTransients": 506,
+    "bassDropCount": 111,
+    "cymbalCrashCount": 32,
+    "energyPeakCount": 8,
+    "onsetCount": 355
+  },
+  "telemetryAnalysis": {
+    "projectSlug": "burari-deaths-2018",
+    "openingArchetype": "STRUCTURAL_FRACTURE",
+    "hookDurationFrames": 96,
+    "hookHoldRate": 0.955,
+    "hasLiveTelemetry": false,
+    "telemetryPlatform": "baseline_prior",
+    "sceneStats": [
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 1,
+        "sceneId": "01_burarihousefacadefracture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 96,
+        "durationBucket": "<=128f",
+        "payoffOffset": 38,
+        "holdRate": 0.955,
+        "isHook": true
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 2,
+        "sceneId": "02_neighbourshutteredshopsplit",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 114,
+        "durationBucket": "<=128f",
+        "payoffOffset": 45,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 3,
+        "sceneId": "03_flashlightcorridorhero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 108,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 4,
+        "sceneId": "04_santnagartacticalmap",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 108,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.865,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 5,
+        "sceneId": "05_threegenerationstallyboard",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 6,
+        "sceneId": "06_priyankaengagementhero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 7,
+        "sceneId": "07_bindingsandcottonfracture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 41,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 8,
+        "sceneId": "08_elevenpipeswallsplit",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 107,
+        "durationBucket": "<=128f",
+        "payoffOffset": 37,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 9,
+        "sceneId": "09_mediafrenzyquotecard",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 42,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 10,
+        "sceneId": "10_prayerroomshrinehero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 45,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 11,
+        "sceneId": "11_patriarchmemorialcard",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 111,
+        "durationBucket": "<=128f",
+        "payoffOffset": 39,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 12,
+        "sceneId": "12_lalittraumasilencesplit",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 39,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 13,
+        "sceneId": "13_possessionbreakthroughfracture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 108,
+        "durationBucket": "<=128f",
+        "payoffOffset": 41,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 14,
+        "sceneId": "14_priyankadiarieswritingcard",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 41,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 15,
+        "sceneId": "15_prosperityexpansiontallyboard",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 16,
+        "sceneId": "16_badhtapasyacommandhero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 45,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 17,
+        "sceneId": "17_banyantreerootsfracture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 107,
+        "durationBucket": "<=128f",
+        "payoffOffset": 43,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 18,
+        "sceneId": "18_rootsvsdupattassplit",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 43,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 19,
+        "sceneId": "19_finalpromisequotecard",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 107,
+        "durationBucket": "<=128f",
+        "payoffOffset": 42,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 20,
+        "sceneId": "20_midnightstoolstransithero",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 103,
+        "durationBucket": "<=128f",
+        "payoffOffset": 42,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 21,
+        "sceneId": "21_grandmotherbedleaderhero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 108,
+        "durationBucket": "<=128f",
+        "payoffOffset": 45,
+        "holdRate": 0.885,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 22,
+        "sceneId": "22_tommyterracebarksplit",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 107,
+        "durationBucket": "<=128f",
+        "payoffOffset": 44,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 23,
+        "sceneId": "23_stoolstopplefracture",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 36,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 24,
+        "sceneId": "24_psychologicalautopsycard",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 106,
+        "durationBucket": "<=128f",
+        "payoffOffset": 42,
+        "holdRate": 0.935,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 25,
+        "sceneId": "25_memorialtallyboardhero",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 44,
+        "holdRate": 0.905,
+        "isHook": false
+      },
+      {
+        "projectSlug": "burari-deaths-2018",
+        "sceneIndex": 26,
+        "sceneId": "26_silenthousemonumenthero",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 105,
+        "durationBucket": "<=128f",
+        "payoffOffset": 45,
+        "holdRate": 0.885,
+        "isHook": false
+      }
+    ]
+  },
+  "errorCount": 0,
+  "warningCount": 27,
+  "motionChecks": [],
+  "violations": [
+    {
+      "sceneId": "GLOBAL_VECTORS",
+      "rule": "LIBRARY_REUSE",
+      "severity": "WARNING",
+      "expected": "Vector files with > 50 <path> elements should import reusable assets from src/library/ or primitives from src/kit/",
+      "actual": "Found 133 raw <path> elements in src/components/BurariDeathsVectors.tsx with zero imports from src/library/ or src/kit/",
+      "fix": "LIBRARY_REUSE: File src/components/BurariDeathsVectors.tsx has 133 raw <path> elements and imports nothing from src/library/ or src/kit/. Fix: Refactor common silhouettes, hardware, and backgrounds into src/library/ or compose using existing kit/library primitives.",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "01_burarihousefacadefracture",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for burari_house_facade.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate burari_house_facade.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "02_neighbourshutteredshopsplit",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for burari_house_facade.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate burari_house_facade.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "03_flashlightcorridorhero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for iron_ceiling_mesh_grill.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate iron_ceiling_mesh_grill.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "04_santnagartacticalmap",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for delhi_burari_locator_map.png in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate delhi_burari_locator_map.png has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "05_threegenerationstallyboard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for indian_family_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate indian_family_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "06_priyankaengagementhero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for priyanka_marigold_engagement.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate priyanka_marigold_engagement.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "07_bindingsandcottonfracture",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for iron_ceiling_mesh_grill.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate iron_ceiling_mesh_grill.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "08_elevenpipeswallsplit",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for eleven_pvc_pipes_wall.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate eleven_pvc_pipes_wall.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "09_mediafrenzyquotecard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for forensic_autopsy_dossier.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate forensic_autopsy_dossier.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "10_prayerroomshrinehero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for bhopal_singh_ancestor_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate bhopal_singh_ancestor_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "11_patriarchmemorialcard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for bhopal_singh_ancestor_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate bhopal_singh_ancestor_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "12_lalittraumasilencesplit",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for burari_house_facade.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate burari_house_facade.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "13_possessionbreakthroughfracture",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for bhopal_singh_ancestor_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate bhopal_singh_ancestor_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "14_priyankadiarieswritingcard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for handwritten_diary_register.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate handwritten_diary_register.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "15_prosperityexpansiontallyboard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for prosperity_bazaar_counters.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate prosperity_bazaar_counters.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "16_badhtapasyacommandhero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for sacred_banyan_tree_roots.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate sacred_banyan_tree_roots.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "17_banyantreerootsfracture",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for sacred_banyan_tree_roots.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate sacred_banyan_tree_roots.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "18_rootsvsdupattassplit",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for iron_ceiling_mesh_grill.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate iron_ceiling_mesh_grill.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "19_finalpromisequotecard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for handwritten_diary_register.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate handwritten_diary_register.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "20_midnightstoolstransithero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for prosperity_bazaar_counters.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate prosperity_bazaar_counters.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "21_grandmotherbedleaderhero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for indian_family_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate indian_family_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "22_tommyterracebarksplit",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for terrace_chained_dog_tommy.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate terrace_chained_dog_tommy.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "23_stoolstopplefracture",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for iron_ceiling_mesh_grill.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate iron_ceiling_mesh_grill.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "24_psychologicalautopsycard",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for forensic_autopsy_dossier.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate forensic_autopsy_dossier.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "25_memorialtallyboardhero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for bhopal_singh_ancestor_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate bhopal_singh_ancestor_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    },
+    {
+      "sceneId": "26_silenthousemonumenthero",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for burari_house_facade.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate burari_house_facade.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/burari-deaths-2018/plates/notes.json."
+    }
+  ]
+}

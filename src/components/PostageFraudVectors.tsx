@@ -1,3 +1,33 @@
+import {
+  Scene01SPLITCONFRONTATIONSilhouette,
+  Scene02CROWDTALLYSilhouette,
+  Scene03LONELEADERSilhouette,
+  Scene04VECTORMAPSilhouette,
+  Scene05QUOTECARDSilhouette,
+  Scene06SPLITCONFRONTATIONSilhouette,
+  Scene07LONELEADERSilhouette,
+  Scene08VEHICLEINTRANSITSilhouette,
+  Scene09VECTORMAPSilhouette,
+  Scene10QUOTECARDSilhouette,
+  Scene11LONELEADERSilhouette,
+  Scene12STRUCTURALFRACTURESilhouette,
+  Scene13CROWDTALLYSilhouette,
+  Scene14VEHICLEINTRANSITSilhouette,
+  Scene15LONELEADERSilhouette,
+  Scene16STRUCTURALFRACTURESilhouette,
+  Scene17VECTORMAPSilhouette,
+  Scene18SPLITCONFRONTATIONSilhouette,
+  Scene19QUOTECARDSilhouette,
+  Scene20VEHICLEINTRANSITSilhouette,
+  Scene21STRUCTURALFRACTURESilhouette,
+  Scene22LONELEADERSilhouette,
+  Scene23CROWDTALLYSilhouette,
+  Scene24SPLITCONFRONTATIONSilhouette,
+  Scene25QUOTECARDSilhouette,
+  Scene26STRUCTURALFRACTURESilhouette,
+  Scene27LONELEADERSilhouette,
+  Scene28SPLITCONFRONTATIONSilhouette,
+} from '../../projects/postage-fraud-2026/plates/TracedPlateAssets';
 import React from 'react';
 import { useCurrentFrame, interpolate } from 'remotion';
 import { createArcScallopedCloud, create8PointedStarPath } from '../kit/OrganicExplosion';
@@ -869,7 +899,23 @@ export const RupeesParcelTallyBoard: React.FC<{ durationFrames?: number }> = ({ 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene02CROWDTALLYSilhouette color="#1E293B" opacity={0.35} scale={1.0} x={100} y={850} />
       <FederalNavyAura cx={540} cy={1180} rx={460} ry={250} id="tallyBoardAura" />
+
+      
+        {/* Corrugated Box Structural Creases & Authentic Packaging Tape Seams */}
+        <path d="M 80 1150 Q 185 1160 290 1150" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 80 1200 Q 185 1208 290 1200" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 90 1020 Q 185 1028 280 1020" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 90 1070 Q 185 1076 280 1070" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 110 900 Q 190 906 270 900" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 790 1140 Q 895 1148 1000 1140" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 790 1200 Q 895 1208 1000 1200" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 800 1000 Q 895 1008 990 1000" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 820 890 Q 900 896 980 890" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 185 860 L 185 1270" stroke="#92400E" strokeWidth="3" strokeDasharray="8 4" fill="none" />
+        <path d="M 895 850 L 895 1260" stroke="#92400E" strokeWidth="3" strokeDasharray="8 4" fill="none" />
+        <path d="M 320 940 L 760 940 L 760 1420 L 320 1420 Z" stroke="#F59E0B" strokeWidth="2" fill="none" />
 
       {/* Massive Towering Stacks of Corrugated Parcels */}
       <g transform={`translate(0, ${parcelJitter})`}>
@@ -962,6 +1008,7 @@ export const FaheemVillageDeskSilhouette: React.FC<{ durationFrames?: number }> 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene03LONELEADERSilhouette color="#9A3412" opacity={0.3} scale={1.0} x={100} y={880} />
       <defs>
         <linearGradient id="windowSunbeam" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FEF08A" stopOpacity={0.28} />
@@ -1535,6 +1582,7 @@ export const BarcodeCryptographicFlawSplit: React.FC<{ durationFrames?: number }
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene06SPLITCONFRONTATIONSilhouette color="#1E1B4B" opacity={0.4} scale={1.0} x={100} y={880} />
       <defs>
         <radialGradient id="lensGlow" cx="40%" cy="35%" r="65%">
           <stop offset="0%" stopColor="#38BDF8" stopOpacity={0.35} />
@@ -1725,6 +1773,8 @@ export const BarcodeCryptographicFlawSplit: React.FC<{ durationFrames?: number }
 // SCENE 07: LABELSBANK DARK ROOM LAUNCH (LONE_LEADER, Payoff: Frame 36)
 // ============================================================================
 export const LabelsBankDarkRoomLaunch: React.FC<{ durationFrames?: number }> = ({ durationFrames = 102 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 36;
   const monitorGlow = isPayoff ? interpolate(frame - 36, [0, 8, 20], [0.3, 1.0, 0.9], CLAMP) : 0.2;
@@ -1732,6 +1782,18 @@ export const LabelsBankDarkRoomLaunch: React.FC<{ durationFrames?: number }> = (
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene07LONELEADERSilhouette color="#1E1B4B" opacity={0.4} scale={1.0} x={100} y={880} />
+      {/* Rack-Mounted Server Routing Bus Lines & Ambient Data Cables */}
+      <g opacity="0.6">
+        <path d="M 80 1280 C 140 1310, 220 1320, 320 1300" stroke="#10B981" strokeWidth="2" fill="none" />
+        <path d="M 80 1300 C 150 1330, 240 1340, 340 1320" stroke="#047857" strokeWidth="2.5" fill="none" />
+        <path d="M 80 1320 C 160 1350, 260 1360, 360 1340" stroke="#065F46" strokeWidth="2" fill="none" />
+        <path d="M 720 1300 C 800 1330, 880 1320, 1000 1280" stroke="#38BDF8" strokeWidth="2" fill="none" />
+        <path d="M 700 1320 C 780 1350, 860 1340, 980 1300" stroke="#0284C7" strokeWidth="2.5" fill="none" />
+        <path d="M 740 1340 C 820 1370, 900 1360, 1000 1320" stroke="#0369A1" strokeWidth="2" fill="none" />
+        <path d="M 540 1000 L 540 1250" stroke="#10B981" strokeWidth="1.5" strokeDasharray="4 4" fill="none" />
+        <path d="M 480 1100 Q 540 1060 600 1100" stroke="#34D399" strokeWidth="2" fill="none" />
+      </g>
       <CyberGreenAura cx={540} cy={1180} rx={460} ry={260} id="darkRoomLaunchAura" />
 
       {/* Dark Room Studio Geometry */}
@@ -1813,6 +1875,8 @@ export const LabelsBankDarkRoomLaunch: React.FC<{ durationFrames?: number }> = (
 // SCENE 08: USPS TWO DOLLAR LABEL TRANSIT (VEHICLE_IN_TRANSIT, Payoff: Frame 23)
 // ============================================================================
 export const UspsTwoDollarLabelTransit: React.FC<{ durationFrames?: number }> = ({ durationFrames = 95 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 23;
   const truckBob = Math.sin(frame * 0.7) * 3;
@@ -1821,6 +1885,26 @@ export const UspsTwoDollarLabelTransit: React.FC<{ durationFrames?: number }> = 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene08VEHICLEINTRANSITSilhouette color="#0F172A" opacity={0.4} scale={1.0} x={80} y={900} />
+      {/* Grumman LLV Body Paneling, Rivets & Road Surface Perspective Lines */}
+      <g opacity="0.75">
+        <path d="M 0 1480 L 1080 1480" stroke="#475569" strokeWidth="4" fill="none" />
+        <path d="M 0 1520 L 1080 1520" stroke="#334155" strokeWidth="6" strokeDasharray="40 25" fill="none" />
+        <path d="M 0 1560 L 1080 1560" stroke="#1E293B" strokeWidth="8" fill="none" />
+        <path d="M 120 1100 L 480 1100" stroke="#94A3B8" strokeWidth="2" fill="none" />
+        <path d="M 120 1140 L 480 1140" stroke="#64748B" strokeWidth="2" fill="none" />
+        <path d="M 120 1220 L 480 1220" stroke="#334155" strokeWidth="2" fill="none" />
+        <path d="M 180 1250 Q 240 1190 300 1250" stroke="#0F172A" strokeWidth="4" fill="none" />
+        <path d="M 360 1250 Q 420 1190 480 1250" stroke="#0F172A" strokeWidth="4" fill="none" />
+        <path d="M 520 1050 L 520 1350" stroke="#DC2626" strokeWidth="3" fill="none" />
+        <path d="M 560 1050 L 560 1350" stroke="#1E3A8A" strokeWidth="3" fill="none" />
+        <path d="M 600 1080 C 660 1040, 780 1040, 840 1080" stroke="#F59E0B" strokeWidth="2.5" fill="none" />
+        <path d="M 620 1120 C 680 1090, 760 1090, 820 1120" stroke="#D97706" strokeWidth="2" fill="none" />
+        <path d="M 640 1160 C 700 1140, 740 1140, 800 1160" stroke="#B45309" strokeWidth="2" fill="none" />
+        <path d="M 600 1220 L 840 1220" stroke="#475569" strokeWidth="2.5" fill="none" />
+        <path d="M 220 1100 L 220 1180" stroke="#CBD5E1" strokeWidth="2" fill="none" />
+        <path d="M 380 1100 L 380 1180" stroke="#CBD5E1" strokeWidth="2" fill="none" />
+      </g>
       <FederalNavyAura cx={540} cy={1180} rx={460} ry={250} id="uspsTruckAura" />
 
       {/* Asphalt Highway Surface */}
@@ -1938,6 +2022,7 @@ export const SixteenAccountsNetworkMap: React.FC<{ durationFrames?: number }> = 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene09VECTORMAPSilhouette color="#0F172A" opacity={0.35} scale={1.0} x={80} y={880} />
       <defs>
         <radialGradient id="hubCenterGlow" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#F59E0B" stopOpacity={0.8} />
@@ -2173,6 +2258,8 @@ export const FamilySignatureShieldsCard: React.FC<{ durationFrames?: number }> =
 // SCENE 11: WIFE SISTER AUNT COURTYARD SILHOUETTE (LONE_LEADER, Payoff: Frame 33)
 // ============================================================================
 export const WifeSisterAuntCourtyardSilhouette: React.FC<{ durationFrames?: number }> = ({ durationFrames = 104 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 33;
   const chainGlint = isPayoff ? interpolate(frame - 33, [0, 10, 20], [0, 1, 0.85], CLAMP) : 0;
@@ -2180,6 +2267,19 @@ export const WifeSisterAuntCourtyardSilhouette: React.FC<{ durationFrames?: numb
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene11LONELEADERSilhouette color="#9A3412" opacity={0.4} scale={1.0} x={100} y={880} />
+      {/* Traditional Punjabi Baked Brick Masonry Joints & Courtyard Architecture */}
+      <g opacity="0.65">
+        <path d="M 60 920 L 380 920" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 60 960 L 380 960" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 60 1000 L 380 1000" stroke="#78350F" strokeWidth="2" fill="none" />
+        <path d="M 120 920 L 120 960" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 240 920 L 240 960" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 180 960 L 180 1000" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 300 960 L 300 1000" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 700 940 C 760 900, 880 900, 940 940" stroke="#B45309" strokeWidth="3" fill="none" />
+        <path d="M 720 980 C 770 950, 870 950, 920 980" stroke="#92400E" strokeWidth="2" fill="none" />
+      </g>
       <TerracottaAtmosphericAura cx={540} cy={1180} rx={440} ry={250} id="courtyardAura" />
 
       {/* Traditional Punjab Mughal Multi-Foil Archway */}
@@ -2265,6 +2365,8 @@ export const WifeSisterAuntCourtyardSilhouette: React.FC<{ durationFrames?: numb
 // SCENE 12: USPS VAULT FRACTURE EXPLOSION (STRUCTURAL_FRACTURE, 19s Beat Drop Payoff: Frame 35)
 // ============================================================================
 export const UspsVaultFractureExplosion: React.FC<{ durationFrames?: number }> = ({ durationFrames = 105 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 35;
   const blastScale = isPayoff ? interpolate(frame - 35, [0, 5, 20], [0.1, 1.25, 1.0], CLAMP) : 0;
@@ -2279,6 +2381,30 @@ export const UspsVaultFractureExplosion: React.FC<{ durationFrames?: number }> =
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene12STRUCTURALFRACTURESilhouette color="#7F1D1D" opacity={0.45} scale={1.0} x={80} y={880} />
+      {/* Heavy Ballistic Steel Vault Stress Fractures & Detonation Shockwave Paths */}
+      <g opacity="0.8">
+        <path d="M 540 1180 L 420 980 L 360 880" stroke="#EF4444" strokeWidth="4" fill="none" />
+        <path d="M 540 1180 L 680 960 L 740 860" stroke="#F87171" strokeWidth="4" fill="none" />
+        <path d="M 540 1180 L 380 1280 L 260 1340" stroke="#DC2626" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1180 L 700 1300 L 820 1380" stroke="#B91C1C" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1180 L 540 850" stroke="#FEF08A" strokeWidth="3" fill="none" />
+        <path d="M 480 1050 L 440 1080" stroke="#FCA5A5" strokeWidth="2" fill="none" />
+        <path d="M 620 1040 L 660 1070" stroke="#FCA5A5" strokeWidth="2" fill="none" />
+        <path d="M 460 1220 L 420 1250" stroke="#F87171" strokeWidth="2" fill="none" />
+        <path d="M 640 1230 L 680 1260" stroke="#F87171" strokeWidth="2" fill="none" />
+        <path d="M 320 1000 C 380 940, 480 920, 540 920" stroke="#991B1B" strokeWidth="2.5" fill="none" />
+        <path d="M 760 1000 C 700 940, 600 920, 540 920" stroke="#991B1B" strokeWidth="2.5" fill="none" />
+        <path d="M 300 1180 L 780 1180" stroke="#7F1D1D" strokeWidth="2" strokeDasharray="10 5" fill="none" />
+        <path d="M 350 1100 Q 540 1050 730 1100" stroke="#FDE047" strokeWidth="2" fill="none" />
+        <path d="M 350 1260 Q 540 1310 730 1260" stroke="#FDE047" strokeWidth="2" fill="none" />
+        <path d="M 220 950 L 280 990 L 250 1040 Z" fill="#450A0A" stroke="#DC2626" strokeWidth="1.5" />
+        <path d="M 860 950 L 800 990 L 830 1040 Z" fill="#450A0A" stroke="#DC2626" strokeWidth="1.5" />
+        <path d="M 200 1300 L 260 1280 L 240 1340 Z" fill="#450A0A" stroke="#DC2626" strokeWidth="1.5" />
+        <path d="M 880 1300 L 820 1280 L 840 1340 Z" fill="#450A0A" stroke="#DC2626" strokeWidth="1.5" />
+        <path d="M 500 860 L 540 820 L 580 860 Z" fill="#FEF08A" />
+        <path d="M 540 1180 C 480 1120, 480 1240, 540 1180 Z" fill="#FFFFFF" />
+      </g>
       <FieryExplosionAura cx={540} cy={1180} rx={480} ry={270} id="vaultBlastAura" />
 
       {/* Neoclassical USPS Federal Treasury Vault Facade */}
@@ -2379,6 +2505,8 @@ export const UspsVaultFractureExplosion: React.FC<{ durationFrames?: number }> =
 // SCENE 13: FIVE MILLION LABELS CONVEYOR TALLY (CROWD_TALLY, Payoff: Frame 33)
 // ============================================================================
 export const FiveMillionLabelsConveyorTally: React.FC<{ durationFrames?: number }> = ({ durationFrames = 104 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 33;
   const beltPhase = (frame * 26) % 120;
@@ -2386,6 +2514,22 @@ export const FiveMillionLabelsConveyorTally: React.FC<{ durationFrames?: number 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene13CROWDTALLYSilhouette color="#0F172A" opacity={0.35} scale={1.0} x={100} y={880} />
+      {/* Industrial High-Speed Label Conveyor Belts & Spool Tension Arms */}
+      <g opacity="0.7">
+        <path d="M 120 1180 L 960 1180" stroke="#334155" strokeWidth="6" fill="none" />
+        <path d="M 120 1240 L 960 1240" stroke="#1E293B" strokeWidth="8" fill="none" />
+        <path d="M 140 1160 L 140 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 280 1160 L 280 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 420 1160 L 420 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 560 1160 L 560 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 700 1160 L 700 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 840 1160 L 840 1260" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 160 1100 Q 240 1020 320 1100" stroke="#38BDF8" strokeWidth="2.5" fill="none" />
+        <path d="M 760 1100 Q 840 1020 920 1100" stroke="#38BDF8" strokeWidth="2.5" fill="none" />
+        <path d="M 200 950 L 880 950" stroke="#0F172A" strokeWidth="3" strokeDasharray="12 6" fill="none" />
+        <path d="M 300 880 C 420 840, 660 840, 780 880" stroke="#F59E0B" strokeWidth="2" fill="none" />
+      </g>
       <FederalNavyAura cx={540} cy={1180} rx={460} ry={250} id="conveyorTallyAura" />
 
       {/* Grid of 5,200 Buyer Nodes Matrix (Background Texture) */}
@@ -2453,6 +2597,8 @@ export const FiveMillionLabelsConveyorTally: React.FC<{ durationFrames?: number 
 // SCENE 14: ATLANTIC CARGO JET WIRE TRANSIT (VEHICLE_IN_TRANSIT, Payoff: Frame 37)
 // ============================================================================
 export const AtlanticCargoJetWireTransit: React.FC<{ durationFrames?: number }> = ({ durationFrames = 106 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 37;
   const bankDeg = interpolate(frame, [0, durationFrames], [-8, -14], CLAMP);
@@ -2463,6 +2609,18 @@ export const AtlanticCargoJetWireTransit: React.FC<{ durationFrames?: number }> 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene14VEHICLEINTRANSITSilhouette color="#9A3412" opacity={0.4} scale={1.0} x={80} y={880} />
+      {/* Transatlantic Flight Trajectory Telemetry & Commercial Freighter Contours */}
+      <g opacity="0.75">
+        <path d="M 100 1350 C 350 1200, 650 1100, 980 1020" stroke="#F59E0B" strokeWidth="3.5" strokeDasharray="16 8" fill="none" />
+        <path d="M 120 1370 C 370 1220, 670 1120, 1000 1040" stroke="#D97706" strokeWidth="2" fill="none" />
+        <path d="M 350 1160 L 450 1160" stroke="#38BDF8" strokeWidth="2" fill="none" />
+        <path d="M 550 1110 L 650 1110" stroke="#38BDF8" strokeWidth="2" fill="none" />
+        <path d="M 750 1060 L 850 1060" stroke="#38BDF8" strokeWidth="2" fill="none" />
+        <path d="M 200 1250 Q 250 1210 300 1250" stroke="#F8FAFC" strokeWidth="2.5" fill="none" />
+        <path d="M 700 1000 Q 750 960 800 1000" stroke="#F8FAFC" strokeWidth="2.5" fill="none" />
+        <path d="M 400 1300 L 700 1080" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="6 3" fill="none" />
+      </g>
       <defs>
         <linearGradient id="sunsetSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#0B132B" />
@@ -2653,6 +2811,7 @@ export const GoldenVillaParanoiaLeader: React.FC<{ durationFrames?: number }> = 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene15LONELEADERSilhouette color="#78350F" opacity={0.4} scale={1.0} x={100} y={880} />
       <defs>
         <linearGradient id="blindShadowGrad" x1="0%" y1="0%" x2="100%" y2="80%">
           <stop offset="0%" stopColor="#090D12" stopOpacity={0.85} />
@@ -2858,6 +3017,7 @@ export const FloridaGrandJuryBountyFracture: React.FC<{ durationFrames?: number 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene16STRUCTURALFRACTURESilhouette color="#7F1D1D" opacity={0.45} scale={1.0} x={80} y={880} />
       <FieryExplosionAura cx={540} cy={1180} rx={480} ry={270} id="grandJuryBountyAura" />
 
       {/* Classical Neoclassical Federal Courthouse Architecture */}
@@ -3034,6 +3194,7 @@ export const MiamiToLahoreRadarTraceMap: React.FC<{ durationFrames?: number }> =
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene17VECTORMAPSilhouette color="#0F172A" opacity={0.35} scale={1.0} x={80} y={880} />
       <defs>
         <radialGradient id="miamiRadarAuraGrad" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#0284C7" stopOpacity={0.65} />
@@ -3166,6 +3327,7 @@ export const SixteenAccountsFrozenSplit: React.FC<{ durationFrames?: number }> =
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene18SPLITCONFRONTATIONSilhouette color="#7F1D1D" opacity={0.45} scale={1.0} x={80} y={880} />
       <defs>
         <clipPath id="splitLeftVault">
           <rect x="80" y="860" width="460" height="630" />
@@ -3363,6 +3525,7 @@ export const NcciaFamilyFalloutDossier: React.FC<{ durationFrames?: number }> = 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene19QUOTECARDSilhouette color="#78350F" opacity={0.35} scale={1.0} x={80} y={880} />
       <TerracottaAtmosphericAura cx={540} cy={1180} rx={440} ry={250} id="dossierFalloutAura" />
 
       {/* Classified NCCIA Kraft Dossier Folder */}
@@ -3422,6 +3585,7 @@ export const LahoreNightRaidConvoyTransit: React.FC<{ durationFrames?: number }>
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene20VEHICLEINTRANSITSilhouette color="#1E1B4B" opacity={0.45} scale={1.0} x={80} y={900} />
       <defs>
         <linearGradient id="headlightConeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#FEF08A" stopOpacity={0.85} />
@@ -3616,6 +3780,7 @@ export const LahoreHideoutBreachFracture: React.FC<{ durationFrames?: number }> 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene21STRUCTURALFRACTURESilhouette color="#7F1D1D" opacity={0.45} scale={1.0} x={80} y={880} />
       <FieryExplosionAura cx={540} cy={1180} rx={480} ry={270} id="hideoutBreachAura" />
 
       {/* Elaborately Carved Punjab Wooden Door */}
@@ -3677,6 +3842,8 @@ export const LahoreHideoutBreachFracture: React.FC<{ durationFrames?: number }> 
 // SCENE 22: IRON CUFFS ON CODER HANDS LEADER (LONE_LEADER, Payoff: Frame 36)
 // ============================================================================
 export const IronCuffsOnCoderHandsLeader: React.FC<{ durationFrames?: number }> = ({ durationFrames = 106 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 36;
   const cuffClamp = isPayoff ? interpolate(frame - 36, [0, 5, 12], [40, 0, 0], CLAMP) : 40;
@@ -3684,6 +3851,22 @@ export const IronCuffsOnCoderHandsLeader: React.FC<{ durationFrames?: number }> 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene22LONELEADERSilhouette color="#1E1B4B" opacity={0.45} scale={1.0} x={100} y={880} />
+      {/* Heavy Blued-Steel Handcuff Chain Mechanism & Forensic Arrest Contours */}
+      <g opacity="0.8">
+        <path d="M 440 1220 C 460 1190, 480 1190, 500 1220" stroke="#64748B" strokeWidth="5" fill="none" />
+        <path d="M 480 1220 C 500 1190, 520 1190, 540 1220" stroke="#94A3B8" strokeWidth="5" fill="none" />
+        <path d="M 520 1220 C 540 1190, 560 1190, 580 1220" stroke="#64748B" strokeWidth="5" fill="none" />
+        <path d="M 560 1220 C 580 1190, 600 1190, 620 1220" stroke="#94A3B8" strokeWidth="5" fill="none" />
+        <path d="M 600 1220 C 620 1190, 640 1190, 660 1220" stroke="#64748B" strokeWidth="5" fill="none" />
+        <path d="M 380 1160 C 350 1200, 350 1260, 380 1300" stroke="#334155" strokeWidth="6" fill="none" />
+        <path d="M 700 1160 C 730 1200, 730 1260, 700 1300" stroke="#334155" strokeWidth="6" fill="none" />
+        <path d="M 390 1170 C 365 1205, 365 1255, 390 1290" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 690 1170 C 715 1205, 715 1255, 690 1290" stroke="#64748B" strokeWidth="3" fill="none" />
+        <path d="M 400 1230 L 420 1230" stroke="#0F172A" strokeWidth="4" fill="none" />
+        <path d="M 660 1230 L 680 1230" stroke="#0F172A" strokeWidth="4" fill="none" />
+        <path d="M 540 1120 L 540 1340" stroke="#DC2626" strokeWidth="1.5" strokeDasharray="6 3" fill="none" />
+      </g>
       <FederalNavyAura cx={540} cy={1180} rx={460} ry={250} id="cuffsLeaderAura" />
 
       {/* Matrix Binary Code Falling in Background */}
@@ -3742,12 +3925,30 @@ export const IronCuffsOnCoderHandsLeader: React.FC<{ durationFrames?: number }> 
 // SCENE 23: KHANEWAL VILLAGE GRIEF TALLY (CROWD_TALLY, Payoff: Frame 34)
 // ============================================================================
 export const KhanewalVillageGriefTally: React.FC<{ durationFrames?: number }> = ({ durationFrames = 103 }) => {
+
+      
   const frame = useCurrentFrame();
   const isPayoff = frame >= 34;
   const tvFlicker = Math.sin(frame * 0.35) * 5;
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene23CROWDTALLYSilhouette color="#9A3412" opacity={0.4} scale={1.0} x={100} y={880} />
+      {/* Rustic South Punjab Brick Lane Masonry & Elder Walking Staff Contours */}
+      <g opacity="0.7">
+        <path d="M 140 1020 L 420 1020" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 140 1070 L 420 1070" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 140 1120 L 420 1120" stroke="#78350F" strokeWidth="2.5" fill="none" />
+        <path d="M 210 1020 L 210 1070" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 350 1020 L 350 1070" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 280 1070 L 280 1120" stroke="#78350F" strokeWidth="1.5" fill="none" />
+        <path d="M 660 1050 L 940 1050" stroke="#92400E" strokeWidth="2.5" fill="none" />
+        <path d="M 660 1100 L 940 1100" stroke="#92400E" strokeWidth="2.5" fill="none" />
+        <path d="M 750 1050 L 750 1100" stroke="#92400E" strokeWidth="1.5" fill="none" />
+        <path d="M 850 1050 L 850 1100" stroke="#92400E" strokeWidth="1.5" fill="none" />
+        <path d="M 540 1200 L 540 1520" stroke="#451A03" strokeWidth="5" fill="none" />
+        <path d="M 536 1200 C 530 1180, 520 1180, 514 1200" stroke="#451A03" strokeWidth="5" fill="none" />
+      </g>
       <TerracottaAtmosphericAura cx={540} cy={1180} rx={440} ry={250} id="villageGriefAura" />
 
       {/* Dimming Village Street Silhouettes */}
@@ -3812,6 +4013,7 @@ export const ExtraditionWatchtowerSplit: React.FC<{ durationFrames?: number }> =
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene24SPLITCONFRONTATIONSilhouette color="#0F172A" opacity={0.4} scale={1.0} x={80} y={880} />
       <defs>
         <clipPath id="splitWatchtowerLeft">
           <polygon points="80,860 480,860 520,1490 80,1490" />
@@ -3897,6 +4099,7 @@ export const StoryCircleTwoDollarShortcutCard: React.FC<{ durationFrames?: numbe
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene25QUOTECARDSilhouette color="#78350F" opacity={0.35} scale={1.0} x={80} y={880} />
       <defs>
         <radialGradient id="storyDialAura" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#F59E0B" stopOpacity={0.7} />
@@ -4095,6 +4298,32 @@ export const StoryCircleTwoDollarShortcutCard: React.FC<{ durationFrames?: numbe
 // SCENE 26: LABELSBANK MONITOR SHATTER FRACTURE (STRUCTURAL_FRACTURE, Payoff: Frame 36)
 // ============================================================================
 export const LabelsBankMonitorShatterFracture: React.FC<{ durationFrames?: number }> = ({ durationFrames = 104 }) => {
+
+      {/* High-Impact Tempered Monitor Glass Shatter & Seizure Detonation Lines */}
+      <g opacity="0.85">
+        <path d="M 540 1160 L 360 940 L 280 880" stroke="#EF4444" strokeWidth="4" fill="none" />
+        <path d="M 540 1160 L 720 940 L 800 880" stroke="#EF4444" strokeWidth="4" fill="none" />
+        <path d="M 540 1160 L 340 1280 L 240 1360" stroke="#DC2626" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1160 L 740 1280 L 840 1360" stroke="#DC2626" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1160 L 540 880" stroke="#FDE047" strokeWidth="3" fill="none" />
+        <path d="M 540 1160 L 540 1440" stroke="#FDE047" strokeWidth="3" fill="none" />
+        <path d="M 460 1040 L 400 1080" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 620 1040 L 680 1080" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 440 1220 L 380 1250" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 640 1220 L 700 1250" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 380 980 Q 540 920 700 980" stroke="#991B1B" strokeWidth="3" fill="none" />
+        <path d="M 360 1320 Q 540 1380 720 1320" stroke="#991B1B" strokeWidth="3" fill="none" />
+        <path d="M 480 1120 L 520 1100 L 510 1140 Z" fill="#FFFFFF" />
+        <path d="M 600 1120 L 560 1100 L 570 1140 Z" fill="#FFFFFF" />
+        <path d="M 520 1200 L 560 1200 L 540 1240 Z" fill="#FDE047" />
+        <path d="M 320 1160 L 760 1160" stroke="#B91C1C" strokeWidth="2" strokeDasharray="12 6" fill="none" />
+        <path d="M 280 1020 L 320 980 L 300 1060 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 800 1020 L 760 980 L 780 1060 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 260 1260 L 300 1240 L 280 1300 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 820 1260 L 780 1240 L 800 1300 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 500 960 L 540 920 L 580 960 Z" fill="#FEF08A" />
+      </g>
+
   const frame = useCurrentFrame();
   const isPayoff = frame >= 36;
   const shatterSpread = isPayoff ? interpolate(frame - 36, [0, 20], [0, 270], CLAMP) : 0;
@@ -4103,6 +4332,35 @@ export const LabelsBankMonitorShatterFracture: React.FC<{ durationFrames?: numbe
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene26STRUCTURALFRACTURESilhouette color="#7F1D1D" opacity={0.45} scale={1.0} x={80} y={880} />
+      {/* High-Impact Tempered Monitor Glass Shatter & Seizure Detonation Lines */}
+      <g opacity="0.85">
+        <path d="M 540 1160 L 360 940 L 280 880" stroke="#EF4444" strokeWidth="4" fill="none" />
+        <path d="M 540 1160 L 720 940 L 800 880" stroke="#EF4444" strokeWidth="4" fill="none" />
+        <path d="M 540 1160 L 340 1280 L 240 1360" stroke="#DC2626" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1160 L 740 1280 L 840 1360" stroke="#DC2626" strokeWidth="3.5" fill="none" />
+        <path d="M 540 1160 L 540 880" stroke="#FDE047" strokeWidth="3" fill="none" />
+        <path d="M 540 1160 L 540 1440" stroke="#FDE047" strokeWidth="3" fill="none" />
+        <path d="M 460 1040 L 400 1080" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 620 1040 L 680 1080" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 440 1220 L 380 1250" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 640 1220 L 700 1250" stroke="#FCA5A5" strokeWidth="2.5" fill="none" />
+        <path d="M 380 980 Q 540 920 700 980" stroke="#991B1B" strokeWidth="3" fill="none" />
+        <path d="M 360 1320 Q 540 1380 720 1320" stroke="#991B1B" strokeWidth="3" fill="none" />
+        <path d="M 480 1120 L 520 1100 L 510 1140 Z" fill="#FFFFFF" />
+        <path d="M 600 1120 L 560 1100 L 570 1140 Z" fill="#FFFFFF" />
+        <path d="M 520 1200 L 560 1200 L 540 1240 Z" fill="#FDE047" />
+        <path d="M 320 1160 L 760 1160" stroke="#B91C1C" strokeWidth="2" strokeDasharray="12 6" fill="none" />
+        <path d="M 280 1020 L 320 980 L 300 1060 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 800 1020 L 760 980 L 780 1060 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 260 1260 L 300 1240 L 280 1300 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 820 1260 L 780 1240 L 800 1300 Z" fill="#7F1D1D" stroke="#EF4444" strokeWidth="1.5" />
+        <path d="M 500 960 L 540 920 L 580 960 Z" fill="#FEF08A" />
+        <path d="M 450 1150 L 490 1180 L 440 1210 Z" fill="#EF4444" />
+        <path d="M 630 1150 L 590 1180 L 640 1210 Z" fill="#EF4444" />
+        <path d="M 510 1080 L 570 1080 L 540 1120 Z" fill="#FEF08A" />
+        <path d="M 520 1240 L 560 1240 L 540 1270 Z" fill="#F87171" />
+      </g>
       <FieryExplosionAura cx={540} cy={1180} rx={480} ry={270} id="monitorShatterAura" />
 
       {/* Cyber Command Room Desk & Ultra-Wide Curved Monitor Chassis */}
@@ -4189,6 +4447,7 @@ export const DarkCellIronBarsLeader: React.FC<{ durationFrames?: number }> = ({ 
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene27LONELEADERSilhouette color="#1E1B4B" opacity={0.45} scale={1.0} x={100} y={880} />
       <defs>
         <linearGradient id="moonlightShaft" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#38BDF8" stopOpacity={0.4} />
@@ -4373,6 +4632,7 @@ export const KhanewalRooftopLoopSplit: React.FC<{ durationFrames?: number }> = (
 
   return (
     <svg viewBox="0 0 1080 1920" className="w-full h-full">
+      <Scene28SPLITCONFRONTATIONSilhouette color="#9A3412" opacity={0.4} scale={1.0} x={80} y={880} />
       <defs>
         <radialGradient id="loopSunburstAura" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#EA580C" stopOpacity={0.7} />

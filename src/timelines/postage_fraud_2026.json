@@ -6,14 +6,14 @@
     "fps": 60,
     "width": 1080,
     "height": 1920,
-    "bpm": 103.36,
+    "bpm": 99.38,
     "bgmFile": "audio/bgm_postage_fraud.mp3",
     "bgmStartFrom": 0,
     "bgmLicense": {
-      "source": "YouTube Audio (https://youtu.be/Td9DymMNuo0)",
+      "source": "YouTube Audio (https://youtu.be/qGlwgPb8E7I)",
       "licenseType": "CREATIVE_COMMONS",
       "clearanceId": "CLR-POSTAGE-FRAUD-2026",
-      "attribution": "SKORN - Slowed (VUKEINE)"
+      "attribution": "ACIDO III (Super Slowed) - UdieNnx & Mc Denny"
     },
     "palette": "CONFLICT_CRISIS",
     "particleEmitter": "DUST",
@@ -38,8 +38,8 @@
         "movement": "SLOW_PUSH_IN",
         "intensity": 0.65
       },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 35,
+      "transientType": "BASS_DROP",
+      "transientHitFrame": 38,
       "textLayers": [
         {
           "text": "ONE PAKISTANI CODER",
@@ -50,7 +50,7 @@
         },
         {
           "text": "STOLE $126M FROM AMERICA",
-          "triggerFrameOffset": 35,
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM",
@@ -70,7 +70,7 @@
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 0,
+          "frameOffset": 38,
           "leadFrames": 2
         }
       ],
@@ -965,12 +965,7 @@
           "leadFrames": 2
         }
       ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "16 ACCOUNTS FROZEN HIS FAMILY NAMED",
-        "source": "THE $126M POSTAGE FRAUD Archival Record",
-        "verified": true
-      }
+      "sensitivity": "STANDARD"
     },
     {
       "sceneId": "19_step6_family_fallout_dossier",

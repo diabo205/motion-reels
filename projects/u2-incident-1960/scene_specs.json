@@ -1,0 +1,492 @@
+[
+  {
+    "scene": 1,
+    "act": "I",
+    "beat": "TRIGGER",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "GRAPH_GRID",
+    "startFrame": 0,
+    "durationFrames": 104,
+    "plate": "soviet_radar_p30.jpg",
+    "library": [
+      "SOVIET_RADAR_CLOSEUP_LOCK"
+    ],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "THE CIA SWORE"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 38,
+      "hit": "THE PILOT WAS DEAD",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "THE CIA SWORE",
+      "payoff": "THE PILOT WAS DEAD",
+      "tag": "1 MAY 1960 // 70,500 FT"
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 38
+    },
+    "viewerSees": "Soviet cathode radar grid with rotating sweep beam and red lock reticle shaking under incoming proximity alarm."
+  },
+  {
+    "scene": 2,
+    "act": "I",
+    "beat": "REACTION",
+    "archetype": "VEHICLE_IN_TRANSIT",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 104,
+    "durationFrames": 110,
+    "plate": "s75_dvina_missile.jpg",
+    "library": [
+      "S75_DVINA_MISSILE_STREAK"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "SOVIET S-75 MISSILE"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "RADAR LOCKED",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "SOVIET S-75 MISSILE",
+      "payoff": "RADAR LOCKED",
+      "tag": null
+    },
+    "sfx": {
+      "file": "missile_whoosh.wav",
+      "frame": 144
+    },
+    "viewerSees": "Soviet S-75 Dvina missile streaking diagonally across stratosphere leaving shock diamonds and supersonic exhaust trail."
+  },
+  {
+    "scene": 3,
+    "act": "II",
+    "beat": "TRIGGER",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 214,
+    "durationFrames": 110,
+    "plate": "u2_wreckage_sverdlovsk.jpg",
+    "library": [
+      "U2_MISSILE_DETONATION_SPIN"
+    ],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "MISSILE DETONATION"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "TOTAL CABIN LOSS",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "MISSILE DETONATION",
+      "payoff": "TOTAL CABIN LOSS",
+      "tag": null
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 254
+    },
+    "viewerSees": "High-altitude detonation fireball shatters U-2 right wing spar sending airframe into uncontrolled inverted flat spin as altimeter rolls rapidly."
+  },
+  {
+    "scene": 4,
+    "act": "II",
+    "beat": "REACTION",
+    "archetype": "VECTOR_MAP",
+    "staging": "GRAPH_GRID",
+    "startFrame": 324,
+    "durationFrames": 110,
+    "plate": "nasa_flight_map_turkey.jpg",
+    "library": [
+      "NASA_FABRICATED_FLIGHT_MAP"
+    ],
+    "camera": "PARALLAX_PAN_RIGHT",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "WASHINGTON'S COVER STORY"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 41,
+      "hit": "LOST WEATHER PLANE",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "WASHINGTON'S COVER STORY",
+      "payoff": "LOST WEATHER PLANE",
+      "tag": "WHITE HOUSE // 3 MAY 1960"
+    },
+    "sfx": {
+      "file": "typewriter_chatter.wav",
+      "frame": 365
+    },
+    "viewerSees": "Drafting map with fabricated civilian flight route over Lake Van Turkey with navigation compass rose and waypoints."
+  },
+  {
+    "scene": 5,
+    "act": "II",
+    "beat": "FOCAL",
+    "archetype": "QUOTE_CARD",
+    "staging": "WOOD_PANEL",
+    "startFrame": 434,
+    "durationFrames": 110,
+    "plate": "fake_nasa_u2_weather.jpg",
+    "library": [
+      "OFFICIAL_STATEMENT_STAMP_CARD"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "NASA FABRICATED FLIGHT"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "OFFICIAL STATEMENT",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "NASA FABRICATED FLIGHT",
+      "payoff": "OFFICIAL STATEMENT",
+      "tag": null
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 474
+    },
+    "viewerSees": "Official NASA press release document slammed by heavy red OFFICIAL STATEMENT rubber stamp."
+  },
+  {
+    "scene": 6,
+    "act": "III",
+    "beat": "TRIGGER",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "WOOD_PANEL",
+    "startFrame": 544,
+    "durationFrames": 110,
+    "plate": "eisenhower_portrait.jpg",
+    "library": [
+      "EISENHOWER_PRESS_DENIAL_STAGE"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "EISENHOWER PUBLICLY"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 44,
+      "hit": "DENIED ESPIONAGE",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "EISENHOWER PUBLICLY",
+      "payoff": "DENIED ESPIONAGE",
+      "tag": null
+    },
+    "sfx": {
+      "file": "camera_shutter.wav",
+      "frame": 588
+    },
+    "viewerSees": "President Eisenhower archival cutout at White House press conference surrounded by vintage broadcast microphones and flashbulbs."
+  },
+  {
+    "scene": 7,
+    "act": "III",
+    "beat": "REACTION",
+    "archetype": "CROWD_TALLY",
+    "staging": "NIGHT_FELT",
+    "startFrame": 654,
+    "durationFrames": 110,
+    "plate": "kremlin_moscow_red.jpg",
+    "library": [
+      "KREMLIN_FIVE_DAY_SILENCE_STAGE"
+    ],
+    "camera": "DUTCH_TILT",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "MOSCOW STAYED SILENT"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "FOR FIVE DAYS",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "MOSCOW STAYED SILENT",
+      "payoff": "FOR FIVE DAYS",
+      "tag": "MOSCOW // 1-5 MAY 1960"
+    },
+    "sfx": {
+      "file": "pocket_watch_tick.wav",
+      "frame": 694
+    },
+    "viewerSees": "Silhouette of Kremlin Spasskaya tower in blood-red atmosphere with digital 5-day flip counter ticking from D1 to D5."
+  },
+  {
+    "scene": 8,
+    "act": "III",
+    "beat": "FOCAL",
+    "archetype": "LONE_LEADER",
+    "staging": "NIGHT_FELT",
+    "startFrame": 764,
+    "durationFrames": 110,
+    "plate": "khrushchev_portrait.jpg",
+    "library": [
+      "KHRUSHCHEV_SUPREME_SOVIET_STAGE"
+    ],
+    "camera": "CRANE_SWEEP_UP",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "KHRUSHCHEV STEPS UP"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "SUPREME SOVIET",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "KHRUSHCHEV STEPS UP",
+      "payoff": "SUPREME SOVIET",
+      "tag": "SUPREME SOVIET // 7 MAY 1960"
+    },
+    "sfx": {
+      "file": "gavel_strike.wav",
+      "frame": 804
+    },
+    "viewerSees": "Premier Nikita Khrushchev steps up to Supreme Soviet orator dais backed by giant hammer-and-sickle emblem and red velvet banners."
+  },
+  {
+    "scene": 9,
+    "act": "III",
+    "beat": "MACRO",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "WOOD_PANEL",
+    "startFrame": 874,
+    "durationFrames": 110,
+    "plate": "khrushchev_official_full.jpg",
+    "library": [
+      "DOSSIER_SLAMS_SCATTERED_PHOTOS"
+    ],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "KHRUSHCHEV SPRANG"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 43,
+      "hit": "THE TRAP",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "KHRUSHCHEV SPRANG",
+      "payoff": "THE TRAP",
+      "tag": null
+    },
+    "sfx": {
+      "file": "stamp_slam.wav",
+      "frame": 917
+    },
+    "viewerSees": "Heavy declassified KGB dossier slams down on mahogany desk scattering aerial photos of Soviet military installations."
+  },
+  {
+    "scene": 10,
+    "act": "IV",
+    "beat": "TRIGGER",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "GRAPH_GRID",
+    "startFrame": 984,
+    "durationFrames": 110,
+    "plate": "powers_portrait.jpg",
+    "library": [
+      "CHECKMATE_POWERS_CAPTURED_STAGE"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "CHECKMATE IN MOSCOW"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 39,
+      "hit": "THE PILOT ALIVE",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "CHECKMATE IN MOSCOW",
+      "payoff": "THE PILOT ALIVE",
+      "tag": null
+    },
+    "sfx": {
+      "file": "camera_shutter.wav",
+      "frame": 1023
+    },
+    "viewerSees": "Francis Gary Powers Lubyanka intake photo with biometric laser grid scan lines and KGB detention stamp."
+  },
+  {
+    "scene": 11,
+    "act": "IV",
+    "beat": "REACTION",
+    "archetype": "VEHICLE_IN_TRANSIT",
+    "staging": "PAPER_EXTERIOR",
+    "startFrame": 1094,
+    "durationFrames": 110,
+    "plate": "u2_wreckage_sverdlovsk.jpg",
+    "library": [
+      "U2_WRECKAGE_EXHIBITION_STAGE"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "SOVIETS RECOVERED"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "THE INTACT PLANE",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "SOVIETS RECOVERED",
+      "payoff": "THE INTACT PLANE",
+      "tag": null
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 1134
+    },
+    "viewerSees": "Downed U-2 airframe displayed in Moscow Gorky Park under moving spotlights with velvet rope barriers."
+  },
+  {
+    "scene": 12,
+    "act": "IV",
+    "beat": "FOCAL",
+    "archetype": "STRUCTURAL_FRACTURE",
+    "staging": "GRAPH_GRID",
+    "startFrame": 1204,
+    "durationFrames": 110,
+    "plate": "powers_soviet_trial.jpg",
+    "library": [
+      "CHECKMATE_INTACT_HYCON_FILM_STAGE"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "RECONNAISSANCE PROOF"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 42,
+      "hit": "THE FILM SPOOLS",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "RECONNAISSANCE PROOF",
+      "payoff": "THE FILM SPOOLS",
+      "tag": null
+    },
+    "sfx": {
+      "file": "camera_shutter.wav",
+      "frame": 1246
+    },
+    "viewerSees": "Intact Hycon B-camera dual optical chassis with rotating film spools exposing 1,200 intact negative frames."
+  },
+  {
+    "scene": 13,
+    "act": "IV",
+    "beat": "MACRO",
+    "archetype": "SPLIT_CONFRONTATION",
+    "staging": "GRAPH_GRID",
+    "startFrame": 1314,
+    "durationFrames": 110,
+    "plate": "powers_pressure_suit.jpg",
+    "library": [
+      "CHECKMATE_POISON_PIN_ALIVE_STAGE"
+    ],
+    "camera": "IMPACT_SHAKE",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "LETHAL SUICIDE PIN"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 40,
+      "hit": "FOUND UNUSED",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "LETHAL SUICIDE PIN",
+      "payoff": "FOUND UNUSED",
+      "tag": null
+    },
+    "sfx": {
+      "file": "radar_ping.wav",
+      "frame": 1354
+    },
+    "viewerSees": "Modified 1921 silver dollar concealment coin opened revealing unused curare/saxitoxin lethal injection pin on forensic evidence tray."
+  },
+  {
+    "scene": 14,
+    "act": "V",
+    "beat": "MACRO",
+    "archetype": "LONE_LEADER",
+    "staging": "WOOD_PANEL",
+    "startFrame": 1424,
+    "durationFrames": 136,
+    "plate": "rudolf_abel.jpg",
+    "library": [
+      "U2_EPILOGUE_BRASS_PLAQUE_STAGE"
+    ],
+    "camera": "SLOW_PUSH_IN",
+    "phase1": {
+      "motion": "SETUP_MOTION",
+      "elements": [
+        "PEACE TALKS COLLAPSED"
+      ]
+    },
+    "phase2": {
+      "payoffFrameOffset": 29,
+      "hit": "TOTAL HUMILIATION",
+      "secondaryChange": "VECTOR_STATE_TRANSFORMATION"
+    },
+    "text": {
+      "setup": "PEACE TALKS COLLAPSED",
+      "payoff": "TOTAL HUMILIATION",
+      "tag": "PARIS SUMMIT // 16 MAY 1960"
+    },
+    "sfx": {
+      "file": "sub_boom.wav",
+      "frame": 1453
+    },
+    "viewerSees": "Engraved commemorative brass plaque with Glienicke Bridge iron truss silhouette detailing the collapse of the Paris Summit and 1962 spy swap."
+  }
+]

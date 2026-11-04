@@ -168,9 +168,9 @@ async function main() {
     return;
   }
 
-  if (mode === '--trace-plates') {
-    const traceScript = path.resolve('scripts/trace_plate_contours.js');
-    execSync(`node "${traceScript}" --project ${proj.slug} --all`, { stdio: 'inherit' });
+  if (mode === '--lint-shading') {
+    const { lintCelShading } = require('./lint_cel_shading');
+    lintCelShading(proj, proj.timeline);
     return;
   }
 

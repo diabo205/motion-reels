@@ -1,0 +1,210 @@
+[
+  {
+    "scene": 1,
+    "start": 0,
+    "duration": 96,
+    "payoffOffset": 38,
+    "sfxLeadOffset": 36,
+    "postPayoffHold": 58
+  },
+  {
+    "scene": 2,
+    "start": 96,
+    "duration": 114,
+    "payoffOffset": 45,
+    "sfxLeadOffset": 43,
+    "postPayoffHold": 69
+  },
+  {
+    "scene": 3,
+    "start": 210,
+    "duration": 108,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 72
+  },
+  {
+    "scene": 4,
+    "start": 318,
+    "duration": 108,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 72
+  },
+  {
+    "scene": 5,
+    "start": 426,
+    "duration": 106,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 70
+  },
+  {
+    "scene": 6,
+    "start": 532,
+    "duration": 105,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 69
+  },
+  {
+    "scene": 7,
+    "start": 637,
+    "duration": 103,
+    "payoffOffset": 41,
+    "sfxLeadOffset": 39,
+    "postPayoffHold": 62
+  },
+  {
+    "scene": 8,
+    "start": 740,
+    "duration": 107,
+    "payoffOffset": 37,
+    "sfxLeadOffset": 35,
+    "postPayoffHold": 70
+  },
+  {
+    "scene": 9,
+    "start": 847,
+    "duration": 106,
+    "payoffOffset": 42,
+    "sfxLeadOffset": 40,
+    "postPayoffHold": 64
+  },
+  {
+    "scene": 10,
+    "start": 953,
+    "duration": 106,
+    "payoffOffset": 45,
+    "sfxLeadOffset": 43,
+    "postPayoffHold": 61
+  },
+  {
+    "scene": 11,
+    "start": 1059,
+    "duration": 111,
+    "payoffOffset": 39,
+    "sfxLeadOffset": 37,
+    "postPayoffHold": 72
+  },
+  {
+    "scene": 12,
+    "start": 1170,
+    "duration": 103,
+    "payoffOffset": 39,
+    "sfxLeadOffset": 37,
+    "postPayoffHold": 64
+  },
+  {
+    "scene": 13,
+    "start": 1273,
+    "duration": 108,
+    "payoffOffset": 41,
+    "sfxLeadOffset": 39,
+    "postPayoffHold": 67
+  },
+  {
+    "scene": 14,
+    "start": 1381,
+    "duration": 104,
+    "payoffOffset": 41,
+    "sfxLeadOffset": 39,
+    "postPayoffHold": 63
+  },
+  {
+    "scene": 15,
+    "start": 1485,
+    "duration": 106,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 70
+  },
+  {
+    "scene": 16,
+    "start": 1591,
+    "duration": 106,
+    "payoffOffset": 45,
+    "sfxLeadOffset": 43,
+    "postPayoffHold": 61
+  },
+  {
+    "scene": 17,
+    "start": 1697,
+    "duration": 107,
+    "payoffOffset": 43,
+    "sfxLeadOffset": 41,
+    "postPayoffHold": 64
+  },
+  {
+    "scene": 18,
+    "start": 1804,
+    "duration": 106,
+    "payoffOffset": 43,
+    "sfxLeadOffset": 41,
+    "postPayoffHold": 63
+  },
+  {
+    "scene": 19,
+    "start": 1910,
+    "duration": 107,
+    "payoffOffset": 42,
+    "sfxLeadOffset": 40,
+    "postPayoffHold": 65
+  },
+  {
+    "scene": 20,
+    "start": 2017,
+    "duration": 103,
+    "payoffOffset": 42,
+    "sfxLeadOffset": 40,
+    "postPayoffHold": 61
+  },
+  {
+    "scene": 21,
+    "start": 2120,
+    "duration": 108,
+    "payoffOffset": 45,
+    "sfxLeadOffset": 43,
+    "postPayoffHold": 63
+  },
+  {
+    "scene": 22,
+    "start": 2228,
+    "duration": 107,
+    "payoffOffset": 44,
+    "sfxLeadOffset": 42,
+    "postPayoffHold": 63
+  },
+  {
+    "scene": 23,
+    "start": 2335,
+    "duration": 106,
+    "payoffOffset": 36,
+    "sfxLeadOffset": 34,
+    "postPayoffHold": 70
+  },
+  {
+    "scene": 24,
+    "start": 2441,
+    "duration": 106,
+    "payoffOffset": 42,
+    "sfxLeadOffset": 40,
+    "postPayoffHold": 64
+  },
+  {
+    "scene": 25,
+    "start": 2547,
+    "duration": 104,
+    "payoffOffset": 44,
+    "sfxLeadOffset": 42,
+    "postPayoffHold": 60
+  },
+  {
+    "scene": 26,
+    "start": 2651,
+    "duration": 105,
+    "payoffOffset": 45,
+    "sfxLeadOffset": 43,
+    "postPayoffHold": 60
+  }
+]

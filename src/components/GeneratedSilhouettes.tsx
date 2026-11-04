@@ -57,6 +57,34 @@ import {
   KhanewalRooftopLoopSplit,
 } from './PostageFraudVectors';
 import {
+  BurariHouseFacadeFracture,
+  NeighbourShutteredShopSplit,
+  FlashlightCorridorHero,
+  SantNagarTacticalMap,
+  ThreeGenerationsTallyBoard,
+  PriyankaEngagementHero,
+  BindingsAndCottonFracture,
+  ElevenPipesWallSplit,
+  MediaFrenzyQuoteCard,
+  PrayerRoomShrineHero,
+  PatriarchMemorialCard,
+  LalitTraumaSilenceSplit,
+  PossessionBreakthroughFracture,
+  PriyankaDiariesWritingCard,
+  ProsperityExpansionTallyBoard,
+  BadhTapasyaCommandHero,
+  BanyanTreeRootsFracture,
+  RootsVsDupattasSplit,
+  FinalPromiseQuoteCard,
+  MidnightStoolsTransitHero,
+  GrandmotherBedLeaderHero,
+  TommyTerraceBarkSplit,
+  StoolsToppleFracture,
+  PsychologicalAutopsyCard,
+  MemorialTallyBoardHero,
+  SilentHouseMonumentHero,
+} from './BurariDeathsVectors';
+import {
   BinanceAlertQuoteCard,
   KoreaPeninsulaNightSatellite,
   Unit121CyberBunker,
@@ -143,6 +171,22 @@ import {
   WavingFlagSovietUsStage,
   U2EpilogueBrassPlaqueCard,
 } from './U2IncidentVectors';
+import {
+  SovietRadarCloseupLock,
+  S75DvinaMissileStreak,
+  U2MissileDetonationSpin,
+  NasaFabricatedFlightMap,
+  OfficialStatementStampCard,
+  EisenhowerPressDenialStage,
+  KremlinFiveDaySilenceStage,
+  KhrushchevSupremeSovietStage,
+  DossierSlamsScatteredPhotos,
+  CheckmatePowersCapturedStage,
+  U2WreckageExhibitionStage,
+  CheckmateIntactHyconFilmStage,
+  CheckmatePoisonPinAliveStage,
+  U2EpilogueBrassPlaqueStage,
+} from './U2Reel26sVectors';
 import {
   TaipingConfrontationOpening,
   HongFailedScholarDesk,
@@ -2183,6 +2227,47 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     // ========================================================
     // 1960 U-2 INCIDENT COLD WAR ESPIONAGE SUITE
     // ========================================================
+    case 'SOVIET_RADAR_CLOSEUP_LOCK':
+      return <SovietRadarCloseupLock />;
+
+    case 'S75_DVINA_MISSILE_STREAK':
+      return <S75DvinaMissileStreak />;
+
+    case 'U2_MISSILE_DETONATION_SPIN':
+      return <U2MissileDetonationSpin />;
+
+    case 'NASA_FABRICATED_FLIGHT_MAP':
+      return <NasaFabricatedFlightMap />;
+
+    case 'OFFICIAL_STATEMENT_STAMP_CARD':
+      return <OfficialStatementStampCard />;
+
+    case 'EISENHOWER_PRESS_DENIAL_STAGE':
+      return <EisenhowerPressDenialStage />;
+
+    case 'KREMLIN_FIVE_DAY_SILENCE_STAGE':
+      return <KremlinFiveDaySilenceStage />;
+
+    case 'KHRUSHCHEV_SUPREME_SOVIET_STAGE':
+      return <KhrushchevSupremeSovietStage />;
+
+    case 'DOSSIER_SLAMS_SCATTERED_PHOTOS':
+      return <DossierSlamsScatteredPhotos />;
+
+    case 'CHECKMATE_POWERS_CAPTURED_STAGE':
+      return <CheckmatePowersCapturedStage />;
+
+    case 'U2_WRECKAGE_EXHIBITION_STAGE':
+      return <U2WreckageExhibitionStage />;
+
+    case 'CHECKMATE_INTACT_HYCON_FILM_STAGE':
+      return <CheckmateIntactHyconFilmStage />;
+
+    case 'CHECKMATE_POISON_PIN_ALIVE_STAGE':
+      return <CheckmatePoisonPinAliveStage />;
+
+    case 'U2_EPILOGUE_BRASS_PLAQUE_STAGE':
+      return <U2EpilogueBrassPlaqueStage />;
     case 'U2_SHATTERED_SPIN_STRATOSPHERE':
     case 'SHATTERED_U2_SPINNING_70000FT':
       return <U2ShatteredSpinStratosphereVector />;
@@ -2869,6 +2954,87 @@ export const SceneVectorAsset: React.FC<SilhouetteProps> = ({
     case 'KhanewalRooftopLoopSplit':
     case 'KHANEWAL_ROOFTOP_LOOP_SPLIT':
       return <KhanewalRooftopLoopSplit durationFrames={durationFrames} />;
+
+    // ========================================================
+    // BURARI DEATHS (2018) DOCUMENTARY VECTORS
+    // ========================================================
+    case 'BurariHouseFacadeFracture':
+      return <BurariHouseFacadeFracture durationFrames={durationFrames} />;
+
+    case 'NeighbourShutteredShopSplit':
+      return <NeighbourShutteredShopSplit durationFrames={durationFrames} />;
+
+    case 'FlashlightCorridorHero':
+      return <FlashlightCorridorHero durationFrames={durationFrames} />;
+
+    case 'SantNagarTacticalMap':
+      return <SantNagarTacticalMap durationFrames={durationFrames} />;
+
+    case 'ThreeGenerationsTallyBoard':
+      return <ThreeGenerationsTallyBoard durationFrames={durationFrames} />;
+
+    case 'PriyankaEngagementHero':
+      return <PriyankaEngagementHero durationFrames={durationFrames} />;
+
+    case 'BindingsAndCottonFracture':
+      return <BindingsAndCottonFracture durationFrames={durationFrames} />;
+
+    case 'ElevenPipesWallSplit':
+      return <ElevenPipesWallSplit durationFrames={durationFrames} />;
+
+    case 'MediaFrenzyQuoteCard':
+      return <MediaFrenzyQuoteCard durationFrames={durationFrames} />;
+
+    case 'PrayerRoomShrineHero':
+      return <PrayerRoomShrineHero durationFrames={durationFrames} />;
+
+    case 'PatriarchMemorialCard':
+      return <PatriarchMemorialCard durationFrames={durationFrames} />;
+
+    case 'LalitTraumaSilenceSplit':
+      return <LalitTraumaSilenceSplit durationFrames={durationFrames} />;
+
+    case 'PossessionBreakthroughFracture':
+      return <PossessionBreakthroughFracture durationFrames={durationFrames} />;
+
+    case 'PriyankaDiariesWritingCard':
+      return <PriyankaDiariesWritingCard durationFrames={durationFrames} />;
+
+    case 'ProsperityExpansionTallyBoard':
+      return <ProsperityExpansionTallyBoard durationFrames={durationFrames} />;
+
+    case 'BadhTapasyaCommandHero':
+      return <BadhTapasyaCommandHero durationFrames={durationFrames} />;
+
+    case 'BanyanTreeRootsFracture':
+      return <BanyanTreeRootsFracture durationFrames={durationFrames} />;
+
+    case 'RootsVsDupattasSplit':
+      return <RootsVsDupattasSplit durationFrames={durationFrames} />;
+
+    case 'FinalPromiseQuoteCard':
+      return <FinalPromiseQuoteCard durationFrames={durationFrames} />;
+
+    case 'MidnightStoolsTransitHero':
+      return <MidnightStoolsTransitHero durationFrames={durationFrames} />;
+
+    case 'GrandmotherBedLeaderHero':
+      return <GrandmotherBedLeaderHero durationFrames={durationFrames} />;
+
+    case 'TommyTerraceBarkSplit':
+      return <TommyTerraceBarkSplit durationFrames={durationFrames} />;
+
+    case 'StoolsToppleFracture':
+      return <StoolsToppleFracture durationFrames={durationFrames} />;
+
+    case 'PsychologicalAutopsyCard':
+      return <PsychologicalAutopsyCard durationFrames={durationFrames} />;
+
+    case 'MemorialTallyBoardHero':
+      return <MemorialTallyBoardHero durationFrames={durationFrames} />;
+
+    case 'SilentHouseMonumentHero':
+      return <SilentHouseMonumentHero durationFrames={durationFrames} />;
 
     default:
       return null;

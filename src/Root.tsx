@@ -11,6 +11,7 @@ import aleutianData from './timelines/aleutian_campaign_1942.json';
 import cartonData from './timelines/carton_de_wiart_1916.json';
 import floridaData from './timelines/florida_plane_crash_2026.json';
 import postageData from './timelines/postage_fraud_2026.json';
+import burariData from './timelines/burari_deaths_2018.json';
 
 export const RemotionRoot: React.FC = () => {
   const currentTimeline = reelData as unknown as ReelTimeline;
@@ -23,6 +24,7 @@ export const RemotionRoot: React.FC = () => {
   const cartonTimeline = cartonData as unknown as ReelTimeline;
   const floridaTimeline = floridaData as unknown as ReelTimeline;
   const postageTimeline = postageData as unknown as ReelTimeline;
+  const burariTimeline = burariData as unknown as ReelTimeline;
 
   const totalFrames = currentTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2940;
   const binanceFrames = binanceTimeline.scenes.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3500;
@@ -34,6 +36,7 @@ export const RemotionRoot: React.FC = () => {
   const cartonFrames = cartonTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 3443;
   const floridaFrames = floridaTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2723;
   const postageFrames = postageTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2923;
+  const burariFrames = burariTimeline.scenes?.reduce((max, s) => Math.max(max, s.startFrame + s.durationFrames), 0) || 2756;
 
   return (
     <>
@@ -164,6 +167,19 @@ export const RemotionRoot: React.FC = () => {
         height={postageTimeline.meta?.height || 1920}
         defaultProps={{
           timeline: postageTimeline,
+        }}
+      />
+
+      {/* 2018 Burari Deaths Psychological Documentary Reel */}
+      <Composition
+        id="BurariDeaths2018"
+        component={HistoricalReel as any}
+        durationInFrames={burariFrames}
+        fps={burariTimeline.meta?.fps || 60}
+        width={burariTimeline.meta?.width || 1080}
+        height={burariTimeline.meta?.height || 1920}
+        defaultProps={{
+          timeline: burariTimeline,
         }}
       />
     </>

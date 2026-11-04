@@ -184,7 +184,8 @@ const SceneItem: React.FC<{
   const effectiveSensitivity = scene.sensitivity || meta.sensitivity || 'STANDARD';
 
   let transform = '';
-  const { movement, intensity } = scene.camera;
+  const movement = scene.camera?.movement || 'STATIC';
+  const intensity = typeof scene.camera?.intensity === 'number' && !isNaN(scene.camera.intensity) ? scene.camera.intensity : 1.0;
 
   // Mid-scene payoff hit impulse & dead-hold prevention
   const hitOffset = scene.textLayers?.[1]?.triggerFrameOffset ?? 30;

@@ -12,12 +12,16 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
    - **Tactile Paper Collage Aesthetics**: Preserve physical textures—cardstock substrates, rotating sunburst paper rays, quadrille drafting paper with wood command shelves, paper-cut horizon dunes, and organic paper grain.
    - **Global-Frame Seeded Persistent Particle Layer**: When applicable to the setting (e.g. Arctic gale, burning blitz, monsoon, desert storm), run one continuous particle emitter (`SNOW`, `ASH`, `RAIN`, `DUST`) seeded deterministically by `(emitterId, globalFrame)` so particles remain unbroken across both isolated scene clips and full renders. Leave `NONE` for sterile indoor or diplomatic stories.
 
-3. **Multi-Tier Architectural, Material & Uniform Color Hierarchy (Over Monochrome Silhouettes)**:
-   - **No Flat Monochromatic Voids**: Never reduce human figures, vehicles, and architecture to flat black blobs (`#090D12`). Deconstruct every subject into authentic historical materials and depth layers.
-   - **Multi-Tier Uniform & Material Palette**:
-     - *Military Attire*: Khaki wool serge (`#3B3426`), polished brass buttons (`#F59E0B`), scarlet general staff collar tabs (`#DC2626`), gold bullion visor chinstraps (`#FBBF24`), crimson VC ribbon (`#991B1B`), malacca cane (`#5A3E2D`), and midnight silk eyepatch (`#18181B`).
-     - *Architecture & Terrain*: Sandstone masonry blocks with mortar joints, warm terracotta stone forts, amber river currents with white foam wakes, Tuscan cypress rows, pine trench duckboards, and rusted iron barbette plating.
-     - *Vehicles & Weapons*: Two-tone camouflage flying boat hulls (slate blue & RAF dark sea grey), blued-steel revolvers with walnut grips, brass shell casings, and locomotive boiler iron.
+3. **Multi-Tier Architectural, Material & Uniform Color Hierarchy with Cel Shading (Over Monochrome Silhouettes)**:
+   - **No Flat Monochromatic Voids**: Never reduce human figures, vehicles, and architecture to flat black blobs (`#090D12` or `#000000`). Deconstruct every subject into authentic historical materials and depth layers.
+   - **Multi-Tone Cel Shading & Material Depth (`CEL_SHADING_LINT`)**:
+     - Every focal subject must be built with **at least 3 distinct tonal values**:
+       1. *Layer 1: Shadow / Base Tone* (ambient occlusion / shaded under-facet).
+       2. *Layer 2: Midtone / Material Body* (true local color: khaki wool serge `#443E30`, RAF slate `#334155`, blued-steel `#1E2530`, terracotta `#9A3412`).
+       3. *Layer 3: Highlight / Core Rim Tone* (lightward-facing facet or specular edge `#64748B`, `#635B47`, `#FBBF24`).
+       4. *Layer 4: Accent / Markings* (collar tabs, cockpit dials, brass buttons).
+     - Compose using `src/kit/CelShading.tsx` (`HISTORICAL_CEL_PALETTES`, `<CelShadedBody />`, `<CelShadedFacet />`, `<CelRimFilter />`).
+     - **Rejection of Flat Monochrome Voids**: Any focal subject exceeding $85\%$ flat dark fill without midtone/highlight facets fails `CEL_SHADING_LINT`.
    - **Atmospheric Backlighting & Depth Separation**: Use soft radial backlighting, horizon glow, and rim lights to cleanly separate foreground subjects from warm background skies.
    - **Tactile Cutout Puppets for Named Historical Figures (`<CutoutPuppet />`)**: For all named historical actors, commanders, leaders, and investigative subjects (e.g. Faheem Akram, Mujib, Yahya, Clinton, Oppenheimer), prioritize articulated die-cut `<CutoutPuppet headSrc="..." />` rigs. These pair an authentic archival portrait head (die-cut with a tactile `#F4EFE6` cardstock border prepared via `scripts/crop_puppet_head.py`) with a textured, period-accurate uniform/attire body. Reserve pure flat silhouettes for anonymous rank-and-file soldiers, distant crowds, and tally units (`CROWD_TALLY`).
    - **Zero Direct Raw Image Pasting (`PHOTO_PASTE_LINT`)**: Never display raw unmasked photos or photo cards of environments, landscapes, vehicles, ruins, or background objects. Archival photos are strictly used either as die-cut portrait heads inside `<CutoutPuppet headSrc="..." />` or as visual reference blueprints to draft parametric 2D SVG vector art.
@@ -26,14 +30,10 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
      - **Automated Binary Magic-Byte Verification**: Every plate must pass binary header inspection (`0xFF 0xD8 0xFF` for JPEG, `\x89PNG` for PNG, `RIFF...WEBP` for WebP), be $\ge 10\text{KB}$, and contain zero HTML error pages (`<!DOCTYPE html` or Wikimedia 400/429 blocks).
      - **Wikimedia Step-Thumbnail Compliance (`w.wiki/GHai`)**: Never hotlink arbitrary pixel widths (e.g., 800px) or request full-resolution original master files that trigger Wikimedia 400/429 edge blocks. Always request standard step thumbnails (`iiurlwidth=960` or `1280`) via `scripts/ingest_reference_plates.js`.
      - **Automated Pipeline Block**: The build pipeline (`scripts/pipeline.js` and `scripts/audit_and_validate.js`) automatically halts with a fatal exit code if any scene in `timeline.json` lacks an authentic, verified reference plate.
-   - **Visual Density & Path Complexity Floor (`PATH_COMPLEXITY_LINT`)**:
-     - Every scene vector component must contain:
-       1. Minimum $\ge 35$ SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: $\ge 50$ nodes).
-       2. Minimum $\ge 5$ distinct `<path>` elements and $\ge 35$ path command vertices.
-       3. Basic geometric primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed $70\%$ of visual geometry without detailing paths.
-       4. Minimum 1 volumetric gradient/lighting aura.
-     - **Zero Monolithic Batch Dumps**: Never generate 20+ scenes in a single output stream. Monolithic generation causes LLM token exhaustion, collapsing geometry into childish clipart. Author scene-by-scene or in modular files (`src/scenes/<slug>/SceneNN.tsx`).
-   - **Automated Plate Tracing Pipeline (`scripts/trace_plate_contours.js`)**: Convert photographic plates into precise SVG vector contours using Potrace (`node scripts/trace_plate_contours.js --project <slug> --all`). This writes ready-to-use React SVG components to `projects/<slug>/plates/TracedPlateAssets.tsx` and raw bezier path dictionaries to `traced_plate_assets.json`.
+   - **Visual Reference Blueprint Protocol (Zero Potrace Tracing)**:
+     - Potrace auto-tracing is eliminated. Archival photographs must never be auto-traced into noisy, 1-bit binary silhouette blobs.
+     - Ingested photographic plates in `projects/<slug>/plates/` serve strictly as **Visual Reference Blueprints** to inform human/AI vector illustration (studying silhouette landmarks, structural paneling, material colors, and proportions) and as sources for articulated die-cut portrait heads (`<CutoutPuppet headSrc="..." />`).
+   - **Zero Monolithic Batch Dumps**: Never generate 20+ scenes in a single output stream. Monolithic generation causes LLM token exhaustion, collapsing geometry into childish clipart. Author scene-by-scene or in modular files (`src/scenes/<slug>/SceneNN.tsx`).
    - **6-Layer Vector Anatomy Standard**: Deconstruct reference blueprints into the 6-layer vector hierarchy:
      1. *Layer 1: Ambient Volumetric Aura* (`<radialGradient>` aura defining lighting falloff).
      2. *Layer 2: Dynamic Shockwave / Ionization Rims* (Mach rings, supersonic ozone glows, speed lines).
@@ -88,7 +88,7 @@ You are the core orchestrator for a localized, programmatic 9:16 historical moti
 
 9. **Automated Linting, JSON Audit & Cross-Platform Node Pipeline (`scripts/pipeline.js`)**:
    - Pass `--project <slug>` explicitly to all CLI commands (`node scripts/pipeline.js --project <slug> --audit-stills`).
-   - Verify all linters (`FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `GLYPH_WIDTH_AND_LINE_CAP`, and framework-level hooks via `scripts/lint_framework.js`: `NO_MATH_RANDOM`, `INTERPOLATE_CLAMP`, `NO_CSS_ANIMATIONS`, `NO_WALL_CLOCK_TIME`) and inspect `projects/<slug>/audit/audit_report.json`.
+   - Verify all linters (`FONT_LINT`, `PHOTO_PASTE_LINT`, `PALETTE_LINT`, `CEL_SHADING_LINT`, `CAMERA_DISCIPLINE_LINT`, `ARCHETYPE_ROTATION_LINT`, `GLYPH_WIDTH_AND_LINE_CAP`, and framework-level hooks via `scripts/lint_framework.js`: `NO_MATH_RANDOM`, `INTERPOLATE_CLAMP`, `NO_CSS_ANIMATIONS`, `NO_WALL_CLOCK_TIME`) and inspect `projects/<slug>/audit/audit_report.json`.
    - Auto-export `captions.srt`, `metadata.json`, `poster.png` (9:16), and `poster_4x5.png` (4:5 IG grid) to `projects/<slug>/deliverables/`.
 
 10. **Pre-Production Planning with Motion Graphics Director Skill**:

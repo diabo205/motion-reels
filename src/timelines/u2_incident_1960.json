@@ -1,901 +1,755 @@
 {
-  "$schema": "../../.agents/skills/build-historical-reel/schemas/timeline.schema.json",
   "meta": {
     "title": "1960 U-2 INCIDENT",
-    "flagEmoji": "🇺🇸 ✈️ ☭",
+    "durationFrames": 1560,
     "fps": 60,
     "width": 1080,
     "height": 1920,
-    "bpm": 104,
-    "bgmFile": "audio/bgm_u2.mp3",
-    "bgmStartFrom": 0,
     "palette": "ESPIONAGE_DOSSIER",
-    "particleEmitter": "NONE",
     "fontFamily": "Montserrat",
     "styleMode": "DOCUMENTARY_SANS",
-    "bgmLicense": {
-      "source": "Project Audio Library",
-      "licenseType": "ROYALTY_FREE",
-      "clearanceId": "CLR-U2-INCIDENT-1960"
-    }
+    "particleEmitter": "NONE",
+    "minFrames": 1560,
+    "maxFramesCeiling": 1560
   },
   "scenes": [
     {
-      "sceneId": "SCENE_01_SHATTERED_U2_STRATOSPHERE",
+      "sceneId": "SCENE_01_SOVIET_RADAR_LOCK",
+      "archetype": "SPLIT_CONFRONTATION",
       "startFrame": 0,
-      "durationFrames": 128,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": true,
-      "headerContext": "MAY 1, 1960 • 70,000 FEET",
+      "durationFrames": 104,
+      "contextTag": "1 MAY 1960 // 70,500 FT",
+      "textTimeline": {
+        "setupFrame": 0,
+        "payoffFrame": 38
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "THE CIA SWORE",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "THE PILOT WAS DEAD",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 38
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#061712",
+          "#022C22",
+          "#064E3B"
+        ],
+        "svgForegroundAsset": "SOVIET_RADAR_CLOSEUP_LOCK",
+        "referencePlate": "soviet_radar_p30.jpg",
+        "contextTag": "1 MAY 1960 // 70,500 FT"
+      },
       "camera": {
         "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
-      },
-      "textLayers": [
-        {
-          "text": "THE CIA TOLD THE PRESIDENT",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "THE PILOT WAS DEAD. THEY LIED.",
-          "triggerFrameOffset": 38,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "U2_SHATTERED_SPIN_STRATOSPHERE",
-        "counterConfig": {
-          "label": "ALTITUDE (FT)",
-          "startValue": 70500,
-          "endValue": 61200
+        "durationFrames": 104,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 36
-        }
-      ],
-      "claim": {
-        "text": "THE CIA TOLD THE PRESIDENT THE PILOT WAS DEAD. THEY LIED.",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      "audioSync": {
+        "sfxHit": "radar_ping.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 38
       }
     },
     {
-      "sceneId": "SCENE_02_70000FT_STRATOSPHERE",
-      "startFrame": 128,
-      "durationFrames": 172,
+      "sceneId": "SCENE_02_S75_DVINA_MISSILE_STREAK",
       "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": false,
+      "startFrame": 104,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 104,
+        "payoffFrame": 144
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "SOVIET S-75 MISSILE",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "RADAR LOCKED",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#020617",
+          "#0F172A",
+          "#1E1B4B"
+        ],
+        "svgForegroundAsset": "S75_DVINA_MISSILE_STREAK",
+        "referencePlate": "s75_dvina_missile.jpg"
+      },
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.6
-      },
-      "textLayers": [
-        {
-          "text": "CRUISING AT 70,000 FEET",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "ABOVE ALL SOVIET RADAR",
-          "triggerFrameOffset": 31,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "NIGHT_FELT",
-        "svgForegroundAsset": "U2_STRATOSPHERE_TELEMETRY",
-        "counterConfig": {
-          "label": "ALTITUDE (FT)",
-          "startValue": 60000,
-          "endValue": 70500
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 29
-        }
-      ],
-      "claim": {
-        "text": "CRUISING AT 70,000 FEET ABOVE ALL SOVIET RADAR",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      "audioSync": {
+        "sfxHit": "missile_whoosh.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 144
       }
     },
     {
-      "sceneId": "SCENE_03_GRAND_SLAM_MAP",
-      "startFrame": 300,
-      "durationFrames": 150,
+      "sceneId": "SCENE_03_MISSILE_DETONATION_CABIN_LOSS",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "startFrame": 214,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 214,
+        "payoffFrame": 254
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "MISSILE DETONATION",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "TOTAL CABIN LOSS",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
+        "skyGradient": [
+          "#18181B",
+          "#450A0A",
+          "#7F1D1D"
+        ],
+        "svgForegroundAsset": "U2_MISSILE_DETONATION_SPIN",
+        "referencePlate": "u2_wreckage_sverdlovsk.jpg"
+      },
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
+        }
+      },
+      "audioSync": {
+        "sfxHit": "sub_boom.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 254
+      }
+    },
+    {
+      "sceneId": "SCENE_04_NASA_FABRICATED_FLIGHT_MAP",
       "archetype": "VECTOR_MAP",
-      "hudVisible": true,
-      "headerContext": "SOVIET AIRSPACE • 2,900 MILES",
+      "startFrame": 324,
+      "durationFrames": 110,
+      "contextTag": "WHITE HOUSE // 3 MAY 1960",
+      "textTimeline": {
+        "setupFrame": 324,
+        "payoffFrame": 365
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "WASHINGTON'S COVER STORY",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "LOST WEATHER PLANE",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 41
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A",
+          "#0284C7"
+        ],
+        "svgForegroundAsset": "NASA_FABRICATED_FLIGHT_MAP",
+        "referencePlate": "nasa_flight_map_turkey.jpg",
+        "contextTag": "WHITE HOUSE // 3 MAY 1960"
+      },
       "camera": {
         "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.75
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
+        }
+      },
+      "audioSync": {
+        "sfxHit": "typewriter_chatter.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 365
+      }
+    },
+    {
+      "sceneId": "SCENE_05_OFFICIAL_STATEMENT_STAMP_SLAM",
+      "archetype": "QUOTE_CARD",
+      "startFrame": 434,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 434,
+        "payoffFrame": 474
       },
       "textLayers": [
         {
-          "text": "ACROSS ENTIRE SOVIET UNION",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "NASA FABRICATED FLIGHT",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "DEEP INTO ENEMY TERRITORY",
-          "triggerFrameOffset": 32,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "OFFICIAL STATEMENT",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
         }
       ],
       "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
         "skyGradient": [
-          "#0B1310",
-          "#16221E"
+          "#334155",
+          "#475569",
+          "#64748B"
         ],
-        "stageStyle": "GRAPH_GRID",
-        "svgForegroundAsset": "GRAND_SLAM_CONTINENTAL_MAP"
+        "svgForegroundAsset": "OFFICIAL_STATEMENT_STAMP_CARD",
+        "referencePlate": "fake_nasa_u2_weather.jpg"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_04_HYCON_CAMERA",
-      "startFrame": 450,
-      "durationFrames": 150,
-      "archetype": "BLUEPRINT_DIAGRAM",
-      "hudVisible": false,
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "HYCON OPTICAL SPY CAMERA",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "TARGETING PLUTONIUM REACTORS",
-          "triggerFrameOffset": 20,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "GRAPH_GRID",
-        "svgForegroundAsset": "HYCON_CAMERA_SCHEMATIC"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
+      "audioSync": {
+        "sfxHit": "stamp_slam.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 474
+      }
     },
     {
-      "sceneId": "SCENE_05_SOVIET_RADAR_ALERT",
-      "startFrame": 600,
-      "durationFrames": 150,
-      "archetype": "TELEMETRY_COUNTER",
-      "hudVisible": true,
-      "headerContext": "SVERDLOVSK SECTOR • PVO RADAR",
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.65
+      "sceneId": "SCENE_06_EISENHOWER_DENIAL_CUTOUT",
+      "archetype": "SPLIT_CONFRONTATION",
+      "startFrame": 544,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 544,
+        "payoffFrame": 588
       },
       "textLayers": [
         {
-          "text": "SOVIET P-30 RADAR LOCKS ON",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "EISENHOWER PUBLICLY",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "INTERCEPT ORDERS TRANSMITTED",
-          "triggerFrameOffset": 41,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "DENIED ESPIONAGE",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 44
         }
       ],
       "visualPayload": {
+        "stageStyle": "WOOD_PANEL",
         "skyGradient": [
-          "#0B1310",
-          "#16221E"
+          "#1C1917",
+          "#451A03",
+          "#78350F"
         ],
+        "svgForegroundAsset": "EISENHOWER_PRESS_DENIAL_STAGE",
+        "referencePlate": "eisenhower_portrait.jpg"
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
+        }
+      },
+      "audioSync": {
+        "sfxHit": "camera_shutter.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 588
+      }
+    },
+    {
+      "sceneId": "SCENE_07_MOSCOW_FIVE_DAY_SILENCE",
+      "archetype": "CROWD_TALLY",
+      "startFrame": 654,
+      "durationFrames": 110,
+      "contextTag": "MOSCOW // 1-5 MAY 1960",
+      "textTimeline": {
+        "setupFrame": 654,
+        "payoffFrame": 694
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "MOSCOW STAYED SILENT",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "FOR FIVE DAYS",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
+        }
+      ],
+      "visualPayload": {
         "stageStyle": "NIGHT_FELT",
-        "svgForegroundAsset": "SOVIET_P30_RADAR_ALERT"
+        "skyGradient": [
+          "#0B0505",
+          "#450A0A",
+          "#7F1D1D"
+        ],
+        "svgForegroundAsset": "KREMLIN_FIVE_DAY_SILENCE_STAGE",
+        "referencePlate": "kremlin_moscow_red.jpg",
+        "contextTag": "MOSCOW // 1-5 MAY 1960"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
-      ],
-      "claim": {
-        "text": "SOVIET P-30 RADAR LOCKS ON INTERCEPT ORDERS TRANSMITTED",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      },
+      "audioSync": {
+        "sfxHit": "pocket_watch_tick.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 694
       }
     },
     {
-      "sceneId": "SCENE_06_SAM_MISSILE_LAUNCH",
-      "startFrame": 750,
-      "durationFrames": 150,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.8
+      "sceneId": "SCENE_08_KHRUSHCHEV_STEPS_TO_PODIUM",
+      "archetype": "LONE_LEADER",
+      "startFrame": 764,
+      "durationFrames": 110,
+      "contextTag": "SUPREME SOVIET // 7 MAY 1960",
+      "textTimeline": {
+        "setupFrame": 764,
+        "payoffFrame": 804
       },
       "textLayers": [
         {
-          "text": "14 GUIDED MISSILES LAUNCHED",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "KHRUSHCHEV STEPS UP",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "CLIMBING AT MACH 3.5",
-          "triggerFrameOffset": 29,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "SUPREME SOVIET",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
         }
       ],
       "visualPayload": {
+        "stageStyle": "NIGHT_FELT",
         "skyGradient": [
-          "#0B1310",
-          "#16221E"
+          "#0B0303",
+          "#2A0808",
+          "#7F1D1D"
         ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "S75_DVINA_LAUNCH_BATTERY",
-        "counterConfig": {
-          "label": "MISSILES SALVO",
-          "startValue": 1,
-          "endValue": 14
+        "svgForegroundAsset": "KHRUSHCHEV_SUPREME_SOVIET_STAGE",
+        "referencePlate": "khrushchev_portrait.jpg",
+        "contextTag": "SUPREME SOVIET // 7 MAY 1960"
+      },
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ],
-      "claim": {
-        "text": "14 GUIDED MISSILES LAUNCHED CLIMBING AT MACH 3.5",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      "audioSync": {
+        "sfxHit": "gavel_strike.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 804
       }
     },
     {
-      "sceneId": "SCENE_07_PROXIMITY_DETONATION",
-      "startFrame": 900,
-      "durationFrames": 160,
+      "sceneId": "SCENE_09_DOSSIER_SLAMS_THE_TRAP",
       "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 1.3
+      "startFrame": 874,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 874,
+        "payoffFrame": 917
       },
       "textLayers": [
         {
-          "text": "PROXIMITY WARHEAD DETONATES",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "KHRUSHCHEV SPRANG",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "TAIL SHEARED FROM DRAGON LADY",
-          "triggerFrameOffset": 21,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "THE TRAP",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 43
         }
       ],
       "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "U2_EXPLOSION_DESTRUCTION"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 21
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_08_BAILOUT_CURARE_COIN",
-      "startFrame": 1060,
-      "durationFrames": 168,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
-      },
-      "textLayers": [
-        {
-          "text": "CANOPY JETTISONED IN FREEFALL",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "DESTRUCT SWITCHES OUT OF REACH",
-          "triggerFrameOffset": 32,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "POWERS_BAILOUT_CURARE_COIN"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        },
-        {
-          "sfxFile": "paper_rip.wav",
-          "frameOffset": 65
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_09_KGB_GROUND_CAPTURE",
-      "startFrame": 1228,
-      "durationFrames": 155,
-      "archetype": "SILHOUETTE_ACTION",
-      "hudVisible": true,
-      "headerContext": "KOSULINO COLLECTIVE FARM",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "PILOT TOUCHES DOWN ALIVE",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "SURROUNDED BY KGB AGENTS",
-          "triggerFrameOffset": 34,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "KGB_GROUND_CAPTURE"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_10_NASA_COVER_UP_DOSSIER",
-      "startFrame": 1383,
-      "durationFrames": 150,
-      "archetype": "DOCUMENT_CARD",
-      "hudVisible": true,
-      "headerContext": "WASHINGTON • WHITE HOUSE",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "textLayers": [
-        {
-          "text": "WHITE HOUSE ASSUMES PILOT DEAD",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "NASA WEATHER PLANE COVER STORY",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
         "stageStyle": "WOOD_PANEL",
-        "svgForegroundAsset": "NASA_COVER_UP_DOSSIER"
+        "skyGradient": [
+          "#120A05",
+          "#3B1D0E",
+          "#542813"
+        ],
+        "svgForegroundAsset": "DOSSIER_SLAMS_SCATTERED_PHOTOS",
+        "referencePlate": "khrushchev_official_full.jpg"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
-      ]
+      },
+      "audioSync": {
+        "sfxHit": "stamp_slam.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 917
+      }
     },
     {
-      "sceneId": "SCENE_11_FAKE_NASA_U2_SCHEMATIC",
-      "startFrame": 1533,
-      "durationFrames": 150,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": true,
-      "headerContext": "EDWARDS AFB • CALIFORNIA",
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.6
+      "sceneId": "SCENE_10_CHECKMATE_PILOT_ALIVE",
+      "archetype": "SPLIT_CONFRONTATION",
+      "startFrame": 984,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 984,
+        "payoffFrame": 1023
       },
       "textLayers": [
         {
-          "text": "STAGING A CIVILIAN U-2",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "CHECKMATE IN MOSCOW",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "PAINTED WITH FAKE SERIALS",
-          "triggerFrameOffset": 25,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "THE PILOT ALIVE",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 39
         }
       ],
       "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
         "stageStyle": "GRAPH_GRID",
-        "svgForegroundAsset": "FAKE_NASA_U2_SCHEMATIC"
+        "skyGradient": [
+          "#020617",
+          "#0F172A",
+          "#1E293B"
+        ],
+        "svgForegroundAsset": "CHECKMATE_POWERS_CAPTURED_STAGE",
+        "referencePlate": "powers_portrait.jpg"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_12_KHRUSHCHEV_SOVIET_PODIUM",
-      "startFrame": 1683,
-      "durationFrames": 155,
-      "archetype": "LONE_LEADER",
-      "hudVisible": true,
-      "headerContext": "MOSCOW • GRAND KREMLIN PALACE",
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.75
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
+        }
+      },
+      "audioSync": {
+        "sfxHit": "camera_shutter.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 1023
+      }
+    },
+    {
+      "sceneId": "SCENE_11_CHECKMATE_PLANE_WRECKAGE",
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "startFrame": 1094,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 1094,
+        "payoffFrame": 1134
       },
       "textLayers": [
         {
-          "text": "MOSCOW WAITS FOUR DAYS",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "SOVIETS RECOVERED",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "EISENHOWER WALKS INTO TRAP",
-          "triggerFrameOffset": 29,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "THE INTACT PLANE",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
         }
       ],
       "visualPayload": {
+        "stageStyle": "PAPER_EXTERIOR",
         "skyGradient": [
-          "#0B1310",
-          "#16221E"
+          "#020617",
+          "#0F172A",
+          "#38BDF8"
         ],
-        "stageStyle": "SUNBURST_HERO",
-        "svgForegroundAsset": "KHRUSHCHEV_SOVIET_PODIUM"
+        "svgForegroundAsset": "U2_WRECKAGE_EXHIBITION_STAGE",
+        "referencePlate": "u2_wreckage_sverdlovsk.jpg"
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
-      ]
+      },
+      "audioSync": {
+        "sfxHit": "sub_boom.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 1134
+      }
     },
     {
-      "sceneId": "SCENE_13_KHRUSHCHEV_SPEECH_BOMBSHELL",
-      "startFrame": 1838,
-      "durationFrames": 160,
-      "archetype": "LONE_LEADER",
-      "hudVisible": false,
+      "sceneId": "SCENE_12_CHECKMATE_INTACT_HYCON_FILM",
+      "archetype": "STRUCTURAL_FRACTURE",
+      "startFrame": 1204,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 1204,
+        "payoffFrame": 1246
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "RECONNAISSANCE PROOF",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "THE FILM SPOOLS",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 42
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0A0E17",
+          "#1E293B",
+          "#0284C7"
+        ],
+        "svgForegroundAsset": "CHECKMATE_INTACT_HYCON_FILM_STAGE",
+        "referencePlate": "powers_soviet_trial.jpg"
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
+        }
+      },
+      "audioSync": {
+        "sfxHit": "camera_shutter.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 1246
+      }
+    },
+    {
+      "sceneId": "SCENE_13_CHECKMATE_POISON_PIN_UNUSED",
+      "archetype": "SPLIT_CONFRONTATION",
+      "startFrame": 1314,
+      "durationFrames": 110,
+      "textTimeline": {
+        "setupFrame": 1314,
+        "payoffFrame": 1354
+      },
+      "textLayers": [
+        {
+          "tier": "PRIMARY_STATEMENT",
+          "text": "LETHAL SUICIDE PIN",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
+        },
+        {
+          "tier": "SECONDARY_PAYOFF",
+          "text": "FOUND UNUSED",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 40
+        }
+      ],
+      "visualPayload": {
+        "stageStyle": "GRAPH_GRID",
+        "skyGradient": [
+          "#0B132B",
+          "#1E293B",
+          "#10B981"
+        ],
+        "svgForegroundAsset": "CHECKMATE_POISON_PIN_ALIVE_STAGE",
+        "referencePlate": "powers_pressure_suit.jpg"
+      },
       "camera": {
         "movement": "IMPACT_SHAKE",
-        "intensity": 1.15
-      },
-      "textLayers": [
-        {
-          "text": "KHRUSHCHEV REVEALS THE SECRET",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "THE PILOT IS ALIVE AND WELL",
-          "triggerFrameOffset": 30,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "SUNBURST_HERO",
-        "svgForegroundAsset": "KHRUSHCHEV_SPEECH_BOMBSHELL"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_14_GORKY_PARK_EXHIBITION",
-      "startFrame": 1998,
-      "durationFrames": 155,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": true,
-      "headerContext": "GORKY PARK • MOSCOW",
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "300,000 CITIZENS VIEW EVIDENCE",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "WRECKAGE AND CAMERAS EXPOSED",
-          "triggerFrameOffset": 25,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "GORKY_PARK_EXHIBITION",
-        "counterConfig": {
-          "label": "VISITORS",
-          "startValue": 50000,
-          "endValue": 300000
+        "durationFrames": 110,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ],
-      "claim": {
-        "text": "300,000 CITIZENS VIEW EVIDENCE WRECKAGE AND CAMERAS EXPOSED",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      "audioSync": {
+        "sfxHit": "radar_ping.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 1354
       }
     },
     {
-      "sceneId": "SCENE_15_PARIS_SUMMIT_COLLAPSE",
-      "startFrame": 2153,
-      "durationFrames": 155,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": true,
-      "headerContext": "PARIS PEACE SUMMIT • 1960",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "KHRUSHCHEV DEMANDS US APOLOGY",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "COLD WAR DÉTENTE COLLAPSES",
-          "triggerFrameOffset": 27,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "WOOD_PANEL",
-        "svgForegroundAsset": "PARIS_SUMMIT_COLLAPSE"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_16_MOSCOW_MILITARY_TRIBUNAL",
-      "startFrame": 2308,
-      "durationFrames": 155,
+      "sceneId": "SCENE_14_EPILOGUE_COLD_WAR_HUMILIATION",
       "archetype": "LONE_LEADER",
-      "hudVisible": true,
-      "headerContext": "HALL OF COLUMNS • MOSCOW",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.75
+      "startFrame": 1424,
+      "durationFrames": 136,
+      "contextTag": "PARIS SUMMIT // 16 MAY 1960",
+      "textTimeline": {
+        "setupFrame": 1424,
+        "payoffFrame": 1453
       },
       "textLayers": [
         {
-          "text": "SUPREME MILITARY TRIBUNAL TRIAL",
-          "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
+          "text": "PEACE TALKS COLLAPSED",
+          "fontSizePx": 64,
+          "fontColor": "#FFFFFF",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 0
         },
         {
-          "text": "SENTENCED TO 10 YEARS PRISON",
-          "triggerFrameOffset": 27,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
+          "tier": "SECONDARY_PAYOFF",
+          "text": "TOTAL HUMILIATION",
+          "fontSizePx": 76,
+          "fontColor": "#EF4444",
+          "trackingEm": 0.04,
+          "triggerFrameOffset": 29
         }
       ],
       "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
         "stageStyle": "WOOD_PANEL",
-        "svgForegroundAsset": "MOSCOW_MILITARY_TRIBUNAL",
-        "counterConfig": {
-          "label": "SENTENCE (YEARS)",
-          "startValue": 1,
-          "endValue": 10
+        "skyGradient": [
+          "#1C1917",
+          "#451A03",
+          "#92400E"
+        ],
+        "svgForegroundAsset": "U2_EPILOGUE_BRASS_PLAQUE_STAGE",
+        "referencePlate": "rudolf_abel.jpg",
+        "contextTag": "PARIS SUMMIT // 16 MAY 1960"
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "durationFrames": 136,
+        "focalPoint": {
+          "x": 540,
+          "y": 1180
         }
       },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 0
-        },
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ],
-      "claim": {
-        "text": "SUPREME MILITARY TRIBUNAL TRIAL SENTENCED TO 10 YEARS PRISON",
-        "source": "1960 U-2 INCIDENT Archival Record",
-        "verified": true
+      "audioSync": {
+        "sfxHit": "sub_boom.wav",
+        "duckBgm": true,
+        "duckDb": -7.5,
+        "impactFrame": 1453
       }
-    },
-    {
-      "sceneId": "SCENE_17_GLIENICKE_BRIDGE_SPIES",
-      "startFrame": 2463,
-      "durationFrames": 160,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": true,
-      "headerContext": "GLIENICKE BRIDGE • BERLIN",
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.8
-      },
-      "textLayers": [
-        {
-          "text": "FREEZING FOG IN DIVIDED BERLIN",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "POWERS SWAPPED FOR SPYMASTER ABEL",
-          "triggerFrameOffset": 29,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "PAPER_EXTERIOR",
-        "svgForegroundAsset": "GLIENICKE_BRIDGE_SPIES"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_18_SOVIET_AND_US_MEMORIAL",
-      "startFrame": 2623,
-      "durationFrames": 160,
-      "archetype": "FLAG_BANNER",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.7
-      },
-      "textLayers": [
-        {
-          "text": "THE END OF MANNED OVERFLIGHTS",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "BIRTH OF SPY SATELLITE ERA",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "SUNBURST_HERO",
-        "svgForegroundAsset": "SOVIET_AND_US_MEMORIAL"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
-    },
-    {
-      "sceneId": "SCENE_19_EPILOGUE_BRASS_PLAQUE",
-      "startFrame": 2783,
-      "durationFrames": 165,
-      "archetype": "DOCUMENT_CARD",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.75
-      },
-      "textLayers": [
-        {
-          "text": "OPERATION GRAND SLAM",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "BLUR_TO_SHARP"
-        },
-        {
-          "text": "THE CRISIS THAT CHANGED HISTORY",
-          "triggerFrameOffset": 38,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM"
-        }
-      ],
-      "visualPayload": {
-        "skyGradient": [
-          "#0B1310",
-          "#16221E"
-        ],
-        "stageStyle": "WOOD_PANEL",
-        "svgForegroundAsset": "EPILOGUE_BRASS_PLAQUE"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 30
-        }
-      ]
     }
   ]
 }

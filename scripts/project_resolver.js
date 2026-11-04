@@ -75,6 +75,14 @@ const PROJECT_MAP = {
     bgmFile: 'assets/audio/bgm_postage_fraud.mp3',
     beatGridFile: 'assets/audio/beat_grid_postage_fraud.json',
   },
+  'burari-deaths-2018': {
+    slug: 'burari-deaths-2018',
+    timelineFile: 'src/timelines/burari_deaths_2018.json',
+    compositionId: 'BurariDeaths2018',
+    vectorFile: 'src/components/BurariDeathsVectors.tsx',
+    bgmFile: 'assets/audio/bgm_burari.mp3',
+    beatGridFile: 'assets/audio/beat_grid_burari.json',
+  },
 };
 
 function sha256File(filePath) {
@@ -99,6 +107,7 @@ function inferSlugFromTitle(title = '') {
   if (upper.includes('CARTON') || upper.includes('WIART') || upper.includes('UNKILLABLE')) return 'carton-de-wiart-1916';
   if (upper.includes('FLORIDA') || upper.includes('LEARJET') || upper.includes('N722BD')) return 'florida-plane-crash-2026';
   if (upper.includes('POSTAGE') || upper.includes('FAHEEM') || upper.includes('LABELSBANK') || upper.includes('126M')) return 'postage-fraud-2026';
+  if (upper.includes('BURARI') || upper.includes('CHUNDAWAT') || upper.includes('BHATIA')) return 'burari-deaths-2018';
   return (
     upper
       .toLowerCase()

@@ -31,3 +31,11 @@ bgm_info.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# API Secrets & OAuth Tokens
+*client_secret*.json
+*token*.json
+credentials.json
+
+# Windows Shortcuts
+*.lnk

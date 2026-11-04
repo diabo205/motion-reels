@@ -1,12 +1,12 @@
 {
   "projectSlug": "u2-incident-1960",
   "title": "1960 U-2 INCIDENT",
-  "timestamp": "2026-11-01T13:52:08.659Z",
+  "timestamp": "2026-11-04T10:39:19.976Z",
   "passed": true,
-  "totalFrames": 2948,
-  "durationSec": 49.13,
+  "totalFrames": 1560,
+  "durationSec": 26,
   "maxFramesCeiling": 3500,
-  "sceneCount": 19,
+  "sceneCount": 14,
   "transientEngine": "librosa",
   "transientStats": {
     "totalTransients": 576,
@@ -15,8 +15,420 @@
     "energyPeakCount": 228,
     "onsetCount": 118
   },
+  "telemetryAnalysis": {
+    "projectSlug": "u2-incident-1960",
+    "openingArchetype": "SPLIT_CONFRONTATION",
+    "hookDurationFrames": 104,
+    "hookHoldRate": 0.934,
+    "hasLiveTelemetry": true,
+    "telemetryPlatform": "tiktok",
+    "sceneStats": [
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 1,
+        "sceneId": "SCENE_01_SOVIET_RADAR_LOCK",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 104,
+        "durationBucket": "<=128f",
+        "payoffOffset": 38,
+        "holdRate": 0.934,
+        "isHook": true
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 2,
+        "sceneId": "SCENE_02_S75_DVINA_MISSILE_STREAK",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9384,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 3,
+        "sceneId": "SCENE_03_MISSILE_DETONATION_CABIN_LOSS",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9572,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 4,
+        "sceneId": "SCENE_04_NASA_FABRICATED_FLIGHT_MAP",
+        "archetype": "VECTOR_MAP",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 41,
+        "holdRate": 0.9672,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 5,
+        "sceneId": "SCENE_05_OFFICIAL_STATEMENT_STAMP_SLAM",
+        "archetype": "QUOTE_CARD",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9722,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 6,
+        "sceneId": "SCENE_06_EISENHOWER_DENIAL_CUTOUT",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 44,
+        "holdRate": 0.9906,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 7,
+        "sceneId": "SCENE_07_MOSCOW_FIVE_DAY_SILENCE",
+        "archetype": "CROWD_TALLY",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9821,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 8,
+        "sceneId": "SCENE_08_KHRUSHCHEV_STEPS_TO_PODIUM",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9794,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 9,
+        "sceneId": "SCENE_09_DOSSIER_SLAMS_THE_TRAP",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 43,
+        "holdRate": 0.9794,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 10,
+        "sceneId": "SCENE_10_CHECKMATE_PILOT_ALIVE",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 39,
+        "holdRate": 0.9802,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 11,
+        "sceneId": "SCENE_11_CHECKMATE_PLANE_WRECKAGE",
+        "archetype": "VEHICLE_IN_TRANSIT",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 1,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 12,
+        "sceneId": "SCENE_12_CHECKMATE_INTACT_HYCON_FILM",
+        "archetype": "STRUCTURAL_FRACTURE",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 42,
+        "holdRate": 0.9773,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 13,
+        "sceneId": "SCENE_13_CHECKMATE_POISON_PIN_UNUSED",
+        "archetype": "SPLIT_CONFRONTATION",
+        "durationFrames": 110,
+        "durationBucket": "<=128f",
+        "payoffOffset": 40,
+        "holdRate": 0.9773,
+        "isHook": false
+      },
+      {
+        "projectSlug": "u2-incident-1960",
+        "sceneIndex": 14,
+        "sceneId": "SCENE_14_EPILOGUE_COLD_WAR_HUMILIATION",
+        "archetype": "LONE_LEADER",
+        "durationFrames": 136,
+        "durationBucket": "129-144f",
+        "payoffOffset": 29,
+        "holdRate": 0.9793,
+        "isHook": false
+      }
+    ]
+  },
   "errorCount": 0,
-  "warningCount": 0,
+  "warningCount": 29,
   "motionChecks": [],
-  "violations": []
+  "violations": [
+    {
+      "sceneId": "META",
+      "rule": "BGM_LICENSE_MANIFEST",
+      "severity": "WARNING",
+      "expected": "meta.bgmLicense { source, licenseType, clearanceId }",
+      "actual": "missing",
+      "frame": 0,
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_1",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'SOVIET_RADAR_CLOSEUP_LOCK' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'SOVIET_RADAR_CLOSEUP_LOCK' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'SOVIET_RADAR_CLOSEUP_LOCK' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_2",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'S75_DVINA_MISSILE_STREAK' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'S75_DVINA_MISSILE_STREAK' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'S75_DVINA_MISSILE_STREAK' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_3",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'U2_MISSILE_DETONATION_SPIN' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'U2_MISSILE_DETONATION_SPIN' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'U2_MISSILE_DETONATION_SPIN' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_4",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'NASA_FABRICATED_FLIGHT_MAP' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'NASA_FABRICATED_FLIGHT_MAP' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'NASA_FABRICATED_FLIGHT_MAP' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_5",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'OFFICIAL_STATEMENT_STAMP_CARD' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'OFFICIAL_STATEMENT_STAMP_CARD' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'OFFICIAL_STATEMENT_STAMP_CARD' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_6",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'EISENHOWER_PRESS_DENIAL_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'EISENHOWER_PRESS_DENIAL_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'EISENHOWER_PRESS_DENIAL_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_7",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'KREMLIN_FIVE_DAY_SILENCE_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'KREMLIN_FIVE_DAY_SILENCE_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'KREMLIN_FIVE_DAY_SILENCE_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_8",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'KHRUSHCHEV_SUPREME_SOVIET_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'KHRUSHCHEV_SUPREME_SOVIET_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'KHRUSHCHEV_SUPREME_SOVIET_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_9",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'DOSSIER_SLAMS_SCATTERED_PHOTOS' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'DOSSIER_SLAMS_SCATTERED_PHOTOS' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'DOSSIER_SLAMS_SCATTERED_PHOTOS' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_10",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'CHECKMATE_POWERS_CAPTURED_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'CHECKMATE_POWERS_CAPTURED_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'CHECKMATE_POWERS_CAPTURED_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_11",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'U2_WRECKAGE_EXHIBITION_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'U2_WRECKAGE_EXHIBITION_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'U2_WRECKAGE_EXHIBITION_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_12",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'CHECKMATE_INTACT_HYCON_FILM_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'CHECKMATE_INTACT_HYCON_FILM_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'CHECKMATE_INTACT_HYCON_FILM_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_13",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'CHECKMATE_POISON_PIN_ALIVE_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'CHECKMATE_POISON_PIN_ALIVE_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'CHECKMATE_POISON_PIN_ALIVE_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "scene_14",
+      "rule": "SCENE_SPECS_LIBRARY_LINT",
+      "severity": "WARNING",
+      "expected": "Library component 'U2_EPILOGUE_BRASS_PLAQUE_STAGE' cataloged in src/library/INDEX.md",
+      "actual": "Library entry 'U2_EPILOGUE_BRASS_PLAQUE_STAGE' not found in src/library/INDEX.md",
+      "fix": "SCENE_SPECS_LIBRARY_LINT: Component 'U2_EPILOGUE_BRASS_PLAQUE_STAGE' not in library index. Fix: Add an entry to src/library/INDEX.md or update scene_specs.json.",
+      "autoFixed": false
+    },
+    {
+      "sceneId": "SCENE_01_SOVIET_RADAR_LOCK",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for soviet_radar_p30.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate soviet_radar_p30.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_02_S75_DVINA_MISSILE_STREAK",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for s75_dvina_missile.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate s75_dvina_missile.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_03_MISSILE_DETONATION_CABIN_LOSS",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for u2_wreckage_sverdlovsk.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate u2_wreckage_sverdlovsk.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_04_NASA_FABRICATED_FLIGHT_MAP",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for nasa_flight_map_turkey.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate nasa_flight_map_turkey.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_05_OFFICIAL_STATEMENT_STAMP_SLAM",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for fake_nasa_u2_weather.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate fake_nasa_u2_weather.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_06_EISENHOWER_DENIAL_CUTOUT",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for eisenhower_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate eisenhower_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_07_MOSCOW_FIVE_DAY_SILENCE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for kremlin_moscow_red.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate kremlin_moscow_red.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_08_KHRUSHCHEV_STEPS_TO_PODIUM",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for khrushchev_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate khrushchev_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_09_DOSSIER_SLAMS_THE_TRAP",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for khrushchev_official_full.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate khrushchev_official_full.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_10_CHECKMATE_PILOT_ALIVE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for powers_portrait.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate powers_portrait.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_11_CHECKMATE_PLANE_WRECKAGE",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for u2_wreckage_sverdlovsk.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate u2_wreckage_sverdlovsk.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_12_CHECKMATE_INTACT_HYCON_FILM",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for powers_soviet_trial.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate powers_soviet_trial.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_13_CHECKMATE_POISON_PIN_UNUSED",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for powers_pressure_suit.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate powers_pressure_suit.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    },
+    {
+      "sceneId": "SCENE_14_EPILOGUE_COLD_WAR_HUMILIATION",
+      "rule": "MANDATORY_REFERENCE_PLATE_LINT",
+      "severity": "WARNING",
+      "expected": ">= 3 observed visual items for rudolf_abel.jpg in plates/notes.json",
+      "actual": "Found 0 observed items in plates/notes.json",
+      "fix": "MANDATORY_REFERENCE_PLATE_LINT: Plate rudolf_abel.jpg has 0 items in plates/notes.json (minimum 3 required). Fix: Add at least 3 detailed visual observations to 'observed' in projects/u2-incident-1960/plates/notes.json."
+    }
+  ]
 }

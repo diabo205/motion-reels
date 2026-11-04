@@ -1,364 +1,210 @@
 {
   "$schema": "./timeline.schema.json",
   "meta": {
-    "title": "THE $126M POSTAGE FRAUD",
-    "flagEmoji": "🇵🇰",
+    "title": "THE BURARI DEATHS",
+    "flagEmoji": "🇮🇳",
     "fps": 60,
     "width": 1080,
     "height": 1920,
-    "bpm": 103.36,
-    "bgmFile": "audio/bgm_postage_fraud.mp3",
+    "bpm": 136,
+    "bgmFile": "audio/bgm_burari.mp3",
     "bgmStartFrom": 0,
     "bgmLicense": {
-      "source": "YouTube Audio (https://youtu.be/Td9DymMNuo0)",
+      "source": "YouTube Audio (https://youtu.be/ffVnV3p0t4A)",
       "licenseType": "CREATIVE_COMMONS",
-      "clearanceId": "CLR-POSTAGE-FRAUD-2026",
-      "attribution": "SKORN - Slowed (VUKEINE)"
+      "clearanceId": "CLR-BURARI-DEATHS-2018",
+      "attribution": "Tiny Tim - Tip Toe Thru' The Tulips With Me (Insidious Theme)"
     },
     "palette": "CONFLICT_CRISIS",
-    "particleEmitter": "DUST",
+    "particleEmitter": "ASH",
     "fontFamily": "Montserrat",
     "styleMode": "DOCUMENTARY_SANS",
     "safeZoneProfile": "CONSERVATIVE_UNION",
-    "sensitivity": "STANDARD",
+    "sensitivity": "SOMBER_MEMORIAL",
     "loopSeamless": true,
     "ctaConfig": {
-      "text": "FOLLOW FOR TRUE CYBER DOCUMENTARIES",
-      "subtext": "HOW ONE CODER STOLE $126M"
+      "text": "FOLLOW FOR HISTORICAL DOCUMENTARIES",
+      "subtext": "THE BURARI HOUSE OF SECRETS"
     }
   },
   "scenes": [
     {
-      "sceneId": "01_the_126m_hook",
+      "sceneId": "01_burarihousefacadefracture",
       "startFrame": 0,
-      "durationFrames": 102,
-      "archetype": "SPLIT_CONFRONTATION",
+      "durationFrames": 96,
+      "archetype": "STRUCTURAL_FRACTURE",
       "hudVisible": true,
+      "headerContext": "DELHI • 1 JULY 2018",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Eleven members of the Chundawat family found dead in their Burari residence on 1 July 2018",
+        "source": "Delhi Police Charge Sheet / The Hindu",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
       "camera": {
         "movement": "SLOW_PUSH_IN",
         "intensity": 0.65
       },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 35,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 38,
       "textLayers": [
         {
-          "text": "ONE PAKISTANI CODER",
+          "text": "BURARI, JULY 2018",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "STOLE $126M FROM AMERICA",
-          "triggerFrameOffset": 35,
+          "text": "ELEVEN BODIES FOUND",
+          "triggerFrameOffset": 38,
           "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "SUNBURST_HERO",
-        "skyGradient": [
-          "#9A3412",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "KhanewalVsUspsSplitHero",
-        "referencePlate": "plate_01.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm terracotta dusk sky gradient (#9A3412 to #1C1917) layered with subtle rotating sunburst paper rays. (2) Midground: Architectural diagonal split contrasting a modest Khanewal rooftop brick parapet on the left with a federal postal sorting facility portico on the right. (3) Foreground: Sharp rim-lit silhouette of a Pakistani coder at a glowing laptop on the left pitted against the high-contrast gold-and-navy USPS eagle seal on the right, separated by a soft radial backlighting horizon glow."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 0,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "🇵🇰 KHANEWAL TO USA • OCT 2026",
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "Faheem Akram allegedly defrauded USPS of $126M via LabelsBank.com",
-        "source": "BBC News / U.S. DOJ Indictment (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "02_35_billion_rupees_tally",
-      "startFrame": 102,
-      "durationFrames": 101,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "CRANE_SWEEP_UP",
-        "intensity": 0.65
-      },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 137,
-      "textLayers": [
-        {
-          "text": "FROM QUIET KHANEWAL",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "35 BILLION RUPEES GONE",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "RupeesParcelTallyBoard",
-        "referencePlate": "plate_02.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep midnight blue felt canvas (#0F172A to #1E3A8A) with tactile cardstock paper grain. (2) Midground: Towering dimensional stacks of USPS priority mail cartons and wooden cargo pallets creating layered perspective depth. (3) Foreground: Prominent tactile paper-cut tally counter board illuminated by an overhead radial spotlight beam, rolling to 35 BILLION RUPEES with crisp white border separation and soft floor shadows.",
-        "counterConfig": {
-          "label": "COUNTERFEIT LOSS (PKR BILLIONS)",
-          "startValue": 0,
-          "endValue": 35
-        }
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "$126M loss equals roughly Rs 35 billion in counterfeit postage",
-        "source": "BBC News (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "03_step1_comfort_zone_khanewal",
-      "startFrame": 203,
-      "durationFrames": 102,
-      "archetype": "LONE_LEADER",
-      "hudVisible": true,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 238,
-      "textLayers": [
-        {
-          "text": "MEET FAHEEM AKRAM",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "A QUIET VILLAGE SON",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
           "rollingCounter": false
         }
       ],
       "visualPayload": {
+        "skyGradient": [
+          "#881337",
+          "#1C1917"
+        ],
         "stageStyle": "PAPER_EXTERIOR",
-        "skyGradient": [
-          "#9A3412",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "FaheemVillageDeskSilhouette",
-        "referencePlate": "plate_03.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm terracotta dusk twilight (#9A3412 to #1C1917) visible through an arched brick courtyard aperture. (2) Midground: Southern Punjab baked-brick room interior with a slow three-blade ceiling fan casting soft organic shadows across lime-washed masonry. (3) Foreground: 33-year-old Faheem Akram seated in silhouette at a weathered wooden desk, framed by warm radial amber lamp backlighting and soft cyan laptop screen glow."
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "BurariHouseFacadeFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic dawn sky gradient (#881337 to #1C1917) layered with subtle cardstock grain. (2) Midground: Narrow Sant Nagar brick facade with iron balconies and dense overhead wiring clusters. (3) Foreground: High-contrast architectural fracture revealing the dark interior ceiling where 11 silhouettes hang in eerie stillness."
       },
       "sfxTriggers": [
         {
-          "sfxFile": "typewriter_tick.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 36
         }
-      ],
-      "headerContext": "STEP 1: COMFORT ZONE • KHANEWAL",
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "04_step1_punjab_lanes_map",
-      "startFrame": 305,
-      "durationFrames": 101,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": false,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.65
-      },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 340,
-      "textLayers": [
-        {
-          "text": "DUSTY LANES OF PUNJAB",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "FATHER'S SMALL OFFICE",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "GRAPH_GRID",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "KhanewalPunjabTacticalMap",
-        "referencePlate": "plate_04.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical slate-navy blueprint canvas (#0F172A to #1E3A8A) overlaid with fine quadrille drafting grid lines and coordinate indices. (2) Midground: Stylized geographical contours of southern Punjab, Indus-Chenab river branches, and railway junctions. (3) Foreground: High-contrast gold coordinate target marker and pulsating telemetry beacon locking onto Khanewal, rim-lit by a soft radial cyan radar sweep."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "05_step2_software_degree_need",
-      "startFrame": 406,
-      "durationFrames": 102,
-      "archetype": "QUOTE_CARD",
-      "hudVisible": true,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 441,
-      "textLayers": [
-        {
-          "text": "A SOFTWARE DEGREE",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "STARVING FOR A FORTUNE",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "WOOD_PANEL",
-        "skyGradient": [
-          "#78350F",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "SoftwareDegreeAmbitionCard",
-        "referencePlate": "plate_05.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany command desk wood-paneling (#78350F to #1C1917) with organic timber grain and dark vignette shading. (2) Midground: Cascading tactile cardstock elements including an official software engineering degree diploma and crumpled overdue utility invoices with red demand stamps. (3) Foreground: Glowing monochrome CRT code terminal displaying green diagnostic output, rimmed by intense directional edge lighting and soft paper drop-shadows.",
-        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "paper_rip.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "STEP 2: THE NEED • AMBITION",
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "06_step2_barcode_flaw_split",
-      "startFrame": 508,
-      "durationFrames": 101,
+      "sceneId": "02_neighbourshutteredshopsplit",
+      "startFrame": 96,
+      "durationFrames": 114,
       "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
+      "hudVisible": true,
+      "headerContext": "7:00 AM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
       "camera": {
         "movement": "DUTCH_TILT",
-        "intensity": 0.65
+        "intensity": 0.55
       },
-      "transientType": "TEMPO_GRID",
-      "transientHitFrame": 543,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
       "textLayers": [
         {
-          "text": "HE SPOTTED A FLAW",
+          "text": "THE MORNING ROUTINE",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "IN POSTAL BARCODES",
-          "triggerFrameOffset": 35,
+          "text": "THE SHOP WAS SHUT",
+          "triggerFrameOffset": 45,
           "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
           "rollingCounter": false
         }
       ],
       "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
         "skyGradient": [
-          "#1E1B4B",
-          "#090D12"
+          "#1E293B",
+          "#0F172A"
         ],
-        "svgForegroundAsset": "BarcodeCryptographicFlawSplit",
-        "referencePlate": "plate_06.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep cyber indigo felt expanse (#1E1B4B to #090D12) textured with subtle vertical binary code waterfalls. (2) Midground: Giant high-resolution USPS Intelligent Mail barcode matrix split along a cryptographic routing vulnerability. (3) Foreground: Coder silhouette wielding a brass-rimmed optical magnifying reticle that illuminates the flawed routing digits under a bright cyan radial beam."
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "NeighbourShutteredShopSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cool morning felt indigo canvas (#1E293B to #0F172A). (2) Midground: Split perspective between the silent grocery storefront and the dark open wooden stairway leading upstairs. (3) Foreground: Silhouetted neighbour gazing up in unease, rimmed by cold morning light."
       },
       "sfxTriggers": [
         {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
         }
-      ],
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "07_step3_crossed_line_labelsbank",
-      "startFrame": 609,
-      "durationFrames": 102,
+      "sceneId": "03_flashlightcorridorhero",
+      "startFrame": 210,
+      "durationFrames": 108,
       "archetype": "LONE_LEADER",
       "hudVisible": true,
+      "headerContext": "THE FIRST WITNESS",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
       "camera": {
         "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
+        "intensity": 0.7
       },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 645,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
       "textLayers": [
         {
-          "text": "HE CROSSED THE LINE",
+          "text": "A NEIGHBOUR WALKS UP",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "LAUNCHED LABELSBANK",
+          "text": "UNIMAGINABLE HORROR",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "FlashlightCorridorHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany hallway wood paneling (#451A03 to #1C1917). (2) Midground: Atmospheric dust motes suspended in a stark white volumetric flashlight cone. (3) Foreground: Hand grasping the banister in shock as the flashlight illuminates the suspended bodies."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "04_santnagartacticalmap",
+      "startFrame": 318,
+      "durationFrames": 108,
+      "archetype": "VECTOR_MAP",
+      "hudVisible": true,
+      "headerContext": "NORTH DELHI",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "POLICE CORDON STREET",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SANT NAGAR SEALED",
           "triggerFrameOffset": 36,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
@@ -367,429 +213,112 @@
         }
       ],
       "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
         "skyGradient": [
-          "#1E1B4B",
-          "#090D12"
+          "#0F172A",
+          "#1E3A8A"
         ],
-        "svgForegroundAsset": "LabelsBankDarkRoomLaunch",
-        "referencePlate": "plate_07.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Pitch-black dark-room felt substrate (#1E1B4B to #090D12) with subtle atmospheric dust motes. (2) Midground: Dual 27-inch high-resolution monitors radiating volumetric teal and white ambient light into a Spartan Pakistani bedroom. (3) Foreground: Sharp profile silhouette of Faheem typing on a mechanical keyboard, rim-lit by radial screen backlighting as the LabelsBank.com administrative portal goes live."
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "delhi_burari_locator_map.png",
+        "svgForegroundAsset": "SantNagarTacticalMap",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical slate-navy blueprint canvas (#0F172A to #1E3A8A) with coordinate lines. (2) Midground: Vector contours of the Yamuna River and North Delhi highways. (3) Foreground: Concentric radar rings locking onto Burari with pulsing red emergency status rings."
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 36,
-          "leadFrames": 2
+          "frameOffset": 34
         }
-      ],
-      "headerContext": "STEP 3: THE THRESHOLD • AUG 2023",
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "LabelsBank.com operated from August 2023 to September 2026",
-        "source": "U.S. Department of Justice (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
+      ]
     },
     {
-      "sceneId": "08_step3_two_dollar_labels_transit",
-      "startFrame": 711,
-      "durationFrames": 95,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": false,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 734,
-      "textLayers": [
-        {
-          "text": "ANY PARCEL WEIGHT",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "SOLD FOR JUST $2",
-          "triggerFrameOffset": 23,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "PAPER_EXTERIOR",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "UspsTwoDollarLabelTransit",
-        "referencePlate": "plate_08.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Twilight slate-navy American sky (#0F172A to #1E3A8A) with paper-cut cloud layers and utility wires. (2) Midground: Suburban postal route perspective with road markings and postal drop boxes. (3) Foreground: Iconic white USPS Grumman LLV mail delivery truck with patriotic red/blue stripes racing across the frame, dynamically stamped by oversize $2 counterfeit barcode labels with soft radial underglow."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 23,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "Counterfeit USPS labels were sold at a flat rate of roughly $2 each",
-        "source": "BBC News (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "09_step4_sixteen_accounts_map",
-      "startFrame": 806,
-      "durationFrames": 104,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": true,
-      "camera": {
-        "movement": "CRANE_SWEEP_UP",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 839,
-      "textLayers": [
-        {
-          "text": "TO HIDE THE MILLIONS",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "16 BANK ACCOUNTS",
-          "triggerFrameOffset": 33,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "GRAPH_GRID",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "SixteenAccountsNetworkMap",
-        "referencePlate": "plate_09.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dark tactical blueprint graph (#0F172A to #1E3A8A) with coordinate rings and crosshair markers. (2) Midground: Stylized financial flow vectors and banking network topology connecting commercial banks across Lahore, Multan, and Khanewal. (3) Foreground: 16 glowing crimson bank account nodes connected by high-contrast bezier laundering routes, highlighted by a central pulsating gold treasury hub and soft radial backlighting."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 33,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "STEP 4: THE SEARCH • ADAPTATION",
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "NCCIA investigators traced 16 bank accounts used to launder proceeds",
-        "source": "NCCIA Lahore / BBC News (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "10_step4_family_human_shields",
-      "startFrame": 910,
-      "durationFrames": 103,
-      "archetype": "QUOTE_CARD",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 943,
-      "textLayers": [
-        {
-          "text": "HE USED HIS FAMILY",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "AS HUMAN SHIELDS",
-          "triggerFrameOffset": 33,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "WOOD_PANEL",
-        "skyGradient": [
-          "#78350F",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "FamilySignatureShieldsCard",
-        "referencePlate": "plate_10.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Polished mahogany executive wood-panel desk (#78350F to #1C1917) with directional desk-lamp falloff. (2) Midground: Layered paper documents including commercial bank signature cards, CNIC identification records, and red ink stamping pads. (3) Foreground: Shaded silhouette of a hand with vintage fountain pen signing family member names onto account agreements, back-illuminated by a warm circular incandescent desk glow.",
-        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 33,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "11_pre_drop_family_signatures",
-      "startFrame": 1013,
-      "durationFrames": 104,
-      "archetype": "LONE_LEADER",
-      "hudVisible": false,
-      "camera": {
-        "movement": "DUTCH_TILT",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 1046,
-      "textLayers": [
-        {
-          "text": "WIFE SISTER AND AUNT",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "SIGNED THEIR NAMES",
-          "triggerFrameOffset": 33,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "PAPER_EXTERIOR",
-        "skyGradient": [
-          "#9A3412",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "WifeSisterAuntCourtyardSilhouette",
-        "referencePlate": "plate_11.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Rich terracotta sunset Punjab sky (#9A3412 to #1C1917) framed by arched brick veranda walls. (2) Midground: Domestic courtyard with traditional wooden charpai, clay water vessels, and silhouetted foliage. (3) Foreground: Somber silhouettes of Faheem's wife, sister, and maternal aunt holding bank checkbooks, accented by warm golden-hour rim lighting that contrasts their unwitting complicity."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 33,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "Accounts belonged to Akram (7), brother (5), wife (2), sister (1), and aunt (1)",
-        "source": "NCCIA Lahore Zone (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "12_step5_19s_drop_126m_drained",
-      "startFrame": 1117,
-      "durationFrames": 105,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": true,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 1152,
-      "textLayers": [
-        {
-          "text": "THE CODE EXPLODED",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "$126 MILLION DRAINED",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "SUNBURST_HERO",
-        "skyGradient": [
-          "#7F1D1D",
-          "#1A090B"
-        ],
-        "svgForegroundAsset": "UspsVaultFractureExplosion",
-        "referencePlate": "plate_12.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Blinding crimson blast furnace sky (#7F1D1D to #1A090B) with explosive rotating paper rays. (2) Midground: Massive fortified steel postal vault doors fracturing along jagged mechanical stress fissures. (3) Foreground: 6-layer organic explosion core erupting with white-hot central flash star, flying currency shards, and expanding smoke rings at the 19.20s beat drop, surrounded by an intense radial shockwave aura."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "STEP 5: THE FIND • 19S BEAT DROP",
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "Operation caused over $126 million in losses to the U.S. Postal Service",
-        "source": "U.S. DOJ / BBC News (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      },
-      "structuralFractureHitFrame": 1152
-    },
-    {
-      "sceneId": "13_step5_five_million_labels_tally",
-      "startFrame": 1222,
-      "durationFrames": 104,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "CRANE_SWEEP_UP",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 1255,
-      "textLayers": [
-        {
-          "text": "5,200 SECRET BUYERS",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "5.1M FAKE LABELS",
-          "triggerFrameOffset": 33,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": true
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "FiveMillionLabelsConveyorTally",
-        "referencePlate": "plate_13.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Industrial slate-navy felt substrate (#0F172A to #1E3A8A) patterned with repeating rows of 5,200 buyer silhouette icons. (2) Midground: High-speed automated thermal label printing assembly spewing thousands of coiled counterfeit postage labels. (3) Foreground: High-contrast mechanical tally counter drum illuminated by a stark white industrial spotlight, spinning rapidly up to 5,100,000 units with crisp drop-shadow depth.",
-        "counterConfig": {
-          "label": "FAKE USPS LABELS SOLD",
-          "startValue": 0,
-          "endValue": 5100000
-        }
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "counter_roll.wav",
-          "frameOffset": 33,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "LabelsBank sold over 5.1 million counterfeit labels to more than 5,200 customers",
-        "source": "U.S. DOJ Indictment (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "14_step5_cargo_jets_millions_home",
-      "startFrame": 1326,
+      "sceneId": "05_threegenerationstallyboard",
+      "startFrame": 426,
       "durationFrames": 106,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": false,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.65
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "THE CHUNDAWAT FAMILY",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The dead included grandmother Narayani Devi (80), her sons, daughters, and two 15-year-old grandsons",
+        "source": "Delhi Police FSL Autopsy Report",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
       },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 1363,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
       "textLayers": [
         {
-          "text": "CARGO JETS CROSSED AMERICA",
+          "text": "THREE GENERATIONS",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "MILLIONS FLOWED HOME",
-          "triggerFrameOffset": 37,
+          "text": "ELEVEN FAMILY MEMBERS",
+          "triggerFrameOffset": 36,
           "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": true
         }
       ],
       "visualPayload": {
-        "stageStyle": "PAPER_EXTERIOR",
         "skyGradient": [
-          "#9A3412",
-          "#1C1917"
+          "#18181B",
+          "#090D12"
         ],
-        "svgForegroundAsset": "AtlanticCargoJetWireTransit",
-        "referencePlate": "plate_14.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Transatlantic high-altitude dusk sky transitioning from deep terracotta to obsidian (#9A3412 to #1C1917). (2) Midground: Heavy commercial freight transport aircraft banking into the horizon with twin glowing condensation contrails. (3) Foreground: Luminous golden wire-transfer particle vectors arcing eastward over continental landmasses, backlit by soft radial engine exhaust glows and high-contrast cloud cardstock layers."
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "indian_family_portrait.jpg",
+        "svgForegroundAsset": "ThreeGenerationsTallyBoard",
+        "counterConfig": {
+          "label": "FAMILY MEMBERS LOST",
+          "startValue": 1,
+          "endValue": 11
+        },
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Pitch-black memorial felt substrate (#18181B to #090D12). (2) Midground: Row of 11 distinct family silhouettes ranging from grandmother to teenage boys. (3) Foreground: Tactile brass-rimmed tally board rolling to 11 with soft golden floor candle reflections."
       },
       "sfxTriggers": [
         {
-          "sfxFile": "sub_boom.wav",
-          "frameOffset": 37,
-          "leadFrames": 2
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
         }
-      ],
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "15_step5_seven_accounts_gold",
-      "startFrame": 1432,
-      "durationFrames": 103,
+      "sceneId": "06_priyankaengagementhero",
+      "startFrame": 532,
+      "durationFrames": 105,
       "archetype": "LONE_LEADER",
-      "hudVisible": false,
+      "hudVisible": true,
+      "headerContext": "17 JUNE 2018",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Priyanka's engagement was celebrated with 200 guests just 14 days before the tragedy",
+        "source": "The Hindu / Indian Express",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
       "camera": {
         "movement": "SLOW_PUSH_IN",
         "intensity": 0.65
       },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 1467,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
       "textLayers": [
         {
-          "text": "7 PERSONAL ACCOUNTS",
+          "text": "JUST TWO WEEKS EARLIER",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "OVERFLOWING WITH GOLD",
-          "triggerFrameOffset": 35,
+          "text": "A JOYFUL ENGAGEMENT",
+          "triggerFrameOffset": 36,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM",
@@ -797,47 +326,453 @@
         }
       ],
       "visualPayload": {
-        "stageStyle": "WOOD_PANEL",
         "skyGradient": [
-          "#78350F",
-          "#1C1917"
+          "#B45309",
+          "#451A03"
         ],
-        "svgForegroundAsset": "GoldenVillaParanoiaLeader",
-        "referencePlate": "plate_15.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Opulent dark mahogany library paneling (#78350F to #1C1917) with organic wood grain and heavy cardstock borders. (2) Midground: Venetian window blinds casting stark horizontal shadow bars across a luxury compound marble floor. (3) Foreground: Tense silhouette of Faheem peering through the blinds beside a stack of 7 gold-embossed ledger folios, rim-lit by ominous red surveillance laser beams cutting through the gloom."
+        "stageStyle": "SUNBURST_HERO",
+        "referencePlate": "priyanka_marigold_engagement.jpg",
+        "svgForegroundAsset": "PriyankaEngagementHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Vibrant golden sunburst paper rays (#B45309 to #451A03) celebrating life and future. (2) Midground: Festive flower garlands and decorative paper bunting. (3) Foreground: Rim-lit silhouette of Priyanka holding ceremonial flower petals, highlighting the utter absence of prior outward despair."
       },
       "sfxTriggers": [
         {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 34
         }
-      ],
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "16_step6_grand_jury_bounty",
-      "startFrame": 1535,
-      "durationFrames": 105,
+      "sceneId": "07_bindingsandcottonfracture",
+      "startFrame": 637,
+      "durationFrames": 103,
       "archetype": "STRUCTURAL_FRACTURE",
       "hudVisible": true,
+      "headerContext": "FORENSIC FINDINGS",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
       "camera": {
         "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
+        "intensity": 0.7
       },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 1572,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
       "textLayers": [
         {
-          "text": "US GRAND JURY STRUCK",
+          "text": "CRIME SCENE HORRORS",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "$100,000 BOUNTY POSTED",
+          "text": "EYES AND EARS SEALED",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#7F1D1D",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "BindingsAndCottonFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Crimson crisis shadow (#7F1D1D to #1C1917) textured with dark grain. (2) Midground: Structural cross-section of bound wrists with smooth unresisting ties. (3) Foreground: Graphic fracture illustrating the ritualistic blindfolding and cotton ear plugs."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "08_elevenpipeswallsplit",
+      "startFrame": 740,
+      "durationFrames": 107,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "THE EXTERIOR WALL",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 37,
+      "textLayers": [
+        {
+          "text": "ON THE REAR FACADE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN STRANGE PIPES",
           "triggerFrameOffset": 37,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#9A3412",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "eleven_pvc_pipes_wall.jpg",
+        "svgForegroundAsset": "ElevenPipesWallSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dusty terracotta Delhi evening sky (#9A3412 to #1C1917). (2) Midground: Texture of exposed red brick masonry with mortar seams. (3) Foreground: Exactly 11 white PVC pipes protruding into the empty lot, matching the count and ages of the victims."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 35
+        }
+      ]
+    },
+    {
+      "sceneId": "09_mediafrenzyquotecard",
+      "startFrame": 847,
+      "durationFrames": 106,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "NATIONAL HEADLINES",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "MEDIA CONSPIRACIES",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "OCCULT MASS MURDER",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#450A0A",
+          "#0F172A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "forensic_autopsy_dossier.jpg",
+        "svgForegroundAsset": "MediaFrenzyQuoteCard",
+        "quoteAttribution": "TELEVISION NEWS CHYRON, 2 JULY 2018",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: High-contrast crimson-to-navy broadcast grid (#450A0A to #0F172A). (2) Midground: Silhouetted media microphones and camera flashes outside the house. (3) Foreground: Tactile news card displaying the sensational early theories of occult cults."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "10_prayerroomshrinehero",
+      "startFrame": 953,
+      "durationFrames": 106,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE PRAYER ROOM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "IN THE PUJA ROOM",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN DIARIES FOUND",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#78350F",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PrayerRoomShrineHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Rich sandalwood wood grain (#78350F to #1C1917) illuminated by flickering fire. (2) Midground: Traditional Hindu puja mandir with brass bell and framed ancestor photograph. (3) Foreground: Stack of 11 handwritten registers, unlocking the true psychological reality."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "11_patriarchmemorialcard",
+      "startFrame": 1059,
+      "durationFrames": 111,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE TURNING POINT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The death of patriarch Bhopal Singh in 2007 plunged his youngest son Lalit into profound grief",
+        "source": "Delhi Police Investigation Dossier",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 39,
+      "textLayers": [
+        {
+          "text": "PATRIARCH BHOPAL SINGH",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "PASSED AWAY IN 2007",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PatriarchMemorialCard",
+        "quoteAttribution": "FAMILY HISTORY, 2007",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Warm sepia-to-charcoal wood canvas (#451A03 to #1C1917). (2) Midground: Garlanded ancestral portrait of the patriarch. (3) Foreground: Cardstock memorial card marking the 2007 inciting tragedy that started the decade-long delusion."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 37
+        }
+      ]
+    },
+    {
+      "sceneId": "12_lalittraumasilencesplit",
+      "startFrame": 1170,
+      "durationFrames": 103,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "UNRESOLVED TRAUMA",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 39,
+      "textLayers": [
+        {
+          "text": "AFTER AN ASSAULT",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "LALIT LOST HIS VOICE",
+          "triggerFrameOffset": 39,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#1E1B4B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "LalitTraumaSilenceSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Muted indigo felt substrate (#1E1B4B to #090D12). (2) Midground: Silhouette of Lalit isolated in his room, unable to speak. (3) Foreground: Flatline audio waveform symbolizing his years of traumatic silence before his voice mysteriously returned."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 37
+        }
+      ]
+    },
+    {
+      "sceneId": "13_possessionbreakthroughfracture",
+      "startFrame": 1273,
+      "durationFrames": 108,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE DELUSION BEGINS",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "IMPACT_SHAKE",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
+      "textLayers": [
+        {
+          "text": "HIS VOICE RETURNED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "FATHER SPOKE THROUGH HIM",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#7F1D1D",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "PossessionBreakthroughFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Explosive terracotta-to-crimson energy sky (#7F1D1D to #1C1917). (2) Midground: Ethereal dual silhouette showing father and son merged in spiritual possession. (3) Foreground: Jagged structural shockwave representing the psychic fracture that overtook the entire household."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "14_priyankadiarieswritingcard",
+      "startFrame": 1381,
+      "durationFrames": 104,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "SECRET CHRONICLES",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Forensic handwriting analysis confirmed Priyanka and others wrote down Lalit's dictated trances",
+        "source": "Delhi Police Forensic Handwriting Division",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 41,
+      "textLayers": [
+        {
+          "text": "LALIT DICTATED ORDERS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "PRIYANKA WROTE EVERYTHING",
+          "triggerFrameOffset": 41,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "ALERT_RED",
+          "animation": "SCALE_SLAM",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "handwritten_diary_register.jpg",
+        "svgForegroundAsset": "PriyankaDiariesWritingCard",
+        "quoteAttribution": "FORENSIC HANDWRITING ANALYSIS",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical forensic blueprint grid (#0F172A to #1E3A8A). (2) Midground: Lined journal notebook pages showing 11 years of daily directives. (3) Foreground: Delicate handwriting quill pen etching the rules of conduct, diet, and spiritual obedience."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "sub_boom.wav",
+          "frameOffset": 39
+        }
+      ]
+    },
+    {
+      "sceneId": "15_prosperityexpansiontallyboard",
+      "startFrame": 1485,
+      "durationFrames": 106,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "REINFORCING THE LIE",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "CRANE_SWEEP_UP",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "OBEDIENCE BROUGHT SUCCESS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BUSINESS EXPANDED RAPIDLY",
+          "triggerFrameOffset": 36,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM",
@@ -845,253 +780,106 @@
         }
       ],
       "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
         "skyGradient": [
-          "#7F1D1D",
-          "#1A090B"
-        ],
-        "svgForegroundAsset": "FloridaGrandJuryBountyFracture",
-        "referencePlate": "plate_16.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Foreboding crimson-black justice felt backdrop (#7F1D1D to #1A090B) with distressed paper edges. (2) Midground: Southern District of Florida federal judicial seal and neoclassical grand jury columns. (3) Foreground: Heavy walnut gavel slamming down with kinetic impact lines, fracturing an official $100,000 USPIS WANTED reward placard stamped with bold red distress ink and rimmed by high-intensity strobe lighting."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 37,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "STEP 6: THE PRICE • FLORIDA DOJ",
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "USPIS offered a $100,000 reward following a Florida federal grand jury indictment",
-        "source": "USPIS / U.S. DOJ (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      },
-      "structuralFractureHitFrame": 1572
-    },
-    {
-      "sceneId": "17_step6_uspis_nccia_trace_map",
-      "startFrame": 1640,
-      "durationFrames": 107,
-      "archetype": "VECTOR_MAP",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 1675,
-      "textLayers": [
-        {
-          "text": "USPIS AND NCCIA UNITED",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "TRACED EVERY RUPEE",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "GRAPH_GRID",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "MiamiToLahoreRadarTraceMap",
-        "referencePlate": "plate_17.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Tactical cyber intelligence grid (#0F172A to #1E3A8A) with circular range rings and IP routing coordinate markers. (2) Midground: Dual-hemisphere map linking Miami USPIS headquarters with NCCIA Cyber Crime Wing in Lahore via high-speed encrypted forensic data lines. (3) Foreground: Concentric radar sweeps locking pulsing amber target crosshairs onto Lahore and Khanewal, framed by soft radial cyan backlighting."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "radar_ping.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "18_step6_sixteen_accounts_frozen",
-      "startFrame": 1747,
-      "durationFrames": 102,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
-      "camera": {
-        "movement": "DUTCH_TILT",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 1781,
-      "textLayers": [
-        {
-          "text": "16 ACCOUNTS FROZEN",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "HIS FAMILY NAMED",
-          "triggerFrameOffset": 34,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "SUNBURST_HERO",
-        "skyGradient": [
-          "#7F1D1D",
-          "#1A090B"
-        ],
-        "svgForegroundAsset": "SixteenAccountsFrozenSplit",
-        "referencePlate": "plate_18.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Intense crisis crimson sky (#7F1D1D to #1A090B) with dramatic diagonal sunburst paper rays. (2) Midground: Heavy reinforced bank vault doors on the left shackled with heavy iron chains and massive padlocks. (3) Foreground: Silhouetted family figures on the right illuminated by pulsing emergency red beacon strobes, overlaid with bold frosted FROZEN compliance stamps and soft backlighting."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 34,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "16 ACCOUNTS FROZEN HIS FAMILY NAMED",
-        "source": "THE $126M POSTAGE FRAUD Archival Record",
-        "verified": true
-      }
-    },
-    {
-      "sceneId": "19_step6_family_fallout_dossier",
-      "startFrame": 1849,
-      "durationFrames": 104,
-      "archetype": "QUOTE_CARD",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 1884,
-      "textLayers": [
-        {
-          "text": "BROTHER WIFE AND AUNT",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "FACED THE FALLOUT",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "WOOD_PANEL",
-        "skyGradient": [
-          "#78350F",
+          "#B45309",
           "#1C1917"
         ],
-        "svgForegroundAsset": "NcciaFamilyFalloutDossier",
-        "referencePlate": "plate_19.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Weathered walnut briefing table wood substrate (#78350F to #1C1917) with deep paper drop shadows. (2) Midground: Unfolded NCCIA Lahore Zone confidential dossier folder with authentic typed Urdu and English charge sheets. (3) Foreground: Family forensic accounting ledger card detailing Brother (5), Wife (2), Sister (1), and Aunt (1), stamped with a prominent red CONFIDENTIAL seal under focused warm spotlight illumination.",
-        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "20_step7_hunted_across_punjab",
-      "startFrame": 1953,
-      "durationFrames": 99,
-      "archetype": "VEHICLE_IN_TRANSIT",
-      "hudVisible": true,
-      "camera": {
-        "movement": "PARALLAX_PAN_RIGHT",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 1988,
-      "textLayers": [
-        {
-          "text": "HUNTED ACROSS PUNJAB",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
+        "stageStyle": "SUNBURST_HERO",
+        "referencePlate": "prosperity_bazaar_counters.jpg",
+        "svgForegroundAsset": "ProsperityExpansionTallyBoard",
+        "counterConfig": {
+          "label": "NEW FAMILY SHOPS",
+          "startValue": 1,
+          "endValue": 3
         },
-        {
-          "text": "NOWHERE LEFT TO HIDE",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
-        "skyGradient": [
-          "#1E1B4B",
-          "#090D12"
-        ],
-        "svgForegroundAsset": "LahoreNightRaidConvoyTransit",
-        "referencePlate": "plate_20.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Midnight cyber indigo felt night sky (#1E1B4B to #090D12) over the Lahore urban horizon. (2) Midground: Architectural silhouettes of Lahore flyovers and colonial facades. (3) Foreground: High-speed convoy of NCCIA tactical response pickup trucks with flashing red and blue LED light bars projecting volumetric cone beams across the wet asphalt, rim-lighting fugitive tire tracks."
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Vibrant golden sunburst paper rays (#B45309 to #1C1917). (2) Midground: Architectural facades of multiple flourishing family shops. (3) Foreground: Rolling prosperity tally board demonstrating how real-world success cemented the fatal delusion."
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
+          "frameOffset": 34
         }
-      ],
-      "headerContext": "STEP 7: THE RETURN • LAHORE RAID",
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "21_step7_lahore_raid_capture",
-      "startFrame": 2052,
-      "durationFrames": 112,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
+      "sceneId": "16_badhtapasyacommandhero",
+      "startFrame": 1591,
+      "durationFrames": 106,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE FINAL RITUAL",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The diaries detailed 'Badh Tapasya' (Banyan Tree worship) where members would imitate hanging aerial roots",
+        "source": "Delhi Police Investigation Records",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
       },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 2095,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
       "textLayers": [
         {
-          "text": "NCCIA BROKE THE DOOR",
+          "text": "A SEVEN DAY PENANCE",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "CAPTURED IN LAHORE",
+          "text": "BADH TAPASYA ORDERED",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#581C87",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "sacred_banyan_tree_roots.jpg",
+        "svgForegroundAsset": "BadhTapasyaCommandHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Mystical deep violet felt backdrop (#581C87 to #1C1917). (2) Midground: Ritualistic copper utensils, camphor flames, and sacred red threads. (3) Foreground: Rim-lit silhouette of Lalit issuing the instructions for the fateful seven-day penance."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "17_banyantreerootsfracture",
+      "startFrame": 1697,
+      "durationFrames": 107,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE BLUEPRINT",
+      "sensitivity": "STANDARD",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 43,
+      "textLayers": [
+        {
+          "text": "SACRED BANYAN TREE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "AERIAL ROOTS REACH DOWN",
           "triggerFrameOffset": 43,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
@@ -1100,350 +888,260 @@
         }
       ],
       "visualPayload": {
+        "skyGradient": [
+          "#14532D",
+          "#0F172A"
+        ],
         "stageStyle": "PAPER_EXTERIOR",
-        "skyGradient": [
-          "#7F1D1D",
-          "#1A090B"
-        ],
-        "svgForegroundAsset": "LahoreHideoutBreachFracture",
-        "referencePlate": "plate_21.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Crimson raid shockwave backdrop (#7F1D1D to #1A090B) visible through a shattered entryway. (2) Midground: Lahore safehouse interior with tactical entry team silhouettes in Kevlar helmets and breaching gear. (3) Foreground: Splintered wooden door bursting inward with tactile paper shards and dust motes as rack-mounted LabelsBank server towers are violently unplugged, rimmed by high-contrast flashlight beams."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 43,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "claim": {
-        "text": "Pakistan's NCCIA tracked down and arrested Faheem Akram in Lahore",
-        "source": "BBC News / Dawn (Oct 2026)",
-        "url": "https://www.bbc.com/news/articles/ckdd8m1z1z3yo",
-        "verified": true
-      },
-      "structuralFractureHitFrame": 2095
-    },
-    {
-      "sceneId": "22_step7_iron_cuffs_coder_hands",
-      "startFrame": 2164,
-      "durationFrames": 106,
-      "archetype": "LONE_LEADER",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 2200,
-      "textLayers": [
-        {
-          "text": "IRON CUFFS LOCKED",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "ON THE CODER'S HANDS",
-          "triggerFrameOffset": 36,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
-        "skyGradient": [
-          "#1E1B4B",
-          "#090D12"
-        ],
-        "svgForegroundAsset": "IronCuffsOnCoderHandsLeader",
-        "referencePlate": "plate_22.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Stark midnight felt detention canvas (#1E1B4B to #090D12) devoid of digital color. (2) Midground: Defeated silhouette of Faheem Akram sitting with bowed head in an austere holding cell. (3) Foreground: Extreme close-up silhouette of heavy blued-steel handcuffs snapping shut around trembling coder wrists, illuminated by a single harsh cool overhead rim spotlight."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 36,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "23_step7_khanewal_honor_shattered",
-      "startFrame": 2270,
-      "durationFrames": 103,
-      "archetype": "CROWD_TALLY",
-      "hudVisible": false,
-      "camera": {
-        "movement": "CRANE_SWEEP_UP",
-        "intensity": 0.65
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 2304,
-      "textLayers": [
-        {
-          "text": "BACK IN KHANEWAL",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "FAMILY HONOR SHATTERED",
-          "triggerFrameOffset": 34,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "PAPER_EXTERIOR",
-        "skyGradient": [
-          "#9A3412",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "KhanewalVillageGriefTally",
-        "referencePlate": "plate_23.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic terracotta dusk over rustic Khanewal village rooftops (#9A3412 to #1C1917). (2) Midground: Narrow brick-walled village lane where whispering neighbors gather outside the family compound. (3) Foreground: Elderly father silhouette resting on a wooden walking stick, staring in devastated silence at the flickering blue light of a CRT television broadcast, framed by somber twilight backlighting.",
-        "counterConfig": {
-          "label": "FAMILY ACCOUNTS IMPLICATED",
-          "startValue": 0,
-          "endValue": 16
-        }
+        "referencePlate": "sacred_banyan_tree_roots.jpg",
+        "svgForegroundAsset": "BanyanTreeRootsFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Twilight emerald-to-navy forest sky (#14532D to #0F172A). (2) Midground: Sprawling canopy of the sacred Indian banyan tree. (3) Foreground: Graphic structural roots cascading vertically down, illustrating the physical pattern the family was instructed to imitate."
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 34,
-          "leadFrames": 2
+          "frameOffset": 41
         }
-      ],
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "24_step7_us_extradition_bars",
-      "startFrame": 2373,
-      "durationFrames": 105,
+      "sceneId": "18_rootsvsdupattassplit",
+      "startFrame": 1804,
+      "durationFrames": 106,
       "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
+      "hudVisible": true,
+      "headerContext": "THE MACABRE MIRROR",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
       "camera": {
         "movement": "DUTCH_TILT",
         "intensity": 0.65
       },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 2407,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 43,
       "textLayers": [
         {
-          "text": "FACING US EXTRADITION",
+          "text": "HANGING LIKE ROOTS",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "DECADES BEHIND BARS",
-          "triggerFrameOffset": 34,
+          "text": "TEN SILK SCARVES",
+          "triggerFrameOffset": 43,
           "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
           "rollingCounter": false
         }
       ],
       "visualPayload": {
-        "stageStyle": "GRAPH_GRID",
-        "skyGradient": [
-          "#0F172A",
-          "#1E3A8A"
-        ],
-        "svgForegroundAsset": "ExtraditionWatchtowerSplit",
-        "referencePlate": "plate_24.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cold federal slate-navy graph grid (#0F172A to #1E3A8A) inscribed with formal treaty and penal code articles. (2) Midground: Split confrontation between Pakistani jail cell masonry on the left and an imposing U.S. federal maximum-security penitentiary wall on the right. (3) Foreground: Prisoner silhouette facing a towering watchtower searchlight beam, anchored by an official U.S. extradition request warrant with high-contrast embossed seals."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "stamp_slam.wav",
-          "frameOffset": 34,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "25_step8_two_dollar_shortcut_cost",
-      "startFrame": 2478,
-      "durationFrames": 104,
-      "archetype": "QUOTE_CARD",
-      "hudVisible": true,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 2512,
-      "textLayers": [
-        {
-          "text": "A $2 SHORTCUT",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "COST EVERYTHING HE LOVED",
-          "triggerFrameOffset": 34,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "WOOD_PANEL",
-        "skyGradient": [
-          "#78350F",
-          "#1C1917"
-        ],
-        "svgForegroundAsset": "StoryCircleTwoDollarShortcutCard",
-        "referencePlate": "plate_25.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep mahogany command desk wood grain (#78350F to #1C1917) with warm corner vignettes. (2) Midground: Complete 8-stage Dan Harmon Story Circle diagram etched into weathered parchment substrate with radial progress spokes. (3) Foreground: Charred and curled $2 counterfeit postal label lying at the circle's center, stamped with a bold red weathered SEIZED insignia and haloed by fading golden ember sparks.",
-        "quoteAttribution": "BBC NEWS / DOJ INDICTMENT (2026)"
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "paper_rip.wav",
-          "frameOffset": 34,
-          "leadFrames": 2
-        }
-      ],
-      "headerContext": "STEP 8: THE CHANGE • FULL CIRCLE",
-      "sensitivity": "STANDARD"
-    },
-    {
-      "sceneId": "26_step8_labelsbank_shattered",
-      "startFrame": 2582,
-      "durationFrames": 104,
-      "archetype": "STRUCTURAL_FRACTURE",
-      "hudVisible": false,
-      "camera": {
-        "movement": "IMPACT_SHAKE",
-        "intensity": 0.95
-      },
-      "transientType": "BASS_DROP",
-      "transientHitFrame": 2618,
-      "textLayers": [
-        {
-          "text": "LABELSBANK WENT DARK",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "THE EMPIRE SHATTERED",
-          "triggerFrameOffset": 36,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
-        "skyGradient": [
-          "#7F1D1D",
-          "#1A090B"
-        ],
-        "svgForegroundAsset": "LabelsBankMonitorShatterFracture",
-        "referencePlate": "plate_26.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Deep crimson-to-black felt void (#7F1D1D to #1A090B) with volumetric aura falloff. (2) Midground: Computer monitor housing cracking open along sharp structural stress lines under an official DOJ domain seizure seal. (3) Foreground: High-contrast white-hot detonation core erupting into flying tempered glass shards, dissolved barcode pixels, and dark floating ash motes, rimmed by intense radial backlighting."
-      },
-      "sfxTriggers": [
-        {
-          "sfxFile": "artillery_shell.wav",
-          "frameOffset": 36,
-          "leadFrames": 2
-        }
-      ],
-      "sensitivity": "STANDARD",
-      "structuralFractureHitFrame": 2618
-    },
-    {
-      "sceneId": "27_step8_screen_glow_to_bars",
-      "startFrame": 2686,
-      "durationFrames": 105,
-      "archetype": "LONE_LEADER",
-      "hudVisible": false,
-      "camera": {
-        "movement": "SLOW_PUSH_IN",
-        "intensity": 0.65
-      },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 2721,
-      "textLayers": [
-        {
-          "text": "SCREEN GLOW FADED",
-          "triggerFrameOffset": 0,
-          "tier": "PRIMARY_STATEMENT",
-          "colorToken": "PURE_WHITE",
-          "animation": "HARD_POP"
-        },
-        {
-          "text": "ONLY BARS REMAIN",
-          "triggerFrameOffset": 35,
-          "tier": "SECONDARY_ACCENT",
-          "colorToken": "ALERT_RED",
-          "animation": "SCALE_SLAM",
-          "rollingCounter": false
-        }
-      ],
-      "visualPayload": {
-        "stageStyle": "NIGHT_FELT",
         "skyGradient": [
           "#1E1B4B",
           "#090D12"
         ],
-        "svgForegroundAsset": "DarkCellIronBarsLeader",
-        "referencePlate": "plate_27.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Cold indigo felt concrete cell wall (#1E1B4B to #090D12) with tactile mortar joints. (2) Midground: High barred security transom casting long diagonal moonlight stripes across an empty concrete floor where glowing monitors once sat. (3) Foreground: Solitary silhouette of Faheem seated in despair behind thick vertical blued-iron cell bars, rim-lit by a faint, cool celestial backlight."
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "RootsVsDupattasSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Oppressive midnight felt void (#1E1B4B to #090D12). (2) Midground: Heavy iron ceiling mesh grid bolted into reinforced concrete beams. (3) Foreground: Split vector comparison juxtaposing living tree roots with ten hanging silk dupattas."
       },
       "sfxTriggers": [
         {
-          "sfxFile": "metal_clang.wav",
-          "frameOffset": 35,
-          "leadFrames": 2
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 41
         }
-      ],
-      "sensitivity": "STANDARD"
+      ]
     },
     {
-      "sceneId": "28_epilogue_conscience_cage_loop",
-      "startFrame": 2791,
-      "durationFrames": 132,
-      "archetype": "SPLIT_CONFRONTATION",
-      "hudVisible": false,
+      "sceneId": "19_finalpromisequotecard",
+      "startFrame": 1910,
+      "durationFrames": 107,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE PROMISE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "The final diary entry assured: 'The earth will shake, the sky will part, and I will appear to untie everyone'",
+        "source": "Delhi Police Burari Diary Excerpt",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
       "camera": {
         "movement": "SLOW_PUSH_IN",
         "intensity": 0.65
       },
-      "transientType": "CYMBAL_CRASH",
-      "transientHitFrame": 2825,
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
       "textLayers": [
         {
-          "text": "GENIUS WITHOUT CONSCIENCE",
+          "text": "FINAL DIARY WORDS",
           "triggerFrameOffset": 0,
           "tier": "PRIMARY_STATEMENT",
           "colorToken": "PURE_WHITE",
           "animation": "HARD_POP"
         },
         {
-          "text": "BUILDS ITS OWN CAGE",
-          "triggerFrameOffset": 34,
+          "text": "FATHER WILL SAVE US",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "handwritten_diary_register.jpg",
+        "svgForegroundAsset": "FinalPromiseQuoteCard",
+        "quoteAttribution": "FINAL DIARY ENTRY, 30 JUNE 2018",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Somber walnut wood-panel grain (#451A03 to #1C1917). (2) Midground: Lined notebook page showing the chilling final words written on June 30. (3) Foreground: Tactile cardstock quote card displaying the promised supernatural rescue."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "20_midnightstoolstransithero",
+      "startFrame": 2017,
+      "durationFrames": 103,
+      "archetype": "VEHICLE_IN_TRANSIT",
+      "hudVisible": true,
+      "headerContext": "MIDNIGHT • 30 JUNE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "PARALLAX_PAN_RIGHT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "UNDER THE IRON MESH",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN STOOLS ALIGNED",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E293B"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "prosperity_bazaar_counters.jpg",
+        "svgForegroundAsset": "MidnightStoolsTransitHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Midnight slate graph canvas (#0F172A to #1E293B) marked with millimeter drafting lines. (2) Midground: Floor plan of the Sant Nagar living room showing the circular arrangement. (3) Foreground: Eleven stools gliding into position in eerie clockwork precision."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "21_grandmotherbedleaderhero",
+      "startFrame": 2120,
+      "durationFrames": 108,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "THE ADJACENT ROOM",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Eighty-year-old grandmother Narayani Devi was found strangled in her bed, unable to stand on a stool",
+        "source": "Delhi Police Post-Mortem Report",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "MATRIARCH NARAYANI DEVI",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "BEDRIDDEN AT EIGHTY",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#18181B",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "indian_family_portrait.jpg",
+        "svgForegroundAsset": "GrandmotherBedLeaderHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Gentle, quiet midnight felt canvas (#18181B to #090D12). (2) Midground: Traditional Indian wooden cot and modest bedroom furnishings. (3) Foreground: Dignified, heartbreaking silhouette of the matriarch who was unable to stand on the stools."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
+    },
+    {
+      "sceneId": "22_tommyterracebarksplit",
+      "startFrame": 2228,
+      "durationFrames": 107,
+      "archetype": "SPLIT_CONFRONTATION",
+      "hudVisible": true,
+      "headerContext": "ON THE ROOFTOP",
+      "sensitivity": "STANDARD",
+      "claim": {
+        "text": "Tommy, the family's Indian pariah dog, was found chained on the rooftop terrace barking continuously with high fever",
+        "source": "Animal Rights / Delhi Police Records",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "DUTCH_TILT",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 44,
+      "textLayers": [
+        {
+          "text": "ON THE TERRACE",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "THE DOG BARKED",
+          "triggerFrameOffset": 44,
           "tier": "SECONDARY_ACCENT",
           "colorToken": "ALERT_RED",
           "animation": "SCALE_SLAM",
@@ -1451,23 +1149,228 @@
         }
       ],
       "visualPayload": {
-        "stageStyle": "SUNBURST_HERO",
         "skyGradient": [
-          "#9A3412",
-          "#1C1917"
+          "#78350F",
+          "#0F172A"
         ],
-        "svgForegroundAsset": "KhanewalRooftopLoopSplit",
-        "referencePlate": "plate_28.jpg",
-        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Symmetrical warm terracotta dusk sky (#9A3412 to #1C1917) with slowly rotating sunburst paper rays matching Scene 1 Frame 0 precisely for a seamless infinite loop. (2) Midground: Serene Khanewal village rooftop parapet overlooking quiet Punjab horizon trees and brick architecture. (3) Foreground: Empty wooden desk chair beside a closed, dead laptop bathed in golden twilight rim-light, framing the tragic final payoff: Genius without conscience builds its own cage."
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "terrace_chained_dog_tommy.jpg",
+        "svgForegroundAsset": "TommyTerraceBarkSplit",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Hazy orange sodium vapor night sky (#78350F to #0F172A). (2) Midground: Rooftop parapet with clotheslines and concrete water storage tanks. (3) Foreground: Silhouette of Tommy the loyal dog barking frantically as the only living witness to the family's final hour."
       },
       "sfxTriggers": [
         {
           "sfxFile": "sub_boom.wav",
-          "frameOffset": 34,
-          "leadFrames": 2
+          "frameOffset": 42
+        }
+      ]
+    },
+    {
+      "sceneId": "23_stoolstopplefracture",
+      "startFrame": 2335,
+      "durationFrames": 106,
+      "archetype": "STRUCTURAL_FRACTURE",
+      "hudVisible": true,
+      "headerContext": "THE FATAL MOMENT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.7
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 36,
+      "textLayers": [
+        {
+          "text": "THE STOOLS TIPPED",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "NO MIRACLE CAME",
+          "triggerFrameOffset": 36,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
         }
       ],
-      "sensitivity": "STANDARD"
+      "visualPayload": {
+        "skyGradient": [
+          "#020617",
+          "#090D12"
+        ],
+        "stageStyle": "NIGHT_FELT",
+        "referencePlate": "iron_ceiling_mesh_grill.jpg",
+        "svgForegroundAsset": "StoolsToppleFracture",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Absolute midnight void (#020617 to #090D12) devoid of sensationalism. (2) Midground: The unmoved, rigid iron ceiling rebar structure. (3) Foreground: Toppled stools lying horizontal on the cold floor, marking the tragic moment the delusion met irreversible reality."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 34
+        }
+      ]
+    },
+    {
+      "sceneId": "24_psychologicalautopsycard",
+      "startFrame": 2441,
+      "durationFrames": 106,
+      "archetype": "QUOTE_CARD",
+      "hudVisible": true,
+      "headerContext": "THE CLINICAL VERDICT",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": {
+        "text": "Medical experts concluded the deaths were caused by 'shared psychosis' (folie à plusieurs) without suicidal intent",
+        "source": "Central Bureau of Investigation (CBI) / AIIMS Delhi",
+        "url": "https://en.wikipedia.org/wiki/Burari_deaths",
+        "verified": true
+      },
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.65
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 42,
+      "textLayers": [
+        {
+          "text": "PSYCHOLOGICAL AUTOPSY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "SHARED PSYCHOSIS",
+          "triggerFrameOffset": 42,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#0F172A",
+          "#1E3A8A"
+        ],
+        "stageStyle": "GRAPH_GRID",
+        "referencePlate": "forensic_autopsy_dossier.jpg",
+        "svgForegroundAsset": "PsychologicalAutopsyCard",
+        "quoteAttribution": "CENTRAL FORENSIC SCIENCE LABORATORY",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Official clinical graph grid (#0F172A to #1E3A8A). (2) Midground: Formal diagnostic psychiatric evaluation dossier from AIIMS and Delhi FSL. (3) Foreground: Tactile stamped report card highlighting the profound tragic diagnosis: Shared Psychosis."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 40
+        }
+      ]
+    },
+    {
+      "sceneId": "25_memorialtallyboardhero",
+      "startFrame": 2547,
+      "durationFrames": 104,
+      "archetype": "CROWD_TALLY",
+      "hudVisible": true,
+      "headerContext": "THE TRAGIC LESSON",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.6
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 44,
+      "textLayers": [
+        {
+          "text": "UNTREATED MENTAL ILLNESS",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "ELEVEN SOULS LOST",
+          "triggerFrameOffset": 44,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": true
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#451A03",
+          "#1C1917"
+        ],
+        "stageStyle": "WOOD_PANEL",
+        "referencePlate": "bhopal_singh_ancestor_portrait.jpg",
+        "svgForegroundAsset": "MemorialTallyBoardHero",
+        "counterConfig": {
+          "label": "LIVES CONSUMED BY SILENCE",
+          "startValue": 1,
+          "endValue": 11
+        },
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Dignified mahogany memorial wood substrate (#451A03 to #1C1917). (2) Midground: A row of eleven warm brass diyas casting soft amber reflections. (3) Foreground: Tactile memorial tally plinth honoring the eleven lives lost to silence and stigma."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 42
+        }
+      ]
+    },
+    {
+      "sceneId": "26_silenthousemonumenthero",
+      "startFrame": 2651,
+      "durationFrames": 105,
+      "archetype": "LONE_LEADER",
+      "hudVisible": true,
+      "headerContext": "EPILOGUE",
+      "sensitivity": "SOMBER_MEMORIAL",
+      "claim": null,
+      "camera": {
+        "movement": "SLOW_PUSH_IN",
+        "intensity": 0.5
+      },
+      "transientType": "BEAT_ONSET",
+      "transientHitFrame": 45,
+      "textLayers": [
+        {
+          "text": "TALK BEFORE TRAGEDY",
+          "triggerFrameOffset": 0,
+          "tier": "PRIMARY_STATEMENT",
+          "colorToken": "PURE_WHITE",
+          "animation": "HARD_POP"
+        },
+        {
+          "text": "REMEMBER BURARI",
+          "triggerFrameOffset": 45,
+          "tier": "SECONDARY_ACCENT",
+          "colorToken": "SOMBER_MUTED",
+          "animation": "FADE_IN_UP",
+          "rollingCounter": false
+        }
+      ],
+      "visualPayload": {
+        "skyGradient": [
+          "#881337",
+          "#1C1917"
+        ],
+        "stageStyle": "PAPER_EXTERIOR",
+        "referencePlate": "burari_house_facade.jpg",
+        "svgForegroundAsset": "SilentHouseMonumentHero",
+        "atmosphericPlatePrompt": "3-tier atmospheric depth hierarchy: (1) Backdrop: Melancholic rose-to-umber sky gradient (#881337 to #1C1917) matching Scene 1 Frame 0 to create an infinite, seamless reel loop. (2) Midground: The quiet brick residence standing forever closed in Sant Nagar. (3) Foreground: The final haunting call to break the silence surrounding mental health before tragedy strikes."
+      },
+      "sfxTriggers": [
+        {
+          "sfxFile": "memorial_wind.wav",
+          "frameOffset": 43
+        }
+      ]
     }
   ]
 }

@@ -1,19 +1,19 @@
 {
   "projectSlug": "postage-fraud-2026",
   "title": "THE $126M POSTAGE FRAUD",
-  "timestamp": "2026-11-03T17:41:35.862Z",
-  "passed": false,
+  "timestamp": "2026-11-04T07:40:54.287Z",
+  "passed": true,
   "totalFrames": 2923,
   "durationSec": 48.72,
   "maxFramesCeiling": 3500,
   "sceneCount": 28,
   "transientEngine": "librosa",
   "transientStats": {
-    "totalTransients": 765,
-    "bassDropCount": 145,
-    "cymbalCrashCount": 260,
-    "energyPeakCount": 121,
-    "onsetCount": 239
+    "totalTransients": 215,
+    "bassDropCount": 30,
+    "cymbalCrashCount": 13,
+    "energyPeakCount": 7,
+    "onsetCount": 165
   },
   "telemetryAnalysis": {
     "projectSlug": "postage-fraud-2026",
@@ -30,7 +30,7 @@
         "archetype": "SPLIT_CONFRONTATION",
         "durationFrames": 102,
         "durationBucket": "<=128f",
-        "payoffOffset": 35,
+        "payoffOffset": 38,
         "holdRate": 0.955,
         "isHook": true
       },
@@ -333,171 +333,8 @@
       }
     ]
   },
-  "errorCount": 18,
+  "errorCount": 0,
   "warningCount": 0,
   "motionChecks": [],
-  "violations": [
-    {
-      "sceneId": "02_35_billion_rupees_tally",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'RupeesParcelTallyBoard' has 28 nodes, 0 paths, and 7 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 02_35_billion_rupees_tally [RupeesParcelTallyBoard] is overly simplified / clip-art (28 nodes, 0 paths, 7 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "06_step2_barcode_flaw_split",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'BarcodeCryptographicFlawSplit' has 45 nodes, 6 paths, and 36 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 06_step2_barcode_flaw_split [BarcodeCryptographicFlawSplit] is overly simplified / clip-art (45 nodes, 6 paths, 36 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "07_step3_crossed_line_labelsbank",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'LabelsBankDarkRoomLaunch' has 23 nodes, 2 paths, and 15 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 07_step3_crossed_line_labelsbank [LabelsBankDarkRoomLaunch] is overly simplified / clip-art (23 nodes, 2 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "08_step3_two_dollar_labels_transit",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'UspsTwoDollarLabelTransit' has 28 nodes, 1 paths, and 13 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 08_step3_two_dollar_labels_transit [UspsTwoDollarLabelTransit] is overly simplified / clip-art (28 nodes, 1 paths, 13 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "09_step4_sixteen_accounts_map",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'SixteenAccountsNetworkMap' has 28 nodes, 4 paths, and 21 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 09_step4_sixteen_accounts_map [SixteenAccountsNetworkMap] is overly simplified / clip-art (28 nodes, 4 paths, 21 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "11_pre_drop_family_signatures",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'WifeSisterAuntCourtyardSilhouette' has 24 nodes, 8 paths, and 42 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 11_pre_drop_family_signatures [WifeSisterAuntCourtyardSilhouette] is overly simplified / clip-art (24 nodes, 8 paths, 42 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "12_step5_19s_drop_126m_drained",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'UspsVaultFractureExplosion' has 24 nodes, 4 paths, and 65 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 12_step5_19s_drop_126m_drained [UspsVaultFractureExplosion] is overly simplified / clip-art (24 nodes, 4 paths, 65 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "13_step5_five_million_labels_tally",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'FiveMillionLabelsConveyorTally' has 18 nodes, 0 paths, and 7 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 13_step5_five_million_labels_tally [FiveMillionLabelsConveyorTally] is overly simplified / clip-art (18 nodes, 0 paths, 7 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "14_step5_cargo_jets_millions_home",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'AtlanticCargoJetWireTransit' has 37 nodes, 20 paths, and 106 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 14_step5_cargo_jets_millions_home [AtlanticCargoJetWireTransit] is overly simplified / clip-art (37 nodes, 20 paths, 106 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "16_step6_grand_jury_bounty",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'FloridaGrandJuryBountyFracture' has 48 nodes, 10 paths, and 113 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 16_step6_grand_jury_bounty [FloridaGrandJuryBountyFracture] is overly simplified / clip-art (48 nodes, 10 paths, 113 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "18_step6_sixteen_accounts_frozen",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'SixteenAccountsFrozenSplit' has 46 nodes, 7 paths, and 62 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 18_step6_sixteen_accounts_frozen [SixteenAccountsFrozenSplit] is overly simplified / clip-art (46 nodes, 7 paths, 62 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "20_step7_hunted_across_punjab",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
-      "actual": "Component 'LahoreNightRaidConvoyTransit' is 88% basic primitives with only 6 path(s)",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 20_step7_hunted_across_punjab [LahoreNightRaidConvoyTransit] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "21_step7_lahore_raid_capture",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'LahoreHideoutBreachFracture' has 46 nodes, 21 paths, and 152 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 21_step7_lahore_raid_capture [LahoreHideoutBreachFracture] is overly simplified / clip-art (46 nodes, 21 paths, 152 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "22_step7_iron_cuffs_coder_hands",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'IronCuffsOnCoderHandsLeader' has 17 nodes, 2 paths, and 14 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 22_step7_iron_cuffs_coder_hands [IronCuffsOnCoderHandsLeader] is overly simplified / clip-art (17 nodes, 2 paths, 14 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "23_step7_khanewal_honor_shattered",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 35 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'KhanewalVillageGriefTally' has 25 nodes, 3 paths, and 15 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 23_step7_khanewal_honor_shattered [KhanewalVillageGriefTally] is overly simplified / clip-art (25 nodes, 3 paths, 15 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "26_step8_labelsbank_shattered",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'LabelsBankMonitorShatterFracture' has 20 nodes, 2 paths, and 64 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 26_step8_labelsbank_shattered [LabelsBankMonitorShatterFracture] is overly simplified / clip-art (20 nodes, 2 paths, 64 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "27_step8_screen_glow_to_bars",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Primitive shapes (<rect>, <circle>, <polygon>) must not exceed 70% of visual geometry without detailing paths",
-      "actual": "Component 'DarkCellIronBarsLeader' is 75% basic primitives with only 7 path(s)",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 27_step8_screen_glow_to_bars [DarkCellIronBarsLeader] relies on crude geometric placeholders. Fix: Replace raw rectangles/circles with bespoke vector paths or traced contours.",
-      "autoFixed": false
-    },
-    {
-      "sceneId": "28_epilogue_conscience_cage_loop",
-      "rule": "PATH_COMPLEXITY_LINT",
-      "severity": "ERROR",
-      "expected": "Minimum 50 SVG nodes, 5 <path> elements, and 35 path command vertices",
-      "actual": "Component 'KhanewalRooftopLoopSplit' has 57 nodes, 4 paths, and 25 path command vertices",
-      "fix": "PATH_COMPLEXITY_LINT: Scene 28_epilogue_conscience_cage_loop [KhanewalRooftopLoopSplit] is overly simplified / clip-art (57 nodes, 4 paths, 25 commands). Fix: Deconstruct subject into authentic architectural materials, multi-stop lighting auras, or use traced contours from scripts/trace_plate_contours.js.",
-      "autoFixed": false
-    }
-  ]
+  "violations": []
 }

@@ -16,40 +16,39 @@ The calling agent renders stills and reviews them. You receive its review notes 
 ## Inputs, read in this order
 
 1. The scene's entry in `projects/<slug>/scene_specs.json`: archetype, staging, library components, camera, phase 1 and phase 2 motion, `landmarks`, and `viewerSees`.
-2. The scene's plate in `projects/<slug>/plates/`, its entry in `plates/notes.json`, and traced contours in `projects/<slug>/plates/TracedPlateAssets.tsx` (from `scripts/trace_plate_contours.js`).
-3. `src/library/INDEX.md`.
+2. The scene's reference plate in `projects/<slug>/plates/` and its entry in `plates/notes.json` (used as visual reference blueprints).
+3. `src/kit/CelShading.tsx` and `src/library/INDEX.md`.
 4. `.agents/skills/build-historical-reel/rules/motion.md`.
 
 ## Rules
 
-### Visual density and path complexity (`PATH_COMPLEXITY_LINT`)
-Every scene must satisfy automated craft thresholds:
-- Minimum 35 SVG nodes (hero archetypes `STRUCTURAL_FRACTURE`, `VEHICLE_IN_TRANSIT`, `SPLIT_CONFRONTATION`: minimum 50 nodes).
-- Minimum 5 distinct `<path>` elements and 35 path command vertices.
-- Basic unadorned primitives (`<rect>`, `<circle>`, `<polygon>`) must not exceed 70% of visual geometry without detailing paths.
-- Minimum 1 volumetric gradient/lighting aura.
-- **No stick figures or raw geometric placeholders**: Never reduce human subjects to a circle head and triangle body, or architecture to a single unadorned rectangle. Deconstruct every subject into authentic historical materials, clothing drape, collar tabs, panel seams, dentils, and rivets.
+### Multi-Tone Cel Shading & Material Depth (`CEL_SHADING_LINT`)
+Every scene must satisfy the cel-shading craft standard:
+- **Minimum 3 Distinct Tonal Tiers**: Build subjects from discrete, authentic material values:
+  1. *Shadow Underlayer*: Occlusion and underside facets (e.g., `#1E293B`, `#29251D`, `#431407`).
+  2. *Midtone Material Body*: The true local color of the material (wool serge `#443E30`, slate armor `#334155`, terracotta `#9A3412`, blued steel `#1E2530`).
+  3. *Highlight / Rim Facet*: Lightward top facet or specular reflection (`#64748B`, `#635B47`, `#FBBF24`).
+  4. *Accents*: Cockpit dials, brass buttons, collar tabs, rivets.
+- Compose using `src/kit/CelShading.tsx` (`HISTORICAL_CEL_PALETTES`, `<CelShadedBody />`, `<CelShadedFacet />`).
+- **Zero Flat Monochrome Voids**: Never reduce human figures, vehicles, or architecture to flat black blobs (`#090D12` or `#000000`).
+- **Atmospheric Backlighting or Rim Light Glow**: Every focal subject must have an atmospheric backdrop aura (`<radialGradient>`) or rim light stroke (`<CelRimFilter />`) separating it from the background.
 
-### Build from library and traced contours first
-Use the components the spec lists and inspect `projects/<slug>/plates/TracedPlateAssets.tsx` for authentic photographic vector silhouettes. Draw new vector art only for what the library and traced assets lack. Never draft a vehicle, structure, uniform or explosion from memory. Draw it from the plate, the traced contours, and the landmark notes.
+### Reference Plates are Blueprints Only (Zero Potrace Tracing)
+Archival photographs in `projects/<slug>/plates/` are strictly **visual reference blueprints** to inform human/AI vector illustration.
+- Inspect the plate for authentic proportions, mechanical seams, silhouette landmarks, and historical material colors.
+- For named historical figures, die-cut the archival head using `python scripts/crop_puppet_head.py --input <plate> --output <head.png>` with a tactile `#F4EFE6` cardstock border and pair it with an articulated body using `<CutoutPuppet headSrc="..." />`.
+- Never place raw unmasked `<img>`, `<Image>` or `<image>` cards in vector scene backgrounds or props (`PHOTO_PASTE_LINT`).
 
-### Subjects have tiers
-Subjects are never one flat color, including in dark and grim scenes.
-- Build subjects from authentic materials and at least three value tiers (backdrop or sky, midground, rim-lit foreground subject).
-- Use atmospheric backlight (a radial horizon glow, warm firelight or a cold polar band) and a rim light to separate subject from background.
-- For named historical figures and focal characters, use a die-cut `<CutoutPuppet headSrc="..." />` rig from `src/components/CutoutPuppet.tsx` with an archival photo head (prepared via `python scripts/crop_puppet_head.py --input <plate> --output <head.png>`) and a `#F4EFE6` tactile die-cut cardstock border.
-- For anonymous rank-and-file soldiers, crowds, and background silhouettes, use authentic multi-tiered vector contours with distinctive props and atmospheric backlighting.
+### Build from Library First
+Use the components the spec lists from `src/library/`. Draw new vector art only for what the library lacks. Anything reusable goes into `src/library/` with an `INDEX.md` entry.
 
-### Photos are references or puppet heads only (`PHOTO_PASTE_LINT`)
-Never place raw unmasked `<img>`, `<Image>` or `<image>` cards in vector scene backgrounds or props. Archival photos are strictly used either as die-cut portrait heads inside `<CutoutPuppet headSrc="..." />` or as reference blueprints to craft parametric 2D SVG vector art.
-
-### Six-layer anatomy for explosions, impacts and dynamic silhouettes
+### Six-Layer Anatomy for Explosions, Impacts and Dynamic Silhouettes
 Use `src/kit/OrganicExplosion.tsx` or equivalent layering:
 1. Ambient volumetric aura (`<radialGradient>`).
 2. Shockwave or ionization rings, speed lines.
 3. Acute energy spikes and directional stress lines.
-4. Multi-tiered organic body (nested arc-scalloped lobes or mechanical foils; no flat polygons or blobs).
-5. High-contrast core accent (white-hot flash star, glowing dials, fractured spars).
+4. Multi-tiered organic body (nested arc-scalloped lobes via `src/kit/OrganicExplosion.tsx` or cross-sectional mechanical foils; ban flat raw polygons/blobs).
+5. High-contrast core accent (white-hot 8-pointed flash star, glowing cockpit dials, or fractured structural spars).
 6. Detached orbiting elements (cloudlets, propellant, shrapnel, embers).
 
 ### Motion
@@ -57,15 +56,14 @@ Use `src/kit/OrganicExplosion.tsx` or equivalent layering:
 - Every scene has at least one continuous secondary motion that moves a layer 4px or more between 25% and 75% of the scene. Examples: a vessel pitching on waves, exhaust pulsing, smoke plumes drifting, radar pulses, a live waveform on a `QUOTE_CARD`, a flag from `<WavingFlagSvg />`.
 - Follow the two-phase template: setup motion, then the payoff hit and a secondary state change on the payoff frame given in the spec.
 
-### Text in artwork
+### Text in Artwork
 - No sentences, explanations or data placards inside the artwork.
 - Tactical maps may carry one- or two-word waypoint labels in `Montserrat` or `Inter`, with at least 100px between a label and any animated vehicle.
 - Never repeat a statistic that is already in the headline text.
 - Any pill or label around text is sized with `computeRequiredContainerWidthPx(text, fontSize, fontFamily, 0.04, 72)` from `scripts/font_metrics.js`, with at least 36px of internal horizontal padding and 64px screen edge margins.
 
-### Safe zones (`config/safe_zones.json`)
+### Safe Zones (`config/safe_zones.json`)
 Keep focal subjects inside the artwork safe zone, with at least 58px of empty headroom between the artwork and the text stack. Keep the bottom 22% and right 15% free of focal subjects and labels.
 
-## Done means
-
-The scene matches the spec's `viewerSees` line at the payoff frame, matches the plate notes, and passes the checks the calling agent runs on the stills.
+## Done Means
+The scene matches the spec's `viewerSees` line at the payoff frame, features multi-tone cel-shaded depth, matches the plate notes, and passes `CEL_SHADING_LINT`.

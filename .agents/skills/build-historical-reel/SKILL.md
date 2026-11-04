@@ -35,12 +35,13 @@ npm run audit:fast -- --project <slug>
 ```
 Fix timeline errors here. They are cheap to fix now and expensive after scenes exist.
 
-### 4. Reference plates & automated contour tracing
+### 4. Reference plates as visual blueprints
 ```powershell
 node scripts/ingest_reference_plates.js --project <slug>
-node scripts/trace_plate_contours.js --project <slug> --all
 ```
-The pipeline blocks if any scene lacks a valid plate. The second command automatically traces authentic photographic silhouettes into `projects/<slug>/plates/TracedPlateAssets.tsx` and `traced_plate_assets.json` so you never have to guess bezier coordinates. After ingestion, open each plate and look at it. Write `projects/<slug>/plates/notes.json` with one entry per plate:
+The pipeline blocks if any scene lacks a verified reference plate. Plates serve strictly as **Visual Reference Blueprints** to study historical proportions, material colors, and silhouettes (no noisy auto-tracing). For named leaders, crop authentic portrait heads via `python scripts/crop_puppet_head.py --input <plate> --output <head.png>`.
+
+After ingestion, open each plate and inspect it. Write `projects/<slug>/plates/notes.json` with one entry per plate:
 ```json
 { "file": "plate_03.jpg", "subject": "Mk IV tank, side view",
   "observed": ["track run is longer than hull", "sponson on lower flank", "two-tone camouflage, dark upper band"] }
@@ -53,14 +54,14 @@ Invoke `atmospheric-plate-prompter`. It locks one palette family (`POLAR_MARITIM
 ### 6. Scenes, one at a time
 Invoke `vector-scene-architect` for scene N only. Do not generate all scenes at once. For each scene:
 
-1. Read: the scene's entry in `scene_specs.json`, its plate and plate notes, `TracedPlateAssets.tsx`, `src/library/INDEX.md`, and `rules/motion.md`.
-2. Compose from the library and traced assets first. Draw new vector art only for what the library and traced assets lack. Anything new and reusable goes into `src/library/` with an `INDEX.md` entry.
+1. Read: the scene's entry in `scene_specs.json`, its plate and plate notes, `src/kit/CelShading.tsx`, `src/library/INDEX.md`, and `rules/motion.md`.
+2. Compose from the library first. Use `<CutoutPuppet headSrc="..." />` for named characters and `src/kit/CelShading.tsx` (`HISTORICAL_CEL_PALETTES`, `<CelShadedBody />`, `<CelShadedFacet />`) for multi-tone vehicles, architecture, and uniforms.
 3. Take every motion from a named preset in `rules/motion.md`. Do not invent spring or easing numbers inline.
 4. Render stills at frame 0, the payoff frame and the last frame of the scene (`node scripts/audit_and_validate.js --project <slug> --scene N`).
 5. Look at the stills and check:
    - Readable at phone size.
-   - At least three value tiers (sky or backdrop, midground, rim-lit foreground subject).
-   - No subject reduced to a flat black shape or primitive stick figure (`PATH_COMPLEXITY_LINT`: >= 35 nodes, >= 5 paths, < 70% primitive ratio).
+   - **Multi-Tone Cel Shading (`CEL_SHADING_LINT`)**: At least three distinct tonal tiers (Shadow underlayer, Midtone body, Highlight/Rim facet) with volumetric depth.
+   - No subject reduced to a flat black shape or primitive stick figure.
    - Nothing in the bottom 22% or right 15% platform buffers.
    - Subject matches the plate notes (proportions, materials, landmarks).
    - Text is legible and sits in the text safe zone.

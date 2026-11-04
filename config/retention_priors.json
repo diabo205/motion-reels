@@ -1,14 +1,14 @@
 {
   "$schema": "./retention_priors.schema.json",
-  "updatedAt": "2026-11-03T16:13:54.392Z",
-  "sampleSizeReels": 9,
-  "totalScenesAnalyzed": 186,
-  "baselineAverageHoldRate": 0.9173,
+  "updatedAt": "2026-11-04T10:39:19.989Z",
+  "sampleSizeReels": 10,
+  "totalScenesAnalyzed": 207,
+  "baselineAverageHoldRate": 0.9158,
   "archetypeRetentionPriors": {
     "SPLIT_CONFRONTATION": {
-      "sampleScenes": 27,
-      "avgHoldRate": 0.9387,
-      "observed_retention_delta": 0.0214,
+      "sampleScenes": 33,
+      "avgHoldRate": 0.937,
+      "observed_retention_delta": 0.0212,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 1,
@@ -22,19 +22,19 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 9,
-          "holdRate": 0.9353,
-          "observed_retention_delta": 0.018
+          "samples": 18,
+          "holdRate": 0.9431,
+          "observed_retention_delta": 0.0273
         },
         "129-144f": {
           "samples": 8,
           "holdRate": 0.9606,
-          "observed_retention_delta": 0.0433
+          "observed_retention_delta": 0.0448
         },
         "145-168f": {
-          "samples": 10,
-          "holdRate": 0.9242,
-          "observed_retention_delta": 0.0069
+          "samples": 7,
+          "holdRate": 0.8945,
+          "observed_retention_delta": -0.0213
         },
         ">168f": {
           "samples": 0,
@@ -49,9 +49,9 @@
       ]
     },
     "VECTOR_MAP": {
-      "sampleScenes": 19,
-      "avgHoldRate": 0.8906,
-      "observed_retention_delta": -0.0267,
+      "sampleScenes": 20,
+      "avgHoldRate": 0.8893,
+      "observed_retention_delta": -0.0265,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -65,19 +65,19 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 8,
-          "holdRate": 0.8751,
-          "observed_retention_delta": -0.0422
+          "samples": 10,
+          "holdRate": 0.8833,
+          "observed_retention_delta": -0.0325
         },
         "129-144f": {
           "samples": 5,
           "holdRate": 0.9541,
-          "observed_retention_delta": 0.0368
+          "observed_retention_delta": 0.0383
         },
         "145-168f": {
-          "samples": 6,
-          "holdRate": 0.8582,
-          "observed_retention_delta": -0.0591
+          "samples": 5,
+          "holdRate": 0.8364,
+          "observed_retention_delta": -0.0794
         },
         ">168f": {
           "samples": 0,
@@ -91,9 +91,9 @@
       ]
     },
     "STRUCTURAL_FRACTURE": {
-      "sampleScenes": 29,
-      "avgHoldRate": 0.9321,
-      "observed_retention_delta": 0.0148,
+      "sampleScenes": 35,
+      "avgHoldRate": 0.9357,
+      "observed_retention_delta": 0.0199,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 2,
@@ -107,19 +107,19 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 11,
-          "holdRate": 0.9374,
-          "observed_retention_delta": 0.0201
+          "samples": 18,
+          "holdRate": 0.9449,
+          "observed_retention_delta": 0.0291
         },
         "129-144f": {
           "samples": 8,
           "holdRate": 0.9469,
-          "observed_retention_delta": 0.0296
+          "observed_retention_delta": 0.0312
         },
         "145-168f": {
-          "samples": 10,
-          "holdRate": 0.9145,
-          "observed_retention_delta": -0.0028
+          "samples": 9,
+          "holdRate": 0.9072,
+          "observed_retention_delta": -0.0086
         },
         ">168f": {
           "samples": 0,
@@ -133,9 +133,9 @@
       ]
     },
     "LONE_LEADER": {
-      "sampleScenes": 33,
-      "avgHoldRate": 0.9133,
-      "observed_retention_delta": -0.004,
+      "sampleScenes": 38,
+      "avgHoldRate": 0.9069,
+      "observed_retention_delta": -0.0089,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -149,24 +149,24 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 11,
-          "holdRate": 0.8935,
-          "observed_retention_delta": -0.0238
+          "samples": 18,
+          "holdRate": 0.8955,
+          "observed_retention_delta": -0.0203
         },
         "129-144f": {
-          "samples": 8,
-          "holdRate": 0.961,
-          "observed_retention_delta": 0.0437
+          "samples": 9,
+          "holdRate": 0.9631,
+          "observed_retention_delta": 0.0473
         },
         "145-168f": {
-          "samples": 13,
-          "holdRate": 0.9056,
-          "observed_retention_delta": -0.0117
+          "samples": 10,
+          "holdRate": 0.8826,
+          "observed_retention_delta": -0.0332
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.85,
-          "observed_retention_delta": -0.0673
+          "observed_retention_delta": -0.0658
         }
       },
       "recommended_act_placement": [
@@ -175,9 +175,9 @@
       ]
     },
     "VEHICLE_IN_TRANSIT": {
-      "sampleScenes": 20,
-      "avgHoldRate": 0.9309,
-      "observed_retention_delta": 0.0136,
+      "sampleScenes": 21,
+      "avgHoldRate": 0.9303,
+      "observed_retention_delta": 0.0145,
       "drop_off_risk": "LOW",
       "recommendedForHook": true,
       "recommended_hook_priority": 4,
@@ -191,24 +191,24 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 6,
-          "holdRate": 0.905,
-          "observed_retention_delta": -0.0123
+          "samples": 9,
+          "holdRate": 0.9193,
+          "observed_retention_delta": 0.0035
         },
         "129-144f": {
           "samples": 9,
           "holdRate": 0.9624,
-          "observed_retention_delta": 0.0451
+          "observed_retention_delta": 0.0466
         },
         "145-168f": {
-          "samples": 4,
-          "holdRate": 0.8948,
-          "observed_retention_delta": -0.0225
+          "samples": 3,
+          "holdRate": 0.8667,
+          "observed_retention_delta": -0.0491
         },
         ">168f": {
-          "samples": 1,
-          "holdRate": 0.9475,
-          "observed_retention_delta": 0.0302
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
         }
       },
       "recommended_act_placement": [
@@ -218,9 +218,9 @@
       ]
     },
     "CROWD_TALLY": {
-      "sampleScenes": 20,
-      "avgHoldRate": 0.927,
-      "observed_retention_delta": 0.0097,
+      "sampleScenes": 22,
+      "avgHoldRate": 0.9221,
+      "observed_retention_delta": 0.0063,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -234,24 +234,24 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 6,
-          "holdRate": 0.905,
-          "observed_retention_delta": -0.0123
+          "samples": 10,
+          "holdRate": 0.9127,
+          "observed_retention_delta": -0.0031
         },
         "129-144f": {
           "samples": 6,
           "holdRate": 0.9484,
-          "observed_retention_delta": 0.0311
+          "observed_retention_delta": 0.0326
         },
         "145-168f": {
-          "samples": 7,
-          "holdRate": 0.9204,
-          "observed_retention_delta": 0.0031
+          "samples": 5,
+          "holdRate": 0.8983,
+          "observed_retention_delta": -0.0175
         },
         ">168f": {
           "samples": 1,
           "holdRate": 0.9776,
-          "observed_retention_delta": 0.0603
+          "observed_retention_delta": 0.0618
         }
       },
       "recommended_act_placement": [
@@ -260,9 +260,9 @@
       ]
     },
     "QUOTE_CARD": {
-      "sampleScenes": 14,
-      "avgHoldRate": 0.9153,
-      "observed_retention_delta": -0.002,
+      "sampleScenes": 20,
+      "avgHoldRate": 0.9231,
+      "observed_retention_delta": 0.0073,
       "drop_off_risk": "MEDIUM",
       "recommendedForHook": false,
       "recommended_hook_priority": 3,
@@ -276,19 +276,19 @@
       ],
       "duration_delta_matrix": {
         "<=128f": {
-          "samples": 8,
-          "holdRate": 0.935,
-          "observed_retention_delta": 0.0177
+          "samples": 14,
+          "holdRate": 0.9377,
+          "observed_retention_delta": 0.0219
         },
         "129-144f": {
           "samples": 2,
           "holdRate": 0.8889,
-          "observed_retention_delta": -0.0284
+          "observed_retention_delta": -0.0269
         },
         "145-168f": {
           "samples": 4,
           "holdRate": 0.8891,
-          "observed_retention_delta": -0.0282
+          "observed_retention_delta": -0.0267
         },
         ">168f": {
           "samples": 0,
@@ -301,11 +301,11 @@
         "TURNING_POINT"
       ]
     },
-    "BLUEPRINT_DIAGRAM": {
-      "sampleScenes": 2,
-      "avgHoldRate": 0.9223,
-      "observed_retention_delta": 0.005,
-      "drop_off_risk": "MEDIUM",
+    "SILHOUETTE_ACTION": {
+      "sampleScenes": 6,
+      "avgHoldRate": 0.8056,
+      "observed_retention_delta": -0.1102,
+      "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
       "optimal_duration_range": [
@@ -328,14 +328,98 @@
           "observed_retention_delta": null
         },
         "145-168f": {
-          "samples": 1,
-          "holdRate": 0.9722,
-          "observed_retention_delta": 0.0549
+          "samples": 2,
+          "holdRate": 0.88,
+          "observed_retention_delta": -0.0358
         },
         ">168f": {
+          "samples": 4,
+          "holdRate": 0.7685,
+          "observed_retention_delta": -0.1473
+        }
+      },
+      "recommended_act_placement": [
+        "ESCALATING_CRUCIBLE",
+        "TURNING_POINT"
+      ]
+    },
+    "FLAG_BANNER": {
+      "sampleScenes": 3,
+      "avgHoldRate": 0.891,
+      "observed_retention_delta": -0.0248,
+      "drop_off_risk": "HIGH",
+      "recommendedForHook": false,
+      "recommended_hook_priority": 0,
+      "optimal_duration_range": [
+        132,
+        150
+      ],
+      "optimalDurationFrames": [
+        132,
+        150
+      ],
+      "duration_delta_matrix": {
+        "<=128f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        "129-144f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        "145-168f": {
           "samples": 1,
-          "holdRate": 0.8723,
-          "observed_retention_delta": -0.045
+          "holdRate": 0.88,
+          "observed_retention_delta": -0.0358
+        },
+        ">168f": {
+          "samples": 2,
+          "holdRate": 0.8964,
+          "observed_retention_delta": -0.0193
+        }
+      },
+      "recommended_act_placement": [
+        "HOOK",
+        "RESOLUTION_CTA"
+      ]
+    },
+    "DOCUMENT_CARD": {
+      "sampleScenes": 4,
+      "avgHoldRate": 0.8899,
+      "observed_retention_delta": -0.0259,
+      "drop_off_risk": "HIGH",
+      "recommendedForHook": false,
+      "recommended_hook_priority": 0,
+      "optimal_duration_range": [
+        84,
+        120
+      ],
+      "optimalDurationFrames": [
+        84,
+        120
+      ],
+      "duration_delta_matrix": {
+        "<=128f": {
+          "samples": 1,
+          "holdRate": 0.895,
+          "observed_retention_delta": -0.0208
+        },
+        "129-144f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        "145-168f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        ">168f": {
+          "samples": 3,
+          "holdRate": 0.8881,
+          "observed_retention_delta": -0.0277
         }
       },
       "recommended_act_placement": [
@@ -344,19 +428,19 @@
       ]
     },
     "TELEMETRY_COUNTER": {
-      "sampleScenes": 3,
-      "avgHoldRate": 0.8825,
-      "observed_retention_delta": -0.0348,
+      "sampleScenes": 2,
+      "avgHoldRate": 0.8327,
+      "observed_retention_delta": -0.0831,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
       "optimal_duration_range": [
-        120,
-        144
+        132,
+        150
       ],
       "optimalDurationFrames": [
-        120,
-        144
+        132,
+        150
       ],
       "duration_delta_matrix": {
         "<=128f": {
@@ -370,151 +454,25 @@
           "observed_retention_delta": null
         },
         "145-168f": {
-          "samples": 1,
-          "holdRate": 0.9821,
-          "observed_retention_delta": 0.0648
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
         },
         ">168f": {
           "samples": 2,
           "holdRate": 0.8327,
-          "observed_retention_delta": -0.0847
+          "observed_retention_delta": -0.0831
         }
       },
       "recommended_act_placement": [
         "ESCALATING_CRUCIBLE",
-        "RESOLUTION_CTA"
-      ]
-    },
-    "SILHOUETTE_ACTION": {
-      "sampleScenes": 7,
-      "avgHoldRate": 0.8302,
-      "observed_retention_delta": -0.0871,
-      "drop_off_risk": "HIGH",
-      "recommendedForHook": false,
-      "recommended_hook_priority": 0,
-      "optimal_duration_range": [
-        120,
-        144
-      ],
-      "optimalDurationFrames": [
-        120,
-        144
-      ],
-      "duration_delta_matrix": {
-        "<=128f": {
-          "samples": 0,
-          "holdRate": null,
-          "observed_retention_delta": null
-        },
-        "129-144f": {
-          "samples": 0,
-          "holdRate": null,
-          "observed_retention_delta": null
-        },
-        "145-168f": {
-          "samples": 3,
-          "holdRate": 0.9124,
-          "observed_retention_delta": -0.0049
-        },
-        ">168f": {
-          "samples": 4,
-          "holdRate": 0.7685,
-          "observed_retention_delta": -0.1488
-        }
-      },
-      "recommended_act_placement": [
-        "ESCALATING_CRUCIBLE",
-        "TURNING_POINT"
-      ]
-    },
-    "DOCUMENT_CARD": {
-      "sampleScenes": 6,
-      "avgHoldRate": 0.9174,
-      "observed_retention_delta": 0.0001,
-      "drop_off_risk": "MEDIUM",
-      "recommendedForHook": false,
-      "recommended_hook_priority": 0,
-      "optimal_duration_range": [
-        120,
-        144
-      ],
-      "optimalDurationFrames": [
-        120,
-        144
-      ],
-      "duration_delta_matrix": {
-        "<=128f": {
-          "samples": 1,
-          "holdRate": 0.895,
-          "observed_retention_delta": -0.0223
-        },
-        "129-144f": {
-          "samples": 0,
-          "holdRate": null,
-          "observed_retention_delta": null
-        },
-        "145-168f": {
-          "samples": 2,
-          "holdRate": 0.9726,
-          "observed_retention_delta": 0.0553
-        },
-        ">168f": {
-          "samples": 3,
-          "holdRate": 0.8881,
-          "observed_retention_delta": -0.0292
-        }
-      },
-      "recommended_act_placement": [
-        "INCITING_CRISIS",
-        "TURNING_POINT"
-      ]
-    },
-    "FLAG_BANNER": {
-      "sampleScenes": 4,
-      "avgHoldRate": 0.91,
-      "observed_retention_delta": -0.0073,
-      "drop_off_risk": "MEDIUM",
-      "recommendedForHook": false,
-      "recommended_hook_priority": 0,
-      "optimal_duration_range": [
-        120,
-        144
-      ],
-      "optimalDurationFrames": [
-        120,
-        144
-      ],
-      "duration_delta_matrix": {
-        "<=128f": {
-          "samples": 0,
-          "holdRate": null,
-          "observed_retention_delta": null
-        },
-        "129-144f": {
-          "samples": 0,
-          "holdRate": null,
-          "observed_retention_delta": null
-        },
-        "145-168f": {
-          "samples": 2,
-          "holdRate": 0.9235,
-          "observed_retention_delta": 0.0062
-        },
-        ">168f": {
-          "samples": 2,
-          "holdRate": 0.8964,
-          "observed_retention_delta": -0.0209
-        }
-      },
-      "recommended_act_placement": [
-        "HOOK",
         "RESOLUTION_CTA"
       ]
     },
     "TACTICAL_MAP": {
       "sampleScenes": 1,
       "avgHoldRate": 0.8846,
-      "observed_retention_delta": -0.0327,
+      "observed_retention_delta": -0.0312,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -545,7 +503,7 @@
         ">168f": {
           "samples": 1,
           "holdRate": 0.8846,
-          "observed_retention_delta": -0.0327
+          "observed_retention_delta": -0.0312
         }
       },
       "recommended_act_placement": [
@@ -553,10 +511,52 @@
         "ESCALATING_CRUCIBLE"
       ]
     },
+    "BLUEPRINT_DIAGRAM": {
+      "sampleScenes": 1,
+      "avgHoldRate": 0.8723,
+      "observed_retention_delta": -0.0435,
+      "drop_off_risk": "HIGH",
+      "recommendedForHook": false,
+      "recommended_hook_priority": 0,
+      "optimal_duration_range": [
+        132,
+        150
+      ],
+      "optimalDurationFrames": [
+        132,
+        150
+      ],
+      "duration_delta_matrix": {
+        "<=128f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        "129-144f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        "145-168f": {
+          "samples": 0,
+          "holdRate": null,
+          "observed_retention_delta": null
+        },
+        ">168f": {
+          "samples": 1,
+          "holdRate": 0.8723,
+          "observed_retention_delta": -0.0435
+        }
+      },
+      "recommended_act_placement": [
+        "INCITING_CRISIS",
+        "TURNING_POINT"
+      ]
+    },
     "SPOTLIGHT_EMBLEM": {
       "sampleScenes": 1,
       "avgHoldRate": 0.881,
-      "observed_retention_delta": -0.0363,
+      "observed_retention_delta": -0.0348,
       "drop_off_risk": "HIGH",
       "recommendedForHook": false,
       "recommended_hook_priority": 0,
@@ -587,7 +587,7 @@
         ">168f": {
           "samples": 1,
           "holdRate": 0.881,
-          "observed_retention_delta": -0.0363
+          "observed_retention_delta": -0.0348
         }
       },
       "recommended_act_placement": [
@@ -617,9 +617,9 @@
     },
     {
       "projectSlug": "u2-incident-1960",
-      "openingArchetype": "STRUCTURAL_FRACTURE",
-      "hookDurationFrames": 128,
-      "hookHoldRate": 0.912
+      "openingArchetype": "SPLIT_CONFRONTATION",
+      "hookDurationFrames": 104,
+      "hookHoldRate": 0.934
     },
     {
       "projectSlug": "taiping-rebellion-1850",
@@ -649,6 +649,12 @@
       "projectSlug": "postage-fraud-2026",
       "openingArchetype": "SPLIT_CONFRONTATION",
       "hookDurationFrames": 102,
+      "hookHoldRate": 0.955
+    },
+    {
+      "projectSlug": "burari-deaths-2018",
+      "openingArchetype": "STRUCTURAL_FRACTURE",
+      "hookDurationFrames": 96,
       "hookHoldRate": 0.955
     }
   ],

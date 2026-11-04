@@ -8,25 +8,32 @@
     "startFrame": 0,
     "durationFrames": 102,
     "plate": "plate_01.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg", "kit/AtmosphericBackground"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactical/WavingFlagSvg",
+      "kit/AtmosphericBackground"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Khanewal rooftop coder silhouette", "USPS eagle emblem split"]
+      "elements": [
+        "Khanewal rooftop coder silhouette",
+        "USPS eagle emblem split"
+      ]
     },
     "phase2": {
-      "payoffFrameOffset": 35,
+      "payoffFrameOffset": 38,
       "hit": "IMPACT_HIT",
       "secondaryChange": "Diagonal voltage fracture and red barcode flash"
     },
     "text": {
-      "tag": "🇵🇰 KHANEWAL TO USA • OCT 2026",
+      "tag": "\ud83c\uddf5\ud83c\uddf0 KHANEWAL TO USA \u2022 OCT 2026",
       "setup": "ONE PAKISTANI CODER",
       "payoff": "STOLE $126M FROM AMERICA"
     },
     "sfx": {
       "file": "sub_boom.wav",
-      "frame": 0
+      "frame": 36
     },
     "claim": {
       "text": "Faheem Akram allegedly defrauded USPS of $126M via LabelsBank.com",
@@ -46,11 +53,17 @@
     "startFrame": 102,
     "durationFrames": 101,
     "plate": "plate_02.jpg",
-    "library": ["tactile/PaperSignCounter", "kit/AtmosphericBackground"],
+    "library": [
+      "tactile/PaperSignCounter",
+      "kit/AtmosphericBackground"
+    ],
     "camera": "CRANE_SWEEP_UP",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Stacks of shipping parcels", "Rolling counter board"]
+      "elements": [
+        "Stacks of shipping parcels",
+        "Rolling counter board"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -84,11 +97,17 @@
     "startFrame": 203,
     "durationFrames": 102,
     "plate": "plate_03.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactile/CutoutPuppet"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactile/CutoutPuppet"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Faheem Akram silhouette at modest desk", "Spinning ceiling fan"]
+      "elements": [
+        "Faheem Akram silhouette at modest desk",
+        "Spinning ceiling fan"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -96,7 +115,7 @@
       "secondaryChange": "Warm amber backlight halo illuminates laptop screen"
     },
     "text": {
-      "tag": "STEP 1: COMFORT ZONE • KHANEWAL",
+      "tag": "STEP 1: COMFORT ZONE \u2022 KHANEWAL",
       "setup": "MEET FAHEEM AKRAM",
       "payoff": "A QUIET VILLAGE SON"
     },
@@ -117,11 +136,17 @@
     "startFrame": 305,
     "durationFrames": 101,
     "plate": "plate_04.jpg",
-    "library": ["tactical/GeoTacticalMap", "tactical/PulsatingBattleMarker"],
+    "library": [
+      "tactical/GeoTacticalMap",
+      "tactical/PulsatingBattleMarker"
+    ],
     "camera": "PARALLAX_PAN_RIGHT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Punjab province contour map", "Khanewal railway junction pin"]
+      "elements": [
+        "Punjab province contour map",
+        "Khanewal railway junction pin"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -150,11 +175,17 @@
     "startFrame": 406,
     "durationFrames": 102,
     "plate": "plate_05.jpg",
-    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "tactile/CascadingPaperStack",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Software engineering diploma card", "Unpaid family bills"]
+      "elements": [
+        "Software engineering diploma card",
+        "Unpaid family bills"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -162,7 +193,7 @@
       "secondaryChange": "Glowing code terminal eclipses the paper bills"
     },
     "text": {
-      "tag": "STEP 2: THE NEED • AMBITION",
+      "tag": "STEP 2: THE NEED \u2022 AMBITION",
       "setup": "A SOFTWARE DEGREE",
       "payoff": "STARVING FOR A FORTUNE"
     },
@@ -183,11 +214,17 @@
     "startFrame": 508,
     "durationFrames": 101,
     "plate": "plate_06.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactile/HingedCutoutReveal"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactile/HingedCutoutReveal"
+    ],
     "camera": "DUTCH_TILT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Coder inspecting barcode matrix", "USPS Intelligent Mail barcode"]
+      "elements": [
+        "Coder inspecting barcode matrix",
+        "USPS Intelligent Mail barcode"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -216,11 +253,17 @@
     "startFrame": 609,
     "durationFrames": 102,
     "plate": "plate_07.jpg",
-    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Backlit coder silhouette in dark room", "LabelsBank domain registration"]
+      "elements": [
+        "Backlit coder silhouette in dark room",
+        "LabelsBank domain registration"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 36,
@@ -228,7 +271,7 @@
       "secondaryChange": "Dual monitors ignite with LabelsBank.com portal"
     },
     "text": {
-      "tag": "STEP 3: THE THRESHOLD • AUG 2023",
+      "tag": "STEP 3: THE THRESHOLD \u2022 AUG 2023",
       "setup": "HE CROSSED THE LINE",
       "payoff": "LAUNCHED LABELSBANK"
     },
@@ -254,11 +297,17 @@
     "startFrame": 711,
     "durationFrames": 95,
     "plate": "plate_08.jpg",
-    "library": ["tactical/TacticalMovementArrow", "tactile/PaperSignCounter"],
+    "library": [
+      "tactical/TacticalMovementArrow",
+      "tactile/PaperSignCounter"
+    ],
     "camera": "PARALLAX_PAN_RIGHT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["USPS delivery truck in transit", "Counterfeit $2 label stream"]
+      "elements": [
+        "USPS delivery truck in transit",
+        "Counterfeit $2 label stream"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 23,
@@ -292,11 +341,17 @@
     "startFrame": 806,
     "durationFrames": 104,
     "plate": "plate_09.jpg",
-    "library": ["tactical/GeoTacticalMap", "tactical/TacticalMovementArrow"],
+    "library": [
+      "tactical/GeoTacticalMap",
+      "tactical/TacticalMovementArrow"
+    ],
     "camera": "CRANE_SWEEP_UP",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Network map of 16 Pakistani bank nodes", "Encrypted cash flow vectors"]
+      "elements": [
+        "Network map of 16 Pakistani bank nodes",
+        "Encrypted cash flow vectors"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 33,
@@ -304,7 +359,7 @@
       "secondaryChange": "16 crimson account nodes pulse in a radial web"
     },
     "text": {
-      "tag": "STEP 4: THE SEARCH • ADAPTATION",
+      "tag": "STEP 4: THE SEARCH \u2022 ADAPTATION",
       "setup": "TO HIDE THE MILLIONS",
       "payoff": "16 BANK ACCOUNTS"
     },
@@ -330,11 +385,17 @@
     "startFrame": 910,
     "durationFrames": 103,
     "plate": "plate_10.jpg",
-    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "tactile/CascadingPaperStack",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Stack of bank signature cards", "Fountain pen and ink pad"]
+      "elements": [
+        "Stack of bank signature cards",
+        "Fountain pen and ink pad"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 33,
@@ -363,11 +424,17 @@
     "startFrame": 1013,
     "durationFrames": 104,
     "plate": "plate_11.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactile/CutoutPuppet"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactile/CutoutPuppet"
+    ],
     "camera": "DUTCH_TILT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Silhouettes of wife, sister, and maternal aunt", "Glowing wire transfer cables"]
+      "elements": [
+        "Silhouettes of wife, sister, and maternal aunt",
+        "Glowing wire transfer cables"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 33,
@@ -401,11 +468,17 @@
     "startFrame": 1117,
     "durationFrames": 105,
     "plate": "plate_12.jpg",
-    "library": ["kit/OrganicExplosion", "tactile/PaperSignCounter"],
+    "library": [
+      "kit/OrganicExplosion",
+      "tactile/PaperSignCounter"
+    ],
     "camera": "IMPACT_SHAKE",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["USPS treasury vault facade", "High-voltage barcode surge"]
+      "elements": [
+        "USPS treasury vault facade",
+        "High-voltage barcode surge"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -413,7 +486,7 @@
       "secondaryChange": "6-layer OrganicExplosion shatters the postal treasury vault at 19.20s beat drop"
     },
     "text": {
-      "tag": "STEP 5: THE FIND • 19S BEAT DROP",
+      "tag": "STEP 5: THE FIND \u2022 19S BEAT DROP",
       "setup": "THE CODE EXPLODED",
       "payoff": "$126 MILLION DRAINED"
     },
@@ -439,11 +512,17 @@
     "startFrame": 1222,
     "durationFrames": 104,
     "plate": "plate_13.jpg",
-    "library": ["tactile/PaperSignCounter", "characters/MarchingInfantryRank"],
+    "library": [
+      "tactile/PaperSignCounter",
+      "characters/MarchingInfantryRank"
+    ],
     "camera": "CRANE_SWEEP_UP",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Grid of 5,200 buyer icons", "High-speed barcode printer belt"]
+      "elements": [
+        "Grid of 5,200 buyer icons",
+        "High-speed barcode printer belt"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 33,
@@ -477,11 +556,17 @@
     "startFrame": 1326,
     "durationFrames": 106,
     "plate": "plate_14.jpg",
-    "library": ["hardware/TransportAircraftSilhouette", "tactical/TacticalMovementArrow"],
+    "library": [
+      "hardware/TransportAircraftSilhouette",
+      "tactical/TacticalMovementArrow"
+    ],
     "camera": "PARALLAX_PAN_RIGHT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Cargo transport aircraft over Atlantic", "Golden wire transfer stream"]
+      "elements": [
+        "Cargo transport aircraft over Atlantic",
+        "Golden wire transfer stream"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 37,
@@ -510,11 +595,17 @@
     "startFrame": 1432,
     "durationFrames": 103,
     "plate": "plate_15.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactile/PaperSignCounter"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactile/PaperSignCounter"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Faheem standing behind luxury villa window", "7 overflowing account ledgers"]
+      "elements": [
+        "Faheem standing behind luxury villa window",
+        "7 overflowing account ledgers"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -543,11 +634,17 @@
     "startFrame": 1535,
     "durationFrames": 105,
     "plate": "plate_16.jpg",
-    "library": ["kit/OrganicExplosion", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "kit/OrganicExplosion",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "IMPACT_SHAKE",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Southern District of Florida Federal Seal", "Grand jury indictment pillars"]
+      "elements": [
+        "Southern District of Florida Federal Seal",
+        "Grand jury indictment pillars"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 37,
@@ -555,7 +652,7 @@
       "secondaryChange": "Gavel shockwave fractures the shield and slams $100,000 WANTED stamp"
     },
     "text": {
-      "tag": "STEP 6: THE PRICE • FLORIDA DOJ",
+      "tag": "STEP 6: THE PRICE \u2022 FLORIDA DOJ",
       "setup": "US GRAND JURY STRUCK",
       "payoff": "$100,000 BOUNTY POSTED"
     },
@@ -581,11 +678,17 @@
     "startFrame": 1640,
     "durationFrames": 107,
     "plate": "plate_17.jpg",
-    "library": ["tactical/TacticalRadarGrid", "tactical/PulsatingBattleMarker"],
+    "library": [
+      "tactical/TacticalRadarGrid",
+      "tactical/PulsatingBattleMarker"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Transcontinental radar sweep Miami to Lahore", "IP trace vectors"]
+      "elements": [
+        "Transcontinental radar sweep Miami to Lahore",
+        "IP trace vectors"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -614,11 +717,17 @@
     "startFrame": 1747,
     "durationFrames": 102,
     "plate": "plate_18.jpg",
-    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "DUTCH_TILT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["16 bank vault doors", "Family silhouettes on opposite side"]
+      "elements": [
+        "16 bank vault doors",
+        "Family silhouettes on opposite side"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 34,
@@ -647,11 +756,17 @@
     "startFrame": 1849,
     "durationFrames": 104,
     "plate": "plate_19.jpg",
-    "library": ["tactile/HingedCutoutReveal", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "tactile/HingedCutoutReveal",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["NCCIA Lahore Zone investigation dossier", "Family tree diagram"]
+      "elements": [
+        "NCCIA Lahore Zone investigation dossier",
+        "Family tree diagram"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -680,11 +795,17 @@
     "startFrame": 1953,
     "durationFrames": 99,
     "plate": "plate_20.jpg",
-    "library": ["tactical/TacticalMovementArrow", "tactical/PulsatingBattleMarker"],
+    "library": [
+      "tactical/TacticalMovementArrow",
+      "tactical/PulsatingBattleMarker"
+    ],
     "camera": "PARALLAX_PAN_RIGHT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["NCCIA cyber-raid vehicles speeding through Lahore", "Flashing red/blue light cones"]
+      "elements": [
+        "NCCIA cyber-raid vehicles speeding through Lahore",
+        "Flashing red/blue light cones"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -692,7 +813,7 @@
       "secondaryChange": "Searchlight beams converge on fugitive hideout vehicle"
     },
     "text": {
-      "tag": "STEP 7: THE RETURN • LAHORE RAID",
+      "tag": "STEP 7: THE RETURN \u2022 LAHORE RAID",
       "setup": "HUNTED ACROSS PUNJAB",
       "payoff": "NOWHERE LEFT TO HIDE"
     },
@@ -713,11 +834,17 @@
     "startFrame": 2052,
     "durationFrames": 112,
     "plate": "plate_21.jpg",
-    "library": ["kit/OrganicExplosion", "characters/SilhouetteCharacter"],
+    "library": [
+      "kit/OrganicExplosion",
+      "characters/SilhouetteCharacter"
+    ],
     "camera": "IMPACT_SHAKE",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Lahore hideout door", "Tactical entry team silhouettes"]
+      "elements": [
+        "Lahore hideout door",
+        "Tactical entry team silhouettes"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 43,
@@ -751,11 +878,17 @@
     "startFrame": 2164,
     "durationFrames": 106,
     "plate": "plate_22.jpg",
-    "library": ["characters/SilhouetteCharacter", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Bowed silhouette of Faheem Akram", "Steel handcuffs glinting in rim light"]
+      "elements": [
+        "Bowed silhouette of Faheem Akram",
+        "Steel handcuffs glinting in rim light"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 36,
@@ -784,11 +917,17 @@
     "startFrame": 2270,
     "durationFrames": 103,
     "plate": "plate_23.jpg",
-    "library": ["characters/MarchingInfantryRank", "characters/SilhouetteCharacter"],
+    "library": [
+      "characters/MarchingInfantryRank",
+      "characters/SilhouetteCharacter"
+    ],
     "camera": "CRANE_SWEEP_UP",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Cluster of Khanewal neighbors and bowed father", "Television broadcast glow"]
+      "elements": [
+        "Cluster of Khanewal neighbors and bowed father",
+        "Television broadcast glow"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 34,
@@ -817,11 +956,17 @@
     "startFrame": 2373,
     "durationFrames": 105,
     "plate": "plate_24.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactical/WavingFlagSvg"
+    ],
     "camera": "DUTCH_TILT",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Prisoner silhouette on left", "U.S. federal courthouse & prison watchtower on right"]
+      "elements": [
+        "Prisoner silhouette on left",
+        "U.S. federal courthouse & prison watchtower on right"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 34,
@@ -850,11 +995,17 @@
     "startFrame": 2478,
     "durationFrames": 104,
     "plate": "plate_25.jpg",
-    "library": ["tactile/CascadingPaperStack", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "tactile/CascadingPaperStack",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Dan Harmon 8-step circle diagram", "$2 counterfeit shipping label"]
+      "elements": [
+        "Dan Harmon 8-step circle diagram",
+        "$2 counterfeit shipping label"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 34,
@@ -862,7 +1013,7 @@
       "secondaryChange": "The $2 label burns at the edges revealing a federal indictment"
     },
     "text": {
-      "tag": "STEP 8: THE CHANGE • FULL CIRCLE",
+      "tag": "STEP 8: THE CHANGE \u2022 FULL CIRCLE",
       "setup": "A $2 SHORTCUT",
       "payoff": "COST EVERYTHING HE LOVED"
     },
@@ -883,11 +1034,17 @@
     "startFrame": 2582,
     "durationFrames": 104,
     "plate": "plate_26.jpg",
-    "library": ["kit/OrganicExplosion", "kit/WeatheredMilitaryStamp"],
+    "library": [
+      "kit/OrganicExplosion",
+      "kit/WeatheredMilitaryStamp"
+    ],
     "camera": "IMPACT_SHAKE",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["LabelsBank.com glass monitor", "Federal seizure notice"]
+      "elements": [
+        "LabelsBank.com glass monitor",
+        "Federal seizure notice"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 36,
@@ -916,11 +1073,17 @@
     "startFrame": 2686,
     "durationFrames": 105,
     "plate": "plate_27.jpg",
-    "library": ["characters/SilhouetteCharacter", "kit/AtmosphericBackground"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "kit/AtmosphericBackground"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Faheem seated alone in concrete cell", "Single shaft of moonlight"]
+      "elements": [
+        "Faheem seated alone in concrete cell",
+        "Single shaft of moonlight"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 35,
@@ -949,11 +1112,17 @@
     "startFrame": 2791,
     "durationFrames": 132,
     "plate": "plate_28.jpg",
-    "library": ["characters/SilhouetteCharacter", "tactical/WavingFlagSvg"],
+    "library": [
+      "characters/SilhouetteCharacter",
+      "tactical/WavingFlagSvg"
+    ],
     "camera": "SLOW_PUSH_IN",
     "phase1": {
       "motion": "STAGGER_IN + DRIFT",
-      "elements": ["Empty chair on Khanewal rooftop", "Closed laptop and completed Story Circle"]
+      "elements": [
+        "Empty chair on Khanewal rooftop",
+        "Closed laptop and completed Story Circle"
+      ]
     },
     "phase2": {
       "payoffFrameOffset": 34,

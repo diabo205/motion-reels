@@ -9,10 +9,10 @@
     "audit:fast": "node scripts/pipeline.js --audit-stills --skip-stills",
     "audit:fix": "node scripts/pipeline.js --audit-stills --skip-stills --auto-fix",
     "lint:framework": "node scripts/lint_framework.js",
-    "lint:complexity": "node scripts/lint_path_complexity.js",
-    "trace:plates": "node scripts/trace_plate_contours.js",
+    "lint:shading": "node scripts/lint_cel_shading.js",
     "deliverables": "node scripts/pipeline.js --deliverables",
     "telemetry": "node scripts/telemetry_priors.js",
+    "analytics": "python scripts/youtube_analytics.py",
     "test:smoke": "node scripts/pipeline.js --smoke"
   },
   "dependencies": {
@@ -29,7 +29,6 @@
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
     "@types/topojson-client": "^3.1.5",
-    "potrace": "^2.1.8",
     "typescript": "^5.4.5"
   }
 }
